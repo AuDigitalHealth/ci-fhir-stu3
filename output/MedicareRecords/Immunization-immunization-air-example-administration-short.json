@@ -1,0 +1,47 @@
+{
+  "resourceType": "Immunization",
+  "id": "immunization-air-example-administration-short",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: immunization-air-example-administration-short</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:oid:2.25.129844986816735724544008039955538526131</p><p><b>status</b>: completed</p><p><b>notGiven</b>: false</p><p><b>vaccineCode</b>: Infanrix-Hep B <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.2.36.1.2001.1005.17 code 'IFXB' = 'InfanrixHepB)</span></p><p><b>patient</b>: </p><p><b>date</b>: 15/04/2017</p><p><b>primarySource</b>: true</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.25.129844986816735724544008039955538526131"
+    }
+  ],
+  "status": "completed",
+  "notGiven": false,
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.36.1.2001.1005.17",
+        "code": "IFXB"
+      }
+    ],
+    "text": "Infanrix-Hep B"
+  },
+  "patient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NI",
+            "display": "National unique individual identifier"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608166690503"
+    }
+  },
+  "date": "2017-04-15",
+  "primarySource": true
+}

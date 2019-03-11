@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-immunization-cancellationperiod"/>
+  <url
+    value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod"/>
+  <version value="1.0.0"/>
+  <name value="ExtensionImmunizationCancellationPeriod"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-08-28"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description value="The time period during which immunisation is prevented."/>
+  <copyright
+    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <contextType value="resource"/>
+  <context value="Immunization"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Immunisation cancellation period"/>
+      <definition
+        value="Time period during which immunisation is prevented due to the reasonNotGiven."/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri
+        value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod"
+      />
+    </element>
+    <element id="Extension.value[x]:valuePeriod">
+      <path value="Extension.valuePeriod"/>
+      <sliceName value="valuePeriod"/>
+      <min value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

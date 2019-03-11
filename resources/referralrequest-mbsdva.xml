@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="referralrequest-mbsdva"/>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/referralrequest-mbsdva"/>
+  <version value="1.0.0"/>
+  <name value="ReferralRequestMedicareBenefitsScheduleDepartmentofVeterans'Affairs"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-08-28"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description
+    value="This profile defines a representation of the practitioner that requested the service to support representation of Medicare Benefits Schedule (MBS) claim item records."/>
+  <copyright
+    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="ReferralRequest"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ReferralRequest"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="ReferralRequest">
+      <path value="ReferralRequest"/>
+      <constraint>
+        <key value="inv-dh-rr-01"/>
+        <severity value="error"/>
+        <human
+          value="One meta.profile SHALL have value 'http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/referralrequest-mbsdva'"/>
+        <expression
+          value="meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/referralrequest-mbsdva').exists()"
+        />
+      </constraint>
+    </element>
+    <element id="ReferralRequest.meta">
+      <path value="ReferralRequest.meta"/>
+      <min value="1"/>
+    </element>
+    <element id="ReferralRequest.meta.profile">
+      <path value="ReferralRequest.meta.profile"/>
+      <definition
+        value="A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url)."/>
+      <min value="1"/>
+    </element>
+    <element id="ReferralRequest.identifier">
+      <path value="ReferralRequest.identifier"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.status">
+      <path value="ReferralRequest.status"/>
+      <fixedCode value="completed"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.intent">
+      <path value="ReferralRequest.intent"/>
+      <fixedCode value="order"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.subject">
+      <path value="ReferralRequest.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.requester">
+      <path value="ReferralRequest.requester"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.requester.agent">
+      <path value="ReferralRequest.requester.agent"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.requester.onBehalfOf">
+      <path value="ReferralRequest.requester.onBehalfOf"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="ReferralRequest.specialty">
+      <path value="ReferralRequest.specialty"/>
+      <mustSupport value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ReferralSpecialty"/>
+        </extension>
+        <strength value="extensible"/>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

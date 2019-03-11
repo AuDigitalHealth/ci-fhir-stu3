@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id value="implementationguide-profilelibrary-1"/>
+    <meta>
+        <lastUpdated value="2019-02-04T12:00:00+10:00"/>
+    </meta>
+    <language value="en-AU"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <p>Australian Digital Health Agency's Profile Library.</p>
+        </div>
+    </text>
+    <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-profilelibrary-1"/>
+    <name value="Profile Library"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <date value="2019-02-01"/>
+    <publisher value="Australian Digital Health Agency"/>
+    <contact>
+        <telecom>
+            <system value="email"/>
+            <value value="help@digitalhealth.gov.au"/>
+        </telecom>
+    </contact>
+    <description
+        value="Models for the implementation of the Australian Digital Health Agency's Profile Library"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="AU"/>
+            <display value="Australia"/>
+        </coding>
+        <text value="Australia"/>
+    </jurisdiction>
+    <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+    <fhirVersion value="3.0.1"/>
+    <package>
+        <name value="Profile Library"/>
+
+        <!-- RESOURCE PROFILES -->
+
+        <resource>
+            <example value="false"/>
+            <name value="patient-dh-base-1"/>
+            <description
+                value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="patient-ihi-1"/>
+            <description
+                value="The Agency Patient profile, as derived from the HL7 AU patient profile with a mandatory IHI."/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-ihi-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="organization-dh-base-1"/>
+            <description
+                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/organization-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="organization-hpio-1"/>
+            <description
+                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/organization-hpio-1"/>
+            </sourceReference>
+        </resource>
+		<resource>
+            <example value="false"/>
+            <name value="organization-ident-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/organization-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="relatedperson-dh-base-1"/>
+            <description
+                value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
+            <sourceReference>
+                <reference value="StructureDefinition/relatedperson-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="relatedperson-ident-1"/>
+            <description
+                value="The Agency RelatedPerson profile with mandatory identifier, as derived from the STU3 RelatedPerson resource"/>
+            <sourceReference>
+                <reference value="StructureDefinition/relatedperson-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="relatedperson-ihi-1"/>
+            <description
+                value="The Agency RelatedPerson profile with mandatory IHI, as derived from the STU3 RelatedPerson resource"/>
+            <sourceReference>
+                <reference value="StructureDefinition/relatedperson-ihi-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/device-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/device-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitioner-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="practitioner-ident-1"/>
+            <description
+                value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitioner-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="practitioner-hpii-1"/>
+            <description
+                value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory HPI-I."/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitioner-hpii-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-ident-1"/>
+            </sourceReference>
+        </resource>        
+        <resource>
+            <example value="false"/>
+            <name value="practitionerrole-cae-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-cae-1"/>
+            </sourceReference>
+        </resource>        
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-withparty-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-withpractitioner-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-withpractitionerident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="device-paid-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/device-paid-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="patient-ident-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="medicationstatement-summary-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/medicationstatement-summary-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="immunization-summary-administration-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/immunization-summary-administration-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="immunization-summary-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/immunization-summary-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="procedure-summary-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/procedure-summary-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="condition-summary-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/condition-summary-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="allergyintolerance-summary-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/allergyintolerance-summary-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="observation-norelevantfinding-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/observation-norelevantfinding-1"/>
+            </sourceReference>
+        </resource>
+        
+        <!-- COMPLEX DATATYPE PROFILES -->
+
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/humanname-dh-base-1"/>
+            </sourceReference>
+        </resource>
+
+        <!--Sample XML file references-->
+
+        <resource>
+            <example value="true"/>
+            <name value="Related Person minimal example"/>
+            <description value="Demonstrates a minimal example of a related person."/>
+            <sourceReference>
+                <reference value="RelatedPerson/relatedperson-base-min-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Related Person maximal example"/>
+            <description value="Demonstrates a maximal example of a related person."/>
+            <sourceReference>
+                <reference value="RelatedPerson/relatedperson-base-max-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Related Person with identifier slices"/>
+            <description value="Demonstrates a example of a Related person with identifier slices."/>
+            <sourceReference>
+                <reference value="RelatedPerson/relatedperson-with-identifier-slices-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Patient minimal example"/>
+            <description value="Demonstrates a minimal example of a Patient."/>
+            <sourceReference>
+                <reference value="Patient/patient-min-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Patient maximal example"/>
+            <description value="Demonstrates a maximal example of a Patient."/>
+            <sourceReference>
+                <reference value="Patient/patient-max-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Patient example with identifier slices"/>
+            <description value="Demonstrates a example of a Patient with identifier slices."/>
+            <sourceReference>
+                <reference value="Patient/patient-with-identifier-slices-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Organization minimal example"/>
+            <description value="Demonstrates a minimal example of a Organization."/>
+            <sourceReference>
+                <reference value="Organization/organization-min-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Organization maximal example"/>
+            <description value="Demonstrates a maximal example of a Organization."/>
+            <sourceReference>
+                <reference value="Organization/organization-max-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Organization example with slices of identifier"/>
+            <description value="Demonstrates an example with identifier slices"/>
+            <sourceReference>
+                <reference value="Organization/organization-with-identifier-slices-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Location minimal example"/>
+            <description value="Demonstrates a minimal example of a Location."/>
+            <sourceReference>
+                <reference value="Location/location-dh-base-example-min"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Location maximal example"/>
+            <description value="Demonstrates a maximal example of a Location."/>
+            <sourceReference>
+                <reference value="Location/location-dh-base-example-max"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Practitioner minimal example"/>
+            <description value="Demonstrates a minimal example of a Practitioner."/>
+            <sourceReference>
+                <reference value="Practitioner/practitioner-min-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Practitioner maximal example"/>
+            <description value="Demonstrates a maximal example of a Practitioner."/>
+            <sourceReference>
+                <reference value="Practitioner/practitioner-max-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="PractitionerRole minimal example"/>
+            <description value="Demonstrates a minimal example of a PractitionerRole."/>
+            <sourceReference>
+                <reference value="PractitionerRole/practitionerrole-min-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="PractitionerRole maximal example"/>
+            <description value="Demonstrates a maximal example of a PractitionerRole."/>
+            <sourceReference>
+                <reference value="PractitionerRole/practitionerrole-max-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Device minimal example"/>
+            <description value="Demonstrates a minimal example of a Device."/>
+            <sourceReference>
+                <reference value="Device/device-min-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Device maximal example"/>
+            <description value="Demonstrates a maximal example of a Device."/>
+            <sourceReference>
+                <reference value="Device/device-max-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Endpoint example"/>
+            <sourceReference>
+                <reference value="Endpoint/endpoint-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="HealthcareService example"/>
+            <sourceReference>
+                <reference value="HealthcareService/healthcareservice-example"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="DevicePAID maximal example"/>
+            <description
+                value="Demonstrates a maximal example of a Device with PAI-D as a mandatory slice."/>
+            <sourceReference>
+                <reference value="Device/devicepaid-max-example"/>
+            </sourceReference>
+        </resource>
+    </package>
+    <page>
+        <source value="index.html"/>
+        <title value="Australian Digital Health Agency Profile Library Implementation Guide"/>
+        <kind value="page"/>
+    </page>
+</ImplementationGuide>

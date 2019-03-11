@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="humanname-dh-base-1" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2017-12-15T14:57:25.752+10:00" />
+  </meta>
+  <language value="en-AU" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1" />
+  <version value="1.0" />
+  <name value="HumanNameBase" />
+  <title value="Base HumanName" />
+  <status value="draft" />
+  <date value="2017-05-19T14:09:22.1115432+10:00" />
+  <publisher value="Australian Digital Health Agency" />
+  <description value="Australian Digital Health Agency profile of the [HumanName](http://hl7.org/fhir/stu3/datatypes.html#HumanName) data type." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="AU" />
+      <display value="Australia" />
+    </coding>
+    <text value="Australia" />
+  </jurisdiction>
+  <copyright value="Copyright © 2017 Australian Digital Health Agency" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="HumanName" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HumanName">
+      <path value="HumanName" />
+      <constraint>
+        <key value="inv-dh-humn-01" />
+        <requirements value="HumanName.{text | family | given} - shall have a HumanName.text OR HumanName.family OR HumanName.given" />
+        <severity value="error" />
+        <human value="The name shall at least have text or a family name or a given name" />
+        <expression value="name.text.exists() or name.family.exists() or name.given.exists()" />
+      </constraint>
+    </element>
+    <element id="HumanName.prefix">
+      <path value="HumanName.prefix" />
+      <definition value="Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.&#xD;&#xA;Human Name Prefix SHOULD NOT be confused with job title.&#xD;&#xA;Mixed case SHOULD be used (rather than upper case only).&#xD;&#xA;Prefix of ‘Master’ SHOULD only be used for clients less than 15 years of age.&#xD;&#xA;Prefix of ‘Doctor’ and ‘Professor’ SHOULD only be applicable to clients of greater than 20 years of age.&#xD;&#xA;Prefixes of Dame, Miss, Mrs, Ms and Sr are only accepted for females.&#xD;&#xA;Prefixes of Br, Mstr, Mr and Sir are only accepted for males." />
+      <comment value="Prefix values can be populated as described in AS 4846:2014 Person and provider identification in healthcare, 4.4.2 Name Title." />
+    </element>
+    <element id="HumanName.suffix">
+      <path value="HumanName.suffix" />
+      <comment value="Suffix values can be populated as described in AS 4846:2014 Person and provider identification in healthcare, 4.5.3.2 Name Suffix." />
+    </element>
+  </differential>
+</StructureDefinition>

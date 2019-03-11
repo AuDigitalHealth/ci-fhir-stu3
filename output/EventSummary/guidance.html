@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Event Summary</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Event Summary Implemenation Guide" />
+  <meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+
+   <!-- Latest compiled and minified CSS -->
+
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+  <link href="assets/css/ci-styles-fig.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+
+<body markdown="1"/>
+
+</html>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="https://www.digitalhealth.gov.au/"><img alt="Agency logo" src="assets/images/agency-logo-www.png"/> </a>
+
+   <div id="ig-status">
+    <b>Event Summary Implementation Guide  1.0.0</b>
+</div>
+
+  </div>
+  <div class="container">  <!-- container -->
+ </div></div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3//index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guidance.html">Guidance</a></li>
+       <li><a href="conformance.html">Conformance</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <!--<li><a href="structuremaps.html">Mappings</a></li>-->
+        <li><a href="extensions.html">Extensions</a></li>
+       <li><a href="mappings.html">Mapping from Requirements</a></li>
+       <!-- <li><a href="terminology.html">Terminology</a></li>-->
+        <!--<li><a href="searchparams.html">Search Parameters</a></li>-->
+        <!--<li><a href="capstatements.html">Capability Statements</a></li>-->
+        <!--<li><a href="security.html">Security</a></li>-->
+        <li><a href="downloads.html">Downloads</a></li>
+       <li><a href="disclaimers.html">Disclaimers</a></li>
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+
+</div>  <!-- /container -->
+</div>  <!-- /segment-breadcrumb -->
+
+<div id="segment-content" class="segment">  <!-- segment-content -->
+<div class="container">  <!-- container -->
+<div class="row">
+<div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+<!-- ============BreadCrumb=============== -->
+
+<!--<nav class="breadcrumb">
+  
+    
+      <a class="breadcrumb-item" href="index.html">Home</a>
+      /
+      <span class="breadcrumb-item active">Guidance</span>
+    
+    
+    
+    
+    
+
+</nav>
+-->
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+<ul class="no_toc" id="markdown-toc">
+  <li><a href="#guidance" id="markdown-toc-guidance">Guidance</a>    <ul>
+      <li><a href="#fhir" id="markdown-toc-fhir">FHIR</a>        <ul>
+          <li><a href="#profile-representation-and-structure" id="markdown-toc-profile-representation-and-structure">Profile representation and structure</a></li>
+          <li><a href="#conformance-conventions" id="markdown-toc-conformance-conventions">Conformance conventions</a>            <ul>
+              <li><a href="#profile" id="markdown-toc-profile">Profile</a></li>
+              <li><a href="#slicing" id="markdown-toc-slicing">Slicing</a></li>
+              <li><a href="#extensions" id="markdown-toc-extensions">Extensions</a></li>
+              <li><a href="#conformance-verbs" id="markdown-toc-conformance-verbs">Conformance verbs</a></li>
+              <li><a href="#terminology-binding" id="markdown-toc-terminology-binding">Terminology binding</a></li>
+              <li><a href="#cardinality" id="markdown-toc-cardinality">Cardinality</a></li>
+              <li><a href="#data-types" id="markdown-toc-data-types">Data types</a></li>
+            </ul>
+          </li>
+          <li><a href="#known-issues-with-supporting-and-implementing-fhir" id="markdown-toc-known-issues-with-supporting-and-implementing-fhir">Known issues with supporting and implementing FHIR</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h1 id="guidance">Guidance</h1>
+
+<h2 id="fhir">FHIR</h2>
+
+<p>FHIR (Fast Healthcare Interoperability Resources) is a standard developed by Health Level Seven International (Hl7) for exchanging healthcare information electronically.</p>
+
+<p>The standard describes data formats and elements, known as <a href="http://hl7.org/fhir/stu3/resourcelist.html">Resources</a>, and an application programming interface (API) for exchanging electronic records as messages, services and documents.</p>
+
+<p>The current FHIR specification is available on <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>. The specification also includes a directory of past and current working versions, including the current build, on <a href="http://www.hl7.org/fhir/directory.cfml">http://www.hl7.org/fhir/directory.cfml</a>.</p>
+
+<p><a href="http://hl7.org/fhir/R4/">FHIR Release 4, First Normative content</a> is now published.</p>
+
+<p>The following references are recommended to gain a better understanding of FHIR:</p>
+<ul>
+  <li><a href="https://www.hl7.org/fhir/STU3/index.html">FHIR Release 3 (STU3)</a></li>
+  <li><a href="https://www.hl7.org/fhir/STU3/overview.html">FHIR Overview</a></li>
+  <li><a href="http://wiki.hl7.org/index.php?title=FHIR">HL7 International FHIR Wiki page</a></li>
+</ul>
+
+<h3 id="profile-representation-and-structure">Profile representation and structure</h3>
+
+<p>Each profile in this implementation guide may include one or more usage scenarios supported by this implementation guide, implementation guidance specific to those usage scenarios and one or more examples that demonstrate the use. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.</p>
+
+<p>This information is included in profile and extensions pages, e.g. [Shared Health Summary] StructureDefinition-composition-shs-1.html).</p>
+
+<p>The profile url is displayed in the <a href="StructureDefinition-composition-shs-1.html#profile">Formal Views of Profile Content</a>, followed by:</p>
+<ul>
+  <li><strong>Description</strong>: A free text natural language description of the structure and its use that also includes the information on meaning of must support</li>
+  <li><strong>Base Resource</strong>: Base resource from which this profile is derived from; included in this implementation guide as “This profile builds on [base resource]”</li>
+  <li><strong>Metadata</strong>: A set of metadata that describes the version of the profile, publisher and the date of publishing; included as “This profile was published on [date]as a [status] by [publisher “Australian Digital Health Agency”].”</li>
+</ul>
+
+<p>Each profile in this implementation guide also has different representations of the rules on the element contents in a resource:</p>
+<ul>
+  <li><strong>Text Summary</strong>: Informative description of the changes being made in the profile in regards to its base resource. While every effort has been taken to ensure that the text summary for a profile is consistent with the profile, where there are conflicts the profile definition will take precedence</li>
+  <li><strong>Differential</strong>: Shows details of what is being changed in the profile in regards to its base resource</li>
+  <li><strong>Snapshot</strong>: Shows computed outcome of applying the statements in the differential to the base resource. An instance claiming conformance to a profile needs to conform to the snapshot representation of the profile</li>
+</ul>
+
+<h3 id="conformance-conventions">Conformance conventions</h3>
+
+<h4 id="profile">Profile</h4>
+<p>This implementation guide specifies the FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a> for implementing the document model that is the subject of this implementation guide, i.e. Shared Health Summary.</p>
+
+<p>A FHIR profile is a set of constraints and/or extensions on a resource or a data type represented using the FHIR <a href="FHIR http://hl7.org/fhir/stu3/structuredefinition.html">StructureDefinition</a> resource.</p>
+
+<p>The profile is identified by its url (e.g.http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1). When valued in an instance, the url signals the imposition of a set of profile-defined constraints. The url value provides a unique identifier for the profile in question.</p>
+
+<h4 id="slicing">Slicing</h4>
+<p>FHIR allows an operation called ‘slicing’. Slicing is usually done on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, Composition.section in the SHS profile is sliced into a list of slices in order to give each slice a different definition in the profile; e.g. each section slice has title, code etc specific to the slice.</p>
+
+<p>Sliced element in a profile is described as a list of elements with the same path, where the first element describes the slicing rules (e.g. Slice: Unordered, Closed by value:code) and repeat elements describe rules specific to each slice.</p>
+
+<p>Slicing rules are:</p>
+<ul>
+  <li><strong>Ordered</strong>: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)</li>
+  <li><strong>Rules</strong>: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)</li>
+  <li><strong>Discriminator</strong>: an element or a list of elements used to discriminate the slices. When a discriminator is provided, the composite of the values of the elements designated in the discriminator is unique and distinct for each possible slice</li>
+</ul>
+
+<p>Please refer to <a href="http://hl7.org/fhir/STU3/profiling.html#slicing">Slicing</a> information in FHIR specification for more information on slicing and discrimination operations and processing rules.</p>
+
+<h4 id="extensions">Extensions</h4>
+<p>Any element in FHIR resource can carry one or more extensions in addition to its normal content.</p>
+
+<p>An extension is identified by its url (e.g. http://hl7.org.au/fhir/StructureDefinition/indigenous-status), and it has a value that is one of the base FHIR data types.</p>
+
+<p>An extension, if present in this specification, will be included as an element in the Differential and Snapshot views of a profile, with the extension URL hyperlinked to the extension definition specified in the “Description &amp; Constraints” column of the profile.</p>
+
+<p>Please refer to <a href="http://hl7.org/fhir/STU3/extensibility.html">Extensibility</a> in FHIR specification for more information on defining and processing extensions.</p>
+
+<h4 id="conformance-verbs">Conformance verbs</h4>
+<p>The conformance verbs used in this implementation guide are defined in <a href="http://hl7.org/fhir/STU3/conformance-rules.html#conflang">FHIR Conformance Rules</a>.</p>
+
+<h4 id="terminology-binding">Terminology binding</h4>
+<p>Terminology is specified in this implementation guide, in some cases binding an element to a value set or binding an attribute to a single fixed code. For guidance on coding common clinical concepts in FHIR resources see <a href="http://hl7.org/fhir/stu3/terminologies.html">Using Codes in Resources</a>.</p>
+
+<p>A value set binding, if present in this specification, will be specified in the “Description &amp; Constraints” column of a profile as the title of the value set (hyperlinked to its definition) followed by identification of the binding strength (hyperlinked to its definition), e.g. Health Summary Non-Clinical Empty Reason (required).</p>
+
+<h4 id="cardinality">Cardinality</h4>
+<p>The cardinality range specifies the allowable occurrences within a document instance. Cardinality range is specified in the format “m..n” where m is the minimum allowed members of the set (lower bound) and n is the maximum allowed members of the set (upper bound). The allowed values for m and n are 0, any positive integer, and *.</p>
+
+<p>The table below demonstrates a representative set of examples of cardinality range and how to interpret that cardinality range; p is positive integer greater than the minimum allowed members of the set.</p>
+
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Cardinality range</th>
+    <th>Interpretation</th>
+  </tr>
+  <tr>
+    <td>0..0</td>
+    <td>zero (explicitly prohibited)</td>
+  </tr>
+ <tr>
+    <td>0..1</td>
+    <td>zero or one</td>
+  </tr>
+  <tr>
+    <td>1..1</td>
+    <td>exactly one</td>
+  </tr>
+  <tr>
+    <td>0..*</td>
+    <td>zero or more</td>
+  </tr>
+    <tr>
+    <td>1..*</td>
+    <td>at least one</td>
+  </tr>
+<tr>
+    <td>2..*</td>
+    <td>at least two</td>
+  </tr>
+<tr>
+    <td>1..p</td>
+    <td>at least one and not more than p</td>
+  </tr>
+  <tr>
+    <td>2..p</td>
+    <td>at least two and not more than p</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The cardinality rules in FHIR are described in <a href="http://hl7.org/fhir/STU3/conformance-rules.html#conflang">FHIR Conformance Rules</a>.</p>
+
+<h4 id="data-types">Data types</h4>
+<p>The FHIR standard defines a set of data types that are used for the resource elements.</p>
+
+<p>Data types used in this implementation guide are defined in FHIR Release 3 (STU) <a href="http://hl7.org/fhir/stu3/datatypes.html">Data Types</a>.</p>
+
+<h3 id="known-issues-with-supporting-and-implementing-fhir">Known issues with supporting and implementing FHIR</h3>
+
+<p>FHIR standard offers a number of tools for development and implementations of FHIR, e.g. IG Publisher tool used for producing and publishing this implementation guide, FHIR Validator used to validate examples in this implementation guide.</p>
+
+<p>These tools are under continues development and as such may have issues that could affect development and implementation of FHIR.</p>
+
+<p>This section lists known issues with authoring and rendering content in this implementation guide.</p>
+
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Reference</th>
+    <th>Description</th>
+    <th>gForge Change Request</th>
+  </tr>
+  <tr>
+    <td>Validation of examples</td>
+    <td>FHIR Validator does not yet fully support all expressions defined in FHIR specification and included in this implementation guide; i.e. conformsTo().</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Rendering of examples</td>
+    <td>IG publisher does nor render Composition narrative and section.text narrative nor any of the contained resources. Please refer to XML or JSON format of an example to view the whole example. </td>
+    <td><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=17401">Allow ig publisher to render documents as documents </a></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Please refer to <a href="http://hl7.org/fhir/implsupport-module.html">Implementation Support Module</a> for more information about available tools, libraries and other similar resources.</p>
+
+<p>The following references are available to raise issues and seek help:</p>
+<ul>
+  <li><a href="https://chat.fhir.org/">FHIR Chat Channel Zulip</a></li>
+  <li><a href="http://community.fhir.org/">FHIR Community Forum</a></li>
+  <li><a href="https://stackoverflow.com/questions/tagged/hl7_fhir">StackOverflow</a></li>
+  <li><a href="https://gforge.hl7.org/gf/project/fhir/">gForge</a></li>
+</ul>
+
+
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+
+
+</div>
+
+
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+
+</div>  <!-- /segment-content -->
+
+
+
+
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>Document ID: DH-xxx:2019</p>
+            <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
+            <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
+            <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Mar 12, 2019 07:20+1000. |
+                <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                </span>
+            </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
+

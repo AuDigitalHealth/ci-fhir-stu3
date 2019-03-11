@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="immunization-air-example-administration-text"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Narrative with
+					Details</b></p><p><b>id</b>:
+					immunization-air-example-administration-text</p><p><b>meta</b>:
+					</p><p><b>identifier</b>:
+				urn:oid:2.25.129844986816735724544008039955538526131</p><p><b>status</b>:
+				completed</p><p><b>notGiven</b>: false</p><p><b>vaccineCode</b>: Infanrix Hexa <span style="background: LightGoldenRodYellow">(Details :
+					{urn:oid:1.2.36.1.2001.1005.17 code 'IFHX' = 'Infanrix Hexa)</span></p><p><b>patient</b>: Individual Helathcare Identifier: 8003608166690503 </p><p><b>date</b>:
+				25/03/2012</p><p><b>primarySource</b>: true</p><h3>VaccinationProtocols</h3><table class="grid">
+				<tr>
+					<td>-</td>
+					<td><b>DoseSequence</b></td>
+					<td><b>TargetDisease</b></td>
+					<td><b>DoseStatus</b></td>
+				</tr>
+				<tr>
+					<td>*</td>
+					<td>1</td>
+					<td>Diphtheria, Tetanus, Pertussis, Hepatitis B, Polio, Hib </td>
+					<td>Not available <span style="background: LightGoldenRodYellow">(Details :
+							{http://hl7.org/fhir/v3/NullFlavor code 'NAVU' = 'Not available', given
+							as 'Not available'})</span></td>
+				</tr>
+			</table></div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.25.129844986816735724544008039955538526131"/>
+  </identifier>
+  <status value="completed"/>
+  <notGiven value="false"/>
+  <vaccineCode>
+    <coding>
+      <system value="urn:oid:1.2.36.1.2001.1005.17"/>
+      <code value="IFHX"/>
+    </coding>
+    <text value="Infanrix Hexa"/>
+  </vaccineCode>
+  <patient>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://hl7.org/fhir/v2/0203"/>
+          <code value="NI"/>
+          <display value="National unique individual identifier"/>
+        </coding>
+      </type>
+      <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+      <value value="8003608166690503"/>
+    </identifier>
+  </patient>
+  <date value="2012-03-25"/>
+  <primarySource value="true"/>
+  <vaccinationProtocol>
+    <doseSequence value="1"/>
+    <targetDisease>
+      <text value="Diphtheria"/>
+    </targetDisease>
+    <targetDisease>
+      <text value="Tetanus"/>
+    </targetDisease>
+    <targetDisease>
+      <text value="Pertussis"/>
+    </targetDisease>
+    <targetDisease>
+      <text value="Hepatitis B"/>
+    </targetDisease>
+    <targetDisease>
+      <text value="Polio"/>
+    </targetDisease>
+    <targetDisease>
+      <text value="Hib"/>
+    </targetDisease>
+    <doseStatus>
+      <coding>
+        <system value="http://hl7.org/fhir/v3/NullFlavor"/>
+        <code value="NAVU"/>
+        <display value="Not available"/>
+      </coding>
+    </doseStatus>
+  </vaccinationProtocol>
+</Immunization>

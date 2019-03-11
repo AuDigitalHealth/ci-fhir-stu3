@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="composition-docheader-cei-1"/>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-docheader-cei-1"/>
+  <version value="1.0.0"/>
+  <name value="CompositionDocHeaderCEI"/>
+  <title value="Consumer Entered Information Document Header"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description
+    value="The purpose of this profile is to define common header requirements for consumer authored documents associated with a patient in an Australian healthcare context.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
+  <copyright
+    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Composition"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-composition"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Composition">
+      <path value="Composition"/>
+      <short value="Consumer Entered Information Document Header"/>
+    </element>
+    <element id="Composition.language">
+      <path value="Composition.language"/>
+      <min value="1"/>
+      <fixedCode value="en-AU"/>
+    </element>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.status">
+      <path value="Composition.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.date">
+      <path value="Composition.date"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ihi-1"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Composition.confidentiality">
+      <path value="Composition.confidentiality"/>
+      <max value="0"/>
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

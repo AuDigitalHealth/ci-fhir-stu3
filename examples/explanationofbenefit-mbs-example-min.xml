@@ -1,0 +1,40 @@
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+	<id value="explanationofbenefit-mbs-example-min"/>
+	<meta>
+		<profile value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/explanationofbenefit-medicare"/>
+	</meta>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.25.129844986816735724544008039950138526110"/>
+	</identifier>
+	<patient>
+		<identifier>
+			<type>
+				<coding>
+					<system value="http://hl7.org/fhir/v2/0203"/>
+					<code value="NI"/>
+					<display value="National unique individual identifier"/>
+				</coding>
+			</type>
+			<system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+			<value value="8003608166690503"/>
+		</identifier>
+	</patient>
+	<created value="2017-12-04"/>
+	<item>
+		<sequence value="1"/>
+		<category>
+			<coding>
+				<system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1"/>
+				<code value="mbs"/>
+			</coding>
+		</category>
+		<service>
+			<coding>
+				<system value="urn:oid:1.2.36.1.2001.1005.21"/>
+				<code value="30186"/>
+			</coding>
+		</service>
+		<servicedDate value="2016-06-16"/>
+	</item>
+</ExplanationOfBenefit>

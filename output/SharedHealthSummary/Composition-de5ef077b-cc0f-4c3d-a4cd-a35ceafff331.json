@@ -1,0 +1,161 @@
+{
+  "resourceType": "Composition",
+  "id": "de5ef077b-cc0f-4c3d-a4cd-a35ceafff331",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1"
+    ]
+  },
+  "language": "en-AU",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: de5ef077b-cc0f-4c3d-a4cd-a35ceafff331</p><p><b>meta</b>: </p><p><b>language</b>: en-AU</p><p><b>identifier</b>: urn:uuid:c009fbfd-c0ab-45cc-9536-735a624c943c</p><p><b>status</b>: final</p><p><b>type</b>: Patient Summary <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '60591-5' = 'Patient summary Document', given as 'Patient Summary'})</span></p><p><b>date</b>: 21/06/2017 9:00:15 AM</p><p><b>author</b>: <a href=\"Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html\">Generated Summary: id: 40a94071-8373-4d53-a788-63b79c75a3c1; HPI-I = 8003610000000000; Barry Helpman (OFFICIAL); bhelpman@example.devonportgp.com.au(WORK)</a></p><p><b>title</b>: Shared Health Summary</p><h3>Attesters</h3><table class=\"grid\"><tr><td>-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td>*</td><td>legal</td><td>21/06/2017 9:00:15 AM</td><td><a href=\"Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html\">Generated Summary: id: 40a94071-8373-4d53-a788-63b79c75a3c1; HPI-I = 8003610000000000; Barry Helpman (OFFICIAL); bhelpman@example.devonportgp.com.au(WORK)</a></td></tr></table><p><b>custodian</b>: <a href=\"Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html\">Generated Summary: id: 021fff67-c5ec-438f-9520-ce9bafee1306; ABN = 51824754455; name: Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)</a></p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org.au/fhir/StructureDefinition/composition-author-role",
+      "valueReference": {
+        "reference": "PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2"
+      }
+    }
+  ],
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:c009fbfd-c0ab-45cc-9536-735a624c943c"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "60591-5",
+        "display": "Patient Summary"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4"
+  },
+  "date": "2017-06-21T09:00:15+10:00",
+  "author": [
+    {
+      "reference": "Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"
+    }
+  ],
+  "title": "Shared Health Summary",
+  "attester": [
+    {
+      "mode": [
+        "legal"
+      ],
+      "time": "2017-06-21T09:00:15+10:00",
+      "party": {
+        "reference": "Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"
+      }
+    }
+  ],
+  "custodian": {
+    "reference": "Organization/021fff67-c5ec-438f-9520-ce9bafee1306"
+  },
+  "section": [
+    {
+      "title": "Current Medications",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "101.32009",
+            "display": "Current Medicine"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table border=\"5\">\n          <caption>Medications</caption>\n          <thead>\n            <tr>\n              <th>Medication</th>\n              <th>Dose</th>\n              <th>Purpose/Comment</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>Candesartan 32mg</td>\n              <td>1 d</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>Metformin 500mg</td>\n              <td>1 bd</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>Candesartan 8mg</td>\n              <td>0.5 d</td>\n              <td/>\n            </tr>\n          </tbody>\n        </table>\n      </div>"
+      },
+      "entry": [
+        {
+          "reference": "MedicationStatement/f7583f71-7736-4d10-89f7-fa1845e53120"
+        },
+        {
+          "reference": "MedicationStatement/314619c2-2d97-4fb9-9c25-b0b9da92f804"
+        },
+        {
+          "reference": "MedicationStatement/90d418aa-ed53-447b-95d2-099101ed4339"
+        }
+      ]
+    },
+    {
+      "title": "Allergies and Adverse Reactions",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48765-2",
+            "display": "Allergies and or adverse reactions"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>No known medication allergies.</p>\n      </div>"
+      },
+      "entry": [
+        {
+          "reference": "AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9"
+        }
+      ]
+    },
+    {
+      "title": "Medical History",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "101.16117"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table border=\"5\">\n          <caption>Problems and Diagnoses</caption>\n          <thead>\n            <tr>\n              <th>Condition</th>\n              <th>Onset</th>\n              <th>Abatement / Resolution</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>Atrial fibrillation</td>\n              <td>2017</td>\n              <td>-</td>\n            </tr>\n            <tr>\n              <td>Right lower zone pneumonia</td>\n              <td>March 2017</td>\n              <td>April 2017</td>\n            </tr>\n          </tbody>\n        </table>\n        <table border=\"5\">\n          <caption>Procedures</caption>\n          <thead>\n            <tr>\n              <th>Procedure</th>\n              <th>Date</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>Total replacement of left knee joint</td>\n              <td>27 February 2015</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>"
+      },
+      "entry": [
+        {
+          "reference": "Condition/b021320c-bc5e-4ae8-b9fc-1ed2d876e889"
+        },
+        {
+          "reference": "Condition/cfa41daf-b5a6-4a05-9166-a4b7c23f08a1"
+        },
+        {
+          "reference": "Procedure/3bc4a0f3-1d3e-4bde-83a9-7a04dd5f4a77"
+        }
+      ]
+    },
+    {
+      "title": "Immunisations",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11369-6"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unknown</div>"
+      },
+      "emptyReason": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/list-empty-reason",
+            "code": "unavailable",
+            "display": "Unavailable"
+          }
+        ],
+        "text": "Unknown"
+      }
+    }
+  ]
+}

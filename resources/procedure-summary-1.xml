@@ -1,0 +1,74 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="procedure-summary-1"/>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/procedure-summary-1"/>
+  <version value="1.0.0"/>
+  <name value="ProcedureSummary"/>
+  <title value="Summary Statement of Known Procedure"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description value="The purpose of this profile is to provide a summary statement for a known procedure.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>  <fhirVersion value="3.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Procedure"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Procedure">
+      <path value="Procedure"/>
+    </element>
+    <element id="Procedure.status">
+      <path value="Procedure.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Procedure.code">
+      <path value="Procedure.code"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Procedure.code.coding">
+      <path value="Procedure.code.coding"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Procedure.code.coding:snomedCode">
+      <path value="Procedure.code.coding"/>
+      <sliceName value="snomedCode"/>
+      <short value="SNOMED CT-AU procedure"/>
+      <max value="1"/>
+      <binding>
+        <strength value="required"/>
+        <description value="SNOMED CT-AU procedure"/>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1"/>
+      </binding>
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Procedure.note">
+      <path value="Procedure.note"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

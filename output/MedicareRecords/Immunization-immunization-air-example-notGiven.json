@@ -1,0 +1,73 @@
+{
+  "resourceType": "Immunization",
+  "id": "immunization-air-example-notGiven",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: immunization-air-example-notGiven</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:oid:2.25.129844986816735724544008039955538526131</p><p><b>status</b>: completed</p><p><b>notGiven</b>: true</p><p><b>vaccineCode</b>: Infanrix Hexa <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.2.36.1.2001.1005.17 code 'IFHX' = 'Infanrix Hexa)</span></p><p><b>patient</b>: </p><p><b>date</b>: 15/08/2017</p><p><b>primarySource</b>: true</p><p><b>note</b>: Natural Immunity to Polio recorded on 15th August</p><h3>Explanations</h3><table class=\"grid\"><tr><td>-</td><td><b>ReasonNotGiven</b></td></tr><tr><td>*</td><td>immunity <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v3/ActReason code 'IMMUNE' = 'immunity', given as 'immunity'})</span></td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod",
+      "valuePeriod": {
+        "start": "2017-08-16"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.25.129844986816735724544008039955538526131"
+    }
+  ],
+  "status": "completed",
+  "notGiven": true,
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.36.1.2001.1005.17",
+        "code": "IFHX"
+      }
+    ],
+    "text": "Infanrix Hexa"
+  },
+  "patient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NI",
+            "display": "National unique individual identifier"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608166690503"
+    }
+  },
+  "date": "2017-08-15",
+  "primarySource": true,
+  "note": [
+    {
+      "text": "Natural Immunity to Polio recorded on 15th August"
+    }
+  ],
+  "explanation": {
+    "reasonNotGiven": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v3/ActReason",
+            "code": "IMMUNE",
+            "display": "immunity"
+          }
+        ]
+      }
+    ]
+  }
+}

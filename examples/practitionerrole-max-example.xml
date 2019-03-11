@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    
+    <id value="practitionerrole-max-example"/>
+       
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This is one of the possible maximal example conforming to the Agency PractitionerRole base
+                profile - "practitionerrole-dh-base".</p>
+            <p>It contains all types of following allowed identifier slices:</p>
+            <ul>
+                <li>providerNumber (Australian provider number)</li>
+                <li>nationalProviderAtOrganisation (Provider at Organisation Identifier)</li>
+                <li>careAgencyEmployeeIdentifier (An identifier for the person as this agent)</li>
+                <li>employeeNumber (Employee Number Identifier)</li>
+                <li>generalIdentifier (any other type of identifier)</li>
+            </ul>  
+        </div>
+    </text>
+        
+    <identifier>        
+        <!-- Provider Number Identifier -->
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/identifier-type"/>
+                <code
+                    value="PNI"
+                />
+                <display value="Provider Number Identifier"/>
+            </coding>
+            <text value="Provider Number Identifier"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/provider-number"/>
+        <value value="9999999999"/>
+    </identifier>
+    
+    <identifier>        
+        <!-- National Provider ATO Organisation Identifier -->
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/identifier-type"/>
+                <code
+                    value="NPAOI"
+                />
+                <display value="National Provider ATO Organisation Identifier"/>
+            </coding>
+            <text value="National Provider ATO Organisation Identifier"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/npao-identifier"/>
+        <value value="8888888888"/>
+    </identifier>
+    
+    <identifier>        
+        <!-- Care Agency Employee Identifier -->
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/identifier-type"/>
+                <code
+                    value="CAEI"
+                />
+                <display value="Care Agency Employee Identifier"/>
+            </coding>
+            <text value="Care Agency Employee Identifier"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/pcehr/caei/1.0"/>
+        <value value="9003601234567892"/>
+    </identifier>       
+    
+    <identifier>        
+        <!-- Employee Number Identifier -->
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/identifier-type"/>
+                <code
+                    value="ENI"
+                />
+                <display value="Employee Number Identifier"/>
+            </coding>
+            <text value="Employee Number Identifier"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/employee-number-identifier"/>
+        <value value="33333333333"/>        
+        <assigner> 
+            <display value="Employee Number Identifier"/> 
+        </assigner> 
+    </identifier>
+    
+    <identifier>        
+        <!-- General Identifier -->
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/identifier-type"/>
+                <code value="GI"/>                
+                <display value="Any General Identifier"/>
+            </coding>
+            <text value="General Identifier 1"/>
+        </type>
+        <system value="http:/goodhealthhospital/identifier/practitionerrole"/>
+        <value value="7777777777"/>
+    </identifier>    
+    
+    <active value = "true"/>
+    
+    <period> 
+        <start value="2012-01-01"/> 
+        <end value="2012-03-31"/> 
+    </period>
+    
+    <practitioner> 
+        <reference value="Practitioner/practitioner-max-example"/>
+        <display value="Dr Brissy Ice"/> 
+    </practitioner> 
+    
+    <organization> 
+        <reference value="Organization/organization-max-example"/> 
+    </organization> 
+    
+    <code> 
+        <coding> 
+            <system value="http://hl7.org/fhir/v2/0286"/> 
+            <code value="RP"/> 
+        </coding> 
+    </code> 
+    
+    <specialty> 
+        <coding> 
+            <system value="http://snomed.info/sct"/> 
+            <code value="408443003"/> 
+            <display value="General medical practice"/> 
+        </coding> 
+    </specialty> 
+    
+    <location> 
+        <reference value="Location/location-dh-base-example-max"/>         
+        <display value="South Wing, second floor"/> 
+    </location> 
+    
+    <healthcareService> 
+        <reference value="HealthcareService/healthcareservice-example"/> 
+    </healthcareService> 
+    
+    <telecom> 
+        <system value="phone"/> 
+        <value value="(03) 5555 6473"/> 
+        <use value="work"/> 
+    </telecom> 
+    
+    <telecom> 
+        <system value="email"/> 
+        <value value="adam.southern@example.org"/> 
+        <use value="work"/> 
+    </telecom> 
+    
+    <availableTime> 
+        <daysOfWeek value="mon"/> 
+        <daysOfWeek value="tue"/> 
+        <daysOfWeek value="wed"/> 
+        <availableStartTime value="09:00:00"/> 
+        <availableEndTime value="16:30:00"/> 
+    </availableTime>
+    
+    <availableTime> 
+        <daysOfWeek value="thu"/> 
+        <daysOfWeek value="fri"/> 
+        <availableStartTime value="09:00:00"/> 
+        <availableEndTime value="12:00:00"/> 
+    </availableTime> 
+    
+    <notAvailable> 
+        <description value="Brissy will be on extended leave during May 2017"/> 
+        <during> 
+            <start value="2017-05-01"/> 
+            <end value="2017-05-20"/> 
+        </during> 
+    </notAvailable> 
+    
+    <availabilityExceptions value="Brissy is generally unavailable on public holidays and during the Christmas/New Year break"/> 
+    
+    <endpoint> 
+        <!--   Endpoint that handles the v2 messaging for the external organization   -->
+        <reference value="Endpoint/endpoint-example"/> 
+    </endpoint> 
+    
+</PractitionerRole>

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../../../../../../work/git/fhir-stu3-schema/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <id value="composition-shs-example01"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1"/>
+  </meta>
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+      <p><b> id</b> : fef84cc3-4d85-4d05-9a09-48696db47036</p>
+      <p><b>language</b>: en-AU</p>
+      <p><b>status</b> : final</p>
+      <p><b>type</b>: Shared Health Summary <span style="background: LightGoldenRodYellow"
+        >(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1
+        code '100.16685' = '100.16565', given as 'Shared Health Summary'})</span></p>
+      <p><b> date</b> : 21/06/2017 09:00::15+10:00</p>
+      <p><b>author</b>: HPI-I = 8003610000000000; name = Dr Barry Helpman</p>
+      <p><b>title</b> : Shared Health Summary</p>
+      <p><b>confidentiality</b> : Normal</p>
+    </div>
+  </text>
+  <contained>
+    <MedicationStatement xmlns="http://hl7.org/fhir">
+      <id value="05b96f3e-dee9-438d-8b2a-5bf21e753b22"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"
+        />
+      </meta>
+      <status value="active"/>
+      <medicationCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="22087011000036100"/>
+          <display value="candesartan cilexetil 32 mg tablet"/>
+        </coding>
+        <text value="Candesartan 32mg"/>
+      </medicationCodeableConcept>
+      <subject>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </subject>
+      <taken value="y"/>
+      <dosage>
+        <text value="1 d"/>
+        <timing>
+          <repeat>
+            <frequency value="1"/>
+            <period value="1"/>
+            <periodUnit value="d"/>
+          </repeat>
+        </timing>
+        <doseQuantity>
+          <value value="1"/>
+          <unit value="﻿tablet"/>
+          <system value="http://snomed.info/sct"/>
+          <code value="63011000036109"/>
+        </doseQuantity>
+      </dosage>
+    </MedicationStatement>
+  </contained>
+  <contained>
+    <MedicationStatement xmlns="http://hl7.org/fhir">
+      <id value="5ab243f6-3c2a-47f3-93cd-41586e12bf96"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"
+        />
+      </meta>
+      <status value="active"/>
+      <medicationCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="23358011000036102"/>
+          <display value="metformin hydrochloride 500 mg tablet"/>
+        </coding>
+        <text value="Metformin 500mg"/>
+      </medicationCodeableConcept>
+      <subject>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </subject>
+      <taken value="y"/>
+      <dosage>
+        <text value="1 bd"/>
+        <timing>
+          <repeat>
+            <frequency value="2"/>
+            <period value="1"/>
+            <periodUnit value="d"/>
+          </repeat>
+        </timing>
+        <doseQuantity>
+          <value value="1"/>
+          <unit value="﻿tablet"/>
+          <system value="http://snomed.info/sct"/>
+          <code value="63011000036109"/>
+        </doseQuantity>
+      </dosage>
+    </MedicationStatement>
+  </contained>
+  <contained>
+    <MedicationStatement xmlns="http://hl7.org/fhir">
+      <id value="4286d537-d543-436f-bb1d-4f5bc825cb19"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"
+        />
+      </meta>
+      <status value="active"/>
+      <medicationCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="22879011000036102"/>
+          <display value="candesartan cilexetil 8 mg tablet"/>
+        </coding>
+        <text value="Candesartan 8mg"/>
+      </medicationCodeableConcept>
+      <subject>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </subject>
+      <taken value="y"/>
+      <dosage>
+        <text value="0.5 d"/>
+        <timing>
+          <repeat>
+            <frequency value="1"/>
+            <period value="1"/>
+            <periodUnit value="d"/>
+          </repeat>
+        </timing>
+        <doseQuantity>
+          <value value="0.5"/>
+          <unit value="﻿tablet"/>
+          <system value="http://snomed.info/sct"/>
+          <code value="63011000036109"/>
+        </doseQuantity>
+      </dosage>
+    </MedicationStatement>
+  </contained>
+  <contained>
+    <Patient>
+      <id value="938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"/>
+      </meta>
+      <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
+        <valueCoding>
+          <system
+            value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1"/>
+          <code value="9"/>
+          <display value="Not stated/inadequately described"/>
+        </valueCoding>
+      </extension>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://hl7.org/fhir/v2/0203"/>
+            <code value="NI"/>
+            <display value="National unique individual identifier"/>
+          </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+        <value value="8003608666701594"/>
+      </identifier>
+      <name>
+        <text value="Sammy GoodPatient"/>
+        <family value="GoodPatient"/>
+        <given value="Sammy"/>
+      </name>
+      <gender value="other"/>
+      <birthDate value="1956-08-23"/>
+      <generalPractitioner>
+        <reference value="#077e1f2d-d5ac-4e61-8f67-1e6154775a9e"/>
+      </generalPractitioner>
+      <managingOrganization>
+        <reference value="#b6fab368-623b-45a6-a133-2d77b69663a0"/>
+      </managingOrganization>
+    </Patient>
+  </contained>
+  <contained>
+    <Practitioner>
+      <id value="57cde959-77ff-4c75-8575-e6583c6ca9ed"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"
+        />
+      </meta>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://hl7.org/fhir/v2/0203"/>
+            <code value="NPI"/>
+            <display value="National provider identifier"/>
+          </coding>
+          <text value="HPI-I"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+        <value value="8003610000000000"/>
+      </identifier>
+      <name>
+        <use value="official"/>
+        <family value="Helpman"/>
+        <given value="Barry"/>
+        <suffix value="M.D."/>
+      </name>
+      <telecom>
+        <system value="email"/>
+        <value value="bhelpman@example.devonportgp.com.au"/>
+        <use value="work"/>
+      </telecom>
+      <qualification>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://hl7.org.au/fhir/v2/0203"/>
+              <code value="AHPRA"/>
+              <display value="Australian Health Practitioner Regulation Agency Registration Number"
+              />
+            </coding>
+            <text value="AHPRA Registration Number"/>
+          </type>
+          <system value="http://hl7.org.au/id/ahpra-registration-number"/>
+          <value value="MED0000932850"/>
+        </identifier>
+        <code>
+          <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+            <code value="253111"/>
+            <display value="General Medical Practitioner"/>
+          </coding>
+          <text value="AHPRA qualification for General Practitioner"/>
+        </code>
+        <issuer>
+          <display value="AHPRA"/>
+        </issuer>
+      </qualification>
+    </Practitioner>
+  </contained>
+  <contained>
+    <Practitioner>
+      <id value="077e1f2d-d5ac-4e61-8f67-1e6154775a9e"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"
+        />
+      </meta>
+      <name>
+        <use value="official"/>
+        <family value="Doctor"/>
+        <given value="Good"/>
+        <prefix value="Dr."/>
+      </name>
+    </Practitioner>
+  </contained>
+  <contained>
+    <PractitionerRole>
+      <id value="2c2ef185-a9fd-4756-bb22-051fac438f07"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1"
+        />
+      </meta>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://hl7.org.au/fhir/v2/0203"/>
+            <code value="UPIN"/>
+          </coding>
+          <text value="Medicare Provider Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
+        <value value="5544887B"/>
+      </identifier>
+      <identifier>
+        <type>
+          <coding>
+            <system value="http://hl7.org/fhir/v2/0203"/>
+            <code value="NPI"/>
+            <display value="National provider identifier"/>
+          </coding>
+          <text value="HPI-I"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+        <value value="8003610000000000"/>
+      </identifier>
+      <practitioner>
+        <reference value="#57cde959-77ff-4c75-8575-e6583c6ca9ed"/>
+      </practitioner>
+      <organization>
+        <reference value="#131e9134-d90a-47eb-9072-3233788df71f"/>
+      </organization>
+      <code>
+        <coding>
+          <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+          <code value="253111"/>
+          <display value="General Practitioner"/>
+        </coding>
+        <text value="GP"/>
+      </code>
+    </PractitionerRole>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="131e9134-d90a-47eb-9072-3233788df71f"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1"
+        />
+      </meta>
+      <identifier>
+        <type>
+          <text value="ABN"/>
+        </type>
+        <system value="http://hl7.org.au/id/abn"/>
+        <value value="51824754455"/>
+      </identifier>
+      <name value="Devonport Family Medicine Clinic"/>
+      <telecom>
+        <system value="email"/>
+        <value value="reception@example.dfmc.com.au"/>
+        <use value="work"/>
+      </telecom>
+      <telecom>
+        <system value="fax"/>
+        <value value="(03) 8543 5557"/>
+        <use value="work"/>
+      </telecom>
+      <telecom>
+        <system value="phone"/>
+        <value value="(03) 8543 5556"/>
+        <use value="work"/>
+      </telecom>
+      <address>
+        <type value="postal"/>
+        <line value="LPO Box 235"/>
+        <city value="Strahan"/>
+        <state value="TAS"/>
+        <postalCode value="7468"/>
+        <country value="AU"/>
+      </address>
+    </Organization>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="b6fab368-623b-45a6-a133-2d77b69663a0"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"
+        />
+      </meta>
+      <name value="GoodDoctor Clinic"/>
+    </Organization>
+  </contained>
+  <contained>
+    <AllergyIntolerance xmlns="http://hl7.org/fhir">
+      <id value="4a89014c-3442-4501-bfc7-0a0c4d118779"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1"
+        />
+      </meta>
+      <clinicalStatus value="active"/>
+      <verificationStatus value="unconfirmed"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="409137002"/>
+          <display value="No known drug allergy"/>
+        </coding>
+        <text value="No known medication allergies"/>
+      </code>
+      <patient>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </patient>
+    </AllergyIntolerance>
+  </contained>
+  <contained>
+    <Procedure xmlns="http://hl7.org/fhir">
+      <id value="1da5d977-64a4-4501-97c4-d5e410589a6c"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/procedure-summary-1"
+        />
+      </meta>
+      <status value="completed"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="443681002"/>
+          <display value="Total replacement of left knee joint"/>
+        </coding>
+      </code>
+      <subject>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </subject>
+      <performedDateTime value="2015-02-27"/>
+    </Procedure>
+  </contained>
+  <contained>
+    <Condition xmlns="http://hl7.org/fhir">
+      <id value="condition-af"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/condition-summary-1"
+        />
+      </meta>
+      <clinicalStatus value="active" />
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="49436004"/>
+          <display value="Atrial fibrillation"/>
+        </coding>
+      </code>
+      <subject>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </subject>
+      <onsetDateTime value="2017"/>
+    </Condition>
+  </contained>
+  <contained>
+    <Condition xmlns="http://hl7.org/fhir">
+      <id value="e4547df4-6651-4d79-b5a7-d73a786ddea1"/>
+      <meta>
+        <profile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/condition-summary-1"
+        />
+      </meta>
+      <clinicalStatus value="resolved" />
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="301001009"/>
+          <display value="Right lower zone pneumonia"/>
+        </coding>
+      </code>
+      <subject>
+        <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+      </subject>
+      <onsetDateTime value="2018-08"/>
+      <abatementDateTime value="2018-09-03"/>
+    </Condition>
+  </contained>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
+    <valueReference>
+      <reference value="#2c2ef185-a9fd-4756-bb22-051fac438f07"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:c009fbfd-c0ab-45cc-9536-735a624c943c"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60591-5"/>
+      <display value="Patient Summary"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="#938897f5-0872-43e3-8c6f-58055fbb340b"/>
+  </subject>
+  <date value="2017-06-21T09:00:15+10:00"/>
+  <author>
+    <reference value="#57cde959-77ff-4c75-8575-e6583c6ca9ed"/>
+  </author>
+  <title value="Shared Health Summary"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2017-06-21T09:00:15+10:00"/>
+    <party>
+      <reference value="#57cde959-77ff-4c75-8575-e6583c6ca9ed"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="#131e9134-d90a-47eb-9072-3233788df71f"/>
+  </custodian>
+  <section>
+    <title value="Current Medications"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.32009"/>
+        <display value="Current Medicine"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table border="5">
+          <caption>Medications</caption>
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>Dose</th>
+              <th>Purpose/Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Candesartan 32mg</td>
+              <td>1 d</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Metformin 500mg</td>
+              <td>1 bd</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Candesartan 8mg</td>
+              <td>0.5 d</td>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="#05b96f3e-dee9-438d-8b2a-5bf21e753b22"/>
+    </entry>
+    <entry>
+      <reference value="#5ab243f6-3c2a-47f3-93cd-41586e12bf96"/>
+    </entry>
+    <entry>
+      <reference value="#4286d537-d543-436f-bb1d-4f5bc825cb19"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Allergies and Adverse Reactions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies and or adverse reactions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>No known medication allergies.</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="#4a89014c-3442-4501-bfc7-0a0c4d118779"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Medical History"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.16117"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table border="5">
+          <caption>Problems and Diagnoses</caption>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Onset</th>
+              <th>Abatement / Resolution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Atrial fibrillation</td>
+              <td>2017</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Right lower zone pneumonia</td>
+              <td>August 2018</td>
+              <td>September 2018</td>
+            </tr>
+          </tbody>
+        </table>
+        <table border="5">
+          <caption>Procedures</caption>
+          <thead>
+            <tr>
+              <th>Procedure</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total replacement of left knee joint</td>
+              <td>27 February 2015</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="#e4547df4-6651-4d79-b5a7-d73a786ddea1"/>
+    </entry>
+    <entry>
+      <reference value="b13d9ee6-d55c-4618-916b-19a2ee9740a6"/>
+    </entry>
+    <entry>
+      <reference value="#1da5d977-64a4-4501-97c4-d5e410589a6c"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Immunisations"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="11369-6"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Unknown</div>
+    </text>
+    <emptyReason>
+      <coding>
+        <system value="http://hl7.org/fhir/list-empty-reason"/>
+        <code value="unavailable"/>
+        <display value="Unavailable"/>
+      </coding>
+      <text value="Unknown"/>
+    </emptyReason>
+  </section>
+</Composition>

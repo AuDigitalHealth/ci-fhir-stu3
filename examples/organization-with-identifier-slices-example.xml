@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+
+    <id value="organization-with-identifier-slices-example"/>
+
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h4> This is an example of an organization that conforms to the
+                'organization-dh-base' profile and contains following slices for identifier
+                element of Organization resource:</h4>
+            <ul>
+                <li>Healthcare Provider Identifier – Organisation (HPI–O)</li>
+                <li>Australian Business Number (ABN)</li>
+                <li>Australian Company Number (ACN)</li>
+                <li>Australian Registered Body Number (ARBN)</li>
+                <li>My Health Record (PCEHR) Assigned Identity for Organisations (PAI-O)</li>
+                <li>Contracted Service Provider (CSP) Number</li>
+                <li>NATA number</li>
+                <li>Safety net number</li>
+                <li>General identifier Number</li>
+            </ul>
+        </div>
+    </text>
+
+    <!--Begin Healthcare Provider Identifier – Organisation (HPI–O)-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="NOI"/>
+                <display value="National Organisation Identifier"/>
+            </coding>
+            <text value="HPI-O"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
+        <value value="8003627500000328"/>
+    </identifier>
+    <!--End Healthcare Provider Identifier – Organisation (HPI–O)-->
+    
+    <!--Begin Australian Business Number (ABN)-->
+    <identifier>
+        <type>           
+            <text value="ABN"/>
+        </type>
+        <system value="http://business.gov.au/abn"/>
+        <value value="51824753556"/>
+    </identifier>    
+    <!--End Australian Business Number (ABN)-->
+    
+    
+    <!--Begin Australian Company Number (ACN)-->
+    <identifier>
+        <type>
+           <text value="ACN"/>
+        </type>
+        <system value="http://business.gov.au/acn"/>
+        <value value="007249989"/>
+    </identifier>    
+    <!--End Australian Company Number (ACN)-->
+    
+    <!--Begin Australian Registered Body Number (ARBN)-->
+    <identifier>
+        <type>
+            <text value="ARBN"/>
+        </type>
+        <system value="http://business.gov.au/arbn"/>
+        <value value="000 000 123"/>
+    </identifier>    
+    <!--End Australian Registered Body Number (ARBN)-->
+    
+    <!--Begin My Health Record (PCEHR) Assigned Identity for Organisations (PAI-O)-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="NOI"/>
+                <display value="National Organisation Identifier"/>
+            </coding>
+            <text value="PAI-O"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/pcehr/paio/1.0"/>
+        <value value="8003647500000328"/>
+    </identifier>    
+    <!--End My Health Record (PCEHR) Assigned Identity for Organisations (PAI-O)-->
+    
+    <!--Begin Contracted Service Provider (CSP) Number-->
+    <identifier>
+        <type>
+           <text value="CSP"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/csp/1.0"/>
+        <value value="8003635500000327"/>
+    </identifier>    
+    <!--End Contracted Service Provider (CSP) Number-->
+    
+    <!--Begin NATA number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="XX"/>
+                <display value="Organization identifier"/>
+            </coding>
+            <text value="NATA"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/nata/1.0"/>
+        <value value="xxx"/>
+    </identifier>    
+    <!--End NATA number-->
+    
+    
+    
+    <!--Begin Safety net number-->	
+	<identifier>
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/safety-net-number"/>
+                <code value="8"/>
+                <display value="Safety Net Concession"/>
+            </coding>
+            <text value="Safety Net Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+        <value value="32788511952"/>
+    </identifier>
+    <!--End Safety net number-->
+	
+    
+    <!--Begin General Identifier-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="MR"/>
+            </coding>
+        </type>
+        <system value="urn:oid:1.2.36.146.595.217.0.1"/>
+        <value value="12345"/>
+    </identifier>
+    <!-- General Identifier-->
+
+
+
+    <active value="true"/>
+
+    <type>
+        <coding>
+            <system value="http://hl7.org/fhir/organization-type"/>
+            <code value="dept"/>
+            <display value="Hospital Department"/>
+        </coding>
+    </type>
+
+    <name value="XYZ Insurance"/>
+    <alias value="ABC Insurance"/>
+    <alias value="EFG Insurance"/>
+
+    <telecom>
+        <system value="phone"/>
+        <value value="(+1) 734-677-7777"/>
+    </telecom>
+    <telecom>
+        <system value="fax"/>
+        <value value="(+1) 734-677-6622"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="hq@HL7.org"/>
+    </telecom>
+    <address>
+        <line value="3300 Washtenaw Avenue, Suite 227"/>
+        <city value="Ann Arbor"/>
+        <state value="MI"/>
+        <postalCode value="48104"/>
+        <country value="USA"/>
+    </address>
+
+    <partOf>
+        <reference value="Organization/organization-max-example"/>
+    </partOf>
+
+    <contact>
+        <purpose>
+            <coding>
+                <system value="http://hl7.org/fhir/contactentity-type"/>
+                <code value="PRESS"/>
+            </coding>
+        </purpose>
+        <telecom>
+            <system value="phone"/>
+            <value value="022-655 2334"/>
+        </telecom>
+    </contact>
+    <contact>
+        <purpose>
+            <coding>
+                <system value="http://hl7.org/fhir/contactentity-type"/>
+                <code value="PATINF"/>
+            </coding>
+        </purpose>
+        <telecom>
+            <system value="phone"/>
+            <value value="022-655 2335"/>
+        </telecom>
+    </contact>
+    <endpoint>
+        <reference value="Endpoint/endpoint-example"/>
+    </endpoint>
+</Organization>

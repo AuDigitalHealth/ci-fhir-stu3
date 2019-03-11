@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">    
+    
+    <id value="practitioner-max-example"/>       
+       
+    <text> 
+        <status value="generated"/> 
+        <div xmlns="http://www.w3.org/1999/xhtml">            
+            <p>This is one of the possible maximal example conforming to the Agency Practitioner base
+                profile - "practitioner-dh-base".</p>
+            <p>It contains all types of following allowed identifier slices:</p>
+            <ul>
+                <li>hpii (HPI-I)</li>
+                <li>prescriberNumber (Prescriber Number Type)</li>
+                <li>employeeNumber (Employee Number for a Practitioner)</li>                
+            </ul>            
+        </div> 
+    </text>     
+        
+    <identifier>        
+        <!-- HPI-I Identifier -->
+        <type>
+            <coding>
+                <system value="http://exampley.com/fhir/identifier-type"/>
+                <code value="HPII"/>
+                <display value="Healthcare Provider Identifier - Individual"/>
+            </coding>
+            <text value="HPI-I"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+        <value value="8003611234567893"/>
+    </identifier>
+    
+    
+    <identifier>        
+        <!-- Prescriber Number Identifier -->
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="PRES"/>
+                <display value="Prescriber Number"/>
+            </coding>
+            <text value="Prescriber Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/medicare-prescriber-number"/>
+        <value value="9999999999"/>
+    </identifier>     
+    
+    <identifier>        
+        <!-- HPI-O based Employee Number -->
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="EI"/>
+                <display value="Employee number"/>
+            </coding>
+            <text value="HPIO Based Provider Individual Identifier"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0"/>
+        <value value="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003620000000000/frankburns27"/>
+    </identifier> 
+    
+    <identifier>        
+        <!-- ABN or ACN based Employee Number -->
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="EI"/>
+                <display value="Employee number"/>
+            </coding>
+            <text value="ABN or ACN based Employee Number"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0"/>
+        <value value="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/004085616/frankburns27"/>
+    </identifier>
+    
+    <active value="true"/> 
+        
+        
+    <name>
+        <use value="official" />
+        <family value="von Hochheim-Weilenfels">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" >
+                <valueString value="von" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Hochheim-Weilenfels" />
+            </extension>    
+        </family>
+        <given value="Regina" />
+        <given value="Johanna" />
+        <given value="Maria" />
+        <prefix value="Dr. phil.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" >
+                <valueCode value="AC" />
+            </extension>
+        </prefix>
+        <suffix value="NCFSA" />
+    </name>
+    
+    
+    <telecom>
+        <system value="phone"/> 
+        <value value="(07) 9999 6666"/> 
+        <use value="work"/> 
+    </telecom>
+        
+    
+    <address>
+        <use value="work" />
+        <text value="1050 W Wishard Blvd 
+            RG
+            5th floor
+            Indianapolis, IN 46240" />
+        <line value="1050 W Wishard Blvd" />
+        <line value="RG 5th floor" />
+        <city value="Indianapolis" />
+        <state value="IN" />
+        <postalCode value="46240" />
+    </address>
+    
+    
+    <gender value="male"/>
+    
+    
+    <birthDate value="1956-08-23"/>
+      
+    
+    <photo>
+        <contentType value="image/jpeg"/>
+        <url value="Binary/f0344"/>
+    </photo>
+    
+    
+    <qualification> 
+        <identifier> 
+            <system value="http://example.org/UniversityIdentifier"/> 
+            <value value="12345"/> 
+        </identifier> 
+        <code> 
+            <coding> 
+                <system value="http://hl7.org/fhir/v2/0360/2.7"/> 
+                <code value="BS"/> 
+                <display value="Bachelor of Science"/> 
+            </coding> 
+            <text value="Bachelor of Science"/> 
+        </code> 
+        <period> 
+            <start value="1995"/> 
+        </period> 
+        <issuer> 
+            <display value="Example University"/> 
+        </issuer> 
+    </qualification>
+        
+    
+    <communication>
+        <coding>
+            <system value="urn:ietf:bcp:47"/>
+            <code value="te"/>
+            <display value="Telugu"/>
+        </coding>
+        <text value="Language"/>
+    </communication>
+    
+    
+</Practitioner>

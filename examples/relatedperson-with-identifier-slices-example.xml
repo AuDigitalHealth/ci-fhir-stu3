@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelatedPerson xmlns="http://hl7.org/fhir">
+
+    <id value="relatedperson-with-identifier-slices-example"/>
+
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This is an example of a related person that conforms to the 'RelatedPerson-base'
+                profile and contains following slices for identifier element of Patient
+                resource:</p>
+            <ul>
+                <li>IHI Number</li>
+                <li>HPIO based Organisation Medical Record ID</li>
+                <li>Commonwealth Seniors Health Card</li>
+                <li>DVA Gold Card Number</li>
+                <li>DVA Lilac Card Number</li>
+                <li>DVA Orange Card Number</li>
+                <li>DVA White Card Number</li>
+                <li>Health Care Card Number</li>
+                <li>Medicare Number</li>
+                <li>Pensioner Concession Card</li>
+                <li>Private Insurance number</li>
+                <li>General identifier</li>
+            </ul>
+        </div>
+    </text>
+
+    <!--Begin IHI Number-->
+    <identifier>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-status">
+            <valueCoding>
+                <system
+                    value="http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-status/1.0.0"/>
+                <code value="Active"/>
+                <display value="Active"/>
+            </valueCoding>
+        </extension>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/ihi-record-status">
+            <valueCoding>
+                <system
+                    value="http://ns.electronichealth.net.au/fhir/CodeSystem/hi/ihi/ihi-record-status/1.0.0"/>
+                <code value="Verified"/>
+                <display value="Verified"/>
+            </valueCoding>
+        </extension>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="NI"/>
+                <display value="National unique individual identifier"/>
+            </coding>
+            <text value="IHI"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+        <value value="8003608666701594"/>
+    </identifier>
+    <!--End IHI Number-->
+
+    <!--Begin HPIO-based-Organisation-Medical-Record-Id-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="MR"/>
+                <display value="Medical record number"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hpioBasedomri"/>
+        <value value="8003621234576547"/>
+    </identifier>
+    <!--End HPIO-based-Organisation-Medical-Record-Id-->
+
+    <!--Begin Commonwealth-Seniors-Health-Card-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="SEN"/>
+                <display value="Commonwealth Seniors Health Card"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/crn"/>
+        <value value="307111942H"/>
+    </identifier>
+    <!--End Commonwealth-Seniors-Health-Card-->
+
+    <!-- Begin 	DVA Gold Card Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="DVG"/>
+                <display value="DVA Gold Card Number"/>
+            </coding>
+            <text value="Department of Veterans' Affairs Number (Gold Card)"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/dva"/>
+        <value value="NBUR9080"/>
+    </identifier>
+    <!-- End DVA Gold Card Number-->
+
+    <!-- Begin DVA Lilac Card Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="DVL"/>
+                <display value="DVA Lilac Card Number"/>
+            </coding>
+            <text value="Department of Veterans' Affairs Number (Lilac Card)"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/dva"/>
+        <value value="NBUR9080"/>
+    </identifier>
+    <!-- End DVA Lilac Card Number-->
+
+    <!-- Begin DVA Orange Card Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="DVO"/>
+                <display value="DVA Orange Card Number"/>
+            </coding>
+            <text value="Department of Veterans' Affairs Number (Orange Card)"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/dva"/>
+        <value value="NBUR9080"/>
+    </identifier>
+    <!-- End DVA Orange Card Number-->
+
+    <!-- Begin DVA White Card Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org.au/fhir/v2/0203"/>
+                <code value="DVW"/>
+                <display value="DVA White Card Number"/>
+            </coding>
+            <text value="Department of Veterans' Affairs Number (White Card)"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/dva"/>
+        <value value="NBUR9080"/>
+    </identifier>
+    <!-- End DVA White Card Number-->
+
+    <!--Begin Health-Care-Card-Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="HC"/>
+                <display value="Health Card Number"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/crn"/>
+        <value value="307111942H"/>
+
+    </identifier>
+    <!--End Health-Care-Card-Number-->
+
+    <!--Begin Medicare Record Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="MC"/>
+                <display value="Patient's Medicare Number"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
+        <value value="32788511952"/>
+        <period>
+            <end value="2001-05-06"/>
+        </period>
+        <assigner>
+            <display value="Medicare"/>
+        </assigner>
+    </identifier>
+    <!--End Medicare-Number-->
+
+    <!--Begin Pensioner-Concession-Card-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="PEN"/>
+                <display value="Pension Number"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/crn"/>
+        <value value="307111942H"/>
+    </identifier>
+    <!--End Pensioner-Concession-Card-->
+
+    <!--Begin Insurer Number-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="MB"/>
+                <display value="Member Number"/>
+            </coding>
+            <text value="Private Health Insurance Member Number"/>
+        </type>
+        <value value="307111942H"/>
+        <assigner>
+            <display value="BUPA"/>
+        </assigner>
+    </identifier>
+    <!--End Insurer Number-->
+
+    <!--Begin General Identifier-->
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="MR"/>
+            </coding>
+        </type>
+        <system value="urn:oid:1.2.36.146.595.217.0.1"/>
+        <value value="12345"/>
+    </identifier>
+    <!-- General Identifier-->
+
+    <active value="true"/>
+
+    <patient>
+        <reference value="Patient/patient-min-example"/>
+    </patient>
+
+    <relationship>
+        <coding>
+            <system
+                value="http://healthterminologies.gov.au/fhir/ValueSet/agency-patient-relationship-type-1"/>
+            <code value="Guardian"/>
+        </coding>
+    </relationship>
+
+    <name>
+        <use value="official"/>
+        <family value="Erickson"/>
+        <given value="Milton"/>
+        <given value="James"/>
+    </name>
+
+    <name>
+        <use value="official"/>
+        <family value="von Hochheim-Weilenfels">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                <valueString value="von"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Hochheim-Weilenfels"/>
+            </extension>
+        </family>
+        <given value="Regina"/>
+        <given value="Johanna"/>
+        <given value="Maria"/>
+        <prefix value="Dr. phil.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="AC"/>
+            </extension>
+        </prefix>
+        <suffix value="NCFSA"/>
+    </name>
+    <name>
+        <use value="maiden"/>
+        <family value="Hochheim"/>
+    </name>
+
+    <telecom>
+        <system value="phone"/>
+        <value value="(076) 99999 55555"/>
+        <use value="work"/>
+    </telecom>
+
+    <telecom>
+        <system value="fax"/>
+        <value value="(076) 99999 55544"/>
+        <use value="home"/>
+    </telecom>
+
+    <gender value="male"/>
+
+    <birthDate value="1956-08-23"/>
+
+    <address>
+        <use value="work"/>
+        <text value="12 Solomon Road, Phoenix, Arizona, TX"/>
+    </address>
+
+    <address>
+        <use value="work"/>
+        <text
+            value="1050 W Wishard Blvd
+            RG
+            5th floor
+            Indianapolis, IN 46240"/>
+        <line value="1050 W Wishard Blvd"/>
+        <line value="RG 5th floor"/>
+        <city value="Indianapolis"/>
+        <state value="IN"/>
+        <postalCode value="46240"/>
+    </address>
+
+    <photo>
+        <contentType value="image/jpeg"/>
+        <url value="Binary/f0333"/>
+    </photo>
+
+    <photo>
+        <contentType value="image/jpeg"/>
+        <url value="Binary/f0344"/>
+    </photo>
+
+    <period>
+        <start value="2013-06-08T10:57:34+01:00"/>
+    </period>
+
+</RelatedPerson>

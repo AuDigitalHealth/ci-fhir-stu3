@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-donationprovision"/>
+  <url
+    value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-donationprovision"/>
+  <version value="1.0.0"/>
+  <name value="DonationProvisionAustralianOrganDonorRegister"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2018-08-28"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description value="Donation decision specific to an organ or tissue."/>
+  <copyright
+    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <contextType value="resource"/>
+  <context value="Consent"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Donation decision specific to an organ or tissue."/>
+      <definition value="Donation decision specific to an organ or tissue."/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Extension.extension:type">
+      <path value="Extension.extension"/>
+      <sliceName value="type"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:type.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="type"/>
+    </element>
+    <element id="Extension.extension:type.value[x]:valueCodeableConcept">
+      <path value="Extension.extension.valueCodeableConcept"/>
+      <sliceName value="valueCodeableConcept"/>
+      <comment
+        value="The FHIR ValueSet (and FHIR CodeSystem resources) will be published on NCTS. This value set includes the following codes from urn:oid:1.2.36.1.2001.1001.101:&#xD;&#xA;103.16657 | Donation Decision&#xD;&#xA;103.16661 | Bone Tissue Indicator&#xD;&#xA;103.16662 | Eye Tissue Indicator&#xD;&#xA;103.16669 | Skin Tissue Indicator&#xD;&#xA;103.16663 | Heart Indicator&#xD;&#xA;103.16664 | Heart Valve Indicator&#xD;&#xA;103.16665 | Kidney Indicator&#xD;&#xA;103.16666 | Liver Indicator&#xD;&#xA;103.16667 | Lungs Indicator&#xD;&#xA;103.16668 | Pancreas Indicator"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference
+            value="https://healthterminologies.gov.au/fhir/ValueSet/organ-donation-consent-provision-type-0"
+          />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Extension.extension:finding">
+      <path value="Extension.extension"/>
+      <sliceName value="finding"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:finding.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="finding"/>
+    </element>
+    <element id="Extension.extension:finding.value[x]:valueCodeableConcept">
+      <path value="Extension.extension.valueCodeableConcept"/>
+      <sliceName value="valueCodeableConcept"/>
+      <comment
+        value="The FHIR ValueSet (and FHIR CodeSystem resources) will be be published on NCTS. This value set include codes from http://snomed.info/sct where concept is-a 365571001 (Willingness to be a donor finding)."/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference
+            value="https://healthterminologies.gov.au/fhir/ValueSet/organ-donation-consent-0"/>
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri
+        value="http://ns.electronichealth.net.au/ci/fhir/structuredefinition/extension-donationdecision"
+      />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <max value="0"/>
+    </element>
+  </differential>
+</StructureDefinition>

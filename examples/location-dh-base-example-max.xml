@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir">
+
+    <id value="location-dh-base-example-max"/>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">Burgers UMC, South Wing, second floor, Neuro
+            Radiology Operation Room 1</div>
+    </text>
+    <identifier>
+        <value value="B1-S.F2.1.00"/>
+    </identifier>
+    <status value="suspended"/>
+    <operationalStatus>
+        <system value="http://hl7.org/fhir/v2/0116"/>
+        <code value="H"/>
+        <display value="Housekeeping"/>
+    </operationalStatus>
+    <name value="South Wing Neuro OR 1"/>
+    <alias value="South Wing OR 5"/>
+    <alias value="Main Wing OR 2"/>
+    <description value="Old South Wing, Neuro Radiology Operation Room 1 on second floor"/>
+    <mode value="instance"/>
+    <type>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="RNEU"/>
+            <display value="Neuroradiology unit"/>
+        </coding>
+    </type>
+    <telecom>
+        <system value="phone"/>
+        <value value="2329"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <text
+            value="1050 W Wishard Blvd 
+            RG
+            5th floor
+            Indianapolis, IN 46240"/>
+        <line value="1050 W Wishard Blvd"/>
+        <line value="RG 5th floor"/>
+        <city value="Indianapolis"/>
+        <state value="IN"/>
+        <postalCode value="46240"/>
+    </address>
+    <physicalType>
+        <coding>
+            <system value="http://hl7.org/fhir/location-physical-type"/>
+            <code value="ro"/>
+            <display value="Room"/>
+        </coding>
+    </physicalType>
+    <position>
+        <longitude value="-86.1581"/>
+        <latitude value="39.7684"/>
+        <altitude value="218"/>
+    </position>
+    <managingOrganization>
+        <reference value="Organization/organization-min-example"/>
+    </managingOrganization>
+    <partOf>
+        <reference value="Location/location-dh-base-example-max"/>
+    </partOf>
+    <endpoint>
+        <reference value="Endpoint/endpoint-example"/>
+    </endpoint>
+
+
+
+</Location>
