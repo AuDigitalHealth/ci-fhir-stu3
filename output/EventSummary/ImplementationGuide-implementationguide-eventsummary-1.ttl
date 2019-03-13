@@ -46,6 +46,19 @@
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/encounter-es-1" ]
        ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-patient-ident-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "patient-ident-1" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patient-ident-1" ]
+       ]
      ]
   ];
   fhir:ImplementationGuide.page [
