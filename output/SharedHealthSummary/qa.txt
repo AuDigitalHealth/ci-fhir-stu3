@@ -1,14 +1,14 @@
 ﻿Shared Health Summary : Validation Results
 =========================================
 
-err = 222, warn = 74, info = 0
-Generated Tue Mar 12 07:23:50 AEST 2019. FHIR version 4.1.0 for 3.0.1
+err = 220, warn = 74, info = 0
+Generated Wed Mar 13 14:19:18 AEST 2019. FHIR version 4.1.0 for 3.0.1
 
  Build Errors : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\composition-a0da969a-7956-439b-b390-8de071a2df7c : 24 / 11
  C:\work\git\ci-fhir-stu3\examples\composition-bd06e981-ba86-4020-ba59-cd89f80e8712 : 20 / 8
- C:\work\git\ci-fhir-stu3\examples\composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f : 36 / 7
+ C:\work\git\ci-fhir-stu3\examples\composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f : 35 / 7
  C:\work\git\ci-fhir-stu3\examples\composition-de5ef077b-cc0f-4c3d-a4cd-a35ceafff331 : 1 / 5
  C:\work\git\ci-fhir-stu3\examples\condition-b021320c-bc5e-4ae8-b9fc-1ed2d876e889 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\condition-cfa41daf-b5a6-4a05-9166-a4b7c23f08a1 : 0 / 1
@@ -121,7 +121,6 @@ ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[1
 ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[1].identifier: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1, Element matches more than one slice - ihiNumber, insurerNumber
 ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier: Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators
 ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].name: The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]
-ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].qualification.identifier.type.text: Value is 'AHPRA Registration Number' but must be 'AHPRA registration number'
 ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier: Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators
 WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[3].meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1" could not be resolved
 WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[4].identifier.type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type
