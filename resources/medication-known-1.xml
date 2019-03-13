@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="medication-known-1"/>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"/>
+  <version value="1.0.0"/>
+  <name value="MedicationKnown"/>
+  <title value="Known Medicine"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description
+    value="The purpose of this profile is to provide detail for a known medicine but to not prescribe the amount or type of detail.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
+  <copyright
+    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Medication"/>
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
+  <derivation value="constraint"/>
+  <differential>    <element id="Medication">
+      <path value="Medication"/>
+    </element>
+    <element id="Medication.extension:pbsSponsor">
+      <path value="Medication.extension"/>
+      <sliceName value="pbsSponsor"/>
+      <short value="PBS Sponsor"/>
+      <definition
+        value="Reference to the sponsor organisation that is responsible for the supply of the medicine."/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.extension:brandName">
+      <path value="Medication.extension"/>
+      <sliceName value="brandName"/>
+      <short value="Medication Brand Name"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.extension:genericName">
+      <path value="Medication.extension"/>
+      <sliceName value="genericName"/>
+      <short value="Medication Generic Drug Name"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-generic-name"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.extension:strengthText">
+      <path value="Medication.extension"/>
+      <sliceName value="strengthText"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-strength-text"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.code">
+      <path value="Medication.code"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.status">
+      <path value="Medication.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.manufacturer">
+      <path value="Medication.manufacturer"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"
+        />
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.form">
+      <path value="Medication.form"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.ingredient">
+      <path value="Medication.ingredient"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.ingredient.item[x]">
+      <path value="Medication.ingredient.item[x]"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"
+        />
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.ingredient.isActive">
+      <path value="Medication.ingredient.isActive"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.ingredient.amount">
+      <path value="Medication.ingredient.amount"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package">
+      <path value="Medication.package"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.content">
+      <path value="Medication.package.content"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.content.item[x]">
+      <path value="Medication.package.content.item[x]"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"
+        />
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.content.amount">
+      <path value="Medication.package.content.amount"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.batch">
+      <path value="Medication.package.batch"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.batch.extension:MedicationBatchSerialNumber">
+      <path value="Medication.package.batch.extension"/>
+      <sliceName value="MedicationBatchSerialNumber"/>
+      <short value="Medication Batch Serial Number"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-batch-serialnumber"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.batch.lotNumber">
+      <path value="Medication.package.batch.lotNumber"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Medication.package.batch.expirationDate">
+      <path value="Medication.package.batch.expirationDate"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
