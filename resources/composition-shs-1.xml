@@ -417,7 +417,7 @@
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
         <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no previous immunisations" />
-        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is value and value.coding.code = '401179006').exists())" />
+        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is value and value.coding.code = '1234401000168109').exists())" />
       </constraint>
       <mustSupport value="true" />
     </element>
