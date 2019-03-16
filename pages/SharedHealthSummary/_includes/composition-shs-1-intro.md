@@ -36,7 +36,7 @@ The following are the usage scenarios expected:
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
  <tr>
-    <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1200661000168109 &#124;No current medications&#124;)</td>
+    <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 &#124;No known current medications&#124;)</td>
   </tr>
   <tr>
     <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
@@ -67,7 +67,7 @@ The following are the usage scenarios expected:
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
   <tr>
-    <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 401179006 &#124;No previous immunisations&#124;)</td>
+    <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234401000168109 &#124;No history of vaccination&#124;)</td>
   </tr>
     <tr>
     <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
