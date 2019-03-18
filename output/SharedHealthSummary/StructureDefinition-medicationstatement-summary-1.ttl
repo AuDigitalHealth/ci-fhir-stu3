@@ -15,10 +15,10 @@
   fhir:StructureDefinition.url [ fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"];
   fhir:StructureDefinition.version [ fhir:value "1.0.0"];
   fhir:StructureDefinition.name [ fhir:value "MedicationStatementSummary"];
-  fhir:StructureDefinition.title [ fhir:value "Summary Statement of Known Medication"];
+  fhir:StructureDefinition.title [ fhir:value "Summary Statement of Known Medicine"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-03-13T21:14:26+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-03-18T12:13:44+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -28,7 +28,7 @@
        fhir:ContactPoint.value [ fhir:value "help@digitalhealth.gov.au" ]
      ]
   ];
-  fhir:StructureDefinition.description [ fhir:value "The purpose of this profile is to provide a summary statement for a medication including asserting negation for a specific medication. It is intentional that detailed medication information have not been included; this is intended to be a short summary.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element"];
+  fhir:StructureDefinition.description [ fhir:value "The purpose of this profile is to provide a summary statement for a medicine including asserting negation for a specific medicine. It is intentional that detailed medicine information have not been included; this is intended to be a short summary.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element"];
   fhir:StructureDefinition.copyright [ fhir:value "Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "3.0.1"];
   fhir:StructureDefinition.mapping [
@@ -4723,7 +4723,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-mst-01" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The dosage shall at least have text or patient instructions" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "dosage.text.exists() or dosage.patientInstruction.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -4816,7 +4816,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-mst-01" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The dosage shall at least have text or patient instructions" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "dosage.text.exists() or dosage.patientInstruction.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ]

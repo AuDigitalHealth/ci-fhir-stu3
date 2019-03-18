@@ -1,4 +1,4 @@
-  <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -40,12 +40,13 @@
    <a id="logo" no-external="true" href="https://www.digitalhealth.gov.au/"><img alt="Agency logo" src="assets/images/agency-logo-www.png"/> </a>
 
    <div id="ig-status">
-    <b>Shared Health Summary Implementation Guide  1.0.0</b>
+    <b>Shared Health Summary FHIR Implementation Guide  1.0.0</b>
 </div>
 
   </div>
   <div class="container">  <!-- container -->
- </div></div>  <!-- /segment-header -->
+ </div>
+ </div>  <!-- /segment-header -->
 
  <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
   <div id="stripe"> </div>
@@ -97,21 +98,28 @@
  </div>  <!-\- /segment-breadcrumb -\->-->
 
 
- <div id="segment-content" class="segment">  <!-- segment-content -->
- <div class="container">  <!-- container -->
-            <div class="row">
-             <div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
-
-<div class="col-9">
-
-<ul class="nav nav-tabs"><li><a href="StructureDefinition-medicationstatement-summary-1.html">Content</a></li><li class="active"><a href="#">Detailed Descriptions</a></li><li><a href="StructureDefinition-medicationstatement-summary-1-mappings.html">Mappings</a></li><li><a href="StructureDefinition-medicationstatement-summary-1.xml.html">XML</a></li><li><a href="StructureDefinition-medicationstatement-summary-1.json.html">JSON</a></li></ul>
-
-<h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition: - Detailed Descriptions <a title="link to here" class="self-link" href="StructureDefinition-medicationstatement-summary-1-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
-
-<p>Definitions for the StructureDefinition-medicationstatement-summary-1 Profile.</p>
-
-<table class="dict">
+<div id="segment-content" class="segment">  <!-- segment-content -->
+  <div class="container">  <!-- container -->
+    <div class="row">
+      <div class="inner-wrapper">
+        <!-- CONTENT CONTENT -->
+        
+        <div class="col-9">
+          
+          <ul class="nav nav-tabs">
+            <li><a href="StructureDefinition-medicationstatement-summary-1.html">Content</a></li>
+            <li class="active"><a href="#">Detailed Descriptions</a></li>
+            <li><a href="StructureDefinition-medicationstatement-summary-1-mappings.html">Mappings</a></li>
+            <li><a href="StructureDefinition-medicationstatement-summary-1.xml.html">XML</a></li><li>
+              <a href="StructureDefinition-medicationstatement-summary-1.json.html">JSON</a></li>
+            <li><a href="StructureDefinition-medicationstatement-summary-1.ttl.html">Turtle</a></li>
+          </ul>
+          
+          <h4><span class="sectioncount">D.4.1.4<a name="D.4.1.4"> </a></span> StructureDefinition: - Detailed Descriptions <a title="link to here" class="self-link" href="StructureDefinition-medicationstatement-summary-1-definitions.html#D.4.1.4"><img src="target.png"/></a></h4>
+          
+          <p>Definitions for the StructureDefinition-medicationstatement-summary-1 Profile.</p>
+          
+          <table class="dict">
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="MedicationStatement"> </a><span style="color: grey">1.</span> <b>MedicationStatement</b><a href="#MedicationStatement" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
   <tr><td>Definition</td><td><p>A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains</p>
 <p>The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.</p>
@@ -1150,17 +1158,17 @@ Status=In Error + NotTaken=N/A = In Error.</p>
   <tr><td>Comments</td><td><p>The dates included in the dosage on a Medication Statement reflect the dates for a given dose.  For example, &quot;from November 1, 2016 to November 3, 2016, take one tablet daily and from November 4, 2016 to November 7, 2016, take two tablets daily.&quot;  It is expected that this specificity may only be populated where the patient brings in their labeled container or where the Medication Statement is derived from a MedicationRequest.</p>
 </td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
-<b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() | (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">inv-dh-mst-01</b>: The dosage shall at least have text or patient instructions (: dosage.text.exists() or dosage.patientInstruction.exists())</td></tr>
+<b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() | (children().count() &gt; id.count()))<br/><b title="Formal Invariant Identifier">inv-dh-mst-01</b>: The dosage shall at least have text or patient instructions (: MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists())</td></tr>
 </table>
 
-
-</div>
-
-    </div>  <!-- /inner-wrapper -->
-            </div>  <!-- /row -->
-        </div>  <!-- /container -->
-
-    </div>  <!-- /segment-content -->
+          
+        </div>
+        
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /row -->
+  </div>  <!-- /container -->
+  
+</div>  <!-- /segment-content -->
 
 </div>
 
@@ -1178,7 +1186,7 @@ Status=In Error + NotTaken=N/A = In Error.</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Mar 13, 2019 21:14+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Mar 18, 2019 12:13+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

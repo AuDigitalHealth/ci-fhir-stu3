@@ -330,7 +330,7 @@
       <constraint>
         <key value="inv-dh-cmp-05" />
         <severity value="error" />
-        <human value="This section shall not contain both summary statements of medical history entries (condition or procedure) and assertions of no relevant finding entries" />
+        <human value="This section shall not contain both summary statement of medical history entries (condition or procedure) and assertion of no relevant finding entries" />
         <expression value="Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').exists() implies ((Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Condition).exists() or Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Procedure).exists()) xor Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).exists())"/>
       </constraint>
       <constraint>
@@ -410,7 +410,7 @@
       <constraint>
         <key value="inv-dh-cmp-07" />
         <severity value="error" />
-        <human value="This section shall not contain both summary statements of administered vaccine entries and assertions of no relevant finding entries" />
+        <human value="This section shall not contain both summary statement of administered vaccine entries and assertion of no relevant finding entries" />
         <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Immunization).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation ).exists())"/>
       </constraint>
       <constraint>

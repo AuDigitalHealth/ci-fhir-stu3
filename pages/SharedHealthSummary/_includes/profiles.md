@@ -1,5 +1,5 @@
 # {{ page.title }}
-The following profiles have been referenced in this implementation guide:
+The following profiles form this implementation guide:
 
 <table border="1">
   <tr bgcolor="#DCDCDC">
@@ -30,7 +30,7 @@ The following profiles have been referenced in this implementation guide:
   </tr>
   <tr>
    <th><a href="StructureDefinition-patient-dh-base-1.html">Base Patient</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base Patient</a></td>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
     <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
   </tr>
    <tr>
@@ -69,7 +69,7 @@ The following profiles have been referenced in this implementation guide:
     <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
   </tr> 
    <tr>
-   <th><a href="StructureDefinition-medicationstatement-summary-1.html">Summary Statement of Known Medication</a></th>
+   <th><a href="StructureDefinition-medicationstatement-summary-1.html">Summary Statement of Known Medicine</a></th>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
     <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
   </tr>

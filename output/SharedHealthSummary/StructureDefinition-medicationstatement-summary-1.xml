@@ -18,10 +18,10 @@
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"/>
   <version value="1.0.0"/>
   <name value="MedicationStatementSummary"/>
-  <title value="Summary Statement of Known Medication"/>
+  <title value="Summary Statement of Known Medicine"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-03-13T21:14:26+10:00"/>
+  <date value="2019-03-18T12:13:44+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -29,7 +29,7 @@
       <value value="help@digitalhealth.gov.au"/>
     </telecom>
   </contact>
-  <description value="The purpose of this profile is to provide a summary statement for a medication including asserting negation for a specific medication. It is intentional that detailed medication information have not been included; this is intended to be a short summary.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element"/>
+  <description value="The purpose of this profile is to provide a summary statement for a medicine including asserting negation for a specific medicine. It is intentional that detailed medicine information have not been included; this is intended to be a short summary.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element"/>
   <copyright value="Copyright &#xA9; 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
   <mapping>
@@ -4073,7 +4073,7 @@
         <key value="inv-dh-mst-01"/>
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
-        <expression value="dosage.text.exists() or dosage.patientInstruction.exists()"/>
+        <expression value="MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"/>
       </constraint>
       <mustSupport value="true"/>
       <mapping>
@@ -4150,7 +4150,7 @@
         <key value="inv-dh-mst-01"/>
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
-        <expression value="dosage.text.exists() or dosage.patientInstruction.exists()"/>
+        <expression value="MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

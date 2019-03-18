@@ -248,7 +248,16 @@
      fhir:Observation.subject [
        fhir:Reference.reference [ fhir:value "#841a56de-92d7-47fd-bb27-bad8efb371e4" ]
      ];
-     fhir:Observation.effectiveDateTime [ fhir:value "2017-06-21"^^xsd:date ]
+     fhir:Observation.effectiveDateTime [ fhir:value "2017-06-21"^^xsd:date ];
+     fhir:Observation.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:1234391000168107;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "1234391000168107" ];
+         fhir:Coding.display [ fhir:value "No known current medications" ]
+       ]
+     ]
   ], [
      a fhir:Immunization;
      fhir:index 7;

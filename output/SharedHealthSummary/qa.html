@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 1, errors = 110, warn = 37, info = 0 -->
+<!-- broken links = 1, errors = 110, warn = 38, info = 0 -->
 <head>
   <title>Shared Health Summary : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Health Summary</h1>
- <p>Generated Wed Mar 13 21:16:07 AEST 2019. FHIR version 4.1.0 for 3.0.1</p>
+ <p>Generated Mon Mar 18 12:14:44 AEST 2019. FHIR version 4.1.0 for 3.0.1</p>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
@@ -22,7 +22,7 @@
      <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-a0da969a-7956-439b-b390-8de071a2df7c"><b>C:\work\git\ci-fhir-stu3\examples\composition-a0da969a-7956-439b-b390-8de071a2df7c</b></a></td><td><b>24</b></td><td><b>11</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-bd06e981-ba86-4020-ba59-cd89f80e8712"><b>C:\work\git\ci-fhir-stu3\examples\composition-bd06e981-ba86-4020-ba59-cd89f80e8712</b></a></td><td><b>20</b></td><td><b>8</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-bd06e981-ba86-4020-ba59-cd89f80e8712"><b>C:\work\git\ci-fhir-stu3\examples\composition-bd06e981-ba86-4020-ba59-cd89f80e8712</b></a></td><td><b>20</b></td><td><b>9</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f"><b>C:\work\git\ci-fhir-stu3\examples\composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f</b></a></td><td><b>35</b></td><td><b>7</b></td>
@@ -247,7 +247,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[2].entry.contained.code.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice AllergyIntolerance.code.coding:snomedAllergyCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -305,8 +305,11 @@
    <tr style="background-color: #ffebcc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[6].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1&quot; could not be resolved</b></td>
    </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[7].valueCodeableConcept</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
+   </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[7]</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1, Element 'Composition.contained[7].valueCodeableConcept[valueCodeableConcept]': minimum required = 1, but only found 0</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[7].valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[8].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
@@ -342,7 +345,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
@@ -473,7 +476,7 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].entry.contained.code.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice AllergyIntolerance.code.coding:snomedAllergyCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -502,7 +505,7 @@
      <td><b>Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.section[4].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>

@@ -8,10 +8,10 @@
   "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1",
   "version": "1.0.0",
   "name": "MedicationStatementSummary",
-  "title": "Summary Statement of Known Medication",
+  "title": "Summary Statement of Known Medicine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-03-13T21:14:26+10:00",
+  "date": "2019-03-18T12:13:44+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -23,7 +23,7 @@
       ]
     }
   ],
-  "description": "The purpose of this profile is to provide a summary statement for a medication including asserting negation for a specific medication. It is intentional that detailed medication information have not been included; this is intended to be a short summary.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element",
+  "description": "The purpose of this profile is to provide a summary statement for a medicine including asserting negation for a specific medicine. It is intentional that detailed medicine information have not been included; this is intended to be a short summary.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element",
   "copyright": "Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
   "fhirVersion": "3.0.1",
   "mapping": [
@@ -4915,7 +4915,7 @@
             "key": "inv-dh-mst-01",
             "severity": "error",
             "human": "The dosage shall at least have text or patient instructions",
-            "expression": "dosage.text.exists() or dosage.patientInstruction.exists()"
+            "expression": "MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"
           }
         ],
         "mustSupport": true,
@@ -5014,7 +5014,7 @@
             "key": "inv-dh-mst-01",
             "severity": "error",
             "human": "The dosage shall at least have text or patient instructions",
-            "expression": "dosage.text.exists() or dosage.patientInstruction.exists()"
+            "expression": "MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"
           }
         ],
         "mustSupport": true

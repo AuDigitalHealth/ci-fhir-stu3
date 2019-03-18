@@ -4,23 +4,23 @@ level: 2
 active: profiles
 ---
 
-  {% include header.html %}
+{% include header.html %}
 
 {% include container-start.html %}
 
 <!-- ============BreadCrumb=============== -->
-
-{% include breadcrumbs.html %}
+<!--
+{% include breadcrumbs.html %}-->
 
 <!-- ============CONTENT CONTENT=============== -->
 
 <ul class="nav nav-tabs">
-	<li class="active"><a href="#">Content</a></li>
-	<li><a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a></li>
-	<li><a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a></li>
-	<li><a href="{{[type]}}-{{[id]}}.xml.html">XML</a></li>
-	<li><a href="{{[type]}}-{{[id]}}.json.html">JSON</a></li>
-	<li><a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a></li>
+  <li class="active"><a href="#">Content</a></li>
+  <li><a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a></li>
+  <li><a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a></li>
+  <li><a href="{{[type]}}-{{[id]}}.xml.html">XML</a></li>
+  <li><a href="{{[type]}}-{{[id]}}.json.html">JSON</a></li>
+  <li><a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a></li>
 </ul>
 
 <h3><span class="sectioncount">SD.{{ site.data.structuredefinitions.{{[id]}}.index | plus: 1 }}<a name="SD.{{ site.data.structuredefinitions.{{[id]}}.index | plus: 1 }}"> </a></span>{{[type]}}-{{[id]}}<a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#SD.{{ site.data.structuredefinitions.{{[id]}}.index | plus: 1 }}"><img src="target.png"/></a></h3>
@@ -51,58 +51,58 @@ active: profiles
 
 
 <a name="profile"> </a>
-<h3><span class="sectioncount">SD.{{ site.data.structuredefinitions.{{[id]}}.index | plus: 1 }}.1</span>
-Formal Views of Profile Content
- <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#profile"><img src="target.png"/></a>
-</h3>
+<h4><span class="sectioncount">SD.{{ site.data.structuredefinitions.{{[id]}}.index | plus: 1 }}.1</span>
+  Formal Views of Profile Content
+  <a title="link to here" class="self-link" href="{{[type]}}-{{[id]}}.html#profile"><img src="target.png"/></a>
+</h4>
 <!-- uri -->
 {% include {{[type]}}-{{[id]}}-header.xhtml %}
 
 <!-- uri -->
 <p>
-<a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work</a>.
+  <a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work</a>.
 </p>
 
 <div id="tabs">
- <ul>
-  <li><a href="#tabs-summ">Text Summary</a></li>
-  <li><a href="#tabs-diff">Differential Table</a></li>
-  <li><a href="#tabs-snap">Snapshot Table</a></li>
-<!--
+  <ul>
+    <!--  <li><a href="#tabs-summ">Text Summary</a></li>-->
+    <li><a href="#tabs-diff">Differential Table</a></li>
+    <li><a href="#tabs-snap">Snapshot Table</a></li>
+    <!--
   <li><a href="#tabs-xml">XML Template</a></li>
   <li><a href="#tabs-json">JSON Template</a></li>
 -->
-  <li><a href="#tabs-all">All</a></li>
- </ul>
-
- <div id="tabs-summ">
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+  
+  <!--<div id="tabs-summ">
   <div id="tbl-summ">
    <div id="tbl-diff-inner">
      <a name="summary"> </a>
-<!--{% include {{[type]}}-{{[id]}}-summary.xhtml %}-->
+<!-\-{% include {{[type]}}-{{[id]}}-summary.xhtml %}-\->
 
 {% capture my-include %}{% include {{[id]}}-summary.md %}{% endcapture %}{{ my-include | markdownify }}
    </div>
   </div>
- </div>
-
- <div id="tabs-diff">
-  <div id="tbl-diff">
-   <div id="tbl-diff-inner">
-  {% include {{[type]}}-{{[id]}}-diff.xhtml %}
-   </div>
+ </div>-->
+  
+  <div id="tabs-diff">
+    <div id="tbl-diff">
+      <div id="tbl-diff-inner">
+        {% include {{[type]}}-{{[id]}}-diff.xhtml %}
+      </div>
+    </div>
   </div>
- </div>
-
- <div id="tabs-snap">
-  <div id="tbl-snap">
-   <div id="tbl-snap-inner">
-{% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
-   </div>
+  
+  <div id="tabs-snap">
+    <div id="tbl-snap">
+      <div id="tbl-snap-inner">
+        {% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
+      </div>
+    </div>
   </div>
- </div>
-
-<!--
+  
+  <!--
  <div id="tabs-xml">
   <div id="xml">
    <div id="xml-inner">
@@ -119,30 +119,30 @@ Formal Views of Profile Content
   </div>
  </div>
 -->
-
- <div id="tabs-all">
-  <div id="tbl-summ">
+  
+  <div id="tabs-all">
+    <!--<div id="tbl-summ">
    <div id="tbl-diff-inner">
      <a name="summary"> </a>
-<!--   {% include {{[type]}}-{{[id]}}-summary.xhtml %}  -->
+<!-\-   {% include {{[type]}}-{{[id]}}-summary.xhtml %}  -\->
 {% capture my-include %}{% include {{[id]}}-summary.md %}{% endcapture %}{{ my-include | markdownify }}
    </div>
-  </div>
-
- <div id="all-tbl-diff">
-   <p><b>Differential View</b></p>
-   <div id="all-tbl-diff-inner">
-   {% include {{[type]}}-{{[id]}}-diff.xhtml %}
-   </div>
-  </div>
-  <div id="all-tbl-snap">
-   <p><b>Snapshot View</b></p>
-   <div id="all-tbl-snap-inner">
-{% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
-   </div>
-  </div>
-
-  <!--
+  </div>-->
+    
+    <div id="all-tbl-diff">
+      <p><b>Differential View</b></p>
+      <div id="all-tbl-diff-inner">
+        {% include {{[type]}}-{{[id]}}-diff.xhtml %}
+      </div>
+    </div>
+    <div id="all-tbl-snap">
+      <p><b>Snapshot View</b></p>
+      <div id="all-tbl-snap-inner">
+        {% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
+      </div>
+    </div>
+    
+    <!--
   <div id="all-xml">
    <p><b>XML Template</b></p>
    <div id="all-xml-inner">{% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
@@ -156,7 +156,7 @@ Formal Views of Profile Content
    </div>
   </div>
 -->
- </div>
+  </div>
 </div>
 
 
@@ -185,35 +185,35 @@ Formal Views of Profile Content
 
 -->
 
-  <!-- ==============END CONTENT END CONTENT=================== -->
+<!-- ==============END CONTENT END CONTENT=================== -->
 
 {% include container-end.html %}
 
 <script src="jquery.js"> </script>
 <script src="jquery-ui.min.js"> </script>
 <script>
-try {
+  try {
   var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
-}
-catch(exception){
-}
-
-if (!currentTabIndex)
+  }
+  catch(exception){
+  }
+  
+  if (!currentTabIndex)
   currentTabIndex = '0';
-
-$( '#tabs' ).tabs({
-         active: currentTabIndex,
-         activate: function( event, ui ) {
-             var active = $('.selector').tabs('option', 'active');
-             currentTabIndex = ui.newTab.index();
-             document.activeElement.blur();
-             try {
-               sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
-             }
-             catch(exception){
-             }
-         }
-     });
+  
+  $( '#tabs' ).tabs({
+  active: currentTabIndex,
+  activate: function( event, ui ) {
+  var active = $('.selector').tabs('option', 'active');
+  currentTabIndex = ui.newTab.index();
+  document.activeElement.blur();
+  try {
+  sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+  }
+  catch(exception){
+  }
+  }
+  });
 </script>
 
 {% include footer.html %}
