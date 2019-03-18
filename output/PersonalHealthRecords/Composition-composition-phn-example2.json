@@ -1,0 +1,153 @@
+{
+  "resourceType": "Composition",
+  "id": "composition-phn-example2",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1"
+    ]
+  },
+  "language": "en-AU",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: composition-phn-example2</p><p><b>meta</b>: </p><p><b>language</b>: en-AU</p><p><b>contained</b>: , , </p><p><b>status</b>: final</p><p><b>type</b>: Personal Health Notes <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1 code '100.16681' = '100.16681', given as 'Personal Health Notes'})</span></p><p><b>date</b>: 21/06/2017 9:00:15 AM</p><p><b>author</b>: unknown resource contained</p><p><b>title</b>: Personal Health Notes</p><p><b>custodian</b>: unknown resource contained</p></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "Patient1",
+      "meta": {
+        "profile": [
+          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"
+        ]
+      },
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/v2/0203",
+                "code": "NI",
+                "display": "National unique individual identifier"
+              }
+            ]
+          },
+          "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+          "value": "8003608666701594"
+        }
+      ],
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "(03) 44556677"
+        }
+      ],
+      "gender": "female",
+      "address": [
+        {
+          "line": [
+            "55 Sarah Street"
+          ],
+          "city": "Strahan",
+          "state": "TAS",
+          "postalCode": "7468",
+          "country": "AU"
+        }
+      ]
+    },
+    {
+      "resourceType": "RelatedPerson",
+      "id": "RelatedPerson1",
+      "meta": {
+        "profile": [
+          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ihi-1"
+        ]
+      },
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/v2/0203",
+                "code": "NI",
+                "display": "National unique individual identifier"
+              }
+            ]
+          },
+          "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+          "value": "8003608833357361"
+        }
+      ],
+      "patient": {
+        "reference": "#Patient1"
+      },
+      "relationship": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v3/RoleCode",
+            "code": "SIGOTHR",
+            "display": "significant other"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "Organization",
+      "id": "Organization1",
+      "meta": {
+        "profile": [
+          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1"
+        ]
+      },
+      "identifier": [
+        {
+          "type": {
+            "text": "PAI-O"
+          },
+          "system": "http://ns.electronichealth.net.au/id/pcehr/paio/1.0",
+          "value": "8003640001000036"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+        "code": "100.16681",
+        "display": "Personal Health Notes"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "#Patient1"
+  },
+  "date": "2017-06-21T09:00:15+10:00",
+  "author": [
+    {
+      "reference": "#RelatedPerson1"
+    }
+  ],
+  "title": "Personal Health Notes",
+  "custodian": {
+    "reference": "#Organization1"
+  },
+  "section": [
+    {
+      "title": "My Health Notes",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "102.15513",
+            "display": "Notes"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>\n                    <b>Exercise note</b>\n                </p>\n                <p>Have been for a 20 min run every morning since last Friday.</p>\n            </div>"
+      }
+    }
+  ]
+}

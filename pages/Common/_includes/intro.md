@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an [Event Summary (ES))](StructureDefinition-composition-es-1.html) document.
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an [Event Summary (ES)](StructureDefinition-composition-es-1.html) document.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 

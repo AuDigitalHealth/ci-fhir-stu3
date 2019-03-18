@@ -14,10 +14,12 @@ The above complete definitions are the most suitable choice for generating imple
 
 **Examples** 
 
-All the examples that are used in this implementation guide available for download:
+All examples included in this implementation guide are available for download in format specific files:
 
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
 - [TTl](examples.ttl.zip)
 
-** CDA implementation guide**
+**CDA implementation guide**
+
+The corresponding <insert name> CDA implementation guide [DH???] that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:

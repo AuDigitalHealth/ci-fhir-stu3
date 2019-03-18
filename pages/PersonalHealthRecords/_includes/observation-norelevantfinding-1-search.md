@@ -1,1 +1,1 @@
-Sech parameters have not been defined.
+Search parameters have not been defined.
