@@ -23,7 +23,7 @@ This repository has the following structure:
 
  
 ## How to get started
-There may be different ways you could interact with this repository; they include:
+There are different ways you could interact with this repository; they include:
 * [viewing the content](VIEWING.md)
 * [raising an issue or query on the content](ISSUES.md)
 * [contributing changes to this content](CONTRIBUTING.md)
