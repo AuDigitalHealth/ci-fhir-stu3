@@ -20,4 +20,4 @@ All the examples that are used in this implementation guide available for downlo
 - [JSON](examples.json.zip)
 - [TTl](examples.ttl.zip)
 
-** CDA implementation guide**
+**CDA implementation guide**

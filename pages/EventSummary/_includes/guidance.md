@@ -8,82 +8,136 @@
 
 FHIR (Fast Healthcare Interoperability Resources) is a standard developed by Health Level Seven International (Hl7) for exchanging healthcare information electronically.
 
-The standard describes data formats and elements, known as [Resources](http://hl7.org/fhir/stu3/resourcelist.html), and an application programming interface (API) for exchanging electronic records as messages, services and documents. 
+FHIR supports four paradigms for exchange: the RESTful API (Application Programming Interface), messaging, documents, and services. 
 
-The current FHIR specification is available on [http://hl7.org/fhir](http://hl7.org/fhir). The specification also includes a directory of past and current working versions, including the current build, on [http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml). 
 
-[FHIR Release 4, First Normative content](http://hl7.org/fhir/R4/) is now published.
+The specification describes data formats and elements, known as [Resources](http://hl7.org/fhir/stu3/resourcelist.html). Content is exchanged as one or more resources. A FHIR resource may be supplied in one of the following formats: [XML](http://hl7.org/fhir/stu3/xml.html), [JSON](http://hl7.org/fhir/stu3/json.html) and [Turtle](http://hl7.org/fhir/stu3/rdf.html). This implementation guide describes FHIR resources built following the rules described in [FHIR, Release 3 (STU)[HL7FHIR3]](index.html#HL7FHIR3).
+
+The FHIR specification is evolving; the current FHIR specification is available on [http://hl7.org/fhir](http://hl7.org/fhir). A directory of past and current working versions, including [FHIR Release 4 (First Normative content)[HL7FHIR4]](index.html#HL7FHIR4) and the latest current build, is available on [Publication (Version) History [HL7FHIRDIR]](index.html#HL7FHIRDIR).
 
 The following references are recommended to gain a better understanding of FHIR:
-* [FHIR Release 3 (STU3)](https://www.hl7.org/fhir/STU3/index.html)
-* [FHIR Overview](https://www.hl7.org/fhir/STU3/overview.html)
-* [HL7 International FHIR Wiki page](http://wiki.hl7.org/index.php?title=FHIR)
+* [FHIR, Release 3 (STU)[HL7FHIR3]](index.html#HL7FHIR3)
+* [FHIR Overview[HL7FHIR3]](index.html#HL7FHIR3)
+* [HL7 International FHIR Wiki [HL7FHIR]](index.html#HL7FHIR)
 
  
 
-### Profile representation and structure
+## Profile / extension representation and structure
 
-Each profile in this implementation guide may include one or more usage scenarios supported by this implementation guide, implementation guidance specific to those usage scenarios and one or more examples that demonstrate the use. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.
+Each profile or extension described by this implementation guide has a separate page that contains the normative definition of the profile or extension and informative content to support implementation.
 
-This information is included in profile and extensions pages, e.g. [Shared Health Summary] StructureDefinition-composition-shs-1.html).
+The content of each page is structured as follows:
+* Profile title followed by the profile status hyperlinked to FHIR [Maturity Model](http://build.fhir.org/versions.html#maturity)
+* Usage scenarios includes a short description of the example or expected usage scenarios for that profile that are supported by this implementation guide.
+* Implementation guidance includes guidance specific to the usage scenarios supported by this implementation guide. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.
+* Examples include links to example resources that conform to the profile or extension and that support implementation by demonstrating one or more usage scenarios supported by this implementation guide.
+* Formal Views of Profile Content includes the human readable view of the normative definition of the profile or extension
 
-The profile url is displayed in the [Formal Views of Profile Content](StructureDefinition-composition-shs-1.html#profile), followed by: 
-* **Description**: A free text natural language description of the structure and its use that also includes the information on meaning of must support
-* **Base Resource**: Base resource from which this profile is derived from; included in this implementation guide as "This profile builds on [base resource]"
-* **Metadata**: A set of metadata that describes the version of the profile, publisher and the date of publishing; included as "This profile was published on [date]as a [status] by [publisher "Australian Digital Health Agency"]." 
+The Formal Views of Profile Content contains:
+* The canonical url e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1 
+* A free text natural language description of the structure and its use that also includes the information on meaning of must support
+* Identification of the base resource from which this profile is derived from; included in this implementation guide as “This profile builds on [base resource]”
+* A set of metadata that describes the version of the profile, publisher and the date of publishing; included as “This profile was published on [date]as a [status] by [publisher “Australian Digital Health Agency”].”
+* A human readable view of the structure:
+    * **Differential Table**: Shows details of what is being changed in the profile in regards to its base resource
+    * **Snapshot Table**: Shows computed outcome of applying the statements in the differential to the base resource. An instance claiming conformance to a profile needs to conform to the snapshot representation of the profile
 
-Each profile in this implementation guide also has different representations of the rules on the element contents in a resource: 
-* **Text Summary**: Informative description of the changes being made in the profile in regards to its base resource. While every effort has been taken to ensure that the text summary for a profile is consistent with the profile, where there are conflicts the profile definition will take precedence
-* **Differential**: Shows details of what is being changed in the profile in regards to its base resource
-* **Snapshot**: Shows computed outcome of applying the statements in the differential to the base resource. An instance claiming conformance to a profile needs to conform to the snapshot representation of the profile 
-
-
-
-### Conformance conventions
-
-#### Profile
-This implementation guide specifies the FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html) for implementing the document model that is the subject of this implementation guide, i.e. Shared Health Summary.
-
-A FHIR profile is a set of constraints and/or extensions on a resource or a data type represented using the FHIR [StructureDefinition](FHIR http://hl7.org/fhir/stu3/structuredefinition.html) resource.
-
-The profile is identified by its url (e.g.http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1). When valued in an instance, the url signals the imposition of a set of profile-defined constraints. The url value provides a unique identifier for the profile in question.
+The fields used to present the Differential Table and the Snapshot Table in this implementation guide are described in [Logical table](http://hl7.org/fhir/stu3/formats.html#table).
 
 
-#### Slicing
-FHIR allows an operation called 'slicing'. Slicing is usually done on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, Composition.section in the SHS profile is sliced into a list of slices in order to give each slice a different definition in the profile; e.g. each section slice has title, code etc specific to the slice. 
+### Known issues with supporting and implementing FHIR
 
-Sliced element in a profile is described as a list of elements with the same path, where the first element describes the slicing rules (e.g. Slice: Unordered, Closed by value:code) and repeat elements describe rules specific to each slice.
+This section identifies issues with the FHIR standard or related tooling that may affect implementing the content of this guide or supporting the described usage scenarios. Solutions to these issues are being worked on and readers of this implementation guide are encouraged to actively participate in the FHIR community. 
 
-Slicing rules are: 
-* **Ordered**: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)
-* **Rules**: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)
-* **Discriminator**: an element or a list of elements used to discriminate the slices. When a discriminator is provided, the composite of the values of the elements designated in the discriminator is unique and distinct for each possible slice
-
-Please refer to [Slicing](http://hl7.org/fhir/STU3/profiling.html#slicing) information in FHIR specification for more information on slicing and discrimination operations and processing rules.
+[Implementation Support Module](http://hl7.org/fhir/stu3/implsupport-module.html) provides a helpful reference for information about available tools, libraries and other similar resources.
 
 
-#### Extensions
-Any element in FHIR resource can carry one or more extensions in addition to its normal content.
+FHIR standard offers a number of tools for development and implementations of FHIR, e.g. IG Publisher tool used for producing and publishing this implementation guide, FHIR Validator used to validate examples in this implementation guide.
 
-An extension is identified by its url (e.g. http://hl7.org.au/fhir/StructureDefinition/indigenous-status), and it has a value that is one of the base FHIR data types.  
+These tools are under continues development and as such may have issues that could affect development and implementation of FHIR. 
 
-An extension, if present in this specification, will be included as an element in the Differential and Snapshot views of a profile, with the extension URL hyperlinked to the extension definition specified in the “Description & Constraints” column of the profile. 
+This section lists known issues with authoring and rendering content in this implementation guide. 
 
-Please refer to [Extensibility](http://hl7.org/fhir/STU3/extensibility.html) in FHIR specification for more information on defining and processing extensions.
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Reference</th>
+    <th>Description</th>
+    <th>Issue No.</th>
+  </tr>
+  <tr>
+    <td>Invariants may not constrain as intended</td>
+    <td>Current validation capabilities of the FHIR Validator and IG Publisher do not fully support all expressions defined in the FHIR specification. Invariants using conformsTo() or … have not been able to be confirmed and do not reject resources that are expected to fail.</td>
+    <td>???</td>
+  </tr>
+  <tr>
+    <td>Rendering of Composition narrative in examples</td>
+    <td>
+        <p>The tooling used to generate this implementation guide (IG publisher) does nor render narrative in Composition examples in line with the expectations for <a href="http://hl7.org/fhir/stu3/documents.html#presentation">presenting a document for human consumption</a>.</p>
+        <p>The human friendly rendered format of Composition examples in this implementation guide is missing content, e.g. section narrative, forcing the reader to refer to XML or JSON format to view the full example narrative.</p>
+    </td>
+    <td>
+        <p>gForge Change Request #17401</p>
+        <p><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=17401">Allow ig publisher to render documents as documents</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td>Patient element missing Must Support flag</td>
+    <td>The tooling (Forge) used to author Patient with Mandatory Identifier and Patient with Mandatory IHI throws an error when mustSupport is set to true on Patient.deceased.deceasedDateTime.date-accuracy-indicator. </td>
+    <td>???</td>
+  </tr>
+    <tr>
+    <td>Slicing types may not constrain as intended</td>
+    <td>
+        <p>Current validation capability of the FHIR Validator and IG Publisher do not fully support the use of all discriminator types defined by the FHIR standard.</p>
+        <p>At this stage we are not using designs that control the members of sets such as Composition.section.entry that used slicing as slicing by type:resolve() and profile:resolve do not function as expected.</p>
+ </td>
+    <td>???</td>
+  </tr>
+    <tr>
+    <td>Constraining via a derived profile an extension added to source profile</td>
+    <td>
+        <p>The tooling (Forge) used to author profiles does not allow for the constraining of an extension via reference.</p>
+        <p>At this stage only designs that use an invariant to constrain the reference may be authored (though they may not constrain as intended).</p>
+</td>
+    <td>???</td>
+  </tr>
+ </tbody>
+</table> 
+
+The following resources are available to raise questions or issues relating to FHIR and FHIR tooling:
+* [FHIR Chat Channel Zulip](https://chat.fhir.org/)
+* [FHIR Community Forum](http://community.fhir.org/)
+* [StackOverflow](https://stackoverflow.com/questions/tagged/hl7_fhir)
+* [gForge](https://gforge.hl7.org/gf/project/fhir/)
 
 
-#### Conformance verbs
-The conformance verbs used in this implementation guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/STU3/conformance-rules.html#conflang).
+## Conformance conventions
+
+### StructureDefinition
+The content of this implementation guide is a set of FHIR [StructureDefinition](FHIR http://hl7.org/fhir/stu3/structuredefinition.html) resources for implementing the document model that is the subject of this implementation guide, i.e. Shared Health Summary.
+
+This implementation guide includes FHIR profiles that are a set of constraints and/or extensions to FHIR base resources or a data types in the format of a StructureDefinition resource. A StructureDefinition describes a structure - a set of data element definitions, and their associated rules of usage – and is hereafter referred to as a ‘profile’ or an ‘extension’.
+
+A profile or extension is identified by its canonical URL (e.g.http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1). These canonical URLs are unique to each profile or extension. When valued in an instance, the URL signals the imposition of a set of defined constraints. The URL value provides a globally unique identifier for the profile or extension in question and in the case of a profile or extension described in this implementation guide the major version number is identified by the final digit of the URL.
+
+### Must Support
+The Must Support rules for this implementation guide are defined in [Conformance](conformance.html). A must support flag, when present in this implementation guide, is displayed as letter “S” with red background in the Flag column of the Differential Table and Snapshot Table of a profile or extension.
+
+### Conformance verbs
+The conformance verbs used in this implementation guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/STU3/conformance-rules.html#conflang). Conformance verbs are present in this implementation guide in [Conformance requirements](conformance.html), and in invariants which are visible in the “Description & Constraints” column of the Differential Table and Snapshot Table of a profile or extension.
+
+### Terminology binding
+The terminology binding rules are defined in [Controlling the use of Coded Values](http://hl7.org/fhir/stu3/terminologies.html#binding). Terminology is specified in this implementation guide, 
+in some cases binding an element to a value set or binding to a single fixed code. For guidance on coding see [Using Codes in Resources](http://hl7.org/fhir/stu3/terminologies.html).
+
+A value set binding, if present in this specification, will be specified in the "Description & Constraints" column of a profile as the title of the value set (hyperlinked to its definition) followed by identification of the binding strength (hyperlinked to its definition), e.g. [Health Summary Non-Clinical Empty Reason](https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1)([required](http://hl7.org/fhir/stu3/terminologies.html#code)).
 
 
-#### Terminology binding
-Terminology is specified in this implementation guide, in some cases binding an element to a value set or binding an attribute to a single fixed code. For guidance on coding common clinical concepts in FHIR resources see [Using Codes in Resources](http://hl7.org/fhir/stu3/terminologies.html).
+### Cardinality
+Cardinality rules in FHIR are defined in [FHIR Conformance Rules](http://hl7.org/fhir/STU3/conformance-rules.html#conflang). This section provides a description of those rules as present in this implementation guide and how they are to be interpreted.
 
-A value set binding, if present in this specification, will be specified in the "Description & Constraints" column of a profile as the title of the value set (hyperlinked to its definition) followed by identification of the binding strength (hyperlinked to its definition), e.g. Health Summary Non-Clinical Empty Reason (required).
-
-
-#### Cardinality
-The cardinality range specifies the allowable occurrences within a document instance. Cardinality range is specified in the format "m..n" where m is the minimum allowed members of the set (lower bound) and n is the maximum allowed members of the set (upper bound). The allowed values for m and n are 0, any positive integer, and *.
+The cardinality range specifies the allowable occurrences within a document instance. Cardinality range is specified in the format “m..n” where m is the minimum allowed members of the set (lower bound) and n is the maximum allowed members of the set (upper bound). The allowed values for m and n are 0, any positive integer, and *.
 
 The table below demonstrates a representative set of examples of cardinality range and how to interpret that cardinality range; p is positive integer greater than the minimum allowed members of the set.
 
@@ -128,50 +182,22 @@ The table below demonstrates a representative set of examples of cardinality ran
  </tbody>
 </table>
 
-The cardinality rules in FHIR are described in [FHIR Conformance Rules](http://hl7.org/fhir/STU3/conformance-rules.html#conflang).
+### Slicing 
+Slicing rules in FHIR are defined in [Profiling FHIR](http://hl7.org/fhir/stu3/profiling.html). This section provides a description of slicing as present in this implementation guide.
+
+Slicing is a mechanism to describe patterns of restrictions (i.e. conformance requirements). Slicing, usually on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, the section element in the [Shared Health Summary](StructureDefinition-composition-shs-1.html) profile is sliced into a list of slices in order to give each section slice a different set of restrictions.
+
+A sliced element can be identified by the following icon color:red[INSERT ICON]in the Name column of the Differential and Snapshot views of the Differential Table and Snapshot Table of a profile or extension.
+
+Slicing rules are:
+* **Ordered**: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)
+* **Rules**: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)
+* **Discriminator**: an element or a list of elements used to discriminate the slices. When a discriminator is provided, the composite of the values of the elements designated in the discriminator is unique and distinct for each possible slice
 
 
-#### Data types
-The FHIR standard defines a set of data types that are used for the resource elements.  
-
-Data types used in this implementation guide are defined in FHIR Release 3 (STU) [Data Types]( http://hl7.org/fhir/stu3/datatypes.html).
 
 
-### Known issues with supporting and implementing FHIR
 
-FHIR standard offers a number of tools for development and implementations of FHIR, e.g. IG Publisher tool used for producing and publishing this implementation guide, FHIR Validator used to validate examples in this implementation guide.
-
-These tools are under continues development and as such may have issues that could affect development and implementation of FHIR. 
-
-This section lists known issues with authoring and rendering content in this implementation guide. 
-
-<table border="1" cellpadding="1" valign="middle">
-<tbody>
-  <tr bgcolor="#DCDCDC">
-    <th>Reference</th>
-    <th>Description</th>
-    <th>gForge Change Request</th>
-  </tr>
-  <tr>
-    <td>Validation of examples</td>
-    <td>FHIR Validator does not yet fully support all expressions defined in FHIR specification and included in this implementation guide; i.e. conformsTo().</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>Rendering of examples</td>
-    <td>IG publisher does nor render Composition narrative and section.text narrative nor any of the contained resources. Please refer to XML or JSON format of an example to view the whole example. </td>
-    <td><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=17401">Allow ig publisher to render documents as documents </a></td>
-  </tr>
- </tbody>
-</table> 
-
-Please refer to [Implementation Support Module](http://hl7.org/fhir/implsupport-module.html) for more information about available tools, libraries and other similar resources.
-
-The following references are available to raise issues and seek help:
-* [FHIR Chat Channel Zulip](https://chat.fhir.org/)
-* [FHIR Community Forum](http://community.fhir.org/)
-* [StackOverflow](https://stackoverflow.com/questions/tagged/hl7_fhir)
-* [gForge](https://gforge.hl7.org/gf/project/fhir/)
 
 
 

@@ -1,5 +1,5 @@
 # {{ page.title }}
-The following profiles have been referenced in this implementation guide:
+The following profiles form this implementation guide:
 
 {% include list-simple-profiles.xhtml %}
 

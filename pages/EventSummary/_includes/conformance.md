@@ -19,7 +19,7 @@ Derived profiles of the profiles described in this implementation guide may make
 * A FHIR resource that is conformant to the derived profile shall be conformant to the profile in this implementation guide it was derived from
 
 
-#### Must Support
+### Must Support
 [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) flag is used to specify if an element in a profile must be supported or not. The profile should also include information on what kind of support is required from systems and applications wanting to claim conformance 
 to the profile.
 
