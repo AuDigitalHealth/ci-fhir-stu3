@@ -37,15 +37,45 @@
     "gen-examples": "true",
     "npm-name": "ns.electronichealth.net.au-ci-fhir-3.0-event-summary",
     "resources": {
-        "StructureDefinition/encounter-es-1": {
+         "StructureDefinition/composition-shs-1": {
+            "base": "StructureDefinition-composition-es-1.html",
+            "defns": "StructureDefinition-composition-es-1-definitions.html"
+        },
+       "StructureDefinition/encounter-es-1": {
             "base": "StructureDefinition-encounter-es-1.html",
             "defns": "StructureDefinition-encounter-es-1-definitions.html"
         },
         "StructureDefinition/patient-ident-1": {
             "base": "StructureDefinition-patient-ident-1.html",
             "defns": "StructureDefinition-patient-ident-1-definitions.html"
+        },
+         "StructureDefinition/practitioner-ident-1": {
+            "base": "StructureDefinition-practitioner-ident-1.html",
+            "defns": "StructureDefinition-practitioner-ident-1-definitions.html"
+        },
+          "StructureDefinition/organization-ident-1": {
+            "base": "StructureDefinition-organization-ident-1.html",
+            "defns": "StructureDefinition-organization-ident-1-definitions.html"
+        },
+         "StructureDefinition/allergyintolerance-summary-1": {
+            "base": "StructureDefinition-allergyintolerance-summary-1.html",
+            "defns": "StructureDefinition-allergyintolerance-summary-1-definitions.html"
+        },
+                "StructureDefinition/procedure-summary-1": {
+            "base": "StructureDefinition-procedure-summary-1.html",
+            "defns": "StructureDefinition-procedure-summary-1-definitions.html"
+        },
+        "StructureDefinition/condition-summary-1": {
+            "base": "StructureDefinition-condition-summary-1.html",
+            "defns": "StructureDefinition-condition-summary-1-definitions.html"
+        },
+                "StructureDefinition/immunization-summary-administration-1": {
+            "base": "StructureDefinition-immunization-summary-administration-1.html",
+            "defns": "StructureDefinition-immunization-summary-administration-1-definitions.html"
         }
-    },
+
+
+ },
     "tool": "jekyll",
     "license": "CC0-1.0",
     "canonicalBase": "http://ns.electronichealth.net.au/ci/fhir/3.0",
