@@ -47,7 +47,7 @@ This profile contains the following variations from [AU Base Composition](http:/
     * Exactly one `section` slice  'Immunisations'
         * invariants:
             * inv-dh-cmp-07: This section shall not contain both summary statements of administered vaccine entries and assertions of no relevant finding entries
-            * inv-dh-cmp-08: This section shall contain at most one assertion of no relevant finding entry and it shall assert no previous immunisations
+            * inv-dh-cmp-08: This section shall contain at most one assertion of no relevant finding entry and it shall assert no history of vaccination
         *  Exactly one `section.title` is 'Immunisations'
         *  Exactly one `section.code` is 'History of Immunization Narrative)' (Details: {LOINC code '11369-6'})
         *  Exactly one `section.text`
