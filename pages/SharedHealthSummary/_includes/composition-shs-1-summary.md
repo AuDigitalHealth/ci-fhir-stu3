@@ -27,7 +27,7 @@ This profile contains the following variations from [AU Base Composition](http:/
     * Exactly one `section` slice  'Medications'
         * invariants: 
             * inv-dh-cmp-03: This section shall not contain both summary statement of known medication entries and assertion of no relevant finding entries
-            * inv-dh-cmp-04: This section shall contain at most one assertion of no relevant finding entry and it shall assert no current medications    
+            * inv-dh-cmp-04: This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications    
         * Exactly one `section.title` is 'Current Medications'
         *  Exactly one `section.code` is 'Current Medicine' (Details: {NCTIS Data Components code '101.32009'})
         *  Exactly one `section.text`
