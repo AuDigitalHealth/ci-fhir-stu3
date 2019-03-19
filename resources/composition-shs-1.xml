@@ -260,7 +260,7 @@
       <constraint>
         <key value="inv-dh-cmp-04" />
         <severity value="error" />
-        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no current medications" />
+        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications" />
         <expression value="Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.32009').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.32009').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.32009').entry.resolve().where($this is value and value.coding.code = '1200661000168107').exists())"/>
       </constraint>
       <mustSupport value="true" />
