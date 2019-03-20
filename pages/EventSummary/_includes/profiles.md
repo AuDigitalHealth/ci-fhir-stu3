@@ -45,9 +45,9 @@ The following profiles form this implementation guide:
   </tr>
 
    <tr>
-   <th><a href="StructureDefinition-medicationstatement-summary-1.html">Summary Statement of Known Medication</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
+   <th><a href="StructureDefinition-list-medseventchanges-1.html">List of Medicine Changes from an Event</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-list-medseventchanges-1.html">AU Base Medicine List</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">au-medlist</a></td>
   </tr>
 
   <tr>
@@ -62,7 +62,7 @@ The following profiles form this implementation guide:
   </tr> 
 
     <tr>
-   <th><a href="StructureDefinition-immunization-summary-administration-1.html">Summary Statement of Administered Vaccine</a></th>
+   <th><a href="StructureDefinition-immunization-summary-1.html">Immunisations</a></th>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunisation.html">AU Base Immunisation</a></td>
     <td><a href="http://hl7.org/fhir/STU3/immunization.html">Immunization</a></td>
   </tr> 

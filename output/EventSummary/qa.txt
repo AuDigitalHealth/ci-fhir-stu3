@@ -1,56 +1,43 @@
 ﻿Event Summary : Validation Results
 =========================================
 
-err = 76, warn = 0, info = 2
-Generated Tue Mar 19 07:33:09 AEST 2019. FHIR version 4.1.0 for 3.0.1
+err = 10, warn = 0, info = 0
+Generated Wed Mar 20 11:24:01 AEST 2019. FHIR version 4.0.0 for 3.0.1
 
- Build Errors : 1 / 1
+ Build Errors : 1 / 0
+ C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\composition-es-1 : 4 / 0
+ C:\work\git\ci-fhir-stu3\resources\condition-summary-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\encounter-es-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\immunization-summary-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\implementationguide-eventsummary-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 38 / 1
+ C:\work\git\ci-fhir-stu3\resources\list-medseventchanges-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\medicationstatement-summary-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1 : 1 / 0
+ C:\work\git\ci-fhir-stu3\resources\organization-ident-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\procedure-summary-1 : 0 / 0
 </table>
 == n/a ==
-WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be ns.electronichealth.net.au-ci-fhir-3.0-event-summary-null
 ERROR: ??: The reference http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1 could not be resolved
+== C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\composition-es-1.xml ==
+ERROR: StructureDefinition/composition-es-1: StructureDefinition.differential.element[34].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+ERROR: StructureDefinition/composition-es-1: StructureDefinition.differential.element[41].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+ERROR: StructureDefinition/composition-es-1: StructureDefinition.differential.element[48].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+ERROR: StructureDefinition/composition-es-1: StructureDefinition.differential.element[55].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+== C:\work\git\ci-fhir-stu3\resources\condition-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\encounter-es-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\immunization-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\implementationguide-eventsummary-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\list-medseventchanges-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\medicationstatement-summary-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1.xml ==
+ERROR: StructureDefinition/observation-norelevantfinding-1: StructureDefinition.differential.element[7].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1'
+== C:\work\git\ci-fhir-stu3\resources\organization-ident-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\patient-ident-1.xml ==
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[4]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, pensionerConcessionCard
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[5]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, pensionerConcessionCard
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, pensionerConcessionCard
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[4]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, commonwealthSeniorsHealthCard
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[5]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, commonwealthSeniorsHealthCard
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, commonwealthSeniorsHealthCard
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - ihiNumber, medicalRecordNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[2]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - medicareNumber, medicalRecordNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[4]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, medicalRecordNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[5]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, medicalRecordNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, medicalRecordNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - ihiNumber, insurerNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[2]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - medicareNumber, insurerNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[4]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, insurerNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[5]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, insurerNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - healthcareCard, insurerNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[7]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - medicalRecordNumber, insurerNumber
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[8]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element matches more than one slice - medicalRecordNumber, insurerNumber
-INFORMATION: Patient/patient-ident-1-genexample: Patient.identifier[3]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[1][url='http://hl7.org.au/fhir/StructureDefinition/ihi-status']: The Extension 'http://hl7.org.au/fhir/StructureDefinition/ihi-status' definition is for a simple extension, so it must contain a value, not extensions
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[1]: Must have either extensions or value[x], not both [extension.exists() != value.exists()]
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[1]: Profile http://hl7.org.au/fhir/StructureDefinition/ihi-status, Element 'Patient.identifier[1].extension[1].valueCoding[valueCoding]': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[2][url='http://hl7.org.au/fhir/StructureDefinition/ihi-record-status']: The Extension 'http://hl7.org.au/fhir/StructureDefinition/ihi-record-status' definition is for a simple extension, so it must contain a value, not extensions
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[2]: Must have either extensions or value[x], not both [extension.exists() != value.exists()]
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[2]: Profile http://hl7.org.au/fhir/StructureDefinition/ihi-record-status, Element 'Patient.identifier[1].extension[2].valueCoding[valueCoding]': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[1]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element 'Patient.identifier[1].extension[1].valueCoding[valueCoding]': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[1].extension[2]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element 'Patient.identifier[1].extension[2].valueCoding[valueCoding]': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[2]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element 'Patient.identifier[2].period': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[5].type.coding.code: Value is 'PEN' but must be 'HC'
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[5].type.text: Value is 'Pensioner Concession Card Number' but must be 'Health Care Card Number'
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6].type.coding.system: Value is 'http://hl7.org.au/fhir/v2/0203' but must be 'http://hl7.org/fhir/v2/0203'
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6].type.coding.code: Value is 'SEN' but must be 'HC'
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[6].type.text: Value is 'Commonwealth Seniors Health Card' but must be 'Health Care Card Number'
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[7].system: URI values cannot have whitespace
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[7]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element 'Patient.identifier[7].assigner': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[8].system: URI values cannot have whitespace
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[8]: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, Element 'Patient.identifier[8].assigner': minimum required = 1, but only found 0
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[8].type.coding.code: Value is 'MB' but must be 'MR'
-ERROR: Patient/patient-ident-1-genexample: Patient.identifier[8].type.text: Value is 'Private Health Insurance Member Number' but must be 'Medical Record Number'
+== C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\procedure-summary-1.xml ==

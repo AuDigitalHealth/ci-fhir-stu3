@@ -123,8 +123,72 @@
 <h1 id="profiles">Profiles</h1>
 <p>The following profiles form this implementation guide:</p>
 
-<li><a href="StructureDefinition-patient-ident-1.html">Patient with Mandatory Identifier</a></li>
-<li><a href="StructureDefinition-encounter-es-1.html">Summary of an Encounter for an Event</a></li>
+<table border="1">
+  <tr bgcolor="#DCDCDC">
+    <th>Implementation guide profile</th>
+    <th>Base profile (if derived from) </th>
+    <th>Base resource</th>
+  </tr>
+ 
+   <tr>
+   <th><a href="StructureDefinition-composition-es-1.html">Event Summary</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
+  </tr>  
+
+  <tr>
+   <th><a href="StructureDefinition-patient-ident-1.html">Patient with Mandatory Identifier</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
+  </tr>
+    
+  <tr>
+   <th><a href="StructureDefinition-practitioner-ident-1.html">Practitioner with Mandatory Identifier</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/encounter.html">Practitioner</a></td>
+  </tr>
+
+  <tr>
+   <th><a href="StructureDefinition-organization-ident-1.html">Organization with Mandatory Identifier</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organization.html">AU Base Organzation</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
+  </tr>
+  
+    <tr>
+   <th><a href="StructureDefinition-allergyintolerance-summary-1.html">Allergies and Adverse Reactions</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html">AU Base Allergies and Adverse Reactions</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">Allergies and Adverse Reactions</a></td>
+  </tr>
+
+ <tr>
+   <th><a href="StructureDefinition-observation-norelevantfinding-1.html">Assertion of No Relevant Finding</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
+  </tr>
+
+   <tr>
+   <th><a href="StructureDefinition-list-medseventchanges-1.html">List of Medicine Changes from an Event</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-list-medseventchanges-1.html">AU Base Medicine List</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">au-medlist</a></td>
+  </tr>
+
+  <tr>
+   <th><a href="StructureDefinition-condition-summary-1.html">Summary Statement of Condition</a></th>
+    <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html">AU Base Condition</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td>
+  </tr>
+
+   <th><a href="StructureDefinition-procedure-summary-1.html">Summary Statement of Known Procedure</a></th>
+    <td>- </td>
+    <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
+  &lt;/tr&gt; 
+
+    <tr>
+   <th><a href="StructureDefinition-immunization-summary-1.html">Immunisations</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunisation.html">AU Base Immunisation</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/immunization.html">Immunization</a></td>
+  </tr> 
+</table>
 
 
 
@@ -164,7 +228,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Mar 19, 2019 07:32+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Mar 20, 2019 11:23+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

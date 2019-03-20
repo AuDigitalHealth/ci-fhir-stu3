@@ -10,14 +10,14 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [<insert name>)](<insert link to composition profile>) document.
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [Event Summary (ES)](StructureDefinition-composition-es-1.html) document.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing the <insert name> document in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of <insert name> information between healthcare providers.
+The primary aim of this implementation guide is to support implementing the ES document in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of ES information between healthcare providers.
 
 This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
 
@@ -29,7 +29,7 @@ Reference has been made to International and Australian Standards, and to Standa
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
-This implementation guide is the basis for the corresponding [<insert name> CDA implementation guide[DF2019c]](#<insert>). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
+This implementation guide is the basis for the corresponding [Event Summary CDA implementation guide[DF2019c]](#DH????). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
 This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SHS CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
@@ -52,9 +52,9 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
-This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of <insert name>. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
+This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of ES. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide is the [<insert name>](<insert link>) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide is the [Event Summary](StructureDefinition-composition-es-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
@@ -96,8 +96,6 @@ This document and related artefacts are technical in nature and the audience is 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
   
-|[<a name="NEHT2015e">NEHT2015e</a>]| National E-Health Transition Authority, 10 April 2015, Shared Health Summary Information Requirements, Version 1.1.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015)|
 
 
 

@@ -163,9 +163,18 @@ Raw <a href="ImplementationGuide-implementationguide-eventsummary-1.ttl" downloa
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package">fhir:ImplementationGuide.package</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
      <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;p1&quot; ];
-     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.name">fhir:ImplementationGuide.package.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;base&quot; ];
+     <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.name">fhir:ImplementationGuide.package.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ES&quot; ];
      <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">fhir:ImplementationGuide.package.resource</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-composition-es-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Event Summary&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/composition-es-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -174,7 +183,7 @@ Raw <a href="ImplementationGuide-implementationguide-eventsummary-1.ttl" downloa
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Encounter Event Summary #1&quot; ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/encounter-es-1&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -182,7 +191,96 @@ Raw <a href="ImplementationGuide-implementationguide-eventsummary-1.ttl" downloa
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;patient-ident-1&quot; ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/patient-ident-1&quot; ]       ]     ]
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/patient-ident-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-practitionerrole-withpractitionerident-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/practitionerrole-withpractitionerident-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-practitioner-ident-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;practitioner-ident-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/practitioner-ident-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-organization-ident-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;organization-ident-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/organization-ident-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-allergyintolerance-summary-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;allergyintolerance-summary-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/allergyintolerance-summary-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-list-medseventchanges-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;list-medseventchanges-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/list-medseventchanges-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-observation-norelevantfinding-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;observation-norelevantfinding-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/observation-norelevantfinding-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-condition-summary-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;condition-summary-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/condition-summary-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-procedure-summary-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;procedure-summary-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/procedure-summary-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-immunization-summary-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;immunization-summary-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/immunization-summary-1&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;StructureDefinition-medicationstatement-summary-1.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">fhir:ImplementationGuide.package.resource.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;medicationstatement-summary-1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/medicationstatement-summary-1&quot; ]       ]     ]
   ];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page">fhir:ImplementationGuide.page</a> [
      <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.source">fhir:ImplementationGuide.page.source</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;index.html&quot; ];
@@ -228,7 +326,7 @@ Raw <a href="ImplementationGuide-implementationguide-eventsummary-1.ttl" downloa
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Mar 19, 2019 07:32+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Mar 20, 2019 11:23+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

@@ -16,8 +16,6 @@
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/indigenous-status']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/indigenous-status': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:photo) &lt;= 0">photo: maximum cardinality of 'photo' is 0</sch:assert>
-      <sch:assert test="count(f:animal) &lt;= 0">animal: maximum cardinality of 'animal' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -56,23 +54,8 @@
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/ihi-status']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/ihi-status': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/ihi-record-status']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/ihi-record-status': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
-      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
-      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:assigner) &gt;= 1">assigner: minimum cardinality of 'assigner' is 1</sch:assert>
-      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:assigner) &gt;= 1">assigner: minimum cardinality of 'assigner' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:Patient/f:identifier/f:type</sch:title>
-    <sch:rule context="f:Patient/f:identifier/f:type">
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -93,38 +76,6 @@
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Patient.deceasedDateTime.extension</sch:title>
-    <sch:rule context="f:Patient/f:deceasedDateTime/f:extension">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Patient.contact</sch:title>
-    <sch:rule context="f:Patient/f:contact">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-      <sch:assert test="exists(f:name) or exists(f:telecom) or exists(f:address) or exists(f:organization)">SHALL at least contain a contact's details or a reference to an organization (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Patient.animal</sch:title>
-    <sch:rule context="f:Patient/f:animal">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Patient.communication</sch:title>
-    <sch:rule context="f:Patient/f:communication">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Patient.link</sch:title>
-    <sch:rule context="f:Patient/f:link">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
