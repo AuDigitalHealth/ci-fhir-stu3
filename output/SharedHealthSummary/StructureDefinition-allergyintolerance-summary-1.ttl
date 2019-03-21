@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Allergy or Intolerance"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-03-20T10:14:01+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-03-22T02:27:47+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -627,7 +627,7 @@
        fhir:ElementDefinition.path [ fhir:value "AllergyIntolerance.category" ];
        fhir:ElementDefinition.short [ fhir:value "food | medication | environment | biologic" ];
        fhir:ElementDefinition.definition [ fhir:value "Category of the identified substance." ];
-       fhir:ElementDefinition.comment [ fhir:value "This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the substance where coding systems are used, and is effectively redundant in that situation.  When searching on category, consider the implications of AllergyIntolerance resources without a category.  For example, when searching on category = medication, medication allergies that don't have a category valued will not be returned.  Refer to [search](search.html) for more information on how to search category with a :missing modifier to get allergies that don't have a category.  Additionally, category should be used with caution because category can be subjective based on the sender." ];
+       fhir:ElementDefinition.comment [ fhir:value "This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the substance where coding systems are used, and is effectively redundant in that situation.  When searching on category, consider the implications of AllergyIntolerance resources without a category.  For example, when searching on category = medication, medication allergies that don't have a category valued will not be returned.  Refer to [search](https://build.fhir.org/ig/hl7au/au-fhir-base/search.html) for more information on how to search category with a :missing modifier to get allergies that don't have a category.  Additionally, category should be used with caution because category can be subjective based on the sender." ];
        fhir:ElementDefinition.alias [
          fhir:value "Category";
          fhir:index 0

@@ -15,12 +15,11 @@ Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-s
 * Due to a tolling issue the must support flag is missing for the below elements:
     * Patient.deceasedDateTime.date-accuracy-indicator
 
-##### Examples
-This section provides examples that conform to the requirements specified within this implementation guide.
-
+##### Example
 * [Patient example 1](Patient-e6e84607-a0da-4ead-9ed6-5e064fea9fc4.html)
 
-Sample instances are also included within [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances:
+Example resources conforming to this profile are included with [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances:
+
 * [Composition SHS example 1 (with contained resources)](Composition-a0da969a-7956-439b-b390-8de071a2df7c.html)
 
 * [Composition SHS example 2 (with contained resources)](Composition-bd06e981-ba86-4020-ba59-cd89f80e8712.html)

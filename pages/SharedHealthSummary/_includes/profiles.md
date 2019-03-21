@@ -69,11 +69,10 @@ The following profiles form this implementation guide:
     <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
   </tr> 
    <tr>
-   <th><a href="StructureDefinition-list-medseventchanges-1.html">List of Medicine Changes from an Event</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-au-medlist.html">AU Base Medication Statement</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">List</a></td>
+   <th><a href="StructureDefinition-medicationstatement-summary-1.html">Summary Statement of Known Medicine</a></th>
+    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+    <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
   </tr>
-
 <tr>
    <th><a href="StructureDefinition-organization-ident-1.html">Organization with Mandatory Identifier</a></th>
     <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>

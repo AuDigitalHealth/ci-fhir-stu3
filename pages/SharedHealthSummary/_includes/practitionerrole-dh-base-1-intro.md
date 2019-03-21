@@ -11,7 +11,7 @@ None
 
 
 ### Examples
-Sample instances are included within [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances. 
+Example resources conforming to this profile are included with [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances.
 
 
 
