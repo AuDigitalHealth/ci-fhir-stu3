@@ -56,6 +56,7 @@ The following profiles form this implementation guide:
     <td><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td>
   </tr>
 
+<tr>
    <th><a href="StructureDefinition-procedure-summary-1.html">Summary Statement of Known Procedure</a></th>
     <td>- </td>
     <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
