@@ -10,8 +10,7 @@ Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-s
 None
 
 
-### Examples
-Example resources conforming to this profile are included with [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances.
+
 
 
 

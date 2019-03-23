@@ -18,8 +18,3 @@ Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-s
 * For the usage scenario for this profile it is expected that status will be ‘completed’
 
 
-##### Examples
-Example resources conforming to this profile are included with [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances:
-* [Composition SHS example 2 (with contained resources)](Composition-bd06e981-ba86-4020-ba59-cd89f80e8712.html)
-
-* [Composition SHS example 3 (with contained resources)](Composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f.html)
