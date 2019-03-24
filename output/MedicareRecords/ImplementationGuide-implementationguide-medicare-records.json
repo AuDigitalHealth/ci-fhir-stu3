@@ -1,0 +1,329 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.au.dh.medicare-records-1.0.0",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ImplementationGuideMedicareRecords</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/ImplementationGuide/implementationguide-medicare-records</pre><div><p>Australian realm implementation guide of the FHIR specification to represent atomic Medicare records in the My Health Record system and related applications.</p>\n</div></div>"
+  },
+  "url": "http://ns.electronichealth.net.au/ci/fhir/ImplementationGuide/implementationguide-medicare-records",
+  "version": "1.0.0",
+  "name": "ImplementationGuideMedicareRecords",
+  "status": "active",
+  "experimental": false,
+  "date": "2018-08-28T00:00:00+10:00",
+  "publisher": "Australian Digital Health Agency",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "help@digitalhealth.gov.au"
+        }
+      ]
+    }
+  ],
+  "description": "Australian realm implementation guide of the FHIR specification to represent atomic Medicare records in the My Health Record system and related applications.",
+  "copyright": "Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
+  "fhirVersion": "3.0.1",
+  "package": [
+    {
+      "id": "p1",
+      "name": "base",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-consent-aodr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/consent-aodr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-bodysite-aodr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/bodysite-aodr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-dateinitialregistration.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-dateinitialregistration"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-explanationofbenefit-medicare.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/explanationofbenefit-medicare"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-immunization-cancellationperiod.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-immunization-cancellationperiod"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-donationdecision.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-donationdecision"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-immunization-air.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/immunization-air"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-medicationrequest-pbs.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/medicationrequest-pbs"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-referralrequest-mbsdva.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/referralrequest-mbsdva"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-medication-pbs.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/medication-pbs"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Immunization-immunization-air-example-administration.html"
+            }
+          ],
+          "example": true,
+          "name": "Immunization example 1",
+          "description": "Immunization given example.",
+          "sourceReference": {
+            "reference": "Immunization/immunization-air-example-administration"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Immunization-immunization-air-example-administration-short.html"
+            }
+          ],
+          "example": true,
+          "name": "Immunization short example",
+          "description": "Immunization given example 3 - short.",
+          "sourceReference": {
+            "reference": "Immunization/immunization-air-example-administration-short"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Immunization-immunization-air-example-notGiven.html"
+            }
+          ],
+          "example": true,
+          "name": "Immunisation example 3",
+          "description": "Immunisation not given example",
+          "sourceReference": {
+            "reference": "Immunization/immunization-air-example-notGiven"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Immunization-immunization-air-example-administration-text.html"
+            }
+          ],
+          "example": true,
+          "name": "Immunisation example 4",
+          "description": "Immunisation example - with targetDisease as text",
+          "sourceReference": {
+            "reference": "Immunization/immunization-air-example-administration-text"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ExplanationOfBenefit-explanationofbenefit-mbs-example-01.html"
+            }
+          ],
+          "example": true,
+          "name": "Explanation of Benefit MBS example 1",
+          "description": "MBS example 1",
+          "sourceReference": {
+            "reference": "ExplanationOfBenefit/explanationofbenefit-mbs-example-01"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ExplanationOfBenefit-explanationofbenefit-mbs-example-02.html"
+            }
+          ],
+          "example": true,
+          "name": "Explanation of Benefit MBS example 2",
+          "description": "MBS example 3",
+          "sourceReference": {
+            "reference": "ExplanationOfBenefit/explanationofbenefit-mbs-example-02"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ExplanationOfBenefit-explanationofbenefit-mbs-example-min.html"
+            }
+          ],
+          "example": true,
+          "name": "Explanation of Benefit MBS example 4",
+          "description": "MBS example min",
+          "sourceReference": {
+            "reference": "ExplanationOfBenefit/explanationofbenefit-mbs-example-min"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ExplanationOfBenefit-explanationofbenefit-pbs-example-01.html"
+            }
+          ],
+          "example": true,
+          "name": "Explanation of Benefit PBS example 1",
+          "description": "PBS example 1",
+          "sourceReference": {
+            "reference": "ExplanationOfBenefit/explanationofbenefit-pbs-example-01"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ExplanationOfBenefit-explanationofbenefit-pbs-example-02.html"
+            }
+          ],
+          "example": true,
+          "name": "Explanation of Benefit PBS example 2",
+          "description": "PBS example 2",
+          "sourceReference": {
+            "reference": "ExplanationOfBenefit/explanationofbenefit-pbs-example-02"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Consent-aodr-example-willingtodonate.html"
+            }
+          ],
+          "example": true,
+          "name": "Consent example 1",
+          "description": "Willing to donate",
+          "sourceReference": {
+            "reference": "Consent/aodr-example-willingtodonate"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Consent-aodr-example-willingtodonatesome.html"
+            }
+          ],
+          "example": true,
+          "name": "Consent example 2",
+          "description": "Willing to donate some",
+          "sourceReference": {
+            "reference": "Consent/aodr-example-willingtodonatesome"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Consent-aodr-example-notwillingtodonate.html"
+            }
+          ],
+          "example": true,
+          "name": "Consent example 3",
+          "description": "Not willing to donate",
+          "sourceReference": {
+            "reference": "Consent/aodr-example-notwillingtodonate"
+          }
+        }
+      ]
+    }
+  ],
+  "page": {
+    "source": "index.html",
+    "title": "Medicare Records",
+    "kind": "page"
+  }
+}

@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Immunization/immunization-air-example-administration> a fhir:Immunization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "immunization-air-example-administration"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: immunization-air-example-administration</p><p><b>meta</b>: </p><p><b>identifier</b>: urn:oid:2.25.129844986816735724544008039955538526131</p><p><b>status</b>: completed</p><p><b>notGiven</b>: false</p><p><b>vaccineCode</b>: Infanrix Hexa <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.2.36.1.2001.1005.17 code 'IFHX' = 'Infanrix Hexa)</span></p><p><b>patient</b>: </p><p><b>date</b>: 15/08/2017</p><p><b>primarySource</b>: true</p><h3>VaccinationProtocols</h3><table class=\"grid\"><tr><td>-</td><td><b>DoseSequence</b></td><td><b>TargetDisease</b></td><td><b>DoseStatus</b></td></tr><tr><td>*</td><td>1</td><td>Diphtheria due to Corynebacterium diphtheriae <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '397430003' = 'Diphtheria due to Corynebacterium diphtheriae; {SNOMED CT code '76902006' = 'Tetanus; {SNOMED CT code '27836007' = 'Pertussis; {SNOMED CT code '66071002' = 'Type B viral hepatitis; {SNOMED CT code '398102009' = 'Acute poliomyelitis (disorder))</span></td><td>Not available <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v3/NullFlavor code 'NAVU' = 'Not available', given as 'Not available'})</span></td></tr></table></div>"
+  ];
+  fhir:Immunization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.129844986816735724544008039955538526131" ]
+  ];
+  fhir:Immunization.status [ fhir:value "completed"];
+  fhir:Immunization.notGiven [ fhir:value "false"^^xsd:boolean];
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:oid:1.2.36.1.2001.1005.17" ];
+       fhir:Coding.code [ fhir:value "IFHX" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Infanrix Hexa" ]
+  ];
+  fhir:Immunization.patient [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608166690503" ]
+     ]
+  ];
+  fhir:Immunization.date [ fhir:value "2017-08-15"^^xsd:date];
+  fhir:Immunization.primarySource [ fhir:value "true"^^xsd:boolean];
+  fhir:Immunization.vaccinationProtocol [
+     fhir:index 0;
+     fhir:Immunization.vaccinationProtocol.doseSequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Immunization.vaccinationProtocol.targetDisease [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:397430003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "397430003" ]
+       ], [
+         fhir:index 1;
+         a sct:76902006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "76902006" ]
+       ], [
+         fhir:index 2;
+         a sct:27836007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "27836007" ]
+       ], [
+         fhir:index 3;
+         a sct:66071002;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "66071002" ]
+       ], [
+         fhir:index 4;
+         a sct:398102009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "398102009" ]
+       ]
+     ];
+     fhir:Immunization.vaccinationProtocol.doseStatus [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/NullFlavor" ];
+         fhir:Coding.code [ fhir:value "NAVU" ];
+         fhir:Coding.display [ fhir:value "Not available" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Immunization/immunization-air-example-administration.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

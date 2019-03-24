@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/ExplanationOfBenefit/explanationofbenefit-pbs-example-01> a fhir:ExplanationOfBenefit;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "explanationofbenefit-pbs-example-01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/explanationofbenefit-medicare";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: explanationofbenefit-pbs-example-01</p><p><b>meta</b>: </p><p><b>contained</b>: , </p><p><b>identifier</b>: urn:oid:2.25.129844986816735724544008039950138526110</p><p><b>patient</b>: </p><p><b>created</b>: 16/01/2017</p><p><b>prescription</b>: unknown resource contained</p><h3>Items</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Category</b></td><td><b>Service</b></td><td><b>Serviced[x]</b></td></tr><tr><td>*</td><td>1</td><td>PBS <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1 code 'pbs' = 'pbs', given as 'PBS'})</span></td><td>cephalexin 500 mg capsule, 20 <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.2.36.1.2001.1005.22 code '03119E' = '03119E', given as 'cephalexin 500 mg capsule, 20'})</span></td><td>16/01/2017</td></tr></table></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "Medication1" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.2.36.1.2001.1005.22" ];
+         fhir:Coding.code [ fhir:value "03119E" ];
+         fhir:Coding.display [ fhir:value "cephalexin 500 mg capsule, 20" ]
+       ]
+     ]
+  ], [
+     a fhir:MedicationRequest;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "MedicationRequest1" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/medicationrequest-pbs";
+         fhir:index 0
+       ]
+     ];
+     fhir:MedicationRequest.status [ fhir:value "active" ];
+     fhir:MedicationRequest.intent [ fhir:value "order" ];
+     fhir:MedicationRequest.medicationReference [
+       fhir:Reference.reference [ fhir:value "#Medication1" ]
+     ];
+     fhir:MedicationRequest.subject [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ];
+     fhir:MedicationRequest.authoredOn [ fhir:value "2017-01-15"^^xsd:date ];
+     fhir:MedicationRequest.dispenseRequest [
+       fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "1"^^xsd:positiveInteger ];
+       fhir:MedicationRequest.dispenseRequest.quantity [
+         fhir:Quantity.value [ fhir:value "500"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "tablet" ]
+       ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.129844986816735724544008039950138526110" ]
+  ];
+  fhir:ExplanationOfBenefit.patient [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608166690503" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.created [ fhir:value "2017-01-16"^^xsd:date];
+  fhir:ExplanationOfBenefit.prescription [
+     fhir:Reference.reference [ fhir:value "#MedicationRequest1" ]
+  ];
+  fhir:ExplanationOfBenefit.item [
+     fhir:index 0;
+     fhir:ExplanationOfBenefit.item.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.item.category [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1" ];
+         fhir:Coding.code [ fhir:value "pbs" ];
+         fhir:Coding.display [ fhir:value "PBS" ]
+       ]
+     ];
+     fhir:ExplanationOfBenefit.item.service [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.2.36.1.2001.1005.22" ];
+         fhir:Coding.code [ fhir:value "03119E" ];
+         fhir:Coding.display [ fhir:value "cephalexin 500 mg capsule, 20" ]
+       ]
+     ];
+     fhir:ExplanationOfBenefit.item.servicedDate [ fhir:value "2017-01-16"^^xsd:date ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/ExplanationOfBenefit/explanationofbenefit-pbs-example-01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

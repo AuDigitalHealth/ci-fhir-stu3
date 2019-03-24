@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Consent/aodr-example-notwillingtodonate> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "aodr-example-notwillingtodonate"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/consent-aodr";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>Manually Generated Narrative</b>\n			</p>\n			<p><b>id</b>: aodr-example-notwillingtodonate</p>\n			<p><b>date initial registration</b>: 2015-11-18</p>\n			<p><b>donation decision</b>: Not willing to be a donor</p>\n			<p><b>dateTime</b>: 2017-09-21</p>\n		</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-dateinitialregistration" ];
+     fhir:Extension.valueDateTime [ fhir:value "2015-11-18"^^xsd:date ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-donationdecision" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:161034004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "161034004" ];
+         fhir:Coding.display [ fhir:value "Not willing to be a donor" ]
+       ]
+     ]
+  ];
+  fhir:Consent.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.320090414317418051877665573694312012199" ]
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:64300-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "64300-7" ];
+       fhir:Coding.display [ fhir:value "Organ donation consent" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608166690503" ]
+     ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2017-09-21"^^xsd:date];
+  fhir:Consent.policy [
+     fhir:index 0;
+     fhir:Consent.policy.authority [ fhir:value "http://australianorgandonorregister.gov.au" ];
+     fhir:Consent.policy.uri [ fhir:value "http://www.australianorgandonorregister.gov.au/aodr" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Consent/aodr-example-notwillingtodonate.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
