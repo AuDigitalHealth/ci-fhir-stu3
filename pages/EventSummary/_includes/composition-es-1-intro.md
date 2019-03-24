@@ -1,4 +1,4 @@
-### Shared Health Summary
+### Event Summary
 
 
 #### Usage Scenarios 
@@ -91,7 +91,6 @@ This section provides examples that conform to the requirements specified within
 
 These examples have been created to demonstrate multiple scenarios, e.g. a composition with empty sections and a composition without empty sections, a composition with contained (inline) resources, etc. 
 
-* [Composition SHS example 1 (with contained resources)](Composition-a0da969a-7956-439b-b390-8de071a2df7c.html)
-* [Composition SHS example 2 (with contained resources)](Composition-bd06e981-ba86-4020-ba59-cd89f80e8712.html)
-* [Composition SHS example 3 (with contained resources)](Composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f.html)
-* [Composition SHS example 3 (with referenced medication statements, allergy intollerance, conditions and procedures)](Composition-de5ef077b-cc0f-4c3d-a4cd-a35ceafff331.html)
+* [Composition ES example 1 (with contained resources)]
+* [Composition ES example 2 (with contained resources)]
+* [Composition ES example 3 (with contained resources)]
