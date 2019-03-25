@@ -45,7 +45,7 @@ This document includes excerpts of HL7™ International standards and other HL7 
 
 This product includes all or a portion of the HL7 Vocabulary, or is derived from the HL7 Vocabulary, subject to a license from Health Level Seven International. Your use of the HL7 Vocabulary also is subject to this license, a copy of which is accessible through the following link: [http://www.hl7.org/permalink/?VocabTables](http://www.hl7.org/permalink/?VocabTables). The current complete HL7 Vocabulary is also available through this link. The HL7 Vocabulary is copyright © 1989-2010, Health Level Seven International. All rights reserved. THE HL7 VOCABULARY IS PROVIDED "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANT-ABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-**Apache license**
+**Apache licence**
 
 Production Disclaimer - 
 
