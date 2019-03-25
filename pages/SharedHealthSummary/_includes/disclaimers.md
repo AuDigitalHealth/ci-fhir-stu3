@@ -45,6 +45,22 @@ This document includes excerpts of HL7™ International standards and other HL7 
 
 This product includes all or a portion of the HL7 Vocabulary, or is derived from the HL7 Vocabulary, subject to a license from Health Level Seven International. Your use of the HL7 Vocabulary also is subject to this license, a copy of which is accessible through the following link: [http://www.hl7.org/permalink/?VocabTables](http://www.hl7.org/permalink/?VocabTables). The current complete HL7 Vocabulary is also available through this link. The HL7 Vocabulary is copyright © 1989-2010, Health Level Seven International. All rights reserved. THE HL7 VOCABULARY IS PROVIDED "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANT-ABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
+**Apache license**
+
+Production Disclaimer - 
+
+The Australian Digital Health Agency (as Licensor) grants You a licence to this Product subject to the terms of the Apache Licence (version 2.0), a copy of which is available at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0), and the following terms.
+ 
+This Product licensed under the Apache Licence and these terms may be used within production software systems. It nevertheless remains your responsibility to test and validate the use of this product 
+within your software and the limitation of liability provisions in clause 8 of the Apache Licence continue to apply.
+
+Despite clause 7 of the Apache Licence, if a condition or warranty is implied by statute or law that cannot be excluded, then the liability of a Contributor to the extent that it has contributed to 
+a breach of that condition or warranty is limited to one or more of the following at its option: (a) in the case of goods, any one of the following: the replacement of those goods or the re-supply of 
+equivalent goods; the repair of those goods; the payment of the cost of replacing those or acquiring equivalent goods; or the payment of the cost of having those goods repaired; and (b) in the 
+case of services: the supplying of those services again; or the payment of the cost of having those services supplied again.
+ 
+A term which is given a meaning in the Apache Licence, has the same meaning when used in these terms.
+
 OFFICIAL
 
 
