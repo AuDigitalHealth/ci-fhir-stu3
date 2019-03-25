@@ -49,7 +49,7 @@
   <sch:pattern>
     <sch:title>f:List/f:entry</sch:title>
     <sch:rule context="f:List/f:entry">
-      <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/encounter-description']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/encounter-description': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/change-description']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/change-description': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:deleted) &lt;= 0">deleted: maximum cardinality of 'deleted' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
