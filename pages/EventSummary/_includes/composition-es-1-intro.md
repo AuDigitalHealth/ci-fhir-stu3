@@ -14,7 +14,6 @@ The following are the usage scenarios expected:
 * Where additional content beyond that flagged with a must support is provided it:
     * shall not qualify or negate content described by this profile as must support
     * shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
-* For the usage scenarios for this profile it is required that the composition include only the specified four top-level sections; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.
 * For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).
 
 <table border="1">
@@ -71,22 +70,19 @@ The following are the usage scenarios expected:
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
   <tr>
-    <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234401000168109 &#124;No history of vaccination&#124;)</td>
+    <td>Where a sending system can state that a patient has not been administered a vaccine during the encounter or that the patient has no relevant history of vaccination it is expected an assertion of no relevant finding  (Observation) is sent with the appropriate code (e.g. 1226591000168105 |No vaccine administered during encounter|). </td>
   </tr>
     <tr>
     <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
   </tr>
-  
-    <tr>
-   <td rowspan="1">Diagnotic Investigations</td>
-    <td>Diagnostic Investigations section is in progress. It will be updated to reference appropriate Agency profiles in the future</td>
-  </tr>
-
+ 
 </table>  
   
+#### Known Issues
+
+* Diagnostic Investigations section is in progress. It will be updated to reference appropriate Agency profiles in the future.
    
-   
-#### Examples
+<!--#### Examples
 This section provides examples that conform to the requirements specified within this implementation guide.
 
 These examples have been created to demonstrate multiple scenarios, e.g. a composition with empty sections and a composition without empty sections, a composition with contained (inline) resources, etc. 
@@ -94,3 +90,4 @@ These examples have been created to demonstrate multiple scenarios, e.g. a compo
 * [Composition ES example 1 (with contained resources)]
 * [Composition ES example 2 (with contained resources)]
 * [Composition ES example 3 (with contained resources)]
+-->

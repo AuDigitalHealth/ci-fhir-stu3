@@ -1,0 +1,1 @@
+No example resources conforming to this profile are included.
