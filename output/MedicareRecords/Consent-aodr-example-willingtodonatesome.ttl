@@ -1,0 +1,507 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Consent/aodr-example-willingtodonatesome> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "aodr-example-willingtodonatesome"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/consent-aodr";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<p>\n				<b>Manually Generated Narrative</b>\n			</p>\n			<p><b>id</b>: aodr-example-willingtodonatesome</p>\n			<p><b>date initial registration</b>: 2015-11-18</p>\n			<p><b>donation decision</b>: Willing to be donor</p>\n			<p><b>dateTime</b>: 2017-09-21</p>\n			<p><b>Bone structure</b>: Not willing to be a donor</p>\n			<p><b>Eye</b>: Not willing to be a donor</p>\n			<p><b>Heart</b>: Willing to be donor</p>\n			<p><b>Heart valve structure</b>: Willing to be donor</p>\n			<p><b>Kidney</b>: Willing to be donor</p>\n			<p><b>Liver</b>: Willing to be donor</p>\n			<p><b>Lung structure</b>: Willing to be donor</p>\n			<p><b>Pancreas</b>: Willing to be donor</p>\n			<p><b>Skin structure</b>: Willing to be donor</p>\n		</div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:BodySite;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "BodySite-bone" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:272673000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "272673000" ];
+         fhir:Coding.display [ fhir:value "Bone structure" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "BodySite-eye" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:81745001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "81745001" ];
+         fhir:Coding.display [ fhir:value "Eye" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "BodySite-heart" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:80891009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "80891009" ];
+         fhir:Coding.display [ fhir:value "Heart" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 3;
+     fhir:Resource.id [ fhir:value "BodySite-heart-valve" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:17401000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "17401000" ];
+         fhir:Coding.display [ fhir:value "Heart valve structure" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 4;
+     fhir:Resource.id [ fhir:value "BodySite-kidney" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:64033007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "64033007" ];
+         fhir:Coding.display [ fhir:value "Kidney" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 5;
+     fhir:Resource.id [ fhir:value "BodySite-liver" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:10200004;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "10200004" ];
+         fhir:Coding.display [ fhir:value "Liver" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 6;
+     fhir:Resource.id [ fhir:value "BodySite-lungs" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:39607008;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "39607008" ];
+         fhir:Coding.display [ fhir:value "Lung structure" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 7;
+     fhir:Resource.id [ fhir:value "BodySite-pancreas" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:15776009;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "15776009" ];
+         fhir:Coding.display [ fhir:value "Pancreas" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ], [
+     a fhir:BodySite;
+     fhir:index 8;
+     fhir:Resource.id [ fhir:value "BodySite-skin" ];
+     fhir:BodySite.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:39937001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "39937001" ];
+         fhir:Coding.display [ fhir:value "Skin structure" ]
+       ]
+     ];
+     fhir:BodySite.patient [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+             fhir:Coding.code [ fhir:value "NI" ];
+             fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+           ]
+         ];
+         fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+         fhir:Identifier.value [ fhir:value "8003608166690503" ]
+       ]
+     ]
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-dateinitialregistration" ];
+     fhir:Extension.valueDateTime [ fhir:value "2015-11-18"^^xsd:date ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-donationdecision" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:160654005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "160654005" ];
+         fhir:Coding.display [ fhir:value "Willing to be donor" ]
+       ]
+     ]
+  ];
+  fhir:Consent.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.320090414317418051877665573694312012199" ]
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:64300-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "64300-7" ];
+       fhir:Coding.display [ fhir:value "Organ donation consent" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608166690503" ]
+     ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2017-09-21"^^xsd:date];
+  fhir:Consent.policy [
+     fhir:index 0;
+     fhir:Consent.policy.authority [ fhir:value "http://australianorgandonorregister.gov.au" ];
+     fhir:Consent.policy.uri [ fhir:value "http://www.australianorgandonorregister.gov.au/aodr" ]
+  ];
+  fhir:Consent.except [
+     fhir:index 0;
+     fhir:Consent.except.type [ fhir:value "deny" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-bone" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Consent.except.type [ fhir:value "deny" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-eye" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-heart" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-heart-valve" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-kidney" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-liver" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-lungs" ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-pancreas" ]
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:Consent.except.type [ fhir:value "permit" ];
+     fhir:Consent.except.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:53958007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "53958007" ];
+         fhir:Coding.display [ fhir:value "Harvesting of donor material" ]
+       ]
+     ];
+     fhir:Consent.except.data [
+       fhir:index 0;
+       fhir:Consent.except.data.meaning [ fhir:value "instance" ];
+       fhir:Consent.except.data.reference [
+         fhir:Reference.reference [ fhir:value "#BodySite-skin" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Consent/aodr-example-willingtodonatesome.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
