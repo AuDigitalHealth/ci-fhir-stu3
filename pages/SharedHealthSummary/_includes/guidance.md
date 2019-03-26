@@ -6,7 +6,7 @@
 
 ## FHIR (Fast Healthcare Interoperability Resources)
 
-FHIR is a standard developed by HL7. The standard describes data formats and elements, known as Resources, by which content is exchanged.
+FHIR is a standard developed by HL7. The standard describes data formats and elements, known as [Resources](http://hl7.org/fhir/stu3/resourcelist.html), by which content is exchanged.
 
 A FHIR resource may be supplied in one of the following formats: [XML](http://hl7.org/fhir/stu3/xml.html), [JSON](http://hl7.org/fhir/stu3/json.html) and [Turtle](http://hl7.org/fhir/stu3/rdf.html). FHIR supports four paradigms for exchange: the RESTful API (Application Programming Interface), messaging, documents, and services.
 
