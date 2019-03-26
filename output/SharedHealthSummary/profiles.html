@@ -120,110 +120,192 @@
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h1 id="profiles">Profiles</h1>
-<p>The following profiles form this implementation guide:</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html>
+<title>DB Style</title>
+<style>
+#DbTbl {font-family:Calibri; color:#777;margin-left: 0px;}
+#tabNav {border-bottom:5px solid #69f;}
+#tabNav ul {margin:0; padding:0;}
+#tabNav ul li {list-style:none; display:inline-block;margin:0; padding:0;}
+#tabNav a {	display:inline-block;
+			margin:0; 
+            padding:10px;
+            text-decoration:none;
+            border:1px solid #ccc; 
+            border-bottom:none; 
+            border-top-left-radius:15px; 
+            background-color:#009;
+            color:white; 
+            foint-weight:bold; 
+            font-size:1.2em;
+            transition-duration: 0.5s;}            
+#tabNav a:hover {background-color:#36e;}
+#tabNav a.currentNavLink {background-color:#69f; cursor:default;}
+.hidden {display:none;}
 
-<table border="1">
-  <tr bgcolor="#DCDCDC">
-    <th>Implementation guide profile</th>
-    <th>Base profile (if derived from) </th>
-    <th>Base resource</th>
-  </tr>
- 
- <tr>
-   <th><a href="StructureDefinition-observation-norelevantfinding-1.html">Assertion of No Relevant Finding</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
-  </tr>
- <tr>
-   <th><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html">AU Base Dosage</a></th>
-    <td>-</td>
-    <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
-  </tr>
-    <tr>
-   <th><a href="StructureDefinition-humanname-dh-base-1.html">Base HumanName</a></th>
-    <td>-</td>
-    <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
-  </tr>
-  <tr>
-   <th><a href="StructureDefinition-organization-dh-base-1.html">Base Organization</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
-  </tr>
-  <tr>
-   <th><a href="StructureDefinition-patient-dh-base-1.html">Base Patient</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
-  </tr>
+.verticalText {writing-mode: vertical-rl;font-size: 1.1em;}
+
+.contentTbl { border:none;
+  				border-collapse: collapse;
+                width: 100%;}
+.contentTbl td, .contentTbl th, th.rowTitle  {	border:1px solid #ccc; 
+									border-style: solid none; 
+                                    padding:10px 20px 10px 5px;}
+th.rowTitle { background-color:#eee;} 
+.contentTbl a {text-decoration: none; color:#69f;}
+.contentTbl a:hover {text-decoration: underline; color:#009;}
+.contentTbl ul {margin:0;}
+.contentTbl ul li {margin:5px;}
+
+</style>
+<body>
+<div id="DbTbl">
+<div id="tabNav">
+  <ul>
+    <li><a href="#" onclick="showContent(this, 'Categorised');" class="currentNavLink">Categorised</a></li>
+    <li><a href="#" onclick="showContent(this, 'Tabular');">Tabular</a></li>   
+  </ul>
+</div>
+<div id="Categorised" class="content">
+  <table class="contentTbl">
    <tr>
-   <th><a href="StructureDefinition-relatedperson-dh-base-1.html">Base RelatedPerson</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
-  </tr> 
-  <tr>
-   <th><a href="StructureDefinition-practitioner-dh-base-1.html">Base Practitioner</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
-  </tr> 
+    <th rowspan="2" class="rowTitle"><span class="verticalText">Foundation</span></th>
+    <th>Conformance</th>
+    <th>Terminology</th>
+    <th>Security</th>
+    <th>Documents</th>
+    <th>Other</th>
+   </tr>
    <tr>
-   <th><a href="StructureDefinition-composition-shs-1.html">Shared Health Summary</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
-  </tr>  
-    <tr>
-   <th><a href="StructureDefinition-immunization-summary-administration-1.html">Summary Statement of Administered Vaccine</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-immunisation.html">AU Base Immunisation</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/immunization.html">Immunization</a></td>
-  </tr> 
-  <tr>
-   <th><a href="StructureDefinition-allergyintolerance-summary-1.html">Summary Statement of Allergy or Intolerance</a></th>
-    <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">AllergyIntolerance </a></td>
-  </tr>
-  <tr>
-   <th><a href="StructureDefinition-condition-summary-1.html">Summary Statement of Condition</a></th>
-    <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html">AU Base Condition</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td>
-  </tr>
-    <tr>
-   <th><a href="StructureDefinition-procedure-summary-1.html">Summary Statement of Known Procedure</a></th>
-    <td>- </td>
-    <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
-  </tr> 
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+   </tr>
    <tr>
-   <th><a href="StructureDefinition-medicationstatement-summary-1.html">Summary Statement of Known Medicine</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
-  </tr>
-<tr>
-   <th><a href="StructureDefinition-organization-ident-1.html">Organization with Mandatory Identifier</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
-  </tr>
-
-  <tr>
-   <th><a href="StructureDefinition-patient-ident-1.html">Patient with Mandatory Identifier</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
-  </tr>  
-  <tr>
-   <th><a href="StructureDefinition-patient-ihi-1.html">Patient with Mandatory IHI</a></th>
-    <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
-  </tr> 
-
-  <tr>
-   <th><a href="StructureDefinition-practitioner-ident-1.html">Practitioner with Mandatory Identifier</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
-  </tr>   
-  <tr>
-   <th><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">Practitioner Role with Practitioner with Mandatory Identifier</a></th>
-    <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
-    <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
-  </tr> 
-</table>
-
+    <th rowspan="2" class="rowTitle"><span class="verticalText">Base</span></th>
+    <th>Conformance</th>
+    <th>Terminology</th>
+    <th>Security</th>
+    <th>Documents</th>
+    <th></th>
+   </tr>
+   <tr>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="#">CapabilityStatement</a></li>
+        <li><a href="#">StructureDefinition</a></li>
+        <li><a href="#">ImplementationGuide</a></li>
+        <li><a href="#">SearchParameter</a></li>    
+      </ul>
+    </td>
+    <td>  	
+    </td>
+   </tr>
+  </table>
+</div>
+<div id="Tabular" class="content hidden">
+  <table class="contentTbl">
+    <tr>
+      <th>Item</th>
+      <th>Base 1</th>
+      <th>Base 2</th>
+    </tr>
+    <tr>
+      <td>ghghjgjgjgjhgjhg hjhjhjkjkhjkh</td>
+      <td>dhjk kljklsa kljads k</td>
+      <td>gkh jjjk </td>
+    </tr>
+    <tr>
+      <td>kjkdajkl</td>
+      <td>sjahkh in asdhjkhk</td>
+      <td>hgasjdgja kj haJKHJH JK</td>
+    </tr>
+  </table>
+</div>
+<script>
+function showContent(clickedLink, divId)
+{
+	var contentDivs = document.getElementsByClassName("content");
+  	for (var i = 0; i < contentDivs.length; i++) 
+  	{
+    	(contentDivs[i].id == divId)? 
+        	contentDivs[i].classList.remove('hidden') : contentDivs[i].classList.add('hidden');            
+  	}
+    
+    links = document.getElementById('tabNav').getElementsByTagName('a');
+   
+    for (var j = 0; j < links.length; j++) 
+    {	
+    	(links[j] == clickedLink)? 
+        	links[j].classList.add('currentNavLink') :	links[j].classList.remove('currentNavLink');
+    }    
+}
+</script>
+</div>
+</body>
+</html>
 
 
 
@@ -262,7 +344,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Mar 25, 2019 08:20+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Mar 26, 2019 13:59+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
