@@ -216,8 +216,7 @@
       <path value="Composition.section"/>
       <sliceName value="eventOverview"/>
       <short value="Event Overview"/>
-      <definition
-        value="It is expected that section.text is populated from the Encounter Description element of the Encounter entry."/>
+      <definition value="Summary information concerning the event."/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -347,7 +346,7 @@
       <sliceName value="medications"/>
       <short value="Medications"/>
       <definition
-        value="Medicines that the patient is currently taking including self-prescribed, clinician prescribed and nonprescription medication."/>
+        value="Information about medicines that are relevant to the encounter. The medicines included do not constitute a full medications list, but are those medicines that have specifically changed as a result of the encounter, or those medicines directly relevant to the encounter."/>
       <min value="0"/>
       <max value="1"/>
       <constraint>
@@ -541,7 +540,7 @@
       <sliceName value="immunisations"/>
       <short value="Immunisations"/>
       <definition
-        value="Information about the immunisation history, i.e. administered vaccines, of a patient."/>
+        value="Information about vaccinations administered or reported to be administered during this encounter. This may include statements that a patient has not had a particular vaccine administered."/>
       <min value="0"/>
       <max value="1"/>
       <constraint>
