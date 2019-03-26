@@ -35,10 +35,6 @@
     <element id="Composition.meta">
       <path value="Composition.meta"/>
       <min value="1"/>
-    </element>
-    <element id="Composition.meta.profile">
-      <path value="Composition.meta.profile"/>
-      <min value="1"/>
       <constraint>
         <key value="inv-dh-cmp-01"/>
         <severity value="error"/>
@@ -48,6 +44,10 @@
           value="Composition.meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1').exists()"
         />
       </constraint>
+    </element>
+    <element id="Composition.meta.profile">
+      <path value="Composition.meta.profile"/>
+      <min value="1"/>
     </element>
     <element id="Composition.language">
       <path value="Composition.language"/>
