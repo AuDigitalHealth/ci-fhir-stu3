@@ -4,30 +4,29 @@
 {:toc}
 # {{ page.title }}
 
-## FHIR 
+## FHIR (Fast Healthcare Interoperability Resources)
 
-FHIR (Fast Healthcare Interoperability Resources) is a standard developed by Health Level Seven International (Hl7) for exchanging healthcare information electronically.
+FHIR is a standard developed by HL7. The standard describes data formats and elements, known as Resources, by which content is exchanged.
 
-FHIR supports four paradigms for exchange: the RESTful API (Application Programming Interface), messaging, documents, and services. 
+A FHIR resource may be supplied in one of the following formats: [XML](http://hl7.org/fhir/stu3/xml.html), [JSON](http://hl7.org/fhir/stu3/json.html) and [Turtle](http://hl7.org/fhir/stu3/rdf.html). FHIR supports four paradigms for exchange: the RESTful API (Application Programming Interface), messaging, documents, and services.
 
+This implementation guide describes FHIR resources built following the rules described in [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).
 
-The specification describes data formats and elements, known as [Resources](http://hl7.org/fhir/stu3/resourcelist.html). Content is exchanged as one or more resources. A FHIR resource may be supplied in one of the following formats: [XML](http://hl7.org/fhir/stu3/xml.html), [JSON](http://hl7.org/fhir/stu3/json.html) and [Turtle](http://hl7.org/fhir/stu3/rdf.html). This implementation guide describes FHIR resources built following the rules described in [FHIR, Release 3 (STU)[HL7FHIR3]](index.html#HL7FHIR3).
-
-The FHIR specification is evolving; the current FHIR specification is available on [http://hl7.org/fhir](http://hl7.org/fhir). A directory of past and current working versions, including [FHIR Release 4 (First Normative content)[HL7FHIR4]](index.html#HL7FHIR4) and the latest current build, is available on [Publication (Version) History [HL7FHIRDIR]](index.html#HL7FHIRDIR).
+The FHIR specification is evolving; the current FHIR specification is available at [http://hl7.org/fhir](http://hl7.org/fhir). A [Publication (Version) History](http://www.hl7.org/fhir/directory.cfml) of past and current working versions, including [FHIR Release 4 (First Normative content)[HL7FHIR4]](index.html#HL7FHIR4) is available.
 
 The following references are recommended to gain a better understanding of FHIR:
 * [FHIR, Release 3 (STU)[HL7FHIR3]](index.html#HL7FHIR3)
-* [FHIR Overview[HL7FHIR3]](index.html#HL7FHIR3)
+* [FHIR Overview](https://www.hl7.org/fhir/stu3/overview.html)
 * [HL7 International FHIR Wiki [HL7FHIR]](index.html#HL7FHIR)
 
  
 
 ## Profile / extension representation and structure
 
-Each profile or extension described by this implementation guide has a separate page that contains the normative definition of the profile or extension and informative content to support implementation.
+Each profile or extension (StructureDefinition) described by this implementation guide has a separate page that presents the normative definition of that profile or extension and informative content to support implementation.
 
 The content of each page is structured as follows:
-* Profile title followed by the profile status hyperlinked to FHIR [Maturity Model](http://build.fhir.org/versions.html#maturity)
+* Profile title followed by the profile status hyperlinked to FHIR [PublicationStatus](http://hl7.org/fhir/stu3/valueset-publication-status.html).
 * Usage scenarios includes a short description of the example or expected usage scenarios for that profile that are supported by this implementation guide.
 * Implementation guidance includes guidance specific to the usage scenarios supported by this implementation guide. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.
 * Examples include links to example resources that conform to the profile or extension and that support implementation by demonstrating one or more usage scenarios supported by this implementation guide.
@@ -45,7 +44,7 @@ The Formal Views of Profile Content contains:
 The fields used to present the Differential Table and the Snapshot Table in this implementation guide are described in [Logical table](http://hl7.org/fhir/stu3/formats.html#table).
 
 
-### Known issues with supporting and implementing FHIR
+## Known issues with supporting and implementing FHIR
 
 This section identifies issues with the FHIR standard or related tooling that may affect implementing the content of this guide or supporting the described usage scenarios. Solutions to these issues are being worked on and readers of this implementation guide are encouraged to actively participate in the FHIR community. 
 
@@ -131,7 +130,7 @@ The conformance verbs used in this implementation guide are defined in [FHIR Con
 The terminology binding rules are defined in [Controlling the use of Coded Values](http://hl7.org/fhir/stu3/terminologies.html#binding). Terminology is specified in this implementation guide, 
 in some cases binding an element to a value set or binding to a single fixed code. For guidance on coding see [Using Codes in Resources](http://hl7.org/fhir/stu3/terminologies.html).
 
-A value set binding, if present in this specification, will be specified in the "Description & Constraints" column of a profile as the title of the value set (hyperlinked to its definition) followed by identification of the binding strength (hyperlinked to its definition), e.g. [Health Summary Non-Clinical Empty Reason](https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1)([required](http://hl7.org/fhir/stu3/terminologies.html#code)).
+A value set binding, if present in this specification, will be specified in the "Description & Constraints" column of a profile as the title of the value set (hyperlinked to its definition) followed by identification of the binding strength (hyperlinked to its definition), e.g. [Health Summary Non-Clinical Empty Reason](https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1) ([required](http://hl7.org/fhir/stu3/terminologies.html#code)).
 
 
 ### Cardinality

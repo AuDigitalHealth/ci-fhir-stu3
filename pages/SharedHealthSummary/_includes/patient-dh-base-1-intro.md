@@ -1,4 +1,4 @@
-#### Base Patient *[[Draft](http://hl7.org/fhir/stu3/versions.html#maturity)]*
+#### Base Patient *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Usage scenarios
 The following are the usage scenarios expected:

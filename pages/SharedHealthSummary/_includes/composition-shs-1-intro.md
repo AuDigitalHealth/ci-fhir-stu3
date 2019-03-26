@@ -1,4 +1,4 @@
-#### Shared Health Summary *[[Draft](http://hl7.org/fhir/stu3/versions.html#maturity)]*
+#### Shared Health Summary *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Usage scenarios 
 

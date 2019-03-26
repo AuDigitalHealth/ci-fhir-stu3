@@ -10,14 +10,14 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [Shared Health Summary (SHS)](StructureDefinition-composition-shs-1.html) document.
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [Shared Health Summary (SHS)](StructureDefinition-composition-shs-1.html).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing the SHS document in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of SHS information between healthcare providers.
+The primary aim of this implementation guide is to support implementing SHS in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of SHS information between healthcare providers.
 
 This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
 
@@ -29,7 +29,7 @@ Reference has been made to International and Australian Standards, and to Standa
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
-This implementation guide is the basis for the corresponding [Shared Health Summary CDA implementation guide[DF2019c]](#DF2019c). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
+This implementation guide is the basis for the corresponding [Shared Health Summary CDA implementation guide [DH2019c]](#DH2019c). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
 This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SHS CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
@@ -63,16 +63,12 @@ This implementation guide may not considered to be complete enough or sufficient
 
 
 ## Intended audience
-This document is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
+This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
 This document and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 
 ## References
-
-
-|[<a name="DH2018d">DH2018d</a>]|Australian Digital Health Agency, 01 November 2018, Participant Model Specification, Version 1.0.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/participant-model-specification](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/participant-model-specification)|
 
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, Not yet published, Common - Clinical Document, Version 1.5.2.|
 ||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
@@ -85,9 +81,6 @@ This document and related artefacts are technical in nature and the audience is 
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7(http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)]|
-
-|[<a name="HL7FHIRDIR">HL7FHIRDIR</a>]| Health Level Seven, Inc., Publication (Version) History, accessed 10 March 2019|
-| |[http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml)|
 
 |[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019|
 | |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
