@@ -493,6 +493,79 @@
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331>;
          fhir:Reference.reference [ fhir:value "Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331" ]
        ]
+     ], [
+       fhir:index 35;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "SHS B" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999>;
+         fhir:Reference.reference [ fhir:value "Composition/composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999" ]
+       ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Joe Greatpatient" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Patient with birth date, birth time, and the associated accuracy extension." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7>;
+         fhir:Reference.reference [ fhir:value "Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+       ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-ty65cc78-60b0-41cb-83d4-32521d3b9fa2.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "No relevant medical history" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Assertion of no relevant medical history." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Observation/ty65cc78-60b0-41cb-83d4-32521d3b9fa2>;
+         fhir:Reference.reference [ fhir:value "Observation/ty65cc78-60b0-41cb-83d4-32521d3b9fa2" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Medication statement" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Taking Candesartan" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/yh783f71-7736-4d10-89f7-fa1845e53987>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/yh783f71-7736-4d10-89f7-fa1845e53987" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Immunization-hgi72daf-b5a6-4a05-9166-a4b7c23f08a1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Immunization for diphtheria + tetanus" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Immunization/hgi72daf-b5a6-4a05-9166-a4b7c23f08a1>;
+         fhir:Reference.reference [ fhir:value "Immunization/hgi72daf-b5a6-4a05-9166-a4b7c23f08a1" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "SHS B as bundle" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "FHIR Document of SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Bundle/bundle-gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555>;
+         fhir:Reference.reference [ fhir:value "Bundle/bundle-gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555" ]
+       ]
      ]
   ];
   fhir:ImplementationGuide.page [

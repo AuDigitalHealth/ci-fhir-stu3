@@ -485,6 +485,77 @@
           "sourceReference": {
             "reference": "Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331"
           }
+        },
+        {
+          "example": true,
+          "name": "SHS B",
+          "description": "SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds.",
+          "sourceReference": {
+            "reference": "Composition/composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html"
+            }
+          ],
+          "example": true,
+          "name": "Joe Greatpatient",
+          "description": "Patient with birth date, birth time, and the associated accuracy extension.",
+          "sourceReference": {
+            "reference": "Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Observation-ty65cc78-60b0-41cb-83d4-32521d3b9fa2.html"
+            }
+          ],
+          "example": true,
+          "name": "No relevant medical history",
+          "description": "Assertion of no relevant medical history.",
+          "sourceReference": {
+            "reference": "Observation/ty65cc78-60b0-41cb-83d4-32521d3b9fa2"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.html"
+            }
+          ],
+          "example": true,
+          "name": "Medication statement",
+          "description": "Taking Candesartan",
+          "sourceReference": {
+            "reference": "MedicationStatement/yh783f71-7736-4d10-89f7-fa1845e53987"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Immunization-hgi72daf-b5a6-4a05-9166-a4b7c23f08a1.html"
+            }
+          ],
+          "example": true,
+          "name": "Immunization for diphtheria + tetanus",
+          "sourceReference": {
+            "reference": "Immunization/hgi72daf-b5a6-4a05-9166-a4b7c23f08a1"
+          }
+        },
+        {
+          "example": true,
+          "name": "SHS B as bundle",
+          "description": "FHIR Document of SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds.",
+          "sourceReference": {
+            "reference": "Bundle/bundle-gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555"
+          }
         }
       ]
     }

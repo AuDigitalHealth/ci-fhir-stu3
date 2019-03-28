@@ -34,7 +34,6 @@
   <sch:pattern>
     <sch:title>f:PractitionerRole/f:identifier/f:type</sch:title>
     <sch:rule context="f:PractitionerRole/f:identifier/f:type">
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
       <sch:assert test="count(f:text) &gt;= 1">text: minimum cardinality of 'text' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

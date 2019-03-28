@@ -7,6 +7,14 @@
                 <td><a href="Patient-e6e84607-a0da-4ead-9ed6-5e064fea9fc4.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+           <tr>
+                <td><a href="Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html">Patient example 2</a></td>
+                <td>cc246543-a0da-4ead-9ed6-5e064fea9ff7</td>
+                <td><a href="Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.xml.html">XML</a></td>
+                <td><a href="Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.json.html">JSON</a></td>
+                <td><a href="Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
             <tr>
                 <td><a href="Composition-a0da969a-7956-439b-b390-8de071a2df7c.html">Shared Health Summary example 1 (contained)</a></td>
                 <td>a0da969a-7956-439b-b390-8de071a2df7c</td>

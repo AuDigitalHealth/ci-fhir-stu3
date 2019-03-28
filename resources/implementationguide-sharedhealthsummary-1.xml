@@ -37,8 +37,7 @@
         <resource>
             <example value="false"/>
             <name value="patient-dh-base-1"/>
-            <description
-                value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+            <description value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
             <sourceReference>
                 <reference value="StructureDefinition/patient-dh-base-1"/>
             </sourceReference>
@@ -53,8 +52,7 @@
         <resource>
             <example value="false"/>
             <name value="patient-ihi-1"/>
-            <description
-                value="The Agency Patient profile, as derived from the HL7 AU patient profile with a mandatory IHI."/>
+            <description value="The Agency Patient profile, as derived from the HL7 AU patient profile with a mandatory IHI."/>
             <sourceReference>
                 <reference value="StructureDefinition/patient-ihi-1"/>
             </sourceReference>
@@ -62,8 +60,7 @@
         <resource>
             <example value="false"/>
             <name value="relatedperson-dh-base-1"/>
-            <description
-                value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
+            <description value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
             <sourceReference>
                 <reference value="StructureDefinition/relatedperson-dh-base-1"/>
             </sourceReference>
@@ -71,8 +68,7 @@
         <resource>
             <example value="false"/>
             <name value="organization-dh-base-1"/>
-            <description
-                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
             <sourceReference>
                 <reference value="StructureDefinition/organization-dh-base-1"/>
             </sourceReference>
@@ -80,8 +76,7 @@
         <resource>
             <example value="false"/>
             <name value="organization-ident-1"/>
-            <description
-                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
             <sourceReference>
                 <reference value="StructureDefinition/organization-ident-1"/>
             </sourceReference>
@@ -95,8 +90,7 @@
         <resource>
             <example value="false"/>
             <name value="practitioner-ident-1"/>
-            <description
-                value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
+            <description value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
             <sourceReference>
                 <reference value="StructureDefinition/practitioner-ident-1"/>
             </sourceReference>
@@ -160,18 +154,18 @@
             <sourceReference>
                 <reference value="StructureDefinition/observation-norelevantfinding-1"/>
             </sourceReference>
-        </resource>   
-        
-            
+        </resource>
+
+
         <!-- Datatype profiles -->
-        
+
         <resource>
             <example value="false"/>
             <sourceReference>
                 <reference value="StructureDefinition/humanname-dh-base-1"/>
             </sourceReference>
         </resource>
-        
+
         <!--   Examples -->
         <resource>
             <example value="true"/>
@@ -224,8 +218,7 @@
         <resource>
             <example value="true"/>
             <name value="Patient with IHI and Medicare Number"/>
-            <description
-                value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
+            <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
             <sourceReference>
                 <reference value="Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4"/>
             </sourceReference>
@@ -306,13 +299,61 @@
         <resource>
             <example value="true"/>
             <name value="Composition with medication statements, allergy intollerance, conditions and procedures"/>
-            <description
-                value="Composition with medication statements, allergy intollerance, conditions and procedures"/>
+            <description value="Composition with medication statements, allergy intollerance, conditions and procedures"/>
             <sourceReference>
                 <reference value="Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331"/>
             </sourceReference>
         </resource>
-      </package>
+        <resource>
+            <example value="true"/>
+            <name value="SHS B"/>
+            <description
+                value="SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds."/>
+            <sourceReference>
+                <reference value="Composition/composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Joe Greatpatient"/>
+            <description value="Patient with birth date, birth time, and the associated accuracy extension."/>
+            <sourceReference>
+                <reference value="Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="No relevant medical history"/>
+            <description value="Assertion of no relevant medical history."/>
+            <sourceReference>
+                <reference value="Observation/ty65cc78-60b0-41cb-83d4-32521d3b9fa2"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication statement"/>
+            <description value="Taking Candesartan"/>
+            <sourceReference>
+                <reference value="MedicationStatement/yh783f71-7736-4d10-89f7-fa1845e53987"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Immunization for diphtheria + tetanus"/>
+            <sourceReference>
+                <reference value="Immunization/hgi72daf-b5a6-4a05-9166-a4b7c23f08a1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="SHS B as bundle"/>
+            <description
+                value="FHIR Document of SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds."/>
+            <sourceReference>
+                <reference value="Bundle/bundle-gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555"/>
+            </sourceReference>
+        </resource>
+    </package>
     <page>
         <source value="index.html"/>
         <title value="Australian Digital Health Agency Shared Health Summary FHIR Implementation Guide"/>

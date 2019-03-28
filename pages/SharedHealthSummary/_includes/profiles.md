@@ -9,7 +9,7 @@
    <div style="border-right-style: none;" id="tabs">
             <ul>
                 <li><a href="#tabs-1">Categorized</a></li>
-                <li><a href="#tabs-2">Alphabetical</a></li>
+                <li><a href="#tabs-2">Based on</a></li>
             </ul>
             <div id="tabs-1">
                 <table width="100%">
@@ -22,22 +22,12 @@
                         <td class="frm-category">Other</td>
                     </tr> 
                     <tr class="frm-contents">
-                        <td class="frm-set">
-                            <ul class="frm-set">
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>    
-                                </ul>
-                            </td>
+                        <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-set">
                                 <ul>
                                     <li><a href="StructureDefinition-composition-shs-1.html">Composition (Shared Health Summary)</a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>    
                                 </ul>
                             </td>
                         <td class="frm-null"/>
@@ -62,8 +52,7 @@
                                 <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
                                 <li><a href="StructureDefinition-relatedperson-dh-base-1.html">Base RelatedPerson</a></li>
                             </ul>
-                        </ul>
-                        </td>
+                       </td>
                        <td class="frm-set">
                             <ul class="frm-set">
                                 <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
@@ -82,17 +71,25 @@
                         <td class="frm-category">Request &amp; Response</td>
                     </tr> 
                     <tr class="frm-contents">
-                        <td class="frm-set"><ul class="frm-set">
+                        <td class="frm-set">
+                          <ul class="frm-set">
                             <li><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></li>
                             <li><a href="StructureDefinition-condition-summary-1.html">Condition (Summary Statement of Condition)</a></li>
                             <li><a href="StructureDefinition-procedure-summary-1.html">Procedure (Summary Statement of Known Procedure)</a></li>
-                       </ul></td>
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
-                        <td class="frm-set"><ul class="frm-set">
+                         </ul>
+                       </td>
+                      <td class="frm-set">
+                         <ul class="frm-set">
+                            <li><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></li>
+                          </ul>
+                       </td>
+                      <td class="frm-set">
+                        <ul class="frm-set">
                             <li><a href="StructureDefinition-medicationstatement-summary-1.html">MedicationStatement (Summary Statement of Known Medicine)</a></li>
                             <li><a href="StructureDefinition-immunization-summary-administration-1.html">Immunization (Summary Statement of Administered Vaccine)</a></li>
-                        </ul></td>
+                        </ul>
+                        </td>
+                        <td class="frm-null"/>
                         <td class="frm-null"/>
                     </tr> 
                     <tr class="frm-break"><td colspan="6"/></tr>
@@ -120,11 +117,11 @@
                         <td class="frm-category">Testing</td>
                     </tr> 
                     <tr class="frm-contents">
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
+                        <td class="frm-null"></td>
+                        <td class="frm-null"></td>
+                        <td class="frm-null"></td>
+                        <td class="frm-null"></td>
+                        <td class="frm-null"></td>
                     </tr> 
                     <tr class="frm-break"><td colspan="6"/></tr>
                 </table>
@@ -139,10 +136,15 @@
       <th>Base 1</th>
       <th>Base 2</th>
     </tr>
+       <tr>
+      <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
+      <td></td>
+      <td></td>
+    </tr>
     <tr>
       <td><a href="StructureDefinition-composition-shs-1.html">Composition (Shared Health Summary)</a></td>
-      <td>dhjk kljklsa kljads k</td>
-      <td>gkh jjjk </td>
+      <td></td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>

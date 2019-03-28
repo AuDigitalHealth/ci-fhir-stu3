@@ -1,0 +1,37 @@
+<Immunization xmlns="http://hl7.org/fhir">
+	<id value="hgi72daf-b5a6-4a05-9166-a4b7c23f08a1"/>
+	<meta>
+		<profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p><b>Immunization statement</b></p>
+			<p><b>patient</b>: <a href="Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html">id: National unique individual identifier =
+					8003608666701594; Joe Greatpatient ; gender: male; birthDate: 23/08/1956</a></p>
+			<p><b>status</b>: completed</p>
+			<p><b>notGiven</b>: false</p>
+			<p><b>vaccineCode</b>: diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe</p>
+			<p><b>date</b>: 15/04/2017</p>
+			<p><b>primarySource</b>: true</p>
+		</div>
+	</text>
+	<!--<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.25.129844986816735724544008039955538526131"/>
+	</identifier>-->
+	<status value="completed"/>
+	<notGiven value="false"/>
+	<vaccineCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="837281000168100"/>
+			<display value="diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe"/>
+		</coding>
+	</vaccineCode>
+	<patient>
+		<reference value="Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7"/>
+	</patient>
+	<date value="2017-04-15"/>
+	<primarySource value="true"/>
+</Immunization>

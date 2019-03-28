@@ -1,0 +1,36 @@
+{
+  "resourceType": "Observation",
+  "id": "ty65cc78-60b0-41cb-83d4-32521d3b9fa2",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p><b>Observation</b></p>\n            <p><b>subject</b>: <a href=\"Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html\">id: National unique individual identifier =\n                    8003608666701594; Joe Greatpatient ; gender: male; birthDate: 23/08/1956</a></p>\n            <p><b>status</b>: final</p>\n            <p><b>code</b>: Assertion</p>\n            <p><b>value</b>: No relevant medical history</p>\n            <p><b>effective</b>: 21/09/2018</p>\n        </div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v3/ActCode",
+        "code": "ASSERTION",
+        "display": "Assertion"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7"
+  },
+  "effectiveDateTime": "2018-09-21",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1224831000168103",
+        "display": "No relevant medical history"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@
   "title": "Summary Statement of Administered Vaccine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-03-27T12:17:52+10:00",
+  "date": "2019-03-28T12:24:56+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -62,6 +62,12 @@
     "element": [
       {
         "id": "Immunization",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
         "path": "Immunization",
         "short": "An immunisation statement in an Australian healthcare context",
         "definition": "Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed.",
@@ -3117,7 +3123,7 @@
         "path": "Immunization.reaction",
         "short": "Details of a reaction that follows immunization",
         "definition": "Categorical data indicating that an adverse event is associated in time to an immunization.",
-        "comment": "A reaction may be an indication of an allergy or intolerance and, if this is determined to be the case,  it should be recorded as a new [AllergyIntolerance](https://build.fhir.org/ig/hl7au/au-fhir-base/allergyintolerance.html) resource instance as most systems will not query against  past Immunization.reaction elements.",
+        "comment": "A reaction may be an indication of an allergy or intolerance and, if this is determined to be the case,  it should be recorded as a new [AllergyIntolerance](http://hl7.org/fhir/STU3/allergyintolerance.html) resource instance as most systems will not query against  past Immunization.reaction elements.",
         "min": 0,
         "max": "*",
         "base": {
