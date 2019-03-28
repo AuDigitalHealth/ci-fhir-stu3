@@ -1,41 +1,5 @@
 <html>
 <title>DB Style</title>
-<style>
-#DbTbl {font-family:Calibri; color:#777;}
-#tabNav {border-bottom:5px solid #69f;}
-#tabNav ul {margin:0; padding:0;}
-#tabNav ul li {list-style:none; display:inline-block;margin:0; padding:0;}
-#tabNav a {	display:inline-block;
-			margin:0; 
-            padding:10px;
-            text-decoration:none;
-            border:1px solid #ccc; 
-            border-bottom:none; 
-            border-top-left-radius:15px; 
-            background-color:#009;
-            color:white; 
-            foint-weight:bold; 
-            font-size:1.2em;
-            transition-duration: 0.5s;}            
-#tabNav a:hover {background-color:#36e;}
-#tabNav a.currentNavLink {background-color:#69f; cursor:default;}
-.hidden {display:none;}
-
-.verticalText {writing-mode: vertical-rl;font-size: 1.1em;}
-
-.contntTbl { border:none;
-  				border-collapse: collapse;
-                width: 100%;}
-.contntTbl td, .contntTbl th, th.rowTitle  {	border:1px solid #ccc; 
-									border-style: solid none; 
-                                    padding:10px 20px 10px 5px;}
-th.rowTitle { background-color:#eee;} 
-.contntTbl a {text-decoration: none; color:#69f;}
-.contntTbl a:hover {text-decoration: underline; color:#009;}
-.contntTbl ul {margin:0;}
-.contntTbl ul li {margin:5px;}
-
-</style>
 <body>
 <div class="col-12">
 
@@ -182,68 +146,68 @@ th.rowTitle { background-color:#eee;}
     </tr>
     <tr>
       <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>
      <tr>
       <td><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-patient-ihi-1.html">Patient (Patient with Mandatory IHI)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>
         <tr>
       <td><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>
         <tr>
       <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-relatedperson-dh-base-1.html">Base RelatedPerson</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr> 
    <tr>
       <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr> 
    <tr>
       <td><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>    
     <tr>
       <td><a href="StructureDefinition-condition-summary-1.html">Condition (Summary Statement of Condition)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>   
      <tr>
       <td><a href="StructureDefinition-procedure-summary-1.html">Procedure (Summary Statement of Known Procedure)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>     
      <tr>
       <td><a href="StructureDefinition-medicationstatement-summary-1.html">MedicationStatement (Summary Statement of Known Medicine)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>  
          <tr>
       <td><a href="StructureDefinition-immunization-summary-administration-1.html">Immunization (Summary Statement of Administered Vaccine)</a></td>
-      <td>sjahkh in asdhjkhk</td>
-      <td>hgasjdgja kj haJKHJH JK</td>
+      <td></td>
+      <td></td>
     </tr>  
 
   
