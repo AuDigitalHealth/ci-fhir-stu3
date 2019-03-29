@@ -279,4 +279,6 @@ $( '#tabs' ).tabs({
          }
      });
 </script>
+</div>
+</div>
 </html>
