@@ -1,5 +1,5 @@
 
-<table class="list">
+<table class="list" width="100%">
             <tr>
                 <td><a href="Composition-a0da969a-7956-439b-b390-8de071a2df7c.html">Shared Health Summary example 1 (contained)</a></td>
                 <td>a0da969a-7956-439b-b390-8de071a2df7c</td>

@@ -1,4 +1,4 @@
-<table class="list">
+<table class="list" width="100%">
             <tr>
                 <td><a href="Condition-b021320c-bc5e-4ae8-b9fc-1ed2d876e889.html">Condition example 1</a></td>
                 <td>b021320c-bc5e-4ae8-b9fc-1ed2d876e889</td>

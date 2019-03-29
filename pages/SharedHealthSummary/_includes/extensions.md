@@ -2,7 +2,7 @@
 
 The following extensions form this implementation guide:
 
-<table class="list">
+<table class="list" width="100%">
   <tr >
     <th>Extension</th>
     <th>id</th>

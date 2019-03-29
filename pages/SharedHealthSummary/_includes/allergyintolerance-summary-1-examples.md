@@ -1,6 +1,5 @@
-
-<table class="list">
-            <tr>
+<table class="list" width="100%">
+<tr>
                 <td><a href="Composition-a0da969a-7956-439b-b390-8de071a2df7c.html">AllergyIntolerance example 1</a></td>
                 <td>a5e03840-1be4-43e0-acd2-c9e288adc4f9</td>
                 <td><a href="AllergyIntolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9.xml.html">XML</a></td>

@@ -1,4 +1,4 @@
-<table class="list">
+<table class="list" width="100%">
             <tr>
                 <td><a href="Immunization-hgi72daf-b5a6-4a05-9166-a4b7c23f08a1.html">Immunization example 1</a></td>
                 <td>hgi72daf-b5a6-4a05-9166-a4b7c23f08a1</td>

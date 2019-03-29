@@ -11,7 +11,7 @@
   "title": "List of Medicine Changes from an Event",
   "status": "draft",
   "experimental": true,
-  "date": "2019-03-27T07:07:32+10:00",
+  "date": "2019-03-29T13:53:49+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -297,7 +297,7 @@
         "id": "List.meta.profile",
         "path": "List.meta.profile",
         "short": "Profiles this resource claims to conform to",
-        "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
+        "definition": "A list of profiles (references to [StructureDefinition](https://build.fhir.org/ig/hl7au/au-fhir-base/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](https://build.fhir.org/ig/hl7au/au-fhir-base/).",
         "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
         "min": 1,
         "max": "*",
@@ -550,7 +550,7 @@
         "short": "Practitioner role that defined the list contents (aka Author)",
         "definition": "The entity (practitioner role) responsible for deciding what the contents of the list were. Where the list was created by a human, this is the same as the author of the list.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "DomainResource.extension",
           "min": 0,

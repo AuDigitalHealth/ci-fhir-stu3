@@ -1,4 +1,4 @@
-<table class="list">
+<table class="list" width="100%">
             <tr>
                 <td><a href="PractitionerRole-45cad6ac-e9a3-418a-8480-4e64132849f2.html">PractitionerRole example 1</a></td>
                 <td>45cad6ac-e9a3-418a-8480-4e64132849f2</td>
