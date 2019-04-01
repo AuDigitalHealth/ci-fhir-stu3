@@ -53,7 +53,7 @@
                                 <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
                                 <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>
                                 <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
-                                <li><a href="StructureDefinition-relatedperson-dh-base-1.html">Base RelatedPerson</a></li>
+                                <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
                             </ul>
                        </td>
                        <td class="frm-set">
@@ -148,12 +148,12 @@
     </tr>
     <tr>
         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html">AU Base Dosage</a></td>
-        <td/>
+         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
   </tr>
     <tr>
         <td><a href="StructureDefinition-humanname-dh-base-1.html">Base HumanName</a></td>
-        <td/>
+        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
   </tr>
     <tr>
@@ -192,7 +192,7 @@
              <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-relatedperson-dh-base-1.html">Base RelatedPerson</a></td>
+      <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
     </tr> 
@@ -213,7 +213,7 @@
     </tr>   
      <tr>
       <td><a href="StructureDefinition-procedure-summary-1.html">Procedure (Summary Statement of Known Procedure)</a></td>
-      <td/>
+      <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
       <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
     </tr>     
      <tr>
