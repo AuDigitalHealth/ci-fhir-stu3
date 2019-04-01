@@ -22,7 +22,7 @@ The following extensions form this implementation guide:
         <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
     </tr>
     <tr>
-        <td><a href="http://hl7.org/fhir/extension-patient-birthtime.html">birthTime</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/extension-patient-birthtime.html">birthTime</a></td>
         <td>patient-birthTime</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a></td>
         <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient.birthDate</a></td>
@@ -46,30 +46,30 @@ The following extensions form this implementation guide:
       <td><a href="http://hl7.org/fhir/stu3/composition.html">Composition</a></td>
   </tr>
   <tr>
-    <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td>
-    <td>date-accuracy-indicator</td>
-    <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
-    <td><a href="http://hl7.org/fhir/stu3/datatypes.html#date">date</a>, <a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a> </td>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td>
+     <td>date-accuracy-indicator</td>
+     <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#date">date</a>, <a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a> </td>
   </tr>
    <tr>
          <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-list-source-role.html">List Authoring PractitionerRole</a></td>
         <td>list-source-role</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
         <td><a href="http://hl7.org/fhir/stu3/list.html">LIst</a></td>
-    </tr>
-    <tr>
+   </tr>
+   <tr>
         <td><a href="http://hl7.org/fhir/STU3/extension-patient-mothersmaidenname.html">Mother's Maiden Name</a></td>
         <td>patient-mothersMaidenName</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
         <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
   </tr>
-    <tr>
+     <tr>
         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-recorder.html">Recorder</a></td>
         <td>recorder</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
       <td><a href="http://hl7.org/fhir/stu3/condition.html">Condition</a></td>
   </tr>
-    <tr>
+  <tr>
       <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-recorder-related-person.html">Recorder as a RelatedPerson</a></td>
       <td>recorder-related-person</td>
       <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
