@@ -9,7 +9,3 @@ The following are the usage scenarios expected:
 None
 
 
-#### Examples
-This section provides examples that conform to the requirements specified within this implementation guide.
-
-* TBD

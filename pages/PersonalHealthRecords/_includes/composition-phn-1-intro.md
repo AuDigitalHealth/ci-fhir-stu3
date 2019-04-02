@@ -10,8 +10,3 @@ The following are the usage scenarios expected:
     * shall not qualify or negate content described by this profile as must support
     * shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
 
-##### **Examples**
-
-[Personal Health Notes - diabetes note](Composition-composition-phn-example1.html)
-
-[Personal Health Notes - exercise note](Composition-composition-phn-example2.html)
