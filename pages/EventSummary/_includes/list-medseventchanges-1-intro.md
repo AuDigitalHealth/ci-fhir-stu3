@@ -1,4 +1,4 @@
-## List of Medicine Changes from an Event
+## List of Medicine Changes from an Event *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 The purpose of this profile is to provide a list of medicines that have specifically changed as a result of an event or those medicines directly relevant to an event. The list is intended to be suited to handling and exchange as a referenced entry in a Composition.
 

@@ -1,4 +1,4 @@
-### Event Summary
+### Event Summary *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 
 #### Usage Scenarios 
@@ -82,12 +82,3 @@ The following are the usage scenarios expected:
 
 * Diagnostic Investigations section is in progress. It will be updated to reference appropriate Agency profiles in the future.
    
-<!--#### Examples
-This section provides examples that conform to the requirements specified within this implementation guide.
-
-These examples have been created to demonstrate multiple scenarios, e.g. a composition with empty sections and a composition without empty sections, a composition with contained (inline) resources, etc. 
-
-* [Composition ES example 1 (with contained resources)]
-* [Composition ES example 2 (with contained resources)]
-* [Composition ES example 3 (with contained resources)]
--->
