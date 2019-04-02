@@ -58,6 +58,7 @@
                                 <li><a href="StructureDefinition-patient-ihi-1.html">Patient (Patient with Mandatory IHI)</a></li>
                                 <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
                                 <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
+                                <li><a href="StructureDefinition-relatedperson-ihi-1.html">RelatedPerson (Related Person with Mandatory IHI)</a></li>
                             </ul>
                        </td>
                        <td class="frm-set">
@@ -200,6 +201,11 @@
     </tr>
     <tr>
       <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
+       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
+       <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
+    </tr> 
+     <tr>
+      <td><a href="StructureDefinition-relatedperson-ihi-1.html">RelatedPerson (Related Person with Mandatory IHI)</a></td>
        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
     </tr> 
