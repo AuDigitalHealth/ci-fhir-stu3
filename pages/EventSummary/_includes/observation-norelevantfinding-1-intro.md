@@ -1,4 +1,4 @@
-### Assertion of No Relevant Finding
+### Assertion of No Relevant Finding *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 The following are the usage scenarios expected:
