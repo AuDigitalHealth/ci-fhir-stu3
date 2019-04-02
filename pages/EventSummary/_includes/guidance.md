@@ -77,7 +77,7 @@ This section lists known issues with authoring and rendering content in this imp
     </td>
     <td>
         <p>gForge Change Request #17401</p>
-        <p><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id;=17401">Allow ig publisher to render documents as documents</a></p>
+        <p><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=17401">Allow ig publisher to render documents as documents</a></p>
     </td>
   </tr>
   <tr>
