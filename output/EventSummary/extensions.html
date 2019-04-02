@@ -124,6 +124,81 @@
 
 <p>The following extensions form this implementation guide:</p>
 
+<table class="list" width="100%">
+    <tr>
+        <th>Extension</th>
+        <th>id</th>
+        <th>Type</th>
+        <th>Context</th>
+    </tr>
+    <tr>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html">Australian Indigeneous Status</a></td>
+        <td>indigenous-status</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
+    </tr>
+    <tr>
+        <td><a href="http://hl7.org/fhir/STU3/extension-birthplace.html">Birth Place</a></td>
+        <td>birthPlace</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Address">Address</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
+    </tr>
+    <tr>
+        <td><a href="http://hl7.org/fhir/stu3/extension-patient-birthtime.html">birthTime</a></td>
+        <td>patient-birthTime</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient.birthDate</a></td>
+    </tr>
+    <tr>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-change-description.html">Change Description</a></td>
+        <td>change-description</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/list.html">List.entry</a></td>
+  </tr>
+  <tr>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-closing-the-gap-registration.html">Closing the Gap Registration</a></td>
+        <td>closing-the-gap-registration</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#boolean">boolean</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
+    </tr>
+  <tr>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-composition-author-role.html">Authoring Practitioner Role</a></td>
+        <td>composition-author-role</td>
+        <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
+      <td><a href="http://hl7.org/fhir/stu3/composition.html">Composition</a></td>
+  </tr>
+  <tr>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td>
+     <td>date-accuracy-indicator</td>
+     <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#date">date</a>, <a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a> </td>
+  </tr>
+   <tr>
+         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-list-source-role.html">List Authoring PractitionerRole</a></td>
+        <td>list-source-role</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/list.html">LIst</a></td>
+   </tr>
+   <tr>
+        <td><a href="http://hl7.org/fhir/STU3/extension-patient-mothersmaidenname.html">Mother's Maiden Name</a></td>
+        <td>patient-mothersMaidenName</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
+  </tr>
+     <tr>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-recorder.html">Recorder</a></td>
+        <td>recorder</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+      <td><a href="http://hl7.org/fhir/stu3/condition.html">Condition</a></td>
+  </tr>
+  <tr>
+      <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-recorder-related-person.html">Recorder as a RelatedPerson</a></td>
+      <td>recorder-related-person</td>
+      <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">AllergyIntolerance</a></td>
+  </tr>
+ </table>
+
 
 
 
@@ -162,7 +237,11 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
+<<<<<<< HEAD
             <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 2, 2019 10:34+1000. |
+=======
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 2, 2019 13:27+1000. |
+>>>>>>> ea4e242ea887300e30003d8ba2c6bf6eeea2155e
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

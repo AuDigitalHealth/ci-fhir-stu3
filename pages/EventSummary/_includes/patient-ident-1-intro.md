@@ -1,4 +1,4 @@
-### Patient with Mandatory Identifier
+### Patient with Mandatory Identifier *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 The following are the usage scenarios expected:
@@ -15,6 +15,3 @@ The following are the usage scenarios expected:
 
 
 
-#### Examples
-This section provides examples that conform to the requirements specified within this implementation guide.
-* TBD
