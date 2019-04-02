@@ -57,11 +57,13 @@
                                             </td>
                                             <td class="frm-set">
                                                 <ul class="frm-set">
+                                                    <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
                                                     <li><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></li>
                                                 </ul>
                                             </td>
                                             <td class="frm-null"/>
-                                            <td class="frm-set">          
+                                            <td class="frm-set">  
+                                                 <li><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></li>        
                                                 <li><a href="StructureDefinition-list-medseventchanges-1.html">List (List of Medicine Changes from an Event)</a></li>
                                             </td>
                                             <td class="frm-null"/>
@@ -143,29 +145,54 @@
                                         <th>FHIR base resource</th>
                                     </tr>
                                     <tr>
-                                        <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
-                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html">AU Base Dosage</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="StructureDefinition-humanname-dh-base-1.html">Base HumanName</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
-                                    </tr>
+                                        <td><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></td>
+                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">AllergyIntolerance </a></td>
+                                    </tr>  
                                     <tr>
                                         <td><a href="StructureDefinition-composition-es-1.html">Composition (Event Summary)</a></td>
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
                                         <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
                                     </tr>
+                                   <tr>
+                                        <td><a href="StructureDefinition-condition-summary-1.html">Condition (Summary Statement of Condition)</a></td>
+                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html">AU Base Condition</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td>
+                                    </tr> 
+                                    <tr>
+                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html">Dosage (AU Base Dosage)</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></td>
+                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html">AU Base Encounter</a></td>
+                                        <td><a href="http://hl7.org/fhir/stu3/encounter.html">Encounter</a></td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
+                                    </tr> 
                                     <tr>
                                         <td><a href="StructureDefinition-list-medseventchanges-1.html">List (List of Medicine Changes from an Event)</a></td>
                                         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medlist.html">AU Medicine List</a></td>
                                         <td><a href="http://hl7.org/fhir/stu3/list.html">List</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
+                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
+                                    </tr>
+                                       <tr>
+                                        <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
+                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
+                                    </tr> 
+                                    <tr>
+                                        <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
+                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
                                     </tr>
                                     <tr>
                                         <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
@@ -197,21 +224,9 @@
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
                                         <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
                                     </tr> 
-                                    <tr>
-                                        <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
-                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
-                                    </tr> 
-                                    <tr>
-                                        <td><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></td>
-                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">AllergyIntolerance </a></td>
-                                    </tr>    
-                                    <tr>
-                                        <td><a href="StructureDefinition-condition-summary-1.html">Condition (Summary Statement of Condition)</a></td>
-                                        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html">AU Base Condition</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td>
-                                    </tr>   
+ 
+  
+  
                                     <tr>
                                         <td><a href="StructureDefinition-procedure-summary-1.html">Procedure (Summary Statement of Known Procedure)</a></td>
                                         <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
