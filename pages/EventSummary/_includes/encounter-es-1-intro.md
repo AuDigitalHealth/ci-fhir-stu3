@@ -1,4 +1,4 @@
-## **Summary of an Encounter for an Event**
+## **Summary of an Encounter for an Event** *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 The purpose of this profile is to provide a summary of an encounter, with a narrative description of the encounter, for an event between a patient and a healthcare provider. The description may capture text about the encounter that is not captured in other fields and include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event.
 

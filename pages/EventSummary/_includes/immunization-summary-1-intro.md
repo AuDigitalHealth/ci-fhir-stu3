@@ -1,4 +1,4 @@
-## Summary Statement of Vaccine
+## Summary Statement of Vaccine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 The purpose of this profile is to provide a summary statement for an administration or non-administration of a vaccine. It is intentional that detailed information has not been included; this is intended to be a short summary.
 

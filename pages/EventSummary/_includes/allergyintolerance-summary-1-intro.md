@@ -2,7 +2,7 @@
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 * Do not remove this line (it will not be displayed)
 {:toc}
-### Summary Statement of Allergy or Intolerance
+### Summary Statement of Allergy or Intolerance *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 
