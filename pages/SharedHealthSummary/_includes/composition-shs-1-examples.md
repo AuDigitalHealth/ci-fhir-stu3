@@ -33,6 +33,14 @@
                 <td></td>
            </tr>
            <tr>
+                <td><a href="Composition-e-f1412590-54f5-11e9-b475-0800200c9a66.html">Shared Health Summary example 2 (referenced)</a></td>
+                <td>e-f1412590-54f5-11e9-b475-0800200c9a66</td>
+                <td><a href="Composition-e-f1412590-54f5-11e9-b475-0800200c9a66.xml.html">XML</a></td>
+                <td><a href="Composition-e-f1412590-54f5-11e9-b475-0800200c9a66.json.html">JSON</a></td>
+                <td><a href="Composition-e-f1412590-54f5-11e9-b475-0800200c9a66.ttl.html">Turtle</a></td>
+                <td></td>
+           </tr>
+           <tr>
                 <td><a href="Composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999.html">Shared Health Summary example 4 (referenced)</a></td>
                 <td>ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999</td>
                 <td><a href="Composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999.xml.html">XML</a></td>

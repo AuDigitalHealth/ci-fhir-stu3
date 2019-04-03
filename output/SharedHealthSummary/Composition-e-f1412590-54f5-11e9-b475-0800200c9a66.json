@@ -1,0 +1,154 @@
+{
+  "resourceType": "Composition",
+  "id": "e-f1412590-54f5-11e9-b475-0800200c9a66",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1"
+    ]
+  },
+  "language": "en-AU",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n      \n      <h1>Shared Health Summary</h1>\n      \n      <h2>Consumer details</h2>\n      <table>\n        <tbody>\n          <tr>\n            <th>Name</th>\n            <td>Adam A. Everyman</td>\n          </tr>\n          <tr>\n            <th>Identifier</th>\n            <td>IHI: 8003608666701594</td>\n          </tr>\n          <tr>\n            <th>Gender</th>\n            <td>Male</td>\n          </tr>\n        </tbody>\n      </table>\n      \n      <h2>Author details</h2>\n      <table>\n        <tbody>\n          <tr>\n            <th>Name</th>\n            <td>Dr. Peter Chalmers</td>\n          </tr>\n          <tr>\n            <th>Identifier</th>\n            <td>HPI-I: 8003610000000000</td>\n          </tr>          \n        </tbody>\n      </table>\n      \n      <h2>Document details</h2>\n      <table>\n        <tbody>\n          <tr>\n            <th>Document ID</th>\n            <td>bd06e981-ba86-4020-ba59-cd89f80e8712</td>\n          </tr>\n          <tr>\n            <th>Language</th>\n            <td>en-AU</td>\n          </tr>\n          <tr>\n            <th>Status</th>\n            <td>Final</td>\n          </tr>\n          <tr>\n            <th>Created</th>\n            <td>21 June 2017, 09:00:15</td>\n          </tr>\n          <tr>\n            <th>Attester</th>\n            <td>HPI-I: 8003610000000000</td>\n          </tr>\n          <tr>\n            <th>Custodian</th>\n            <td>PAI-O: 8003640001000036</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org.au/fhir/StructureDefinition/composition-author-role",
+      "valueReference": {
+        "reference": "practitionerrole/f61db690-0ba4-4219-acd4-021ecc6a36fd"
+      }
+    }
+  ],
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "60591-5",
+        "display": "Patient Summary"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "patient/841a56de-92d7-47fd-bb27-bad8efb371e4"
+  },
+  "date": "2017-06-21T09:00:15+10:00",
+  "author": [
+    {
+      "reference": "practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf"
+    }
+  ],
+  "title": "Shared Health Summary",
+  "attester": [
+    {
+      "mode": [
+        "legal"
+      ],
+      "time": "2017-06-21T09:00:15+10:00",
+      "party": {
+        "reference": "practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf"
+      }
+    }
+  ],
+  "custodian": {
+    "reference": "organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4"
+  },
+  "section": [
+    {
+      "title": "Current Medications",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "101.32009",
+            "display": "Current Medicine"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>None</p>\n      </div>"
+      },
+      "entry": [
+        {
+          "reference": "observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2"
+        }
+      ]
+    },
+    {
+      "title": "Allergies and Adverse Reactions",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48765-2",
+            "display": "Allergies andor adverse reactions"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table>\n          <thead>\n            <tr>\n              <th>Agent</th>\n              <th>Reaction Description</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>Penicillin</td>\n              <td>Rash; Nausea and vomiting</td>\n            </tr>\n            <tr>\n              <td>Nuts</td>\n              <td>Breathing problems</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>"
+      },
+      "entry": [
+        {
+          "reference": "allergyintolerance/c5c80cde-70d0-4644-9d55-ae5574fcd8ea"
+        },
+        {
+          "reference": "allergyintolerance/d977ab88-ecbe-49c1-99b7-9b1afbb65563"
+        }
+      ]
+    },
+    {
+      "title": "Medical History",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "101.16117"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unknown</div>"
+      },
+      "emptyReason": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/list-empty-reason",
+            "code": "unavailable",
+            "display": "Unavailable"
+          }
+        ],
+        "text": "Unknown"
+      }
+    },
+    {
+      "title": "Immunisations",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11369-6"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table border=\"5\">\n          <thead>\n            <tr>\n              <th>Vaccine</th>\n              <th>Date Administered</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>\n                <b>Engerix-B Adult</b>\n              </td>\n              <td>09/10/2017</td>\n              <td/>\n            </tr> \n            <tr>\n              <td>\n                <b>Meningitec</b>\n              </td>\n              <td>10/09/2017</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>Fluvax 2015</td>\n              <td>03/10/2015</td>\n              <td/>\n            </tr>\n          </tbody>\n        </table></div>"
+      },
+      "entry": [
+        {
+          "reference": "immunization/7e7dbbfe-5afb-4938-86eb-27060b5daba7"
+        },
+        {
+          "reference": "immunization/d4b8094b-435e-4b43-b38b-f38328bddda3"
+        },
+        {
+          "reference": "immunization/8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06"
+        }
+      ]
+    }
+  ]
+}
