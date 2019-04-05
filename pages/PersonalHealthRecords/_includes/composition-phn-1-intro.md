@@ -1,4 +1,4 @@
-This profile defines a representation of a Personal Health Notes document for a patient in an Australian healthcare context. 
+This profile defines a representation of a Personal Health Notes document for a patient in an Australian healthcare context. *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### **Usage Scenarios**
 The following are the usage scenarios expected:
