@@ -1,0 +1,590 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Bundle/205fcc4b-baf2-4683-a48f-b087a5937230> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "205fcc4b-baf2-4683-a48f-b087a5937230"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2018-09-21T09:01:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:e63acc0c-262b-4a51-bbec-477adf351f83" ]
+  ];
+  fhir:Bundle.type [ fhir:value "document"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999" ];
+     fhir:Bundle.entry.resource <urn:uuid:ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ];
+     fhir:Bundle.entry.resource <urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2" ];
+     fhir:Bundle.entry.resource <urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1" ];
+     fhir:Bundle.entry.resource <urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c" ];
+     fhir:Bundle.entry.resource <urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306" ];
+     fhir:Bundle.entry.resource <urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:yh783f71-7736-4d10-89f7-fa1845e53987" ];
+     fhir:Bundle.entry.resource <urn:uuid:yh783f71-7736-4d10-89f7-fa1845e53987>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:ty65cc78-60b0-41cb-83d4-32521d3b9fa2" ];
+     fhir:Bundle.entry.resource <urn:uuid:ty65cc78-60b0-41cb-83d4-32521d3b9fa2>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:hgi72daf-b5a6-4a05-9166-a4b7c23f08a1" ];
+     fhir:Bundle.entry.resource <urn:uuid:hgi72daf-b5a6-4a05-9166-a4b7c23f08a1>
+  ] .
+
+<urn:uuid:ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999> a fhir:Composition;
+  fhir:Resource.id [ fhir:value "ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p>\n                            <b>Composition</b>\n                        </p>\n                        <p><b>status</b>: final</p>\n                        <p><b>type</b>: Patient summary Document</p>\n                        <p><b>date</b>: 21/09/2018 9:00:00 AM</p>\n                        <p><b>author</b>: HPI-I = 8003610000000000; Barry Helpman; bhelpman@example.devonportgp.com.au (WORK)</p>\n                        <p><b>author role</b>: Medicare Provider Number: 5544887B, HPI-I = 8003610000000000; Barry Helpman; Devonport Family Medicine\n                            Clinic; General Practitioner</p>\n                        <p><b>title</b>: Shared Health Summary</p>\n                        <p><b>attester</b>: Mode: legal; Time: 21/09/2018 9:00:00 AM; Party: HPI-I = 8003610000000000; Barry Helpman</p>\n                        <p><b>custodian</b>: ABN = 51824754455; Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543\n                            5557(WORK), ph: (03) 8543 5556(WORK)</p>\n                    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/composition-author-role" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.reference [ fhir:value "urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2" ]
+     ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:60591-5;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "60591-5" ];
+       fhir:Coding.display [ fhir:value "Patient summary Document" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+  ];
+  fhir:Composition.date [ fhir:value "2018-09-21T09:00:00+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1" ]
+  ];
+  fhir:Composition.title [ fhir:value "Shared Health Summary"];
+  fhir:Composition.attester [
+     fhir:index 0;
+     fhir:Composition.attester.mode [
+       fhir:value "legal";
+       fhir:index 0
+     ];
+     fhir:Composition.attester.time [ fhir:value "2018-09-21T09:00:00+10:00"^^xsd:dateTime ];
+     fhir:Composition.attester.party [
+       fhir:Reference.reference [ fhir:value "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1" ]
+     ]
+  ];
+  fhir:Composition.custodian [
+     fhir:Reference.reference [ fhir:value "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Current Medications" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.32009" ];
+         fhir:Coding.display [ fhir:value "Current Medicine" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <table border=\"5\">\n                                <caption>Medications</caption>\n                                <thead>\n                                    <tr>\n                                        <th>Medication</th>\n                                        <th>Dose</th>\n                                        <th>Purpose/Comment</th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr>\n                                        <td>Candesartan 32mg</td>\n                                        <td>1 d</td>\n                                        <td/>\n                                    </tr>\n                                    <tr>\n                                        <td>Metformin 500mg</td>\n                                        <td>1 bd</td>\n                                        <td/>\n                                    </tr>\n                                    <tr>\n                                        <td>Candesartan 8mg</td>\n                                        <td>0.5 d</td>\n                                        <td/>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:yh783f71-7736-4d10-89f7-fa1845e53987" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Allergies and Adverse Reactions" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48765-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48765-2" ];
+         fhir:Coding.display [ fhir:value "Allergies and adverse reactions Document" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <p>No available information.</p>\n                        </div>"
+     ];
+     fhir:Composition.section.emptyReason [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/list-empty-reason" ];
+         fhir:Coding.code [ fhir:value "unavailable" ];
+         fhir:Coding.display [ fhir:value "Unavailable" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.title [ fhir:value "Medical History" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.16117" ];
+         fhir:Coding.display [ fhir:value "Medical History" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <p>No relevant medical history.</p>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:ty65cc78-60b0-41cb-83d4-32521d3b9fa2" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Composition.section.title [ fhir:value "Immunisations" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:11369-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "11369-6" ];
+         fhir:Coding.display [ fhir:value "History of Immunization Narrative" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">2017-04-15: diphtheria + tetanus</div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:hgi72daf-b5a6-4a05-9166-a4b7c23f08a1" ]
+     ]
+  ] .
+
+<urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "cc246543-a0da-4ead-9ed6-5e064fea9ff7"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1";
+       fhir:index 0
+     ], [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1";
+       fhir:index 1
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <p>\n                            <b>Patient</b>\n                        </p>\n                        <p><b>identifier</b>: National unique individual identifier = 8003608666701594</p>\n                        <p><b>name</b>: Joe Greatpatient </p>\n                        <p><b>gender</b>: male</p>\n                        <p><b>birthDate</b>: 23/08/1956</p>\n                        <p><b>generalPractitioner</b>: Good Doctor</p>\n                        <p><b>managingOrganization</b>: ABN = 51824754455; name: Devonport Family Medicine Clinic;\n                            reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)</p>\n                        <p><b>indigenous status</b>: Not stated/inadequately described</p>\n                    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/indigenous-status" ];
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1" ];
+       fhir:Coding.code [ fhir:value "9" ];
+       fhir:Coding.display [ fhir:value "Not stated/inadequately described" ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NI" ];
+         fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003608666701594" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Greatpatient" ];
+     fhir:HumanName.given [
+       fhir:value "Joe";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [
+     fhir:value "1956-08-23"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1" ];
+         fhir:Coding.code [ fhir:value "AAE" ];
+         fhir:Coding.display [ fhir:value "Day and month are accurate, year is estimated" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/patient-birthTime" ];
+       fhir:Extension.valueDateTime [ fhir:value "1956-08-23T15:07:00+10:00"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:Patient.generalPractitioner [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c" ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306" ]
+  ] .
+
+<urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2> a fhir:PractitionerRole;
+  fhir:Resource.id [ fhir:value "45cad6ac-e9a3-418a-8480-4e64132849f2"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 45cad6ac-e9a3-418a-8480-4e64132849f2</p><p><b>meta</b>: </p><p><b>identifier</b>: Medicare Provider Number = 5544887B, HPI-I = 8003610000000000</p><p><b>practitioner</b>: <a href=\"urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1\">urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1</a></p><p><b>organization</b>: <a href=\"urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306\">urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306</a></p><p><b>code</b>: GP <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Practitioner'})</span></p></div>"
+  ];
+  fhir:PractitionerRole.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "UPIN" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medicare Provider Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/medicare-provider-number" ];
+     fhir:Identifier.value [ fhir:value "5544887B" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NPI" ];
+         fhir:Coding.display [ fhir:value "National provider identifier" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-I" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpii/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003610000000000" ]
+  ];
+  fhir:PractitionerRole.practitioner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1" ]
+  ];
+  fhir:PractitionerRole.organization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306" ]
+  ];
+  fhir:PractitionerRole.code [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" ];
+       fhir:Coding.code [ fhir:value "253111" ];
+       fhir:Coding.display [ fhir:value "General Practitioner" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "GP" ]
+  ] .
+
+<urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1> a fhir:Practitioner;
+  fhir:Resource.id [ fhir:value "40a94071-8373-4d53-a788-63b79c75a3c1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1";
+       fhir:index 0
+     ], [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1";
+       fhir:index 1
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 40a94071-8373-4d53-a788-63b79c75a3c1</p><p><b>meta</b>: </p><p><b>identifier</b>: HPI-I = 8003610000000000</p><p><b>name</b>: Barry Helpman (OFFICIAL)</p><p><b>telecom</b>: bhelpman@example.devonportgp.com.au(WORK)</p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td>*</td><td>AHPRA Registration Number = MED0000932850</td><td>AHPRA qualification for General Practitioner <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Medical Practitioner'})</span></td><td>AHPRA</td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NPI" ];
+         fhir:Coding.display [ fhir:value "National provider identifier" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-I" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpii/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003610000000000" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Helpman" ];
+     fhir:HumanName.given [
+       fhir:value "Barry";
+       fhir:index 0
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "M.D.";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "bhelpman@example.devonportgp.com.au" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Practitioner.qualification [
+     fhir:index 0;
+     fhir:Practitioner.qualification.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "AHPRA" ];
+           fhir:Coding.display [ fhir:value "Australian Health Practitioner Regulation Agency Registration Number" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "AHPRA Registration Number" ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/ahpra-registration-number" ];
+       fhir:Identifier.value [ fhir:value "MED0000932850" ]
+     ];
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" ];
+         fhir:Coding.code [ fhir:value "253111" ];
+         fhir:Coding.display [ fhir:value "General Medical Practitioner" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "AHPRA qualification for General Practitioner" ]
+     ];
+     fhir:Practitioner.qualification.issuer [
+       fhir:Reference.display [ fhir:value "AHPRA" ]
+     ]
+  ] .
+
+<urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c> a fhir:Practitioner;
+  fhir:Resource.id [ fhir:value "20f15728-f3ac-4877-b55a-107f94dbd00c"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 20f15728-f3ac-4877-b55a-107f94dbd00c</p><p><b>meta</b>: </p><p><b>name</b>: Good Doctor (OFFICIAL)</p></div>"
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Doctor" ];
+     fhir:HumanName.given [
+       fhir:value "Good";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr.";
+       fhir:index 0
+     ]
+  ] .
+
+<urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "021fff67-c5ec-438f-9520-ce9bafee1306"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 021fff67-c5ec-438f-9520-ce9bafee1306</p><p><b>meta</b>: </p><p><b>identifier</b>: ABN = 51824754455</p><p><b>name</b>: Devonport Family Medicine Clinic</p><p><b>telecom</b>: reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)</p><p><b>address</b>: LPO Box 235 Strahan TAS 7468 AU </p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "ABN" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/abn" ];
+     fhir:Identifier.value [ fhir:value "51824754455" ]
+  ];
+  fhir:Organization.name [ fhir:value "Devonport Family Medicine Clinic"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "reception@example.dfmc.com.au" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "fax" ];
+     fhir:ContactPoint.value [ fhir:value "(03) 8543 5557" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 2;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(03) 8543 5556" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "postal" ];
+     fhir:Address.line [
+       fhir:value "LPO Box 235";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Strahan" ];
+     fhir:Address.state [ fhir:value "TAS" ];
+     fhir:Address.postalCode [ fhir:value "7468" ];
+     fhir:Address.country [ fhir:value "AU" ]
+  ] .
+
+<urn:uuid:yh783f71-7736-4d10-89f7-fa1845e53987> a fhir:MedicationStatement;
+  fhir:Resource.id [ fhir:value "yh783f71-7736-4d10-89f7-fa1845e53987"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: yh783f71-7736-4d10-89f7-fa1845e53987</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: Candesartan 32mg <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '22087011000036100' = '22087011000036100', given as 'candesartan cilexetil 32 mg tablet'})</span></p><p><b>subject</b>: <a href=\"urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7\">urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7</a></p><p><b>taken</b>: y</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:22087011000036100;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "22087011000036100" ];
+       fhir:Coding.display [ fhir:value "candesartan cilexetil 32 mg tablet" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Candesartan 32mg" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "1 d" ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:integer ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "﻿tablet" ];
+       fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Quantity.code [ fhir:value "63011000036109" ]
+     ]
+  ] .
+
+<urn:uuid:ty65cc78-60b0-41cb-83d4-32521d3b9fa2> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "ty65cc78-60b0-41cb-83d4-32521d3b9fa2"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <p>\n                            <b>Observation</b>\n                        </p>\n                        <p><b>subject</b>: <a href=\"Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html\">id: National unique individual identifier =\n                                8003608666701594; Joe Greatpatient ; gender: male; birthDate: 23/08/1956</a></p>\n                        <p><b>status</b>: final</p>\n                        <p><b>code</b>: Assertion</p>\n                        <p><b>value</b>: No relevant medical history</p>\n                        <p><b>effective</b>: 21/09/2018</p>\n                    </div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "ASSERTION" ];
+       fhir:Coding.display [ fhir:value "Assertion" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2018-09-21"^^xsd:date];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:1224831000168103;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "1224831000168103" ];
+       fhir:Coding.display [ fhir:value "No relevant medical history" ]
+     ]
+  ] .
+
+<urn:uuid:hgi72daf-b5a6-4a05-9166-a4b7c23f08a1> a fhir:Immunization;
+  fhir:Resource.id [ fhir:value "hgi72daf-b5a6-4a05-9166-a4b7c23f08a1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <p>\n                            <b>Immunization statement</b>\n                        </p>\n                        <p><b>patient</b>: <a href=\"Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html\">id: National unique individual identifier =\n                                8003608666701594; Joe Greatpatient ; gender: male; birthDate: 23/08/1956</a></p>\n                        <p><b>status</b>: completed</p>\n                        <p><b>notGiven</b>: false</p>\n                        <p><b>vaccineCode</b>: diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe</p>\n                        <p><b>date</b>: 15/04/2017</p>\n                        <p><b>primarySource</b>: true</p>\n                    </div>"
+  ];
+  fhir:Immunization.status [ fhir:value "completed"];
+  fhir:Immunization.notGiven [ fhir:value "false"^^xsd:boolean];
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:837281000168100;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "837281000168100" ];
+       fhir:Coding.display [ fhir:value "diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe" ]
+     ]
+  ];
+  fhir:Immunization.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+  ];
+  fhir:Immunization.date [ fhir:value "2017-04-15"^^xsd:date];
+  fhir:Immunization.primarySource [ fhir:value "true"^^xsd:boolean] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Bundle/205fcc4b-baf2-4683-a48f-b087a5937230.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

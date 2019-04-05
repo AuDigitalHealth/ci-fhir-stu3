@@ -1,0 +1,787 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Shared Health Summary</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shared Health Summary Implemenation Guide" />
+  <meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+
+   <!-- Latest compiled and minified CSS -->
+
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+  <link href="assets/css/ci-styles-fig.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+
+<body markdown="1"/>
+
+</html>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="https://www.digitalhealth.gov.au/"><img alt="Agency logo" src="assets/images/agency-logo-www.png"/> </a>
+
+   <div id="ig-status">
+    <b>Shared Health Summary FHIR Implementation Guide  1.0.0</b>
+</div>
+
+  </div>
+  <div class="container">  <!-- container -->
+ </div>
+ </div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3//index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guidance.html">Guidance</a></li>
+       <li><a href="conformance.html">Conformance</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <!--<li><a href="structuremaps.html">Mappings</a></li>-->
+        <li><a href="extensions.html">Extensions</a></li>
+       <li><a href="mappings.html">Mapping from requirements</a></li>
+       <!-- <li><a href="terminology.html">Terminology</a></li>-->
+        <!--<li><a href="searchparams.html">Search Parameters</a></li>-->
+        <!--<li><a href="capstatements.html">Capability Statements</a></li>-->
+        <!--<li><a href="security.html">Security</a></li>-->
+        <li><a href="downloads.html">Downloads</a></li>
+       <li><a href="disclaimers.html">Disclaimers</a></li>
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+</div>  <!-- /container -->
+</div>  <!-- /segment-breadcrumb -->
+
+<div id="segment-content" class="segment">  <!-- segment-content -->
+<div class="container">  <!-- container -->
+<div class="row">
+<div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+<!-- ============BreadCrumb=============== -->
+
+<nav class="breadcrumb">
+  
+    
+    
+      <a class="breadcrumb-item" href="index.html">Home</a>
+      /
+      <a class="breadcrumb-item" href="profiles.html">Profiles</a>
+      /
+      <span class="breadcrumb-item active">Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.json</span>
+    
+    
+    
+    
+
+</nav>
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Example: Bundle-205fcc4b-baf2-4683-a48f-b087a5937230</h2>
+
+<p>
+Formats: <a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.html">Narrative</a>, <a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.xml.html">XML</a>, <a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.json.html">JSON</a>, <a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.json" download>json</a>
+</p>
+
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.id">id</a>" : "205fcc4b-baf2-4683-a48f-b087a5937230",
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2018-09-21T09:01:00+10:00"
+  },
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:e63acc0c-262b-4a51-bbec-477adf351f83"
+  },
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.type">type</a>" : "document",
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999",
+      "<a href="http://hl7.org/fhir/STU3/composition.html#Composition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/composition.html">resourceType</a>" : "Composition",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.id">id</a>" : "ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.language">language</a>" : "en-AU",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;\n                        &lt;p&gt;\n                            &lt;b&gt;Composition&lt;/b&gt;\n                        &lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Patient summary Document&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 21/09/2018 9:00:00 AM&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;author&lt;/b&gt;: HPI-I = 8003610000000000; Barry Helpman; bhelpman@example.devonportgp.com.au (WORK)&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;author role&lt;/b&gt;: Medicare Provider Number: 5544887B, HPI-I = 8003610000000000; Barry Helpman; Devonport Family Medicine\n                            Clinic; General Practitioner&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Shared Health Summary&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;attester&lt;/b&gt;: Mode: legal; Time: 21/09/2018 9:00:00 AM; Party: HPI-I = 8003610000000000; Barry Helpman&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;custodian&lt;/b&gt;: ABN = 51824754455; Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543\n                            5557(WORK), ph: (03) 8543 5556(WORK)&lt;/p&gt;\n                    &lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/composition-author-role",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueReference</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.type">type</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "60591-5",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Patient summary Document"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7"
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.date">date</a>" : "2018-09-21T09:00:00+10:00",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.author">author</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.title">title</a>" : "Shared Health Summary",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester">attester</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester.mode">mode</a>" : [
+              "legal"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester.time">time</a>" : "2018-09-21T09:00:00+10:00",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester.party">party</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.custodian">custodian</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section">section</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">title</a>" : "Current Medications",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "101.32009",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Current Medicine"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;\n                            &lt;table border=\&quot;5\&quot;&gt;\n                                &lt;caption&gt;Medications&lt;/caption&gt;\n                                &lt;thead&gt;\n                                    &lt;tr&gt;\n                                        &lt;th&gt;Medication&lt;/th&gt;\n                                        &lt;th&gt;Dose&lt;/th&gt;\n                                        &lt;th&gt;Purpose/Comment&lt;/th&gt;\n                                    &lt;/tr&gt;\n                                &lt;/thead&gt;\n                                &lt;tbody&gt;\n                                    &lt;tr&gt;\n                                        &lt;td&gt;Candesartan 32mg&lt;/td&gt;\n                                        &lt;td&gt;1 d&lt;/td&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr&gt;\n                                        &lt;td&gt;Metformin 500mg&lt;/td&gt;\n                                        &lt;td&gt;1 bd&lt;/td&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr&gt;\n                                        &lt;td&gt;Candesartan 8mg&lt;/td&gt;\n                                        &lt;td&gt;0.5 d&lt;/td&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                &lt;/tbody&gt;\n                            &lt;/table&gt;\n                        &lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:yh783f71-7736-4d10-89f7-fa1845e53987"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">title</a>" : "Allergies and Adverse Reactions",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "48765-2",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Allergies and adverse reactions Document"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;\n                            &lt;p&gt;No available information.&lt;/p&gt;\n                        &lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.emptyReason">emptyReason</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/list-empty-reason",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "unavailable",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Unavailable"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">title</a>" : "Medical History",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "101.16117",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Medical History"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;\n                            &lt;p&gt;No relevant medical history.&lt;/p&gt;\n                        &lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:ty65cc78-60b0-41cb-83d4-32521d3b9fa2"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">title</a>" : "Immunisations",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "11369-6",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "History of Immunization Narrative"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;2017-04-15: diphtheria + tetanus&lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:hgi72daf-b5a6-4a05-9166-a4b7c23f08a1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7",
+      "<a href="http://hl7.org/fhir/STU3/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.id">id</a>" : "cc246543-a0da-4ead-9ed6-5e064fea9ff7",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1",
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                        &lt;p&gt;\n                            &lt;b&gt;Patient&lt;/b&gt;\n                        &lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: National unique individual identifier = 8003608666701594&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Joe Greatpatient &lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: male&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 23/08/1956&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;generalPractitioner&lt;/b&gt;: Good Doctor&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: ABN = 51824754455; name: Devonport Family Medicine Clinic;\n                            reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;indigenous status&lt;/b&gt;: Not stated/inadequately described&lt;/p&gt;\n                    &lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCoding</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "9",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not stated/inadequately described"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NI",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "National unique individual identifier"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003608666701594"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a>" : "Greatpatient",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Joe"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.gender">gender</a>" : "male",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.birthDate">birthDate</a>" : "1956-08-23",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.birthDate">_birthDate</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#date#date.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "AAE",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Day and month are accurate, year is estimated"
+              }
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDateTime</a>" : "1956-08-23T15:07:00+10:00"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.generalPractitioner">generalPractitioner</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.managingOrganization">managingOrganization</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2",
+      "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.id">id</a>" : "45cad6ac-e9a3-418a-8480-4e64132849f2",
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 45cad6ac-e9a3-418a-8480-4e64132849f2&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Medicare Provider Number = 5544887B, HPI-I = 8003610000000000&lt;/p&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1\&quot;&gt;urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306\&quot;&gt;urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: GP &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Practitioner'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "UPIN"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Medicare Provider Number"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/medicare-provider-number",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "5544887B"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NPI",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "National provider identifier"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "HPI-I"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003610000000000"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.code">code</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "253111",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "General Practitioner"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "GP"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1",
+      "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.id">id</a>" : "40a94071-8373-4d53-a788-63b79c75a3c1",
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1",
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 40a94071-8373-4d53-a788-63b79c75a3c1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: HPI-I = 8003610000000000&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Barry Helpman (OFFICIAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: bhelpman@example.devonportgp.com.au(WORK)&lt;/p&gt;&lt;h3&gt;Qualifications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Identifier&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Issuer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;AHPRA Registration Number = MED0000932850&lt;/td&gt;&lt;td&gt;AHPRA qualification for General Practitioner &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Medical Practitioner'})&lt;/span&gt;&lt;/td&gt;&lt;td&gt;AHPRA&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NPI",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "National provider identifier"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "HPI-I"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003610000000000"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a>" : "Helpman",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Barry"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.suffix">suffix</a>" : [
+              "M.D."
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "bhelpman@example.devonportgp.com.au",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.qualification">qualification</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.qualification.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/v2/0203",
+                      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "AHPRA",
+                      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Australian Health Practitioner Regulation Agency Registration Number"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "AHPRA Registration Number"
+                },
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hl7.org.au/id/ahpra-registration-number",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "MED0000932850"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.qualification.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "253111",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "General Medical Practitioner"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "AHPRA qualification for General Practitioner"
+            },
+            "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.qualification.issuer">issuer</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "AHPRA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c",
+      "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.id">id</a>" : "20f15728-f3ac-4877-b55a-107f94dbd00c",
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 20f15728-f3ac-4877-b55a-107f94dbd00c&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Good Doctor (OFFICIAL)&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a>" : "Doctor",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Good"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.prefix">prefix</a>" : [
+              "Dr."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306",
+      "<a href="http://hl7.org/fhir/STU3/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.id">id</a>" : "021fff67-c5ec-438f-9520-ce9bafee1306",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 021fff67-c5ec-438f-9520-ce9bafee1306&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: ABN = 51824754455&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Devonport Family Medicine Clinic&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: LPO Box 235 Strahan TAS 7468 AU &lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "ABN"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hl7.org.au/id/abn",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "51824754455"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.name">name</a>" : "Devonport Family Medicine Clinic",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "reception@example.dfmc.com.au",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "fax",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "(03) 8543 5557",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "(03) 8543 5556",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.type">type</a>" : "postal",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.line">line</a>" : [
+              "LPO Box 235"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">city</a>" : "Strahan",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.state">state</a>" : "TAS",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">postalCode</a>" : "7468",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">country</a>" : "AU"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:yh783f71-7736-4d10-89f7-fa1845e53987",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "yh783f71-7736-4d10-89f7-fa1845e53987",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: yh783f71-7736-4d10-89f7-fa1845e53987&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: Candesartan 32mg &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '22087011000036100' = '22087011000036100', given as 'candesartan cilexetil 32 mg tablet'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7\&quot;&gt;urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "22087011000036100",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "candesartan cilexetil 32 mg tablet"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Candesartan 32mg"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "1 d",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.timing">timing</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat">repeat</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat.frequency">frequency</a>" : 1,
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat.period">period</a>" : 1,
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat.periodUnit">periodUnit</a>" : "d"
+              }
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.dose[x]">doseQuantity</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 1,
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "﻿tablet",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#SimpleQuantity#Quantity.code">code</a>" : "63011000036109"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:ty65cc78-60b0-41cb-83d4-32521d3b9fa2",
+      "<a href="http://hl7.org/fhir/STU3/observation.html#Observation">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/observation.html">resourceType</a>" : "Observation",
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.id">id</a>" : "ty65cc78-60b0-41cb-83d4-32521d3b9fa2",
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                        &lt;p&gt;\n                            &lt;b&gt;Observation&lt;/b&gt;\n                        &lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html\&quot;&gt;id: National unique individual identifier =\n                                8003608666701594; Joe Greatpatient ; gender: male; birthDate: 23/08/1956&lt;/a&gt;&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Assertion&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;value&lt;/b&gt;: No relevant medical history&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 21/09/2018&lt;/p&gt;\n                    &lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v3/ActCode",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "ASSERTION",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Assertion"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7"
+        },
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2018-09-21",
+        "<a href="http://hl7.org/fhir/STU3/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "1224831000168103",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No relevant medical history"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:hgi72daf-b5a6-4a05-9166-a4b7c23f08a1",
+      "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/immunization.html">resourceType</a>" : "Immunization",
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.id">id</a>" : "hgi72daf-b5a6-4a05-9166-a4b7c23f08a1",
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                        &lt;p&gt;\n                            &lt;b&gt;Immunization statement&lt;/b&gt;\n                        &lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html\&quot;&gt;id: National unique individual identifier =\n                                8003608666701594; Joe Greatpatient ; gender: male; birthDate: 23/08/1956&lt;/a&gt;&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;notGiven&lt;/b&gt;: false&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;vaccineCode&lt;/b&gt;: diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 15/04/2017&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;primarySource&lt;/b&gt;: true&lt;/p&gt;\n                    &lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.notGiven">notGiven</a>" : false,
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.vaccineCode">vaccineCode</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "837281000168100",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.patient">patient</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7"
+        },
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.date">date</a>" : "2017-04-15",
+        "<a href="http://hl7.org/fhir/STU3/immunization.html#Immunization.primarySource">primarySource</a>" : true
+      }
+    }
+  ]
+}</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+</div>
+
+
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+
+</div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>Document ID: DH-xxx:2019</p>
+            <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
+            <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
+            <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 5, 2019 15:44+1000. |
+                <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                </span>
+            </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
