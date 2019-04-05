@@ -201,7 +201,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-immunisation.html">AUBaseImmunisation</a>.</p>
 <p>
-This profile was published on Tue Apr 02 12:59:47 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Apr 05 10:11:03 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -874,10 +874,28 @@ Summary
 <h4><span class="sectioncount">D.4.1.3</span> Terminology Bindings <a title="link to here" class="self-link" href="StructureDefinition-immunization-summary-administration-1.html#tx"><img src="target.png"/></a></h4>
   <h4>Terminology Bindings</h4>
 <table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
-<tr><td>Immunization.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A set of codes indicating the current status of an Immunization"><a href="http://hl7.org/fhir/STU3/valueset-immunization-status.html">Immunization Status Codes</a></td></tr>
-<tr><td>Immunization.vaccineCode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The code for vaccine product administered"><a href="http://hl7.org/fhir/STU3/valueset-vaccine-code.html">Vaccine Administered Value Set</a></td></tr>
-<tr><td>Immunization.vaccinationProtocol.doseStatus</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The status of the vaccination protocol (i.e. should this count)"><a href="http://hl7.org/fhir/STU3/valueset-vaccination-protocol-dose-status.html">Vaccination Protocol Dose Status codes</a></td></tr>
+<tr><td><b>Path</b></td><td><b>Name</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
+<tr><td>Immunization.language</td><td>Common Languages</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
+<tr><td>Immunization.status</td><td>Immunization Status Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-status.html">Immunization Status Codes</a></td></tr>
+<tr><td>Immunization.vaccineCode</td><td>Vaccine Administered Value Set</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-vaccine-code.html">Vaccine Administered Value Set</a></td></tr>
+<tr><td>Immunization.vaccineCode.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1</a></td></tr>
+<tr><td>Immunization.vaccineCode.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1">https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1</a></td></tr>
+<tr><td>Immunization.reportOrigin</td><td>Immunization Origin Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-origin.html">Immunization Origin Codes</a></td></tr>
+<tr><td>Immunization.site</td><td>Codes for Immunization Site of Administration</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-site.html">Codes for Immunization Site of Administration</a></td></tr>
+<tr><td>Immunization.site.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1">https://healthterminologies.gov.au/fhir/ValueSet/immunisation-anatomical-site-1</a></td></tr>
+<tr><td>Immunization.route</td><td>Immunization Route Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-route.html">Immunization Route Codes</a></td></tr>
+<tr><td>Immunization.route.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1">https://healthterminologies.gov.au/fhir/ValueSet/immunisation-route-of-administration-1</a></td></tr>
+<tr><td>Immunization.practitioner.role</td><td>Immunization Role Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-role.html">Immunization Role Codes</a></td></tr>
+<tr><td>Immunization.practitioner.role</td><td>Immunization Role Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-role.html">Immunization Role Codes</a></td></tr>
+<tr><td>Immunization.practitioner.role</td><td>Immunization Role Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-role.html">Immunization Role Codes</a></td></tr>
+<tr><td>Immunization.explanation.reason</td><td>Immunization Reason Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-immunization-reason.html">Immunization Reason Codes</a></td></tr>
+<tr><td>Immunization.explanation.reason.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1">https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-administered-1</a></td></tr>
+<tr><td>Immunization.explanation.reasonNotGiven</td><td>Immunization Reasons for Not Immunizing Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-no-immunization-reason.html">Immunization Reasons for Not Immunizing Codes</a></td></tr>
+<tr><td>Immunization.explanation.reasonNotGiven.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1">https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1</a></td></tr>
+<tr><td>Immunization.vaccinationProtocol.targetDisease</td><td>Vaccination Protocol Dose Target Codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-vaccination-protocol-dose-target.html">Vaccination Protocol Dose Target Codes</a></td></tr>
+<tr><td>Immunization.vaccinationProtocol.targetDisease.coding</td><td>?ext</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1">https://healthterminologies.gov.au/fhir/ValueSet/vaccination-target-disease-1</a></td></tr>
+<tr><td>Immunization.vaccinationProtocol.doseStatus</td><td>Vaccination Protocol Dose Status codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-vaccination-protocol-dose-status.html">Vaccination Protocol Dose Status codes</a></td></tr>
+<tr><td>Immunization.vaccinationProtocol.doseStatusReason</td><td>Vaccination Protocol Dose Status Reason codes</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-vaccination-protocol-dose-status-reason.html">Vaccination Protocol Dose Status Reason codes</a></td></tr>
 </table>
 
 
@@ -958,7 +976,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 2, 2019 12:59+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 5, 2019 10:11+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
