@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="565b1e7e-01c1-4379-a3d6-6e21cdea43e9"/>
+  <meta>
+    <profile
+      value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1"
+    />
+  </meta>
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><b>id</b>: 565b1e7e-01c1-4379-a3d6-6e21cdea43e9</p>      
+      <p><b>language</b>: en-AU</p>
+      <p><b>identifier</b>: 3bb44f10-4350-498c-a629-4bf43df620e9</p>
+      <p><b>status</b>: final</p>
+      <p><b>type</b>: Summary of episode note <span style="background: LightGoldenRodYellow"
+        >(Details : {LOINC code '34133-9' = 'Summary of episode note', given as 'Summary of
+        episode note'})</span></p>
+      <p><b>encounter</b>: <a href="Encounter-98900f15-67f8-48a1-9345-6d5968f2c23e.html">Patient
+        presented with a headache, fever, sore throat. Patient advised she has no known allergies
+        and was prescribed amoxicillin 500mg 3/day for 5 days, and augmentin forte 1 tablet twice
+        a day for five days during this event. Patient advised that usually takes sumatriptan for
+        migraine; they took one tablet during the event, and during the event they were given one
+        tablet to take home.Generated Summary: id: 98900f15-67f8-48a1-9345-6d5968f2c23e; status:
+        in-progress; period: 02/04/2019 12:00:00 AM --&gt; 08/04/2019 12:00:00 AM</a></p>
+      <p><b>date</b>: 19/07/2018 9:00:15 AM</p>
+      <p><b>author</b>: <a href="Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html">Generated
+        Summary: id: 40a94071-8373-4d53-a788-63b79c75a3c1; HPI-I = 8003610000000000; Barry Helpman
+        (OFFICIAL); bhelpman@example.devonportgp.com.au(WORK)</a></p>
+      <p><b>title</b>: Event Summary</p>
+      <h3>Attesters</h3>
+      <table class="grid">
+        <tr>
+          <td>-</td>
+          <td><b>Mode</b></td>
+          <td><b>Time</b></td>
+          <td><b>Party</b></td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>legal</td>
+          <td>21/06/2017 9:00:15 AM</td>
+          <td><a href="Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html">Generated Summary:
+            id: 40a94071-8373-4d53-a788-63b79c75a3c1; HPI-I = 8003610000000000; Barry Helpman
+            (OFFICIAL); bhelpman@example.devonportgp.com.au(WORK)</a></td>
+        </tr>
+      </table>
+      <p><b>custodian</b>: <a href="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html"
+        >Generated Summary: id: 021fff67-c5ec-438f-9520-ce9bafee1306; ABN = 51824754455; name:
+        Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543
+        5557(WORK), ph: (03) 8543 5556(WORK)</a></p>
+    </div>
+  </text>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
+    <valueReference>
+      <reference
+        value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1"
+      />
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="3bb44f10-4350-498c-a629-4bf43df620e9"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="34133-9"/>
+      <display value="Summary of episode note"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+  </encounter>
+  <date value="2018-07-19T09:00:15+10:00"/>
+  <author>
+    <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
+  </author>
+  <title value="Event Summary"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2017-06-21T09:00:15+10:00"/>
+    <party>
+      <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
+  </custodian>
+  
+  <!-- Event Details-->
+  <section>
+    <title value="Event Details"/>
+    <code>
+      <coding>
+        <system
+          value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.16672"/>
+        <display value="Event Details"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Patient presented with a headache, fever, sore
+        throat. Patient advised she has no known allergies and was prescribed amoxicillin
+        500mg 3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during
+        this event. Patient advised that usually takes sumatriptan for migraine; they took one
+        tablet during the event, and during the event they were given one tablet to take home.
+      </div>
+    </text>
+    <mode value="snapshot"/>
+    <entry>
+      <reference value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+    </entry>
+  </section>
+  
+  <!--Allergies and Adverse Reactions-->
+  <section>
+    <title value="Allergies and Adverse Reactions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies and adverse reactions Document"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>No known medication allergies.</p>
+      </div>
+    </text>
+    <mode value="snapshot"/>
+    <entry>
+      <reference value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
+    </entry>
+  </section>
+  
+  <!-- Medications-->
+  <section>
+    <title value="Medications"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="10160-0"/>
+        <display value="History of Medication use Narrative"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+        <table border="5">
+          <caption>Medications</caption>
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>Dose</th>
+              <th>Purpose/Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sumatriptan 100 mg</td>
+              <td>1 d</td>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="urn:uuid:fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
+    </entry>
+  </section>
+  
+  <!-- Diagnoses/Interventions-->
+  <section>
+    <title value="Diagnoses/Interventions"/>
+    <code>
+      <coding>
+        <system
+          value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.16117"/>
+        <display value="Medical History"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table border="5">
+          <caption>Problems and Diagnoses</caption>
+          <thead>
+            <tr>
+              <th>Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>headache</td>
+            </tr>
+            <tr>
+              <td>fever</td>
+            </tr>
+            <tr>
+              <td>sore throat</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </text>
+    <mode value="snapshot"/>
+    <entry>
+      <reference value="urn:uuid:f834bdcb-c535-49d8-8689-e00f6848af0d"/>
+    </entry>
+    <entry>
+      <reference value="urn:uuid:24e42657-2230-44df-8bac-d19346a7f20b"/>
+    </entry>
+    <entry>
+      <reference value="urn:uuid:9ceb1602-547f-4e3c-883d-a500c5e9d925"/>
+    </entry>
+  </section>
+</Composition>

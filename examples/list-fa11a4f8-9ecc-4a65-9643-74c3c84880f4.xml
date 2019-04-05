@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<List xmlns="http://hl7.org/fhir">
+    <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>    
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/List"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table class="grid">
+                <tr>
+                    <td>-</td>
+                    <td><b>Medication</b></td>
+                    <td><b>Status</b></td>              
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>amoxicillin</td>
+                    <td>Intended</td>              
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>augmentin forte</td>
+                    <td>Intended</td>              
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Sumatripan</td>
+                    <td>Intended</td>              
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Sumatripan</td>
+                    <td>Completed</td>              
+                </tr>
+                
+            </table>
+        </div>
+    </text> 
+    <status value="current"/> 
+    <mode value="snapshot"/> 
+    <code> 
+        <coding> 
+            <system value="http://loinc.org"/> 
+            <code value="10160-0"/> 
+            <display value="History of Medication use Narrative"/> 
+        </coding> 
+        <text value="History of Medication use Narrative"/> 
+    </code> 
+    <subject>
+        <reference value="http://example.org/Patient/792b4811-2ce7-4531-8893-af827175bcfe"/>
+    </subject>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="prescribed"/>
+                <display value="New prescription"/>              
+            </coding>
+        </flag>
+        <item>
+            <reference value="http://example.org/MedicationStatement/9db8a050-0c25-4192-834d-bca1da8ff250"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="prescribed"/>
+                <display value="New prescription"/>              
+            </coding>
+        </flag>
+        <item>
+            <reference value="http://example.org/MedicationStatement/fc257fb0-8325-4f85-b29f-4c100346f527"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="prescribed"/>
+                <display value="New prescription"/>              
+            </coding>
+        </flag>
+        <item>
+            <reference value="http://example.org/MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="prescribed"/>
+                <display value="New prescription"/>              
+            </coding>
+        </flag>
+        <item>
+            <reference value="http://example.org/MedicationStatement/710f5906-2444-4b6a-b841-d3e23434f228"/>
+        </item>
+    </entry>
+</List>

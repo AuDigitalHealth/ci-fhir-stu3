@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="fc257fb0-8325-4f85-b29f-4c100346f527"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p><b>id</b>: fc257fb0-8325-4f85-b29f-4c100346f527</p>
+            <p><b>status</b>: intended</p>
+            <p><b>medication</b>: Augmentin Duo Forte 875/125 film-coated tablet <span
+                style="background: LightGoldenRodYellow">(Details : {SNOMED CT code
+                '6052011000036107' = '6052011000036107', given as 'Augmentin Duo Forte 875/125
+                film-coated tablet'})</span></p>
+            <p><b>subject</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
+                >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
+            <p><b>taken</b>: n</p>
+            <p><b>dosage</b>: 1 tablet twice a day for five days</p>
+        </div>
+    </text>
+    <status value="intended"/>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6052011000036107"/>
+            <display value="Augmentin Duo Forte 875/125 film-coated tablet"/>
+        </coding>
+        <text value="Augmentin Duo Forte 875/125 film-coated tablet"/>
+    </medicationCodeableConcept>
+    <subject>
+        <reference value="http://example.org/Patient/792b4811-2ce7-4531-8893-af827175bcfe"/>
+    </subject>
+    <taken value="n"/>
+    <dosage>
+        <text value="1 tablet twice a day for five days"/>
+        <timing>
+            <repeat>
+                <count value="1"/>
+                <frequency value="2"/>
+                <period value="5"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+    </dosage>
+</MedicationStatement>
