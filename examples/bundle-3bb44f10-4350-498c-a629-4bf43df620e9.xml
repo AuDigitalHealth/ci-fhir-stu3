@@ -5,8 +5,8 @@
     <lastUpdated value="2018-09-21T09:01:00+10:00"/>
   </meta>
   <identifier>
-    <system value="http://example.org"/>
-    <value value="Document-3bb44f10-4350-498c-a629-4bf43df620e9"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="a863c855-f4c9-4edf-b0f4-5edcbb6239be"/>
   </identifier>
   <type value="document"/>
   <!--    The Composition resource    -->
@@ -26,19 +26,19 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p><b>id</b>: 565b1e7e-01c1-4379-a3d6-6e21cdea43e9</p>
             <p><b>language</b>: en-AU</p>
-            <p><b>identifier</b>: 3bb44f10-4350-498c-a629-4bf43df620e9</p>
+            <p><b>identifier</b>: 565b1e7e-01c1-4379-a3d6-6e21cdea43e9</p>
             <p><b>status</b>: final</p>
-            <p><b>type</b>: Summary of episode note <span style="background: LightGoldenRodYellow"
+            <!--<p><b>type</b>: Summary of episode note <span style="background: LightGoldenRodYellow"
                 >(Details : {LOINC code '34133-9' = 'Summary of episode note', given as 'Summary of
-                episode note'})</span></p>
-            <p><b>encounter</b>: <a href="Encounter-98900f15-67f8-48a1-9345-6d5968f2c23e.html"
+                episode note'})</span></p>-->
+            <!--<p><b>encounter</b>: <a href="Encounter-98900f15-67f8-48a1-9345-6d5968f2c23e.html"
                 >Patient presented with a headache, fever, sore throat. Patient advised she has no
                 known allergies and was prescribed amoxicillin 500mg 3/day for 5 days, and augmentin
                 forte 1 tablet twice a day for five days during this event. Patient advised that
                 usually takes sumatriptan for migraine; they took one tablet during the event, and
                 during the event they were given one tablet to take home.Generated Summary: id:
                 98900f15-67f8-48a1-9345-6d5968f2c23e; status: in-progress; period: 02/04/2019
-                12:00:00 AM --&gt; 08/04/2019 12:00:00 AM</a></p>
+                12:00:00 AM -\-&gt; 08/04/2019 12:00:00 AM</a></p>-->
             <p><b>date</b>: 19/07/2018 9:00:15 AM</p>
             <p><b>author</b>: <a href="Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html"
                 >Generated Summary: id: 40a94071-8373-4d53-a788-63b79c75a3c1; HPI-I =
@@ -75,10 +75,6 @@
             />
           </valueReference>
         </extension>
-        <identifier>
-          <system value="urn:ietf:rfc:3986"/>
-          <value value="3bb44f10-4350-498c-a629-4bf43df620e9"/>
-        </identifier>
         <status value="final"/>
         <type>
           <coding>
@@ -190,7 +186,7 @@
             </div>
           </text>
           <entry>
-            <reference value="List/fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
+            <reference value="urn:uuid:fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
           </entry>
         </section>
 
@@ -238,7 +234,7 @@
             <reference value="urn:uuid:24e42657-2230-44df-8bac-d19346a7f20b"/>
           </entry>
           <entry>
-            <reference value="urn:uuid:9ceb1602-547f-4e3c-883d-a500c5e9d925"/>
+            <reference value="urn:uuid:9ceb1602-547f-4e3c-883d-a500c5e9d9255"/>
           </entry>
         </section>
       </Composition>
@@ -250,7 +246,12 @@
     <fullUrl value="http://example.org/fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
     <resource>
       <List xmlns="http://hl7.org/fhir">
-        <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>        
+        <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>   
+        <!--<meta>
+          <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"
+          />
+        </meta>-->
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -289,10 +290,8 @@
         <code>
           <coding>
             <system value="http://loinc.org"/>
-            <code value="10160-0"/>
-            <display value="History of Medication use Narrative"/>
+            <code value="10160-0"/>            
           </coding>
-          <text value="History of Medication use Narrative"/>
         </code>
         <subject>
           <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
@@ -594,15 +593,15 @@
 
   <!--AllergyIntolerance-->
   <entry>
-    <fullUrl value="urn:uuid:AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
+    <fullUrl value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
     <resource>
       <AllergyIntolerance xmlns="http://hl7.org/fhir">
         <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
-        <meta>
+        <!--<meta>
           <profile
             value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1"
           />
-        </meta>
+        </meta>-->
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -612,8 +611,8 @@
             <p><b>code</b>: No known medication allergies <span
                 style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '409137002' =
                 'No known history of drug allergy', given as 'No known drug allergy'})</span></p>
-            <p><b>patient</b>: <a href="urn:uuid:e6e84607-a0da-4ead-9ed6-5e064fea9fc4"
-                >urn:uuid:e6e84607-a0da-4ead-9ed6-5e064fea9fc4</a></p>
+            <p><b>patient</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
+              >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
           </div>
         </text>
         <clinicalStatus value="active"/>
@@ -627,7 +626,7 @@
           <text value="No known medication allergies"/>
         </code>
         <patient>
-          <reference value="urn:uuid:e6e84607-a0da-4ead-9ed6-5e064fea9fc4"/>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
         </patient>
       </AllergyIntolerance>
     </resource>
@@ -655,8 +654,8 @@
             <p><b>name</b>: Iliana Iglesias</p>
             <p><b>gender</b>: other</p>
             <p><b>birthDate</b>: 20/08/1960</p>
-            <p><b>generalPractitioner</b>: <a href="urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c1"
-                >urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c1</a></p>
+            <p><b>generalPractitioner</b>: <a href="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"
+              >urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1</a></p>
             <p><b>managingOrganization</b>: <a href="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"
                 >urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306</a></p>
           </div>
@@ -688,7 +687,7 @@
         <gender value="other"/>
         <birthDate value="1960-08-20"/>
         <generalPractitioner>
-          <reference value="urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c1"/>
+          <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
         </generalPractitioner>
         <managingOrganization>
           <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
@@ -769,7 +768,7 @@
                 <display
                   value="Australian Health Practitioner Regulation Agency Registration Number"/>
               </coding>
-              <text value="AHPRA registration number"/>
+              <text value="AHPRA Registration Number"/>
             </type>
             <system value="http://hl7.org.au/id/ahpra-registration-number"/>
             <value value="MED0000932850"/>
