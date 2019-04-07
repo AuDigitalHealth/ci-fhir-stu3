@@ -1,7 +1,7 @@
 ### Event Summary *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 
-#### Usage Scenarios 
+#### Usage scenarios 
 
 The following are the usage scenarios expected:
 
@@ -9,20 +9,17 @@ The following are the usage scenarios expected:
 * A contracted service provider (CSP) sends or receives an Event Summary with the My Health Record system
 * A registered repository or registered portal receives an Event Summary from the My Health Record system
 
-
 ####  Implementation guidance 
-* Where additional content beyond that flagged with a must support is provided it:
-    * shall not qualify or negate content described by this profile as must support
-    * shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
+For the expected usage scenarios in this implementation guide:
+
 * For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).
 
-<table border="1">
-  <tr bgcolor="#DCDCDC">
+<table class="list" width="100%">
+  <tr>
     <th>Section</th>
     <th>Guidance</th>
     </tr>
- 
- <tr>
+  <tr>
    <td rowspan="1">Event Overview</td>
     <td>It is expected that section.text is populated from the Encounter Description element of the Encounter entry</td>
   </tr>
