@@ -17,14 +17,3 @@ The following are the usage scenarios expected:
     * Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used
     * Where a sending system can state that a patient is known not to have current medications  (relevant to Medications) it is expected an observation of assertion of no relevant finding is sent with the appropriate code (e.g. 1234391000168107 &#124;No known current medications&#124;)
 
-##### **Examples**
-
-[Personal Health Summary example 1](Composition-426e957a-3c4c-4780-98f3-8339cc1e6f7c.html)
-
-[Personal Health Summary example 2](Composition-dc32838b-faf3-4102-9c78-27186ac32e20.html)
-
-[Personal Health Summary example 3](Composition-fb584f29-e4cc-4f55-ba2e-7bdf03c7a5ee.html)
-
-[Personal Health Summary example 4](Composition-340fcbec-f501-4582-9be1-4627618119e3.html)
-
-[Personal Health Summary example 5](Composition-28d02fcf-6b64-49c1-8870-6533059b8129.html)

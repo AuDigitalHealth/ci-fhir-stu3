@@ -27,3 +27,4 @@ There are different ways you could interact with this repository; they include:
 * [viewing the content](VIEWING.md)
 * [raising an issue or query on the content](ISSUES.md)
 * [contributing changes to this content](CONTRIBUTING.md)
+* [building one of the implementation guides in this repository, using the FHIR IG publisher](BUILDING.md)
