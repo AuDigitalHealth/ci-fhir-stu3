@@ -1,4 +1,6 @@
-This profile defines a representation of a Personal Health Summary document for a patient in an Australian healthcare context. 
+### Personal Health Summary *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]* 
+
+This profile defines a representation of a Personal Health Summary document for a patient in an Australian healthcare context.
 
 ##### **Usage Scenarios**
 The following are the usage scenarios expected:

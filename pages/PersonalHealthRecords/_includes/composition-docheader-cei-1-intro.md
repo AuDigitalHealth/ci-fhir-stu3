@@ -1,4 +1,4 @@
-## Consumer Entered Information Document Header
+## Consumer Entered Information Document Header *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 TBD
 
