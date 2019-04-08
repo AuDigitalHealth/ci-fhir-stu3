@@ -39,3 +39,6 @@ The system SHALL be able to take the following elements into account when perfor
     * For existing unchanged medicine items, the flag  will be 'unchanged' and change description is not expected to be provided
     * For new and changed medicine items, change description is expected to be provided
 
+#### Known Issues
+
+* List.meta.profile: The IG Publisher fails to run if the List example has meta.profile reference of Agency profile "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"
