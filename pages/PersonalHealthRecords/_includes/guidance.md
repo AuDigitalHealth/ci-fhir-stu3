@@ -189,8 +189,6 @@ Slicing rules in FHIR are defined in [Profiling FHIR](http://hl7.org/fhir/stu3/p
 
 Slicing is a mechanism to describe patterns of restrictions (i.e. conformance requirements). Slicing, usually on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, the section element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile is sliced into a list of slices in order to give each section slice a different set of restrictions.
 
-Slicing is a mechanism to describe patterns of restrictions (i.e. conformance requirements). Slicing, usually on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, the section element in the [Personal Health Summary](StructureDefinition-composition-phs-1.html) profile is sliced into a list of slices in order to give each section slice a different set of restrictions.
-
 A sliced element can be identified by the following icon color:red[INSERT ICON]in the Name column of the Differential and Snapshot views of the Differential Table and Snapshot Table of a profile or extension.
 
 Slicing rules are:
