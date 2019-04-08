@@ -10,5 +10,7 @@ For the expected usage scenarios in this implementation guide:
 
 * A ‘refuted’ condition should be represented with an appropriate negation code and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.
 
+* A 'refuted' condition should be represented with an appropriate negation code and a clinicalStatus of ‘inactive’. 
+
 
 
