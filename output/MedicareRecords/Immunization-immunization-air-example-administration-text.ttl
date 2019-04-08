@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Immunization/immunization-air-example-administration-text> a fhir:Immunization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "immunization-air-example-administration-text"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative with\n					Details</b></p><p><b>id</b>:\n					immunization-air-example-administration-text</p><p><b>meta</b>:\n					</p><p><b>identifier</b>:\n				urn:oid:2.25.129844986816735724544008039955538526131</p><p><b>status</b>:\n				completed</p><p><b>notGiven</b>: false</p><p><b>vaccineCode</b>: Infanrix Hexa <span style=\"background: LightGoldenRodYellow\">(Details :\n					{urn:oid:1.2.36.1.2001.1005.17 code 'IFHX' = 'Infanrix Hexa)</span></p><p><b>patient</b>: Individual Helathcare Identifier: 8003608166690503 </p><p><b>date</b>:\n				25/03/2012</p><p><b>primarySource</b>: true</p><h3>VaccinationProtocols</h3><table class=\"grid\">\n				<tr>\n					<td>-</td>\n					<td><b>DoseSequence</b></td>\n					<td><b>TargetDisease</b></td>\n					<td><b>DoseStatus</b></td>\n				</tr>\n				<tr>\n					<td>*</td>\n					<td>1</td>\n					<td>Diphtheria, Tetanus, Pertussis, Hepatitis B, Polio, Hib </td>\n					<td>Not available <span style=\"background: LightGoldenRodYellow\">(Details :\n							{http://hl7.org/fhir/v3/NullFlavor code 'NAVU' = 'Not available', given\n							as 'Not available'})</span></td>\n				</tr>\n			</table></div>"
+  ];
+  fhir:Immunization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.25.129844986816735724544008039955538526131" ]
+  ];
+  fhir:Immunization.status [ fhir:value "completed"];
+  fhir:Immunization.notGiven [ fhir:value "false"^^xsd:boolean];
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:oid:1.2.36.1.2001.1005.17" ];
+       fhir:Coding.code [ fhir:value "IFHX" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Infanrix Hexa" ]
+  ];
+  fhir:Immunization.patient [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608166690503" ]
+     ]
+  ];
+  fhir:Immunization.date [ fhir:value "2012-03-25"^^xsd:date];
+  fhir:Immunization.primarySource [ fhir:value "true"^^xsd:boolean];
+  fhir:Immunization.vaccinationProtocol [
+     fhir:index 0;
+     fhir:Immunization.vaccinationProtocol.doseSequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Immunization.vaccinationProtocol.targetDisease [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Diphtheria" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeableConcept.text [ fhir:value "Tetanus" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeableConcept.text [ fhir:value "Pertussis" ]
+     ], [
+       fhir:index 3;
+       fhir:CodeableConcept.text [ fhir:value "Hepatitis B" ]
+     ], [
+       fhir:index 4;
+       fhir:CodeableConcept.text [ fhir:value "Polio" ]
+     ], [
+       fhir:index 5;
+       fhir:CodeableConcept.text [ fhir:value "Hib" ]
+     ];
+     fhir:Immunization.vaccinationProtocol.doseStatus [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/NullFlavor" ];
+         fhir:Coding.code [ fhir:value "NAVU" ];
+         fhir:Coding.display [ fhir:value "Not available" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/Immunization/immunization-air-example-administration-text.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

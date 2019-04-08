@@ -1,0 +1,239 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/dc32838b-faf3-4102-9c78-27186ac32e20> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "dc32838b-faf3-4102-9c78-27186ac32e20"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n      <p><b>id</b>: dc32838b-faf3-4102-9c78-27186ac32e20</p>\n      <p><b>language</b>: en-AU</p>\n      <p><b>status</b>: final</p>\n      <p><b>type</b>: Personal Health Summary <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1\n          code '100.16685' = '100.16685', given as 'Personal Health Summary'})</span></p>\n      <p><b>subject</b>: IHI = 8003608666701594; gender = male</p>\n      <p><b>date</b>: 01/12/2018 9:00:15 AM</p>\n      <p><b>author</b>: related person name: Bob Thavaprasagnam; IHI = 8003608000024083;\n        relationship = Guardian</p>\n      <p><b>title</b>: Personal Health Summary</p>\n      <p><b>custodian</b>: ABN: 20073665175</p>\n    </div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Patient;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "7d10b711-cded-4339-a2fd-ef69e7ba7847" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1";
+         fhir:index 0
+       ], [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1";
+         fhir:index 1
+       ]
+     ];
+     fhir:Patient.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608666701594" ]
+     ];
+     fhir:Patient.gender [ fhir:value "male" ]
+  ], [
+     a fhir:RelatedPerson;
+     fhir:index 1;
+     fhir:Resource.id [ fhir:value "6870bc44-97a1-4523-8d98-fc1ee640ea70" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ihi-1";
+         fhir:index 0
+       ]
+     ];
+     fhir:RelatedPerson.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608000024083" ]
+     ];
+     fhir:RelatedPerson.patient [
+       fhir:Reference.reference [ fhir:value "#7d10b711-cded-4339-a2fd-ef69e7ba7847" ]
+     ];
+     fhir:RelatedPerson.relationship [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:394619001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "394619001" ];
+         fhir:Coding.display [ fhir:value "Guardian" ]
+       ]
+     ];
+     fhir:RelatedPerson.name [
+       fhir:index 0;
+       fhir:HumanName.text [ fhir:value "Bob Thavaprasagnam" ]
+     ]
+  ], [
+     a fhir:Organization;
+     fhir:index 2;
+     fhir:Resource.id [ fhir:value "ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1";
+         fhir:index 0
+       ]
+     ];
+     fhir:Organization.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "XX" ];
+           fhir:Coding.display [ fhir:value "Organization Identifier" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "ABN" ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/abn" ];
+       fhir:Identifier.value [ fhir:value "20073665175" ]
+     ]
+  ], [
+     a fhir:AllergyIntolerance;
+     fhir:index 3;
+     fhir:Resource.id [ fhir:value "90dfca31-664f-44e7-909a-905058a255fc" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1";
+         fhir:index 0
+       ]
+     ];
+     fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active" ];
+     fhir:AllergyIntolerance.verificationStatus [ fhir:value "unconfirmed" ];
+     fhir:AllergyIntolerance.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:716186003;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "716186003" ];
+         fhir:Coding.display [ fhir:value "No known allergy" ]
+       ]
+     ];
+     fhir:AllergyIntolerance.patient [
+       fhir:Reference.reference [ fhir:value "#7d10b711-cded-4339-a2fd-ef69e7ba7847" ]
+     ]
+  ], [
+     a fhir:Observation;
+     fhir:index 4;
+     fhir:Resource.id [ fhir:value "4e6c2639-370b-43cd-85db-91bf85da2b22" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1";
+         fhir:index 0
+       ]
+     ];
+     fhir:Observation.status [ fhir:value "final" ];
+     fhir:Observation.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+         fhir:Coding.code [ fhir:value "ASSERTION" ];
+         fhir:Coding.display [ fhir:value "Assertion" ]
+       ]
+     ];
+     fhir:Observation.subject [
+       fhir:Reference.reference [ fhir:value "#7d10b711-cded-4339-a2fd-ef69e7ba7847" ]
+     ];
+     fhir:Observation.effectiveDateTime [ fhir:value "2018-10-23"^^xsd:date ];
+     fhir:Observation.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:1234391000168107;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "1234391000168107" ];
+         fhir:Coding.display [ fhir:value "No known current medications" ]
+       ]
+     ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+       fhir:Coding.code [ fhir:value "100.16685" ];
+       fhir:Coding.display [ fhir:value "Personal Health Summary" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:Reference.reference [ fhir:value "#7d10b711-cded-4339-a2fd-ef69e7ba7847" ]
+  ];
+  fhir:Composition.date [ fhir:value "2018-12-01T09:00:15+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "#6870bc44-97a1-4523-8d98-fc1ee640ea70" ]
+  ];
+  fhir:Composition.title [ fhir:value "Personal Health Summary"];
+  fhir:Composition.custodian [
+     fhir:Reference.reference [ fhir:value "#ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Current Medications" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.32009" ];
+         fhir:Coding.display [ fhir:value "Current Medicine" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>None</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "#4e6c2639-370b-43cd-85db-91bf85da2b22" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Allergies and Adverse Reactions" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48765-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48765-2" ];
+         fhir:Coding.display [ fhir:value "Allergies and adverse reactions Document" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>None</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "#90dfca31-664f-44e7-909a-905058a255fc" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/dc32838b-faf3-4102-9c78-27186ac32e20.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/ExplanationOfBenefit/explanationofbenefit-mbs-example-02> a fhir:ExplanationOfBenefit;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "explanationofbenefit-mbs-example-02"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/explanationofbenefit-medicare";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: explanationofbenefit-mbs-example-02</p><p><b>meta</b>: </p><p><b>identifier</b>: 0000123</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/ex-claimtype code 'pharmacy' = 'Pharmacy)</span></p><p><b>subType</b>: mbs <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1 code 'mbs' = 'mbs)</span></p><p><b>patient</b>: </p><p><b>created</b>: 04/12/2017</p><h3>Items</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Service</b></td><td><b>Serviced[x]</b></td></tr><tr><td>*</td><td>1</td><td>Palmar or plantar warts (10 or more), definitive removal of, excluding ablative methods alone, not being a service to which item 30186 or 30187 applies (Anaes.) <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.2.36.1.2001.1005.21 code '30185' = '30185', given as 'Palmar or plantar warts (10 or more), definitive removal of, excluding ablative methods alone, not being a service to which item 30186 or 30187 applies (Anaes.)'})</span></td><td>16/06/2016</td></tr></table></div>"
+  ];
+  fhir:ExplanationOfBenefit.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "0000123" ]
+  ];
+  fhir:ExplanationOfBenefit.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/ex-claimtype" ];
+       fhir:Coding.code [ fhir:value "pharmacy" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.subType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1" ];
+       fhir:Coding.code [ fhir:value "mbs" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.patient [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "NI" ];
+           fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+         ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+       fhir:Identifier.value [ fhir:value "8003608166690503" ]
+     ]
+  ];
+  fhir:ExplanationOfBenefit.created [ fhir:value "2017-12-04"^^xsd:date];
+  fhir:ExplanationOfBenefit.item [
+     fhir:index 0;
+     fhir:ExplanationOfBenefit.item.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ExplanationOfBenefit.item.service [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:oid:1.2.36.1.2001.1005.21" ];
+         fhir:Coding.code [ fhir:value "30185" ];
+         fhir:Coding.display [ fhir:value "Palmar or plantar warts (10 or more), definitive removal of, excluding ablative methods alone, not being a service to which item 30186 or 30187 applies (Anaes.)" ]
+       ]
+     ];
+     fhir:ExplanationOfBenefit.item.servicedDate [ fhir:value "2016-06-16"^^xsd:date ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/ExplanationOfBenefit/explanationofbenefit-mbs-example-02.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

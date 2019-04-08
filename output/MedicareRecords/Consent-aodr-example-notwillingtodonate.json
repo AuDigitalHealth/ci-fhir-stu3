@@ -1,0 +1,69 @@
+{
+  "resourceType": "Consent",
+  "id": "aodr-example-notwillingtodonate",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/consent-aodr"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Manually Generated Narrative</b>\n\t\t\t</p>\n\t\t\t<p><b>id</b>: aodr-example-notwillingtodonate</p>\n\t\t\t<p><b>date initial registration</b>: 2015-11-18</p>\n\t\t\t<p><b>donation decision</b>: Not willing to be a donor</p>\n\t\t\t<p><b>dateTime</b>: 2017-09-21</p>\n\t\t</div>"
+  },
+  "extension": [
+    {
+      "url": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-dateinitialregistration",
+      "valueDateTime": "2015-11-18"
+    },
+    {
+      "url": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-donationdecision",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "161034004",
+            "display": "Not willing to be a donor"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:oid:2.25.320090414317418051877665573694312012199"
+  },
+  "status": "active",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "64300-7",
+          "display": "Organ donation consent"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NI",
+            "display": "National unique individual identifier"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608166690503"
+    }
+  },
+  "dateTime": "2017-09-21",
+  "policy": [
+    {
+      "authority": "http://australianorgandonorregister.gov.au",
+      "uri": "http://www.australianorgandonorregister.gov.au/aodr"
+    }
+  ]
+}
