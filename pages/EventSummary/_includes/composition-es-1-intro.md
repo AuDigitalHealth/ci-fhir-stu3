@@ -28,7 +28,7 @@ For the expected usage scenarios in this implementation guide:
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
  <tr>
-    <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 160244002 &#124;No known allergies&#124;) is sent as the code</td>
+    <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 &#124;No known allergies&#124;) is sent as the code</td>
   </tr>
   
    <tr>
