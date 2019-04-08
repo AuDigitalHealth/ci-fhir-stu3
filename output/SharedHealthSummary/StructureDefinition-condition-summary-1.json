@@ -11,7 +11,7 @@
   "title": "Summary Statement of Condition",
   "status": "draft",
   "experimental": true,
-  "date": "2019-04-08T10:54:02+10:00",
+  "date": "2019-04-08T12:54:29+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -340,6 +340,12 @@
       },
       {
         "id": "Condition.extension:recorder",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "draft"
+          }
+        ],
         "path": "Condition.extension",
         "sliceName": "recorder",
         "short": "Who recorded the condition",
@@ -1171,7 +1177,7 @@
         "path": "Condition.bodySite",
         "short": "Anatomical location, if relevant",
         "definition": "The anatomical location where this condition manifests itself.",
-        "comment": "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
+        "comment": "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](http://hl7.org/fhir/STU3/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1954,7 +1960,7 @@
       {
         "id": "Condition.evidence.code",
         "path": "Condition.evidence.code",
-        "short": "Evidence manifestation/symptom ",
+        "short": "Evidence manifestation/symptom",
         "definition": "A manifestation or symptom that led to the recording of this condition.",
         "min": 0,
         "max": "*",

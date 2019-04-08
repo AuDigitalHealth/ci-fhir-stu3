@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Known Medicine"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-04-08T10:54:02+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-04-08T12:54:29+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -61,11 +61,6 @@
      fhir:StructureDefinition.snapshot.element [
        fhir:index 0;
        fhir:Element.id [ fhir:value "MedicationStatement" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
-         fhir:Extension.valueCode [ fhir:value "trial-use" ]
-       ];
        fhir:ElementDefinition.path [ fhir:value "MedicationStatement" ];
        fhir:ElementDefinition.short [ fhir:value "A record of medication being taken by a patient in an Australian healthcare context" ];
        fhir:ElementDefinition.definition [ fhir:value "A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains \r\rThe primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information." ];

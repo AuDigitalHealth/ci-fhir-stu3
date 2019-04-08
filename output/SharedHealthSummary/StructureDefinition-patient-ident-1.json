@@ -11,7 +11,7 @@
   "title": "Patient with Mandatory Identifier",
   "status": "draft",
   "experimental": true,
-  "date": "2019-04-08T10:54:02+10:00",
+  "date": "2019-04-08T12:54:29+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -612,12 +612,12 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
-              "path": "system"
+              "type": "pattern",
+              "path": "type"
             },
             {
               "type": "value",
-              "path": "type"
+              "path": "system"
             }
           ],
           "rules": "open"
@@ -675,6 +675,26 @@
         "type": [
           {
             "code": "Identifier"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "inv-ihi-value-0",
+            "severity": "error",
+            "human": "IHI shall be an exactly 16 digit number",
+            "expression": "value.matches('^([0-9]{16})$')"
+          },
+          {
+            "key": "inv-ihi-value-1",
+            "severity": "error",
+            "human": "IHI prefix is 800360",
+            "expression": "value.startsWith('800360')"
+          },
+          {
+            "key": "inv-ihi-value-2",
+            "severity": "error",
+            "human": "IHI shall pass the Luhn algorithm check",
+            "expression": "(((select(value.substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)"
           }
         ],
         "isSummary": true,
@@ -1110,6 +1130,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "NI"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -1209,11 +1237,11 @@
         "id": "Patient.identifier:ihiNumber.type.coding",
         "path": "Patient.identifier.type.coding",
         "short": "Code defined by a terminology system",
-        "definition": "ihi",
+        "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -1237,252 +1265,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "NI",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:ihiNumber.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -1574,7 +1356,7 @@
         "path": "Patient.identifier.value",
         "short": "IHI number",
         "definition": "The 16 digit unique identifier for consumers of healthcare services.",
-        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-rendered-value.html).",
+        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html).",
         "min": 1,
         "max": "1",
         "base": {
@@ -1598,26 +1380,6 @@
           }
         ],
         "maxLength": 16,
-        "constraint": [
-          {
-            "key": "inv-ihi-0",
-            "severity": "error",
-            "human": "IHI shall be an exactly 16 digit number",
-            "expression": "matches('^([0-9]{16})$')"
-          },
-          {
-            "key": "inv-ihi-1",
-            "severity": "error",
-            "human": "IHI prefix is 800360",
-            "expression": "startsWith('800360')"
-          },
-          {
-            "key": "inv-ihi-2",
-            "severity": "error",
-            "human": "IHI shall pass the Luhn algorithm check",
-            "expression": "(((select(substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(1,1).toInteger())+(select(substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(3,1).toInteger())+(select(substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(5,1).toInteger())+(select(substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(7,1).toInteger())+(select(substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(9,1).toInteger())+(select(substring(10,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(11,1).toInteger())+(select(substring(12,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(13,1).toInteger())+(select(substring(14,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(substring(15,1).toInteger()))mod 10=0)"
-          }
-        ],
         "isSummary": true,
         "mapping": [
           {
@@ -1871,6 +1633,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "MC"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -1970,11 +1740,11 @@
         "id": "Patient.identifier:medicareNumber.type.coding",
         "path": "Patient.identifier.type.coding",
         "short": "Code defined by a terminology system",
-        "definition": "Medicare number assigned to a patient.",
+        "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -1998,252 +1768,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "MC",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicareNumber.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -2335,7 +1859,7 @@
         "path": "Patient.identifier.value",
         "short": "Medicare number including optional individual reference number",
         "definition": "10 digit Medicare number with optional 11th digit individual reference number (IRN).",
-        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-rendered-value.html).",
+        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html).",
         "min": 1,
         "max": "1",
         "base": {
@@ -2886,7 +2410,7 @@
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -2895,14 +2419,6 @@
         "type": [
           {
             "code": "Coding"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "inv-dva-number-coding",
-            "severity": "error",
-            "human": "DVA colour coding must be DVL, DVW, DVO or DVG",
-            "expression": "code='DVL' or code='DVW' or code='DVO' or code='DVG'"
           }
         ],
         "isSummary": true,
@@ -2931,7 +2447,7 @@
         ],
         "path": "Patient.identifier.type.text",
         "short": "Plain text representation of the concept",
-        "definition": "DVA colour coding.",
+        "definition": "Type of DVA card (specific colour may be provided)",
         "comment": "Very often the text is the same as a displayName of one of the codings.",
         "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
         "min": 0,
@@ -3285,6 +2801,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "HC"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -3387,8 +2911,8 @@
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -3412,252 +2936,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "HC",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:healthcareCard.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -4026,6 +3304,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "PEN"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -4128,8 +3414,8 @@
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -4153,252 +3439,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "PEN",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:pensionerConcessionCard.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -4767,6 +3807,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org.au/fhir/v2/0203",
+              "code": "SEN"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -4869,8 +3917,8 @@
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -4894,252 +3942,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org.au/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "SEN",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:commonwealthSeniorsHealthCard.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -5508,6 +4310,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "MR"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -5610,8 +4420,8 @@
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -5635,252 +4445,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "MR",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:medicalRecordNumber.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -5971,7 +4535,7 @@
         "path": "Patient.identifier.value",
         "short": "Medical record number",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
-        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-rendered-value.html).",
+        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html).",
         "min": 1,
         "max": "1",
         "base": {
@@ -6243,6 +4807,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0203",
+              "code": "MB"
+            }
+          ]
+        },
         "isSummary": true,
         "binding": {
           "extension": [
@@ -6345,8 +4917,8 @@
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
         "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "CodeableConcept.coding",
           "min": 0,
@@ -6370,252 +4942,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.id",
-        "path": "Patient.identifier.type.coding.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.extension",
-        "path": "Patient.identifier.type.coding.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.system",
-        "path": "Patient.identifier.type.coding.system",
-        "short": "Identity of the terminology system",
-        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
-        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.system",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/v2/0203",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.3"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystem"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.version",
-        "path": "Patient.identifier.type.coding.version",
-        "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
-        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.version",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.7"
-          },
-          {
-            "identity": "rim",
-            "map": "./codeSystemVersion"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "short": "Symbol in syntax defined by the system",
-        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
-        "requirements": "Need to refer to a particular code in the system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Coding.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "fixedCode": "MB",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1"
-          },
-          {
-            "identity": "rim",
-            "map": "./code"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Patient.identifier.type.coding.display",
-        "short": "Representation defined by the system",
-        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
-        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.2 - but note this is not well followed"
-          },
-          {
-            "identity": "rim",
-            "map": "CV.displayName"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier:insurerNumber.type.coding.userSelected",
-        "path": "Patient.identifier.type.coding.userSelected",
-        "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
-        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
-        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Coding.userSelected",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Sometimes implied by being first"
-          },
-          {
-            "identity": "rim",
-            "map": "CD.codingRationale"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
           }
         ]
       },
@@ -6706,7 +5032,7 @@
         "path": "Patient.identifier.value",
         "short": "Private health insurance member number",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
-        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-rendered-value.html).",
+        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/STU3/extension-rendered-value.html).",
         "min": 1,
         "max": "1",
         "base": {
@@ -8703,7 +7029,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-1"
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2"
           }
         },
         "mapping": [

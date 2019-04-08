@@ -21,7 +21,7 @@
   <title value="Summary Statement of Condition"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-04-08T10:54:02+10:00"/>
+  <date value="2019-04-08T12:54:29+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -299,6 +299,9 @@
       </type>
     </element>
     <element id="Condition.extension:recorder">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft"/>
+      </extension>
       <path value="Condition.extension"/>
       <sliceName value="recorder"/>
       <short value="Who recorded the condition"/>
@@ -985,7 +988,7 @@
       <path value="Condition.bodySite"/>
       <short value="Anatomical location, if relevant"/>
       <definition value="The anatomical location where this condition manifests itself."/>
-      <comment value="Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both."/>
+      <comment value="Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](http://hl7.org/fhir/STU3/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -1622,7 +1625,7 @@
     </element>
     <element id="Condition.evidence.code">
       <path value="Condition.evidence.code"/>
-      <short value="Evidence manifestation/symptom "/>
+      <short value="Evidence manifestation/symptom"/>
       <definition value="A manifestation or symptom that led to the recording of this condition."/>
       <min value="0"/>
       <max value="*"/>

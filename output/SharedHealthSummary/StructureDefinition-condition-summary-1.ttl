@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Condition"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-04-08T10:54:02+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-04-08T12:54:29+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -346,6 +346,11 @@
      ], [
        fhir:index 8;
        fhir:Element.id [ fhir:value "Condition.extension:recorder" ];
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+         fhir:Extension.valueCode [ fhir:value "draft" ]
+       ];
        fhir:ElementDefinition.path [ fhir:value "Condition.extension" ];
        fhir:ElementDefinition.sliceName [ fhir:value "recorder" ];
        fhir:ElementDefinition.short [ fhir:value "Who recorded the condition" ];
@@ -1150,7 +1155,7 @@
        fhir:ElementDefinition.path [ fhir:value "Condition.bodySite" ];
        fhir:ElementDefinition.short [ fhir:value "Anatomical location, if relevant" ];
        fhir:ElementDefinition.definition [ fhir:value "The anatomical location where this condition manifests itself." ];
-       fhir:ElementDefinition.comment [ fhir:value "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](https://build.fhir.org/ig/hl7au/au-fhir-base/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both." ];
+       fhir:ElementDefinition.comment [ fhir:value "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](http://hl7.org/fhir/STU3/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
@@ -1915,7 +1920,7 @@
        fhir:index 49;
        fhir:Element.id [ fhir:value "Condition.evidence.code" ];
        fhir:ElementDefinition.path [ fhir:value "Condition.evidence.code" ];
-       fhir:ElementDefinition.short [ fhir:value "Evidence manifestation/symptom " ];
+       fhir:ElementDefinition.short [ fhir:value "Evidence manifestation/symptom" ];
        fhir:ElementDefinition.definition [ fhir:value "A manifestation or symptom that led to the recording of this condition." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];

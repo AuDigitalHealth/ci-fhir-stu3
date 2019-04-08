@@ -66,16 +66,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:title>f:Patient/f:identifier/f:type</sch:title>
-    <sch:rule context="f:Patient/f:identifier/f:type">
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:title>f:Patient/f:birthDate</sch:title>
     <sch:rule context="f:Patient/f:birthDate">
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator': maximum cardinality of 'extension' is 1</sch:assert>
