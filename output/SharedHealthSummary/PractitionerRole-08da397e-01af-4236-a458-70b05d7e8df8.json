@@ -1,0 +1,67 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "08da397e-01af-4236-a458-70b05d7e8df8",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 08da397e-01af-4236-a458-70b05d7e8df8</p><p><b>meta</b>: </p><p><b>identifier</b>: Medicare Provider Number = 5544887B, HPI-I = 8003610000000000</p><p><b>practitioner</b>: <a href=\"Practitioner-b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654.html\">Generated Summary: id: b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654; HPI-I = 8003610000000000; Peter Chalmers (OFFICIAL)</a></p><p><b>organization</b>: <a href=\"Organization-9df89ebf-b9ab-4ed5-b865-90892c1bbb1a.html\">Generated Summary: id: 9df89ebf-b9ab-4ed5-b865-90892c1bbb1a; ABN = 51824754455; name: Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)</a></p><p><b>code</b>: GP <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Practitioner'})</span></p><p><b>telecom</b>: pchalmers@example.albiongp.com.au(WORK)</p></div>"
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org.au/fhir/v2/0203",
+            "code": "UPIN"
+          }
+        ],
+        "text": "Medicare Provider Number"
+      },
+      "system": "http://ns.electronichealth.net.au/id/medicare-provider-number",
+      "value": "5544887B"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NPI",
+            "display": "National provider identifier"
+          }
+        ],
+        "text": "HPI-I"
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+      "value": "8003610000000000"
+    }
+  ],
+  "practitioner": {
+    "reference": "Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654"
+  },
+  "organization": {
+    "reference": "Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a"
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+          "code": "253111",
+          "display": "General Practitioner"
+        }
+      ],
+      "text": "GP"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "pchalmers@example.albiongp.com.au",
+      "use": "work"
+    }
+  ]
+}

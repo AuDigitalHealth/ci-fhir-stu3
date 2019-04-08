@@ -147,12 +147,12 @@
         <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
     </tr>
     <tr>
-        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html">AU Base Dosage</a></td>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-dosage.html">Dosage (AU Base Dosage)</a></td>
          <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
   </tr>
     <tr>
-        <td><a href="StructureDefinition-humanname-dh-base-1.html">Base HumanName</a></td>
+        <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
   </tr>

@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/f61db690-0ba4-4219-acd4-021ecc6a36fd> a fhir:PractitionerRole;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f61db690-0ba4-4219-acd4-021ecc6a36fd"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f61db690-0ba4-4219-acd4-021ecc6a36fd</p><p><b>meta</b>: </p><p><b>identifier</b>: HPI-I = 8003610000000000</p><p><b>practitioner</b>: <a href=\"Practitioner-428f6506-625f-4f16-b0e2-b31ab6d293bf.html\">Generated Summary: id: 428f6506-625f-4f16-b0e2-b31ab6d293bf; HPI-I = 8003610000000000; Peter Chalmers (OFFICIAL); pchalmers@example.albiongp.com.au(WORK)</a></p><p><b>organization</b>: <a href=\"Organization-64e56b9c-e51d-4157-b379-34e71e3dbfa4.html\">Generated Summary: id: 64e56b9c-e51d-4157-b379-34e71e3dbfa4; PAI-O = 8003640001000036; name: Albion GP Clinic</a></p><p><b>code</b>: GP <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Practitioner'})</span></p></div>"
+  ];
+  fhir:PractitionerRole.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NPI" ];
+         fhir:Coding.display [ fhir:value "National provider identifier" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-I" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpii/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003610000000000" ]
+  ];
+  fhir:PractitionerRole.practitioner [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf>;
+     fhir:Reference.reference [ fhir:value "Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf" ]
+  ];
+  fhir:PractitionerRole.organization [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4>;
+     fhir:Reference.reference [ fhir:value "Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4" ]
+  ];
+  fhir:PractitionerRole.code [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" ];
+       fhir:Coding.code [ fhir:value "253111" ];
+       fhir:Coding.display [ fhir:value "General Practitioner" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "GP" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/f61db690-0ba4-4219-acd4-021ecc6a36fd.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

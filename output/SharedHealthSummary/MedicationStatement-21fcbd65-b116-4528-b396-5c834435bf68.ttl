@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/21fcbd65-b116-4528-b396-5c834435bf68> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "21fcbd65-b116-4528-b396-5c834435bf68"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 21fcbd65-b116-4528-b396-5c834435bf68</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: Ferrous sulphate &amp; vitamin C <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>subject</b>: <a href=\"Patient-d9698a55-723a-49de-931b-4e61d732b016.html\">Generated Summary: id: d9698a55-723a-49de-931b-4e61d732b016; National unique individual identifier = 8003608666701594; Adam A. Everyman(OFFICIAL), Damo ; gender: male</a></p><p><b>taken</b>: y</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "Ferrous sulphate & vitamin C" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d9698a55-723a-49de-931b-4e61d732b016>;
+     fhir:Reference.reference [ fhir:value "Patient/d9698a55-723a-49de-931b-4e61d732b016" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "1 d" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/21fcbd65-b116-4528-b396-5c834435bf68.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
