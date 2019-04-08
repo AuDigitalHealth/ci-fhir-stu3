@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Patient xmlns="http://hl7.org/fhir">
-    <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>
-    <meta>
-        <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
-        <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"/>
-    </meta>
+    <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>        
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 792b4811-2ce7-4531-8893-af827175bcfe</p>
-            <p><b>meta</b>: </p>
-            <p><b>identifier</b>: National unique individual identifier = 8003608666701594</p>
-            <p><b>name</b>: Eliana Iglesias</p>
-            <p><b>gender</b>: other</p>
-            <p><b>birthDate</b>: 20/08/1960</p>
-            <p><b>generalPractitioner</b>: Barry Helpman M.D.</p>
-            <p><b>managingOrganization</b>: Devonport Family Medicine Clinic</p>
+            <h2>Patient</h2>
+            <p><b>Name</b>: Eliana Iglesias</p>
+            <p><b>Identifier</b>: National unique individual identifier = 8003608666701594</p>            
+            <p><b>Gender</b>: Female</p>
+            <p><b>Date of birth</b>: 20/08/1960</p>
+            <p><b>General Practitioner</b>: Barry Helpman M.D.; telecom = email
+                bhelpman@example.devonportgp.com.au (work);</p>
+            <p><b>Managing Organization</b>: Devonport Family Medicine Clinic; ABN =
+                51824754455; telecom = email reception@example.dfmc.com.au (work);
+                telecom = fax (03) 8543 5557 (work); telecom = phone (03) 8543 5556
+                (work); address = LPO Box 235 Strahan, TAS 7468 (postal)></p>
+            <p><b>indigenous status</b>: Not stated/inadequately described</p>
         </div>
     </text>
     <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
@@ -41,16 +39,29 @@
         <value value="8003608666701594"/>
     </identifier>
     <name>
-        <text value="Eliana Iglesias"/>
+        <text value="Iliana Iglesias"/>
         <family value="Iglesias"/>
-        <given value="Eliana"/>
+        <given value="Iliana"/>
     </name>
     <gender value="other"/>
-    <birthDate value="1960-08-20"/>
+    <birthDate value="1960-08-20">
+        <extension
+            url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">
+            <valueCoding>
+                <system
+                    value="https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"/>
+                <code value="AAE"/>
+                <display value="Day and month are accurate, year is estimated"/>
+            </valueCoding>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+            <valueDateTime value="1960-08-20T20:07:00+10:00"/>
+        </extension>
+    </birthDate>
     <generalPractitioner>
-        <reference value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+        <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
     </generalPractitioner>
     <managingOrganization>
-        <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+        <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
     </managingOrganization>
 </Patient>

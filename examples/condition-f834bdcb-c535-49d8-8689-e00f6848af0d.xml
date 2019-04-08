@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="f834bdcb-c535-49d8-8689-e00f6848af0d"/> 
-    <text> 
-        <status value="additional"/> 
-        <div xmlns="http://www.w3.org/1999/xhtml">Headache</div> 
-    </text>
+    <id value="f834bdcb-c535-49d8-8689-e00f6848af0d"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>Condition</h2>
+            <p><b>Subject</b>: Eliana Iglesias</p>
+            <p><b>Code</b>: Headache</p>
+            <p><b>Clinical Status</b>: active</p>
+            <p><b>Verification Status</b>: confirmed</p>            
+            <p><b>onsetDateTime</b>: 02/04/2019</p>
+            <p><b>assertedDate</b>: 04/04/2019 9:30 AM</p>            
+        </div>
+    </text>  
     <clinicalStatus value="active"/>
+    <verificationStatus value="confirmed"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -15,6 +24,8 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/792b4811-2ce7-4531-8893-af827175bcfe"/>
+        <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     </subject>
+    <onsetDateTime value="2019-04-02"/>
+    <assertedDate value="2019-04-04T09:30:00+10:00"/>
 </Condition>

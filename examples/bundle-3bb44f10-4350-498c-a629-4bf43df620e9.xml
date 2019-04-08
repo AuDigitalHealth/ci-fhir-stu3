@@ -23,15 +23,18 @@
         <language value="en-AU"/>
         <text>
           <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 565b1e7e-01c1-4379-a3d6-6e21cdea43e9</p>
-            <p><b>Language</b>: en-AU</p>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang = "en-AU">
+            <p><b>Title</b>: Event Summary</p>          
+            <p><b>Subject</b>: IHI = 8003608666701594; name =  Eliana Iglesias; birthDate = 20/08/1960; indigenous status = Not stated/inadequately
+              described</p>
             <p><b>Status</b>: final</p>
-            <p><b>type</b>: Summary of episode note </p>
-            <p><b>Date</b>: 19/07/2018 9:00:15 AM</p>
+            <p><b>Type</b>: Summary of episode note </p>
+            <p><b>Date</b>: 19/07/2018</p>
             <p><b>Author</b>: HPI-I = 8003610000000000; name = Barry Helpman M.D.</p>
-            <p><b>title</b>: Event Summary</p>           
-            <p><b>custodian</b>: ABN = 51824754455; name  = Devonport Family Medicine Clinic</p>
+            <p><b>Author role</b>: General Practitioner; Medicare Provider Number:
+              5544887B, HPI-I = 8003610000000000; Barry Helpman; Devonport Family
+              Medicine Clinic</p>
+            <p><b>Custodian</b>: name  = Devonport Family Medicine Clinic; ABN = 51824754455; email = reception@example.dfmc.com.au (WORK);</p>
           </div>
         </text>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
@@ -55,7 +58,7 @@
         <encounter>
           <reference value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
         </encounter>
-        <date value="2018-07-19T09:00:15+10:00"/>
+        <date value="2018-07-19"/>
         <author>
           <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
         </author>
@@ -79,19 +82,20 @@
               <system
                 value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
               <code value="101.16672"/>
-              <display value="Event Details"/>
+              <display value="Event Overview"/>
             </coding>
           </code>
           <text>
             <status value="additional"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Patient presented with a headache, fever, sore
+            <div xmlns="http://www.w3.org/1999/xhtml">
+              <h1>Event Overview</h1>
+              <p>Patient presented with a headache, fever, sore
               throat. Patient advised she has no known allergies and was prescribed amoxicillin
               500mg 3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during
               this event. Patient advised that usually takes sumatriptan for migraine; they took one
-              tablet during the event, and during the event they were given one tablet to take home.
+              tablet during the event, and during the event they were given one tablet to take home.</p>
             </div>
           </text>
-          <mode value="snapshot"/>
           <entry>
             <reference value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
           </entry>
@@ -113,7 +117,6 @@
               <p>No known medication allergies.</p>
             </div>
           </text>
-          <mode value="snapshot"/>
           <entry>
             <reference value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
           </entry>
@@ -132,19 +135,43 @@
           <text>
             <status value="additional"/>
             <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
-              <table border="5">
+              <table border="1">
                 <caption>Medications</caption>
                 <thead>
                   <tr>
-                    <th>Medication</th>
-                    <th>Dose</th>
-                    <th>Purpose/Comment</th>
+                    <th>Medicine</th>                    
+                    <th>Directions</th>
+                    <th>Medicine purpose</th>
+                    <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>sumatriptan 100 mg</td>
-                    <td>1 d</td>
+                    <td>AMOXCILLIN 500mg TABLETS</td>
+                    <td>Take 3 tablets a day for 5 days.</td>
+                    <td>For headache, fever, sore throat.</td>
+                    <td>Not taken</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>AUGMENTIN FORTE TABLETS</td>
+                    <td>Take 3 tablets a day for 5 days.</td>
+                    <td>For headache, fever, sore throat.</td>
+                    <td>Not taken</td>
+                    <td/>
+                  </tr>                  
+                  <tr>
+                    <td>SUMATRIPAN TABLETS</td>
+                    <td></td>
+                    <td>For migraine.</td>
+                    <td>Not taken</td>
+                    <td/>
+                  </tr>
+                  <tr>
+                    <td>SUMATRIPAN TABLETS</td>
+                    <td></td>
+                    <td>For migraine.</td>
+                    <td>Taken</td>
                     <td/>
                   </tr>
                 </tbody>
@@ -152,11 +179,15 @@
             </div>
           </text>
           <entry>
-            <reference value="urn:uuid:fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
+            <!-- known issue that the IG publisher fails to complete  -->
+            <!-- when this reference is made to the actual list resource -->
+            <!-- for now this 'placeholder' allows the publisher to run -->
+            <!-- it should be "urn:uuid:fa11a4f8-9ecc-4a65-9643-74c3c8480f4" -->
+            <reference value="urn:uuid:waiting-for-list-profile-to-be-fixed"/>
           </entry>
         </section>
 
-        <!-- Diagnoses/Interventions-->
+        <!-- Medical History -->
         <section>
           <title value="Diagnoses/Interventions"/>
           <code>
@@ -169,30 +200,12 @@
           </code>
           <text>
             <status value="additional"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">
-              <table border="5">
-                <caption>Problems and Diagnoses</caption>
-                <thead>
-                  <tr>
-                    <th>Condition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>headache</td>
-                  </tr>
-                  <tr>
-                    <td>fever</td>
-                  </tr>
-                  <tr>
-                    <td>sore throat</td>
-                  </tr>
-                </tbody>
-              </table>
-
+            <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+              <p><b>condition</b>: headache</p>
+              <p><b>condition</b>: fever</p>
+              <p><b>condition</b>: sore throat</p>>
             </div>
           </text>
-          <mode value="snapshot"/>
           <entry>
             <reference value="urn:uuid:f834bdcb-c535-49d8-8689-e00f6848af0d"/>
           </entry>
@@ -207,429 +220,27 @@
     </resource>
   </entry>
 
-  <!--List-->
-  <entry>
-    <fullUrl value="http://example.org/fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
-    <resource>
-      <List xmlns="http://hl7.org/fhir">
-        <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>   
-        <!--<meta>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"
-          />
-        </meta>-->
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-          <table class="grid">
-            <tr>
-              <td>-</td>
-              <td><b>Medication</b></td>
-              <td><b>Status</b></td>              
-            </tr>
-            <tr>
-              <td>*</td>
-              <td>amoxicillin</td>
-              <td>Intended</td>              
-            </tr>
-            <tr>
-              <td>*</td>
-              <td>augmentin forte</td>
-              <td>Intended</td>              
-            </tr>
-            <tr>
-              <td>*</td>
-              <td>Sumatripan</td>
-              <td>Intended</td>              
-            </tr>
-            <tr>
-              <td>*</td>
-              <td>Sumatripan</td>
-              <td>Completed</td>              
-            </tr>
-          </table>
-          </div>
-        </text>
-        
-        <status value="current"/>
-        <mode value="snapshot"/>
-        <code>
-          <coding>
-            <system value="http://loinc.org"/>
-            <code value="10160-0"/>            
-          </coding>
-        </code>
-        <subject>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </subject>
-        <entry>
-          <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
-            <valueString value="headache, fever, sore throat"/>
-          </extension>
-          <flag>
-            <coding>
-              <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-              <code value="prescribed"/>
-              <display value="New prescription"/>
-            </coding>
-          </flag>
-          <item>
-            <reference value="urn:uuid:9db8a050-0c25-4192-834d-bca1da8ff250"/>
-          </item>
-        </entry>
-        <entry>
-          <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
-            <valueString value="headache, fever, sore throat"/>
-          </extension>
-          <flag>
-            <coding>
-              <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-              <code value="prescribed"/>
-              <display value="New prescription"/>
-            </coding>
-          </flag>
-          <item>
-            <reference value="urn:uuid:fc257fb0-8325-4f85-b29f-4c100346f527"/>
-          </item>
-        </entry>
-        <entry>
-          <flag>
-            <coding>
-              <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-              <code value="prescribed"/>
-              <display value="New prescription"/>
-            </coding>
-          </flag>
-          <item>
-            <reference value="urn:uuid:32def593-e104-4cee-b8f5-d1f923efd94b"/>
-          </item>
-        </entry>
-        <entry>
-          <flag>
-            <coding>
-              <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-              <code value="prescribed"/>
-              <display value="New prescription"/>
-            </coding>
-          </flag>
-          <item>
-            <reference value="urn:uuid:710f5906-2444-4b6a-b841-d3e23434f228"/>
-          </item>
-        </entry>
-      </List>
-    </resource>
-  </entry>
-
-  <!--Encounter-->
-  <entry>
-    <fullUrl value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
-    <resource>
-      <Encounter>
-        <id value="98900f15-67f8-48a1-9345-6d5968f2c23e"/>
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">Patient presented with a headache, fever, sore
-            throat. Patient advised she has no known allergies and was prescribed amoxicillin 500mg
-            3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during this
-            event. Patient advised that usually takes sumatriptan for migraine; they took one tablet
-            during the event, and during the event they were given one tablet to take home.</div>
-        </text>
-        <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
-          <valueString
-            value="Patient presented with a headache, fever,
-            sore throat. Patient advised she has no known allergies and was prescribed amoxicillin
-            500mg 3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during
-            this event. Patient advised that usually takes sumatriptan for migraine; they took one
-            tablet during the event, and during the event they were given one tablet to take home."
-          />
-        </extension>
-        <status value="in-progress"/>
-        <subject>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </subject>
-        <period>
-          <start value="2019-04-02"/>
-          <end value="2019-04-08"/>
-        </period>
-      </Encounter>
-    </resource>
-  </entry>
-
-  <!--    A MedicationStatement - Sumatripan (Completed)    -->
-  <entry>
-    <fullUrl value="urn:uuid:32def593-e104-4cee-b8f5-d1f923efd94b"/>
-    <resource>
-      <MedicationStatement xmlns="http://hl7.org/fhir">
-        <id value="32def593-e104-4cee-b8f5-d1f923efd94b"/>
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 32def593-e104-4cee-b8f5-d1f923efd94b</p>
-            <p><b>status</b>: completed</p>
-            <p><b>medication</b>: sumatriptan 100 mg <span style="background: LightGoldenRodYellow"
-                >(Details : {SNOMED CT code '45219011000036101' = '45219011000036101', given as
-                'sumatriptan 100 mg tablet'})</span></p>
-            <p><b>subject</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
-                >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
-            <p><b>taken</b>: y</p>
-          </div>
-        </text>
-        <status value="completed"/>
-        <medicationCodeableConcept>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="45219011000036101"/>
-            <display value="sumatriptan 100 mg tablet"/>
-          </coding>
-          <text value="sumatriptan 100 mg"/>
-        </medicationCodeableConcept>
-        <subject>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </subject>
-        <taken value="y"/>
-        <dosage>
-          <text value="1 d"/>
-          <timing>
-            <repeat>
-              <frequency value="1"/>
-              <period value="1"/>
-              <periodUnit value="d"/>
-            </repeat>
-          </timing>
-          <doseQuantity>
-            <value value="100"/>
-            <unit value="mg"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="mg"/>
-          </doseQuantity>
-        </dosage>
-      </MedicationStatement>
-
-    </resource>
-  </entry>
-
-  <!--    A MedicationStatement - Sumatripan (Intended)   -->
-  <entry>
-    <fullUrl value="urn:uuid:710f5906-2444-4b6a-b841-d3e23434f228"/>
-    <resource>
-      <MedicationStatement xmlns="http://hl7.org/fhir">
-        <id value="710f5906-2444-4b6a-b841-d3e23434f228"/>
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 710f5906-2444-4b6a-b841-d3e23434f228</p>
-            <p><b>status</b>: intended</p>
-            <p><b>medication</b>: sumatriptan 100 mg <span style="background: LightGoldenRodYellow"
-                >(Details : {SNOMED CT code '45219011000036101' = '45219011000036101', given as
-                'sumatriptan 100 mg tablet'})</span></p>
-            <p><b>subject</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
-                >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
-            <p><b>taken</b>: y</p>
-          </div>
-        </text>
-        <status value="intended"/>
-        <medicationCodeableConcept>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="45219011000036101"/>
-            <display value="sumatriptan 100 mg tablet"/>
-          </coding>
-          <text value="sumatriptan 100 mg"/>
-        </medicationCodeableConcept>
-        <subject>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </subject>
-        <taken value="y"/>
-        <dosage>
-          <text value="1 d"/>
-          <timing>
-            <repeat>
-              <frequency value="1"/>
-              <period value="1"/>
-              <periodUnit value="d"/>
-            </repeat>
-          </timing>
-          <doseQuantity>
-            <value value="100"/>
-            <unit value="mg"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="mg"/>
-          </doseQuantity>
-        </dosage>
-      </MedicationStatement>
-    </resource>
-  </entry>
-
-  <!--Medication Statement - amoxicillin 500mg 3/day for 5 days-->
-  <entry>
-    <fullUrl value="urn:uuid:9db8a050-0c25-4192-834d-bca1da8ff250"/>
-    <resource>
-      <MedicationStatement xmlns="http://hl7.org/fhir">
-        <id value="9db8a050-0c25-4192-834d-bca1da8ff250"/>
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 9db8a050-0c25-4192-834d-bca1da8ff250</p>
-            <p><b>status</b>: intended</p>
-            <p><b>medication</b>: amoxicillin 500 mg capsule <span
-                style="background: LightGoldenRodYellow">(Details : {SNOMED CT code
-                '23551011000036108' = '23551011000036108', given as 'amoxicillin 500 mg
-                capsule'})</span></p>
-            <p><b>subject</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
-                >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
-            <p><b>taken</b>: n</p>
-            <p><b>dosage</b>: 500mg 3/day for 5 days</p>
-          </div>
-        </text>
-        <status value="intended"/>
-        <medicationCodeableConcept>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="23551011000036108"/>
-            <display value="amoxicillin 500 mg capsule"/>
-          </coding>
-          <text value="amoxicillin 500 mg capsule"/>
-        </medicationCodeableConcept>
-        <subject>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </subject>
-        <taken value="n"/>
-        <dosage>
-          <text value="500mg 3/day for 5 days"/>
-          <timing>
-            <repeat>
-              <frequency value="3"/>
-              <period value="5"/>
-              <periodUnit value="d"/>
-            </repeat>
-          </timing>
-          <doseQuantity>
-            <value value="500"/>
-            <unit value="mg"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="mg"/>
-          </doseQuantity>
-        </dosage>
-      </MedicationStatement>
-    </resource>
-  </entry>
-
-  <!--Medication Statement -  augmentin forte 1 tablet-->
-  <entry>
-    <fullUrl value="urn:uuid:fc257fb0-8325-4f85-b29f-4c100346f527"/>
-    <resource>
-      <MedicationStatement xmlns="http://hl7.org/fhir">
-        <id value="fc257fb0-8325-4f85-b29f-4c100346f527"/>
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: fc257fb0-8325-4f85-b29f-4c100346f527</p>
-            <p><b>status</b>: intended</p>
-            <p><b>medication</b>: Augmentin Duo Forte 875/125 film-coated tablet <span
-                style="background: LightGoldenRodYellow">(Details : {SNOMED CT code
-                '6052011000036107' = '6052011000036107', given as 'Augmentin Duo Forte 875/125
-                film-coated tablet'})</span></p>
-            <p><b>subject</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
-                >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
-            <p><b>taken</b>: n</p>
-            <p><b>dosage</b>: 1 tablet twice a day for five days</p>
-          </div>
-        </text>
-        <status value="intended"/>
-        <medicationCodeableConcept>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="6052011000036107"/>
-            <display value="Augmentin Duo Forte 875/125 film-coated tablet"/>
-          </coding>
-          <text value="Augmentin Duo Forte 875/125 film-coated tablet"/>
-        </medicationCodeableConcept>
-        <subject>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </subject>
-        <taken value="n"/>
-        <dosage>
-          <text value="1 tablet twice a day for five days"/>
-          <timing>
-            <repeat>
-              <count value="1"/>
-              <frequency value="2"/>
-              <period value="5"/>
-              <periodUnit value="d"/>
-            </repeat>
-          </timing>
-        </dosage>
-      </MedicationStatement>
-    </resource>
-  </entry>
-
-  <!--AllergyIntolerance-->
-  <entry>
-    <fullUrl value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
-    <resource>
-      <AllergyIntolerance xmlns="http://hl7.org/fhir">
-        <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
-        <!--<meta>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1"
-          />
-        </meta>-->
-        <text>
-          <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: a5e03840-1be4-43e0-acd2-c9e288adc4f9</p>
-            <p><b>clinicalStatus</b>: active</p>
-            <p><b>verificationStatus</b>: confirmed</p>
-            <p><b>code</b>: No known medication allergies <span
-                style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '409137002' =
-                'No known history of drug allergy', given as 'No known drug allergy'})</span></p>
-            <p><b>patient</b>: <a href="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
-              >urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p>
-          </div>
-        </text>
-        <clinicalStatus value="active"/>
-        <verificationStatus value="confirmed"/>
-        <code>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="409137002"/>
-            <display value="No known drug allergy"/>
-          </coding>
-          <text value="No known medication allergies"/>
-        </code>
-        <patient>
-          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
-        </patient>
-      </AllergyIntolerance>
-    </resource>
-  </entry>
-
-  <!--    The Patient who is the subject of the document    -->
+<!--PATIENT-->
   <entry>
     <fullUrl value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
-        <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>
-        <meta>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"
-          />
-        </meta>
+        <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>        
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 792b4811-2ce7-4531-8893-af827175bcfe</p>
-            <p><b>meta</b>: </p>
-            <p><b>identifier</b>: National unique individual identifier = 8003608666701594</p>
-            <p><b>name</b>: Iliana Iglesias</p>
-            <p><b>gender</b>: other</p>
-            <p><b>birthDate</b>: 20/08/1960</p>
-            <p><b>generalPractitioner</b>: <a href="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"
-              >urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1</a></p>
-            <p><b>managingOrganization</b>: <a href="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"
-                >urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306</a></p>
+            <h2>Patient</h2>
+            <p><b>Name</b>: Eliana Iglesias</p>
+            <p><b>Identifier</b>: National unique individual identifier = 8003608666701594</p>            
+            <p><b>Gender</b>: Female</p>
+            <p><b>Date of birth</b>: 20/08/1960</p>
+            <p><b>General Practitioner</b>: Barry Helpman M.D.; telecom = email
+              bhelpman@example.devonportgp.com.au (work);</p>
+            <p><b>Managing Organization</b>: Devonport Family Medicine Clinic; ABN =
+              51824754455; telecom = email reception@example.dfmc.com.au (work);
+              telecom = fax (03) 8543 5557 (work); telecom = phone (03) 8543 5556
+              (work); address = LPO Box 235 Strahan, TAS 7468 (postal)></p>
+            <p><b>indigenous status</b>: Not stated/inadequately described</p>
           </div>
         </text>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
@@ -657,7 +268,20 @@
           <given value="Iliana"/>
         </name>
         <gender value="other"/>
-        <birthDate value="1960-08-20"/>
+        <birthDate value="1960-08-20">
+        <extension
+          url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">
+          <valueCoding>
+            <system
+              value="https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1"/>
+            <code value="AAE"/>
+            <display value="Day and month are accurate, year is estimated"/>
+          </valueCoding>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
+          <valueDateTime value="1960-08-20T20:07:00+10:00"/>
+        </extension>
+        </birthDate>
         <generalPractitioner>
           <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
         </generalPractitioner>
@@ -668,45 +292,20 @@
     </resource>
   </entry>
 
-  <!-- The Practitioner who is the author and attester of the documentAttester.party-->
+  <!-- PRACTITIONER-->
   <entry>
     <fullUrl value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
     <resource>
       <Practitioner xmlns="http://hl7.org/fhir">
-        <id value="40a94071-8373-4d53-a788-63b79c75a3c1"/>
-        <meta>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"
-          />
-        </meta>
+        <id value="40a94071-8373-4d53-a788-63b79c75a3c1"/>       
         <text>
           <status value="additional"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 40a94071-8373-4d53-a788-63b79c75a3c1</p>
-            <p><b>identifier</b>: HPI-I = 8003610000000000</p>
-            <p><b>name</b>: Barry Helpman (OFFICIAL)</p>
-            <p><b>telecom</b>: bhelpman@example.devonportgp.com.au(WORK)</p>
-            <h3>Qualifications</h3>
-            <table class="grid">
-              <tr>
-                <td>-</td>
-                <td><b>Identifier</b></td>
-                <td><b>Code</b></td>
-                <td><b>Issuer</b></td>
-              </tr>
-              <tr>
-                <td>*</td>
-                <td>AHPRA registration number = MED0000932850</td>
-                <td>AHPRA qualification for General Practitioner <span
-                    style="background: LightGoldenRodYellow">(Details :
-                    {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111',
-                    given as 'General Medical Practitioner'})</span></td>
-                <td>AHPRA</td>
-              </tr>
-            </table>
-          </div>
+          <div xmlns="http://www.w3.org/1999/xhtml">            
+            <p><b>Name</b>: Barry Helpman (OFFICIAL)</p>
+            <p><b>Identifier</b>: HPI-I = 8003610000000000</p>
+            <p><b>Telecom</b>: bhelpman@example.devonportgp.com.au(WORK)</p>
+            <p><b>Qualifications</b>: AHPRA qualification for General Practitioner = MED0000932850</p>
+          </div>            
         </text>
         <identifier>
           <type>
@@ -760,28 +359,84 @@
       </Practitioner>
     </resource>
   </entry>
-
-
-  <!--    Custodian - The Organisation that is the custodian of the document    -->
+  
+  <!-- PRACTITIONERROLE -->
+  <entry>
+    <fullUrl value="urn:uuid:e99357bd-b6ad-4ae7-9d99-27cb929e48af"/>
+    <resource>
+      <PractitionerRole xmlns="http://hl7.org/fhir">
+        <id value="e99357bd-b6ad-4ae7-9d99-27cb929e48af"/>        
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>PractitionerRole</h2>
+            <p><b>code</b>: General Practitioner</p>
+            <p><b>identifier</b>: Medicare Provider Number = 5544887B</p>
+            <p><b>identifier</b>: HPI-I = 8003610000000000</p>
+            <p><b>practitioner</b>: Barry Helpman M.D.; telecom = email
+              bhelpman@example.devonportgp.com.au (work); qualification = AHPRA
+              qualification for General Practitioner</p>
+            <p><b>organization</b>: Devonport Family Medicine Clinic; ABN = 51824754455;
+              telecom = email reception@example.dfmc.com.au (work); telecom = fax (03)
+              8543 5557 (work); telecom = phone (03) 8543 5556 (work); address = LPO
+              Box 235 Strahan, TAS 7468 (postal)</p>
+          </div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://hl7.org.au/fhir/v2/0203"/>
+              <code value="UPIN"/>
+            </coding>
+            <text value="Medicare Provider Number"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/medicare-provider-number"/>
+          <value value="5544887B"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://hl7.org/fhir/v2/0203"/>
+              <code value="NPI"/>
+              <display value="National provider identifier"/>
+            </coding>
+            <text value="HPI-I"/>
+          </type>
+          <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+          <value value="8003610000000000"/>
+        </identifier>
+        <practitioner>
+          <reference value="urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:2835b82a-9451-4db1-83c0-ae250f16bff9"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+            <code value="253111"/>
+            <display value="General Practitioner"/>
+          </coding>
+          <text value="GP"/>
+        </code>
+      </PractitionerRole>
+    </resource>
+  </entry>
+ 
+  <!--    CUSTODIAN -->
   <entry>
     <fullUrl value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
     <resource>
       <Organization xmlns="http://hl7.org/fhir">
-        <id value="021fff67-c5ec-438f-9520-ce9bafee130"/>
-        <meta>
-          <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1"
-          />
-        </meta>
+        <id value="021fff67-c5ec-438f-9520-ce9bafee130"/>       
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 021fff67-c5ec-438f-9520-ce9bafee130</p>
-            <p><b>identifier</b>: ABN = 51824754455</p>
-            <p><b>name</b>: Devonport Family Medicine Clinic</p>
-            <p><b>telecom</b>: reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph:
+            <p><b>Name</b>: Devonport Family Medicine Clinic</p>
+            <p><b>Identifier</b>: ABN = 51824754455</p>           
+            <p><b>Telecom</b>: reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph:
               (03) 8543 5556(WORK)</p>
-            <p><b>address</b>: LPO Box 235 Strahan TAS 7468 AU </p>
+            <p><b>Address</b>: LPO Box 235 Strahan TAS 7468 AU </p>
           </div>
         </text>
         <identifier>
@@ -818,18 +473,392 @@
       </Organization>
     </resource>
   </entry>
+  
+  <!--List-->
+  <entry>
+    <fullUrl value="http://example.org/fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
+    <resource>
+      <List xmlns="http://hl7.org/fhir">
+        <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>   
+        <!--The IG Publisher fails to run if the bundle example has a List resource with an Agency profile reference of "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"-->
+        <!--<meta>
+          <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"
+          />
+        </meta>-->
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>List</h2>
+            <p><b>status</b>: current</p>            
+            <table border="1">
+              <caption>Medication List</caption>
+              <thead>
+                <tr>
+                  <th>Medicine</th>                    
+                  <th>Directions</th>
+                  <th>Medicine purpose</th>
+                  <th>Status</th>
+                  <th>Flag</th>
+                  <th>Change-description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AMOXCILLIN 500mg TABLETS</td>
+                  <td>Take 3 tablets a day for 5 days.</td>
+                  <td>For headache, fever, sore throat.</td>
+                  <td>Not taken</td>
+                  <td>New prescription</td>
+                  <td>Prescription for amoxicillin 500 mg</td>
+                  <td/>
+                </tr>
+                <tr>
+                  <td>AUGMENTIN FORTE TABLETS</td>
+                  <td>Take 3 tablets a day for 5 days.</td>
+                  <td>For headache, fever, sore throat.</td>
+                  <td>Not taken</td>
+                  <td>New prescription</td>
+                  <td>Prescription for AUGMENTIN FORTE</td>
+                  <td/>
+                </tr>                  
+                <tr>
+                  <td>SUMATRIPAN TABLETS</td>
+                  <td></td>
+                  <td>For migraine.</td>
+                  <td>Not taken</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>SUMATRIPAN TABLETS</td>
+                  <td></td>
+                  <td>For migraine.</td>
+                  <td>Taken</td>
+                  <td></td>
+                  <td></td>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </text>
+        
+        <status value="current"/>
+        <mode value="snapshot"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="10160-0"/>            
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </subject>
+        <entry>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Prescription for headache, fever, sore throat"/>
+          </extension>
+          <flag>
+            <coding>
+              <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+              <code value="prescribed"/>
+              <display value="New prescription"/>
+            </coding>
+          </flag>
+          <item>
+            <reference value="urn:uuid:9db8a050-0c25-4192-834d-bca1da8ff250"/>
+          </item>
+        </entry>
+        <entry>
+          <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Prescription for headache, fever, sore throat"/>
+          </extension>
+          <flag>
+            <coding>
+              <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+              <code value="prescribed"/>
+              <display value="New prescription"/>
+            </coding>
+          </flag>
+          <item>
+            <reference value="urn:uuid:fc257fb0-8325-4f85-b29f-4c100346f527"/>
+          </item>
+        </entry>
+        <entry>          
+          <item>
+            <reference value="urn:uuid:32def593-e104-4cee-b8f5-d1f923efd94b"/>
+          </item>
+        </entry>
+        <entry>          
+          <item>
+            <reference value="urn:uuid:710f5906-2444-4b6a-b841-d3e23434f228"/>
+          </item>
+        </entry>
+      </List>
+    </resource>
+  </entry>
 
+  <!--Encounter-->
+  <entry>
+    <fullUrl value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+    <resource>
+      <Encounter>
+        <id value="98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang = "en-AU">
+            <h2>Encounter</h2>
+            <p><b>encounter-description</b>: Patient presented with a headache, fever, sore
+            throat. Patient advised she has no known allergies and was prescribed amoxicillin 500mg
+            3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during this
+            event. Patient advised that usually takes sumatriptan for migraine; they took one tablet
+            during the event, and during the event they were given one tablet to take home.</p>
+            <p><b>status</b>: in-progress</p>
+            <p><b>subject</b>: IHI = 8003608666701594; name =  Eliana Iglesias; birthDate = 20/08/1960; 
+              indigenous status = Not stated/inadequately described</p>
+            <p><b>start</b>: 02/04/2019</p>
+            <p><b>end</b>: 08/04/2019</p>
+          </div>
+        </text>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
+          <valueString
+            value="Patient presented with a headache, fever,
+            sore throat. Patient advised she has no known allergies and was prescribed amoxicillin
+            500mg 3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during
+            this event. Patient advised that usually takes sumatriptan for migraine; they took one
+            tablet during the event, and during the event they were given one tablet to take home."
+          />
+        </extension>
+        <status value="in-progress"/>
+        <subject>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </subject>
+        <period>
+          <start value="2019-04-02"/>
+          <end value="2019-04-08"/>
+        </period>
+      </Encounter>
+    </resource>
+  </entry>
+
+  <!--    A MedicationStatement - Sumatripan (Completed)    -->
+  <entry>
+    <fullUrl value="urn:uuid:32def593-e104-4cee-b8f5-d1f923efd94b"/>
+    <resource>
+      <MedicationStatement xmlns="http://hl7.org/fhir">
+        <id value="32def593-e104-4cee-b8f5-d1f923efd94b"/>
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang = "en-AU">
+            <p><b>Patient</b>: Eliana Iglesias</p>
+            <p><b>Status</b>: In-progress</p>
+            <p><b>Medication</b>: Sumatriptan 100 mg</p>            
+            <p><b>Taken</b>: Taken</p>
+            <p><b>Dosage</b>: 500mg 3/day for 5 days</p>
+          </div>
+        </text>
+        <status value="completed"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="45219011000036101"/>
+            <display value="sumatriptan 100 mg tablet"/>
+          </coding>
+          <text value="sumatriptan 100 mg"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </subject>
+        <taken value="y"/>        
+      </MedicationStatement>
+
+    </resource>
+  </entry>
+
+  <!--    A MedicationStatement - Sumatripan (Intended)   -->
+  <entry>
+    <fullUrl value="urn:uuid:710f5906-2444-4b6a-b841-d3e23434f228"/>
+    <resource>
+      <MedicationStatement xmlns="http://hl7.org/fhir">
+        <id value="710f5906-2444-4b6a-b841-d3e23434f228"/>
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p><b>Patient</b>: Eliana Iglesias</p>
+            <p><b>Status</b>: intended</p>
+            <p><b>Medication</b>: Sumatriptan 100 mg</p>            
+            <p><b>Taken</b>: Not yet taken</p>
+            <p><b>Dosage</b>: 500mg 3/day for 5 days</p>
+          </div>
+        </text>
+        <status value="intended"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="45219011000036101"/>
+            <display value="sumatriptan 100 mg tablet"/>
+          </coding>
+          <text value="sumatriptan 100 mg"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </subject>
+        <taken value="n"/>
+        <dosage>
+          <text value="1 tablet a day"/>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+
+  <!--Medication Statement - amoxicillin 500mg 3/day for 5 days-->
+  <entry>
+    <fullUrl value="urn:uuid:9db8a050-0c25-4192-834d-bca1da8ff250"/>
+    <resource>
+      <MedicationStatement xmlns="http://hl7.org/fhir">
+        <id value="9db8a050-0c25-4192-834d-bca1da8ff250"/>
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p><b>Patient</b>: Eliana Iglesias</p>
+            <p><b>Status</b>: intended</p>
+            <p><b>Medication</b>: amoxicillin 500 mg capsule</p>            
+            <p><b>Taken</b>: Not yet taken</p>
+            <p><b>Dosage</b>: 500mg 3/day for 5 days</p>
+          </div>
+        </text>
+        <status value="intended"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="23551011000036108"/>
+            <display value="amoxicillin 500 mg capsule"/>
+          </coding>
+          <text value="amoxicillin 500 mg capsule"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </subject>
+        <taken value="n"/>
+        <dosage>
+          <text value="500mg capsule 3 a day for 5 days"/>
+          <timing>
+            <repeat>
+              <frequency value="3"/>
+              <period value="5"/>
+              <periodUnit value="d"/>
+            </repeat>
+          </timing>
+          <doseQuantity>
+            <value value="500"/>
+            <unit value="mg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg"/>
+          </doseQuantity>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+
+  <!--Medication Statement -  augmentin forte 1 tablet-->
+  <entry>
+    <fullUrl value="urn:uuid:fc257fb0-8325-4f85-b29f-4c100346f527"/>
+    <resource>
+      <MedicationStatement xmlns="http://hl7.org/fhir">
+        <id value="fc257fb0-8325-4f85-b29f-4c100346f527"/>
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p><b>Patient</b>: Eliana Iglesias</p>
+            <p><b>Status</b>: intended</p>
+            <p><b>Medication</b>: Augmentin Duo Forte 875/125 film-coated tablet</p>           
+            <p><b>Taken</b>: Not yet taken</p>
+            <p><b>Dosage</b>: 1 tablet twice a day for five days</p>
+          </div>
+        </text>
+        
+        <status value="intended"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6052011000036107"/>
+            <display value="Augmentin Duo Forte 875/125 film-coated tablet"/>
+          </coding>
+          <text value="Augmentin Duo Forte 875/125 film-coated tablet"/>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </subject>
+        <taken value="n"/>
+        <dosage>
+          <text value="1 tablet twice a day for five days"/>
+          <timing>
+            <repeat>
+              <count value="1"/>
+              <frequency value="2"/>
+              <period value="5"/>
+              <periodUnit value="d"/>
+            </repeat>
+          </timing>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+
+  <!--AllergyIntolerance-->
+  <entry>
+    <fullUrl value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
+    <resource>
+      <AllergyIntolerance xmlns="http://hl7.org/fhir">
+        <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>       
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <h2>AllergyIntolerance</h2>
+            <p><b>Subject</b>: Eliana Iglesias</p>
+            <p><b>Clinical Status</b>: active</p>
+            <p><b>Verification Status</b>: confirmed</p>            
+          </div>
+        </text>
+        <clinicalStatus value="active"/>
+        <verificationStatus value="confirmed"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="409137002"/>
+            <display value="No known drug allergy"/>
+          </coding>
+          <text value="No known medication allergies"/>
+        </code>
+        <patient>
+          <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        </patient>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+
+  
   <!--Condition - Headache-->
   <entry>
     <fullUrl value="urn:uuid:f834bdcb-c535-49d8-8689-e00f6848af0d"/>
     <resource>
       <Condition xmlns="http://hl7.org/fhir">
         <id value="f834bdcb-c535-49d8-8689-e00f6848af0d"/>
-        <text> 
-          <status value="additional"/> 
-          <div xmlns="http://www.w3.org/1999/xhtml">Headache</div> 
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>Condition</h2>
+            <p><b>Subject</b>: Eliana Iglesias</p>
+            <p><b>Code</b>: Headache</p>
+            <p><b>Clinical Status</b>: active</p>
+            <p><b>Verification Status</b>: confirmed</p>            
+            <p><b>onsetDateTime</b>: 02/04/2019</p>
+            <p><b>assertedDate</b>: 04/04/2019 9:30 AM</p>            
+          </div>
         </text>  
         <clinicalStatus value="active"/>
+        <verificationStatus value="confirmed"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
@@ -840,6 +869,8 @@
         <subject>
           <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
         </subject>
+        <onsetDateTime value="2019-04-02"/>
+        <assertedDate value="2019-04-04T09:30:00+10:00"/>
       </Condition>
     </resource>
   </entry>
@@ -850,11 +881,20 @@
     <resource>
       <Condition xmlns="http://hl7.org/fhir">
         <id value="24e42657-2230-44df-8bac-d19346a7f20b"/>
-        <text> 
-          <status value="additional"/> 
-          <div xmlns="http://www.w3.org/1999/xhtml">Fever</div> 
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>Condition</h2>
+            <p><b>Subject</b>: Eliana Iglesias</p>
+            <p><b>Code</b>: Headache</p>
+            <p><b>Clinical Status</b>: active</p>
+            <p><b>Verification Status</b>: confirmed</p>            
+            <p><b>onsetDateTime</b>: 02/04/2019</p>
+            <p><b>assertedDate</b>: 04/04/2019 9:30 AM</p>            
+          </div>
         </text> 
         <clinicalStatus value="active"/>
+        <verificationStatus value="confirmed"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
@@ -865,6 +905,8 @@
         <subject>
           <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
         </subject>
+        <onsetDateTime value="2019-04-02"/>
+        <assertedDate value="2019-04-04T09:30:00+10:00"/>
       </Condition>
     </resource>
   </entry>
@@ -875,11 +917,20 @@
     <resource>
       <Condition xmlns="http://hl7.org/fhir">
         <id value="9ceb1602-547f-4e3c-883d-a500c5e9d925"/>
-        <text> 
-          <status value="additional"/> 
-          <div xmlns="http://www.w3.org/1999/xhtml">Sore throat symptom</div> 
+        <text>
+          <status value="additional"/>
+          <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>Condition</h2>
+            <p><b>Subject</b>: Eliana Iglesias</p>
+            <p><b>Code</b>: Headache</p>
+            <p><b>Clinical Status</b>: active</p>
+            <p><b>Verification Status</b>: confirmed</p>            
+            <p><b>onsetDateTime</b>: 02/04/2019</p>
+            <p><b>assertedDate</b>: 04/04/2019 9:30 AM</p>            
+          </div>
         </text>
         <clinicalStatus value="active"/>
+        <verificationStatus value="confirmed"/>
         <code>
           <coding>
             <system value="http://snomed.info/sct"/>
@@ -890,6 +941,8 @@
         <subject>
           <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
         </subject>
+        <onsetDateTime value="2019-04-02"/>
+        <assertedDate value="2019-04-04T09:30:00+10:00"/>
       </Condition>
     </resource>
   </entry>

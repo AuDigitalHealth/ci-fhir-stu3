@@ -5,16 +5,14 @@
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>id</b>: 710f5906-2444-4b6a-b841-d3e23434f228</p>
-            <p><b>status</b>: intended</p>
-            <p><b>medication</b>: sumatriptan 100 mg <span style="background: LightGoldenRodYellow"
-                >(Details : {SNOMED CT code '45219011000036101' = '45219011000036101', given as
-                'sumatriptan 100 mg tablet'})</span></p>
-            <p><b>subject</b>: Eliana Iglesias</p>
-            <p><b>taken</b>: y</p>
+            <p><b>Patient</b>: Eliana Iglesias</p>
+            <p><b>Status</b>: intended</p>
+            <p><b>Medication</b>: Sumatriptan 100 mg</p>            
+            <p><b>Taken</b>: Not yet taken</p>
+            <p><b>Dosage</b>: 500mg 3/day for 5 days</p>
         </div>
     </text>
-    <status value="active"/>
+    <status value="intended"/>
     <medicationCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -24,23 +22,10 @@
         <text value="sumatriptan 100 mg"/>
     </medicationCodeableConcept>
     <subject>
-        <reference value="Patient/792b4811-2ce7-4531-8893-af827175bcfe"/>
+        <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     </subject>
-    <taken value="y"/>
+    <taken value="n"/>
     <dosage>
-        <text value="1 d"/>
-        <timing>
-            <repeat>
-                <frequency value="1"/>
-                <period value="1"/>
-                <periodUnit value="d"/>
-            </repeat>
-        </timing>
-        <doseQuantity>
-            <value value="100"/>
-            <unit value="mg"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="mg"/>
-        </doseQuantity>
+        <text value="1 tablet a day"/>
     </dosage>
 </MedicationStatement>

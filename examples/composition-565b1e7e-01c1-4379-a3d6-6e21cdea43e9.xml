@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Composition xmlns="http://hl7.org/fhir">
+<Composition  xmlns="http://hl7.org/fhir">
   <id value="565b1e7e-01c1-4379-a3d6-6e21cdea43e9"/>
   <meta>
     <profile
@@ -9,15 +9,18 @@
   <language value="en-AU"/>
   <text>
     <status value="additional"/>
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p><b>id</b>: 565b1e7e-01c1-4379-a3d6-6e21cdea43e9</p>
-      <p><b>Language</b>: en-AU</p>
+    <div xmlns="http://www.w3.org/1999/xhtml" lang = "en-AU">
+      <p><b>Title</b>: Event Summary</p>          
+      <p><b>Subject</b>: IHI = 8003608666701594; name =  Eliana Iglesias; birthDate = 20/08/1960; indigenous status = Not stated/inadequately
+        described</p>
       <p><b>Status</b>: final</p>
-      <p><b>type</b>: Summary of episode note </p>
-      <p><b>Date</b>: 19/07/2018 9:00:15 AM</p>
+      <p><b>Type</b>: Summary of episode note </p>
+      <p><b>Date</b>: 19/07/2018</p>
       <p><b>Author</b>: HPI-I = 8003610000000000; name = Barry Helpman M.D.</p>
-      <p><b>title</b>: Event Summary</p>           
-      <p><b>custodian</b>: ABN = 51824754455; name  = Devonport Family Medicine Clinic</p>
+      <p><b>Author role</b>: General Practitioner; Medicare Provider Number:
+        5544887B, HPI-I = 8003610000000000; Barry Helpman; Devonport Family
+        Medicine Clinic</p>
+      <p><b>Custodian</b>: name  = Devonport Family Medicine Clinic; ABN = 51824754455; email = reception@example.dfmc.com.au (WORK);</p>
     </div>
   </text>
   <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
@@ -27,10 +30,6 @@
       />
     </valueReference>
   </extension>
-  <identifier>
-    <system value="urn:ietf:rfc:3986"/>
-    <value value="3bb44f10-4350-498c-a629-4bf43df620e9"/>
-  </identifier>
   <status value="final"/>
   <type>
     <coding>
@@ -40,25 +39,25 @@
     </coding>
   </type>
   <subject>
-    <reference value="Patient/792b4811-2ce7-4531-8893-af827175bcfe"/>
+    <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
   </subject>
   <encounter>
-    <reference value="Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+    <reference value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
   </encounter>
-  <date value="2018-07-19T09:00:15+10:00"/>
+  <date value="2018-07-19"/>
   <author>
-    <reference value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+    <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
   </author>
   <title value="Event Summary"/>
   <attester>
     <mode value="legal"/>
     <time value="2017-06-21T09:00:15+10:00"/>
     <party>
-      <reference value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+      <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
     </party>
   </attester>
   <custodian>
-    <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+    <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
   </custodian>
   
   <!-- Event Details-->
@@ -69,21 +68,22 @@
         <system
           value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
         <code value="101.16672"/>
-        <display value="Event Details"/>
+        <display value="Event Overview"/>
       </coding>
     </code>
     <text>
       <status value="additional"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">Patient presented with a headache, fever, sore
-        throat. Patient advised she has no known allergies and was prescribed amoxicillin
-        500mg 3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during
-        this event. Patient advised that usually takes sumatriptan for migraine; they took one
-        tablet during the event, and during the event they were given one tablet to take home.
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <h1>Event Overview</h1>
+        <p>Patient presented with a headache, fever, sore
+          throat. Patient advised she has no known allergies and was prescribed amoxicillin
+          500mg 3/day for 5 days, and augmentin forte 1 tablet twice a day for five days during
+          this event. Patient advised that usually takes sumatriptan for migraine; they took one
+          tablet during the event, and during the event they were given one tablet to take home.</p>
       </div>
     </text>
-    <mode value="snapshot"/>
     <entry>
-      <reference value="Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+      <reference value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
     </entry>
   </section>
   
@@ -103,9 +103,8 @@
         <p>No known medication allergies.</p>
       </div>
     </text>
-    <mode value="snapshot"/>
     <entry>
-      <reference value="AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
+      <reference value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
     </entry>
   </section>
   
@@ -122,19 +121,43 @@
     <text>
       <status value="additional"/>
       <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
-        <table border="5">
+        <table border="1">
           <caption>Medications</caption>
           <thead>
             <tr>
-              <th>Medication</th>
-              <th>Dose</th>
-              <th>Purpose/Comment</th>
+              <th>Medicine</th>                    
+              <th>Directions</th>
+              <th>Medicine purpose</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>sumatriptan 100 mg</td>
-              <td>1 d</td>
+              <td>AMOXCILLIN 500mg TABLETS</td>
+              <td>Take 3 tablets a day for 5 days.</td>
+              <td>For headache, fever, sore throat.</td>
+              <td>Not taken</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>AUGMENTIN FORTE TABLETS</td>
+              <td>Take 3 tablets a day for 5 days.</td>
+              <td>For headache, fever, sore throat.</td>
+              <td>Not taken</td>
+              <td/>
+            </tr>                  
+            <tr>
+              <td>SUMATRIPAN TABLETS</td>
+              <td></td>
+              <td>For migraine.</td>
+              <td>Not taken</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>SUMATRIPAN TABLETS</td>
+              <td></td>
+              <td>For migraine.</td>
+              <td>Taken</td>
               <td/>
             </tr>
           </tbody>
@@ -142,11 +165,15 @@
       </div>
     </text>
     <entry>
-      <reference value="List/fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
+      <!-- known issue that the IG publisher fails to complete  -->
+      <!-- when this reference is made to the actual list resource -->
+      <!-- for now this 'placeholder' allows the publisher to run -->
+      <!-- it should be "urn:uuid:fa11a4f8-9ecc-4a65-9643-74c3c8480f4" -->
+      <reference value="urn:uuid:waiting-for-list-profile-to-be-fixed"/>
     </entry>
   </section>
   
-  <!-- Diagnoses/Interventions-->
+  <!-- Medical History -->
   <section>
     <title value="Diagnoses/Interventions"/>
     <code>
@@ -159,38 +186,20 @@
     </code>
     <text>
       <status value="additional"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <table border="5">
-          <caption>Problems and Diagnoses</caption>
-          <thead>
-            <tr>
-              <th>Condition</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>headache</td>
-            </tr>
-            <tr>
-              <td>fever</td>
-            </tr>
-            <tr>
-              <td>sore throat</td>
-            </tr>
-          </tbody>
-        </table>
-        
+      <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+        <p><b>condition</b>: headache</p>
+        <p><b>condition</b>: fever</p>
+        <p><b>condition</b>: sore throat</p>>
       </div>
     </text>
-    <mode value="snapshot"/>
     <entry>
-      <reference value="Condition/f834bdcb-c535-49d8-8689-e00f6848af0d"/>
+      <reference value="urn:uuid:f834bdcb-c535-49d8-8689-e00f6848af0d"/>
     </entry>
     <entry>
-      <reference value="Condition/24e42657-2230-44df-8bac-d19346a7f20b"/>
+      <reference value="urn:uuid:24e42657-2230-44df-8bac-d19346a7f20b"/>
     </entry>
     <entry>
-      <reference value="Condition/9ceb1602-547f-4e3c-883d-a500c5e9d925"/>
+      <reference value="urn:uuid:9ceb1602-547f-4e3c-883d-a500c5e9d9255"/>
     </entry>
   </section>
 </Composition>

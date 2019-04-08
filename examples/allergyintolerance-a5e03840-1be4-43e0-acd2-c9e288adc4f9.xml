@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
-    <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
-    <meta>
-        <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1"
-        />
-    </meta>
+    <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>       
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <h2>AllergyIntolerance</h2>
+            <p><b>Subject</b>: Eliana Iglesias</p>
+            <p><b>Clinical Status</b>: active</p>
+            <p><b>Verification Status</b>: confirmed</p>            
+        </div>
+    </text>
     <clinicalStatus value="active"/>
-    <verificationStatus value="unconfirmed"/>
+    <verificationStatus value="confirmed"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -18,6 +22,6 @@
         <text value="No known medication allergies"/>
     </code>
     <patient>
-        <reference value="Patient/792b4811-2ce7-4531-8893-af827175bcfe"/>
+        <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     </patient>
 </AllergyIntolerance>
