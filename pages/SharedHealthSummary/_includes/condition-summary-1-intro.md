@@ -1,24 +1,15 @@
-#### Summary Statement of Condition *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
-
-##### Usage scenarios
-
-The following are the usage scenarios expected:
-
-* A summary statement of a condition, problem or diagnosis exchanged as a referenced entry in a composition
-
-Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing profiles. 
-
-
+### Summary Statement of Condition *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Implementation guidance
-* Where additional content beyond that flagged with must support is provided it:
-    * shall not qualify or negate content described by this profile as must support
+For the expected usage scenarios in this implementation guide:
     
-    * shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
-    
-* For the usage scenario for this profile it is expected that status will be ‘active’.
+* It is expected that verificationStatus will be ‘confirmed’.
 
-* For the usage scenario for this profile it is expected that verificationStatus will be ‘unknown’. Where a sending system does not clearly have this element this should be the value sent.
+* It is expected that clinicalStatus will be ‘active’.
+
+* A ‘refuted’ condition should be represented with an appropriate negation code and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.
+
+* A 'refuted' condition should be represented with an appropriate negation code and a clinicalStatus of 'inactive'.
 
 
 
