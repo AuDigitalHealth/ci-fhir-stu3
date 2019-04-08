@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="implementationguide-sharedhealthsummary-1"/>
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <p>Australian Digital Health Agency's Shared Health Summary Profile.</p>
+        </div>
+  </text>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedhealthsummary-1"/>
+  <version value="1.0.0"/>
+  <name value="Shared Health Summary"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Australian Digital Health Agency"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description value="Australian realm implementation guide of the FHIR specification to represent Shared Health Summary records in the My Health Record system and related applications."/>
+  <copyright value="Copyright &#xA9; 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <fhirVersion value="3.0.1"/>
+  <package id="p1">
+    <name value="SHS"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-composition-shs-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="Shared Health Summary"/>
+      <sourceReference>
+        <reference value="StructureDefinition/composition-shs-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-patient-dh-base-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="patient-dh-base-1"/>
+      <description value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+      <sourceReference>
+        <reference value="StructureDefinition/patient-dh-base-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-patient-ident-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="patient-ident-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/patient-ident-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-patient-ihi-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="patient-ihi-1"/>
+      <description value="The Agency Patient profile, as derived from the HL7 AU patient profile with a mandatory IHI."/>
+      <sourceReference>
+        <reference value="StructureDefinition/patient-ihi-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-relatedperson-dh-base-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="relatedperson-dh-base-1"/>
+      <description value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
+      <sourceReference>
+        <reference value="StructureDefinition/relatedperson-dh-base-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-organization-dh-base-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="organization-dh-base-1"/>
+      <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+      <sourceReference>
+        <reference value="StructureDefinition/organization-dh-base-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-organization-ident-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="organization-ident-1"/>
+      <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+      <sourceReference>
+        <reference value="StructureDefinition/organization-ident-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-practitioner-dh-base-1.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/practitioner-dh-base-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-practitioner-ident-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="practitioner-ident-1"/>
+      <description value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
+      <sourceReference>
+        <reference value="StructureDefinition/practitioner-ident-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-practitionerrole-dh-base-1.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/practitionerrole-dh-base-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-practitionerrole-withpractitionerident-1.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/practitionerrole-withpractitionerident-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-medicationstatement-summary-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="medicationstatement-summary-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/medicationstatement-summary-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-immunization-summary-administration-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="immunization-summary-administration-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/immunization-summary-administration-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-procedure-summary-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="procedure-summary-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/procedure-summary-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-condition-summary-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="condition-summary-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/condition-summary-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-allergyintolerance-summary-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="allergyintolerance-summary-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/allergyintolerance-summary-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-observation-norelevantfinding-1.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="observation-norelevantfinding-1"/>
+      <sourceReference>
+        <reference value="StructureDefinition/observation-norelevantfinding-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-humanname-dh-base-1.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/humanname-dh-base-1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-a0da969a-7956-439b-b390-8de071a2df7c.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS 3"/>
+      <description value="SHS 3"/>
+      <sourceReference>
+        <reference value="Composition/a0da969a-7956-439b-b390-8de071a2df7c"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-bd06e981-ba86-4020-ba59-cd89f80e8712.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS 3"/>
+      <description value="SHS 3"/>
+      <sourceReference>
+        <reference value="Composition/bd06e981-ba86-4020-ba59-cd89f80e8712"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS 3"/>
+      <description value="SHS 3"/>
+      <sourceReference>
+        <reference value="Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-de5ef077b-cc0f-4c3d-a4cd-a35ceafff331.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS 3"/>
+      <description value="SHS 3 - de-contained version of example 1"/>
+      <sourceReference>
+        <reference value="Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-e-f1412590-54f5-11e9-b475-0800200c9a66.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS 3 - de-contained version of example 2"/>
+      <description value="SHS 3"/>
+      <sourceReference>
+        <reference value="Composition/e-f1412590-54f5-11e9-b475-0800200c9a66"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-f-ba3eaa80-55c8-11e9-b475-0800200c9a66.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS 3 - de-contained version of example 3"/>
+      <description value="SHS 3"/>
+      <sourceReference>
+        <reference value="Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-f7583f71-7736-4d10-89f7-fa1845e53120.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine candesartan (32mg) with dosage and quantity"/>
+      <description value="Patient taking medicine candesartan (32mg) with dosage and quantity"/>
+      <sourceReference>
+        <reference value="MedicationStatement/f7583f71-7736-4d10-89f7-fa1845e53120"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-314619c2-2d97-4fb9-9c25-b0b9da92f804.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine metformin hydrochloride with dosage and quantity"/>
+      <description value="Patient taking medicine metformin hydrochloride with dosage and quantity"/>
+      <sourceReference>
+        <reference value="MedicationStatement/314619c2-2d97-4fb9-9c25-b0b9da92f804"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-90d418aa-ed53-447b-95d2-099101ed4339.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine candesartan (8mg) with dosage and quantity"/>
+      <description value="Patient taking medicine candesartan (8mg) with dosage and quantity"/>
+      <sourceReference>
+        <reference value="MedicationStatement/90d418aa-ed53-447b-95d2-099101ed4339"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-e6e84607-a0da-4ead-9ed6-5e064fea9fc4.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Patient with IHI and Medicare Number"/>
+      <description value="Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status"/>
+      <sourceReference>
+        <reference value="Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Practitioner with HPI-I and AHPRA Number"/>
+      <description value="Shows a typical practitioner using identifier profiles for HPI-I and Australian Health Practitioner Regulation Agency Registration Number"/>
+      <sourceReference>
+        <reference value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Practitioner as a General Practitioner"/>
+      <description value="Shows a typical Practitioner as a General Practitioner"/>
+      <sourceReference>
+        <reference value="Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="PractitionerRole-45cad6ac-e9a3-418a-8480-4e64132849f2.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Practitioner Role as a General Practitioner"/>
+      <description value="Shows a typical Practitioner Role as a General Practitioner"/>
+      <sourceReference>
+        <reference value="PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organisation of a General Practitioner"/>
+      <description value="Shows a typical Organisation the General Practitioner belongs to"/>
+      <sourceReference>
+        <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-b620003d-3a4f-4aca-88a5-a203f94fa911.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organisation of a General Practitioner with name only"/>
+      <description value="Shows an Organisation the General Practitioner belongs to (name only)"/>
+      <sourceReference>
+        <reference value="Organization/b620003d-3a4f-4aca-88a5-a203f94fa911"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="AllergyIntolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - no known medication allergies"/>
+      <description value="An AllergyIntollerance example showing no known medication allergies"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Procedure-3bc4a0f3-1d3e-4bde-83a9-7a04dd5f4a77.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Procedure - Total replacement of left knee joint"/>
+      <description value="A patient with the procedure of Total replacement of left knee joint"/>
+      <sourceReference>
+        <reference value="Procedure/3bc4a0f3-1d3e-4bde-83a9-7a04dd5f4a77"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Condition-cfa41daf-b5a6-4a05-9166-a4b7c23f08a1.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Condition - Atrial fibrillation"/>
+      <description value="A patient with the condition of atrial fibrilation"/>
+      <sourceReference>
+        <reference value="Condition/cfa41daf-b5a6-4a05-9166-a4b7c23f08a1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Condition-b021320c-bc5e-4ae8-b9fc-1ed2d876e889.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Condition - Right lower zone pneumonia"/>
+      <description value="A patient with the condition of right lower zone pneumonia"/>
+      <sourceReference>
+        <reference value="Condition/b021320c-bc5e-4ae8-b9fc-1ed2d876e889"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS B"/>
+      <description value="SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds."/>
+      <sourceReference>
+        <reference value="Composition/ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Joe Greatpatient"/>
+      <description value="Patient with birth date, birth time, and the associated accuracy extension."/>
+      <sourceReference>
+        <reference value="Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Observation-ty65cc78-60b0-41cb-83d4-32521d3b9fa2.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="No relevant medical history"/>
+      <description value="Assertion of no relevant medical history."/>
+      <sourceReference>
+        <reference value="Observation/ty65cc78-60b0-41cb-83d4-32521d3b9fa2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medication statement"/>
+      <description value="Taking Candesartan"/>
+      <sourceReference>
+        <reference value="MedicationStatement/yh783f71-7736-4d10-89f7-fa1845e53987"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Immunization-hgi72daf-b5a6-4a05-9166-a4b7c23f08a1.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Immunization for diphtheria + tetanus"/>
+      <sourceReference>
+        <reference value="Immunization/hgi72daf-b5a6-4a05-9166-a4b7c23f08a1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Bundle-gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="SHS B as bundle"/>
+      <description value="FHIR Document of SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds."/>
+      <sourceReference>
+        <reference value="Bundle/gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-841a56de-92d7-47fd-bb27-bad8efb371e4.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Adam Everyman"/>
+      <description value="Patient with IHI."/>
+      <sourceReference>
+        <reference value="Patient/841a56de-92d7-47fd-bb27-bad8efb371e4"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-428f6506-625f-4f16-b0e2-b31ab6d293bf.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Dr Peter Chalmers"/>
+      <description value="Practitioner with HPI-I."/>
+      <sourceReference>
+        <reference value="Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="PractitionerRole-f61db690-0ba4-4219-acd4-021ecc6a36fd.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Practitioner Role as a General Practitioner"/>
+      <description value="PractitionerRole with HPI-I."/>
+      <sourceReference>
+        <reference value="PractitionerRole/f61db690-0ba4-4219-acd4-021ecc6a36fd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-64e56b9c-e51d-4157-b379-34e71e3dbfa4.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organisation of a General Practitioner with name"/>
+      <description value="Shows an Organisation the General Practitioner belongs to (name)"/>
+      <sourceReference>
+        <reference value="Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="AllergyIntolerance-c5c80cde-70d0-4644-9d55-ae5574fcd8ea.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - Penicillin"/>
+      <description value="An AllergyIntollerance example to Penicillin"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/c5c80cde-70d0-4644-9d55-ae5574fcd8ea"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="AllergyIntolerance-d977ab88-ecbe-49c1-99b7-9b1afbb65563.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - Nuts"/>
+      <description value="An AllergyIntollerance example to Nuts"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/d977ab88-ecbe-49c1-99b7-9b1afbb65563"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Observation-dd82cc78-60b0-41cb-83d4-32521d3b9fa2.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="No known current medications"/>
+      <description value="Assertion of no known current medications"/>
+      <sourceReference>
+        <reference value="Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Immunization-7e7dbbfe-5afb-4938-86eb-27060b5daba7.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Immunization for Engerix-B Adult"/>
+      <sourceReference>
+        <reference value="Immunization/7e7dbbfe-5afb-4938-86eb-27060b5daba7"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Immunization-d4b8094b-435e-4b43-b38b-f38328bddda3.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Immunization for Meningitec"/>
+      <sourceReference>
+        <reference value="Immunization/d4b8094b-435e-4b43-b38b-f38328bddda3"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Immunization-8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Immunization for Fluvax 2015"/>
+      <sourceReference>
+        <reference value="Immunization/8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-d9698a55-723a-49de-931b-4e61d732b016.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Adam Everyman"/>
+      <description value="Patient with IHI."/>
+      <sourceReference>
+        <reference value="Patient/d9698a55-723a-49de-931b-4e61d732b016"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Dr Peter Chalmers"/>
+      <description value="Practitioner with HPI-I and AHPRA number."/>
+      <sourceReference>
+        <reference value="Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="PractitionerRole-08da397e-01af-4236-a458-70b05d7e8df8.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Practitioner Role as a General Practitioner"/>
+      <description value="PractitionerRole with HPI-I."/>
+      <sourceReference>
+        <reference value="PractitionerRole/08da397e-01af-4236-a458-70b05d7e8df8"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-9df89ebf-b9ab-4ed5-b865-90892c1bbb1a.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organisation of a General Practitioner with name"/>
+      <description value="Shows an Organisation the General Practitioner belongs to (name)"/>
+      <sourceReference>
+        <reference value="Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="AllergyIntolerance-1509ea06-0856-43ed-8842-cc7e6f48c460.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="AllergyIntolerance example - No known drug allergy"/>
+      <description value="An AllergyIntollerance example - No known medication allergies"/>
+      <sourceReference>
+        <reference value="AllergyIntolerance/1509ea06-0856-43ed-8842-cc7e6f48c460"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-21fcbd65-b116-4528-b396-5c834435bf68.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine Ferrous sulphate &amp; vitamin C with dosage"/>
+      <description value="Patient taking Ferrous sulphate &amp; vitamin C"/>
+      <sourceReference>
+        <reference value="MedicationStatement/21fcbd65-b116-4528-b396-5c834435bf68"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-d30f3bd7-7106-4530-8b10-e9b5c43c2ec8.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine Fluticasone/salmeterol 250/25 with dosage"/>
+      <description value="Patient taking Fluticasone/salmeterol 250/25"/>
+      <sourceReference>
+        <reference value="MedicationStatement/d30f3bd7-7106-4530-8b10-e9b5c43c2ec8"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-480ddf2a-885c-4a44-837a-25503b6ea740.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Sodium chloride 600mg with dosage and quantity"/>
+      <description value="Patient taking Sodium chloride 600mg"/>
+      <sourceReference>
+        <reference value="MedicationStatement/480ddf2a-885c-4a44-837a-25503b6ea740"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-c4292c20-8037-487d-9d8b-b834b59bfb17.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine Mega B complex with dosage"/>
+      <description value="Patient taking Mega B complex"/>
+      <sourceReference>
+        <reference value="MedicationStatement/c4292c20-8037-487d-9d8b-b834b59bfb17"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-bc8a3682-1060-4be9-a4a2-7210c71d5c11.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine Bromhexine 0.8 mg/ml with dosage"/>
+      <description value="Patient taking Bromhexine 0.8 mg/ml"/>
+      <sourceReference>
+        <reference value="MedicationStatement/bc8a3682-1060-4be9-a4a2-7210c71d5c11"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-a7f22a69-608c-49e2-911b-53b609b2be0a.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Medicine Multivitamin"/>
+      <description value="Patient taking Multivitamin"/>
+      <sourceReference>
+        <reference value="MedicationStatement/a7f22a69-608c-49e2-911b-53b609b2be0a"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Immunization-42bdb0e9-d510-46c4-a4a3-02205dbb1447.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Immunization for Engerix-B Adult"/>
+      <sourceReference>
+        <reference value="Immunization/42bdb0e9-d510-46c4-a4a3-02205dbb1447"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Immunization-21e09e32-441a-4297-a803-970358b4f20f.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Immunization for Fluvax 2015"/>
+      <sourceReference>
+        <reference value="Immunization/21e09e32-441a-4297-a803-970358b4f20f"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <page>
+    <source value="index.html"/>
+    <title value="Australian Digital Health Agency Shared Health Summary FHIR Implementation Guide"/>
+    <kind value="page"/>
+  </page>
+</ImplementationGuide>

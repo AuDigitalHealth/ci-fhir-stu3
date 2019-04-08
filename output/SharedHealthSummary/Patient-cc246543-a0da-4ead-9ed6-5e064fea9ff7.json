@@ -1,0 +1,73 @@
+{
+  "resourceType": "Patient",
+  "id": "cc246543-a0da-4ead-9ed6-5e064fea9ff7",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1",
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p><b>Patient</b></p>\n            <p><b>identifier</b>: National unique individual identifier = 8003608666701594</p>\n            <p><b>name</b>: Joe Greatpatient </p>\n            <p><b>gender</b>: male</p>\n            <p><b>birthDate</b>: 23/08/1956</p>\n            <p><b>generalPractitioner</b>: Good Doctor</p>\n            <p><b>managingOrganization</b>: ABN = 51824754455; name: Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03)\n                8543 5557(WORK), ph: (03) 8543 5556(WORK)</p>\n            <p><b>indigenous status</b>: Not stated/inadequately described</p>\n        </div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+      "valueCoding": {
+        "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+        "code": "9",
+        "display": "Not stated/inadequately described"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NI",
+            "display": "National unique individual identifier"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608666701594"
+    }
+  ],
+  "name": [
+    {
+      "family": "Greatpatient",
+      "given": [
+        "Joe"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1956-08-23",
+  "_birthDate": {
+    "extension": [
+      {
+        "url": "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+        "valueCoding": {
+          "system": "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+          "code": "AAE",
+          "display": "Day and month are accurate, year is estimated"
+        }
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+        "valueDateTime": "1956-08-23T15:07:00+10:00"
+      }
+    ]
+  },
+  "generalPractitioner": [
+    {
+      "reference": "Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/021fff67-c5ec-438f-9520-ce9bafee1306"
+  }
+}

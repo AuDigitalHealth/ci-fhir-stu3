@@ -1,0 +1,1067 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Shared Health Summary</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shared Health Summary Implemenation Guide" />
+  <meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+
+   <!-- Latest compiled and minified CSS -->
+
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+  <link href="assets/css/ci-styles-fig.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+
+<body markdown="1"/>
+
+</html>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="https://www.digitalhealth.gov.au/"><img alt="Agency logo" src="assets/images/agency-logo-www.png"/> </a>
+
+   <div id="ig-status">
+    <b>Shared Health Summary FHIR Implementation Guide  1.0.0</b>
+</div>
+
+  </div>
+  <div class="container">  <!-- container -->
+ </div>
+ </div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3//index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guidance.html">Guidance</a></li>
+       <li><a href="conformance.html">Conformance</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <!--<li><a href="structuremaps.html">Mappings</a></li>-->
+        <li><a href="extensions.html">Extensions</a></li>
+       <li><a href="mappings.html">Mapping from requirements</a></li>
+       <!-- <li><a href="terminology.html">Terminology</a></li>-->
+        <!--<li><a href="searchparams.html">Search Parameters</a></li>-->
+        <!--<li><a href="capstatements.html">Capability Statements</a></li>-->
+        <!--<li><a href="security.html">Security</a></li>-->
+        <li><a href="downloads.html">Downloads</a></li>
+       <li><a href="disclaimers.html">Disclaimers</a></li>
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+</div>  <!-- /container -->
+</div>  <!-- /segment-breadcrumb -->
+
+<div id="segment-content" class="segment">  <!-- segment-content -->
+<div class="container">  <!-- container -->
+<div class="row">
+<div class="inner-wrapper">
+
+
+<div class="col-12">
+
+
+<!-- ============BreadCrumb=============== -->
+
+<nav class="breadcrumb">
+  
+    
+    
+      <a class="breadcrumb-item" href="index.html">Home</a>
+      /
+      <a class="breadcrumb-item" href="profiles.html">Profiles</a>
+      /
+      <span class="breadcrumb-item active">ImplementationGuide-implementationguide-sharedhealthsummary-1.xml</span>
+    
+    
+    
+    
+
+</nav>
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h2>Example: ImplementationGuide-implementationguide-sharedhealthsummary-1</h2>
+
+<p>
+Formats: <a href="ImplementationGuide-implementationguide-sharedhealthsummary-1.html">Narrative</a>, <a href="ImplementationGuide-implementationguide-sharedhealthsummary-1.xml.html">XML</a>, <a href="ImplementationGuide-implementationguide-sharedhealthsummary-1.json.html">JSON</a>, <a href="ImplementationGuide-implementationguide-sharedhealthsummary-1.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="ImplementationGuide-implementationguide-sharedhealthsummary-1.xml" download>xml</a>
+</p>
+
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide">ImplementationGuide</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;implementationguide-sharedhealthsummary-1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.language">language</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;en-AU&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;en-AU&quot;&gt;
+            &lt;p&gt;Australian Digital Health Agency's Shared Health Summary Profile.&lt;/p&gt;
+        &lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.url">url</a>
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedhealthsummary-1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shared Health Summary&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Australian Digital Health Agency&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;help@digitalhealth.gov.au&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.description">description</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Australian realm implementation guide of the FHIR specification to represent Shared Health Summary records in the My Health Record system and related applications.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.copyright">copyright</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;3.0.1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package">package</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;p1&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-composition-shs-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shared Health Summary&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/composition-shs-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-patient-dh-base-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;patient-dh-base-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Agency Patient profile, as derived from the HL7 AU patient profile.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/patient-dh-base-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-patient-ident-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;patient-ident-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/patient-ident-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-patient-ihi-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;patient-ihi-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Agency Patient profile, as derived from the HL7 AU patient profile with a mandatory IHI.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/patient-ihi-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-relatedperson-dh-base-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;relatedperson-dh-base-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/relatedperson-dh-base-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-organization-dh-base-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;organization-dh-base-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Agency Organization profile, as derived from the HL7 AU Organization profile.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/organization-dh-base-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-organization-ident-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;organization-ident-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Agency Organization profile, as derived from the HL7 AU Organization profile.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/organization-ident-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-practitioner-dh-base-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/practitioner-dh-base-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-practitioner-ident-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;practitioner-ident-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/practitioner-ident-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-practitionerrole-dh-base-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/practitionerrole-dh-base-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-practitionerrole-withpractitionerident-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/practitionerrole-withpractitionerident-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-medicationstatement-summary-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;medicationstatement-summary-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/medicationstatement-summary-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-immunization-summary-administration-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;immunization-summary-administration-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/immunization-summary-administration-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-procedure-summary-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;procedure-summary-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/procedure-summary-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-condition-summary-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;condition-summary-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/condition-summary-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-allergyintolerance-summary-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;allergyintolerance-summary-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/allergyintolerance-summary-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-observation-norelevantfinding-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;observation-norelevantfinding-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/observation-norelevantfinding-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;StructureDefinition-humanname-dh-base-1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;StructureDefinition/humanname-dh-base-1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-a0da969a-7956-439b-b390-8de071a2df7c.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/a0da969a-7956-439b-b390-8de071a2df7c&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-bd06e981-ba86-4020-ba59-cd89f80e8712.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/bd06e981-ba86-4020-ba59-cd89f80e8712&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-de5ef077b-cc0f-4c3d-a4cd-a35ceafff331.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3 - de-contained version of example 1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-e-f1412590-54f5-11e9-b475-0800200c9a66.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3 - de-contained version of example 2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/e-f1412590-54f5-11e9-b475-0800200c9a66&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-f-ba3eaa80-55c8-11e9-b475-0800200c9a66.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3 - de-contained version of example 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS 3&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-f7583f71-7736-4d10-89f7-fa1845e53120.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine candesartan (32mg) with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking medicine candesartan (32mg) with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/f7583f71-7736-4d10-89f7-fa1845e53120&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-314619c2-2d97-4fb9-9c25-b0b9da92f804.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine metformin hydrochloride with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking medicine metformin hydrochloride with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/314619c2-2d97-4fb9-9c25-b0b9da92f804&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-90d418aa-ed53-447b-95d2-099101ed4339.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine candesartan (8mg) with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking medicine candesartan (8mg) with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/90d418aa-ed53-447b-95d2-099101ed4339&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Patient-e6e84607-a0da-4ead-9ed6-5e064fea9fc4.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient with IHI and Medicare Number&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows a typical patient using identifier profiles for IHI, Medicare Number and the extension for Indigenous Status&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner with HPI-I and AHPRA Number&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows a typical practitioner using identifier profiles for HPI-I and Australian Health Practitioner Regulation Agency Registration Number&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner as a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows a typical Practitioner as a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;PractitionerRole-45cad6ac-e9a3-418a-8480-4e64132849f2.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner Role as a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows a typical Practitioner Role as a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organisation of a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows a typical Organisation the General Practitioner belongs to&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organization/021fff67-c5ec-438f-9520-ce9bafee1306&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Organization-b620003d-3a4f-4aca-88a5-a203f94fa911.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organisation of a General Practitioner with name only&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows an Organisation the General Practitioner belongs to (name only)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organization/b620003d-3a4f-4aca-88a5-a203f94fa911&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;AllergyIntolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance example - no known medication allergies&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;An AllergyIntollerance example showing no known medication allergies&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Procedure-3bc4a0f3-1d3e-4bde-83a9-7a04dd5f4a77.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Procedure - Total replacement of left knee joint&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A patient with the procedure of Total replacement of left knee joint&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Procedure/3bc4a0f3-1d3e-4bde-83a9-7a04dd5f4a77&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Condition-cfa41daf-b5a6-4a05-9166-a4b7c23f08a1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Condition - Atrial fibrillation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A patient with the condition of atrial fibrilation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Condition/cfa41daf-b5a6-4a05-9166-a4b7c23f08a1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Condition-b021320c-bc5e-4ae8-b9fc-1ed2d876e889.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Condition - Right lower zone pneumonia&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A patient with the condition of right lower zone pneumonia&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Condition/b021320c-bc5e-4ae8-b9fc-1ed2d876e889&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS B&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Composition/ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Joe Greatpatient&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient with birth date, birth time, and the associated accuracy extension.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Observation-ty65cc78-60b0-41cb-83d4-32521d3b9fa2.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No relevant medical history&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Assertion of no relevant medical history.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Observation/ty65cc78-60b0-41cb-83d4-32521d3b9fa2&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medication statement&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Taking Candesartan&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/yh783f71-7736-4d10-89f7-fa1845e53987&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Immunization-hgi72daf-b5a6-4a05-9166-a4b7c23f08a1.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization for diphtheria + tetanus&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization/hgi72daf-b5a6-4a05-9166-a4b7c23f08a1&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Bundle-gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;SHS B as bundle&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;FHIR Document of SHS with Patient with birth date, birth time, and the associated accuracy extension; Immunisation section with one immunisation instance referenced; Medical History section has an assertion of no relevant finding; Allergies section with an empty reason; Medications section with 3 meds.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Bundle/gg0gh111a-cc0f-4c3d-a4cd-a35ceafff555&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Patient-841a56de-92d7-47fd-bb27-bad8efb371e4.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Adam Everyman&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient with IHI.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient/841a56de-92d7-47fd-bb27-bad8efb371e4&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Practitioner-428f6506-625f-4f16-b0e2-b31ab6d293bf.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Dr Peter Chalmers&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner with HPI-I.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;PractitionerRole-f61db690-0ba4-4219-acd4-021ecc6a36fd.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner Role as a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole with HPI-I.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole/f61db690-0ba4-4219-acd4-021ecc6a36fd&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Organization-64e56b9c-e51d-4157-b379-34e71e3dbfa4.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organisation of a General Practitioner with name&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows an Organisation the General Practitioner belongs to (name)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;AllergyIntolerance-c5c80cde-70d0-4644-9d55-ae5574fcd8ea.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance example - Penicillin&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;An AllergyIntollerance example to Penicillin&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance/c5c80cde-70d0-4644-9d55-ae5574fcd8ea&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;AllergyIntolerance-d977ab88-ecbe-49c1-99b7-9b1afbb65563.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance example - Nuts&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;An AllergyIntollerance example to Nuts&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance/d977ab88-ecbe-49c1-99b7-9b1afbb65563&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Observation-dd82cc78-60b0-41cb-83d4-32521d3b9fa2.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No known current medications&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Assertion of no known current medications&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Immunization-7e7dbbfe-5afb-4938-86eb-27060b5daba7.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization for Engerix-B Adult&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization/7e7dbbfe-5afb-4938-86eb-27060b5daba7&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Immunization-d4b8094b-435e-4b43-b38b-f38328bddda3.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization for Meningitec&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization/d4b8094b-435e-4b43-b38b-f38328bddda3&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Immunization-8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization for Fluvax 2015&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization/8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Patient-d9698a55-723a-49de-931b-4e61d732b016.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Adam Everyman&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient with IHI.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient/d9698a55-723a-49de-931b-4e61d732b016&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Practitioner-b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Dr Peter Chalmers&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner with HPI-I and AHPRA number.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;PractitionerRole-08da397e-01af-4236-a458-70b05d7e8df8.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Practitioner Role as a General Practitioner&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole with HPI-I.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PractitionerRole/08da397e-01af-4236-a458-70b05d7e8df8&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Organization-9df89ebf-b9ab-4ed5-b865-90892c1bbb1a.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organisation of a General Practitioner with name&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Shows an Organisation the General Practitioner belongs to (name)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;AllergyIntolerance-1509ea06-0856-43ed-8842-cc7e6f48c460.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance example - No known drug allergy&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;An AllergyIntollerance example - No known medication allergies&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;AllergyIntolerance/1509ea06-0856-43ed-8842-cc7e6f48c460&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-21fcbd65-b116-4528-b396-5c834435bf68.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine Ferrous sulphate &amp;amp; vitamin C with dosage&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking Ferrous sulphate &amp;amp; vitamin C&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/21fcbd65-b116-4528-b396-5c834435bf68&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-d30f3bd7-7106-4530-8b10-e9b5c43c2ec8.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine Fluticasone/salmeterol 250/25 with dosage&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking Fluticasone/salmeterol 250/25&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/d30f3bd7-7106-4530-8b10-e9b5c43c2ec8&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-480ddf2a-885c-4a44-837a-25503b6ea740.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Sodium chloride 600mg with dosage and quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking Sodium chloride 600mg&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/480ddf2a-885c-4a44-837a-25503b6ea740&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-c4292c20-8037-487d-9d8b-b834b59bfb17.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine Mega B complex with dosage&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking Mega B complex&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/c4292c20-8037-487d-9d8b-b834b59bfb17&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-bc8a3682-1060-4be9-a4a2-7210c71d5c11.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine Bromhexine 0.8 mg/ml with dosage&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking Bromhexine 0.8 mg/ml&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/bc8a3682-1060-4be9-a4a2-7210c71d5c11&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;MedicationStatement-a7f22a69-608c-49e2-911b-53b609b2be0a.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medicine Multivitamin&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient taking Multivitamin&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;MedicationStatement/a7f22a69-608c-49e2-911b-53b609b2be0a&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Immunization-42bdb0e9-d510-46c4-a4a3-02205dbb1447.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization for Engerix-B Adult&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization/42bdb0e9-d510-46c4-a4a3-02205dbb1447&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Immunization-21e09e32-441a-4297-a803-970358b4f20f.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization for Fluvax 2015&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Immunization/21e09e32-441a-4297-a803-970358b4f20f&quot;/&gt;
+      &lt;/sourceReference&gt;
+    &lt;/resource&gt;
+  &lt;/package&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page">page</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.source">source</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;index.html&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.title">title</a>
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Australian Digital Health Agency Shared Health Summary FHIR Implementation Guide&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.page.kind">kind</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;page&quot;/&gt;
+  &lt;/page&gt;
+&lt;/ImplementationGuide&gt;</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+</div>
+
+
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+
+</div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>Document ID: DH-xxx:2019</p>
+            <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
+            <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
+            <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 8, 2019 10:54+1000. |
+                <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                </span>
+            </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
