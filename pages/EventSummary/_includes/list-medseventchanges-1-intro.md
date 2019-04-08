@@ -41,4 +41,4 @@ The system SHALL be able to take the following elements into account when perfor
 
 #### Known Issues
 
-* List.meta.profile: The IG Publisher fails to run if the List example has meta.profile reference of Agency profile "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"
+* List.meta.profile: The IG Publisher fails to run if the List example has meta.profile reference of Agency profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1. This issue has been logged in Github [issue#23](https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/23).
