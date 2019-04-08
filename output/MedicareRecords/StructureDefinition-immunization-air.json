@@ -1,0 +1,2460 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "immunization-air",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization\" title=\"null\">Immunization</a><a name=\"Immunization\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: black; background-color: white\" title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">inv-dh-imm-01: </span>If immunization was administered (notGiven=false) then date SHALL be present and cancellation period SHALL be absent.<br/><span style=\"font-weight:bold\">inv-dh-imm-02: </span>One meta.profile SHALL have value 'http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air'</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.meta\" title=\"null\">meta</a><a name=\"Immunization.meta\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.meta.profile\" title=\"A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).\">profile</a><a name=\"Immunization.meta.profile\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_extension_simple.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Simple Extension\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.extension\" title=\"null\">extension</a><a name=\"Immunization.extension\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Slice: </span>Unordered, Open by value:url</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_extension_simple.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Simple Extension\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.extension:cancellationPeriod\" title=\"Extension URL = http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod\">extension-immunization-cancellationperiod</a><a name=\"Immunization.extension\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#Period\">Period</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Immunisation cancellation period<br/><span style=\"font-weight:bold\">URL: </span><a href=\"http://hl7.org/fhir/STU3/StructureDefinition-extension-immunization-cancellationperiod.html\">http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod</a></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.identifier\" title=\"null\">identifier</a><a name=\"Immunization.identifier\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.status\" title=\"null\">status</a><a name=\"Immunization.status\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Fixed Value: </span><span style=\"color: darkgreen\">completed</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.notGiven\" title=\"null\">notGiven</a><a name=\"Immunization.notGiven\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.vaccineCode\" title=\"null\">vaccineCode</a><a name=\"Immunization.vaccineCode\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Binding: </span><a href=\"https://healthterminologies.gov.au/fhir/ValueSet/australian-vaccine-1\">https://healthterminologies.gov.au/fhir/ValueSet/australian-vaccine-1</a> (<a href=\"http://hl7.org/fhir/STU3/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\">required</a>)</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.patient\" title=\"null\">patient</a><a name=\"Immunization.patient\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>(<a href=\"http://hl7.org.au/fhir/base2018Sep/StructureDefinition-au-patient.html\">AU Base Patient</a>)</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.date\" title=\"null\">date</a><a name=\"Immunization.date\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.primarySource\" title=\"null\">primarySource</a><a name=\"Immunization.primarySource\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Fixed Value: </span><span style=\"color: darkgreen\">true</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.manufacturer\" title=\"null\">manufacturer</a><a name=\"Immunization.manufacturer\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>(<a href=\"http://hl7.org.au/fhir/base2018Sep/StructureDefinition-au-organisation.html\">AU Base Organisation</a>)</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.practitioner\" title=\"null\">practitioner</a><a name=\"Immunization.practitioner\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.practitioner.actor\" title=\"null\">actor</a><a name=\"Immunization.practitioner.actor\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>(<a href=\"http://hl7.org.au/fhir/base2018Sep/StructureDefinition-au-practitioner.html\">AU Base Practitioner</a>)</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.explanation\" title=\"null\">explanation</a><a name=\"Immunization.explanation\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.explanation.reasonNotGiven\" title=\"null\">reasonNotGiven</a><a name=\"Immunization.explanation.reasonNotGiven\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Binding: </span><a href=\"https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1\">https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1</a> (<a href=\"http://hl7.org/fhir/STU3/terminologies.html#extensible\" title=\"To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.\">extensible</a>)</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.vaccinationProtocol\" title=\"null\">vaccinationProtocol</a><a name=\"Immunization.vaccinationProtocol\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.vaccinationProtocol.authority\" title=\"null\">authority</a><a name=\"Immunization.vaccinationProtocol.authority\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/references.html\">Reference</a>(<a href=\"http://hl7.org.au/fhir/base2018Sep/StructureDefinition-au-organisation.html\">AU Base Organisation</a>)</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.vaccinationProtocol.targetDisease\" title=\"null\">targetDisease</a><a name=\"Immunization.vaccinationProtocol.targetDisease\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-immunization-air-definitions.html#Immunization.vaccinationProtocol.doseStatus\" title=\"null\">doseStatus</a><a name=\"Immunization.vaccinationProtocol.doseStatus\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: red\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Fixed Value: </span><span style=\"color: darkgreen\">{&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/v3/NullFlavor&quot;,&quot;code&quot;:&quot;NAVU&quot;}]}</span><span style=\"color: darkgreen\"> (Not available)</span></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "url": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air",
+  "version": "1.0.0",
+  "name": "ImmunizationAustralianImmunisationRegister",
+  "status": "active",
+  "experimental": false,
+  "date": "2018-08-28T00:00:00+10:00",
+  "publisher": "Australian Digital Health Agency",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "help@digitalhealth.gov.au"
+        }
+      ]
+    }
+  ],
+  "description": "This profile defines representation of vaccination information from the Australian Immunisation Register.",
+  "copyright": "Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
+  "fhirVersion": "3.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/w5",
+      "name": "W5 Mapping"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Immunization",
+        "path": "Immunization",
+        "short": "Immunization event information",
+        "definition": "Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Immunization",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "dom-2",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+            "expression": "contained.contained.empty()",
+            "xpath": "not(parent::f:contained and f:contained)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-1",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain any narrative",
+            "expression": "contained.text.empty()",
+            "xpath": "not(parent::f:contained and f:text)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-4",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+            "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-3",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource",
+            "expression": "contained.where(('#'+id in %resource.descendants().reference).not()).empty()",
+            "xpath": "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "imm-2",
+            "severity": "error",
+            "human": "If immunization was administered (notGiven=false) then explanation.reasonNotGiven SHALL be absent.",
+            "expression": "(notGiven = true) or explanation.reasonNotGiven.empty()",
+            "xpath": "not(f:notGiven/@value=false() and exists(f:explanation/f:reasonNotGiven))",
+            "source": "Immunization"
+          },
+          {
+            "key": "imm-1",
+            "severity": "error",
+            "human": "If immunization was not administered (notGiven=true) then there SHALL be no reaction nor explanation.reason present",
+            "expression": "(notGiven = true).not() or (reaction.empty() and explanation.reason.empty())",
+            "xpath": "not(f:notGiven/@value=true() and (count(f:reaction) > 0 or exists(f:explanation/f:reason)))",
+            "source": "Immunization"
+          },
+          {
+            "key": "inv-dh-imm-01",
+            "severity": "error",
+            "human": "If immunization was administered (notGiven=false) then date SHALL be present and cancellation period SHALL be absent.",
+            "expression": "(notGiven = false) implies (date and extension('http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod').empty())"
+          },
+          {
+            "key": "inv-dh-imm-02",
+            "severity": "error",
+            "human": "One meta.profile SHALL have value 'http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air'",
+            "expression": "meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air').exists()"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Entity. Role, or Act"
+          },
+          {
+            "identity": "v2",
+            "map": "VXU_V04"
+          },
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration"
+          },
+          {
+            "identity": "w5",
+            "map": "clinical.medication"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.id",
+        "path": "Immunization.id",
+        "short": "Logical id of this artifact",
+        "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "comment": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Immunization.meta",
+        "path": "Immunization.meta",
+        "short": "Metadata about the resource",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Resource.meta",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Immunization.meta.id",
+        "path": "Immunization.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.meta.extension",
+        "path": "Immunization.meta.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.meta.versionId",
+        "path": "Immunization.meta.versionId",
+        "short": "Version specific identifier",
+        "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
+        "comment": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Meta.versionId",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Immunization.meta.lastUpdated",
+        "path": "Immunization.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "definition": "When the resource last changed - e.g. when the version changed.",
+        "comment": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Meta.lastUpdated",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Immunization.meta.profile",
+        "path": "Immunization.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
+        "comment": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Meta.profile",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Immunization.meta.security",
+        "path": "Immunization.meta.security",
+        "short": "Security Labels applied to this resource",
+        "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comment": "The security labels can be updated without changing the stated version of the resource  The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Meta.security",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "SecurityLabels"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+              "valueBoolean": true
+            }
+          ],
+          "strength": "extensible",
+          "description": "Security Labels from the Healthcare Privacy and Security Classification System.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/security-labels"
+          }
+        }
+      },
+      {
+        "id": "Immunization.meta.tag",
+        "path": "Immunization.meta.tag",
+        "short": "Tags applied to this resource",
+        "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comment": "The tags can be updated without changing the stated version of the resource.  The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Meta.tag",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "Tags"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\"",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/common-tags"
+          }
+        }
+      },
+      {
+        "id": "Immunization.implicitRules",
+        "path": "Immunization.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comment": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. \n\nThis element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true
+      },
+      {
+        "id": "Immunization.language",
+        "path": "Immunization.language",
+        "short": "Language of the resource content",
+        "definition": "The base language in which the resource is written.",
+        "comment": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Resource.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueReference": {
+                "reference": "http://hl7.org/fhir/ValueSet/all-languages"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "Language"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+              "valueBoolean": true
+            }
+          ],
+          "strength": "extensible",
+          "description": "A human language.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/languages"
+          }
+        }
+      },
+      {
+        "id": "Immunization.text",
+        "path": "Immunization.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comment": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded in formation is added later.",
+        "alias": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "dom-1"
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.contained",
+        "path": "Immunization.contained",
+        "short": "Contained, inline Resources",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "alias": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.contained",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.extension",
+        "path": "Immunization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Extension",
+        "definition": "An Extension",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.extension:cancellationPeriod",
+        "path": "Immunization.extension",
+        "sliceName": "cancellationPeriod",
+        "short": "Immunisation cancellation period",
+        "definition": "Time period during which immunisation is prevented due to the reasonNotGiven.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod"
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+            "source": "Extension"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.modifierExtension",
+        "path": "Immunization.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.identifier",
+        "path": "Immunization.identifier",
+        "short": "Business identifier",
+        "definition": "A unique identifier assigned to this immunization record.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.identifier"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/id"
+          },
+          {
+            "identity": "w5",
+            "map": "id"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.status",
+        "path": "Immunization.status",
+        "short": "completed | entered-in-error",
+        "definition": "Indicates the current status of the vaccination event.",
+        "comment": "Will generally be set to show that the immunization has been completed.\n\nThis element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "completed",
+        "mustSupport": true,
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ImmunizationStatus"
+            }
+          ],
+          "strength": "required",
+          "description": "A set of codes indicating the current status of an Immunization",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/immunization-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.status"
+          },
+          {
+            "identity": "rim",
+            "map": "statusCode"
+          },
+          {
+            "identity": "w5",
+            "map": "status"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.notGiven",
+        "path": "Immunization.notGiven",
+        "short": "Flag for whether immunization was given",
+        "definition": "Indicates if the vaccination was or was not given.",
+        "comment": "This element is labeled as a modifier because it indicates that an immunization didn't happen.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.notGiven",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.notDone"
+          },
+          {
+            "identity": "rim",
+            "map": "[actionNegationInd=true].reasonCode"
+          },
+          {
+            "identity": "w5",
+            "map": "status"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "short": "Vaccine product administered",
+        "definition": "Vaccine that was administered or was to be administered.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccineCode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "VaccineCode"
+            }
+          ],
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/australian-vaccine-1"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.code"
+          },
+          {
+            "identity": "v2",
+            "map": "RXA-5"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/realmCode/code"
+          },
+          {
+            "identity": "w5",
+            "map": "what"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "short": "Who was immunized",
+        "definition": "The patient who either received or did not receive the immunization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.subject"
+          },
+          {
+            "identity": "v2",
+            "map": "PID-3"
+          },
+          {
+            "identity": "rim",
+            "map": ".partipication[ttypeCode=].role"
+          },
+          {
+            "identity": "w5",
+            "map": "who.focus"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.encounter",
+        "path": "Immunization.encounter",
+        "short": "Encounter administered as part of",
+        "definition": "The visit or admission or other contact between patient and health care provider the immunization was performed as part of.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.encounter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.context"
+          },
+          {
+            "identity": "v2",
+            "map": "PV1-19"
+          },
+          {
+            "identity": "rim",
+            "map": "component->EncounterEvent"
+          },
+          {
+            "identity": "w5",
+            "map": "context"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.date",
+        "path": "Immunization.date",
+        "short": "Vaccination administration date",
+        "definition": "Date vaccine administered or was to be administered.",
+        "comment": "When immunizations are given a specific date and time should always be known.   When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.occurrence.occurrenceDateTime"
+          },
+          {
+            "identity": "v2",
+            "map": "RXA-3"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/effectiveTime/value"
+          },
+          {
+            "identity": "w5",
+            "map": "when.init"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "short": "Indicates context the data was recorded in",
+        "definition": "An indication that the content of the record is based on information from the person who administered the vaccine. This reflects the context under which the data was originally recorded.",
+        "comment": "Reflects the “reliability” of the content.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.primarySource",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "fixedBoolean": true,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-9"
+          },
+          {
+            "identity": "rim",
+            "map": "immunization.uncertaintycode (if primary source=false, uncertainty=U)"
+          },
+          {
+            "identity": "w5",
+            "map": "who.source"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reportOrigin",
+        "path": "Immunization.reportOrigin",
+        "short": "Indicates the source of a secondarily reported record",
+        "definition": "The source of the data when the report of the immunization event is not based on information from the person who administered the vaccine.",
+        "comment": "Should not be populated if primarySource = True, will not be required even if primarySource = False.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.reportOrigin",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ImmunizationReportOrigin"
+            }
+          ],
+          "strength": "example",
+          "description": "The source of the data for a record which is not from a primary source.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/immunization-origin"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-9"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=INF].role[classCode=PAT] (this syntax for self-reported)\n.participation[typeCode=INF].role[classCode=LIC] (this syntax for health care professional)\n.participation[typeCode=INF].role[classCode=PRS] (this syntax for family member)"
+          },
+          {
+            "identity": "w5",
+            "map": "who.source"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.location",
+        "path": "Immunization.location",
+        "short": "Where vaccination occurred",
+        "definition": "The service delivery location where the vaccine administration occurred.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.location",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Location"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-27  (or RXA-11, deprecated as of v2.7)"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=LOC].COCT_MT240000UV"
+          },
+          {
+            "identity": "w5",
+            "map": "where"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.manufacturer",
+        "path": "Immunization.manufacturer",
+        "short": "Vaccine manufacturer",
+        "definition": "Name of vaccine manufacturer.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.manufacturer",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-organisation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-17"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=ORG]"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacuturerOrganization/name"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.lotNumber",
+        "path": "Immunization.lotNumber",
+        "short": "Vaccine lot number",
+        "definition": "Lot number of the  vaccine product.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.lotNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-15"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].id"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/lotNumberText"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.expirationDate",
+        "path": "Immunization.expirationDate",
+        "short": "Vaccine expiration date",
+        "definition": "Date vaccine batch expires.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.expirationDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-16"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].expirationTime"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.site",
+        "path": "Immunization.site",
+        "short": "Body site vaccine  was administered",
+        "definition": "Body site where vaccine was administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.site",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ImmunizationSite"
+            }
+          ],
+          "strength": "example",
+          "description": "The site at which the vaccine was administered",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/immunization-site"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXR-2"
+          },
+          {
+            "identity": "rim",
+            "map": "observation.targetSiteCode"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/approachSiteCode/code"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.route",
+        "path": "Immunization.route",
+        "short": "How vaccine entered body",
+        "definition": "The path by which the vaccine product is taken into the body.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.route",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ImmunizationRoute"
+            }
+          ],
+          "strength": "example",
+          "description": "The route by which the vaccine was administered",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/immunization-route"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXR-1"
+          },
+          {
+            "identity": "rim",
+            "map": ".routeCode"
+          },
+          {
+            "identity": "cda",
+            "map": "ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/routeCode/code"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.doseQuantity",
+        "path": "Immunization.doseQuantity",
+        "short": "Amount of vaccine administered",
+        "definition": "The quantity of vaccine product that was administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.doseQuantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "RXA-6 / RXA-7.1"
+          },
+          {
+            "identity": "rim",
+            "map": ".doseQuantity"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner",
+        "path": "Immunization.practitioner",
+        "short": "Who performed event",
+        "definition": "Indicates who or what performed the event.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Immunization.practitioner",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.performer"
+          },
+          {
+            "identity": "v2",
+            "map": "ORC-12 / RXA-10"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner.id",
+        "path": "Immunization.practitioner.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner.extension",
+        "path": "Immunization.practitioner.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner.modifierExtension",
+        "path": "Immunization.practitioner.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner.role",
+        "path": "Immunization.practitioner.role",
+        "short": "What type of performance was done",
+        "definition": "Describes the type of performance (e.g. ordering provider, administering provider, etc.).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.practitioner.role",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ImmunizationRole"
+            }
+          ],
+          "strength": "extensible",
+          "description": "The role a practitioner plays in the immunization event",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/immunization-role"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.performer.role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation.functionCode"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner.actor",
+        "path": "Immunization.practitioner.actor",
+        "short": "Individual who was performing",
+        "definition": "The device, practitioner, etc. who performed the action.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.practitioner.actor",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.performer.actor"
+          },
+          {
+            "identity": "rim",
+            "map": ".player"
+          },
+          {
+            "identity": "w5",
+            "map": "who.actor"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.note",
+        "path": "Immunization.note",
+        "short": "Vaccination notes",
+        "definition": "Extra information about the immunization that is not conveyed by the other attributes.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Immunization.note",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.note"
+          },
+          {
+            "identity": "rim",
+            "map": "note"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation",
+        "path": "Immunization.explanation",
+        "short": "Administration/non-administration reasons",
+        "definition": "Reasons why a vaccine was or was not administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.explanation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation.id",
+        "path": "Immunization.explanation.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation.extension",
+        "path": "Immunization.explanation.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation.modifierExtension",
+        "path": "Immunization.explanation.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation.reason",
+        "path": "Immunization.explanation.reason",
+        "short": "Why immunization occurred",
+        "definition": "Reasons why a vaccine was administered.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Immunization.explanation.reason",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ImmunizationReason"
+            }
+          ],
+          "strength": "example",
+          "description": "The reason why a vaccine was administered",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/immunization-reason"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.reasonCodeableConcept"
+          },
+          {
+            "identity": "rim",
+            "map": "[actionNegationInd=false].reasonCode"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation.reasonNotGiven",
+        "path": "Immunization.explanation.reasonNotGiven",
+        "short": "Why immunization did not occur",
+        "definition": "Reason why a vaccine was not administered.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Immunization.explanation.reasonNotGiven",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "NoImmunizationReason"
+            }
+          ],
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.notDoneReason"
+          },
+          {
+            "identity": "v2",
+            "map": "RXA-18"
+          },
+          {
+            "identity": "rim",
+            "map": "[actionNegationInd=true].reasonCode"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction",
+        "path": "Immunization.reaction",
+        "short": "Details of a reaction that follows immunization",
+        "definition": "Categorical data indicating that an adverse event is associated in time to an immunization.",
+        "comment": "A reaction may be an indication of an allergy or intolerance and, if this is determined to be the case,  it should be recorded as a new [AllergyIntolerance](http://hl7.org/fhir/STU3/allergyintolerance.html) resource instance as most systems will not query against  past Immunization.reaction elements.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Immunization.reaction",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-3"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=obs].code"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction.id",
+        "path": "Immunization.reaction.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction.extension",
+        "path": "Immunization.reaction.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction.modifierExtension",
+        "path": "Immunization.reaction.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction.date",
+        "path": "Immunization.reaction.date",
+        "short": "When reaction started",
+        "definition": "Date of reaction to the immunization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.reaction.date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-14 (ideally this would be reported in an IAM segment, but IAM is not part of the HL7 v2 VXU message - most likely would appear in OBX segments if at all)"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction.detail",
+        "path": "Immunization.reaction.detail",
+        "short": "Additional information on reaction",
+        "definition": "Details of the reaction.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.reaction.detail",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Observation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-5"
+          },
+          {
+            "identity": "rim",
+            "map": ".value"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.reaction.reported",
+        "path": "Immunization.reaction.reported",
+        "short": "Indicates self-reported reaction",
+        "definition": "Self-reported indicator.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.reaction.reported",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "(no such concept seems to exist for allergy/adverse reaction in HL7 v2)"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=INF].role[classCode=PAT] (this syntax for self-reported=true)"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol",
+        "path": "Immunization.vaccinationProtocol",
+        "short": "What protocol was followed",
+        "definition": "Contains information about the protocol(s) under which the vaccine was administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "(HL7 v2 doesn't seem to provide for this)"
+          },
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=INST].target[classCode=SBADM]"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.id",
+        "path": "Immunization.vaccinationProtocol.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.extension",
+        "path": "Immunization.vaccinationProtocol.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.modifierExtension",
+        "path": "Immunization.vaccinationProtocol.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.doseSequence",
+        "path": "Immunization.vaccinationProtocol.doseSequence",
+        "short": "Dose number within series",
+        "definition": "Nominal position in a series.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.doseSequence",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=INST].target[classCode=SBADM].inboundRelationship[typeCode=COMP].sequenceNumber"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.description",
+        "path": "Immunization.vaccinationProtocol.description",
+        "short": "Details of vaccine protocol",
+        "definition": "Contains the description about the protocol under which the vaccine was administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.description",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=INST].target[classCode=SBADM].inboundRelationship[typeCode=COMP].source[classCode=SBADM].text"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.authority",
+        "path": "Immunization.vaccinationProtocol.authority",
+        "short": "Who is responsible for protocol",
+        "definition": "Indicates the authority who published the protocol.  E.g. ACIP.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.authority",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-organisation"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=INST].target[classCode=SBADM].inboundRelationship[typeCode=COMP].source[classCode=SBADM].participation[typeCode=AUT].COCT_MT090200UV"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.series",
+        "path": "Immunization.vaccinationProtocol.series",
+        "short": "Name of vaccine series",
+        "definition": "One possible path to achieve presumed immunity against a disease - within the context of an authority.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.series",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=INST].target[classCode=SBADM]"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.seriesDoses",
+        "path": "Immunization.vaccinationProtocol.seriesDoses",
+        "short": "Recommended number of doses for immunity",
+        "definition": "The recommended number of doses to achieve immunity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.seriesDoses",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=INST].target[classCode=SBADM].inboundRelationship[typeCode=COMP].source[classCode=SBADM].text"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.targetDisease",
+        "path": "Immunization.vaccinationProtocol.targetDisease",
+        "short": "Disease immunized against",
+        "definition": "The targeted disease.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.targetDisease",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "VaccinationProtocoltargetDisease"
+            }
+          ],
+          "strength": "example",
+          "description": "The disease target of the vaccination protocol",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/vaccination-protocol-dose-target"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship.target[classCode=OBS].code"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.doseStatus",
+        "path": "Immunization.vaccinationProtocol.doseStatus",
+        "short": "Indicates if dose counts towards immunity",
+        "definition": "Indicates if the immunization event should \"count\" against  the protocol.",
+        "comment": "May need to differentiate between status declarations by a provider vs. a CDS engine.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.doseStatus",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/NullFlavor",
+              "code": "NAVU"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "VaccinationProtocolDoseStatus"
+            }
+          ],
+          "strength": "example",
+          "description": "The status of the vaccination protocol (i.e. should this count)",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/vaccination-protocol-dose-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].playedRole[classCode=INGR].scopedRole.scoper[classCode=MMAT].playedRole[classCode=HLTHCHRT].participation[typeCode=SBJ].observation[classCode=OBS].value"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.doseStatusReason",
+        "path": "Immunization.vaccinationProtocol.doseStatusReason",
+        "short": "Why dose does (not) count",
+        "definition": "Provides an explanation as to why an immunization event should or should not count against the protocol.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Immunization.vaccinationProtocol.doseStatusReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "VaccinationProtocolDoseStatusReason"
+            }
+          ],
+          "strength": "example",
+          "description": "The reason for the determining if a vaccination should count or why vaccination should not count.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/vaccination-protocol-dose-status-reason"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].playedRole[classCode=INGR].scopedRole.scoper[classCode=MMAT].playedRole[classCode=HLTHCHRT].participation[typeCode=SBJ].observation[classCode=OBS].reasonCode"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization",
+        "path": "Immunization",
+        "constraint": [
+          {
+            "key": "inv-dh-imm-01",
+            "severity": "error",
+            "human": "If immunization was administered (notGiven=false) then date SHALL be present and cancellation period SHALL be absent.",
+            "expression": "(notGiven = false) implies (date and extension('http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod').empty())"
+          },
+          {
+            "key": "inv-dh-imm-02",
+            "severity": "error",
+            "human": "One meta.profile SHALL have value 'http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air'",
+            "expression": "meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/immunization-air').exists()"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.meta",
+        "path": "Immunization.meta",
+        "min": 1
+      },
+      {
+        "id": "Immunization.meta.profile",
+        "path": "Immunization.meta.profile",
+        "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](structuredefinition-definitions.html#StructureDefinition.url).",
+        "min": 1
+      },
+      {
+        "id": "Immunization.extension",
+        "path": "Immunization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Immunization.extension:cancellationPeriod",
+        "path": "Immunization.extension",
+        "sliceName": "cancellationPeriod",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-immunization-cancellationperiod"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.identifier",
+        "path": "Immunization.identifier",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.status",
+        "path": "Immunization.status",
+        "fixedCode": "completed",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.notGiven",
+        "path": "Immunization.notGiven",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "VaccineCode"
+            }
+          ],
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/australian-vaccine-1"
+          }
+        }
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-patient"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.date",
+        "path": "Immunization.date",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "fixedBoolean": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.manufacturer",
+        "path": "Immunization.manufacturer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-organisation"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.practitioner",
+        "path": "Immunization.practitioner"
+      },
+      {
+        "id": "Immunization.practitioner.actor",
+        "path": "Immunization.practitioner.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-practitioner"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.explanation",
+        "path": "Immunization.explanation",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.explanation.reasonNotGiven",
+        "path": "Immunization.explanation.reasonNotGiven",
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "NoImmunizationReason"
+            }
+          ],
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/reason-vaccine-not-administered-1"
+          }
+        }
+      },
+      {
+        "id": "Immunization.vaccinationProtocol",
+        "path": "Immunization.vaccinationProtocol",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.authority",
+        "path": "Immunization.vaccinationProtocol.authority",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-organisation"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.targetDisease",
+        "path": "Immunization.vaccinationProtocol.targetDisease",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.vaccinationProtocol.doseStatus",
+        "path": "Immunization.vaccinationProtocol.doseStatus",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/NullFlavor",
+              "code": "NAVU"
+            }
+          ]
+        },
+        "mustSupport": true
+      }
+    ]
+  }
+}

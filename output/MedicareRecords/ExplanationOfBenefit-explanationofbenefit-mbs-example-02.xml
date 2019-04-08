@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+  <id value="explanationofbenefit-mbs-example-02"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/explanationofbenefit-medicare"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: explanationofbenefit-mbs-example-02</p><p><b>meta</b>: </p><p><b>identifier</b>: 0000123</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/ex-claimtype code 'pharmacy' = 'Pharmacy)</span></p><p><b>subType</b>: mbs <span style="background: LightGoldenRodYellow">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1 code 'mbs' = 'mbs)</span></p><p><b>patient</b>: </p><p><b>created</b>: 04/12/2017</p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Service</b></td><td><b>Serviced[x]</b></td></tr><tr><td>*</td><td>1</td><td>Palmar or plantar warts (10 or more), definitive removal of, excluding ablative methods alone, not being a service to which item 30186 or 30187 applies (Anaes.) <span style="background: LightGoldenRodYellow">(Details : {urn:oid:1.2.36.1.2001.1005.21 code '30185' = '30185', given as 'Palmar or plantar warts (10 or more), definitive removal of, excluding ablative methods alone, not being a service to which item 30186 or 30187 applies (Anaes.)'})</span></td><td>16/06/2016</td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="0000123"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/ex-claimtype"/>
+      <code value="pharmacy"/>
+    </coding>
+  </type>
+  <subType>
+    <coding>
+      <system value="https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1"/>
+      <code value="mbs"/>
+    </coding>
+  </subType>
+  <patient>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://hl7.org/fhir/v2/0203"/>
+          <code value="NI"/>
+          <display value="National unique individual identifier"/>
+        </coding>
+      </type>
+      <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+      <value value="8003608166690503"/>
+    </identifier>
+  </patient>
+  <created value="2017-12-04"/>
+  <item>
+    <sequence value="1"/>
+    <service>
+      <coding>
+        <system value="urn:oid:1.2.36.1.2001.1005.21"/>
+        <code value="30185"/>
+        <display value="Palmar or plantar warts (10 or more), definitive removal of, excluding ablative methods alone, not being a service to which item 30186 or 30187 applies (Anaes.)"/>
+      </coding>
+    </service>
+    <servicedDate value="2016-06-16"/>
+  </item>
+</ExplanationOfBenefit>

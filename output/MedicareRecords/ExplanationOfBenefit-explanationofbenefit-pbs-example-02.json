@@ -1,0 +1,134 @@
+{
+  "resourceType": "ExplanationOfBenefit",
+  "id": "explanationofbenefit-pbs-example-02",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/explanationofbenefit-medicare"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: explanationofbenefit-pbs-example-02</p><p><b>meta</b>: </p><p><b>contained</b>: , , </p><p><b>identifier</b>: urn:oid:2.25.129844986816735724544008039950138526110</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/ex-claimtype code 'pharmacy' = 'Pharmacy)</span></p><p><b>subType</b>: pbs <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1 code 'pbs' = 'pbs)</span></p><p><b>patient</b>: </p><p><b>created</b>: 16/01/2017</p><p><b>prescription</b>: unknown resource contained</p><h3>Items</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Service</b></td><td><b>Serviced[x]</b></td></tr><tr><td>*</td><td>1</td><td>cephalexin 500 mg capsule, 20 <span style=\"background: LightGoldenRodYellow\">(Details : {urn:oid:1.2.36.1.2001.1005.22 code '03119E' = '03119E', given as 'cephalexin 500 mg capsule, 20'})</span></td><td>16/01/2017</td></tr></table></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "Organization2",
+      "identifier": [
+        {
+          "system": "http://pbs.gov.au/code/manufacturer",
+          "value": "MM"
+        }
+      ]
+    },
+    {
+      "resourceType": "Medication",
+      "id": "Medication2",
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.36.1.2001.1005.22",
+            "code": "03119E"
+          }
+        ]
+      },
+      "manufacturer": {
+        "reference": "#Organization2"
+      }
+    },
+    {
+      "resourceType": "MedicationRequest",
+      "id": "MedicationRequest2",
+      "meta": {
+        "profile": [
+          "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/medicationrequest-pbs"
+        ]
+      },
+      "status": "active",
+      "intent": "order",
+      "medicationReference": {
+        "reference": "#Medication2"
+      },
+      "subject": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/v2/0203",
+                "code": "NI",
+                "display": "National unique individual identifier"
+              }
+            ]
+          },
+          "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+          "value": "8003608166690503"
+        }
+      },
+      "authoredOn": "2017-01-15",
+      "dispenseRequest": {
+        "quantity": {
+          "value": 100,
+          "unit": "tablet"
+        }
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.25.129844986816735724544008039950138526110"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/ex-claimtype",
+        "code": "pharmacy"
+      }
+    ]
+  },
+  "subType": [
+    {
+      "coding": [
+        {
+          "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-benefit-payment-category-1",
+          "code": "pbs"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "NI",
+            "display": "National unique individual identifier"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608166690503"
+    }
+  },
+  "created": "2017-01-16",
+  "prescription": {
+    "reference": "#MedicationRequest2"
+  },
+  "item": [
+    {
+      "sequence": 1,
+      "service": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.36.1.2001.1005.22",
+            "code": "03119E",
+            "display": "cephalexin 500 mg capsule, 20"
+          }
+        ]
+      },
+      "servicedDate": "2017-01-16"
+    }
+  ]
+}
