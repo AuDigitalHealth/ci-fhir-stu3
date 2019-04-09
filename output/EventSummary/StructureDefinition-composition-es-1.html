@@ -147,34 +147,41 @@
 
 <h3 id="event-summary-draft">Event Summary <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h3>
 
-<h4 id="usage-scenarios">Usage Scenarios</h4>
+<h4 id="usage-scenarios">Usage scenarios</h4>
 
 <p>The following are the usage scenarios expected:</p>
 
 <ul>
-  <li>A clinical information system (CIS) sends or receives an Event Summary with the My Health Record system</li>
-  <li>A contracted service provider (CSP) sends or receives an Event Summary with the My Health Record system</li>
-  <li>A registered repository or registered portal receives an Event Summary from the My Health Record system</li>
+  <li>
+    <p>A clinical information system (CIS) sends or receives an Event Summary with the My Health Record system</p>
+  </li>
+  <li>
+    <p>A contracted service provider (CSP) sends or receives an Event Summary with the My Health Record system</p>
+  </li>
+  <li>
+    <p>A CIS sends or receives an Event Summary with another CIS or CSP</p>
+  </li>
+  <li>
+    <p>A CSP sends or receives an Event Summary with a CIS or another CSP</p>
+  </li>
+  <li>
+    <p>A registered portal or registered repository receives an Event Summary</p>
+  </li>
 </ul>
 
 <h4 id="implementation-guidance">Implementation guidance</h4>
+<p>For the expected usage scenarios in this implementation guide:</p>
+
 <ul>
-  <li>Where additional content beyond that flagged with a must support is provided it:
-    <ul>
-      <li>shall not qualify or negate content described by this profile as must support</li>
-      <li>shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
-    </ul>
-  </li>
   <li>For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).</li>
 </ul>
 
-<table border="1">
-  <tr bgcolor="#DCDCDC">
+<table class="list" width="100%">
+  <tr>
     <th>Section</th>
     <th>Guidance</th>
     </tr>
- 
- <tr>
+  <tr>
    <td rowspan="1">Event Overview</td>
     <td>It is expected that section.text is populated from the Encounter Description element of the Encounter entry</td>
   </tr>
@@ -183,7 +190,7 @@
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
  <tr>
-    <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 160244002 &#124;No known allergies&#124;) is sent as the code</td>
+    <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code</td>
   </tr>
   
    <tr>
@@ -191,7 +198,7 @@
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
  <tr>
-    <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 &#124;No known current medications&#124;)</td>
+    <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|)</td>
   </tr>
   <tr>
     <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
@@ -208,13 +215,13 @@
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
     <tr>
-    <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1224831000168103 &#124;No relevant medical history&#124;)</td>
+    <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1224831000168103|No relevant medical history|)</td>
   </tr>
   <tr>
    <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
   </tr>
   <tr>
-    <td>Where a sending system can state that a patient does not have a specific condition it is expected that the appropriate negation code (e.g. 162028008 &#124;No indigestion&#124;) is sent as the code in Condition</td>
+    <td>Where a sending system can state that a patient does not have a specific condition it is expected that the appropriate negation code (e.g. 162028008 |No indigestion|) is sent as the code in Condition</td>
   </tr>
   
   <tr>
@@ -222,7 +229,7 @@
     <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
   </tr>
   <tr>
-    <td>Where a sending system can state that a patient has not been administered a vaccine during the encounter or that the patient has no relevant history of vaccination it is expected an assertion of no relevant finding  (Observation) is sent with the appropriate code (e.g. 1226591000168105 |No vaccine administered during encounter|). </td>
+    <td>Where a sending system can state that a patient has not been administered a vaccine during the encounter or that the patient has no relevant history of vaccination it is expected an assertion of no relevant finding  (Observation) is sent with the appropriate code (e.g. 1226591000168105 |No vaccine administered during encounter|)</td>
   </tr>
     <tr>
     <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
@@ -273,7 +280,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-composition.html">AUBaseComposition</a>.</p>
 <p>
-This profile was published on Mon Apr 08 12:43:31 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Wed Apr 10 05:38:41 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -1468,7 +1475,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 8, 2019 12:43+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 10, 2019 05:38+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

@@ -145,59 +145,37 @@
 
 <a name="introduction"> </a>
 
-<h2 id="list-of-medicine-changes-from-an-event-draft">List of Medicine Changes from an Event <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h2>
+<h3 id="list-of-medicine-changes-from-an-event-draft">List of Medicine Changes from an Event <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h3>
 
-<p>The purpose of this profile is to provide a list of medicines that have specifically changed as a result of an event or those medicines directly relevant to an event. The list is intended to be suited to handling and exchange as a referenced entry in a Composition.</p>
+<h4 id="usage-scenarios">Usage scenarios</h4>
 
-<h3 id="usage-scenarios">Usage scenarios</h3>
 <ul>
   <li>A medicine list exchanged as a referenced entry in a Composition</li>
 </ul>
 
 <p>Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.</p>
 
-<h4 id="must-support">Must Support</h4>
+<h4 id="implementation-guidance">Implementation guidance</h4>
 
-<p>In the context of this profile <a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a> SHALL be interpreted as follows.</p>
-
-<p>The system SHALL be able to store and retrieve the following elements:</p>
-<ul>
-  <li>status</li>
-  <li>code</li>
-  <li>date</li>
-  <li>entry</li>
-  <li>entry.change-description</li>
-  <li>entry.flag</li>
-  <li>entry.item</li>
-  <li>source</li>
-</ul>
-
-<p>The system SHALL be able to take the following elements into account when performing processing:</p>
-<ul>
-  <li>subject</li>
-</ul>
-
-<h2 id="profile-specific-implementation-guidance">Profile specific implementation guidance:</h2>
+<p>For the expected usage scenarios in this implementation guide:</p>
 
 <ul>
   <li>
-    <p>Where additional content beyond that flagged with must support is provided it:</p>
+    <p>Where date is provided, it is expected to be the same as the date of the referencing Composition.</p>
+  </li>
+  <li>
+    <p>Where source is provided, it is expected to be the same as the author of the referencing Composition.</p>
+  </li>
+  <li>
+    <p>All medicine items relevant to an event should be included in the list:</p>
 
     <ul>
       <li>
-        <p>shall not qualify or negate content described by this profile as must support</p>
+        <p>For existing unchanged medicine items, the flag  will be ‘unchanged’ and change description is not expected to be provided.</p>
       </li>
       <li>
-        <p>shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</p>
+        <p>For new and changed medicine items, change description is expected to be provided.</p>
       </li>
-    </ul>
-  </li>
-  <li>When date is provided, it is expected to be the same as the date of the referencing Composition</li>
-  <li>When source is provided, it is expected to be the same as the author of the referencing Composition</li>
-  <li>All medicine items relevant to an event should be included in the list
-    <ul>
-      <li>For existing unchanged medicine items, the flag  will be ‘unchanged’ and change description is not expected to be provided</li>
-      <li>For new and changed medicine items, change description is expected to be provided</li>
     </ul>
   </li>
 </ul>
@@ -229,7 +207,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medlist.html">AUMedicineList</a>.</p>
 <p>
-This profile was published on Mon Apr 08 12:43:31 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Wed Apr 10 05:38:41 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -765,7 +743,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 8, 2019 12:43+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 10, 2019 05:38+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

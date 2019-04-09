@@ -27,6 +27,7 @@
   <sch:pattern>
     <sch:title>f:PractitionerRole/f:identifier</sch:title>
     <sch:rule context="f:PractitionerRole/f:identifier">
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:assigner) &gt;= 1">assigner: minimum cardinality of 'assigner' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
