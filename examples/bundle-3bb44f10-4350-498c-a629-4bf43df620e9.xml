@@ -16,9 +16,11 @@
       <Composition>
         <id value="565b1e7e-01c1-4379-a3d6-6e21cdea43e9"/>
         <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
           <profile
             value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1"
           />
+          
         </meta>
         <language value="en-AU"/>
         <text>
@@ -234,7 +236,10 @@
     <fullUrl value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
-        <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>        
+        <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>     
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -306,7 +311,10 @@
     <fullUrl value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
     <resource>
       <Practitioner xmlns="http://hl7.org/fhir">
-        <id value="40a94071-8373-4d53-a788-63b79c75a3c1"/>       
+        <id value="40a94071-8373-4d53-a788-63b79c75a3c1"/>     
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">            
@@ -374,7 +382,10 @@
     <fullUrl value="urn:uuid:e99357bd-b6ad-4ae7-9d99-27cb929e48af"/>
     <resource>
       <PractitionerRole xmlns="http://hl7.org/fhir">
-        <id value="e99357bd-b6ad-4ae7-9d99-27cb929e48af"/>        
+        <id value="e99357bd-b6ad-4ae7-9d99-27cb929e48af"/>       
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
@@ -437,7 +448,10 @@
     <fullUrl value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
     <resource>
       <Organization xmlns="http://hl7.org/fhir">
-        <id value="021fff67-c5ec-438f-9520-ce9bafee130"/>       
+        <id value="021fff67-c5ec-438f-9520-ce9bafee130"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -488,13 +502,14 @@
     <fullUrl value="http://example.org/fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>
     <resource>
       <List xmlns="http://hl7.org/fhir">
-        <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>   
-        <!--The IG Publisher fails to run if the bundle example has a List resource with an Agency profile reference of "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"-->
-        <!--<meta>
-          <profile
+        <id value="fa11a4f8-9ecc-4a65-9643-74c3c84880f4"/>           
+        <meta>          
+            <lastUpdated value="2018-09-21T09:00:00+10:00"/> 
+          <!--The IG Publisher fails to run if the bundle example has a List resource with an Agency profile reference of "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"-->
+          <!--<profile
             value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1"
-          />
-        </meta>-->
+          />-->
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
@@ -612,8 +627,11 @@
   <entry>
     <fullUrl value="urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e"/>
     <resource>
-      <Encounter>
+      <Encounter xmlns="http://hl7.org/fhir">
         <id value="98900f15-67f8-48a1-9345-6d5968f2c23e"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang = "en-AU">
@@ -626,8 +644,8 @@
             <p><b>status</b>: in-progress</p>
             <p><b>subject</b>: IHI = 8003608666701594; name =  Eliana Iglesias; birthDate = 20/08/1960; 
               indigenous status = Not stated/inadequately described</p>
-            <p><b>start</b>: 02/04/2019</p>
-            <p><b>end</b>: 08/04/2019</p>
+            <p><b>Date of encounter</b>: 19/07/2018</p>
+            
           </div>
         </text>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
@@ -644,8 +662,7 @@
           <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
         </subject>
         <period>
-          <start value="2019-04-02"/>
-          <end value="2019-04-08"/>
+          <start value="2018-07-19"/>         
         </period>
       </Encounter>
     </resource>
@@ -657,6 +674,9 @@
     <resource>
       <MedicationStatement xmlns="http://hl7.org/fhir">
         <id value="32def593-e104-4cee-b8f5-d1f923efd94b"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang = "en-AU">
@@ -691,6 +711,9 @@
     <resource>
       <MedicationStatement xmlns="http://hl7.org/fhir">
         <id value="710f5906-2444-4b6a-b841-d3e23434f228"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -727,6 +750,9 @@
     <resource>
       <MedicationStatement xmlns="http://hl7.org/fhir">
         <id value="9db8a050-0c25-4192-834d-bca1da8ff250"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -776,6 +802,9 @@
     <resource>
       <MedicationStatement xmlns="http://hl7.org/fhir">
         <id value="fc257fb0-8325-4f85-b29f-4c100346f527"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -820,7 +849,10 @@
     <fullUrl value="urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>
     <resource>
       <AllergyIntolerance xmlns="http://hl7.org/fhir">
-        <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>       
+        <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>  
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -854,6 +886,9 @@
     <resource>
       <Condition xmlns="http://hl7.org/fhir">
         <id value="f834bdcb-c535-49d8-8689-e00f6848af0d"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
@@ -890,6 +925,9 @@
     <resource>
       <Condition xmlns="http://hl7.org/fhir">
         <id value="24e42657-2230-44df-8bac-d19346a7f20b"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
@@ -926,6 +964,9 @@
     <resource>
       <Condition xmlns="http://hl7.org/fhir">
         <id value="9ceb1602-547f-4e3c-883d-a500c5e9d925"/>
+        <meta>
+          <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+        </meta>
         <text>
           <status value="additional"/>
           <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
