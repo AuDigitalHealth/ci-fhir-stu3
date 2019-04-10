@@ -4,19 +4,7 @@
     <id value="fc257fb0-8325-4f85-b29f-4c100346f527"/>
     <meta>
         <lastUpdated value="2018-07-19T11:00:00+10:00"/>
-    </meta>
-    <!--<text>
-        <status value="additional"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>Patient</b>: Eliana Iglesias</p>
-            <p><b>Status</b>: Intended</p>
-            <p><b>Medication</b>: Augmentin Duo Forte 875/125 film-coated tablet</p>           
-            <p><b>Taken</b>: Not yet taken</p>            
-            <p><b>Reason</b>: Headache, Fever and Sore throat</p>
-            <p><b>Dosage</b>: 1 tablet twice a day for five days</p>
-        </div>
-    </text>-->
-    
+    </meta>      
     <status value="intended"/>
     <medicationCodeableConcept>
         <coding>
@@ -24,7 +12,7 @@
             <code value="6052011000036107"/>
             <display value="Augmentin Duo Forte 875/125 film-coated tablet"/>
         </coding>
-        <text value="Augmentin Duo Forte 875/125 film-coated tablet"/>
+        <text value="Augmentin Duo Forte 875/125 tablet"/>
     </medicationCodeableConcept>
     <subject>
         <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
@@ -37,10 +25,10 @@
         <text value="1 tablet twice a day for five days"/>
         <timing>
             <repeat>
-                <boundsPeriod>
-                    <start value="2018-07-19" />
-                    <end value="2018-07-24" />
-                </boundsPeriod>
+                <boundsDuration>
+                    <value value="5"/>
+                    <code value="d"/>
+                </boundsDuration>                
                 <count value="1"/>
                 <frequency value="2"/>
                 <period value="1"/>

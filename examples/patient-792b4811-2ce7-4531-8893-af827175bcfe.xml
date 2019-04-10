@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Patient xmlns="http://hl7.org/fhir">
-    <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>     
+    <id value="792b4811-2ce7-4531-8893-af827175bcfe"/>    
     <meta>
-        <lastUpdated value="2018-07-19T11:00:00+10:00"/>
-    </meta>
-    <!--<text>
-        <status value="additional"/>
+        <lastUpdated value="2018-09-21T09:00:00+10:00"/>
+    </meta>   
+    <text>
+        <status value="extensions"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <h2>Patient</h2>
-            <p><b>Name</b>: Eliana Iglesias</p>
-            <p><b>Identifier</b>: IHI = 8003608666701594</p>            
-            <p><b>Gender</b>: Female</p>
-            <p><b>Date of birth</b>: 20/08/1960</p>
-            <p><b>General Practitioner</b>: HPI-I = 8003611234567893; name = Francis Smith</p>
-            <p><b>Managing Organization</b>: Devonport Family Medicine Clinic; ABN =
-                51824754455; telecom = email: reception@example.dfmc.com.au (work);
-                telecom = fax (03) 8543 5557 (work); telecom = phone (03) 8543 5556
-                (work); address = LPO Box 235 Strahan, TAS 7468 (postal)</p>
-            <p><b>Indigenous status</b>: Not stated/inadequately described</p>
-            <p><b>Date of birth accuracy</b>: Day and month are accurate, year is estimated; 20/08/1960 08.07AM</p>
+            <h2>Patient details</h2>
+            <p><b>Eliana IGLESIAS</b></p>            
+            <p><b>Date of birth</b>: 20 Aug 1960, Female</p>
+            <p>IHI: 8003608666701594</p>             
+            <p>Indigenous status: Not stated/inadequately described</p>            
         </div>
-    </text>-->
+    </text>
     <extension url="http://hl7.org.au/fhir/StructureDefinition/indigenous-status">
         <valueCoding>
             <system
@@ -46,7 +39,7 @@
         <family value="Iglesias"/>
         <given value="Iliana"/>
     </name>
-    <gender value="female"/>
+    <gender value="other"/>
     <birthDate value="1960-08-20">
         <extension
             url="http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator">
@@ -62,7 +55,7 @@
         </extension>
     </birthDate>
     <generalPractitioner>
-        <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
+        <reference value="urn:uuid:6c9f40e7-6f00-4d75-9f39-d57bd620d855"/>
     </generalPractitioner>
     <managingOrganization>
         <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>

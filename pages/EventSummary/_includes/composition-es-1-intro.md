@@ -81,8 +81,7 @@ The following are the usage scenarios expected:
 #### Known Issues
 
 * Diagnostic Investigations section is in progress. It will be updated to reference appropriate Agency profiles in the future.
-* Bundle.entry.resource.List: The IG Publisher fails to run if the bundle example has a List resource carrying a meta.profile referencing the Agency profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1. It also fails when the Bundle.entry.resource.List is referenced by its exact fullUrl value from a corresponding Composition.section.entry.reference element (irrespective of the presence of a meta.profile value). This issue has been logged in Github [issue#23](https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/23).
-
+* The profile List of medication changes from an Event referenced in the entry element of the medications section slice is throwing an unexpected error when validated against. This issue is tracked as [ci-fhir-stu3/issues/23](https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/23).
 
 <!--#### Examples
 This section provides examples that conform to the requirements specified within this implementation guide.

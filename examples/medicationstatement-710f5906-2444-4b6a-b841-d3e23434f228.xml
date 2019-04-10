@@ -4,17 +4,7 @@
     <id value="710f5906-2444-4b6a-b841-d3e23434f228"/>
     <meta>
         <lastUpdated value="2018-09-21T09:00:00+10:00"/>
-    </meta>
-    <!--<text>
-        <status value="additional"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <p><b>Patient</b>: Eliana Iglesias</p>
-            <p><b>Status</b>: Given one tablet to take home</p>
-            <p><b>Medication</b>: Sumatriptan 100 mg</p>            
-            <p><b>Taken</b>: Not yet taken</p>  
-            <p><b>Reason</b>: Migraine</p>
-        </div>
-    </text>-->
+    </meta>        
     <status value="intended"/>
     <medicationCodeableConcept>
         <coding>
@@ -22,10 +12,13 @@
             <code value="45219011000036101"/>
             <display value="sumatriptan 100 mg tablet"/>
         </coding>
-        <text value="sumatriptan 100 mg tablet "/>
+        <text value="sumatriptan 100 mg tablet"/>
     </medicationCodeableConcept>
     <subject>
         <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     </subject>
-    <taken value="n"/>    
+    <taken value="n"/>
+    <reasonCode>         
+        <text value="Migraine"/>
+    </reasonCode>
 </MedicationStatement>
