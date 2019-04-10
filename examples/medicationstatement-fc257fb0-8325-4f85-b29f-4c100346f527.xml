@@ -5,16 +5,17 @@
     <meta>
         <lastUpdated value="2018-07-19T11:00:00+10:00"/>
     </meta>
-    <text>
+    <!--<text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p><b>Patient</b>: Eliana Iglesias</p>
-            <p><b>Status</b>: intended</p>
+            <p><b>Status</b>: Intended</p>
             <p><b>Medication</b>: Augmentin Duo Forte 875/125 film-coated tablet</p>           
-            <p><b>Taken</b>: Not yet taken</p>
+            <p><b>Taken</b>: Not yet taken</p>            
+            <p><b>Reason</b>: Headache, Fever and Sore throat</p>
             <p><b>Dosage</b>: 1 tablet twice a day for five days</p>
         </div>
-    </text>
+    </text>-->
     
     <status value="intended"/>
     <medicationCodeableConcept>
@@ -29,13 +30,20 @@
         <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
     </subject>
     <taken value="n"/>
+    <reasonCode>         
+        <text value="headache, fever and sore throat"/>
+    </reasonCode>
     <dosage>
         <text value="1 tablet twice a day for five days"/>
         <timing>
             <repeat>
+                <boundsPeriod>
+                    <start value="2018-07-19" />
+                    <end value="2018-07-24" />
+                </boundsPeriod>
                 <count value="1"/>
                 <frequency value="2"/>
-                <period value="5"/>
+                <period value="1"/>
                 <periodUnit value="d"/>
             </repeat>
         </timing>
