@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <MedicationStatement xmlns="http://hl7.org/fhir">
     <id value="32def593-e104-4cee-b8f5-d1f923efd94b"/>
     <meta>
         <lastUpdated value="2018-09-21T09:00:00+10:00"/>
     </meta>        
-    <status value="completed"/>
+    <status value="active"/>
     <medicationCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -20,5 +19,12 @@
     <taken value="y"/>
     <reasonCode>         
         <text value="Migraine"/>
-    </reasonCode>        
+    </reasonCode>
+    <note>
+        <text value="Patient advised that usually takes sumatriptan for migraine; they took one
+            tablet during the event, and during the event they were given one tablet to take home."/>
+    </note>    
+    <dosage>
+        <text value="As required"/>
+    </dosage>    
 </MedicationStatement>

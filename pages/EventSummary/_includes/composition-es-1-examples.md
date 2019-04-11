@@ -1,6 +1,6 @@
 <table class="list" width="100%">
             <tr>
-                <td><a href="Bundle-3bb44f10-4350-498c-a629-4bf43df620e9.html">Event Summary example 1 (contained)</a></td>
+                <td><a href="Bundle-3bb44f10-4350-498c-a629-4bf43df620e9.html">Event Summary example 1 (bundle)</a></td>
                 <td>3bb44f10-4350-498c-a629-4bf43df620e9</td>
                 <td><a href="Bundle-3bb44f10-4350-498c-a629-4bf43df620e9.xml.html">XML</a></td>
                 <td><a href="Bundle-3bb44f10-4350-498c-a629-4bf43df620e9.json.html">JSON</a></td>

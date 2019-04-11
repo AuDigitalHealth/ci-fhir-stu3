@@ -1,6 +1,6 @@
 * [Practitioner example 1](Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html)
 
-* [Practitioner example 2](Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html)
+* [Practitioner example 3](Practitioner-6c9f40e7-6f00-4d75-9f39-d57bd620d855.html)
 
 Example resources conforming to this profile are included with [Shared Health Summary](StructureDefinition-composition-shs-1.html) example instances:
 * [Composition SHS example 1 (with contained resources)](Composition-a0da969a-7956-439b-b390-8de071a2df7c.html)

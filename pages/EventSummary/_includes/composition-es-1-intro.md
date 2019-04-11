@@ -81,7 +81,7 @@ The following are the usage scenarios expected:
 #### Known Issues
 
 * Diagnostic Investigations section is in progress. It will be updated to reference appropriate Agency profiles in the future.
-* The profile List of medication changes from an Event referenced in the entry element of the medications section slice is throwing an unexpected error when validated against. This issue is tracked as [ci-fhir-stu3/issues/23](https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/23).
+* The profile [List of medication changes from an Event](StructureDefinition-list-medseventchanges-1.html) referenced in the entry element of the medications section slice is throwing an unexpected error when validated against. This issue is tracked as [ci-fhir-stu3/issues/23](https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/23).
 
 <!--#### Examples
 This section provides examples that conform to the requirements specified within this implementation guide.
