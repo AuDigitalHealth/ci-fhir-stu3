@@ -24,11 +24,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.html">MedicationStatement example 4</a></td>
-                <td>yh783f71-7736-4d10-89f7-fa1845e53987</td>
-                <td><a href="MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.xml.html">XML</a></td>
-                <td><a href="MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.json.html">JSON</a></td>
-                <td><a href="MedicationStatement-yh783f71-7736-4d10-89f7-fa1845e53987.ttl.html">Turtle</a></td>
+                <td><a href="MedicationStatement-2fe9873a-0eea-415a-89ae-0b82ff2b3d0b.html">MedicationStatement example 4</a></td>
+                <td>2fe9873a-0eea-415a-89ae-0b82ff2b3d0b</td>
+                <td><a href="MedicationStatement-2fe9873a-0eea-415a-89ae-0b82ff2b3d0b.xml.html">XML</a></td>
+                <td><a href="MedicationStatement-2fe9873a-0eea-415a-89ae-0b82ff2b3d0b.json.html">JSON</a></td>
+                <td><a href="MedicationStatement-2fe9873a-0eea-415a-89ae-0b82ff2b3d0b.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
             <tr>
@@ -47,4 +47,13 @@
                 <td><a href="Composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+            <tr>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.html">Shared Health Summary example 4 (bundle)</a></td>
+                <td>205fcc4b-baf2-4683-a48f-b087a5937230</td>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.xml.html">XML</a></td>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.json.html">JSON</a></td>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+
   </table>

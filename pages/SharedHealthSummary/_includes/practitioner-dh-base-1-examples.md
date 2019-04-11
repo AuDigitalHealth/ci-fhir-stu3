@@ -39,4 +39,12 @@
                 <td><a href="Composition-c53c6c39-3e1a-4038-9ad5-25be8c54481f.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
- </table>
+            <tr>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.html">Shared Health Summary example 4 (bundle)</a></td>
+                <td>205fcc4b-baf2-4683-a48f-b087a5937230</td>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.xml.html">XML</a></td>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.json.html">JSON</a></td>
+                <td><a href="Bundle-205fcc4b-baf2-4683-a48f-b087a5937230.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+</table>
