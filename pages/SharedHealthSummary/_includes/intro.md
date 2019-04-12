@@ -93,6 +93,4 @@ This document and related artefacts are technical in nature and the audience is 
   
 |[<a name="NEHT2015e">NEHT2015e</a>]| National E-Health Transition Authority, 10 April 2015, Shared Health Summary Information Requirements, Version 1.1.|
 | |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015)|
-
-
-
+ 

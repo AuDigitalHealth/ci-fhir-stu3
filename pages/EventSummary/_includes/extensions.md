@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-The following extensions form this implementation guide:
+The following extensions form part of this implementation guide:
 
 <table class="list" width="100%">
     <tr>

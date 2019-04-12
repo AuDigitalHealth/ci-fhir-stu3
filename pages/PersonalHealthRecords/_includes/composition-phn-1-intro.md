@@ -1,3 +1,5 @@
+### Personal Health Notes *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+
 This profile defines a representation of a Personal Health Notes document for a patient in an Australian healthcare context. 
 
 ##### **Usage Scenarios**
