@@ -11,7 +11,7 @@
   "title": "Base Patient",
   "status": "draft",
   "experimental": true,
-  "date": "2019-04-02T14:22:24+10:00",
+  "date": "2019-04-12T16:47:20+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -1124,7 +1124,7 @@
         "definition": "Coded identifier type for Individual Healthcare Identifier (IHI).",
         "comment": "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. \n\nWhere the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
         "requirements": "Allows users to make use of identifiers when the identifier system is not known.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Identifier.type",
@@ -1627,7 +1627,7 @@
         "definition": "Medicare number assigned to a patient.",
         "comment": "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. \n\nWhere the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
         "requirements": "Allows users to make use of identifiers when the identifier system is not known.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Identifier.type",

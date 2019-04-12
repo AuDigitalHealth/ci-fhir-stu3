@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "dd82cc78-60b0-41cb-83d4-32521d3b9fa2"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: dd82cc78-60b0-41cb-83d4-32521d3b9fa2</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>code</b>: Assertion <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v3/ActCode code 'ASSERTION' = 'Assertion', given as 'Assertion'})</span></p><p><b>subject</b>: <a href=\"Patient-841a56de-92d7-47fd-bb27-bad8efb371e4.html\">Generated Summary: id: 841a56de-92d7-47fd-bb27-bad8efb371e4; National unique individual identifier = 8003608666701594; Adam A. Everyman(OFFICIAL), Damo ; gender: male</a></p><p><b>effective</b>: 21/06/2017</p><p><b>value</b>: No known current medications <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '1234391000168107' = '1234391000168107', given as 'No known current medications'})</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+       fhir:Coding.code [ fhir:value "ASSERTION" ];
+       fhir:Coding.display [ fhir:value "Assertion" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/841a56de-92d7-47fd-bb27-bad8efb371e4>;
+     fhir:Reference.reference [ fhir:value "Patient/841a56de-92d7-47fd-bb27-bad8efb371e4" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2017-06-21"^^xsd:date];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:1234391000168107;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "1234391000168107" ];
+       fhir:Coding.display [ fhir:value "No known current medications" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

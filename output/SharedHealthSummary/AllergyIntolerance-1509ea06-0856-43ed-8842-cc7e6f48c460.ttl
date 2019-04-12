@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/1509ea06-0856-43ed-8842-cc7e6f48c460> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "1509ea06-0856-43ed-8842-cc7e6f48c460"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 1509ea06-0856-43ed-8842-cc7e6f48c460</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: unconfirmed</p><p><b>code</b>: No known medication allergies <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '409137002' = 'No known history of drug allergy', given as 'No known drug allergy'})</span></p><p><b>patient</b>: <a href=\"Patient-d9698a55-723a-49de-931b-4e61d732b016.html\">Generated Summary: id: d9698a55-723a-49de-931b-4e61d732b016; National unique individual identifier = 8003608666701594; Adam A. Everyman(OFFICIAL), Damo ; gender: male</a></p></div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "unconfirmed"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:409137002;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "409137002" ];
+       fhir:Coding.display [ fhir:value "No known drug allergy" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "No known medication allergies" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d9698a55-723a-49de-931b-4e61d732b016>;
+     fhir:Reference.reference [ fhir:value "Patient/d9698a55-723a-49de-931b-4e61d732b016" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/1509ea06-0856-43ed-8842-cc7e6f48c460.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

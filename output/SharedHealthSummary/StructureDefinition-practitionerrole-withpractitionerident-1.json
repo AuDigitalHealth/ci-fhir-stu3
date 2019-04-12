@@ -11,7 +11,7 @@
   "title": "PractitionerRole with Practitioner with Mandatory Identifier",
   "status": "draft",
   "experimental": true,
-  "date": "2019-04-05T15:44:08+10:00",
+  "date": "2019-04-12T16:43:23+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -2484,15 +2484,6 @@
       {
         "id": "PractitionerRole.specialty",
         "path": "PractitionerRole.specialty",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
         "short": "Practitioner specialties",
         "definition": "Specific specialty of the practitioner.",
         "min": 0,
@@ -2517,161 +2508,6 @@
             }
           ],
           "strength": "preferred",
-          "description": "Specific specialty associated with the agency",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRA-5"
-          },
-          {
-            "identity": "rim",
-            "map": ".player.HealthCareProvider[@classCode = 'PROV'].code"
-          },
-          {
-            "identity": "servd",
-            "map": "./Specialty"
-          }
-        ]
-      },
-      {
-        "id": "PractitionerRole.specialty:snomedctSpecialty",
-        "path": "PractitionerRole.specialty",
-        "sliceName": "snomedctSpecialty",
-        "short": "SNOMED-CT Practitioner Role",
-        "definition": " \r\nSpecialties for which this practitioner has capability to deliver in this role coded as SNOMED CT.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "PractitionerRole.specialty",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "PractitionerSpecialty"
-            }
-          ],
-          "strength": "preferred",
-          "description": "Specific specialty associated with the agency",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRA-5"
-          },
-          {
-            "identity": "rim",
-            "map": ".player.HealthCareProvider[@classCode = 'PROV'].code"
-          },
-          {
-            "identity": "servd",
-            "map": "./Specialty"
-          }
-        ]
-      },
-      {
-        "id": "PractitionerRole.specialty:snomedctSpecialty.id",
-        "path": "PractitionerRole.specialty.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PractitionerRole.specialty:snomedctSpecialty.extension",
-        "path": "PractitionerRole.specialty.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "PractitionerRole.specialty:snomedctSpecialty.coding",
-        "path": "PractitionerRole.specialty.coding",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
           "valueSetReference": {
             "reference": "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1"
           }
@@ -2679,56 +2515,15 @@
         "mapping": [
           {
             "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
+            "map": "PRA-5"
           },
           {
             "identity": "rim",
-            "map": "union(., ./translation)"
+            "map": ".player.HealthCareProvider[@classCode = 'PROV'].code"
           },
           {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "PractitionerRole.specialty:snomedctSpecialty.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "PractitionerRole.specialty.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+            "identity": "servd",
+            "map": "./Specialty"
           }
         ]
       },

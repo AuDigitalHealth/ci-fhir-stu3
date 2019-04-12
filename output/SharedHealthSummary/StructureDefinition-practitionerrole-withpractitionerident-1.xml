@@ -34,7 +34,7 @@
   <title value="PractitionerRole with Practitioner with Mandatory Identifier"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-04-05T15:44:08+10:00"/>
+  <date value="2019-04-12T16:43:23+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -2051,13 +2051,6 @@
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="coding"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
       <short value="Practitioner specialties"/>
       <definition value="Specific specialty of the practitioner."/>
       <min value="0"/>
@@ -2077,180 +2070,21 @@
           <valueString value="PractitionerSpecialty"/>
         </extension>
         <strength value="preferred"/>
-        <description value="Specific specialty associated with the agency"/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="PRA-5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".player.HealthCareProvider[@classCode = &#39;PROV&#39;].code"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./Specialty"/>
-      </mapping>
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty">
-      <path value="PractitionerRole.specialty"/>
-      <sliceName value="snomedctSpecialty"/>
-      <short value="SNOMED-CT Practitioner Role"/>
-      <definition value=" &#xD;&#xA;Specialties for which this practitioner has capability to deliver in this role coded as SNOMED CT."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="PractitionerRole.specialty"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PractitionerSpecialty"/>
-        </extension>
-        <strength value="preferred"/>
-        <description value="Specific specialty associated with the agency"/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/c80-practice-codes"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="PRA-5"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".player.HealthCareProvider[@classCode = &#39;PROV&#39;].code"/>
-      </mapping>
-      <mapping>
-        <identity value="servd"/>
-        <map value="./Specialty"/>
-      </mapping>
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty.id">
-      <path value="PractitionerRole.specialty.id"/>
-      <representation value="xmlAttr"/>
-      <short value="xml:id (or equivalent in JSON)"/>
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Element.id"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty.extension">
-      <path value="PractitionerRole.specialty.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Additional Content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Element.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty.coding">
-      <path value="PractitionerRole.specialty.coding"/>
-      <short value="Code defined by a terminology system"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="1"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <strength value="required"/>
         <valueSetReference>
           <reference value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1"/>
         </valueSetReference>
       </binding>
       <mapping>
         <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
+        <map value="PRA-5"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
-        <map value="union(., ./translation)"/>
+        <map value=".player.HealthCareProvider[@classCode = &#39;PROV&#39;].code"/>
       </mapping>
       <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="PractitionerRole.specialty:snomedctSpecialty.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="PractitionerRole.specialty.text"/>
-      <short value="Plain text representation of the concept"/>
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
-      <comment value="Very often the text is the same as a displayName of one of the codings."/>
-      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.text"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.9. But note many systems use C*E.2 for this"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
+        <identity value="servd"/>
+        <map value="./Specialty"/>
       </mapping>
     </element>
     <element id="PractitionerRole.location">

@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/2fe9873a-0eea-415a-89ae-0b82ff2b3d0b> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2fe9873a-0eea-415a-89ae-0b82ff2b3d0b"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 2fe9873a-0eea-415a-89ae-0b82ff2b3d0b</p><p><b>status</b>: active</p><p><b>medication</b>: Candesartan 32mg <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '22087011000036100' = '22087011000036100', given as 'candesartan cilexetil 32 mg tablet'})</span></p><p><b>subject</b>: <a href=\"urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7\">urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7</a></p><p><b>taken</b>: y</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:22087011000036100;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "22087011000036100" ];
+       fhir:Coding.display [ fhir:value "candesartan cilexetil 32 mg tablet" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Candesartan 32mg" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "1 tablet daily" ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:integer ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "tablet" ];
+       fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Quantity.code [ fhir:value "63011000036109" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/2fe9873a-0eea-415a-89ae-0b82ff2b3d0b.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

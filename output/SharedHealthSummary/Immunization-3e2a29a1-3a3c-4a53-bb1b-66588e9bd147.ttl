@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Immunization/3e2a29a1-3a3c-4a53-bb1b-66588e9bd147> a fhir:Immunization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3e2a29a1-3a3c-4a53-bb1b-66588e9bd147"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 3e2a29a1-3a3c-4a53-bb1b-66588e9bd147</p><p><b>status</b>: completed</p><p><b>notGiven</b>: false</p><p><b>vaccineCode</b>: diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '837281000168100' = '837281000168100', given as 'diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe'})</span></p><p><b>patient</b>: <a href=\"urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7\">urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7</a></p><p><b>date</b>: 15/04/2017</p><p><b>primarySource</b>: true</p></div>"
+  ];
+  fhir:Immunization.status [ fhir:value "completed"];
+  fhir:Immunization.notGiven [ fhir:value "false"^^xsd:boolean];
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:837281000168100;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "837281000168100" ];
+       fhir:Coding.display [ fhir:value "diphtheria 2 units + tetanus 20 units vaccine injection, 0.5 mL syringe" ]
+     ]
+  ];
+  fhir:Immunization.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cc246543-a0da-4ead-9ed6-5e064fea9ff7" ]
+  ];
+  fhir:Immunization.date [ fhir:value "2017-04-15"^^xsd:date];
+  fhir:Immunization.primarySource [ fhir:value "true"^^xsd:boolean] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Immunization/3e2a29a1-3a3c-4a53-bb1b-66588e9bd147.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,15 +1,9 @@
 {
   "resourceType": "Patient",
   "id": "cc246543-a0da-4ead-9ed6-5e064fea9ff7",
-  "meta": {
-    "profile": [
-      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1",
-      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"
-    ]
-  },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p><b>Patient</b></p>\n            <p><b>identifier</b>: National unique individual identifier = 8003608666701594</p>\n            <p><b>name</b>: Joe Greatpatient </p>\n            <p><b>gender</b>: male</p>\n            <p><b>birthDate</b>: 23/08/1956</p>\n            <p><b>generalPractitioner</b>: Good Doctor</p>\n            <p><b>managingOrganization</b>: ABN = 51824754455; name: Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03)\n                8543 5557(WORK), ph: (03) 8543 5556(WORK)</p>\n            <p><b>indigenous status</b>: Not stated/inadequately described</p>\n        </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p><b>Joe GREATPATIENT</b></p>\n            <p>DoB: 23 AUG 1956 (62y)</p>\n            <p>male</p>\n            <p>IHI: 8003608666701594</p>\n            <p/>\n            <p>Indigenous status: Not stated/inadequately described</p>\n            <p>GP: Dr. Good Doctor</p>\n            <p>Clinic: Devonport Family Medicine Clinic; reception@example.dfmc.com.au; ph: (03) 8543 5556</p>\n        </div>"
   },
   "extension": [
     {
@@ -64,7 +58,7 @@
   },
   "generalPractitioner": [
     {
-      "reference": "Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"
+      "reference": "urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c"
     }
   ],
   "managingOrganization": {

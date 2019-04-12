@@ -126,9 +126,9 @@
 
 <p>The table below matches the data items to the corresponding supported element in the Shared Health Summary (SHS) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition.</p>
 
-<table border="1" cellpadding="1" valign="middle">
+<table class="list" width="100%">
                <thead>
-                    <tr bgcolor="#DCDCDC">
+                    <tr>
                     <th>Data Item</th>
                     <th>Req. No</th>
                     <th>Element</th>
@@ -221,54 +221,53 @@
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization).Organization.name</td>
+                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.name</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Address</td>
                     <td>025064</td>
                     <td>Organization.address</td>
-                    <td>omposition.composition-author-role.PractitionerRole.organization(Organization).Organization.address</td>
+                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.address</td>
                 </tr>
 
                 <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization. name</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization).Organization.name</td>
+                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.name</td>
                 </tr>
                 <tr>
-                    <td>Healthcare Provider Employer Organisation Electronic Communication
-                        Detail</td>
+                    <td>Healthcare Provider Employer Organisation Electronic Communication Detail</td>
                     <td>025063</td>
                     <td>Organization.telecom</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization).Organization.telecom</td>
+                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.telecom</td>
                 </tr>
 
                 <tr>
                     <td>Healthcare provider Identifier-Individual (mandatory)</td>
                     <td>023066</td>
                     <td>Practitioner.identifier</td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner).Practitioner.identifier </td>
+                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier </td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (mandatory)</td>
                     <td>023071</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization).Organization.identifier</td>
+                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.identifier</td>
                 </tr>
 
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (mandatory)</td>
                     <td>023071</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization).Organization.identifier</td>
+                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.identifier</td>
                 </tr>
 
                 <tr>
                     <td rowspan="2">Healthcare Provider’s Title (optional)</td>
                     <td rowspan="2">023061</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner).Practitioner.name</td>
+                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name </td>
@@ -278,17 +277,17 @@
                     <td rowspan="2">Healthcare Provider Given Name (optional)</td>
                     <td rowspan="2">023062</td>
                     <td>Practitioner.name</td>
-                    <td>composition-author-role.practitioner(Practitioner).Practitioner.name</td>
+                    <td>composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Family Name (mandatory)</td>
                     <td rowspan="2">023064</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.practitioner(Practitioner).Practitioner.name</td>
+                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
@@ -298,7 +297,7 @@
                     <td rowspan="2">Healthcare provider name suffix (optional)</td>
                     <td rowspan="2">023065</td>
                     <td>Practitioner.name </td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner).Practitioner.name</td>
+                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
@@ -308,14 +307,14 @@
                     <td>Healthcare Provider Individual’s Workplace Address (optional)</td>
                     <td>024035</td>
                     <td>Practitioner.address</td>
-                    <td>Composition.composition-author-role.ractitionerRole.practitioner(Practitioner).Practitioner.name</td>
+                    <td>Composition.composition-author-role.ractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Individual’s Workplace Electronic
                         Communication Details (optional)</td>
                     <td rowspan="2">024036</td>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.composition-author-role.ractitionerRole.practitioner(Practitioner).Practitioner.telecom</td>
+                    <td>Composition.composition-author-role.ractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
                 </tr>
                 <tr>
                     <td>Practitioner.telecom</td>
@@ -369,33 +368,33 @@
                     <td rowspan="2">Reaction Type</td>
                     <td>024963</td>
                     <td>AllergyIntolerance.type</td>
-                    <td>Composition.section:allergies.entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
                 </tr>
                 <tr>
                     <td>024964</td>
                     <td>AllergyIntolerance.type</td>
-                    <td>Composition.section:allergies.entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
                 </tr>
                 <tr>
                     <td rowspan="4">Reaction Description</td>
                     <td>023239</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-                    <td>Composition.section:allergies.entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
                 </tr>
                 <tr>
                     <td>022887</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-                 <td>Composition.section:allergies.entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
                 </tr>
                 <tr>
                     <td>023240</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-        <td>Composition.section:allergies.entry(AllergyIntolerance).AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance).AllergyIntolerance.reaction.manifestation</td>
                 </tr>
                 <tr>
                     <td>023241</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-                    <td>Composition.section:allergies.entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
                 </tr>
                 <tr>
                     <td rowspan="5">Component</td>
@@ -465,14 +464,14 @@
                     <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.note</td>
                 </tr>
                 <tr>
-            <td rowspan="6">Component</td>
-            <td rowspan="3">023250</td>
-            <td>Composition.section(MedicalHistory)</td>
-            <td>Composition.section(MedicalHistory)</td>
+                <td rowspan="6">Component</td>
+                <td rowspan="3">023250</td>
+                <td>Composition.section(MedicalHistory)</td>
+                <td>Composition.section(MedicalHistory)</td>
         </tr>
         <tr>
-            <td>Composition.section(MedicalHistory).entry</td>
-            <td>Composition.section(MedicalHistory).entry</td>
+              <td>Composition.section(MedicalHistory).entry</td>
+              <td>Composition.section(MedicalHistory).entry</td>
         </tr>
         <tr>
             <td>Composition.section(MedicalHistory).emptyReason</td>
@@ -551,7 +550,7 @@
                 <tr>
                     <td rowspan="2">024991</td>
                     <td>Condition.onset[x]</td>
-                    &lt;<td>Composition.section(MedicalHistory).entry(Condition as Summary Statement of Condition).Condition.onset[x]</td>
+                    <td>Composition.section(MedicalHistory).entry(Condition as Summary Statement of Condition).Condition.onset[x]</td>
                 </tr>
                 <tr>
                     <td>Condition.abatement[x]</td>
@@ -680,7 +679,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 5, 2019 15:44+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 12, 2019 16:43+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

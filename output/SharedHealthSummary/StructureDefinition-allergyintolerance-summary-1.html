@@ -145,37 +145,25 @@
 
 <a name="introduction"> </a>
 
-<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
-<ul class="no_toc" id="markdown-toc">
-  <li><a href="#summary-statement-of-allergy-or-intolerance-draft" id="markdown-toc-summary-statement-of-allergy-or-intolerance-draft">Summary Statement of Allergy or Intolerance <em>[Draft]</em></a>    <ul>
-      <li><a href="#usage-scenarios" id="markdown-toc-usage-scenarios">Usage scenarios</a></li>
-      <li><a href="#implementation-guidance" id="markdown-toc-implementation-guidance">Implementation guidance</a></li>
-    </ul>
-  </li>
-</ul>
 <h3 id="summary-statement-of-allergy-or-intolerance-draft">Summary Statement of Allergy or Intolerance <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h3>
 
-<h4 id="usage-scenarios">Usage scenarios</h4>
-
-<p>The following are the usage scenarios expected:</p>
-
-<ul>
-  <li>A summary statement for an allergy or intolerance exchanged as referenced entry in a composition.</li>
-</ul>
-
-<p>Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing profiles.</p>
-
 <h4 id="implementation-guidance">Implementation guidance</h4>
+
+<p>For the expected usage scenarios in this implementation guide:</p>
+
 <ul>
-  <li>Where additional content beyond that flagged with must support is provided it:
-    <ul>
-      <li>shall not qualify or negate content described by this profile as must support</li>
-      <li>shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
-    </ul>
+  <li>
+    <p>It is expected that verificationStatus will be ‘unconfirmed’ (where a sending system does not clearly have this element this should be the value sent), but may be ‘confirmed’.</p>
   </li>
-  <li>If an authoring system only has substance or agent available and not a statement of allergy intolerance that substance should be recorded in the code and optionally reaction.substance.</li>
-  <li>For the usage scenario for this profile it is expected that verificationStatus will be ‘unconfirmed’ (where a sending system does not clearly have this element this should be the value sent), but may be ‘confirmed’. A ‘refuted’ allergy should be represented with an appropriate negation code.</li>
-  <li>For the usage scenarios for this profile it is expected that the clinicalStatus will be ‘active’.</li>
+  <li>
+    <p>It is expected that clinicalStatus will be ‘active’.</p>
+  </li>
+  <li>
+    <p>Where an authoring system only has substance or agent available and not a statement of allergy or intolerance that substance should be recorded in the code and optionally in reaction.substance.</p>
+  </li>
+  <li>
+    <p>A ‘refuted’ allergy or intolerance should be represented with an appropriate negation code (e.g. 716184000 |No known latex allergy|) and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.</p>
+  </li>
 </ul>
 
 
@@ -215,7 +203,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-allergyintolerance.html">AUBaseAllergyIntolerance</a>.</p>
 <p>
-This profile was published on Fri Apr 05 15:44:08 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Apr 12 16:43:23 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -745,7 +733,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 5, 2019 15:44+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 12, 2019 16:43+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

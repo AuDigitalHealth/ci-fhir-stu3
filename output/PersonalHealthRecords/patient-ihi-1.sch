@@ -56,7 +56,12 @@
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/ihi-status']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/ihi-status': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/ihi-record-status']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/ihi-record-status': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:assigner) &gt;= 1">assigner: minimum cardinality of 'assigner' is 1</sch:assert>
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:assigner) &gt;= 1">assigner: minimum cardinality of 'assigner' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

@@ -158,9 +158,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding (SNOMEDPractitionerRoleCode)</td><td>C*E.1-8, C*E.10-22</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty</td><td>PRA-5</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (snomedctSpecialty)</td><td>PRA-5</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;healthcareService</td><td>EDU-2 / AFF-3</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
@@ -227,11 +224,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding (SNOMEDPractitionerRoleCode)</td><td>union(., ./translation)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty</td><td>.player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (snomedctSpecialty)</td><td>.player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>.performance.ActDefinitionOrEvent.ServiceDeliveryLocation[@classCode = 'SDLOC']</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;healthcareService</td><td>.player.QualifiedEntity[@classCode = 'QUAL'].code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>.telecom</td> </tr>
@@ -274,7 +266,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>(ServD maps Practitioners and Organizations via another entity, so this concept is not available)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>(ServD maps Practitioners and Organizations via another entity, so this concept is not available)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty</td><td>./Specialty</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (snomedctSpecialty)</td><td>./Specialty</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>(ServD maps Practitioners and Organizations via another entity, so this concept is not available)&lt;br/&gt; However these are accessed via the Site.ServiceSite.ServiceSiteProvider record. (The Site has the location)</td> </tr>
 </table>
 <a name="w5"> </a><h3>Mappings for W5 Mapping (<a href="http://hl7.org/fhir/w5.html">http://hl7.org/fhir/w5</a>)</h3><table class="grid">
@@ -314,7 +305,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 5, 2019 15:44+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 12, 2019 16:43+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

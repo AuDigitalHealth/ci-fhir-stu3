@@ -145,45 +145,21 @@
 
 <a name="introduction"> </a>
 
-<h2 id="summary-of-an-encounter-for-an-event-draft"><strong>Summary of an Encounter for an Event</strong> <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h2>
+<h3 id="summary-of-an-encounter-for-an-event-draft">Summary of an Encounter for an Event <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h3>
 
-<p>The purpose of this profile is to provide a summary of an encounter, with a narrative description of the encounter, for an event between a patient and a healthcare provider. The description may capture text about the encounter that is not captured in other fields and include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event.</p>
-
-<h5 id="usage-scenarios"><strong>Usage Scenarios</strong></h5>
+<h5 id="usage-scenarios">Usage scenarios</h5>
 <ul>
   <li>A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry in a Composition</li>
 </ul>
 
 <p>Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.</p>
 
-<h5 id="must-support"><strong>Must Support</strong></h5>
-<p>In the context of this profile <a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a> SHALL be interpreted as follows.</p>
+<h5 id="implementation-guidance">Implementation guidance</h5>
+
+<p>For the expected usage scenarios in this implementation guide:</p>
 
 <ul>
-  <li>The system SHALL be able to store and retrieve the following elements:
-    <ul>
-      <li>encounterDescription</li>
-      <li>status</li>
-      <li>period</li>
-      <li>reason</li>
-    </ul>
-  </li>
-  <li>The system SHALL be able to take the following elements into account when performing processing:
-    <ul>
-      <li>subject</li>
-    </ul>
-  </li>
-</ul>
-
-<h5 id="profile-specific-implementation-guidance"><strong>Profile specific implementation guidance</strong></h5>
-<ul>
-  <li>Where additional content beyond that flagged with a must support is provided it:
-    <ul>
-      <li>shall not qualify or negate content described by this profile as must support</li>
-      <li>shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
-    </ul>
-  </li>
-  <li>For the usage scenarios for this profile it is expected that the status will be ‘finished’.</li>
+  <li>It is expected that the status will be ‘finished’.</li>
 </ul>
 
 
@@ -222,7 +198,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="http://hl7.org/fhir/STU3/encounter.html">Encounter</a>.</p>
 <p>
-This profile was published on Tue Apr 02 14:19:17 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Apr 12 16:19:39 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -795,14 +771,14 @@ This would be used for a case where an admission starts of as an emergency encou
     </div>  <!-- /segment-content -->
 
 
-<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
             <p>Document ID: DH-xxx:2019</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 2, 2019 14:19+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 12, 2019 16:19+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

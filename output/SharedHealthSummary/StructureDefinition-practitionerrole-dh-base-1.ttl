@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Base PractitionerRole"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-04-05T15:44:08+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-04-12T16:43:23+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -2391,14 +2391,6 @@
        fhir:index 65;
        fhir:Element.id [ fhir:value "PractitionerRole.specialty" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "coding" ]
-         ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ];
        fhir:ElementDefinition.short [ fhir:value "Practitioner specialties" ];
        fhir:ElementDefinition.definition [ fhir:value "Specific specialty of the practitioner." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -2421,10 +2413,9 @@
            fhir:Extension.valueString [ fhir:value "PractitionerSpecialty" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Specific specialty associated with the agency" ];
          fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/c80-practice-codes>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/c80-practice-codes" ]
+           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1>;
+           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" ]
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -2442,194 +2433,6 @@
        ]
      ], [
        fhir:index 66;
-       fhir:Element.id [ fhir:value "PractitionerRole.specialty:snomedctSpecialty" ];
-       fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "snomedctSpecialty" ];
-       fhir:ElementDefinition.short [ fhir:value "SNOMED-CT Practitioner Role" ];
-       fhir:ElementDefinition.definition [ fhir:value " \r\nSpecialties for which this practitioner has capability to deliver in this role coded as SNOMED CT." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "PractitionerRole.specialty" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "PractitionerSpecialty" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Specific specialty associated with the agency" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/c80-practice-codes>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/c80-practice-codes" ]
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "PRA-5" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value ".player.HealthCareProvider[@classCode = 'PROV'].code" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "servd" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "./Specialty" ]
-       ]
-     ], [
-       fhir:index 67;
-       fhir:Element.id [ fhir:value "PractitionerRole.specialty:snomedctSpecialty.id" ];
-       fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty.id" ];
-       fhir:ElementDefinition.representation [
-         fhir:value "xmlAttr";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
-       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 68;
-       fhir:Element.id [ fhir:value "PractitionerRole.specialty:snomedctSpecialty.extension" ];
-       fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty.extension" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
-         ];
-         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 69;
-       fhir:Element.id [ fhir:value "PractitionerRole.specialty:snomedctSpecialty.coding" ];
-       fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty.coding" ];
-       fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to a code defined by a terminology system." ];
-       fhir:ElementDefinition.comment [ fhir:value "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.coding" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1>;
-           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" ]
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1-8, C*E.10-22" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "union(., ./translation)" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
-       ]
-     ], [
-       fhir:index 70;
-       fhir:Element.id [ fhir:value "PractitionerRole.specialty:snomedctSpecialty.text" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ];
-         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-       ];
-       fhir:ElementDefinition.path [ fhir:value "PractitionerRole.specialty.text" ];
-       fhir:ElementDefinition.short [ fhir:value "Plain text representation of the concept" ];
-       fhir:ElementDefinition.definition [ fhir:value "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." ];
-       fhir:ElementDefinition.comment [ fhir:value "Very often the text is the same as a displayName of one of the codings." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.text" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.9. But note many systems use C*E.2 for this" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "./originalText[mediaType/code=\"text/plain\"]/data" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
-       ]
-     ], [
-       fhir:index 71;
        fhir:Element.id [ fhir:value "PractitionerRole.location" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.location" ];
        fhir:ElementDefinition.short [ fhir:value "The location(s) at which this practitioner provides care" ];
@@ -2662,7 +2465,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "where" ]
        ]
      ], [
-       fhir:index 72;
+       fhir:index 67;
        fhir:Element.id [ fhir:value "PractitionerRole.healthcareService" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.healthcareService" ];
        fhir:ElementDefinition.short [ fhir:value "The list of healthcare services that this worker provides for this role's Organization/Location(s)" ];
@@ -2690,7 +2493,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".player.QualifiedEntity[@classCode = 'QUAL'].code" ]
        ]
      ], [
-       fhir:index 73;
+       fhir:index 68;
        fhir:Element.id [ fhir:value "PractitionerRole.telecom" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.telecom" ];
        fhir:ElementDefinition.short [ fhir:value "Contact details that are specific to the role/location/service" ];
@@ -2715,7 +2518,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".telecom" ]
        ]
      ], [
-       fhir:index 74;
+       fhir:index 69;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime" ];
        fhir:ElementDefinition.short [ fhir:value "Times the Service Site is available" ];
@@ -2748,7 +2551,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 75;
+       fhir:index 70;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.id" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.id" ];
        fhir:ElementDefinition.representation [
@@ -2774,7 +2577,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 76;
+       fhir:index 71;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.extension" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
@@ -2804,7 +2607,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 77;
+       fhir:index 72;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
@@ -2839,7 +2642,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 78;
+       fhir:index 73;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.daysOfWeek" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.daysOfWeek" ];
        fhir:ElementDefinition.short [ fhir:value "mon | tue | wed | thu | fri | sat | sun" ];
@@ -2875,7 +2678,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 79;
+       fhir:index 74;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.allDay" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.allDay" ];
        fhir:ElementDefinition.short [ fhir:value "Always available? e.g. 24 hour service" ];
@@ -2898,7 +2701,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 80;
+       fhir:index 75;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.availableStartTime" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.availableStartTime" ];
        fhir:ElementDefinition.short [ fhir:value "Opening time of day (ignored if allDay = true)" ];
@@ -2922,7 +2725,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 81;
+       fhir:index 76;
        fhir:Element.id [ fhir:value "PractitionerRole.availableTime.availableEndTime" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availableTime.availableEndTime" ];
        fhir:ElementDefinition.short [ fhir:value "Closing time of day (ignored if allDay = true)" ];
@@ -2946,7 +2749,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 82;
+       fhir:index 77;
        fhir:Element.id [ fhir:value "PractitionerRole.notAvailable" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.notAvailable" ];
        fhir:ElementDefinition.short [ fhir:value "Not available during this time due to provided reason" ];
@@ -2978,7 +2781,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 83;
+       fhir:index 78;
        fhir:Element.id [ fhir:value "PractitionerRole.notAvailable.id" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.notAvailable.id" ];
        fhir:ElementDefinition.representation [
@@ -3004,7 +2807,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 84;
+       fhir:index 79;
        fhir:Element.id [ fhir:value "PractitionerRole.notAvailable.extension" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.notAvailable.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
@@ -3034,7 +2837,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 85;
+       fhir:index 80;
        fhir:Element.id [ fhir:value "PractitionerRole.notAvailable.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.notAvailable.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
@@ -3069,7 +2872,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 86;
+       fhir:index 81;
        fhir:Element.id [ fhir:value "PractitionerRole.notAvailable.description" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.notAvailable.description" ];
        fhir:ElementDefinition.short [ fhir:value "Reason presented to the user explaining why time not available" ];
@@ -3092,7 +2895,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 87;
+       fhir:index 82;
        fhir:Element.id [ fhir:value "PractitionerRole.notAvailable.during" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.notAvailable.during" ];
        fhir:ElementDefinition.short [ fhir:value "Service not availablefrom this date" ];
@@ -3115,7 +2918,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 88;
+       fhir:index 83;
        fhir:Element.id [ fhir:value "PractitionerRole.availabilityExceptions" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.availabilityExceptions" ];
        fhir:ElementDefinition.short [ fhir:value "Description of availability exceptions" ];
@@ -3138,7 +2941,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".effectiveTime" ]
        ]
      ], [
-       fhir:index 89;
+       fhir:index 84;
        fhir:Element.id [ fhir:value "PractitionerRole.endpoint" ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole.endpoint" ];
        fhir:ElementDefinition.short [ fhir:value "Technical endpoints providing access to services operated for the practitioner with this role" ];
@@ -3327,8 +3130,6 @@
 <http://hl7.org/fhir/ValueSet/identifier-use> a fhir:ValueSet .
 
 <http://hl7.org/fhir/ValueSet/practitioner-role> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/c80-practice-codes> a fhir:ValueSet .
 
 <http://hl7.org/fhir/ValueSet/days-of-week> a fhir:ValueSet .
 
