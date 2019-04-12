@@ -22,4 +22,6 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding <insert name> CDA implementation guide [DH???] that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+The corresponding Event Summary CDA implementation guide [DH2019xx] that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+
+[//]: # [DH_xxxx_EventSummary_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\EventSummary\_includes\DH_xxxx_EventSummary_CDA_IG_v2.0.pdf)

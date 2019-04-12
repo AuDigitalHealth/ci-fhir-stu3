@@ -1,4 +1,4 @@
-## Related Person with Mandatory IHI
+## Related Person with Mandatory IHI *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 This profile builds on the patient administration details that have been defined by the HL7 Australia Australian Releated Person profile.
 
@@ -40,9 +40,4 @@ The system SHALL be able to take the following elements into account when perfor
 
 #### Profile specific implementation guidance
 * Medical Record Number: identifier system can be completed using the [HPI-O based Medical Record Identifier](http://ns.electronichealth.net.au/id/local/provider/1.0) namespace if an organisation does not have its own namespace and has an HPI-O. An example of the syntax using this namespace is "http://ns.electronichealth.net.au/id/local/medicalrecord/1.0/8003620000000000". The dummy HPI-O should be replaced with the assigning entity's own HPI-O.
-
-#### Examples
-The following examples have been added:
-1. [Minimal example related person](RelatedPerson-relatedperson-base-min-example.html)
-1. [Maximal example related person](RelatedPerson-relatedperson-base-max-example.html)
-1. [RelatedPerson example with identifier slices](RelatedPerson-relatedperson-with-identifier-slices-example.html)
+)

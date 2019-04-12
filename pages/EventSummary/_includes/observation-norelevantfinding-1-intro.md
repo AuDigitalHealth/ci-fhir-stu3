@@ -1,15 +1,7 @@
-### Assertion of No Relevant Finding
-
-#### Usage scenarios
-The following are the usage scenarios expected:
-* TBD
-
+### Assertion of No Relevant Finding *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
-* TBD
- 
- 
-#### Examples
-This section provides examples that conform to the requirements specified within this implementation guide.
+For the expected usage scenarios in this implementation guide:
 
-* TBD
+* It is expected that status will be ‘final’.
+ 

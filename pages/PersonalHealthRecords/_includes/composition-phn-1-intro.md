@@ -1,3 +1,5 @@
+### Personal Health Notes *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+
 This profile defines a representation of a Personal Health Notes document for a patient in an Australian healthcare context. 
 
 ##### **Usage Scenarios**
@@ -10,8 +12,3 @@ The following are the usage scenarios expected:
     * shall not qualify or negate content described by this profile as must support
     * shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
 
-##### **Examples**
-
-[Personal Health Notes - diabetes note](Composition-composition-phn-example1.html)
-
-[Personal Health Notes - exercise note](Composition-composition-phn-example2.html)

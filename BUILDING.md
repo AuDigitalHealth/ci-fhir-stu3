@@ -9,7 +9,7 @@ This option uses the capability of git version control system to obtain any upda
 * click on the `Clone or download` button and then copy the URL of this repository (https://github.com/AuDigitalHealth/ci-fhir-stu3.git)
 * use your git client of choice to clone to a location on your device
 
-## Sep up the FHIR IG Publisher tooling
+## Set up the FHIR IG Publisher tooling
 The IG publisher can be downloaded from the FHIR website [here](http://build.fhir.org/downloads.html), as java executable file entitled `org.hl7.fhir.igpublisher.jar`.
 
 Additionally, the IG publisher requires the following supporting tools to be installed:
