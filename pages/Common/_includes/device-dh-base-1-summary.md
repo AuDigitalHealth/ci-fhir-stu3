@@ -10,5 +10,3 @@ The following specific changes were made:
 - constrained to the [Agency Organization Base profile](StructureDefinition-organization-dh-base-1.html)
 
 #### Examples
-1. [Minimal example for Device](Device-device-min-example.html)
-1. [Maximal example for Device with all identifier slices](Device-device-max-example.html)

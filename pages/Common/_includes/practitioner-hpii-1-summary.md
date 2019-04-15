@@ -12,5 +12,3 @@ The following specific changes were made:
 
 #### Examples
 The following examples have been added:
-1. [Minimal example Practitioner](Practitioner-practitioner-min-example.html)
-1. [Maximal example for Practitioner with all identifier slices](Practitioner-practitioner-max-example.html)
