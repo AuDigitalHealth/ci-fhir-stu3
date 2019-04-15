@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Composition xmlns="http://hl7.org/fhir">
-    <id value="composition-phn-example2"/>
+    <id value="cb2708f5-b42d-47bc-97cf-5fc66e875f51"/>
     <meta>
         <profile
             value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1"
@@ -9,7 +9,7 @@
     <language value="en-AU"/>
     <contained>
         <Patient>
-            <id value="Patient1"/>
+            <id value="76d7a6ff-23b8-4e4c-9c98-7c20818e0242"/>
             <meta>
                 <profile
                     value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1"
@@ -43,7 +43,7 @@
     </contained>
     <contained>
         <RelatedPerson>
-            <id value="RelatedPerson1"/>
+            <id value="47c94af0-2ba0-4c9a-be38-1efed4c6286d"/>
             <meta>
                 <profile
                     value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ihi-1"
@@ -61,7 +61,7 @@
                 <value value="8003608833357361"/>
             </identifier>
             <patient>
-                <reference value="#Patient1"/>
+                <reference value="#76d7a6ff-23b8-4e4c-9c98-7c20818e0242"/>
             </patient>
             <relationship>
                 <coding>
@@ -74,7 +74,7 @@
     </contained>
     <contained>
         <Organization>
-            <id value="Organization1"/>
+            <id value="f2684e75-3664-4708-a7c9-9d45c045bf0c"/>
             <meta>
                 <profile
                     value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1"
@@ -99,15 +99,15 @@
         </coding>
     </type>
     <subject>
-        <reference value="#Patient1"/>
+        <reference value="#76d7a6ff-23b8-4e4c-9c98-7c20818e0242"/>
     </subject>
     <date value="2017-06-21T09:00:15+10:00"/>
     <author>
-        <reference value="#RelatedPerson1"/>
+        <reference value="#47c94af0-2ba0-4c9a-be38-1efed4c6286d"/>
     </author>
     <title value="Personal Health Notes"/>
     <custodian>
-        <reference value="#Organization1"/>
+        <reference value="#f2684e75-3664-4708-a7c9-9d45c045bf0c"/>
     </custodian>
     <section>
         <title value="My Health Notes"/>
