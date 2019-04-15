@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <AllergyIntolerance xmlns="http://hl7.org/fhir">
-    <id value="a5e03840-1be4-43e0-acd2-c9e288adc4f9"/>  
+    <id value="1509ea06-0856-43ed-8842-cc7e6f48c460"/>
     <meta>
-        <lastUpdated value="2018-07-19T11:00:00+10:00"/>
-    </meta>   
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1"
+        />
+    </meta>
     <clinicalStatus value="active"/>
-    <verificationStatus value="confirmed"/>
+    <verificationStatus value="unconfirmed"/>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="716186003"/>
-            <display value="No known allergy"/>
+            <code value="409137002"/>
+            <display value="No known drug allergy"/>
         </coding>
-        <text value="No known allergies"/>
+        <text value="No known medication allergies"/>
     </code>
     <patient>
-        <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
+        <reference value="Patient/d9698a55-723a-49de-931b-4e61d732b016"/>
     </patient>
 </AllergyIntolerance>
