@@ -615,7 +615,8 @@
           <reference value="urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"/>
         </subject>
         <period>
-          <start value="2018-07-19"/>         
+          <start value="2018-07-19T09:00:00+10:00"/>    
+          <end value="2018-07-19T09:15:00+10:00"/>
         </period>
       </Encounter>
     </resource>
@@ -683,13 +684,7 @@
           <text value="headache, fever and sore throat"/>
         </reasonCode>
         <dosage>
-          <text value="Take 3 tablets a day for 5 days"/>          
-          <doseQuantity>
-            <value value="500"/>
-            <unit value="mg"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="mg"/>
-          </doseQuantity>
+          <text value="Take 3 tablets a day for 5 days"/>        
         </dosage>
       </MedicationStatement>
     </resource>
@@ -722,18 +717,6 @@
         </reasonCode>
         <dosage>
           <text value="1 tablet twice a day for five days"/>
-          <timing>
-            <repeat>
-              <boundsDuration>
-                <value value="5"/>
-                <code value="d"/>
-              </boundsDuration>                
-              <count value="1"/>
-              <frequency value="2"/>
-              <period value="1"/>
-              <periodUnit value="d"/>
-            </repeat>
-          </timing>
         </dosage>
       </MedicationStatement>
     </resource>
