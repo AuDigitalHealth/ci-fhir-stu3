@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/fc257fb0-8325-4f85-b29f-4c100346f527> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "fc257fb0-8325-4f85-b29f-4c100346f527"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2018-07-19T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: fc257fb0-8325-4f85-b29f-4c100346f527</p><p><b>meta</b>: </p><p><b>status</b>: intended</p><p><b>medication</b>: Augmentin Duo Forte 875/125 tablet <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '6052011000036107' = '6052011000036107', given as 'Augmentin Duo Forte 875/125 film-coated tablet'})</span></p><p><b>subject</b>: <a href=\"urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe\">urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p><p><b>taken</b>: n</p><p><b>reasonCode</b>: headache, fever and sore throat <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "intended"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:6052011000036107;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "6052011000036107" ];
+       fhir:Coding.display [ fhir:value "Augmentin Duo Forte 875/125 film-coated tablet" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Augmentin Duo Forte 875/125 tablet" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "n"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "headache, fever and sore throat" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "1 tablet twice a day for five days" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/fc257fb0-8325-4f85-b29f-4c100346f527.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
