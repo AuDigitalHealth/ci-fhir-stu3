@@ -11,5 +11,3 @@ The following specific changes were made:
 
 #### Examples
 The following examples have been added:
-1. [Minimal example Practitioner Role](PractitionerRole-practitionerrole-min-example.html)
-1. [Maximal example for Practitioner Role with all identifier slices](PractitionerRole-practitionerrole-max-example.html)

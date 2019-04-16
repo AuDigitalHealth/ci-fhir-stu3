@@ -21,6 +21,3 @@ The following specific changes were made:
 
 #### Examples
 The following examples have been added:
-1. [Minimal example Patient](Patient-patient-min-example.html)
-1. [Maximal example Patient](Patient-patient-max-example.html)
-1. [Patient example with identifier slices](Patient-patient-with-identifier-slices-example.html)
