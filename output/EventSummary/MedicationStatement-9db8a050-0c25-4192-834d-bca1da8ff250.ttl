@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/9db8a050-0c25-4192-834d-bca1da8ff250> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "9db8a050-0c25-4192-834d-bca1da8ff250"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2018-07-19T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 9db8a050-0c25-4192-834d-bca1da8ff250</p><p><b>meta</b>: </p><p><b>status</b>: intended</p><p><b>medication</b>: amoxicillin 500 mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '23551011000036108' = '23551011000036108', given as 'amoxicillin 500 mg capsule'})</span></p><p><b>subject</b>: <a href=\"urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe\">urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p><p><b>taken</b>: n</p><p><b>reasonCode</b>: headache, fever and sore throat <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "intended"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:23551011000036108;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "23551011000036108" ];
+       fhir:Coding.display [ fhir:value "amoxicillin 500 mg capsule" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "amoxicillin 500 mg capsule" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "n"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "headache, fever and sore throat" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Take 3 tablets a day for 5 days" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/9db8a050-0c25-4192-834d-bca1da8ff250.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

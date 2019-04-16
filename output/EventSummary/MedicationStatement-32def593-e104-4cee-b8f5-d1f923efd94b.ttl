@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "32def593-e104-4cee-b8f5-d1f923efd94b"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2018-09-21T09:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 32def593-e104-4cee-b8f5-d1f923efd94b</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: sumatriptan 100 mg <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '45219011000036101' = '45219011000036101', given as 'sumatriptan 100 mg tablet'})</span></p><p><b>subject</b>: <a href=\"urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe\">urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: Migraine <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>note</b>: Patient advised that usually takes sumatriptan for migraine; they took one             tablet during the event, and during the event they were given one tablet to take home.</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:45219011000036101;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "45219011000036101" ];
+       fhir:Coding.display [ fhir:value "sumatriptan 100 mg tablet" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "sumatriptan 100 mg" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Migraine" ]
+  ];
+  fhir:MedicationStatement.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "Patient advised that usually takes sumatriptan for migraine; they took one             tablet during the event, and during the event they were given one tablet to take home." ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "As required" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
