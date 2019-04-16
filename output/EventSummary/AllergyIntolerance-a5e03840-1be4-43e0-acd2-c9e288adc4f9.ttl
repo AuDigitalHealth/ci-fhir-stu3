@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "a5e03840-1be4-43e0-acd2-c9e288adc4f9"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2018-07-19T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: a5e03840-1be4-43e0-acd2-c9e288adc4f9</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: confirmed</p><p><b>code</b>: No known allergies <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '716186003' = 'No known allergy (situation)', given as 'No known allergy'})</span></p><p><b>patient</b>: <a href=\"urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe\">urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p></div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "confirmed"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:716186003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "716186003" ];
+       fhir:Coding.display [ fhir:value "No known allergy" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "No known allergies" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
