@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Event Summary</h1>
- <p>Generated Tue Apr 16 14:25:14 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a>)</p>
+ <p>Generated Wed Apr 17 07:24:56 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a>)</p>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
@@ -193,13 +193,13 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[7].resource.subject.resource.birthDate.extension[1].valueCoding</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>unable to find code 45219011000036101 in http://snomed.info/sct</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>unable to find code 6052011000036107 in http://snomed.info/sct</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[12].resource.code.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice AllergyIntolerance.code.coding:snomedAllergyCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -258,7 +258,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>unable to find code 45219011000036101 in http://snomed.info/sct</b></td>
+     <td><b>MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
 </table>
 <hr/>
@@ -280,7 +280,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationStatement/fc257fb0-8325-4f85-b29f-4c100346f527: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>unable to find code 6052011000036107 in http://snomed.info/sct</b></td>
+     <td><b>MedicationStatement/fc257fb0-8325-4f85-b29f-4c100346f527: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
 </table>
 <hr/>
@@ -336,7 +336,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -345,7 +345,7 @@
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
 </table>
 <hr/>
