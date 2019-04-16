@@ -20,3 +20,6 @@ For the expected usage scenarios in this implementation guide:
 
     * For new and changed medicine items, change description is expected to be provided.
 
+#### Known Issues
+
+* This profile is throwing an unexpected error when validated against. This issue is tracked as [ci-fhir-stu3/issues/23](https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/23).
