@@ -43,6 +43,3 @@ The system SHALL be able to take the following elements into account when perfor
 
 #### Examples
 The following examples have been added:
-1. [Minimal example related person](RelatedPerson-relatedperson-base-min-example.html)
-1. [Maximal example related person](RelatedPerson-relatedperson-base-max-example.html)
-1. [RelatedPerson example with identifier slices](RelatedPerson-relatedperson-with-identifier-slices-example.html)
