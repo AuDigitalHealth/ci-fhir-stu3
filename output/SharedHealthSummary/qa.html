@@ -1,15 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 2, errors = 185, warn = 61, info = 0 -->
+<!-- broken links = 2, errors = 186, warn = 60, info = 0 -->
 <head>
   <title>Shared Health Summary : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Health Summary</h1>
- <p>Generated Fri Apr 12 16:44:53 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-health-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
- <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
-
+ <p>Generated Tue Apr 16 14:27:12 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-health-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a>)</p>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
@@ -20,8 +18,8 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_allergyintolerance-1509ea06-0856-43ed-8842-cc7e6f48c460"><b>C:\work\git\ci-fhir-stu3\examples\allergyintolerance-1509ea06-0856-43ed-8842-cc7e6f48c460</b></a></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9"><b>C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9"><b>C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9</b></a></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_allergyintolerance-c5c80cde-70d0-4644-9d55-ae5574fcd8ea"><b>C:\work\git\ci-fhir-stu3\examples\allergyintolerance-c5c80cde-70d0-4644-9d55-ae5574fcd8ea</b></a></td><td><b>0</b></td><td><b>1</b></td>
@@ -248,8 +246,8 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9: AllergyIntolerance.meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1&quot; could not be resolved</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9: AllergyIntolerance.patient</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe'</b></td>
    </tr>
 </table>
 <hr/>
@@ -401,7 +399,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[4].name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[5].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[5].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[5].identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -413,7 +411,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[5].qualification.identifier.type.text</b></td><td><b>error</b></td><td><b>Value is 'AHPRA registration number' but must be 'AHPRA Registration Number'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[5].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[5].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[6].name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
@@ -472,7 +470,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[1].name[2]</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -481,7 +479,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[3].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1&quot; could not be resolved</b></td>
@@ -558,7 +556,7 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[1].name[2]</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -570,7 +568,7 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].qualification.identifier.type.text</b></td><td><b>error</b></td><td><b>Value is 'AHPRA registration number' but must be 'AHPRA Registration Number'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[3].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1&quot; could not be resolved</b></td>
@@ -1211,7 +1209,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -1220,7 +1218,7 @@
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
 </table>
 <hr/>
@@ -1231,7 +1229,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf: Practitioner.identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -1240,7 +1238,7 @@
      <td><b>Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf: Practitioner.name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/428f6506-625f-4f16-b0e2-b31ab6d293bf: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
 </table>
 <hr/>
@@ -1251,7 +1249,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654: Practitioner.identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -1263,7 +1261,7 @@
      <td><b>Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654: Practitioner.qualification.identifier.type.text</b></td><td><b>error</b></td><td><b>Value is 'AHPRA registration number' but must be 'AHPRA Registration Number'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
 </table>
 <hr/>
