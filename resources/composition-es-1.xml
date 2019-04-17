@@ -350,6 +350,15 @@
       <min value="0"/>
       <max value="1"/>
       <constraint>
+        <key value="inv-dh-cmp-03"/>
+        <severity value="error"/>
+        <human
+          value="A list of medication changes from this event or an assertion that there are no current medications shall be present."/>
+        <expression
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())"
+        />
+      </constraint>
+      <constraint>
         <key value="inv-dh-cmp-08"/>
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
@@ -402,15 +411,6 @@
           value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
         />
       </type>
-      <constraint>
-        <key value="inv-dh-cmp-03"/>
-        <severity value="error"/>
-        <human
-          value="A list of medication changes from this event or an assertion that there are no current medications shall be present, but not both"/>
-        <expression
-          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())"
-        />
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:medications.emptyReason">
@@ -442,12 +442,27 @@
       <min value="0"/>
       <max value="1"/>
       <constraint>
+        <key value="inv-dh-cmp-04"/>
+        <severity value="error"/>
+        <human
+          value="At least one condition or procedure shall be present, or an assertion that there is no history shall be present, but not both"/>
+        <expression
+          value="Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())"
+        />
+      </constraint>
+      <constraint>
         <key value="inv-dh-cmp-09"/>
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
         <expression
           value="Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()"
         />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-12" />
+        <severity value="error" />
+        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no relevant medical history" />
+        <expression value="Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())" />
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -498,21 +513,6 @@
           value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
         />
       </type>
-      <constraint>
-        <key value="inv-dh-cmp-04"/>
-        <severity value="error"/>
-        <human
-          value="At least one condition or procedure shall be present, or an assertion that there is no history shall be present, but not both"/>
-        <expression
-          value="Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())"
-        />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-cmp-12" />
-        <severity value="error" />
-        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no relevant medical history" />
-        <expression value="Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())" />
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:medicalHistory.emptyReason">
@@ -544,12 +544,27 @@
       <min value="0"/>
       <max value="1"/>
       <constraint>
+        <key value="inv-dh-cmp-05"/>
+        <severity value="error"/>
+        <human
+          value="At least one statement of vaccine or an assertion that there is no history of immunisation shall be present, but not both"/>
+        <expression
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Immunization).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation ).exists())"
+        />
+      </constraint>
+      <constraint>
         <key value="inv-dh-cmp-10"/>
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
         <expression
           value="Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()"
         />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-11" />
+        <severity value="error" />
+        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no previous immunisations" />
+        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is value and value.coding.code = '1234401000168109').exists())" />
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -594,21 +609,6 @@
           value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
         />
       </type>
-      <constraint>
-        <key value="inv-dh-cmp-05"/>
-        <severity value="error"/>
-        <human
-          value="At least one statement of vaccine or an assertion that there is no history of immunisation shall be present, but not both"/>
-        <expression
-          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Immunization).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation ).exists())"
-        />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-cmp-11" />
-        <severity value="error" />
-        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no previous immunisations" />
-        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is value and value.coding.code = '1234401000168109').exists())" />
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:immunisations.emptyReason">
