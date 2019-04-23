@@ -353,7 +353,7 @@
         <key value="inv-dh-cmp-03"/>
         <severity value="error"/>
         <human
-          value="A list of medication changes from this event or an assertion that there are no current medications shall be present."/>
+          value="If present, the assertion of no relevant finding entry shall assert no known current medications"/>
         <expression
           value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())"
         />
@@ -445,7 +445,7 @@
         <key value="inv-dh-cmp-04"/>
         <severity value="error"/>
         <human
-          value="At least one condition or procedure shall be present, or an assertion that there is no history shall be present, but not both"/>
+          value="This section shall not contain both summary statement of medical history entries (condition or procedure) and assertion of no relevant finding entries"/>
         <expression
           value="Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system = 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())"
         />
@@ -469,7 +469,7 @@
     <element id="Composition.section:medicalHistory.title">
       <path value="Composition.section.title"/>
       <min value="1"/>
-      <fixedString value="Diagnoses/Interventions"/>
+      <fixedString value="Medical History"/>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:medicalHistory.code">
@@ -563,7 +563,7 @@
       <constraint>
         <key value="inv-dh-cmp-11" />
         <severity value="error" />
-        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no previous immunisations" />
+        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert either no history of vaccination or no vaccine administered during encounter" />
         <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation).count()&lt;2 and Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is value and value.coding.code = '1234401000168109').exists())" />
       </constraint>
       <mustSupport value="true"/>
