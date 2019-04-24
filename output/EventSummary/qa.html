@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Event Summary</h1>
- <p>Generated Wed Apr 24 14:11:22 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a>)</p>
+ <p>Generated Wed Apr 24 15:25:06 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a>)</p>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
@@ -145,10 +145,10 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.meta</b></td><td><b>error</b></td><td><b>One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1' [Composition.meta.profile.where($this = 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1').exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[2]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()]</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[2]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '48765-2')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '48765-2')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[3]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()]</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[3]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[3].entry</b></td><td><b>warning</b></td><td><b>URN reference is not locally contained within the bundle urn:uuid:waiting-for-list-profile-to-be-fixed</b></td>
@@ -225,10 +225,10 @@
      <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.meta</b></td><td><b>error</b></td><td><b>One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1' [Composition.meta.profile.where($this = 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1').exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[2]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()]</b></td>
+     <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[2]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '48765-2')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '48765-2')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[3]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()]</b></td>
+     <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[3]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[3].entry</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'urn:uuid:waiting-for-list-profile-to-be-fixed'</b></td>
@@ -336,7 +336,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -345,7 +345,7 @@
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.name</b></td><td><b>error</b></td><td><b>The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
 </table>
 <hr/>
