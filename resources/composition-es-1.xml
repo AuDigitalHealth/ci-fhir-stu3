@@ -547,7 +547,7 @@
         <key value="inv-dh-cmp-05"/>
         <severity value="error"/>
         <human
-          value="At least one statement of vaccine or an assertion that there is no history of immunisation shall be present, but not both"/>
+          value="This section shall not contain both summary statement of vaccine entries and assertion of no relevant finding entries"/>
         <expression
           value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Immunization).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.resolve().where($this is Observation ).exists())"
         />
