@@ -27,7 +27,7 @@
   <differential>
     <element id="Composition">
       <path value="Composition"/>
-      <short value="Event Summary"/>
+      <short value="Event summary"/>
       <definition
         value="A record, reported by a healthcare provider, of a significant healthcare event involving the individual and that is useful to a wide range of providers in assessing individuals and delivering care."
       />
@@ -215,7 +215,7 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="eventOverview"/>
-      <short value="Event Overview"/>
+      <short value="Event overview"/>
       <definition value="Summary information concerning the event."/>
       <min value="1"/>
       <max value="1"/>
@@ -271,7 +271,7 @@
       <sliceName value="allergies"/>
       <short value="Allergies"/>
       <definition
-        value="Information about allergies and intolerances of the patient. This includes statements that a patient does not have an allergy or category of allergies."/>
+        value="Information about allergies or intolerances identified or reported during this encounter. This may include statements that a patient does not have an allergy or category of allergies."/>
       <min value="0"/>
       <max value="1"/>
       <constraint>
@@ -279,7 +279,7 @@
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
         <expression
-          value="Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()"
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').entry.exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').emptyReason.exists()"
         />
       </constraint>
       <mustSupport value="true"/>
@@ -363,7 +363,7 @@
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
         <expression
-          value="Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()"
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').emptyReason.exists()"
         />
       </constraint>
       <mustSupport value="true"/>
@@ -436,7 +436,7 @@
       </extension>
       <path value="Composition.section"/>
       <sliceName value="medicalHistory"/>
-      <short value="Medical History"/>
+      <short value="Medical history"/>
       <definition
         value="Information about the problems, diagnoses and medical or surgical procedures of a patient. This can include statements that a patient does not have a particular condition."/>
       <min value="0"/>
@@ -455,7 +455,7 @@
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
         <expression
-          value="Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()"
+          value="Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').entry.exists() xor Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.16117').emptyReason.exists()"
         />
       </constraint>
       <constraint>
@@ -557,7 +557,7 @@
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
         <expression
-          value="Composition.section.where($this is entry).exists() xor Composition.section.where($this is emptyReason).exists()"
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').entry.exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '11369-6').emptyReason.exists()"
         />
       </constraint>
       <constraint>
