@@ -146,38 +146,48 @@
 
 <h3 id="personal-health-summary-draft">Personal Health Summary <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h3>
 
-<p>This profile defines a representation of a Personal Health Summary document for a patient in an Australian healthcare context.</p>
-
 <h5 id="usage-scenarios"><strong>Usage Scenarios</strong></h5>
 <p>The following are the usage scenarios expected:</p>
+
 <ul>
   <li>An individual or their authorised representative authors a personal health summary document to be exchanged with the My Health Record system</li>
 </ul>
 
-<h5 id="profile-specific-implementation-guidance"><strong>Profile-specific implementation guidance</strong></h5>
+<h5 id="implementation-guidance"><strong>Implementation guidance</strong></h5>
+<p>For the expected usage scenarios in this implementation guide:</p>
+
 <ul>
-  <li>For the usage scenarios for this profile it is required that the composition include only the specified top-level sections; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.</li>
-  <li>Where additional content beyond that flagged with must support is provided it:
-    <ul>
-      <li>shall not qualify or negate content described by this profile as must support</li>
-      <li>shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
-    </ul>
-  </li>
+  <li>It is required that the composition include only the specified four top-level sections; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.</li>
   <li>For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).</li>
-  <li>In Allergies section:
-    <ul>
-      <li>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</li>
-      <li>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance resource is sent with the appropriate negation code (e.g. 160244002 |No Known Allergies|) is sent as the code</li>
-    </ul>
-  </li>
-  <li>In Medications section:
-    <ul>
-      <li>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</li>
-      <li>Where a sending system can state that a patient is known not to have current medications  (relevant to Medications) it is expected an observation of assertion of no relevant finding is sent with the appropriate code (e.g. 1234391000168107 |No known current medications|)</li>
-    </ul>
-  </li>
 </ul>
 
+<table class="list" width="100%">
+    <thead>
+        <tr>
+            <th>Section</th>
+            <th>Guidance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Allergies</td>
+            <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used.</td>
+        </tr>
+        <tr>
+            <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code.</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Medications</td>
+            <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used.</td>
+        </tr>
+        <tr>
+            <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|).</td>
+        </tr>
+        <tr>
+        <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section.</td>
+        </tr>
+    </tbody>
+</table>
 
 
 <!-- example here -->
@@ -215,7 +225,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="StructureDefinition-composition-docheader-cei-1.html">CompositionDocHeaderCEI</a>.</p>
 <p>
-This profile was published on Tue Apr 16 14:27:58 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Apr 26 08:26:00 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -979,7 +989,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 16, 2019 14:27+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 26, 2019 08:26+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
