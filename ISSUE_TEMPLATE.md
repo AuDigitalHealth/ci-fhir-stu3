@@ -1,20 +1,24 @@
-### Expected behaviour
+<!-- Make sure to NOT include any sensitive or personally identifiable information. -->
 
-* What did you expect it to be?
+# Prerequisites
+- [ ] I have searched [open](https://github.com/ci-fhir-stu3/Issues/issues) and [closed](https://github.com/ci-fhir-stu3/Issues/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed) issues to make sure it isn't already requested or reported
+- [ ] I have written a descriptive issue title
 
-### Actual behaviour
+# The issue / feature
+## Change description
+<!-- A description of the issue or feature, e.g. new profile that enforces demographics on patient or ...  -->
 
-* What actually happened? Please be as detailed as possible.
+## What it actually enables people to do
+<!-- A description of what the change / new feature will allow people to do, e.g. behaviour change, software change, validation etc.  -->
 
-### Steps to reproduce
+## Mockups 
+If applicable, add screenshots or mockups to help explain the issue / feature. 
 
-* Steps which the assignee of this issue can take to reliably reproduce the
-  problem you are describing.
+## How awesome would it be?
+<!-- A description of the value of this request to help us understand its value in comparison to the other awesome things we are doing.  -->
 
-### Environment
+## Workarounds
+<!-- Are there any viable workarounds in case this cannot be addressed quickly?-->
 
-* Browser, browser version
-* Profile, Profile version (if any)
-* Tools, tools versions
-* Configuration
-* Environment variables
+## Additional context
+Add any other context or links about the issue or feature here, e.g. replicate this page over here in this context.
