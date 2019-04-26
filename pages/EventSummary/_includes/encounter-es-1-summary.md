@@ -1,5 +1,1 @@
-This structure is derived from the STU3 FHIR<sup>&reg;</sup> resource XYZ.
-
-This profile introduces the following variations from the above core resource:
-1. Exactly one ....
-1. ....
+This file is required by the IG Publisher.
