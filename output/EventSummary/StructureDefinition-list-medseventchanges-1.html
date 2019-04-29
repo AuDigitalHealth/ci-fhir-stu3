@@ -222,7 +222,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medlist.html">AUMedicineList</a>.</p>
 <p>
-This profile was published on Fri Apr 26 08:20:58 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Mon Apr 29 14:19:42 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -650,7 +650,7 @@ Summary
 <tr><td>dom-3</td><td>List</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>: contained.where(('#'+id in %resource.descendants().reference).not()).empty()</td><td></td></tr>
 <tr><td>lst-2</td><td>List</td><td>The deleted flag can only be used if the mode of the list is &quot;changes&quot;<br/>: mode = 'changes' or entry.deleted.empty()</td><td></td></tr>
 <tr><td>lst-1</td><td>List</td><td>A list can only have an emptyReason if it is empty<br/>: emptyReason.empty() or entry.empty()</td><td></td></tr>
-<tr><td>inv-lst-0</td><td>List</td><td>Source role and source shall not coexist<br/>: (extension('http://hl7.org.au/fhir/StructureDefinition/list-source-role').exists() and source()).not()</td><td></td></tr>
+<tr><td>inv-lst-0</td><td>List</td><td>Source role and source shall not coexist<br/>: (extension('http://hl7.org.au/fhir/StructureDefinition/list-source-role').exists() and source.exists()).not()</td><td></td></tr>
 <tr><td>ele-1</td><td>List.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>List.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>List.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
@@ -725,7 +725,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 26, 2019 08:20+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 29, 2019 14:19+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

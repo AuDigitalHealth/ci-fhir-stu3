@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Administered Vaccine"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-04-26T08:22:29+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-04-29T14:21:16+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -60,7 +60,7 @@
   fhir:StructureDefinition.kind [ fhir:value "resource"];
   fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
   fhir:StructureDefinition.type [ fhir:value "Immunization"];
-  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/au-immunisation"];
+  fhir:StructureDefinition.baseDefinition [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/au-immunization"];
   fhir:StructureDefinition.derivation [ fhir:value "constraint"];
   fhir:StructureDefinition.snapshot [
      fhir:StructureDefinition.snapshot.element [
@@ -500,7 +500,7 @@
        fhir:index 12;
        fhir:Element.id [ fhir:value "Immunization.vaccineCode" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccineCode" ];
-       fhir:ElementDefinition.short [ fhir:value "Vaccine product administered" ];
+       fhir:ElementDefinition.short [ fhir:value "Vaccine product for administration" ];
        fhir:ElementDefinition.definition [ fhir:value "Vaccine that was administered or was to be administered." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -779,7 +779,7 @@
        fhir:index 19;
        fhir:Element.id [ fhir:value "Immunization.patient" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.patient" ];
-       fhir:ElementDefinition.short [ fhir:value "Who was immunized" ];
+       fhir:ElementDefinition.short [ fhir:value "Patient immunised" ];
        fhir:ElementDefinition.definition [ fhir:value "The patient who either received or did not receive the immunization." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -1084,7 +1084,7 @@
        fhir:index 28;
        fhir:Element.id [ fhir:value "Immunization.site" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.site" ];
-       fhir:ElementDefinition.short [ fhir:value "Body site vaccine  was administered" ];
+       fhir:ElementDefinition.short [ fhir:value "Body site vaccine was administered" ];
        fhir:ElementDefinition.definition [ fhir:value "Body site where vaccine was administered." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -1270,7 +1270,7 @@
        fhir:index 33;
        fhir:Element.id [ fhir:value "Immunization.route" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.route" ];
-       fhir:ElementDefinition.short [ fhir:value "How vaccine entered body" ];
+       fhir:ElementDefinition.short [ fhir:value "Route of vaccination" ];
        fhir:ElementDefinition.definition [ fhir:value "The path by which the vaccine product is taken into the body." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -2455,7 +2455,7 @@
        fhir:index 67;
        fhir:Element.id [ fhir:value "Immunization.explanation" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.explanation" ];
-       fhir:ElementDefinition.short [ fhir:value "Administration/non-administration reasons" ];
+       fhir:ElementDefinition.short [ fhir:value "Explanation for (non)vaccination" ];
        fhir:ElementDefinition.definition [ fhir:value "Reasons why a vaccine was or was not administered." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -2577,7 +2577,7 @@
        fhir:index 71;
        fhir:Element.id [ fhir:value "Immunization.explanation.reason" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.explanation.reason" ];
-       fhir:ElementDefinition.short [ fhir:value "Why immunization occurred" ];
+       fhir:ElementDefinition.short [ fhir:value "Reason vaccine administered" ];
        fhir:ElementDefinition.definition [ fhir:value "Reasons why a vaccine was administered." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -3235,7 +3235,7 @@
        fhir:index 90;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol" ];
-       fhir:ElementDefinition.short [ fhir:value "What protocol was followed" ];
+       fhir:ElementDefinition.short [ fhir:value "Vaccination protocol" ];
        fhir:ElementDefinition.definition [ fhir:value "Contains information about the protocol(s) under which the vaccine was administered." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -3474,7 +3474,7 @@
        fhir:index 99;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.targetDisease" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.targetDisease" ];
-       fhir:ElementDefinition.short [ fhir:value "Disease immunized against" ];
+       fhir:ElementDefinition.short [ fhir:value "Vaccine disease target" ];
        fhir:ElementDefinition.definition [ fhir:value "The targeted disease." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -3654,6 +3654,45 @@
        ]
      ], [
        fhir:index 104;
+       fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.targetDisease.coding:targetDiseaseNoInformation" ];
+       fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.targetDisease.coding" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "targetDiseaseNoInformation" ];
+       fhir:ElementDefinition.short [ fhir:value "No Information for Target Disease" ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to a code defined by a terminology system." ];
+       fhir:ElementDefinition.comment [ fhir:value "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ];
+       fhir:ElementDefinition.requirements [ fhir:value "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.coding" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ];
+       fhir:ElementDefinition.fixedCoding [
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/NullFlavor" ];
+         fhir:Coding.code [ fhir:value "NI" ];
+         fhir:Coding.display [ fhir:value "No Information" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1-8, C*E.10-22" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "union(., ./translation)" ]
+       ], [
+         fhir:index 2;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
+       ]
+     ], [
+       fhir:index 105;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.targetDisease.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -3691,10 +3730,10 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 105;
+       fhir:index 106;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatus" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.doseStatus" ];
-       fhir:ElementDefinition.short [ fhir:value "Indicates if dose counts towards immunity" ];
+       fhir:ElementDefinition.short [ fhir:value "Vaccine relation to protocol" ];
        fhir:ElementDefinition.definition [ fhir:value "Indicates if the immunization event should \"count\" against  the protocol." ];
        fhir:ElementDefinition.comment [ fhir:value "May need to differentiate between status declarations by a provider vs. a CDS engine." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -3728,7 +3767,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].playedRole[classCode=INGR].scopedRole.scoper[classCode=MMAT].playedRole[classCode=HLTHCHRT].participation[typeCode=SBJ].observation[classCode=OBS].value" ]
        ]
      ], [
-       fhir:index 106;
+       fhir:index 107;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatus.id" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.doseStatus.id" ];
        fhir:ElementDefinition.representation [
@@ -3754,7 +3793,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 107;
+       fhir:index 108;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatus.extension" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.doseStatus.extension" ];
        fhir:ElementDefinition.slicing [
@@ -3793,7 +3832,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 108;
+       fhir:index 109;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatus.coding" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.doseStatus.coding" ];
        fhir:ElementDefinition.slicing [
@@ -3834,7 +3873,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 109;
+       fhir:index 110;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatus.coding:doseStatusNotAvailable" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.doseStatus.coding" ];
        fhir:ElementDefinition.sliceName [ fhir:value "doseStatusNotAvailable" ];
@@ -3873,7 +3912,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 110;
+       fhir:index 111;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatus.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -3911,7 +3950,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 111;
+       fhir:index 112;
        fhir:Element.id [ fhir:value "Immunization.vaccinationProtocol.doseStatusReason" ];
        fhir:ElementDefinition.path [ fhir:value "Immunization.vaccinationProtocol.doseStatusReason" ];
        fhir:ElementDefinition.short [ fhir:value "Why dose does (not) count" ];
