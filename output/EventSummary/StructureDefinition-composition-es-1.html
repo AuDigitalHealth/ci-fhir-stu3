@@ -281,7 +281,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-composition.html">AUBaseComposition</a>.</p>
 <p>
-This profile was published on Mon Apr 29 14:19:42 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Thu May 02 10:53:20 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -341,103 +341,7 @@ Summary
 
 -\->
 
-<p>This profile contains the following variations from <a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a>:</p>
-
-<ul>
-  <li>One <code class="highlighter-rouge">meta.profile</code> is ‘http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1’</li>
-  <li>Exactly one <code class="highlighter-rouge">language</code> is ‘en-AU’</li>
-  <li>Exactly one <code class="highlighter-rouge">composition-author-role</code> as ‘PractitionerRole with Practitioner with Mandatory Identifier’</li>
-  <li><code class="highlighter-rouge">type</code> is ‘Patient summary Document’ (Details : {LOINC code ‘60591-5’})’</li>
-  <li><code class="highlighter-rouge">subject</code> as <a href="StructureDefinition-patient-ihi-1.html">Patient with Mandatory IHI</a></li>
-  <li><code class="highlighter-rouge">author</code> as <a href="StructureDefinition-practitioner-ident-1.html">Practitioner wth Mandatory Identifier</a></li>
-  <li>none <code class="highlighter-rouge">confidentiality</code></li>
-  <li>At least one <code class="highlighter-rouge">attester</code></li>
-  <li><code class="highlighter-rouge">attester</code> is sliced on value:mode
-    <ul>
-      <li>Exactly one <code class="highlighter-rouge">attester</code> slice ‘Legal attester’
-        <ul>
-          <li><code class="highlighter-rouge">attester.mode</code> is ‘legal’</li>
-          <li>Exactly one <code class="highlighter-rouge">attester.time</code></li>
-          <li>Exactly one <code class="highlighter-rouge">attester.party</code> as <a href="StructureDefinition-practitioner-ident-1.html">Practitioner wth Mandatory Identifier</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">custodian</code> as <a href="StructureDefinition-organization-ident-1">Organization with Mandatory Identifier</a></li>
-  <li>At least one <code class="highlighter-rouge">section</code></li>
-  <li><code class="highlighter-rouge">section</code> is sliced on value:code</li>
-  <li>invariant: inv-dh-cmp-02: The section shall at least have one entry or an empty reason, but not both
-    <ul>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice <code class="highlighter-rouge">Allergies</code>
-        <ul>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Allergies and Adverse Reactions’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘Allergies and adverse reactions Document’ (Details: {LOINC code ‘48765-2’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-allergyintolerance-summary-1">Summary Statement of Allergy or Intolerance</a></li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice  ‘Medications’
-        <ul>
-          <li>invariants:
-            <ul>
-              <li>inv-dh-cmp-03: This section shall not contain both summary statement of known medication entries and assertion of no relevant finding entries</li>
-              <li>inv-dh-cmp-04: This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications</li>
-            </ul>
-          </li>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Current Medications’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘Current Medicine’ (Details: {NCTIS Data Components code ‘101.32009’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-medicationstatement-summary-1">Summary Statement of Known Medication</a>, <a href="StructureDefinition-observation-norelevantfinding-1">Assertion of No Relevant Finding</a></li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice  ‘Medical History’
-        <ul>
-          <li>invariants:
-            <ul>
-              <li>inv-dh-cmp-05: This section shall not contain both summary statements of medical history entries (condition or procedure) and assertions of no relevant finding entries</li>
-              <li>inv-dh-cmp-06: This section shall contain at most one assertion of no relevant finding entry and it shall assert no relevant medical history</li>
-            </ul>
-          </li>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Medical History’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘Medical History’ (Details: {NCTIS Data Components code ‘101.16117’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-condition-summary-1">Summary Statement of Condition</a>, <a href="StructureDefinition-procedure-summary-1">Summary Statement of Known Procedure</a></td>
-                  <td><a href="StructureDefinition-observation-norelevantfinding-1">Assertion of No Relevant Finding</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice  ‘Immunisations’
-        <ul>
-          <li>invariants:
-            <ul>
-              <li>inv-dh-cmp-07: This section shall not contain both summary statements of administered vaccine entries and assertions of no relevant finding entries</li>
-              <li>inv-dh-cmp-08: This section shall contain at most one assertion of no relevant finding entry and it shall assert no history of vaccination</li>
-            </ul>
-          </li>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Immunisations’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘History of Immunization Narrative)’ (Details: {LOINC code ‘11369-6’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-immunization-summary-administration-1">Summary Statement of Administered Vaccine</a>, <a href="StructureDefinition-observation-norelevantfinding-1">Assertion of No Relevant Finding</a></li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>
@@ -867,103 +771,7 @@ Summary
 </ul>
 
   -\->
-<p>This profile contains the following variations from <a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a>:</p>
-
-<ul>
-  <li>One <code class="highlighter-rouge">meta.profile</code> is ‘http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-shs-1’</li>
-  <li>Exactly one <code class="highlighter-rouge">language</code> is ‘en-AU’</li>
-  <li>Exactly one <code class="highlighter-rouge">composition-author-role</code> as ‘PractitionerRole with Practitioner with Mandatory Identifier’</li>
-  <li><code class="highlighter-rouge">type</code> is ‘Patient summary Document’ (Details : {LOINC code ‘60591-5’})’</li>
-  <li><code class="highlighter-rouge">subject</code> as <a href="StructureDefinition-patient-ihi-1.html">Patient with Mandatory IHI</a></li>
-  <li><code class="highlighter-rouge">author</code> as <a href="StructureDefinition-practitioner-ident-1.html">Practitioner wth Mandatory Identifier</a></li>
-  <li>none <code class="highlighter-rouge">confidentiality</code></li>
-  <li>At least one <code class="highlighter-rouge">attester</code></li>
-  <li><code class="highlighter-rouge">attester</code> is sliced on value:mode
-    <ul>
-      <li>Exactly one <code class="highlighter-rouge">attester</code> slice ‘Legal attester’
-        <ul>
-          <li><code class="highlighter-rouge">attester.mode</code> is ‘legal’</li>
-          <li>Exactly one <code class="highlighter-rouge">attester.time</code></li>
-          <li>Exactly one <code class="highlighter-rouge">attester.party</code> as <a href="StructureDefinition-practitioner-ident-1.html">Practitioner wth Mandatory Identifier</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">custodian</code> as <a href="StructureDefinition-organization-ident-1">Organization with Mandatory Identifier</a></li>
-  <li>At least one <code class="highlighter-rouge">section</code></li>
-  <li><code class="highlighter-rouge">section</code> is sliced on value:code</li>
-  <li>invariant: inv-dh-cmp-02: The section shall at least have one entry or an empty reason, but not both
-    <ul>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice <code class="highlighter-rouge">Allergies</code>
-        <ul>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Allergies and Adverse Reactions’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘Allergies and adverse reactions Document’ (Details: {LOINC code ‘48765-2’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-allergyintolerance-summary-1">Summary Statement of Allergy or Intolerance</a></li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice  ‘Medications’
-        <ul>
-          <li>invariants:
-            <ul>
-              <li>inv-dh-cmp-03: This section shall not contain both summary statement of known medication entries and assertion of no relevant finding entries</li>
-              <li>inv-dh-cmp-04: This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications</li>
-            </ul>
-          </li>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Current Medications’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘Current Medicine’ (Details: {NCTIS Data Components code ‘101.32009’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-medicationstatement-summary-1">Summary Statement of Known Medication</a>, <a href="StructureDefinition-observation-norelevantfinding-1">Assertion of No Relevant Finding</a></li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice  ‘Medical History’
-        <ul>
-          <li>invariants:
-            <ul>
-              <li>inv-dh-cmp-05: This section shall not contain both summary statements of medical history entries (condition or procedure) and assertions of no relevant finding entries</li>
-              <li>inv-dh-cmp-06: This section shall contain at most one assertion of no relevant finding entry and it shall assert no relevant medical history</li>
-            </ul>
-          </li>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Medical History’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘Medical History’ (Details: {NCTIS Data Components code ‘101.16117’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-condition-summary-1">Summary Statement of Condition</a>, <a href="StructureDefinition-procedure-summary-1">Summary Statement of Known Procedure</a></td>
-                  <td><a href="StructureDefinition-observation-norelevantfinding-1">Assertion of No Relevant Finding</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-      <li>Exactly one <code class="highlighter-rouge">section</code> slice  ‘Immunisations’
-        <ul>
-          <li>invariants:
-            <ul>
-              <li>inv-dh-cmp-07: This section shall not contain both summary statements of administered vaccine entries and assertions of no relevant finding entries</li>
-              <li>inv-dh-cmp-08: This section shall contain at most one assertion of no relevant finding entry and it shall assert no history of vaccination</li>
-            </ul>
-          </li>
-          <li>Exactly one <code class="highlighter-rouge">section.title</code> is ‘Immunisations’</li>
-          <li>Exactly one <code class="highlighter-rouge">section.code</code> is ‘History of Immunization Narrative)’ (Details: {LOINC code ‘11369-6’})</li>
-          <li>Exactly one <code class="highlighter-rouge">section.text</code></li>
-          <li><code class="highlighter-rouge">section.mode</code> is ‘snapshot’</li>
-          <li><code class="highlighter-rouge">section.entry</code> as <a href="StructureDefinition-immunization-summary-administration-1">Summary Statement of Administered Vaccine</a>, <a href="StructureDefinition-observation-norelevantfinding-1">Assertion of No Relevant Finding</a></li>
-          <li><code class="highlighter-rouge">section.emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>-->
@@ -1528,7 +1336,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 29, 2019 14:19+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, May 2, 2019 10:53+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
