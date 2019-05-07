@@ -1,3 +1,12 @@
+---
+name: Issue / New feature
+about: To report an issue or propose a new feature
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 <!-- Make sure to NOT include any sensitive or personally identifiable information. -->
 
 # Prerequisites
