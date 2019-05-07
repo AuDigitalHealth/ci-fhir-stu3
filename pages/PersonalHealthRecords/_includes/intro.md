@@ -10,14 +10,14 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [<insert name>)](<insert link to composition profile>) document.
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent the [Personal Health Notes (PHN)](StructureDefinition-composition-phn-1.html) and [Personal Health Summary (PHS)](StructureDefinition-composition-phs-1.html) documents.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing the <insert name> document in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of <insert name> information between healthcare providers.
+The primary aim of this implementation guide is to support implementing the Personal Health Records document in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of Personal Health Records information between healthcare providers.
 
 This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
 
@@ -29,9 +29,9 @@ Reference has been made to International and Australian Standards, and to Standa
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
-This implementation guide is the basis for the corresponding [<insert name> CDA implementation guide[DF2019c]](#<insert>). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
+This implementation guide is the basis for the corresponding [Personal Health Notes CDA implementation guide[DF2019c]](#DH????) and [Personal Health Summary CDA implementation guide[DF2019c]](#DH????). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SHS CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a CEN CDA implementation guide and CEHS CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Context and use
@@ -52,9 +52,9 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
-This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of <insert name>. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
+This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of Personal Health Records. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide is the [<insert name>](<insert link>) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide are the [Personal Health Notes](StructureDefinition-composition-phn-1.html) and [Personal Health Summary](StructureDefinition-composition-phs-1.html) profiles, which reference the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
@@ -70,34 +70,34 @@ This document and related artefacts are technical in nature and the audience is 
 
 ## References
 
-
-|[<a name="DH2018d">DH2018d</a>]|Australian Digital Health Agency, 01 November 2018, Participant Model Specification, Version 1.0.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/participant-model-specification](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/participant-model-specification)|
-
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, Not yet published, Common - Clinical Document, Version 1.5.2.|
 ||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
 
+|[<a name="DH2019d">DH2019d</a>]| Australian Digital Health Agency, Not yet published, Personal Health Records FHIR Implementation Guide, Version 1.0.|
+| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
 
-|[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
+|[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019.|
 | |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
 
-|[<a name="HL7CDAR2">HL7CDAR2</a>|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
-| |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7(http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)]|
+|[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
+| |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)]|
 
-|[<a name="HL7FHIRDIR">HL7FHIRDIR</a>]| Health Level Seven, Inc., Publication (Version) History, accessed 10 March 2019|
+|[<a name="HL7FHIRDIR">HL7FHIRDIR</a>]| Health Level Seven, Inc., Publication (Version) History, accessed 10 March 2019.|
 | |[http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml)|
 
-|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019|
+|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019.|
 | |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
 
-|[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019|
+|[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019.|
 | |[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
 
-|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019|
+|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019.|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
   
-|[<a name="NEHT2015e">NEHT2015e</a>]| National E-Health Transition Authority, 10 April 2015, Shared Health Summary Information Requirements, Version 1.1.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015)|
+|[<a name="NEHT2011ao">NEHT2015ao</a>]| National E-Health Transition Authority, 19 December 2011, Consumer Entered Notes Information Requirements, Version 0.07.|
+| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-notes](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-notes)|
 
+|[<a name="NEHT2011ar">NEHT2011ar</a>]| National E-Health Transition Authority, 23 November 2011, Consumer Entered Health Summary Information Requirements, Version 1.0.|
+| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-summary](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-summary)|
 
 
