@@ -70,37 +70,37 @@ This document and related artefacts are technical in nature and the audience is 
 
 ## References
 
-|[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, Not yet published, Common - Clinical Document, Version 1.5.2.|
-||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
+|[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
 |[<a name="DH2019k">DH2019k</a>]| Australian Digital Health Agency, Not yet published, Personal Health Notes CDA implementation guide, Version 2.0.|
-||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|
 
 |[<a name="DH2019j">DH2019j</a>]| Australian Digital Health Agency, Not yet published, Personal Health Summary CDA implementation guide, Version 2.0.|
-||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|
 
 |[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019.|
-| |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
+||[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
-| |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
+||[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
 
 |[<a name="HL7FHIRDIR">HL7FHIRDIR</a>]| Health Level Seven, Inc., Publication (Version) History, accessed 10 March 2019.|
-| |[http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml)|
+||[http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml)|
 
 |[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019.|
-| |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
+||[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
 
 |[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019.|
-| |[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
+||[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019.|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
   
 |[<a name="NEHT2011ao">NEHT2015ao</a>]| National E-Health Transition Authority, 19 December 2011, Consumer Entered Notes Information Requirements, Version 0.07.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-notes](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-notes)|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2282-2016/nehta-0955-2011](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2282-2016/nehta-0955-2011)|
 
 |[<a name="NEHT2011ar">NEHT2011ar</a>]| National E-Health Transition Authority, 23 November 2011, Consumer Entered Health Summary Information Requirements, Version 1.0.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-summary](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/personal-health-summary)|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2272-2016/nehta-0950-2011](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2272-2016/nehta-0950-2011)|
 
 
