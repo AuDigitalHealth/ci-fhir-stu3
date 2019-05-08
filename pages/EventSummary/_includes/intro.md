@@ -10,14 +10,14 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [Event Summary (ES)](StructureDefinition-composition-es-1.html) document.
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [Event Summary (ES)](StructureDefinition-composition-es-1.html).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing the ES document in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of ES information between healthcare providers.
+The primary aim of this implementation guide is to support implementing ES in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of ES information between healthcare providers.
 
 This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
 
@@ -29,9 +29,9 @@ Reference has been made to International and Australian Standards, and to Standa
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
-This implementation guide is the basis for the corresponding [Event Summary CDA implementation guide[DF2019c]](#DH????). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
+This implementation guide is the basis for the corresponding [Event Summary CDA implementation guide [DH2019i]](#DH2019i). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SHS CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a ES CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Context and use
@@ -42,7 +42,7 @@ An Agency clinical document specification package supports software developers t
 Supplementary contents of the package include statements of scenarios for which the specification is appropriate, guidance on implementing the specification, and guidance on testing purported instances.
 
 The contents may include:
-* statement of requirements
+* Information Requirements - statement of requirements for [Event Summary Information Requirements [NEHT2015a]](#NEHT2015a)
 * CDA implementation guide (CDA IG) – a statement of constraints and custom extensions on [HL7 Clinical Document Architecture [HL7CDAR2]](#HL7CDAR2)
 * FHIR implementation guide (FHIR IG) - a statement of constraints and custom extensions on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3)
 * template package library – a set of Schematron schema to test conformance of CDA documents with the specification
@@ -63,39 +63,38 @@ This implementation guide may not considered to be complete enough or sufficient
 
 
 ## Intended audience
-This document is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
+This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
-This document and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
+This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 
 ## References
 
+|[<a name="NEHT2015a">NEHT2015a</a>]| National E-Health Transition Authority, 10 April 2015, Event Summary Information Requirements, Version 1.2.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-1817-2015/nehta-1845-2015](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-1817-2015/nehta-1845-2015)|
 
-|[<a name="DH2018d">DH2018d</a>]|Australian Digital Health Agency, 01 November 2018, Participant Model Specification, Version 1.0.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/participant-model-specification](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/participant-model-specification)|
-
-|[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, Not yet published, Common - Clinical Document, Version 1.5.2.|
-||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
-
+|[<a name="DH2019i">DH2019i</a>]| Australian Digital Health Agency, Not yet published, Event Summary CDA Implementation Guide, Version 2.0.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|
 
 |[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
-| |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
+||[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|    
 
-|[<a name="HL7CDAR2">HL7CDAR2</a>|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
-| |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7(http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)]|
-
-|[<a name="HL7FHIRDIR">HL7FHIRDIR</a>]| Health Level Seven, Inc., Publication (Version) History, accessed 10 March 2019|
-| |[http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml)|
-
-|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019|
-| |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
+|[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
+||[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)]|  
 
 |[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019|
-| |[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
+||[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|     
+
+|[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
+
+|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019|
+||[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
-  
+ 
+
 
 
 
