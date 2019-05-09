@@ -93,95 +93,95 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare Provider Professional Role (mandatory)</td>
                     <td>024040</td>
                     <td>PractitionerRole.code</td>
-                    <td>Composition.composition-author-role.PractitionerRole.code</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).code</td>
                 </tr>
                  <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).name</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Address</td>
                     <td>025064</td>
                     <td>Organization.address</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.address</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).address</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Electronic Communication Detail</td>
                     <td>025063</td>
                     <td>Organization.telecom</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.telecom</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).telecom</td>
                 </tr>
 
                 <tr>
                     <td>Healthcare provider Identifier-Individual (mandatory)</td>
                     <td>023066</td>
                     <td>Practitioner.identifier</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier </td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).identifier </td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (mandatory)</td>
                     <td>023071</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.identifier</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).identifier</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider’s Title (optional)</td>
                     <td rowspan="2">023061</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name </td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Given Name (optional)</td>
                     <td rowspan="2">023062</td>
                     <td>Practitioner.name</td>
-                    <td>composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Family Name (mandatory)</td>
                     <td rowspan="2">023064</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare provider name suffix (optional)</td>
                     <td rowspan="2">023065</td>
                     <td>Practitioner.name </td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Individual’s Workplace Address (optional)</td>
                     <td>024035</td>
                     <td>Practitioner.address</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Individual’s Workplace Electronic
                         Communication Details (optional)</td>
                     <td rowspan="2">024036</td>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).telecom</td>
                 </tr>
                 <tr>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).telecom</td>
                 </tr>
 
  <!-- Event details -->               
