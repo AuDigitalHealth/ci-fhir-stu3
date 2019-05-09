@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-This informative section provides mapping from the data items (i.e. requirements) in [Information Requirements](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/) [].
+This informative section provides mapping from the data items (i.e. requirements) in [NEHTA Event Summary Information Requirements](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/event-summary/NEHTA-1845-2015) [].
 
 The table below matches the data items to the corresponding supported element in the Event Summary (ES) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
@@ -99,38 +99,38 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.name</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.name</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Address</td>
                     <td>025064</td>
                     <td>Organization.address</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.address</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.address</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Electronic Communication Detail</td>
                     <td>025063</td>
                     <td>Organization.telecom</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.telecom</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.telecom</td>
                 </tr>
 
                 <tr>
                     <td>Healthcare provider Identifier-Individual (mandatory)</td>
                     <td>023066</td>
                     <td>Practitioner.identifier</td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier </td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier </td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (mandatory)</td>
                     <td>023071</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as Base Organization).Organization.identifier</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).Organization.identifier</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider’s Title (optional)</td>
                     <td rowspan="2">023061</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name </td>
@@ -170,14 +170,14 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare Provider Individual’s Workplace Address (optional)</td>
                     <td>024035</td>
                     <td>Practitioner.address</td>
-                    <td>Composition.composition-author-role.ractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Individual’s Workplace Electronic
                         Communication Details (optional)</td>
                     <td rowspan="2">024036</td>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.composition-author-role.ractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
                 </tr>
                 <tr>
                     <td>Practitioner.telecom</td>
@@ -507,29 +507,29 @@ The table below matches the data items to the corresponding supported element in
                <tr>
                     <td rowspan="1">Investigation Type</td>
                     <td>025043</td>
-                    <td>Incomplete: Please see note below</td>
-                    <td></td>
+                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: *Please see note below</td>
                 </tr>
 <!-- Investigation Name -->                
                <tr>
                     <td rowspan="1">Investigation Name</td>
                     <td>025044</td>
-                    <td>Incomplete: Please see note below</td>
-                    <td></td>
+                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: *Please see note below</td>
                 </tr>
 <!-- Result Status -->                
                <tr>
                     <td rowspan="1">Result Status</td>
                     <td>025045</td>
-                    <td>Incomplete: Please see note below</td>
-                    <td></td>
+                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: *Please see note below</td>
                 </tr>
 <!-- Result Content -->                
                <tr>
                     <td rowspan="1">Result Content</td>
                     <td>025046</td>
-                    <td>Incomplete: Please see note below</td>
-                    <td></td>
+                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: *Please see note below</td>
                 </tr>
 <!-- /Diagnostic investigations -->                
 
@@ -543,5 +543,5 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
             </tbody>
         </table>
-<p>Diagnostic Investigations (Editorial Note: The design of this section is incomplete. The intended structure of section.entry and section.emptyReason is not yet available.)</p>
+<p>Note: *Diagnostic Investigations (Editorial Note: The design of this section is incomplete. The intended structure of section.entry and section.emptyReason is not yet available.)</p>
 
