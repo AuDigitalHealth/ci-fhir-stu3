@@ -225,7 +225,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="StructureDefinition-composition-docheader-cei-1.html">CompositionDocHeaderCEI</a>.</p>
 <p>
-This profile was published on Fri Apr 26 08:26:00 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Wed May 08 11:19:44 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -271,44 +271,7 @@ Summary
 
 -\->
 
-<p>This structure is derived from the <a href="StructureDefinition-composition-docheader-cei-1.html">Agency Consumer Entered Information Document Header profile</a></p>
-
-<p>This profile introduces the following variations from the above profile:</p>
-<ol>
-  <li>One <code class="highlighter-rouge">meta.profile</code> is “http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1”</li>
-  <li><code class="highlighter-rouge">type</code> with fixed value system=”https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1”, code=”100.16685”</li>
-  <li><code class="highlighter-rouge">title</code> is “Personal Health Summary”</li>
-  <li>At least one <code class="highlighter-rouge">section</code>, sliced Unordered, Closed by value:code</li>
-  <li>slice <code class="highlighter-rouge">section:allergies</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Allergies and Adverse Reactions’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’http://loinc.org’ and code=’48765-2’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:allergyIntolerance</code> slice as Summary Statement of Allergy or Intolerance</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-  <li>slice <code class="highlighter-rouge">section:medications</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Current Medications’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1’ and code=’101.32009’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:medication</code> slice as Summary Statement of Known Medication</li>
-      <li><code class="highlighter-rouge">entry:noRelevantFindingMedication</code> slice as Assertion of No Relevant Finding</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-</ol>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>
@@ -573,44 +536,7 @@ Summary
 </ul>
 
   -\->
-<p>This structure is derived from the <a href="StructureDefinition-composition-docheader-cei-1.html">Agency Consumer Entered Information Document Header profile</a></p>
-
-<p>This profile introduces the following variations from the above profile:</p>
-<ol>
-  <li>One <code class="highlighter-rouge">meta.profile</code> is “http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1”</li>
-  <li><code class="highlighter-rouge">type</code> with fixed value system=”https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1”, code=”100.16685”</li>
-  <li><code class="highlighter-rouge">title</code> is “Personal Health Summary”</li>
-  <li>At least one <code class="highlighter-rouge">section</code>, sliced Unordered, Closed by value:code</li>
-  <li>slice <code class="highlighter-rouge">section:allergies</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Allergies and Adverse Reactions’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’http://loinc.org’ and code=’48765-2’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:allergyIntolerance</code> slice as Summary Statement of Allergy or Intolerance</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-  <li>slice <code class="highlighter-rouge">section:medications</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Current Medications’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1’ and code=’101.32009’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:medication</code> slice as Summary Statement of Known Medication</li>
-      <li><code class="highlighter-rouge">entry:noRelevantFindingMedication</code> slice as Assertion of No Relevant Finding</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-</ol>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>-->
@@ -989,7 +915,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Apr 26, 2019 08:26+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 8, 2019 11:19+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
