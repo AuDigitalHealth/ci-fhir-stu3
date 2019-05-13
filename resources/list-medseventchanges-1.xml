@@ -89,6 +89,15 @@
       <path value="List.entry.flag" />
       <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ListItemFlag"/>
+        </extension>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1"/>
+        </valueSetReference>
+      </binding>
     </element>
     <element id="List.entry.deleted">
       <path value="List.entry.deleted" />
