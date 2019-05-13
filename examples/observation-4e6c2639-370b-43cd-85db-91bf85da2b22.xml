@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+    <id value="4e6c2639-370b-43cd-85db-91bf85da2b22"/>
+    <meta>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
+        />
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/ActCode"/>
+            <code value="ASSERTION"/>
+            <display value="Assertion"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="urn:uuid:7d10b711-cded-4339-a2fd-ef69e7ba7847"/>
+    </subject>
+    <effectiveDateTime value="2018-10-23"/>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1234391000168107"/>
+            <display value="No known current medications"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>
