@@ -1,8 +1,8 @@
 ﻿Event Summary : Validation Results
 =========================================
 
-err = 80, warn = 28, info = 0
-Generated Wed May 08 11:09:38 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 82, warn = 28, info = 0
+Generated Mon May 13 13:46:46 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 1 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9 : 0 / 0
@@ -26,7 +26,7 @@ Generated Wed May 08 11:09:38 AEST 2019. FHIR version 3.0.1 for ns.electronichea
  C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1 : 0 / 1
  C:\work\git\ci-fhir-stu3\resources\immunization-summary-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\implementationguide-eventsummary-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\list-medseventchanges-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\list-medseventchanges-1 : 1 / 0
  C:\work\git\ci-fhir-stu3\resources\medicationstatement-summary-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1 : 1 / 0
  C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1 : 0 / 0
@@ -92,10 +92,10 @@ WARNING: Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.extension.valueCo
 ERROR: Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.name: The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]
 ERROR: Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.generalPractitioner: Unable to resolve resource 'Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c'
 == C:\work\git\ci-fhir-stu3\examples\practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.xml ==
-ERROR: Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier: Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators
+ERROR: Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier: Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators
 ERROR: Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier: The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]
 ERROR: Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.name: The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]
-ERROR: Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier: Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators
+ERROR: Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier: Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators
 == C:\work\git\ci-fhir-stu3\examples\practitioner-6c9f40e7-6f00-4d75-9f39-d57bd620d855.xml ==
 == C:\work\git\ci-fhir-stu3\examples\practitionerrole-45cad6ac-e9a3-418a-8480-4e64132849f2.xml ==
 WARNING: PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2: PractitionerRole.meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1" could not be resolved
@@ -112,6 +112,7 @@ WARNING: StructureDefinition/humanname-dh-base-1: StructureDefinition: Resource 
 == C:\work\git\ci-fhir-stu3\resources\immunization-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\implementationguide-eventsummary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\list-medseventchanges-1.xml ==
+ERROR: StructureDefinition/list-medseventchanges-1: StructureDefinition.differential.element[10].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1'
 == C:\work\git\ci-fhir-stu3\resources\medicationstatement-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1.xml ==
 ERROR: StructureDefinition/observation-norelevantfinding-1: StructureDefinition.differential.element[7].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1'
