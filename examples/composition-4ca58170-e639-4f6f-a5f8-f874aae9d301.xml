@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="4ca58170-e639-4f6f-a5f8-f874aae9d301"/>
+  <!--<meta>
+    <profile
+      value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1"/>
+  </meta>-->
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+      <p><b>id</b>: 426e957a-3c4c-4780-98f3-8339cc1e6f7c</p>
+      <p><b>language</b>: en-AU</p>
+      <p><b>status</b>: final</p>
+      <p><b>type</b>: Personal Health Summary <span style="background: LightGoldenRodYellow"
+          >(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1
+          code '100.16685' = '100.16685', given as 'Personal Health Summary'})</span></p>
+      <p><b>subject</b>: IHI = 8003608666701594; gender = male</p>
+      <p><b>date</b>: 01/12/2018 9:00:15 AM</p>
+      <p><b>author</b>: IHI = 8003608666701594; gender = male</p>
+      <p><b>title</b>: Personal Health Summary</p>
+      <p><b>custodian</b>: PAI-O = 8003640001000036</p>
+    </div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+      <code value="100.16685"/>
+      <display value="Personal Health Summary"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="urn:uuid:5440dd6d-154e-44ef-881b-19caa274b6c4"/>
+  </subject>
+  <date value="2018-12-01T09:00:15+10:00"/>
+  <author>
+    <reference value="urn:uuid:5440dd6d-154e-44ef-881b-19caa274b6c4"/>
+  </author>
+  <title value="Personal Health Summary"/>
+  <custodian>
+    <reference value="urn:uuid:e497754a-860b-4777-b583-aca1137d2b46"/>
+  </custodian>
+  <section>
+    <title value="Current Medications"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.32009"/>
+        <display value="Current Medicine"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table>
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Dosage</th>
+              <th>Reason for Medicine</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lasix tablet</td>
+              <td>1 tablet daily</td>
+              <td>Fluid retention</td>
+              <td>Prescribed by GP</td>
+            </tr>
+            <tr>
+              <td>Ventolin</td>
+              <td>Used when necessary</td>
+              <td>Asthma</td>
+              <td>Asthma is worse in springtime</td>
+            </tr>
+            <tr>
+              <td>St John‘s Wort</td>
+              <td>Directions on bottle</td>
+              <td>Depression</td>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="urn:uuid:30ea501d-0804-48bc-8585-d35f2441d3a1"/>
+    </entry>
+    <entry>
+      <reference value="urn:uuid:3aa60974-f765-4665-82a4-20bc1afd569b"/>
+    </entry>
+    <entry>
+      <reference value="urn:uuid:2d37384a-232c-4e0d-bd31-a3c667bae843"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Allergies and Adverse Reactions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies andor adverse reactions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table>
+          <thead>
+            <tr>
+              <th>Agent</th>
+              <th>Reaction Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Penicillin</td>
+              <td>Rash; Nausea and vomiting</td>
+            </tr>
+            <tr>
+              <td>Nuts</td>
+              <td>Breathing problems</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="urn:uuid:598b360a-0eb1-4738-9055-8ff40624f8e2"/>
+    </entry>
+    <entry>
+      <reference value="urn:uuid:bd965a8e-344f-44d0-9367-ccd22ee2a5a1"/>
+    </entry>
+  </section>
+</Composition>

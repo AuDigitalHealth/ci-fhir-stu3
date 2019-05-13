@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="c81d18da-3b3a-457d-a682-b31619cb8c00"/>
+  <!--<meta>
+    <profile
+      value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1"/>
+  </meta>-->
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+      <p><b>id</b>: 340fcbec-f501-4582-9be1-4627618119e3</p>
+      <p><b>language</b>: en-AU</p>
+      <p><b>status</b>: final</p>
+      <p><b>type</b>: Personal Health Summary <span style="background: LightGoldenRodYellow"
+          >(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1
+          code '100.16685' = '100.16685', given as 'Personal Health Summary'})</span></p>
+      <p><b>subject</b>: IHI = 8003608666701594; gender = male; indigenous status: Not
+        stated/inadequately described</p>
+      <p><b>date</b>: 01/12/2018 9:00:15 AM</p>
+      <p><b>author</b>: IHI = 8003608666701594; gender = male; indigenous status: Not
+        stated/inadequately described</p>
+      <p><b>title</b>: Personal Health Summary</p>
+      <p><b>custodian</b>: PAI-O = 8003640001000036</p>
+    </div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+      <code value="100.16685"/>
+      <display value="Personal Health Summary"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="urn:uuid:bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6"/>
+  </subject>
+  <date value="2018-12-01T09:00:15+10:00"/>
+  <author>
+    <reference value="urn:uuid:bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6"/>
+  </author>
+  <title value="Personal Health Summary"/>
+  <custodian>
+    <reference value="urn:uuid:5581254e-8f40-4991-af62-d544563f0a98"/>
+  </custodian>
+  <section>
+    <title value="Current Medications"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.32009"/>
+        <display value="Current Medicine"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Unknown</div>
+    </text>
+    <emptyReason>
+      <coding>
+        <system value="http://hl7.org/fhir/list-empty-reason"/>
+        <code value="unavailable"/>
+        <display value="Unavailable"/>
+      </coding>
+      <text value="Unknown"/>
+    </emptyReason>
+  </section>
+  <section>
+    <title value="Allergies and Adverse Reactions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies andor adverse reactions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table>
+          <thead>
+            <tr>
+              <th>Agent</th>
+              <th>Reaction Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Penicillin</td>
+              <td>Rash; Nausea and vomiting</td>
+            </tr>
+            <tr>
+              <td>Nuts</td>
+              <td>Breathing problems</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="urn:uuid:2d308e46-8f41-4ac1-bcd2-6522b6c598aa"/>
+    </entry>
+    <entry>
+      <reference value="urn:uuid:8440c6c5-4872-43b4-b755-d65fc7c06148"/>
+    </entry>
+  </section>
+</Composition>
