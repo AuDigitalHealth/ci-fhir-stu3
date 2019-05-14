@@ -93,74 +93,74 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare Provider Professional Role (mandatory)</td>
                     <td>024040</td>
                     <td>PractitionerRole.code</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).code</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.code</td>
                 </tr>
                  <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.organization(Organization as Base Organization).Organization.name</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Address</td>
                     <td>025064</td>
                     <td>Organization.address</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).address</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.organization(Organization as Base Organization).Organization.address</td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Employer Organisation Electronic Communication Detail</td>
                     <td>025063</td>
                     <td>Organization.telecom</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).telecom</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.organization(Organization as Base Organization).Organization.telecom</td>
                 </tr>
 
                 <tr>
                     <td>Healthcare provider Identifier-Individual (mandatory)</td>
                     <td>023066</td>
                     <td>Practitioner.identifier</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).identifier </td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier </td>
                 </tr>
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (mandatory)</td>
                     <td>023071</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).organization(Organization as Base Organization).identifier</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.organization(Organization as Base Organization).Organization.identifier</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider’s Title (optional)</td>
                     <td rowspan="2">023061</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name </td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Given Name (optional)</td>
                     <td rowspan="2">023062</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Family Name (mandatory)</td>
                     <td rowspan="2">023064</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare provider name suffix (optional)</td>
                     <td rowspan="2">023065</td>
                     <td>Practitioner.name </td>
-                    <td>Composition.composition-author-role.PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.composition-author-role.PractitionerRole(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
@@ -170,18 +170,18 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare Provider Individual’s Workplace Address (optional)</td>
                     <td>024035</td>
                     <td>Practitioner.address</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Individual’s Workplace Electronic
                         Communication Details (optional)</td>
                     <td rowspan="2">024036</td>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).practitioner(Practitioner as Practitioner with Mandatory Identifier).telecom</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
                 </tr>
                 <tr>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).telecom</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.telecom</td>
                 </tr>
 
  <!-- Event details -->               
@@ -318,17 +318,17 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="3">Item Description</td>
                     <td>025018</td>
                     <td>Composition.section(Medications).entry</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine)</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement</td>
                 </tr>
                 <tr>
                     <td>025019</td>
                     <td>Composition.section(Medications).entry</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine)</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement</td>
                 </tr>
                 <tr>
                     <td>025020</td>
                     <td>Composition.section(Medications).entry</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine)</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement</td>
                 </tr>
  
 <!--Status-->               
@@ -336,12 +336,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Status</td>
                     <td>025021</td>
                     <td>MedicationStatement.status</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine).status</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.status</td>
                 </tr>
                   <tr>
                     <td>025022</td>
                     <td>Composition.section(Medications).entry(reason for change)</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine).status</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.status</td>
                 </tr>
              
 <!--Dose Instruction-->                               
@@ -349,7 +349,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Dose Instructions</td>
                     <td>025023</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).(MedicationStatement as Summary Statement of Known Medicine).dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.dosage</td>
                 </tr>
                 
 <!--Reason for Medicine-->                               
@@ -357,12 +357,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Reason for Medicine</td>
                     <td>025024</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine).reasonCode</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
                 </tr>
                 <tr>
                     <td>025025</td>
                     <td>MedicationStatement.reasonCode</td>
-                  <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine).reasonCode</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
                 </tr>
                 
 <!--Additional Comments-->                               
@@ -370,12 +370,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Additional comments</td>
                     <td>025026</td>
                     <td>MedicationStatement.note</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine).reasonCode.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode.note</td>
                 </tr>
                 <tr>
                     <td>025027</td>
                     <td>MedicationStatement.note</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).item.(MedicationStatement as Summary Statement of Known Medicine).reasonCode.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode.note</td>
                 </tr>
 <!--/Medicines-->               
                  
