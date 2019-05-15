@@ -70,17 +70,17 @@ This document and related artefacts are technical in nature and the audience is 
 
 ## References
 
-|[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, Not yet published, Common - Clinical Document, Version 1.5.2.|
-||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
+|[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
 |[<a name="DH2019c">DH2019c</a>]| Australian Digital Health Agency, Not yet published, Shared Health Summary CDA Implementation Guide, Version 2.0.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/common-clinical-document)|
+| |[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|
 
 |[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
 | |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
 
-|[<a name="HL7CDAR2">HL7CDAR2</a>|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
-| |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7(http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)]|
+|[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
+| |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
 
 |[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019|
 | |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
@@ -88,9 +88,9 @@ This document and related artefacts are technical in nature and the audience is 
 |[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019|
 | |[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
 
-|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019|
+|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 27 December 2018, FHIR, Release 4 (First Normative Content), accessed 10 March 2019|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
   
 |[<a name="NEHT2015e">NEHT2015e</a>]| National E-Health Transition Authority, 10 April 2015, Shared Health Summary Information Requirements, Version 1.1.|
-| |[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015)|
+| |[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2397-2017/nehta-1837-2015](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2397-2017/nehta-1837-2015)|
  
