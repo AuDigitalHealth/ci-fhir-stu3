@@ -1,12 +1,12 @@
 ﻿Shared Health Summary : Validation Results
 =========================================
 
-err = 372, warn = 120, info = 0
-Generated Tue May 14 15:58:43 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-health-summary# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 372, warn = 124, info = 0
+Generated Wed May 15 11:29:31 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-health-summary# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 1 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-1509ea06-0856-43ed-8842-cc7e6f48c460 : 0 / 1
- C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9 : 1 / 0
+ C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9 : 0 / 0
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-c5c80cde-70d0-4644-9d55-ae5574fcd8ea : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-d977ab88-ecbe-49c1-99b7-9b1afbb65563 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\bundle-205fcc4b-baf2-4683-a48f-b087a5937230 : 15 / 7
@@ -41,6 +41,7 @@ Generated Tue May 14 15:58:43 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-h
  C:\work\git\ci-fhir-stu3\examples\organization-64e56b9c-e51d-4157-b379-34e71e3dbfa4 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\organization-9df89ebf-b9ab-4ed5-b865-90892c1bbb1a : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\organization-b620003d-3a4f-4aca-88a5-a203f94fa911 : 0 / 0
+ C:\work\git\ci-fhir-stu3\examples\patient-792b4811-2ce7-4531-8893-af827175bcfe : 1 / 2
  C:\work\git\ci-fhir-stu3\examples\patient-841a56de-92d7-47fd-bb27-bad8efb371e4 : 2 / 0
  C:\work\git\ci-fhir-stu3\examples\patient-cc246543-a0da-4ead-9ed6-5e064fea9ff7 : 0 / 2
  C:\work\git\ci-fhir-stu3\examples\patient-d9698a55-723a-49de-931b-4e61d732b016 : 2 / 0
@@ -79,7 +80,6 @@ ERROR: ??: The reference http://ns.electronichealth.net.au/ci/fhir/3.0/Structure
 == C:\work\git\ci-fhir-stu3\examples\allergyintolerance-1509ea06-0856-43ed-8842-cc7e6f48c460.xml ==
 WARNING: AllergyIntolerance/1509ea06-0856-43ed-8842-cc7e6f48c460: AllergyIntolerance.meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1" could not be resolved
 == C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9.xml ==
-ERROR: AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9: AllergyIntolerance.patient: Unable to resolve resource 'urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe'
 == C:\work\git\ci-fhir-stu3\examples\allergyintolerance-c5c80cde-70d0-4644-9d55-ae5574fcd8ea.xml ==
 WARNING: AllergyIntolerance/c5c80cde-70d0-4644-9d55-ae5574fcd8ea: AllergyIntolerance.meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1" could not be resolved
 == C:\work\git\ci-fhir-stu3\examples\allergyintolerance-d977ab88-ecbe-49c1-99b7-9b1afbb65563.xml ==
@@ -318,6 +318,10 @@ WARNING: Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4: Organization.identif
 == C:\work\git\ci-fhir-stu3\examples\organization-9df89ebf-b9ab-4ed5-b865-90892c1bbb1a.xml ==
 WARNING: Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a: Organization.identifier.type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type
 == C:\work\git\ci-fhir-stu3\examples\organization-b620003d-3a4f-4aca-88a5-a203f94fa911.xml ==
+== C:\work\git\ci-fhir-stu3\examples\patient-792b4811-2ce7-4531-8893-af827175bcfe.xml ==
+WARNING: Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.extension.valueCoding: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found
+WARNING: Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.birthDate.extension[1].valueCoding: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found
+ERROR: Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.generalPractitioner: Unable to resolve resource 'urn:uuid:6c9f40e7-6f00-4d75-9f39-d57bd620d855'
 == C:\work\git\ci-fhir-stu3\examples\patient-841a56de-92d7-47fd-bb27-bad8efb371e4.xml ==
 ERROR: Patient/841a56de-92d7-47fd-bb27-bad8efb371e4: Patient.name[1]: The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]
 ERROR: Patient/841a56de-92d7-47fd-bb27-bad8efb371e4: Patient.name[2]: The name shall at least have text or a family name or a given name [name.text.exists() or name.family.exists() or name.given.exists()]
