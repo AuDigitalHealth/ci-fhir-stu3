@@ -144,7 +144,7 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
-                    <td>Composition.composition-author-role.(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Healthcare Provider Family Name (mandatory)</td>
@@ -160,7 +160,7 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Healthcare provider name suffix (optional)</td>
                     <td rowspan="2">023065</td>
                     <td>Practitioner.name </td>
-                    <td>Composition.composition-author-role.PractitionerRole(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr>
                 <tr>
                     <td>Practitioner.name</td>
@@ -357,12 +357,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Reason for Medicine</td>
                     <td>025024</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
                 </tr>
                 <tr>
                     <td>025025</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
                 </tr>
                 
 <!--Additional Comments-->                               
@@ -370,12 +370,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Additional comments</td>
                     <td>025026</td>
                     <td>MedicationStatement.note</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode.note</td>
                 </tr>
                 <tr>
                     <td>025027</td>
                     <td>MedicationStatement.note</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item.(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Changes from an Event).List.entry.item(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode.note</td>
                 </tr>
 <!--/Medicines-->               
                  
@@ -507,29 +507,29 @@ The table below matches the data items to the corresponding supported element in
                <tr>
                     <td rowspan="1">Investigation Type</td>
                     <td>025043</td>
-                    <td>Incomplete: *Please see note below</td>
-                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: Please see note below*</td>
+                    <td>Incomplete: Please see note below*</td>
                 </tr>
 <!-- Investigation Name -->                
                <tr>
                     <td rowspan="1">Investigation Name</td>
                     <td>025044</td>
-                    <td>Incomplete: *Please see note below</td>
-                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: Please see note below*</td>
+                    <td>Incomplete: Please see note below*</td>
                 </tr>
 <!-- Result Status -->                
                <tr>
                     <td rowspan="1">Result Status</td>
                     <td>025045</td>
-                    <td>Incomplete: *Please see note below</td>
-                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: Please see note below*</td>
+                    <td>Incomplete: Please see note below*</td>
                 </tr>
 <!-- Result Content -->                
                <tr>
                     <td rowspan="1">Result Content</td>
                     <td>025046</td>
-                    <td>Incomplete: *Please see note below</td>
-                    <td>Incomplete: *Please see note below</td>
+                    <td>Incomplete: Please see note below*</td>
+                    <td>Incomplete: Please see note below*</td>
                 </tr>
 <!-- /Diagnostic investigations -->                
 
@@ -543,5 +543,5 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
             </tbody>
         </table>
-<p>Note: *Diagnostic Investigations (Editorial Note: The design of this section is incomplete. The intended structure of section.entry and section.emptyReason is not yet available.)</p>
+<p>*Note: Diagnostic Investigations (Editorial Note: The design of this section is incomplete. The intended structure of section.entry and section.emptyReason is not yet available.)</p>
 
