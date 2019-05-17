@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 2, errors = 41, warn = 14, info = 0 -->
+<!-- broken links = 2, errors = 45, warn = 14, info = 0 -->
 <head>
   <title>Event Summary : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Event Summary</h1>
- <p>Generated Mon May 13 13:46:46 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Fri May 17 10:29:45 AEST 2019. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
  <table class="grid">
@@ -21,10 +21,10 @@
      <td><a href="#C__work_git_ci-fhir-stu3_examples_allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9"><b>C:\work\git\ci-fhir-stu3\examples\allergyintolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_bundle-3bb44f10-4350-498c-a629-4bf43df620e9"><b>C:\work\git\ci-fhir-stu3\examples\bundle-3bb44f10-4350-498c-a629-4bf43df620e9</b></a></td><td><b>17</b></td><td><b>7</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_bundle-3bb44f10-4350-498c-a629-4bf43df620e9"><b>C:\work\git\ci-fhir-stu3\examples\bundle-3bb44f10-4350-498c-a629-4bf43df620e9</b></a></td><td><b>22</b></td><td><b>7</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9"><b>C:\work\git\ci-fhir-stu3\examples\composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9</b></a></td><td><b>4</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9"><b>C:\work\git\ci-fhir-stu3\examples\composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9</b></a></td><td><b>3</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_encounter-98900f15-67f8-48a1-9345-6d5968f2c23e"><b>C:\work\git\ci-fhir-stu3\examples\encounter-98900f15-67f8-48a1-9345-6d5968f2c23e</b></a></td><td><b>0</b></td><td><b>0</b></td>
@@ -153,12 +153,6 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[3]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[3].entry</b></td><td><b>warning</b></td><td><b>URN reference is not locally contained within the bundle urn:uuid:waiting-for-list-profile-to-be-fixed</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.section[3].entry</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'urn:uuid:waiting-for-list-profile-to-be-fixed'</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[2].resource.extension.valueCoding</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
@@ -189,31 +183,52 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.identifier.type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[7].resource.subject.resource.extension.valueCoding</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[7].resource.entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[7].resource.subject.resource.birthDate.extension[1].valueCoding</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[7].resource.entry[2].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[7].resource.entry[3].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9].resource.medicationCodeableConcept</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element matches more than one slice - , medicationCoded</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[9].resource.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[9].resource.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10].resource.medicationCodeableConcept</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element matches more than one slice - , medicationCoded</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[10].resource.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[10].resource.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource.medicationCodeableConcept</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element matches more than one slice - , medicationCoded</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[11].resource.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[11].resource.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[12].resource.code.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice AllergyIntolerance.code.coding:snomedAllergyCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1 - does not have fixed value, binding or existence assertions</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[9]</b></td><td><b>error</b></td><td><b>Entry isn't reachable by traversing from first Bundle entry</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10]</b></td><td><b>error</b></td><td><b>Entry isn't reachable by traversing from first Bundle entry</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11]</b></td><td><b>error</b></td><td><b>Entry isn't reachable by traversing from first Bundle entry</b></td>
    </tr>
 </table>
 <hr/>
@@ -231,9 +246,6 @@
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[3]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).emptyReason.exists()]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9: Composition.section[3].entry</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'urn:uuid:waiting-for-list-profile-to-be-fixed'</b></td>
    </tr>
 </table>
 <hr/>
