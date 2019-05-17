@@ -34,4 +34,11 @@
                 <td><a href="Organization-e45f6ec6-f598-4ac5-8b95-583467492257.json.html">JSON</a></td>
                 <td><a href="Organization-e45f6ec6-f598-4ac5-8b95-583467492257.ttl.html">Turtle</a></td>
         </tr>
+        <tr>
+                <td><a href="Organization-f2684e75-3664-4708-a7c9-9d45c045bf0c.html">Organization example 6</a></td>
+                <td>f2684e75-3664-4708-a7c9-9d45c045bf0c</td>
+                <td><a href="Organization-f2684e75-3664-4708-a7c9-9d45c045bf0c.xml.html">XML</a></td>
+                <td><a href="Organization-f2684e75-3664-4708-a7c9-9d45c045bf0c.json.html">JSON</a></td>
+                <td><a href="Organization-f2684e75-3664-4708-a7c9-9d45c045bf0c.ttl.html">Turtle</a></td>
+        </tr>
 </table>
