@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+    <id value="6870bc44-97a1-4523-8d98-fc1ee640ea70"/>
+    <meta>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ihi-1"
+        />
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="NI"/>
+                <display value="National unique individual identifier"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+        <value value="8003608000024083"/>
+    </identifier>
+    <patient>
+        <reference value="Patient/7d10b711-cded-4339-a2fd-ef69e7ba7847"/>
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394619001"/>
+            <display value="Guardian"/>
+        </coding>
+    </relationship>
+    <name>
+        <text value="Bob Thavaprasagnam"/>
+    </name>
+</RelatedPerson>
