@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/27b06bef-2030-4bfc-8c48-3306b616a10b> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "27b06bef-2030-4bfc-8c48-3306b616a10b"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 27b06bef-2030-4bfc-8c48-3306b616a10b</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: unconfirmed</p><p><b>code</b>: Allergy to eggs <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>patient</b>: <a href=\"Patient-82ea927e-9e84-4b65-ba04-baade2b93137.html\">Generated Summary: id: 82ea927e-9e84-4b65-ba04-baade2b93137; National unique individual identifier = 8003608666701594; gender: male</a></p></div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "unconfirmed"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.text [ fhir:value "Allergy to eggs" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/82ea927e-9e84-4b65-ba04-baade2b93137>;
+     fhir:Reference.reference [ fhir:value "Patient/82ea927e-9e84-4b65-ba04-baade2b93137" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/27b06bef-2030-4bfc-8c48-3306b616a10b.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

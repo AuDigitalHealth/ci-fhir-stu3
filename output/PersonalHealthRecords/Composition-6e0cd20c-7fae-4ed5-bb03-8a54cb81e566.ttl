@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/6e0cd20c-7fae-4ed5-bb03-8a54cb81e566> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6e0cd20c-7fae-4ed5-bb03-8a54cb81e566"];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n\n      <h1>Personal Health Summary</h1>\n\n      <h2>Consumer details</h2>\n      <table>\n        <tbody>\n          <tr>\n            <th>Name</th>\n            <td/>\n          </tr>\n          <tr>\n            <th>Identifier</th>\n            <td>IHI: 8003608666701594</td>\n          </tr>\n          <tr>\n            <th>Gender</th>\n            <td>Male</td>\n          </tr>\n        </tbody>\n      </table>\n\n      <h2>Author details</h2>\n      <table>\n        <tbody>\n          <tr>\n            <th>Name</th>\n            <td>Terry Sampelr</td>\n          </tr>\n          <tr>\n            <th>Identifier</th>\n            <td>IHI: 8003608000024083</td>\n          </tr>\n          <tr>\n            <th>Relationship</th>\n            <td>grandfather</td>\n          </tr>\n        </tbody>\n      </table>\n\n      <h2>Document details</h2>\n      <table>\n        <tbody>\n          <tr>\n            <th>Status</th>\n            <td>final</td>\n          </tr>\n          <tr>\n            <th>Created</th>\n            <td>21 Sep 2018, 09:00:15</td>\n          </tr>\n          <tr>\n            <th>Custodian</th>\n            <td>PAI-O: 8003640001000036</td>\n          </tr>\n        </tbody>\n      </table>\n\n    </div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:738b6ba4-709a-4091-ad05-4790f39e17bc" ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+       fhir:Coding.code [ fhir:value "100.16685" ];
+       fhir:Coding.display [ fhir:value "Personal Health Summary" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/82ea927e-9e84-4b65-ba04-baade2b93137>;
+     fhir:Reference.reference [ fhir:value "Patient/82ea927e-9e84-4b65-ba04-baade2b93137" ]
+  ];
+  fhir:Composition.date [ fhir:value "2018-09-21T09:00:15+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/RelatedPerson/9c44a0e9-4c8e-4c52-bdbd-9c38e4714bc6>;
+     fhir:Reference.reference [ fhir:value "RelatedPerson/9c44a0e9-4c8e-4c52-bdbd-9c38e4714bc6" ]
+  ];
+  fhir:Composition.title [ fhir:value "Personal Health Summary"];
+  fhir:Composition.custodian [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/c8281a7e-7b9a-434f-8c0c-06245d4e0dc5>;
+     fhir:Reference.reference [ fhir:value "Organization/c8281a7e-7b9a-434f-8c0c-06245d4e0dc5" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Current Medications" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.32009" ];
+         fhir:Coding.display [ fhir:value "Current Medicine" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>St. John's wort</p>\n        <p>As directed by packaging</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/9e339402-4539-4e64-acfc-c7a97a7a8805>;
+       fhir:Reference.reference [ fhir:value "MedicationStatement/9e339402-4539-4e64-acfc-c7a97a7a8805" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Allergies and Adverse Reactions" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48765-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48765-2" ];
+         fhir:Coding.display [ fhir:value "Allergies andor adverse reactions" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>Allergy to eggs.</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/27b06bef-2030-4bfc-8c48-3306b616a10b>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/27b06bef-2030-4bfc-8c48-3306b616a10b" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/6e0cd20c-7fae-4ed5-bb03-8a54cb81e566.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

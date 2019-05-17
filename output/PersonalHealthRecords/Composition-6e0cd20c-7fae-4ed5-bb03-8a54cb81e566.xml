@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="6e0cd20c-7fae-4ed5-bb03-8a54cb81e566"/>
+<!-- <meta>
+    <profile
+      value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1"/>
+  </meta> -->
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+
+      <h1>Personal Health Summary</h1>
+
+      <h2>Consumer details</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td/>
+          </tr>
+          <tr>
+            <th>Identifier</th>
+            <td>IHI: 8003608666701594</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>Male</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Author details</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>Terry Sampelr</td>
+          </tr>
+          <tr>
+            <th>Identifier</th>
+            <td>IHI: 8003608000024083</td>
+          </tr>
+          <tr>
+            <th>Relationship</th>
+            <td>grandfather</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Document details</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Status</th>
+            <td>final</td>
+          </tr>
+          <tr>
+            <th>Created</th>
+            <td>21 Sep 2018, 09:00:15</td>
+          </tr>
+          <tr>
+            <th>Custodian</th>
+            <td>PAI-O: 8003640001000036</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:738b6ba4-709a-4091-ad05-4790f39e17bc"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+      <code value="100.16685"/>
+      <display value="Personal Health Summary"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/82ea927e-9e84-4b65-ba04-baade2b93137"/>
+  </subject>
+  <date value="2018-09-21T09:00:15+10:00"/>
+  <author>
+    <reference value="RelatedPerson/9c44a0e9-4c8e-4c52-bdbd-9c38e4714bc6"/>
+  </author>
+  <title value="Personal Health Summary"/>
+  <custodian>
+    <reference value="Organization/c8281a7e-7b9a-434f-8c0c-06245d4e0dc5"/>
+  </custodian>
+  <section>
+    <title value="Current Medications"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.32009"/>
+        <display value="Current Medicine"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+        <p>St. John's wort</p>
+        <p>As directed by packaging</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="MedicationStatement/9e339402-4539-4e64-acfc-c7a97a7a8805"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Allergies and Adverse Reactions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies andor adverse reactions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Allergy to eggs.</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="AllergyIntolerance/27b06bef-2030-4bfc-8c48-3306b616a10b"/>
+    </entry>
+  </section>
+</Composition>

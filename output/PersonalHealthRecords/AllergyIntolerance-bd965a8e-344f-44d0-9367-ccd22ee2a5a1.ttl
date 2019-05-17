@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/bd965a8e-344f-44d0-9367-ccd22ee2a5a1> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bd965a8e-344f-44d0-9367-ccd22ee2a5a1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: bd965a8e-344f-44d0-9367-ccd22ee2a5a1</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: unconfirmed</p><p><b>code</b>: Nuts <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>patient</b>: <a href=\"Patient-5440dd6d-154e-44ef-881b-19caa274b6c4.html\">Generated Summary: id: 5440dd6d-154e-44ef-881b-19caa274b6c4; National unique individual identifier = 8003608666701594; gender: male</a></p><h3>Reactions</h3><table class=\"grid\"><tr><td>-</td><td><b>Manifestation</b></td></tr><tr><td>*</td><td>Breathing problems <span style=\"background: LightGoldenRodYellow\">(Details )</span></td></tr></table></div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "unconfirmed"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.text [ fhir:value "Nuts" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/5440dd6d-154e-44ef-881b-19caa274b6c4>;
+     fhir:Reference.reference [ fhir:value "Patient/5440dd6d-154e-44ef-881b-19caa274b6c4" ]
+  ];
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0;
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Breathing problems" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/bd965a8e-344f-44d0-9367-ccd22ee2a5a1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
