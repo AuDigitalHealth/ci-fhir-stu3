@@ -1,11 +1,4 @@
 ### Base Organization *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-#### USage scenarios
-The following are the usage scenarios expected:
-
-* TBD
-
-#### Implementation guidance
-None
-
-
+##### **Implementation guidance**
+No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.

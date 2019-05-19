@@ -146,38 +146,48 @@
 
 <h3 id="personal-health-summary-draft">Personal Health Summary <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h3>
 
-<p>This profile defines a representation of a Personal Health Summary document for a patient in an Australian healthcare context.</p>
-
 <h5 id="usage-scenarios"><strong>Usage Scenarios</strong></h5>
 <p>The following are the usage scenarios expected:</p>
+
 <ul>
   <li>An individual or their authorised representative authors a personal health summary document to be exchanged with the My Health Record system</li>
 </ul>
 
-<h5 id="profile-specific-implementation-guidance"><strong>Profile-specific implementation guidance</strong></h5>
+<h5 id="implementation-guidance"><strong>Implementation guidance</strong></h5>
+<p>For the expected usage scenarios in this implementation guide:</p>
+
 <ul>
-  <li>For the usage scenarios for this profile it is required that the composition include only the specified top-level sections; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.</li>
-  <li>Where additional content beyond that flagged with must support is provided it:
-    <ul>
-      <li>shall not qualify or negate content described by this profile as must support</li>
-      <li>shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
-    </ul>
-  </li>
+  <li>It is required that the composition include only the specified four top-level sections; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.</li>
   <li>For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).</li>
-  <li>In Allergies section:
-    <ul>
-      <li>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</li>
-      <li>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance resource is sent with the appropriate negation code (e.g. 160244002 |No Known Allergies|) is sent as the code</li>
-    </ul>
-  </li>
-  <li>In Medications section:
-    <ul>
-      <li>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</li>
-      <li>Where a sending system can state that a patient is known not to have current medications  (relevant to Medications) it is expected an observation of assertion of no relevant finding is sent with the appropriate code (e.g. 1234391000168107 |No known current medications|)</li>
-    </ul>
-  </li>
 </ul>
 
+<table class="list" width="100%">
+    <thead>
+        <tr>
+            <th>Section</th>
+            <th>Guidance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Allergies</td>
+            <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used.</td>
+        </tr>
+        <tr>
+            <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code.</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Medications</td>
+            <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used.</td>
+        </tr>
+        <tr>
+            <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|).</td>
+        </tr>
+        <tr>
+        <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section.</td>
+        </tr>
+    </tbody>
+</table>
 
 
 <!-- example here -->
@@ -215,7 +225,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="StructureDefinition-composition-docheader-cei-1.html">CompositionDocHeaderCEI</a>.</p>
 <p>
-This profile was published on Mon Apr 15 15:02:02 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri May 17 12:47:06 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -261,44 +271,7 @@ Summary
 
 -\->
 
-<p>This structure is derived from the <a href="StructureDefinition-composition-docheader-cei-1.html">Agency Consumer Entered Information Document Header profile</a></p>
-
-<p>This profile introduces the following variations from the above profile:</p>
-<ol>
-  <li>One <code class="highlighter-rouge">meta.profile</code> is “http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1”</li>
-  <li><code class="highlighter-rouge">type</code> with fixed value system=”https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1”, code=”100.16685”</li>
-  <li><code class="highlighter-rouge">title</code> is “Personal Health Summary”</li>
-  <li>At least one <code class="highlighter-rouge">section</code>, sliced Unordered, Closed by value:code</li>
-  <li>slice <code class="highlighter-rouge">section:allergies</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Allergies and Adverse Reactions’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’http://loinc.org’ and code=’48765-2’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:allergyIntolerance</code> slice as Summary Statement of Allergy or Intolerance</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-  <li>slice <code class="highlighter-rouge">section:medications</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Current Medications’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1’ and code=’101.32009’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:medication</code> slice as Summary Statement of Known Medication</li>
-      <li><code class="highlighter-rouge">entry:noRelevantFindingMedication</code> slice as Assertion of No Relevant Finding</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-</ol>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>
@@ -563,44 +536,7 @@ Summary
 </ul>
 
   -\->
-<p>This structure is derived from the <a href="StructureDefinition-composition-docheader-cei-1.html">Agency Consumer Entered Information Document Header profile</a></p>
-
-<p>This profile introduces the following variations from the above profile:</p>
-<ol>
-  <li>One <code class="highlighter-rouge">meta.profile</code> is “http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1”</li>
-  <li><code class="highlighter-rouge">type</code> with fixed value system=”https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1”, code=”100.16685”</li>
-  <li><code class="highlighter-rouge">title</code> is “Personal Health Summary”</li>
-  <li>At least one <code class="highlighter-rouge">section</code>, sliced Unordered, Closed by value:code</li>
-  <li>slice <code class="highlighter-rouge">section:allergies</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Allergies and Adverse Reactions’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’http://loinc.org’ and code=’48765-2’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:allergyIntolerance</code> slice as Summary Statement of Allergy or Intolerance</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-  <li>slice <code class="highlighter-rouge">section:medications</code>
-    <ul>
-      <li>exactly one</li>
-      <li>invariant such that ‘The section shall at least have one entry or an empty reason’</li>
-      <li>exactly one <code class="highlighter-rouge">title</code> with fixed value ‘Current Medications’</li>
-      <li>exactly one <code class="highlighter-rouge">code</code> with fixed coding system=’https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1’ and code=’101.32009’</li>
-      <li>exactly one <code class="highlighter-rouge">text</code></li>
-      <li><code class="highlighter-rouge">mode</code> fixed to ‘snapshot’</li>
-      <li><code class="highlighter-rouge">entry</code> sliced Unordered, Open by profile:resolve()</li>
-      <li><code class="highlighter-rouge">entry</code> invariant such that ‘At least one allergy statement shall be present’</li>
-      <li><code class="highlighter-rouge">entry:medication</code> slice as Summary Statement of Known Medication</li>
-      <li><code class="highlighter-rouge">entry:noRelevantFindingMedication</code> slice as Assertion of No Relevant Finding</li>
-      <li><code class="highlighter-rouge">emptyReason</code> <a href="http://hl7.org/fhir/STU3/terminologies.html#code">required</a> binding to <a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">Health Summary Non-Clinical Empty Reason</a> value set</li>
-    </ul>
-  </li>
-</ol>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>-->
@@ -979,7 +915,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 15, 2019 15:02+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, May 17, 2019 12:47+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

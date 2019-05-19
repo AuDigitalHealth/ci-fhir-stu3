@@ -11,7 +11,7 @@
   "title": "Summary Statement of Administered Vaccine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-04-12T16:43:23+10:00",
+  "date": "2019-05-17T12:51:25+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -56,7 +56,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Immunization",
-  "baseDefinition": "http://hl7.org.au/fhir/StructureDefinition/au-immunisation",
+  "baseDefinition": "http://hl7.org.au/fhir/StructureDefinition/au-immunization",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -497,7 +497,7 @@
       {
         "id": "Immunization.vaccineCode",
         "path": "Immunization.vaccineCode",
-        "short": "Vaccine product administered",
+        "short": "Vaccine product for administration",
         "definition": "Vaccine that was administered or was to be administered.",
         "min": 1,
         "max": "1",
@@ -681,7 +681,7 @@
         ],
         "isSummary": true,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSetReference": {
             "reference": "https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1"
           }
@@ -787,7 +787,7 @@
       {
         "id": "Immunization.patient",
         "path": "Immunization.patient",
-        "short": "Who was immunized",
+        "short": "Patient immunised",
         "definition": "The patient who either received or did not receive the immunization.",
         "min": 1,
         "max": "1",
@@ -1029,7 +1029,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-organisation"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
           }
         ],
         "mapping": [
@@ -1110,7 +1110,7 @@
       {
         "id": "Immunization.site",
         "path": "Immunization.site",
-        "short": "Body site vaccine  was administered",
+        "short": "Body site vaccine was administered",
         "definition": "Body site where vaccine was administered.",
         "min": 0,
         "max": "1",
@@ -1303,7 +1303,7 @@
       {
         "id": "Immunization.route",
         "path": "Immunization.route",
-        "short": "How vaccine entered body",
+        "short": "Route of vaccination",
         "definition": "The path by which the vaccine product is taken into the body.",
         "min": 0,
         "max": "1",
@@ -2527,7 +2527,7 @@
       {
         "id": "Immunization.explanation",
         "path": "Immunization.explanation",
-        "short": "Administration/non-administration reasons",
+        "short": "Explanation for (non)vaccination",
         "definition": "Reasons why a vaccine was or was not administered.",
         "min": 0,
         "max": "1",
@@ -2649,7 +2649,7 @@
       {
         "id": "Immunization.explanation.reason",
         "path": "Immunization.explanation.reason",
-        "short": "Why immunization occurred",
+        "short": "Reason vaccine administered",
         "definition": "Reasons why a vaccine was administered.",
         "min": 0,
         "max": "*",
@@ -3333,7 +3333,7 @@
       {
         "id": "Immunization.vaccinationProtocol",
         "path": "Immunization.vaccinationProtocol",
-        "short": "What protocol was followed",
+        "short": "Vaccination protocol",
         "definition": "Contains information about the protocol(s) under which the vaccine was administered.",
         "min": 0,
         "max": "*",
@@ -3582,7 +3582,7 @@
       {
         "id": "Immunization.vaccinationProtocol.targetDisease",
         "path": "Immunization.vaccinationProtocol.targetDisease",
-        "short": "Disease immunized against",
+        "short": "Vaccine disease target",
         "definition": "The targeted disease.",
         "min": 1,
         "max": "*",
@@ -3769,6 +3769,47 @@
         ]
       },
       {
+        "id": "Immunization.vaccinationProtocol.targetDisease.coding:targetDiseaseNoInformation",
+        "path": "Immunization.vaccinationProtocol.targetDisease.coding",
+        "sliceName": "targetDiseaseNoInformation",
+        "short": "No Information for Target Disease",
+        "definition": "A reference to a code defined by a terminology system.",
+        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "fixedCoding": {
+          "system": "http://hl7.org/fhir/v3/NullFlavor",
+          "code": "NI",
+          "display": "NoInformation"
+        },
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1-8, C*E.10-22"
+          },
+          {
+            "identity": "rim",
+            "map": "union(., ./translation)"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+          }
+        ]
+      },
+      {
         "id": "Immunization.vaccinationProtocol.targetDisease.text",
         "extension": [
           {
@@ -3812,7 +3853,7 @@
       {
         "id": "Immunization.vaccinationProtocol.doseStatus",
         "path": "Immunization.vaccinationProtocol.doseStatus",
-        "short": "Indicates if dose counts towards immunity",
+        "short": "Vaccine relation to protocol",
         "definition": "Indicates if the immunization event should \"count\" against  the protocol.",
         "comment": "May need to differentiate between status declarations by a provider vs. a CDS engine.",
         "min": 1,

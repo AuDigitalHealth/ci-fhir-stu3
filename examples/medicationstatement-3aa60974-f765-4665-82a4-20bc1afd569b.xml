@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="3aa60974-f765-4665-82a4-20bc1afd569b"/>
+    <meta>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"
+        />
+    </meta>
+    <status value="active"/>
+    <medicationCodeableConcept>
+        <text value="Ventolin"/>
+    </medicationCodeableConcept>
+    <informationSource>
+        <reference value="Patient/5440dd6d-154e-44ef-881b-19caa274b6c4"/>
+    </informationSource>
+    <subject>
+        <reference value="Patient/5440dd6d-154e-44ef-881b-19caa274b6c4"/>
+    </subject>
+    <taken value="y"/>
+    <reasonCode>
+        <text value="Asthma"/>
+    </reasonCode>
+    <note>
+        <text value="Asthma is worse in springtime"/>
+    </note>
+    <dosage>
+        <text value="Used when necessary"/>
+    </dosage>
+</MedicationStatement>

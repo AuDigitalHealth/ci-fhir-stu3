@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/47aa2cc5-5f17-44b5-9360-9e9df03973a6> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "47aa2cc5-5f17-44b5-9360-9e9df03973a6"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1";
+       fhir:index 0
+     ], [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1";
+       fhir:index 1
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 47aa2cc5-5f17-44b5-9360-9e9df03973a6</p><p><b>meta</b>: </p><p><b>identifier</b>: National unique individual identifier = 8003608666701594</p><p><b>name</b>: Verily GoodPatient </p><p><b>gender</b>: other</p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/indigenous-status" ];
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1" ];
+       fhir:Coding.code [ fhir:value "4" ];
+       fhir:Coding.display [ fhir:value "Neither Aboriginal nor Torres Strait Islander origin" ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NI" ];
+         fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003608666701594" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "GoodPatient" ];
+     fhir:HumanName.given [
+       fhir:value "Verily";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "other"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/47aa2cc5-5f17-44b5-9360-9e9df03973a6.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

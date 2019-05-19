@@ -37,7 +37,7 @@
         <requirements value="HumanName.{text | family | given} - shall have a HumanName.text OR HumanName.family OR HumanName.given" />
         <severity value="error" />
         <human value="The name shall at least have text or a family name or a given name" />
-        <expression value="name.text.exists() or name.family.exists() or name.given.exists()" />
+        <expression value="text.exists() or family.exists() or given.exists()" />
       </constraint>
     </element>
     <element id="HumanName.prefix">

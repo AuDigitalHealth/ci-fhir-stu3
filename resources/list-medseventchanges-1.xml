@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description
-    value="This profile provides a generic structure for providing list of medicines that have specifically changed as a result of an event or those medicines directly relevant to the event."/>
+    value="The purpose of this profile is to provide a list of medicines that have specifically changed as a result of an event or those medicines directly relevant to an event. The list is intended to be suited to handling and exchange as a referenced entry in a Composition.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
   <copyright
     value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1" />
@@ -27,20 +27,6 @@
   <differential>
     <element id="List">
       <path value="List"/>
-    </element>
-    <element id="List.meta">
-      <path value="List.meta" />
-      <min value="1" />
-      <constraint>
-        <key value="inv-dh-lst-01" />
-        <severity value="error" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1'" />
-        <expression value="meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medseventchanges-1').exists()" />
-      </constraint>
-    </element>
-    <element id="List.meta.profile">
-      <path value="List.meta.profile" />
-      <min value="1" />
     </element>
     <element id="List.status">
       <path value="List.status" />
@@ -103,6 +89,15 @@
       <path value="List.entry.flag" />
       <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ListItemFlag"/>
+        </extension>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1"/>
+        </valueSetReference>
+      </binding>
     </element>
     <element id="List.entry.deleted">
       <path value="List.entry.deleted" />
@@ -115,11 +110,6 @@
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1" />
       </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="List.emptyReason">
-      <path value="List.emptyReason" />
-      <max value="0" />
       <mustSupport value="true" />
     </element>
   </differential>

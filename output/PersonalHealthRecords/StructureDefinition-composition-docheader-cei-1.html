@@ -146,16 +146,16 @@
 
 <h2 id="consumer-entered-information-document-header-draft">Consumer Entered Information Document Header <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h2>
 
-<p>TBD</p>
-
-<p>This profile defines common header requirements for consumer authored documents associated with a patient in an Australian healthcare context.</p>
-
 <h5 id="usage-scenarios"><strong>Usage Scenarios</strong></h5>
 <p>The following are the usage scenarios expected:</p>
+
 <ul>
-  <li>An individual or their authorised representative authors content to be stored in the My Health Record system</li>
+  <li>An individual or their authorised representative authors a personal health notes document to be exchanged with the My Health Record system</li>
+  <li>An individual or their authorised representative authors a personal health summary document to be exchanged with the My Health Record system</li>
 </ul>
 
+<h5 id="implementation-guidance"><strong>Implementation guidance</strong></h5>
+<p>No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.</p>
 
 
 <!-- example here -->
@@ -193,7 +193,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-composition.html">AUBaseComposition</a>.</p>
 <p>
-This profile was published on Mon Apr 15 15:02:02 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri May 17 12:47:06 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -232,16 +232,7 @@ Summary
 
 -\->
 
-<p>This structure is derived from the <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-composition.html">HL7 AU Base Composition</a></p>
-
-<p>This profile introduces the following variations from the above profile:</p>
-<ol>
-  <li>Exactly one <code class="highlighter-rouge">language</code> as ‘en-AU’</li>
-  <li><code class="highlighter-rouge">subject</code> as Patient with mandatory IHI</li>
-  <li>Exactly one <code class="highlighter-rouge">author</code> as Patient with mandatory IHI or RelatedPerson with mandatory IHI</li>
-  <li>zero <code class="highlighter-rouge">confidentiality</code> (explicitly prohibited)</li>
-  <li>Exactly one <code class="highlighter-rouge">custodian</code> as Organization with mandatory identifier</li>
-</ol>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>
@@ -435,16 +426,7 @@ Summary
 </ul>
 
   -\->
-<p>This structure is derived from the <a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-composition.html">HL7 AU Base Composition</a></p>
-
-<p>This profile introduces the following variations from the above profile:</p>
-<ol>
-  <li>Exactly one <code class="highlighter-rouge">language</code> as ‘en-AU’</li>
-  <li><code class="highlighter-rouge">subject</code> as Patient with mandatory IHI</li>
-  <li>Exactly one <code class="highlighter-rouge">author</code> as Patient with mandatory IHI or RelatedPerson with mandatory IHI</li>
-  <li>zero <code class="highlighter-rouge">confidentiality</code> (explicitly prohibited)</li>
-  <li>Exactly one <code class="highlighter-rouge">custodian</code> as Organization with mandatory identifier</li>
-</ol>
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>-->
@@ -733,7 +715,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 15, 2019 15:02+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, May 17, 2019 12:47+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

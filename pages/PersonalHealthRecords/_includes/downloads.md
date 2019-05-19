@@ -24,7 +24,6 @@ All examples included in this implementation guide are available for download in
 
 The corresponding Personal Health Notes [DH2019xx] and Personal Health Summary [DH2019xx] implementation guide that use the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
 
-[//]: # [DH_xxxx_PersonalHealthNotes_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\PersonalHealthRecords\_includes\DH_xxxx_PersonalHealthNotes_CDA_IG_v2.0.pdf)
-
-[//]: # [DH_xxxx_PersonalHealthSummary_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\PersonalHealthRecords\_includes\DH_xxxx_PersonalHealthSummary_CDA_IG_v2.0.pdf)
+- [DH_xxxx_PersonalHealthNotes_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\PersonalHealthRecords\_includes\DH_xxxx_PersonalHealthNotes_CDA_IG_v2.0.pdf)
+- [DH_xxxx_PersonalHealthSummary_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\PersonalHealthRecords\_includes\DH_xxxx_PersonalHealthSummary_CDA_IG_v2.0.pdf)
 
