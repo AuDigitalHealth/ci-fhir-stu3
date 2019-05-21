@@ -85,9 +85,6 @@ This implementation guide and related artefacts are technical in nature and the 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 ||[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
 
-|[<a name="HL7FHIRDIR">HL7FHIRDIR</a>]| Health Level Seven, Inc., Publication (Version) History, accessed 10 March 2019.|
-||[http://www.hl7.org/fhir/directory.cfml](http://www.hl7.org/fhir/directory.cfml)|
-
 |[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019.|
 ||[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
 
