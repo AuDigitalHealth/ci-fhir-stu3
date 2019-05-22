@@ -67,7 +67,7 @@
                         </td>
                         <td class="frm-set">
                            <ul class="frm-set">
-                                <li><a href="StructureDefinition-encounter-summary-1.html">Encounter (Summary Statement of an Encounter)</a></li>
+                                <li><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></li>
                            </ul>
                            <ul class="frm-set">
                                 <li><a href="StructureDefinition-list-medsreview-1.html">List (List of Medicine Items)</a></li>
@@ -162,7 +162,7 @@
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
   </tr>
       <tr>
-        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-encounter-summary-1.html">Encounter (Summary Statement of an Encounter)</a></td>
+        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></td>
          <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html">AU Base Encounter</a></td>
         <td><a href="http://hl7.org/fhir/stu3/encounter-definitions.html#Encounter">Encounter</a></td>
   </tr>

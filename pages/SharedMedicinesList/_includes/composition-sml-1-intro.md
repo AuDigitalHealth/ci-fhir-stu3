@@ -21,22 +21,39 @@ For the expected usage scenarios in this implementation guide:
   <tr>
     <th>Section</th>
     <th>Guidance</th>
-   </tr>
-     <tr>
-        <td rowspan="2">Allergies</td>
-        <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
     </tr>
-    <tr>
-        <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code</td>
-    </tr>
+ <tr>
+   <td rowspan="2">Allergies</td>
+    <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
+  </tr>
+ <tr>
+    <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code</td>
+  </tr>
   
-    <tr>
+   <tr>
+   <td rowspan="3">Medications</td>
+    <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
+  </tr>
+ <tr>
+    <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|)</td>
+  </tr>
+  <tr>
+    <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
+  </tr>
+</table>  
+
+##### PSML implementation guidance
+
+<table class="list" width="100%">
+  <tr>
+    <th>Section</th>
+    <th>Guidance</th>
+   </tr>
+   <tr>
         <td>Medications</td>
         <td>For the usage scenario for this profile, it is expected that a list of medicines will be provided.</td>
     </tr>   
   </table>  
  
-#####  Known issues
- * Composition.infomation-recipient: add invariants to type to the Agency base profiles: BasePractitioner \| Base Patient \| Base RelatedPerson \| Base PractitionerRole \| Base Organization
-   
+  
    
