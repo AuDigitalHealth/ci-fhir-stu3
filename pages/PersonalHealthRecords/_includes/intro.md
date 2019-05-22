@@ -94,7 +94,7 @@ This implementation guide and related artefacts are technical in nature and the 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019.|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
   
-|[<a name="NEHT2011ao">NEHT2015ao</a>]| National E-Health Transition Authority, 19 December 2011, Consumer Entered Notes Information Requirements, Version 0.07.|
+|[<a name="NEHT2011ao">NEHT2011ao</a>]| National E-Health Transition Authority, 19 December 2011, Consumer Entered Notes Information Requirements, Version 0.07.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2282-2016/nehta-0955-2011](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2282-2016/nehta-0955-2011)|
 
 |[<a name="NEHT2011ar">NEHT2011ar</a>]| National E-Health Transition Authority, 23 November 2011, Consumer Entered Health Summary Information Requirements, Version 1.0.|
