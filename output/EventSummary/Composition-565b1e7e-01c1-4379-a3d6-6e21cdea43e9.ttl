@@ -25,7 +25,8 @@
      fhir:index 0;
      fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/composition-author-role" ];
      fhir:Extension.valueReference [
-       fhir:Reference.reference [ fhir:value "urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2" ]
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2>;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2" ]
      ]
   ];
   fhir:Composition.status [ fhir:value "final"];
@@ -39,15 +40,18 @@
      ]
   ];
   fhir:Composition.subject [
-     fhir:Reference.reference [ fhir:value "urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe" ]
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/792b4811-2ce7-4531-8893-af827175bcfe>;
+     fhir:Reference.reference [ fhir:value "Patient/792b4811-2ce7-4531-8893-af827175bcfe" ]
   ];
   fhir:Composition.encounter [
-     fhir:Reference.reference [ fhir:value "urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e" ]
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e>;
+     fhir:Reference.reference [ fhir:value "Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e" ]
   ];
   fhir:Composition.date [ fhir:value "2018-07-19"^^xsd:date];
   fhir:Composition.author [
      fhir:index 0;
-     fhir:Reference.reference [ fhir:value "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1" ]
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1" ]
   ];
   fhir:Composition.title [ fhir:value "Event Summary"];
   fhir:Composition.attester [
@@ -58,11 +62,13 @@
      ];
      fhir:Composition.attester.time [ fhir:value "2018-09-21T09:00:15+10:00"^^xsd:dateTime ];
      fhir:Composition.attester.party [
-       fhir:Reference.reference [ fhir:value "urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1" ]
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1>;
+       fhir:Reference.reference [ fhir:value "Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1" ]
      ]
   ];
   fhir:Composition.custodian [
-     fhir:Reference.reference [ fhir:value "urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306" ]
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/021fff67-c5ec-438f-9520-ce9bafee1306>;
+     fhir:Reference.reference [ fhir:value "Organization/021fff67-c5ec-438f-9520-ce9bafee1306" ]
   ];
   fhir:Composition.section [
      fhir:index 0;
@@ -81,7 +87,8 @@
      ];
      fhir:Composition.section.entry [
        fhir:index 0;
-       fhir:Reference.reference [ fhir:value "urn:uuid:98900f15-67f8-48a1-9345-6d5968f2c23e" ]
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e>;
+       fhir:Reference.reference [ fhir:value "Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e" ]
      ]
   ], [
      fhir:index 1;
@@ -101,7 +108,8 @@
      ];
      fhir:Composition.section.entry [
        fhir:index 0;
-       fhir:Reference.reference [ fhir:value "urn:uuid:a5e03840-1be4-43e0-acd2-c9e288adc4f9" ]
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9" ]
      ]
   ], [
      fhir:index 2;
