@@ -71,6 +71,51 @@
       <path value="Composition.extension"/>
       <sliceName value="informationRecipient"/>
       <short value="Who should receive a copy of the composition"/>
+      <constraint>
+        <key value="inv-dh-cmp-06"/>
+        <severity value="error"/>
+        <human
+          value="A practitioner shall conform to Base Practitioner"/>
+        <expression
+          value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')"
+        />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-07"/>
+        <severity value="error"/>
+        <human
+          value="A patient shall conform to Base Patient"/>
+        <expression
+          value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')"
+        />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-08"/>
+        <severity value="error"/>
+        <human
+          value="A related person shall conform to Base RelatedPerson"/>
+        <expression
+          value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')"
+        />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-09"/>
+        <severity value="error"/>
+        <human
+          value="A practitioner role shall conform to Base PractitionerRole"/>
+        <expression
+          value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')"
+        />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-10"/>
+        <severity value="error"/>
+        <human
+          value="An organisation shall conform to Base Organization"/>
+        <expression
+          value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')"
+        />
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.identifier">
@@ -106,7 +151,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-summary-1"
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"
         />
       </type>
       <mustSupport value="true"/>
@@ -284,6 +329,23 @@
         value="Medicines the patient is currently taking including self-prescribed, clinician prescribed and nonprescription medicines, as well as all regular, intermittent and as required medicines. This also includes changes to the therapy, including dose changes, new medicines and ceased medicines."/>
       <min value="1"/>
       <max value="1"/>
+      <constraint>
+        <key value="inv-dh-cmp-04"/>
+        <severity value="error"/>
+        <human
+          value="If present, the assertion of no relevant finding entry shall assert no known current medications"/>
+        <expression
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())"
+        />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-05"/>
+        <severity value="error"/>
+        <human value="The section shall at least have one entry or an empty reason, but not both"/>
+        <expression
+          value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').emptyReason.exists()"
+        />
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:medications.title">
@@ -314,7 +376,7 @@
     <element id="Composition.section:medications.entry">
       <path value="Composition.section.entry"/>
       <short value="Medications"/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
@@ -322,7 +384,27 @@
           value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-medsreview-1"
         />
       </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
+        />
+      </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:medications.emptyReason">
+      <path value="Composition.section.emptyReason"/>
+      <mustSupport value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="SectionEmptyReason"/>
+        </extension>
+        <strength value="required"/>
+        <valueSetReference>
+          <reference
+            value="https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1"/>
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
