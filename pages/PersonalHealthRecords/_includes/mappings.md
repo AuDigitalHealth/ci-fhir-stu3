@@ -8,7 +8,7 @@ The table below matches the data items to the corresponding supported element in
 <table class="list" width="100%">
                <thead>
                     <tr>						
-						<th>Req. Section</th>
+						<th>Requirement Section</th>
 						<th>Data item</th>
 						<th>Element</th>
 						<th>Hierarchy</th>
@@ -111,7 +111,7 @@ The table below matches the data items to the corresponding supported element in
 <table class="list" width="100%">
                <thead>
                     <tr>						
-						<th>Req. Section</th>
+						<th>Requirement Section</th>
 						<th>Data item</th>
 						<th>Element</th>
 						<th>Hierarchy</th>
@@ -218,105 +218,81 @@ The table below matches the data items to the corresponding supported element in
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.telecom</td>
 					</tr>             
 					<tr>
-						<td rowspan="4">Allergies and Adverse Reactions</td>
-						<td rowspan="3"></td>
-						<td>section(Allergies)</td>
-						<td>Composition.section(Allergies)</td>
+						<td rowspan="7">Allergies and Adverse Reactions</td>
+						<td rowspan="4">Component</td>
+						<td>Composition(Personal Health Summary).section(Allergies)</td>
+						<td>Composition(Personal Health Summary).section(Allergies)</td>
 					</tr>
-                <tr>
-                    <td>section(Allergies).entry</td>
-                    <td>Composition.section(Allergies).entry</td>
-                </tr>
-                <tr>
-                    <td>section(Allergies).emptyReason</td>
-                    <td>Composition.section(Allergies).emptyReason</td>
-                </tr>
-                <tr>
-                    <td rowspan="1"></td>
-                    <td>section(Allergies).text</td>
-                    <td>Composition.section(Allergies).text</td>
-                </tr>             
-                <tr>
-                    <td rowspan="2">Agent Description</td>
-                    <td></td>
-                    <td>AllergyIntolerance.code</td>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.code</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>AllergyIntolerance.reaction.substance</td>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.substance</td>
-                </tr>              
-<!--                <tr>
-                    <td rowspan="2">Reaction Type</td>
-                    <td></td>
-                    <td>AllergyIntolerance.type</td>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>AllergyIntolerance.type</td>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
-                </tr>    -->           
-                <tr>
-                    <td>Reaction Description</td>
-                    <td></td>
-                    <td>AllergyIntolerance.reaction.manifestation</td>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
-                </tr>
-<!-- Component: Medicines -->               
-               <tr>
-                    <td rowspan="3">Medications</td>
-                    <td></td>
-                    <td>section(Medications)</td>
-                    <td>Composition.section(Medications)</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>section(Medications).entry</td>
-                    <td>Composition.section(Medications).entry</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>section(Medications).emptyReason</td>
-                    <td>Composition.section(Medications).emptyReason</td>
-                </tr>                
-                <tr>
-                    <td>Item Description</td>
-                    <td></td>
-                    <td>MedicationStatement</td>
-                    <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement</td>
-                </tr>               
-<!--            <tr>
-                    <td rowspan="2">Status</td>
-                    <td></td>
-                    <td>MedicationStatement.status</td>
-                    <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.status</td>
-                </tr> -->                            
-                <tr>
-                    <td>Dose Information</td>
-                    <td></td>
-                    <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.dosage</td>
-                </tr>                              
-                <tr>
-                    <td>Reason for Medicine</td>
-                    <td></td>
-                    <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
-                </tr>                              
-                <tr>
-                    <td>Additional Comments</td>
-                    <td></td>
-                    <td>MedicationStatement.note</td>
-                    <td>Composition.section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.note</td>
-                </tr>
-<!-- Component: Document Control -->  
-				<tr>
-                    <td>DateTime Input</td>
-                    <td></td>
-                    <td>attester.time</td>
-                    <td>Composition.attester.time</td>
-                </tr>
+					<tr>
+						<td>Composition(Personal Health Summary).section(Allergies).entry</td>
+						<td>Composition(Personal Health Summary).section(Allergies).entry</td>
+					</tr>
+					<tr>
+						<td>Composition(Personal Health Summary).section(Allergies).emptyReason</td>
+						<td>Composition(Personal Health Summary).section(Allergies).emptyReason</td>
+					</tr>
+					<tr>
+						<td>Composition(Personal Health Summary).section(Allergies).text</td>
+						<td>Composition(Personal Health Summary).section(Allergies).text</td>
+					</tr>             
+					<tr>
+						<td rowspan="2">Agent Description</td>
+						<td>AllergyIntolerance.code</td>
+						<td>Composition(Personal Health Summary).section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.code</td>
+					</tr>
+					<tr>
+						<td>AllergyIntolerance.reaction.substance</td>
+						<td>Composition(Personal Health Summary).section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.substance</td>
+					</tr>           
+					<tr>
+						<td>Reaction Description</td>
+						<td>AllergyIntolerance.reaction.manifestation</td>
+						<td>Composition(Personal Health Summary).section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
+					</tr>              
+				   <tr>
+						<td rowspan="7">Medicines</td>
+						<td rowspan="3">Component</td>
+						<td>Composition(Personal Health Summary).section(Medications)</td>
+						<td>Composition(Personal Health Summary).section(Medications)</td>
+					</tr>
+					<tr>
+						<td>Composition(Personal Health Summary).section(Medications).entry</td>
+						<td>Composition(Personal Health Summary).section(Medications).entry</td>
+					</tr>
+					<tr>
+						<td>Composition(Personal Health Summary).section(Medications).emptyReason</td>
+						<td>Composition(Personal Health Summary).section(Medications).emptyReason</td>
+					</tr>                
+					<tr>
+						<td>Item Description</td>
+						<td>MedicationStatement</td>
+						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement</td>
+					</tr>                          
+					<tr>
+						<td>Dose Information</td>
+						<td>MedicationStatement.dosage</td>
+						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.dosage</td>
+					</tr>                              
+					<tr>
+						<td>Reason for Medicine</td>
+						<td>MedicationStatement.reasonCode</td>
+						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
+					</tr>                              
+					<tr>
+						<td>Additional Comments</td>
+						<td>MedicationStatement.note</td>
+						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.note</td>
+					</tr> 					
+					<tr>
+						<td rowspan="2">Document Control</td>					
+						<td>Component</td>
+						<td>n/a</td>
+						<td>n/a</td>
+					</tr>
+					<tr>
+						<td>DateTime Input</td>	
+						<td>n/a</td>
+						<td>n/a</td>
+					</tr>
             </tbody>
         </table>
