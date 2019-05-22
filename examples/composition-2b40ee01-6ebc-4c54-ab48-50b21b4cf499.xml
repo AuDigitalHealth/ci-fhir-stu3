@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="2b40ee01-6ebc-4c54-ab48-50b21b4cf499"/>
+  <!--<meta>
+    <profile
+      value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1"/>
+  </meta>-->
+  <language value="en-AU"/>
+
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+
+      <h1>Personal Health Summary</h1>
+
+      <h2>Consumer details</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>Verily GOODPATIENT</td>
+          </tr>
+          <tr>
+            <th>Identifier</th>
+            <td>IHI: 8003608666701594</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>other</td>
+          </tr>
+          <tr>
+            <th>Indigenous status</th>
+            <td>Neither Aboriginal nor Torres Strait Islander origin</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Author details</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>Verily GOODPATIENT</td>
+          </tr>
+          <tr>
+            <th>Identifier</th>
+            <td>IHI: 8003608666701594</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Document details</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th>Status</th>
+            <td>final</td>
+          </tr>
+          <tr>
+            <th>Created</th>
+            <td>1 Dec 2018, 09:00:15</td>
+          </tr>
+          <tr>
+            <th>Custodian</th>
+            <td>PAI-O: 8003640001000036</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+      <code value="100.16685"/>
+      <display value="Personal Health Summary"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/47aa2cc5-5f17-44b5-9360-9e9df03973a6"/>
+  </subject>
+  <date value="2018-12-01T09:00:15+10:00"/>
+  <author>
+    <reference value="Patient/47aa2cc5-5f17-44b5-9360-9e9df03973a6"/>
+  </author>
+  <title value="Personal Health Summary"/>
+  <custodian>
+    <reference value="Organization/e45f6ec6-f598-4ac5-8b95-583467492257"/>
+  </custodian>
+  <section>
+    <title value="Current Medications"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.32009"/>
+        <display value="Current Medicine"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <table border="5">
+          <thead>
+            <tr>
+              <th>Medication</th>
+              <th>Dose</th>
+              <th>Purpose/Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i>Ferrous sulphate &amp; vitamin C</i></td>
+              <td><i>1 d</i></td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Fluticasone/salmeterol 250/25</td>
+              <td>2 bd</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Sodium chloride 600mg</td>
+              <td>3 m, 3 midi, 2 n</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>
+                <b>Mega B complex</b>
+              </td>
+              <td>
+                <b>1 d</b>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <td>
+                <b>Multivitamin</b>
+              </td>
+              <td>
+                <b>1 d</b>
+              </td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Bromhexine 0.8mg/ml </td>
+              <td>
+                <b>10ml bd</b>
+              </td>
+              <td/>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </text>
+    <entry>
+      <reference value="MedicationStatement/fed62c8e-9035-4ff9-99ac-fb9de96808c8"/>
+    </entry>
+    <entry>
+      <reference value="MedicationStatement/cd0c4f16-7ef6-4e27-b8a2-c8c0337fe045"/>
+    </entry>
+    <entry>
+      <reference value="MedicationStatement/062ac6c2-bc48-4ee9-907a-e7203e9d1812"/>
+    </entry>
+    <entry>
+      <reference value="MedicationStatement/177a2cf1-71c2-470f-a625-52fb64ff116b"/>
+    </entry>
+    <entry>
+      <reference value="MedicationStatement/f76b5039-d478-4451-b590-acd5064f0fd7"/>
+    </entry>
+    <entry>
+      <reference value="MedicationStatement/ede1015c-2cc8-46e7-ad2e-771bc7e40f87"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Allergies and Adverse Reactions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies andor adverse reactions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I have no allergies.</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="AllergyIntolerance/fab01e0d-260e-4acc-9b22-a18d1dc88333"/>
+    </entry>
+  </section>
+</Composition>

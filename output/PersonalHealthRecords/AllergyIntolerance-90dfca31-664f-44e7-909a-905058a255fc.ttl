@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/90dfca31-664f-44e7-909a-905058a255fc> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "90dfca31-664f-44e7-909a-905058a255fc"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 90dfca31-664f-44e7-909a-905058a255fc</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: unconfirmed</p><p><b>code</b>: No known allergy <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '716186003' = 'No known allergy (situation)', given as 'No known allergy'})</span></p><p><b>patient</b>: <a href=\"Patient-7d10b711-cded-4339-a2fd-ef69e7ba7847.html\">Generated Summary: id: 7d10b711-cded-4339-a2fd-ef69e7ba7847; National unique individual identifier = 8003608666701594; gender: male</a></p></div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "unconfirmed"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:716186003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "716186003" ];
+       fhir:Coding.display [ fhir:value "No known allergy" ]
+     ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/7d10b711-cded-4339-a2fd-ef69e7ba7847>;
+     fhir:Reference.reference [ fhir:value "Patient/7d10b711-cded-4339-a2fd-ef69e7ba7847" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/90dfca31-664f-44e7-909a-905058a255fc.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

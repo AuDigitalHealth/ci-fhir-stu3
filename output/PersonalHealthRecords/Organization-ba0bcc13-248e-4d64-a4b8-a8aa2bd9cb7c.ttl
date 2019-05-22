@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c</p><p><b>meta</b>: </p><p><b>identifier</b>: ABN = 20073665175</p></div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "XX" ];
+         fhir:Coding.display [ fhir:value "Organization Identifier" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "ABN" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/abn" ];
+     fhir:Identifier.value [ fhir:value "20073665175" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

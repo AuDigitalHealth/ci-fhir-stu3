@@ -91,7 +91,7 @@
          fhir:ElementDefinition.constraint.requirements [ fhir:value "HumanName.{text | family | given} - shall have a HumanName.text OR HumanName.family OR HumanName.given" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The name shall at least have text or a family name or a given name" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "name.text.exists() or name.family.exists() or name.given.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "text.exists() or family.exists() or given.exists()" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -434,7 +434,7 @@
          fhir:ElementDefinition.constraint.requirements [ fhir:value "HumanName.{text | family | given} - shall have a HumanName.text OR HumanName.family OR HumanName.given" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The name shall at least have text or a family name or a given name" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "name.text.exists() or name.family.exists() or name.given.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "text.exists() or family.exists() or given.exists()" ]
        ]
      ], [
        fhir:index 1;

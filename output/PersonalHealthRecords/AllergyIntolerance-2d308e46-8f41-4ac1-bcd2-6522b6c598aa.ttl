@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/2d308e46-8f41-4ac1-bcd2-6522b6c598aa> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2d308e46-8f41-4ac1-bcd2-6522b6c598aa"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 2d308e46-8f41-4ac1-bcd2-6522b6c598aa</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: active</p><p><b>verificationStatus</b>: unconfirmed</p><p><b>code</b>: Penicillin <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>patient</b>: <a href=\"Patient-bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6.html\">Generated Summary: id: bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6; National unique individual identifier = 8003608666701594; gender: male</a></p><h3>Reactions</h3><table class=\"grid\"><tr><td>-</td><td><b>Manifestation</b></td></tr><tr><td>*</td><td>Rash; Nausea and vomiting <span style=\"background: LightGoldenRodYellow\">(Details )</span></td></tr></table></div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "unconfirmed"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.text [ fhir:value "Penicillin" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6>;
+     fhir:Reference.reference [ fhir:value "Patient/bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6" ]
+  ];
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0;
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Rash; Nausea and vomiting" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/2d308e46-8f41-4ac1-bcd2-6522b6c598aa.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

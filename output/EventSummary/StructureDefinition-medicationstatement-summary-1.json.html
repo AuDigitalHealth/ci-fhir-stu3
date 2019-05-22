@@ -143,7 +143,7 @@ Raw <a href="StructureDefinition-medicationstatement-summary-1.json" download>js
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a>" : "Summary Statement of Known Medicine",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a>" : true,
-  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2019-05-13T13:45:59+10:00",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2019-05-22T12:15:38+10:00",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "Australian Digital Health Agency",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -921,6 +921,50 @@ Raw <a href="StructureDefinition-medicationstatement-summary-1.json" download>js
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-tpuu",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT TPUU valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-tpp",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT TPU valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-tp",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT TP valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amp-mpuu",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT MPUU valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-mpp",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT MPP valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-mp",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT MP valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-ctpp",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT CTPP valueset membership required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'"
           }
         ],
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
@@ -2623,7 +2667,7 @@ Raw <a href="StructureDefinition-medicationstatement-summary-1.json" download>js
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 13, 2019 13:45+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 22, 2019 12:15+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

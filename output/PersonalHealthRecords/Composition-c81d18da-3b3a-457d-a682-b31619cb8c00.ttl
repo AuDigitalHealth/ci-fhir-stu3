@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/c81d18da-3b3a-457d-a682-b31619cb8c00> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "c81d18da-3b3a-457d-a682-b31619cb8c00"];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n      <p><b>id</b>: c81d18da-3b3a-457d-a682-b31619cb8c00</p>\n      <p><b>language</b>: en-AU</p>\n      <p><b>status</b>: final</p>\n      <p><b>type</b>: Personal Health Summary <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1\n          code '100.16685' = '100.16685', given as 'Personal Health Summary'})</span></p>\n      <p><b>subject</b>: IHI = 8003608666701594; gender = male; indigenous status: Not\n        stated/inadequately described</p>\n      <p><b>date</b>: 01/12/2018 9:00:15 AM</p>\n      <p><b>author</b>: IHI = 8003608666701594; gender = male; indigenous status: Not\n        stated/inadequately described</p>\n      <p><b>title</b>: Personal Health Summary</p>\n      <p><b>custodian</b>: PAI-O = 8003640001000036</p>\n    </div>"
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+       fhir:Coding.code [ fhir:value "100.16685" ];
+       fhir:Coding.display [ fhir:value "Personal Health Summary" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6>;
+     fhir:Reference.reference [ fhir:value "Patient/bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6" ]
+  ];
+  fhir:Composition.date [ fhir:value "2018-12-01T09:00:15+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6>;
+     fhir:Reference.reference [ fhir:value "Patient/bb0c7f35-bdd2-4ed4-96a3-3b96be96b7f6" ]
+  ];
+  fhir:Composition.title [ fhir:value "Personal Health Summary"];
+  fhir:Composition.custodian [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/5581254e-8f40-4991-af62-d544563f0a98>;
+     fhir:Reference.reference [ fhir:value "Organization/5581254e-8f40-4991-af62-d544563f0a98" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Current Medications" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.32009" ];
+         fhir:Coding.display [ fhir:value "Current Medicine" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unknown</div>"
+     ];
+     fhir:Composition.section.emptyReason [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/list-empty-reason" ];
+         fhir:Coding.code [ fhir:value "unavailable" ];
+         fhir:Coding.display [ fhir:value "Unavailable" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Unknown" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Allergies and Adverse Reactions" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48765-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48765-2" ];
+         fhir:Coding.display [ fhir:value "Allergies andor adverse reactions" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <table>\n          <thead>\n            <tr>\n              <th>Agent</th>\n              <th>Reaction Description</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>Penicillin</td>\n              <td>Rash; Nausea and vomiting</td>\n            </tr>\n            <tr>\n              <td>Nuts</td>\n              <td>Breathing problems</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/2d308e46-8f41-4ac1-bcd2-6522b6c598aa>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/2d308e46-8f41-4ac1-bcd2-6522b6c598aa" ]
+     ], [
+       fhir:index 1;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/8440c6c5-4872-43b4-b755-d65fc7c06148>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/8440c6c5-4872-43b4-b755-d65fc7c06148" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/c81d18da-3b3a-457d-a682-b31619cb8c00.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
