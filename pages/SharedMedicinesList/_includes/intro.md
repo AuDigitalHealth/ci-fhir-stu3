@@ -68,6 +68,47 @@ This implementation guide is aimed at software development teams, architects, de
 This document and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 
+## Document Information
+
+
+### Key Information
+
+<table class="list" width="100%" cellspacing="6">
+<tbody>
+    <tr>
+        <td><b>Owner</b></td>
+        <td>Executive General Manager, Innovation and Development</td>
+  </tr>
+  <tr>
+    <td><b>Contact for enquiries</b></td>
+    <td>
+        <p>Australian Digital Health Agency Help Centre</p>
+        <p>t:   1300 901 001</p>
+        <p>e:  <a href ="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>    
+    </td>
+  </tr>
+   </tbody>
+</table> 
+
+
+### Product Version History
+<table class="list" width="100%" cellspacing="6">
+<tbody>
+    <tr>
+        <th>Product version</th>
+        <th>Date</th>
+        <th>Release comments</th>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>23 May 2019</td>
+    <td>Brand new - TBD</td>
+  </tr>
+   </tbody>
+</table> 
+
+
+
 ## References
 
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, Not yet published, Common - Clinical Document, Version 1.5.2.|
