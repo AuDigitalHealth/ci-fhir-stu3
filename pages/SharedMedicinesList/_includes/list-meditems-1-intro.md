@@ -8,10 +8,11 @@
  
 Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
-#### Implementation guidance
+##### Implementation guidance
 
 For the expected usage scenarios in this implementation guide:
-* Related prescription and dispense records can be included via referenced medication statement
+
+* Where a sending system wants to include information that cannot be directly included in a supported list entry resource, the information may be included via a resource that is referenced from the supported list entries
 
 * When list is used in Composition
 <table class="list" width="100%">
@@ -42,10 +43,11 @@ For the expected usage scenarios in this implementation guide:
   </table> 
 
 
-* PSML implementation guidance
+##### PSML implementation guidance
 
- * The list should have at least one entry.
- * All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, should be included in the list.
+ * The author is expected to be a pharmacist.
+ * The list is expected to have at least one entry.
+ * All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, are expected to be included in the list.
  * Relevant ceased medicine items for the patient may be included in the list.
  * A new medicine item should be represented with the flag of 'new' or 'prescribed' and a change description that described the reason for introducing the medicine item.
  * An existing unchanged medicine item should be represented with the flag of 'nochange' and no change description.
