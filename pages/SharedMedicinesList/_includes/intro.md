@@ -78,37 +78,37 @@ This document and related artefacts are technical in nature and the audience is 
 ### Key Information
 
 <table class="list" width="100%" cellspacing="6">
-<tbody>
-    <tr>
-        <td><b>Owner</b></td>
-        <td>Executive General Manager, Innovation and Development</td>
-  </tr>
-  <tr>
-    <td><b>Contact for enquiries</b></td>
-    <td>
-        <p>Australian Digital Health Agency Help Centre</p>
-        <p>t:   1300 901 001</p>
-        <p>e:  <a href ="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>    
-    </td>
-  </tr>
-   </tbody>
+    <tbody>
+        <tr>
+            <td><b>Owner</b></td>
+            <td>Executive General Manager, Innovation and Development</td>
+        </tr>
+        <tr>
+            <td><b>Contact for enquiries</b></td>
+            <td>
+                <p>Australian Digital Health Agency Help Centre <br />
+                t:   1300 901 001<br />
+                e:  <a href ="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>    
+            </td>
+        </tr>
+    </tbody>
 </table> 
 
 
 ### Product Version History
 <table class="list" width="100%" cellspacing="6">
-<tbody>
-    <tr>
-        <th>Product version</th>
-        <th>Date</th>
-        <th>Release comments</th>
-  </tr>
-  <tr>
-    <td>1.0</td>
-    <td>23 May 2019</td>
-    <td>Brand new - TBD</td>
-  </tr>
-   </tbody>
+    <tbody>
+        <tr>
+            <th>Product version</th>
+            <th>Date</th>
+            <th>Release comments</th>
+        </tr>
+        <tr>
+            <td>1.0</td>
+            <td>23 May 2019</td>
+            <td>Brand new - TBD</td>
+        </tr>
+    </tbody>
 </table> 
 
 
@@ -138,7 +138,9 @@ This document and related artefacts are technical in nature and the audience is 
 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
-  
 
 
- 
+
+
+
+
