@@ -65,27 +65,27 @@ The table below matches the data items to the corresponding supported element in
 					<tr>
 						<td rowspan="5">Notes</td>					
 						<td>Component</td>
-						<td>Composition(Personal Health Notes).section(Notes section)</td>
-						<td>Composition(Personal Health Notes).section(Notes section)</td>
+						<td>Composition.section</td>
+						<td>Composition(Personal Health Notes).section</td>
 					</tr>
 					<tr>
 						<td>Date Information Entered</td>
-						<td>Composition(Personal Health Notes).date</td>
+						<td>Composition.date</td>
 						<td>Composition(Personal Health Notes).date</td>
 					</tr>
 					<tr>
 						<td rowspan="2">Issue Title</td>
-						<td>Composition(Personal Health Notes).section(Notes section).title</td>
-						<td>Composition(Personal Health Notes).section(Notes section).title</td>
+						<td>Composition.section.title</td>
+						<td>Composition(Personal Health Notes).section.title</td>
 					</tr>
 					<tr>
-						<td>Composition(Personal Health Notes).section(Notes section).text</td>
-						<td>Composition(Personal Health Notes).section(Notes section).text</td>
+						<td>Composition.section.text</td>
+						<td>Composition(Personal Health Notes).section.text</td>
 					</tr>
 					<tr>
 						<td>Issue Description</td>
-						<td>Composition(Personal Health Notes).section(Notes section).text</td>
-						<td>Composition(Personal Health Notes).section(Notes section).text</td>
+						<td>Composition.section.text</td>
+						<td>Composition(Personal Health Notes).section.text</td>
 					</tr> 					
 					<tr>
 						<td rowspan="2">Document Control</td>					
@@ -218,23 +218,19 @@ The table below matches the data items to the corresponding supported element in
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.telecom</td>
 					</tr>             
 					<tr>
-						<td rowspan="7">Allergies and Adverse Reactions</td>
-						<td rowspan="4">Component</td>
+						<td rowspan="6">Allergies and Adverse Reactions</td>
+						<td rowspan="3">Component</td>
+						<td>Composition.section</td>
 						<td>Composition(Personal Health Summary).section(Allergies)</td>
-						<td>Composition(Personal Health Summary).section(Allergies)</td>
 					</tr>
 					<tr>
+						<td>Composition.section.entry</td>
 						<td>Composition(Personal Health Summary).section(Allergies).entry</td>
-						<td>Composition(Personal Health Summary).section(Allergies).entry</td>
 					</tr>
 					<tr>
+						<td>Composition.section.emptyReason</td>
 						<td>Composition(Personal Health Summary).section(Allergies).emptyReason</td>
-						<td>Composition(Personal Health Summary).section(Allergies).emptyReason</td>
-					</tr>
-					<tr>
-						<td>Composition(Personal Health Summary).section(Allergies).text</td>
-						<td>Composition(Personal Health Summary).section(Allergies).text</td>
-					</tr>             
+					</tr>           
 					<tr>
 						<td rowspan="2">Agent Description</td>
 						<td>AllergyIntolerance.code</td>
@@ -252,21 +248,21 @@ The table below matches the data items to the corresponding supported element in
 				   <tr>
 						<td rowspan="7">Medicines</td>
 						<td rowspan="3">Component</td>
-						<td>Composition(Personal Health Summary).section(Medications)</td>
+						<td>Composition.section</td>
 						<td>Composition(Personal Health Summary).section(Medications)</td>
 					</tr>
 					<tr>
-						<td>Composition(Personal Health Summary).section(Medications).entry</td>
+						<td>Composition.section.entry</td>
 						<td>Composition(Personal Health Summary).section(Medications).entry</td>
 					</tr>
 					<tr>
-						<td>Composition(Personal Health Summary).section(Medications).emptyReason</td>
+						<td>Composition.section.emptyReason</td>
 						<td>Composition(Personal Health Summary).section(Medications).emptyReason</td>
 					</tr>                
 					<tr>
 						<td>Item Description</td>
-						<td>MedicationStatement</td>
-						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement</td>
+						<td>MedicationStatement.medication[x]</td>
+						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.medication[x]</td>
 					</tr>                          
 					<tr>
 						<td>Dose Information</td>
