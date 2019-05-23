@@ -57,7 +57,41 @@ The following extensions form part of this implementation guide:
    <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
    <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
   </tr> 
+
+  <tr>
+   <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-list-source-role.html">List Authoring PractitionerRole</a></td>
+   <td>list-source-role</td>
+   <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+   <td><a href="http://hl7.org/fhir/STU3/list.html">List</a></td>
+  </tr> 
+      
    <tr>
+   <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-brand-name.html">Medication Brand Name</a></td>
+   <td>medication-brand-name</td>
+   <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
+   <td><a href="http://hl7.org/fhir/STU3/Medication">Medication</a>, <a href="http://hl7.org/fhir/STU3/MedicationRequest">MedicationRequest</a>, <a href="http://hl7.org/fhir/STU3/MedicationDispense">MedicationDispense</a>, <a href="http://hl7.org/fhir/STU3/MedicationStatement">MedicationStatement</a></td>
+  </tr>
+  
+ <tr>
+   <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-generic-name.html">Medication Generic Name</a></td>
+   <td>medication-generic-name</td>
+   <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
+   <td><a href="http://hl7.org/fhir/STU3/Medication">Medication</a>, <a href="http://hl7.org/fhir/STU3/MedicationRequest">MedicationRequest</a>, <a href="http://hl7.org/fhir/STU3/MedicationDispense">MedicationDispense</a>, <a href="http://hl7.org/fhir/STU3/MedicationStatement">MedicationStatement</a></td>
+  </tr>  
+  <tr>
+   <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-strength-text.html">Medication Strength Text</a></td>
+   <td>medication-strength-text</td>
+   <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
+   <td><a href="http://hl7.org/fhir/STU3/Medication">Medication</a></td>
+  </tr>          
+     
+   <tr>
+   <td><a href="http://hl7.org/fhir/STU3/extension-patient-mothersmaidenname.html">Medication Type</a></td>
+   <td>medication-type</td>
+   <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
+   <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
+  </tr>
+ <tr>
    <td><a href="http://hl7.org/fhir/STU3/extension-patient-mothersmaidenname.html">Mother's Maiden Name</a></td>
    <td>patient-mothersMaidenName</td>
    <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
