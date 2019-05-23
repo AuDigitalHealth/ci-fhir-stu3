@@ -10,14 +10,16 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-1.html).
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-1.html), such as a pharmacist shared medicines list (PSML), as a document or as a list.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing PSML in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of SML information between healthcare providers.
+The primary aim of this implementation guide is to support implementing an SML in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The resulting FHIR structure can be used for the electronic exchange of SML information, such as a PSML, between healthcare providers.
+
+Whilst this implementation guide is defined to support a generic practitioner-author list as either a document or as a list at the time of publication of this implementation guide it is expected that in the near term implementations will be of a pharmacist shared medicines list, exchanged as a document, with the My Health Record.
 
 This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
 
@@ -52,9 +54,11 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
-This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of PSML. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
+This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of SML. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
 The starting point for the profiles included in this implementation guide is the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+
+For implementers interested in representing shared medicines list information as a list, and not a document, the starting point is the [List of Medicine Items for a Patient](StructureDefinition-list-meditems-1.html) profile.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
