@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d005]() [DH2019xx].
+This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d005][DH2019xx].
 
 The table below matches the data items to the corresponding supported element in the {{site.data.fhir.igName}} profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
@@ -26,8 +26,8 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Completeness of PSML document</td>
                     <td>028324</td>
-                    <td></td>
-                    <td></td>
+                    <td>N/A</td>
+                    <td>N/A</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Identifier for document author</td>
@@ -44,14 +44,14 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>No Address for the consumer</td>
                     <td>028319</td>
-                    <td></td>
-                    <td></td>
+                    <td>Adress is optional in the model.This requirement is best managed in a conformance profile.</td>
+                    <td>Adress is optional in the model.This requirement is best managed in a conformance profile.</td>
                 </tr>
                 <tr>
                     <td>No Electronic Communication Detail for the consumer</td>
                     <td>028320</td>
-                    <td></td>
-                    <td></td>
+                    <td>Electronic Communication Detail is optional in the model.This requirement is best managed in a conformance profile.</td>
+                    <td>Electronic Communication Detail is optional in the model.This requirement is best managed in a conformance profile.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Healthcare Setting</td>
@@ -75,7 +75,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.section(Medications).entry</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Items from a Review).List.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.note</td>
                 </tr>
                 <tr>
                     <td rowspan="4">Attribute for Substance/ Agent of allergy and adverse
@@ -122,24 +122,27 @@ The table below matches the data items to the corresponding supported element in
                     <td>028329</td>
                     <td>Medication.code</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
                         Medication).Medication.code</td>
                 </tr>
                 <tr>
-                    <td>Attribute for Active Ingredient</td>
-                    <td>028333</td>
+                    <td rowspan="2">Attribute for Active Ingredient</td>
+                    <td rowspan="2">028333</td>
                     <td>Medication.ingredient</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
-                        Medication).Medication.ingredient</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient</td>
+                </tr>
+                <tr>
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known
+                        Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>No Latin words or abbreviations of Active Ingredient</td>
                     <td>028390</td>
-                    <td></td>
-                    <td></td>
+                    <td>N/A</td>
+                    <td>N/A</td>
                 </tr>
 
                 <tr>
@@ -147,16 +150,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">028335</td>
                     <td>Medication.code</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
-                        Medication).Medication.code</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>Medication.medication-brand-name</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
-                        Medication).Medication.medication-brand-name</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.medication-brand-name</td>
                 </tr>
                 <tr>
                     <td>Active Ingredient or Brand Name</td>
@@ -166,28 +165,29 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
 
                 <tr>
-                    <td>Attribute for Strength</td>
-                    <td>028392</td>
+                    <td rowspan="2">Attribute for Strength</td>
+                    <td  rowspan="2">028392</td>
                     <td>Medication.ingredient.amount</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
-                        Medication).Medication.ingredient.amount</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient.amount</td>
+                </tr>
+                <tr>
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Attribute for Dose Form</td>
                     <td rowspan="2">028391</td>
                     <td>Medication.code</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
                         Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>Medication.form</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.medication(Medication as Known
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
                         Medication).Medication.form</td>
                 </tr>
                 <tr>
@@ -195,16 +195,13 @@ The table below matches the data items to the corresponding supported element in
                     <td>028399</td>
                     <td>MedicationStatement.dosage</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.dosage</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>Attribute for Direction</td>
                     <td>028336</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>No Latin words or abbreviations for Direction</td>
@@ -217,8 +214,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>028338</td>
                     <td>MedicationStatement.reasonCode</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.reasonCode</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.reasonCode</td>
                 </tr>
                 <tr>
                     <td>Terminology for Medicine Purpose</td>
@@ -237,8 +233,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>028345</td>
                     <td>MedicationStatement.dosage</td>
                     <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items from a Review).List.entry.item(MedicationStatement as Detailed Statement of Known
-                        Medication).MedicationStatement.dosage</td>
+                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>Attribute for Medicine Image</td>
@@ -268,7 +263,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Attribute for Medicine Status</td>
                     <td>028342</td>
                     <td>List.entry.flag</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Items from a Review).List.entry.flag</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.entry.flag</td>
                 </tr>
              </tbody>
         </table>

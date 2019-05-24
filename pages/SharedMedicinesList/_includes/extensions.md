@@ -86,7 +86,7 @@ The following extensions form part of this implementation guide:
   </tr>          
      
    <tr>
-   <td><a href="http://hl7.org/fhir/STU3/extension-patient-mothersmaidenname.html">Medication Type</a></td>
+   <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-medication-type.html">Medication Type</a></td>
    <td>medication-type</td>
    <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
    <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
