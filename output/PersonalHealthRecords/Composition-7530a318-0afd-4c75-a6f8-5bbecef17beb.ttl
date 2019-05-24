@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/7530a318-0afd-4c75-a6f8-5bbecef17beb> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "7530a318-0afd-4c75-a6f8-5bbecef17beb"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 7530a318-0afd-4c75-a6f8-5bbecef17beb</p><p><b>meta</b>: </p><p><b>language</b>: en-AU</p><p><b>status</b>: final</p><p><b>type</b>: Personal Health Notes <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1 code '100.16681' = '100.16681', given as 'Personal Health Notes'})</span></p><p><b>date</b>: 21 Jun. 2017, 9:00:15 am</p><p><b>author</b>: <a href=\"RelatedPerson-47c94af0-2ba0-4c9a-be38-1efed4c6286d.html\">Generated Summary: id: 47c94af0-2ba0-4c9a-be38-1efed4c6286d; National unique individual identifier = 8003608833357361; <span title=\"Codes: {http://hl7.org/fhir/v3/RoleCode SIGOTHR}\">significant other</span></a></p><p><b>title</b>: Personal Health Notes</p><p><b>custodian</b>: <a href=\"Organization-f2684e75-3664-4708-a7c9-9d45c045bf0c.html\">Generated Summary: id: f2684e75-3664-4708-a7c9-9d45c045bf0c; PAI-O = 8003640001000036</a></p></div>"
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+       fhir:Coding.code [ fhir:value "100.16681" ];
+       fhir:Coding.display [ fhir:value "Personal Health Notes" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/76d7a6ff-23b8-4e4c-9c98-7c20818e0242>;
+     fhir:Reference.reference [ fhir:value "Patient/76d7a6ff-23b8-4e4c-9c98-7c20818e0242" ]
+  ];
+  fhir:Composition.date [ fhir:value "2017-06-21T09:00:15+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/RelatedPerson/47c94af0-2ba0-4c9a-be38-1efed4c6286d>;
+     fhir:Reference.reference [ fhir:value "RelatedPerson/47c94af0-2ba0-4c9a-be38-1efed4c6286d" ]
+  ];
+  fhir:Composition.title [ fhir:value "Personal Health Notes"];
+  fhir:Composition.custodian [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/f2684e75-3664-4708-a7c9-9d45c045bf0c>;
+     fhir:Reference.reference [ fhir:value "Organization/f2684e75-3664-4708-a7c9-9d45c045bf0c" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "My Health Notes" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "102.15513" ];
+         fhir:Coding.display [ fhir:value "Notes" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                <p>\n                    <b>Exercise note</b>\n                </p>\n                <p>Have been for a 20 min run every morning since last Friday.</p>\n            </div>"
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/7530a318-0afd-4c75-a6f8-5bbecef17beb.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
