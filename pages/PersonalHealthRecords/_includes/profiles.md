@@ -195,11 +195,6 @@
       <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
