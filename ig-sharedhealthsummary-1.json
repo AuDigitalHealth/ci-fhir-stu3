@@ -23,12 +23,14 @@
     "canonicalBase": "http://ns.electronichealth.net.au/ci/fhir/3.0",
     "logging": [
         "init",
+        "progress",
         "context",
-        "html"
+        "html",
+        "tx"
     ],
     "dependencyList": [{
-        "name": "aubase",
-        "location": "http://hl7.org.au/fhir",
+        "name": "aubase",		
+        "location": "http://hl7.org.au/fhir/base",
         "version": "current"
     }],
     "defaults": {
