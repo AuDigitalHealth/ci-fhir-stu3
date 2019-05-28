@@ -24,21 +24,9 @@
   <type value="Medication"/>
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medication"/>
   <derivation value="constraint"/>
-  <differential>    <element id="Medication">
-    <path value="Medication"/>
-  </element>
-    <element id="Medication.extension:pbsSponsor">
-      <path value="Medication.extension"/>
-      <sliceName value="pbsSponsor"/>
-      <short value="PBS Sponsor"/>
-      <definition
-        value="Reference to the sponsor organisation that is responsible for the supply of the medicine."/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor"/>
-      </type>
-      <mustSupport value="true"/>
+  <differential>
+    <element id="Medication">
+      <path value="Medication"/>
     </element>
     <element id="Medication.extension:brandName">
       <path value="Medication.extension"/>
@@ -75,10 +63,6 @@
     <element id="Medication.code">
       <path value="Medication.code"/>
       <min value="1"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Medication.status">
-      <path value="Medication.status"/>
       <mustSupport value="true"/>
     </element>
     <element id="Medication.manufacturer">
@@ -128,39 +112,8 @@
       <path value="Medication.package"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Medication.package.content">
-      <path value="Medication.package.content"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Medication.package.content.item[x]">
-      <path value="Medication.package.content.item[x]"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"
-        />
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Medication.package.content.amount">
-      <path value="Medication.package.content.amount"/>
-      <mustSupport value="true"/>
-    </element>
     <element id="Medication.package.batch">
       <path value="Medication.package.batch"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Medication.package.batch.extension:MedicationBatchSerialNumber">
-      <path value="Medication.package.batch.extension"/>
-      <sliceName value="MedicationBatchSerialNumber"/>
-      <short value="Medication Batch Serial Number"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/medication-batch-serialnumber"/>
-      </type>
       <mustSupport value="true"/>
     </element>
     <element id="Medication.package.batch.lotNumber">
