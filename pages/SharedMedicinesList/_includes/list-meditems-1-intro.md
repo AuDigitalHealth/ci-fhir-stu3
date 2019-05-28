@@ -12,6 +12,7 @@ The following are the overarching usage scenarios this profile is intended to su
 An expected usage scenario, further scoping the above overarching scenarios is:
 * A shared medicines list exchanged as a pharmacist shared medicines list (PSML) document 
 
+This profile does not support sending an absence of clinical information as a list, e.g. no medicines information available.
 
 ##### Implementation guidance
 
@@ -61,6 +62,7 @@ When a shared medicines list is sent as part of a document (referenced in Compos
 ##### When a shared medicines list is a PSML
 
 For the expected usage scenario of a PSML document the following guidance applies:
+
 * The role of ‘pharmacist’ will be recorded in the list source role as PractitionerRole.code
 * Information relating to the pharmacist such as contact details will be recorded in the source as one more more elements of Practitioner
 * All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, are expected to be included in the list.
