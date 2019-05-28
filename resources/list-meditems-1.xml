@@ -36,10 +36,13 @@
       <path value="List.meta"/>
       <min value="1"/>
       <constraint>
-        <key value="inv-dh-lst-01" />
-        <severity value="error" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1'" />
-        <expression value="Composition.meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1').exists()" />
+        <key value="inv-dh-lst-01"/>
+        <severity value="error"/>
+        <human
+          value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1'"/>
+        <expression
+          value="Composition.meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1').exists()"
+        />
       </constraint>
     </element>
     <element id="List.meta.profile">
@@ -134,6 +137,7 @@
     <element id="List.entry">
       <path value="List.entry"/>
       <short value="Medicine item with change information"/>
+      <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="List.entry.extension:changeDescription">
@@ -168,20 +172,6 @@
         />
       </type>
       <mustSupport value="true"/>
-    </element>
-    <element id="List.emptyReason">
-      <path value="List.emptyReason"/>
-      <mustSupport value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ListEmptyReason"/>
-        </extension>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference
-            value="https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1"/>
-        </valueSetReference>
-      </binding>
     </element>
   </differential>
 </StructureDefinition>
