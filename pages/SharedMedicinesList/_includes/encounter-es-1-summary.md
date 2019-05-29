@@ -1,0 +1,1 @@
+This file is intentionally empty. It is only included as IG Publisher requirement.
