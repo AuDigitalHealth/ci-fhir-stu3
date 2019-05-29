@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="implementationguide-sharedmedicineslist-1"/>
+    <language value="en-AU"/>
+    <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1"/>
+    <version value="1.0.0"/>
+    <name value="Shared Medicines List"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <publisher value="Australian Digital Health Agency"/>
+    <contact>
+        <telecom>
+            <system value="email"/>
+            <value value="help@digitalhealth.gov.au"/>
+        </telecom>
+    </contact>
+    <description
+        value="Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications."/>
+    <copyright
+        value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+    <fhirVersion value="3.0.1"/>
+    <package>
+        <name value="SML"/>
+        <resource>
+            <example value="false"/>
+            <name value="Practitioner Shared Medicines List"/>
+            <sourceReference>
+                <reference value="StructureDefinition/composition-sml-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="patient-dh-base-1"/>
+            <description value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="patient-ident-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-ident-1"/>
+            </sourceReference>
+        </resource>
+        <!--<resource>
+            <example value="false"/>
+            <name value="patient-ihi-1"/>
+            <description value="The Agency Patient profile, as derived from the HL7 AU patient profile with a mandatory IHI."/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-ihi-1"/>
+            </sourceReference>
+        </resource>-->
+        <resource>
+            <example value="false"/>
+            <name value="relatedperson-dh-base-1"/>
+            <description value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
+            <sourceReference>
+                <reference value="StructureDefinition/relatedperson-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="organization-dh-base-1"/>
+            <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/organization-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="organization-ident-1"/>
+            <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/organization-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitioner-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="practitioner-ident-1"/>
+            <description value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitioner-ident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <!--<resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-withpractitioner-1"/>
+            </sourceReference>
+        </resource>-->
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitionerrole-withpractitionerident-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="medicationstatement-detailed-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/medicationstatement-detailed-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="allergyintolerance-summary-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/allergyintolerance-summary-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="observation-norelevantfinding-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/observation-norelevantfinding-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="encounter-es-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/encounter-es-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="list-meditems-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/list-meditems-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="medication-known-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/medication-known-1"/>
+            </sourceReference>
+        </resource>
+
+        <!-- Datatype profiles -->
+
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/humanname-dh-base-1"/>
+            </sourceReference>
+        </resource>
+
+        <!--   Examples -->
+       <!-- <resource>
+            <example value="true"/>
+            <name value="SHS example 1"/>
+            <description value="SHS example 1 (contained)"/>
+            <sourceReference>
+                <reference value="Composition/a0da969a-7956-439b-b390-8de071a2df7c"/>
+            </sourceReference>
+        </resource>-->
+      
+    </package>
+    <page>
+        <source value="index.html"/>
+        <title value="Australian Digital Health Agency Shared Medicines List FHIR Implementation Guide"/>
+        <kind value="page"/>
+    </page>
+</ImplementationGuide>
