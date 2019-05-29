@@ -1,9 +1,10 @@
 # {{ page.title }}
 
-This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d005][DH2019xx].
+This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d006][DH2019xx].
 
 The table below matches the data items to the corresponding supported element in the {{site.data.fhir.igName}} profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
+## Mapping from business requirements
 
  <table class="list" width="100%">
             <thead>
