@@ -1,6 +1,9 @@
 #### Detailed Statement of Known Medicine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Implementation guidance
+
+For the supported scenarios in this implementation guide:
+
 * MedicationStatement status should be consistent with the value of List flag:
     * A medicine item ceased during this event should be represented with a status of 'stopped' or 'completed'.
     * A medicine item introduced during this event should be represented with a status of 'intended'.
