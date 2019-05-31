@@ -7,7 +7,8 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Health Summary</h1>
- <p>Generated Wed May 22 12:21:46 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-health-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Fri May 31 11:36:25 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-health-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+<p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
  <table class="grid">
@@ -312,7 +313,7 @@
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Bundle.entry[7].resource.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource.subject.resource.extension.valueCoding</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
@@ -324,10 +325,10 @@
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[8].resource.valueCodeableConcept</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[8].resource.valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[8].resource.valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[9].resource.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[9].resource.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[9].resource.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -356,7 +357,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[1]</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Composition.contained[1].medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[1].medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[1].medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[2].medicationCodeableConcept</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element matches more than one slice - , medicationCoded</b></td>
@@ -368,7 +369,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[2]</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Composition.contained[2].medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[2].medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[2].medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[3].medicationCodeableConcept</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element matches more than one slice - , medicationCoded</b></td>
@@ -380,7 +381,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[3]</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Composition.contained[3].medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[3].medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[3].medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[4].extension.valueCoding</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
@@ -425,7 +426,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[2].entry.contained.code.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice AllergyIntolerance.code.coding:snomedAllergyCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -469,10 +470,10 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[7].valueCodeableConcept</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[7].valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[7].valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[8].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[8].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[8].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -481,7 +482,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[8].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:airVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[9].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[9].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[9].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -490,7 +491,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[9].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:airVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[10].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[10].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[10].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -505,7 +506,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
@@ -597,7 +598,7 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[11]</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'Composition.contained[11].medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[12].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[12].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[12].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -606,7 +607,7 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[12].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:airVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[13].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[13].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[13].vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -621,7 +622,7 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].entry.contained.code.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice AllergyIntolerance.code.coding:snomedAllergyCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -661,7 +662,7 @@
      <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
@@ -684,7 +685,7 @@
      <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.type.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[2].code.coding</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
@@ -734,7 +735,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization/21e09e32-441a-4297-a803-970358b4f20f: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Immunization/21e09e32-441a-4297-a803-970358b4f20f: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Immunization/21e09e32-441a-4297-a803-970358b4f20f: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -751,7 +752,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization/3e2a29a1-3a3c-4a53-bb1b-66588e9bd147: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Immunization/3e2a29a1-3a3c-4a53-bb1b-66588e9bd147: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
@@ -762,7 +763,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization/42bdb0e9-d510-46c4-a4a3-02205dbb1447: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Immunization/42bdb0e9-d510-46c4-a4a3-02205dbb1447: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Immunization/42bdb0e9-d510-46c4-a4a3-02205dbb1447: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -779,7 +780,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization/7e7dbbfe-5afb-4938-86eb-27060b5daba7: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Immunization/7e7dbbfe-5afb-4938-86eb-27060b5daba7: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Immunization/7e7dbbfe-5afb-4938-86eb-27060b5daba7: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -796,7 +797,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization/8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Immunization/8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Immunization/8f9e3a4e-64d0-48b8-ac1b-85f9ecfeae06: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -813,7 +814,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization/d4b8094b-435e-4b43-b38b-f38328bddda3: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Immunization/d4b8094b-435e-4b43-b38b-f38328bddda3: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Immunization/d4b8094b-435e-4b43-b38b-f38328bddda3: Immunization.vaccineCode.coding</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Immunization.vaccineCode.coding:amtVaccineCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/immunization-summary-administration-1 - does not have fixed value, binding or existence assertions</b></td>
@@ -847,7 +848,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationStatement/2fe9873a-0eea-415a-89ae-0b82ff2b3d0b: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>MedicationStatement/2fe9873a-0eea-415a-89ae-0b82ff2b3d0b: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
@@ -867,7 +868,7 @@
      <td><b>MedicationStatement/314619c2-2d97-4fb9-9c25-b0b9da92f804: MedicationStatement</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'MedicationStatement.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationStatement/314619c2-2d97-4fb9-9c25-b0b9da92f804: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>MedicationStatement/314619c2-2d97-4fb9-9c25-b0b9da92f804: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
@@ -904,7 +905,7 @@
      <td><b>MedicationStatement/90d418aa-ed53-447b-95d2-099101ed4339: MedicationStatement</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'MedicationStatement.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationStatement/90d418aa-ed53-447b-95d2-099101ed4339: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>MedicationStatement/90d418aa-ed53-447b-95d2-099101ed4339: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
@@ -992,7 +993,7 @@
      <td><b>MedicationStatement/f7583f71-7736-4d10-89f7-fa1845e53120: MedicationStatement</b></td><td><b>error</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, Element 'MedicationStatement.medicationReference[medicationReference]': minimum required = 1, but only found 0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationStatement/f7583f71-7736-4d10-89f7-fa1845e53120: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>MedicationStatement/f7583f71-7736-4d10-89f7-fa1845e53120: MedicationStatement.medicationCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
@@ -1003,7 +1004,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation/552bcf1e-5e3e-45b7-9539-0a99ba860146: Observation.valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Observation/552bcf1e-5e3e-45b7-9539-0a99ba860146: Observation.valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
@@ -1017,7 +1018,7 @@
      <td><b>Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2: Observation.valueCodeableConcept</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2: Observation.valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding</b></td>
+     <td><b>Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2: Observation.valueCodeableConcept.coding</b></td><td><b>error</b></td><td><b>Error null validating Coding: java.lang.NullPointerException</b></td>
    </tr>
 </table>
 <hr/>
