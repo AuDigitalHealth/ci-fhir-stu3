@@ -1,0 +1,67 @@
+﻿Shared Medicines List : Validation Results
+=========================================
+
+err = 36, warn = 4, info = 0
+Generated Fri May 31 11:42:02 AEST 2019. FHIR version 3.0.1 for fhir.dh.shared-medicines-list# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+
+ Build Errors : 1 / 1
+ C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\composition-sml-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\encounter-es-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1 : 0 / 1
+ C:\work\git\ci-fhir-stu3\resources\implementationguide-sharedmedicineslist-1 : 0 / 1
+ C:\work\git\ci-fhir-stu3\resources\list-meditems-1 : 7 / 0
+ C:\work\git\ci-fhir-stu3\resources\medication-known-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\medicationstatement-detailed-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1 : 1 / 0
+ C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\organization-ident-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 1 / 0
+ C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 1 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 0 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitionerrole-dh-base-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1 : 0 / 0
+</table>
+== n/a ==
+WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be fhir.dh.shared-medicines-list-null
+ERROR: ??: The reference http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1 could not be resolved
+== C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\composition-sml-1.xml ==
+ERROR: StructureDefinition/composition-sml-1: StructureDefinition.differential.element[29].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+ERROR: StructureDefinition/composition-sml-1: StructureDefinition.differential.element[36].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+== C:\work\git\ci-fhir-stu3\resources\encounter-es-1.xml ==
+ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[2].extension: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[2].extension.url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
+== C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1.xml ==
+WARNING: StructureDefinition/humanname-dh-base-1: StructureDefinition: Resource has a language, but the XHTML does not have a language tag
+== C:\work\git\ci-fhir-stu3\resources\implementationguide-sharedmedicineslist-1.xml ==
+WARNING: ImplementationGuide/implementationguide-sharedmedicineslist-1: ImplementationGuide: Resource has a language, but the XHTML does not have a language tag
+== C:\work\git\ci-fhir-stu3\resources\list-meditems-1.xml ==
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[1].extension: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[1].extension.url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[4].extension: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[4].extension.url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[15].extension: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[15].extension.url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
+ERROR: StructureDefinition/list-meditems-1: StructureDefinition.differential.element[16].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1'
+== C:\work\git\ci-fhir-stu3\resources\medication-known-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\medicationstatement-detailed-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1.xml ==
+ERROR: StructureDefinition/observation-norelevantfinding-1: StructureDefinition.differential.element[7].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1'
+== C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\organization-ident-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1.xml ==
+ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[22].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'
+== C:\work\git\ci-fhir-stu3\resources\patient-ident-1.xml ==
+ERROR: StructureDefinition/patient-ident-1: StructureDefinition.differential.element[22].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'
+== C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1.xml ==
+== C:\work\git\ci-fhir-stu3\resources\practitionerrole-dh-base-1.xml ==
+ERROR: StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[9].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'
+ERROR: StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[10].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
+== C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1.xml ==
+ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[9].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'
+ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[10].binding.valueSetReference: Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
+== C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1.xml ==
