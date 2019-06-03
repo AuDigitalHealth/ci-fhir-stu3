@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Known Medicine"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-05-23T14:58:48+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-06-03T08:33:19+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -785,43 +785,43 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-tpuu" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT TPUU valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-tpp" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT TPU valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'" ]
        ], [
          fhir:index 2;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-tp" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT TP valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'" ]
        ], [
          fhir:index 3;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amp-mpuu" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT MPUU valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" ]
        ], [
          fhir:index 4;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-mpp" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT MPP valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'" ]
        ], [
          fhir:index 5;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-mp" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT MP valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'" ]
        ], [
          fhir:index 6;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-ctpp" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT CTPP valueset membership required" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.exists(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC') implies coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPGC').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes'" ]
        ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
