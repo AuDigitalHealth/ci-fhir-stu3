@@ -30,7 +30,12 @@
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
-                        <td class="frm-null"/>
+                        <td class="frm-set">
+                                <ul>
+                                    <li><a href="StructureDefinition-composition-acp-1.html">Composition (Advanced Care Planning)</a></li>
+                                    <li><a href="StructureDefinition-documentreference-acp-1.html">DocumentReference (Advance Care Planning Document Reference)</a></li>
+                                </ul>
+                            </td>
                         <td class="frm-null"/>
                     </tr>
                     <tr class="frm-break">
@@ -127,6 +132,16 @@
       <th>Implementation guide profile base</th>
       <th>FHIR base resource</th>
    </tr>
+   <tr>
+      <td><a href="StructureDefinition-composition-acp-1.html">Composition (Advance Care Planning)</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
+     <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-documentreference-acp-1.html">DocumentReference (Advance Care Planning Document Reference)</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/documentreference.html">DocumentReference</a></td>
+     <td><a href="http://hl7.org/fhir/STU3/documentreference.html">DocumentReference</a></td>
+    </tr>
    <tr>
         <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
