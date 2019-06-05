@@ -178,6 +178,11 @@
       <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
     </tr>
     <tr>
+      <td><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
+    </tr>
+    <tr>
       <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
       <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
