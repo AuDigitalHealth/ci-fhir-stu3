@@ -9,9 +9,9 @@
         <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/>
     </identifier>
     <type value="document"/>
-    <!--Composition-->
+
     <entry>
-        <fullUrl value="Composition/2384da13-ff91-4e05-930f-2d7a034ea713"/>
+        <fullUrl value="urn:uuid:2384da13-ff91-4e05-930f-2d7a034ea713"/>
         <resource>
         <Composition xmlns="http://hl7.org/fhir">
             <id value="2384da13-ff91-4e05-930f-2d7a034ea713"/>
@@ -53,10 +53,10 @@
                 </coding>
             </type>
             <subject>
-                <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
             </subject>
             <encounter>
-                <reference value="Encounter/6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
+                <reference value="urn:uuid:6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
             </encounter>
             <date value="2019-05-30T10:00:00+10:00"/>
             <author>
@@ -67,13 +67,13 @@
                 <mode value="legal"/>
                 <time value="2019-05-30T10:00:00+10:00"/>
                 <party>
-                    <reference value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+                    <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
                 </party>
             </attester>
             <custodian>
-                <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+                <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
             </custodian>
-            <!-- Section: Event Overview -->
+
             <section>
                 <title value="Event Details"/>
                 <code>
@@ -98,10 +98,10 @@
                     </div>
                 </text>
                 <entry>
-                    <reference value="Encounter/6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
+                    <reference value="urn:uuid:6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
                 </entry>
             </section>
-            <!-- Section: Allergies -->
+
             <section>
                 <title value="Allergies and Adverse Reactions"/>
                 <code>
@@ -117,10 +117,10 @@
                     </div>
                 </text>
                 <entry>
-                    <reference value="AllergyIntolerance/b21f4cad-024a-4101-a6dd-80d50e29e295"/>
+                    <reference value="urn:uuid:b21f4cad-024a-4101-a6dd-80d50e29e295"/>
                 </entry>
             </section>
-            <!-- Section: Medications -->
+
             <section>
                 <title value="Medications"/>
                 <code>
@@ -160,10 +160,10 @@
                     </div>
                 </text>
                 <entry>
-                    <reference value="List/6eeee721-3485-4e1f-81b8-450a2143f441"/>
+                    <reference value="urn:uuid:6eeee721-3485-4e1f-81b8-450a2143f441"/>
                 </entry>
             </section>
-            <!-- Section: Medical History -->
+
             <section>
                 <title value="Medical History"/>
                 <code>
@@ -181,28 +181,24 @@
                             <thead>
                                 <tr>
                                     <th>Condition</th>
-                                    <th>Clinical Status</th>
-                                    <th>Verification Status</th>
                                     <th>Onset Date Time</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Urinary tract infection</td>
-                                    <td>active</td>
-                                    <td>confirmed</td>
                                     <td>2019-05-10</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </text>
-                <!-- Condition #1: urinary tract infection -->
+
                 <entry>
-                    <reference value="Condition/ed5e2c34-2d28-4d21-a6aa-be7baad865b8"/>
+                    <reference value="urn:uuid:ed5e2c34-2d28-4d21-a6aa-be7baad865b8"/>
                 </entry>
             </section>
-            <!-- Section: DiagnosticInvestigations -->
+
             <section>
                 <title value="Diagnostic Investigations"/>
                 <code>
@@ -220,16 +216,14 @@
                                 <tr>
                                     <th>Test</th>
                                     <th>Result</th>
-                                    <th>Antibiotic</th>
-                                    <th>Senstive/Resistant</th>
+									<th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Culture and sensitivity</td>
                                     <td>Escherichia coli grown</td>
-                                    <td>Bactrim</td>
-                                    <td>Sensitive</td>
+									<td>2019-05-10</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -239,9 +233,9 @@
         </Composition>
         </resource>
     </entry>
-    <!--PATIENT-->
+
     <entry>
-        <fullUrl value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+        <fullUrl value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
                 <id value="3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
@@ -266,17 +260,17 @@
                 </name>
                 <gender value="male"/>
                 <generalPractitioner>
-                    <reference value="Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"/>
+                    <reference value="urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c"/>
                 </generalPractitioner>
                 <managingOrganization>
-                    <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+                    <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
                 </managingOrganization>
             </Patient>
         </resource>
     </entry>
-    <!-- PRACTITIONER-->
+
     <entry>
-        <fullUrl value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+        <fullUrl value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="40a94071-8373-4d53-a788-63b79c75a3c1"/>
@@ -336,9 +330,9 @@
             </Practitioner>
         </resource>
     </entry>
-    <!--GENERAL PRACTITIONER-->
+
     <entry>
-        <fullUrl value="Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"/>
+        <fullUrl value="urn:uuid:20f15728-f3ac-4877-b55a-107f94dbd00c"/>
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="20f15728-f3ac-4877-b55a-107f94dbd00c"/>
@@ -354,9 +348,9 @@
             </Practitioner>
         </resource>
     </entry>
-    <!-- PRACTITIONERROLE -->
+
     <entry>
-        <fullUrl value="PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2"/>
+        <fullUrl value="urn:uuid:45cad6ac-e9a3-418a-8480-4e64132849f2"/>
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="45cad6ac-e9a3-418a-8480-4e64132849f2"/>
@@ -387,10 +381,10 @@
                     <value value="8003610000000000"/>
                 </identifier>
                 <practitioner>
-                    <reference value="Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1"/>
+                    <reference value="urn:uuid:40a94071-8373-4d53-a788-63b79c75a3c1"/>
                 </practitioner>
                 <organization>
-                    <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+                    <reference value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
                 </organization>
                 <code>
                     <coding>
@@ -403,9 +397,9 @@
             </PractitionerRole>
         </resource>
     </entry>
-    <!--CUSTODIAN -->
+
     <entry>
-        <fullUrl value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+        <fullUrl value="urn:uuid:021fff67-c5ec-438f-9520-ce9bafee1306"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="021fff67-c5ec-438f-9520-ce9bafee1306"/>
@@ -446,9 +440,9 @@
             </Organization>
         </resource>
     </entry>
-    <!--List-->
+
     <entry>
-        <fullUrl value="List/6eeee721-3485-4e1f-81b8-450a2143f441"/>
+        <fullUrl value="urn:uuid:6eeee721-3485-4e1f-81b8-450a2143f441"/>
         <resource>
             <List xmlns="http://hl7.org/fhir">
                 <id value="6eeee721-3485-4e1f-81b8-450a2143f441"/>
@@ -464,11 +458,11 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                    <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
                 </subject>
-                <date value="2019-05-19T10:00:00+10:00"/>
+                <date value="2019-05-30T10:00:00+10:00"/>
                 <source>
-                    <reference value="Practitioner/6883bef7-e829-4832-a329-3ca48f607d21"/>
+                    <reference value="urn:uuid:6883bef7-e829-4832-a329-3ca48f607d21"/>
                 </source>
                 <entry>
                     <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
@@ -482,7 +476,7 @@
                         </coding>
                     </flag>
                     <item>
-                        <reference value="MedicationStatement/c20c510b-fd91-45eb-bacc-171a9a0261e5"
+                        <reference value="urn:uuid:c20c510b-fd91-45eb-bacc-171a9a0261e5"
                         />
                     </item>
                 </entry>
@@ -498,16 +492,16 @@
                         </coding>
                     </flag>
                     <item>
-                        <reference value="MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309"
+                        <reference value="urn:uuid:df0af202-6da0-4e67-9c22-ebc21ee34309"
                         />
                     </item>
                 </entry>
             </List>
         </resource>
     </entry>
-    <!--Encounter-->
+
     <entry>
-        <fullUrl value="Encounter/6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
+        <fullUrl value="urn:uuid:6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
         <resource>
             <Encounter xmlns="http://hl7.org/fhir">
                 <id value="6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"/>
@@ -518,7 +512,7 @@
                     <valueString
                         value="Patient presented for follow-up with urinary tract infection on 30 May. Complaining of frequent and painful urinating. 
                         Midstream urine test was done and revealed urinary infection. Culture and sensitivity test discovered escherichia coli sensitive to Bactrim.
-                        Patient was prescribed Bactrim 2 tablets twice a day, and Panadol one tablet 4 times a day.Patient has no allergies."
+                        Patient was prescribed Bactrim 2 tablets twice a day, and Panadol one tablet 4 times a day. Patient has no allergies."
                     />
                 </extension>
                 <status value="finished"/>
@@ -526,7 +520,7 @@
                     <code value="outpatient"/>
                 </class>
                 <subject>
-                    <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                    <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
                 </subject>
                 <period>
                     <start value="2019-05-30T09:00:00+10:00"/>
@@ -535,9 +529,9 @@
             </Encounter>
         </resource>
     </entry>
-    <!--    A MedicationStatement - Bactrim DS tablet    -->
+
     <entry>
-        <fullUrl value="MedicationStatement/c20c510b-fd91-45eb-bacc-171a9a0261e5"/>
+        <fullUrl value="urn:uuid:c20c510b-fd91-45eb-bacc-171a9a0261e5"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="c20c510b-fd91-45eb-bacc-171a9a0261e5"/>
@@ -549,15 +543,20 @@
                     <coding>
                         <system value="http://snomed.info/sct"/>
                         <code value="6632011000036102"/>
-                        <display value="Bactrim DS film-coated tablet"/>
+                        <display value="Bactrim DS film-coated tablet"/>						
                     </coding>
+					<text value="Bactrim DS - tablet"/>
                 </medicationCodeableConcept>
                 <subject>
-                    <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                    <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
                 </subject>
                 <taken value="n"/>
                 <reasonCode>
-                    <text value="Urinary tract infection"/>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="68566005"/>
+							<display value="Urinary tract infection"/>
+						</coding>					
                 </reasonCode>
                 <dosage>
                     <text value="Take 2 tablets twice a day"/>
@@ -565,9 +564,9 @@
             </MedicationStatement>
         </resource>
     </entry>
-    <!--    A MedicationStatement - Panadol tablet    -->
+
     <entry>
-        <fullUrl value="MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309"/>
+        <fullUrl value="urn:uuid:df0af202-6da0-4e67-9c22-ebc21ee34309"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="df0af202-6da0-4e67-9c22-ebc21ee34309"/>
@@ -579,15 +578,16 @@
                     <coding>
                         <system value="http://snomed.info/sct"/>
                         <code value="54012011000036102"/>
-                        <display value="Panadol 500 mg film-coated tablet"/>
+                        <display value="Panadol 500 mg film-coated tablet"/>						
                     </coding>
+					<text value="Panadol 500mg - tablet"/>
                 </medicationCodeableConcept>
                 <subject>
-                    <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                    <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
                 </subject>
                 <taken value="n"/>
                 <reasonCode>
-                    <text value="Pain"/>
+                    <text value="For pain"/>
                 </reasonCode>
                 <dosage>
                     <text value="Take 1 tablet four times a day"/>
@@ -595,9 +595,9 @@
             </MedicationStatement>
         </resource>
     </entry>
-    <!--AllergyIntolerance-->
+
     <entry>
-        <fullUrl value="AllergyIntolerance/b21f4cad-024a-4101-a6dd-80d50e29e295"/>
+        <fullUrl value="urn:uuid:b21f4cad-024a-4101-a6dd-80d50e29e295"/>
         <resource>
             <AllergyIntolerance xmlns="http://hl7.org/fhir">
                 <id value="b21f4cad-024a-4101-a6dd-80d50e29e295"/>
@@ -614,14 +614,14 @@
                     </coding>
                 </code>
                 <patient>
-                    <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                    <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
                 </patient>
             </AllergyIntolerance>
         </resource>
     </entry>
-    <!--Condition-->
+
     <entry>
-        <fullUrl value="Condition/ed5e2c34-2d28-4d21-a6aa-be7baad865b8"/>
+        <fullUrl value="urn:uuid:ed5e2c34-2d28-4d21-a6aa-be7baad865b8"/>
         <resource>
             <Condition xmlns="http://hl7.org/fhir">
                 <id value="ed5e2c34-2d28-4d21-a6aa-be7baad865b8"/>
@@ -638,7 +638,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+                    <reference value="urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
                 </subject>
                 <onsetDateTime value="2019-05-10"/>
             </Condition>
