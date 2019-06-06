@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3a72f2d2-c9ed-40a4-beac-01c14dcf244a"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2019-06-03T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 3a72f2d2-c9ed-40a4-beac-01c14dcf244a</p><p><b>meta</b>: </p><p><b>identifier</b>: Health Card Number = 307111942H</p><p><b>name</b>: Gough Goodpatient </p><p><b>gender</b>: male</p><p><b>generalPractitioner</b>: <a href=\"Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c\">Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c</a></p><p><b>managingOrganization</b>: <a href=\"Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html\">Generated Summary: id: 021fff67-c5ec-438f-9520-ce9bafee1306; ABN = 51824754455; name: Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)</a></p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "HC" ];
+         fhir:Coding.display [ fhir:value "Health Card Number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" ];
+     fhir:Identifier.value [ fhir:value "307111942H" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Goodpatient" ];
+     fhir:HumanName.given [
+       fhir:value "Gough";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.generalPractitioner [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c>;
+     fhir:Reference.reference [ fhir:value "Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c" ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/021fff67-c5ec-438f-9520-ce9bafee1306>;
+     fhir:Reference.reference [ fhir:value "Organization/021fff67-c5ec-438f-9520-ce9bafee1306" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
