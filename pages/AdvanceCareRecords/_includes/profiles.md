@@ -55,10 +55,11 @@
                                 <li><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></li>
                                 <li><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></li>
                                 <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
-                                <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>                                
                                 <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></li>
                                 <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
-                                <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (Base RelatedPerson with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (RelatedPerson with Mandatory Identifier)</a></li>
                             </ul>
                        </td>
                        <td class="frm-set">

@@ -24,31 +24,6 @@
                 <td><a href="Composition-3354a586-67ce-4038-bc62-9d226cac0d83.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
-             <tr>
-                <td><a href="DocumentReference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c.html">Document Reference example 1</a></td>
-                <td>e8b72e23-65c3-4cef-b91a-aba0bd307f5c</td>
-                <td><a href="DocumentReference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c.xml.html">XML</a></td>
-                <td><a href="DocumentReference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c.json.html">JSON</a></td>
-                <td><a href="DocumentReference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c.ttl.html">Turtle</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a href="DocumentReference-fc7889ef-477b-45d2-9b76-968ecff5940b.html">Document Reference example 2</a></td>
-                <td>fc7889ef-477b-45d2-9b76-968ecff5940b</td>
-                <td><a href="DocumentReference-fc7889ef-477b-45d2-9b76-968ecff5940b.xml.html">XML</a></td>
-                <td><a href="DocumentReference-fc7889ef-477b-45d2-9b76-968ecff5940b.json.html">JSON</a></td>
-                <td><a href="DocumentReference-fc7889ef-477b-45d2-9b76-968ecff5940b.ttl.html">Turtle</a></td>
-                <td></td>
-            </tr>
-             <tr>
-                <td><a href="DocumentReference-aff0d4ad-15c3-4521-aaff-24371491b531.html">Document Reference example 3</a></td>
-                <td>aff0d4ad-15c3-4521-aaff-24371491b531</td>
-                <td><a href="DocumentReference-aff0d4ad-15c3-4521-aaff-24371491b531.xml.html">XML</a></td>
-                <td><a href="DocumentReference-aff0d4ad-15c3-4521-aaff-24371491b531.json.html">JSON</a></td>
-                <td><a href="DocumentReference-aff0d4ad-15c3-4521-aaff-24371491b531.ttl.html">Turtle</a></td>
-                <td></td>
-            </tr>
-            
  
  </table>
 
