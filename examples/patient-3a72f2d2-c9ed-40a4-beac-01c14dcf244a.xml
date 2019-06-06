@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+	<meta>
+        <lastUpdated value="2019-06-03T11:00:00+10:00"/>
+    </meta> 
+<identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="HC"/>
+                <display value="Health Card Number"/>
+            </coding>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
+        <value value="307111942H"/>
+    </identifier>
+    <name>
+        <family value="Goodpatient"/>
+        <given value="Gough"/>
+    </name>
+    <gender value="male"/>
+    <generalPractitioner>
+        <reference value="Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"/>
+    </generalPractitioner>
+    <managingOrganization>
+        <reference value="Organization/021fff67-c5ec-438f-9520-ce9bafee1306"/>
+    </managingOrganization>
+</Patient>

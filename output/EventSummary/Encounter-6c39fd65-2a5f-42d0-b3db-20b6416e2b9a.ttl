@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Encounter/6c39fd65-2a5f-42d0-b3db-20b6416e2b9a> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6c39fd65-2a5f-42d0-b3db-20b6416e2b9a"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2019-06-03T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6c39fd65-2a5f-42d0-b3db-20b6416e2b9a</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: outpatient (Details: [not stated] code outpatient = 'outpatient', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-3a72f2d2-c9ed-40a4-beac-01c14dcf244a.html\">Generated Summary: id: 3a72f2d2-c9ed-40a4-beac-01c14dcf244a; Health Card Number = 307111942H; Gough Goodpatient ; gender: male</a></p><p><b>period</b>: 30/05/2019 9:00:00 AM --&gt; 30/05/2019 9:30:00 AM</p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/encounter-description" ];
+     fhir:Extension.valueString [ fhir:value "Patient presented for follow-up with urinary tract infection on 30 May. Complaining of frequent and painful urinating.     Midstream urine test was done and revealed urinary infection. Culture and sensitivity test discovered escherichia coli sensitive to Bactrim.    Patient was prescribed Bactrim 2 tablets twice a day, and Panadol one tablet 4 times a day. Patient has no allergies." ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.code [ fhir:value "outpatient" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a>;
+     fhir:Reference.reference [ fhir:value "Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2019-05-30T09:00:00+10:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2019-05-30T09:30:00+10:00"^^xsd:dateTime ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Encounter/6c39fd65-2a5f-42d0-b3db-20b6416e2b9a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

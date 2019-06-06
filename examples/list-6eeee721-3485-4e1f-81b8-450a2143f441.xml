@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<List xmlns="http://hl7.org/fhir">
+    <id value="6eeee721-3485-4e1f-81b8-450a2143f441"/>
+	<meta>
+        <lastUpdated value="2019-06-03T11:00:00+10:00"/>
+    </meta> 
+    <status value="current"/>
+    <mode value="snapshot"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="10160-0"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a"/>
+    </subject>
+    <date value="2019-05-30T10:00:00+10:00"/>
+    <source>
+        <reference value="Practitioner/6883bef7-e829-4832-a329-3ca48f607d21"/>
+    </source>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="To treat bacterial infections"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="prescribed"/>
+                <display value="New prescription"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/c20c510b-fd91-45eb-bacc-171a9a0261e5"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="For pain"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="new"/>
+                <display value="New"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309"/>
+        </item>
+    </entry>
+</List>

@@ -14,7 +14,23 @@
                 <td><a href="Composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9.json.html">JSON</a></td>
                 <td><a href="Composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9.ttl.html">Turtle</a></td>
                 <td></td>
-            </tr>  
+            </tr>
+            <tr>
+                <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.html">Event Summary example 3 (contained)</a></td>
+                <td>7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a</td>
+                <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.xml.html">XML</a></td>
+                <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.json.html">JSON</a></td>
+                <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+			<tr>
+                <td><a href="Composition-2384da13-ff91-4e05-930f-2d7a034ea713.html">Event Summary example 3 (referenced)</a></td>
+                <td>2384da13-ff91-4e05-930f-2d7a034ea713</td>
+                <td><a href="composition-2384da13-ff91-4e05-930f-2d7a034ea713.xml.html">XML</a></td>
+                <td><a href="composition-2384da13-ff91-4e05-930f-2d7a034ea713.json.html">JSON</a></td>
+                <td><a href="composition-2384da13-ff91-4e05-930f-2d7a034ea713.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>  			
  
 
  </table>
