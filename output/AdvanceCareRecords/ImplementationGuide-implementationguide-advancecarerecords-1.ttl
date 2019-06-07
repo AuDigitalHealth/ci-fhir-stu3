@@ -39,6 +39,34 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-composition-acp-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "composition-acp-1" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "The purpose of this profile is to define a representation of an Advance Care Planning document that includes an attached Advance Care Plan for a patient in an Australian healthcare context." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acp-1>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/composition-acp-1" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-documentreference-acp-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "documentreference-acp-1" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "The purpose of this profile is to define a representation of a document reference of an attached Advance Care Plan for a patient in an Australian healthcare context." ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/documentreference-acp-1" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "StructureDefinition-patient-dh-base-1.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
@@ -49,7 +77,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/patient-dh-base-1" ]
        ]
      ], [
-       fhir:index 1;
+       fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -63,7 +91,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/patient-ident-1" ]
        ]
      ], [
-       fhir:index 2;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -77,7 +105,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/relatedperson-dh-base-1" ]
        ]
      ], [
-       fhir:index 3;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -91,7 +119,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/relatedperson-ident-1" ]
        ]
      ], [
-       fhir:index 4;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -105,7 +133,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/organization-dh-base-1" ]
        ]
      ], [
-       fhir:index 5;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -119,7 +147,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/organization-ident-1" ]
        ]
      ], [
-       fhir:index 6;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -133,7 +161,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitioner-dh-base-1" ]
        ]
      ], [
-       fhir:index 7;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -147,7 +175,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitioner-ident-1" ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -161,7 +189,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitionerrole-dh-base-1" ]
        ]
      ], [
-       fhir:index 9;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -175,7 +203,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitionerrole-withpractitionerident-1" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -187,6 +215,48 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/humanname-dh-base-1" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "ACP example 1" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "ACP example 1 (contained)" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2>;
+         fhir:Reference.reference [ fhir:value "Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Composition-28bbf331-07d0-44a4-9d0b-927e83f483ec.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "ACP example 2" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "ACP example 2 (contained)" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec>;
+         fhir:Reference.reference [ fhir:value "Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Composition-3354a586-67ce-4038-bc62-9d226cac0d83.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "ACP example 3" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "ACP example 3 (contained)" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/3354a586-67ce-4038-bc62-9d226cac0d83>;
+         fhir:Reference.reference [ fhir:value "Composition/3354a586-67ce-4038-bc62-9d226cac0d83" ]
        ]
      ]
   ];

@@ -4,6 +4,18 @@
   "fhirVersion": "3.0.1",
   "extensions": [],
   "profiles": {
+    "Composition": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acp-1",
+        "title": "Advance Care Planning"
+      }
+    ],
+    "DocumentReference": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1",
+        "title": "Advance Care Planning Document Reference"
+      }
+    ],
     "Organization": [
       {
         "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1",
@@ -56,8 +68,20 @@
     ]
   },
   "usage": {
+    "http://hl7.org.au/fhir/StructureDefinition/attester-related-party": [
+      "Composition.attester"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/author-role": [
+      "DocumentReference"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/author-role﻿": [
+      "Composition.contained"
+    ],
     "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration": [
       "Patient"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/composition-author-role": [
+      "Composition"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator": [
       "Patient.birthDate",
@@ -73,6 +97,12 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/indigenous-status": [
       "Patient"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/information-recipient": [
+      "Composition"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/section-author": [
+      "Composition.section"
     ],
     "http://hl7.org/fhir/StructureDefinition/birthPlace": [
       "Patient"
