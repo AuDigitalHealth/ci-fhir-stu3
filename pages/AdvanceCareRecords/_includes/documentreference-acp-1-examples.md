@@ -1,6 +1,6 @@
 
 <table class="list" width="100%">
-             <tr>
+            <tr>
                 <td><a href="Composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2.html">Advance Care Planning example 1 (contained)</a></td>
                 <td>1840e786-bbd7-4abe-af3e-aa6e7f74c3f2</td>
                 <td><a href="Composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2.xml.html">XML</a></td>
@@ -24,7 +24,7 @@
                 <td><a href="Composition-3354a586-67ce-4038-bc62-9d226cac0d83.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+ 
  </table>
-
 
 

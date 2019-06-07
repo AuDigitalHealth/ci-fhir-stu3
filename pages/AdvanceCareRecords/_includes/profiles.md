@@ -30,7 +30,12 @@
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
-                        <td class="frm-null"/>
+                        <td class="frm-set">
+                                <ul>
+                                    <li><a href="StructureDefinition-composition-acp-1.html">Composition (Advanced Care Planning)</a></li>
+                                    <li><a href="StructureDefinition-documentreference-acp-1.html">DocumentReference (Advance Care Planning Document Reference)</a></li>
+                                </ul>
+                            </td>
                         <td class="frm-null"/>
                     </tr>
                     <tr class="frm-break">
@@ -50,10 +55,11 @@
                                 <li><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></li>
                                 <li><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></li>
                                 <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
-                                <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>                                
                                 <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></li>
                                 <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
-                                <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (Base RelatedPerson with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (RelatedPerson with Mandatory Identifier)</a></li>
                             </ul>
                        </td>
                        <td class="frm-set">
@@ -128,6 +134,16 @@
       <th>FHIR base resource</th>
    </tr>
    <tr>
+      <td><a href="StructureDefinition-composition-acp-1.html">Composition (Advance Care Planning)</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
+     <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-documentreference-acp-1.html">DocumentReference (Advance Care Planning Document Reference)</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/documentreference.html">DocumentReference</a></td>
+     <td><a href="http://hl7.org/fhir/STU3/documentreference.html">DocumentReference</a></td>
+    </tr>
+   <tr>
         <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
@@ -161,6 +177,11 @@
       <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
       <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
