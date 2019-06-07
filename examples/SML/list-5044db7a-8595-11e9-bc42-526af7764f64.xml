@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../STU3/schema/fhir-all-xsd/list.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<List xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir ../../../STU3/schema/fhir-all-xsd/list.xsd"
+    xmlns="http://hl7.org/fhir">
+    <id value="5044db7a-8595-11e9-bc42-526af7764f64"/>
+    <meta>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1"
+        />
+    </meta>
+    <status value="current"/>
+    <mode value="snapshot"/>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="10160-0"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/55a2e4fc-8321-11e9-bc42-526af7764f64"/>
+    </subject>
+    <date value="2018-12-11"/>
+    <note>
+        <text value="Please review this list with your pharmacist on or soon after 02/April/2019."/>
+    </note>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="For ear infection"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="new"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/7ad75182-859b-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Dose changed"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="amended"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/f5ac8802-8639-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+    <entry>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="nochange"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/e5b4616a-863c-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Some reason here"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="suspended"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/26b6b80a-8653-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Duplicated medicine"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="ceased"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/1b1d78d2-8656-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+    <entry>
+        <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+            <valueString value="Allergic reaction"/>
+        </extension>
+        <flag>
+            <coding>
+                <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
+                <code value="ceased"/>
+            </coding>
+        </flag>
+        <item>
+            <reference value="MedicationStatement/298ca924-8665-11e9-bc42-526af7764f64"/>
+        </item>
+    </entry>
+
+</List>
