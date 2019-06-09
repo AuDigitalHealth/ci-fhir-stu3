@@ -1,8 +1,6 @@
-## Advance Care Planning Document Reference
+### Advance Care Planning Document Reference *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-The purpose of this profile is to define a representation of an attached Advance Care Planning document with some metadata. 
-
-#### Usage Scenarios
+##### **Usage Scenarios**
 The following are the usage scenarios expected:
 
 * A clinical information system (CIS) sends or receives an Advance Care Plan with the My Health Record system
@@ -15,10 +13,7 @@ The following are the usage scenarios expected:
 * A CSP sends or receives an Advance Care Document Reference with a CIS or another CSP
 * A registered repository or registered portal receives an Advance Care Plan
 * A registered repository or registered portal receives an Advance Care Document Reference
-* A system may be a producer by attaching the Advance Care Plan document to the Document Reference and sending that Document Reference.
 
-#### Profile specific implementation guidance
-
-* Where additional content beyond that flagged with must support is provided it:
-    * shall not qualify or negate content described by this profile as must support
-    * shall be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
+A system may be a producer by attaching the Advance Care Plan document to the Document Reference and sending that Document Reference.#### Profile specific implementation guidance
+##### **Implementation guidance**
+No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.
