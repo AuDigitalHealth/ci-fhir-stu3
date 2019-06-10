@@ -16,7 +16,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.html">Event Summary example 3 (contained)</a></td>
+                <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.html">Event Summary example 3 (bundle)</a></td>
                 <td>7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a</td>
                 <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.xml.html">XML</a></td>
                 <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.json.html">JSON</a></td>
