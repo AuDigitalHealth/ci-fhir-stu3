@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Known Medicine"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-05-31T11:41:16+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-06-11T09:21:44+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -611,7 +611,7 @@
          fhir:ElementDefinition.constraint.source [ fhir:value "Medication.code" ]
        ], [
          fhir:index 3;
-         fhir:ElementDefinition.constraint.key [ fhir:value "inv-amp-mpuu" ];
+         fhir:ElementDefinition.constraint.key [ fhir:value "inv-amt-mpuu" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "AMT MPUU valueset membership required" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'" ];
@@ -1480,7 +1480,7 @@
        fhir:index 38;
        fhir:Element.id [ fhir:value "Medication.form" ];
        fhir:ElementDefinition.path [ fhir:value "Medication.form" ];
-       fhir:ElementDefinition.short [ fhir:value "powder | tablets | capsule +" ];
+       fhir:ElementDefinition.short [ fhir:value "powder | tablets | capsule + " ];
        fhir:ElementDefinition.definition [ fhir:value "Describes the form of the item.  Powder; tablets; capsule." ];
        fhir:ElementDefinition.comment [ fhir:value "When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];

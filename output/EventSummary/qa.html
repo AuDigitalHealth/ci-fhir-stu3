@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Event Summary</h1>
- <p>Generated Mon Jun 10 12:56:12 AEST 2019, IG-Publisher Version 3.7.41-SNAPSHOT - Built 2019-05-31T10:48:57.151+10:00 - Git e88a43ff3e18. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Tue Jun 11 09:27:03 AEST 2019, IG-Publisher Version 3.7.41-SNAPSHOT - Built 2019-05-31T10:48:57.151+10:00 - Git e88a43ff3e18. FHIR version 3.0.1 for ns.electronichealth.net.au-ci-fhir-3.0-event-summary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -519,13 +519,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
+     <td><b>Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1: Practitioner.identifier</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, type]) for slice Practitioner.identifier:employeeNumber in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 - does not have fixed value, binding or existence assertions for any of the discriminators</b></td>
    </tr>
 </table>
 <hr/>
