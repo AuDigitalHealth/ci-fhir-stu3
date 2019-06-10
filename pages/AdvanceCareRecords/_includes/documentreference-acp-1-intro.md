@@ -14,6 +14,6 @@ The following are the usage scenarios expected:
 * A registered repository or registered portal receives an Advance Care Plan
 * A registered repository or registered portal receives an Advance Care Document Reference
 
-A system may be a producer by attaching the Advance Care Plan document to the Document Reference and sending that Document Reference.#### Profile specific implementation guidance
+A system may be a producer by attaching the Advance Care Plan document to the Document Reference and sending that Document Reference.
 ##### **Implementation guidance**
 No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.
