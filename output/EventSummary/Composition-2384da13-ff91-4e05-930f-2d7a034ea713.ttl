@@ -10,7 +10,11 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "2384da13-ff91-4e05-930f-2d7a034ea713"];
   fhir:Resource.meta [
-     fhir:Meta.lastUpdated [ fhir:value "2019-06-03T11:00:00+10:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-06-03T11:00:00+10:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1";
+       fhir:index 0
+     ]
   ];
   fhir:Resource.language [ fhir:value "en-AU"];
   fhir:DomainResource.text [
