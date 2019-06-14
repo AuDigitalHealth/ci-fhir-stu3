@@ -10,14 +10,14 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [{{site.data.fhir.igName}} (ACR)](StructureDefinition-composition-acdcr-1.html), such as an advance care directive custodian record (ACDCR).
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent the [Advance Care Planning (ACP)](StructureDefinition-composition-acp-1.html) and Advance Care Directive Custodian Record (ACDCR).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing an ACR in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The resulting FHIR structure can be used for the electronic exchange of ACR information, such as a ACDCR document, between healthcare providers.
+The primary aim of this implementation guide is to support implementing ACP and ACDCR in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of advance care record information between healthcare providers.
 
 This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
 
@@ -54,7 +54,7 @@ Specification packages contain only files relevant to the particular clinical do
 ## How to read this document
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of ACR. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide for an advance care directive custodian record is the [{{site.data.fhir.igName}}](StructureDefinition-composition-acdcr-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide are the [Advance Care Planning](StructureDefinition-composition-acp-1.html) and Advance Care Directive Custodian Record profiles, which reference the additional profiles necessary to assert conformance for this implementation guide.
 
 
 ## Editorial note
@@ -115,7 +115,9 @@ This document and related artefacts are technical in nature and the audience is 
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
-|[<a name="DH2019x">DH2019x</a>]| Australian Digital Health Agency, Not yet published, Advance Care Directive Custodian Record CDA Implementation Guide, Version 1.0.|
+|[<a name="DH2019x1">DH2019x1</a>]| Australian Digital Health Agency, Not yet published, Advance Care Planning CDA Implementation Guide, Version 2.0.|
+
+|[<a name="DH2019x2">DH2019x2</a>]| Australian Digital Health Agency, Not yet published, Advance Care Directive Custodian Record CDA Implementation Guide, Version 2.0.|
 
 |[<a name="NEHT2011bf">NEHT2011bf</a>]| Australian Digital Health Agency, 12 December 2011, Information Requirements - Information regarding the Custodian of an Advance Care Directive, Version 1.0.|
 ||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/advance-care-document-custodian/NEHTA-0944-2011](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/advance-care-document-custodian/NEHTA-0944-2011)|
