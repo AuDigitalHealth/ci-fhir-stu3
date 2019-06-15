@@ -1,0 +1,217 @@
+{
+  "package": "fhir.dh.shared-medicines-list",
+  "version": "1.0.0",
+  "fhirVersion": "3.0.1",
+  "extensions": [],
+  "profiles": {
+    "AllergyIntolerance": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1",
+        "title": "Summary Statement of Allergy or Intolerance"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-1",
+        "title": "Shared Medicines List"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1",
+        "title": "Summary of an Encounter for an Event"
+      }
+    ],
+    "List": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1",
+        "title": "List of Medicine Items for a Patient"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1",
+        "title": "Known Medicine"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1",
+        "title": "Detailed Statement of Known Medicine"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1",
+        "title": "Assertion of No Relevant Finding"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1",
+        "title": "Base Organization"
+      },
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1",
+        "title": "Organization with Mandatory Identifier"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1",
+        "title": "Base Patient"
+      },
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1",
+        "title": "Patient with Mandatory Identifier"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1",
+        "title": "Base Practitioner"
+      },
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1",
+        "title": "Practitioner with Mandatory Identifier"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1",
+        "title": "Base PractitionerRole"
+      },
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1",
+        "title": "PractitionerRole with Practitioner with Mandatory Identifier"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1",
+        "title": "Base RelatedPerson"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org.au/fhir/StructureDefinition/associated-healthcareservice": [
+      "Encounter"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/attester-related-party": [
+      "Composition.attester"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/change-description": [
+      "List.entry"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration": [
+      "Patient"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/composition-author-role": [
+      "Composition"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator": [
+      "Patient.birthDate",
+      "Patient.deceasedDateTime"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/encounter-description": [
+      "Encounter"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/encounter-destination-organisation": [
+      "Encounter.hospitalization"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/encounter-origin-organisation": [
+      "Encounter.hospitalization"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status": [
+      "Patient.identifier",
+      "RelatedPerson.identifier"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/ihi-status": [
+      "Patient.identifier",
+      "RelatedPerson.identifier"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/indigenous-status": [
+      "Patient"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/information-recipient": [
+      "Composition"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/list-source-role": [
+      "List"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name": [
+      "Medication",
+      "MedicationStatement"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/medication-generic-name": [
+      "Medication",
+      "MedicationStatement"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/medication-long-term": [
+      "MedicationStatement"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/medication-strength-text": [
+      "Medication"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/medication-type": [
+      "Medication.code.coding",
+      "MedicationStatement.medicationCodeableConcept.coding"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor": [
+      "Medication"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/recorder-related-person": [
+      "AllergyIntolerance"
+    ],
+    "http://hl7.org.au/fhir/StructureDefinition/section-author": [
+      "Composition.section"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/birthPlace": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-birthTime": [
+      "Patient.birthDate"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type": [
+      "StructureDefinition.snapshot.element.type.code"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-rdf-type": [
+      "StructureDefinition.snapshot.element.type.code"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type": [
+      "StructureDefinition.snapshot.element.type.code"
+    ]
+  }
+}

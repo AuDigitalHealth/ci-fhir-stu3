@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/List/6eeee721-3485-4e1f-81b8-450a2143f441> a fhir:List;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6eeee721-3485-4e1f-81b8-450a2143f441"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2019-06-03T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6eeee721-3485-4e1f-81b8-450a2143f441</p><p><b>meta</b>: </p><p><b>status</b>: current</p><p><b>mode</b>: snapshot</p><p><b>code</b>: History of Medication use Narrative <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '10160-0' = 'History of Medication use Narrative)</span></p><p><b>subject</b>: <a href=\"Patient-3a72f2d2-c9ed-40a4-beac-01c14dcf244a.html\">Generated Summary: id: 3a72f2d2-c9ed-40a4-beac-01c14dcf244a; Health Card Number = 307111942H; Gough Goodpatient ; gender: male</a></p><p><b>date</b>: 30/05/2019 10:00:00 AM</p><p><b>source</b>: <a href=\"Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html\">Generated Summary: id: 40a94071-8373-4d53-a788-63b79c75a3c1; HPI-I = 8003610000000000; Barry Helpman (OFFICIAL); bhelpman@example.devonportgp.com.au(WORK)</a></p><blockquote><p><b>entry</b></p><p><b>flag</b>: New prescription <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org.au/fhir/CodeSystem/medicine-item-change code 'prescribed' = 'New prescription', given as 'New prescription'})</span></p><p><b>item</b>: <a href=\"MedicationStatement-c20c510b-fd91-45eb-bacc-171a9a0261e5.html\">Generated Summary: id: c20c510b-fd91-45eb-bacc-171a9a0261e5; status: intended; <span title=\"Codes: {http://snomed.info/sct 6632011000036102}\">Bactrim DS - tablet</span>; taken: n; <span title=\"Codes: {http://snomed.info/sct 68566005}\">Urinary tract infection</span>; </a></p></blockquote><blockquote><p><b>entry</b></p><p><b>flag</b>: New <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org.au/fhir/CodeSystem/medicine-item-change code 'new' = 'New', given as 'New'})</span></p><p><b>item</b>: <a href=\"MedicationStatement-df0af202-6da0-4e67-9c22-ebc21ee34309.html\">Generated Summary: id: df0af202-6da0-4e67-9c22-ebc21ee34309; status: intended; <span title=\"Codes: {http://snomed.info/sct 54012011000036102}\">Panadol 500mg - tablet</span>; taken: n; <span title=\"Codes: \">For pain</span>; </a></p></blockquote></div>"
+  ];
+  fhir:List.status [ fhir:value "current"];
+  fhir:List.mode [ fhir:value "snapshot"];
+  fhir:List.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:10160-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "10160-0" ]
+     ]
+  ];
+  fhir:List.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a>;
+     fhir:Reference.reference [ fhir:value "Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a" ]
+  ];
+  fhir:List.date [ fhir:value "2019-05-30T10:00:00+10:00"^^xsd:dateTime];
+  fhir:List.source [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1" ]
+  ];
+  fhir:List.entry [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/change-description" ];
+       fhir:Extension.valueString [ fhir:value "To treat bacterial infections" ]
+     ];
+     fhir:List.entry.flag [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/CodeSystem/medicine-item-change" ];
+         fhir:Coding.code [ fhir:value "prescribed" ];
+         fhir:Coding.display [ fhir:value "New prescription" ]
+       ]
+     ];
+     fhir:List.entry.item [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/c20c510b-fd91-45eb-bacc-171a9a0261e5>;
+       fhir:Reference.reference [ fhir:value "MedicationStatement/c20c510b-fd91-45eb-bacc-171a9a0261e5" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/change-description" ];
+       fhir:Extension.valueString [ fhir:value "For pain" ]
+     ];
+     fhir:List.entry.flag [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/CodeSystem/medicine-item-change" ];
+         fhir:Coding.code [ fhir:value "new" ];
+         fhir:Coding.display [ fhir:value "New" ]
+       ]
+     ];
+     fhir:List.entry.item [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309>;
+       fhir:Reference.reference [ fhir:value "MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/List/6eeee721-3485-4e1f-81b8-450a2143f441.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

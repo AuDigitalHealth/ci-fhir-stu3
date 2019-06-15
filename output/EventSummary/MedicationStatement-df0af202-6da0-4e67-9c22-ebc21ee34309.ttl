@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "df0af202-6da0-4e67-9c22-ebc21ee34309"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2019-06-03T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: df0af202-6da0-4e67-9c22-ebc21ee34309</p><p><b>meta</b>: </p><p><b>status</b>: intended</p><p><b>medication</b>: Panadol 500mg - tablet <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '54012011000036102' = '54012011000036102', given as 'Panadol 500 mg film-coated tablet'})</span></p><p><b>subject</b>: <a href=\"Patient-3a72f2d2-c9ed-40a4-beac-01c14dcf244a.html\">Generated Summary: id: 3a72f2d2-c9ed-40a4-beac-01c14dcf244a; Health Card Number = 307111942H; Gough Goodpatient ; gender: male</a></p><p><b>taken</b>: n</p><p><b>reasonCode</b>: For pain <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "intended"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:54012011000036102;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "54012011000036102" ];
+       fhir:Coding.display [ fhir:value "Panadol 500 mg film-coated tablet" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Panadol 500mg - tablet" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a>;
+     fhir:Reference.reference [ fhir:value "Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "n"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "For pain" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Take 1 tablet four times a day" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

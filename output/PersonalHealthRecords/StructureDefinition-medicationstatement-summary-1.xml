@@ -21,7 +21,7 @@
   <title value="Summary Statement of Known Medicine"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-05-31T11:39:35+10:00"/>
+  <date value="2019-06-11T11:10:15+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -695,7 +695,7 @@
         <expression value="coding.where(system=&#39;http://snomed.info/sct&#39; and extension.where(url=&#39;http://hl7.org.au/fhir/CodeSystem/medication-type&#39;).valueCoding=&#39;BPD&#39;).exists() implies coding.where(system=&#39;http://snomed.info/sct&#39; and extension.where(url=&#39;http://hl7.org.au/fhir/CodeSystem/medication-type&#39;).valueCoding=&#39;BPD&#39;).first().code in &#39;http://hl7.org.au/fhir/ValueSet/amt-tp-codes&#39;"/>
       </constraint>
       <constraint>
-        <key value="inv-amp-mpuu"/>
+        <key value="inv-amt-mpuu"/>
         <severity value="error"/>
         <human value="AMT MPUU valueset membership required"/>
         <expression value="coding.where(system=&#39;http://snomed.info/sct&#39; and extension.where(url=&#39;http://hl7.org.au/fhir/CodeSystem/medication-type&#39;).valueCoding=&#39;UPDSF&#39;).exists() implies coding.where(system=&#39;http://snomed.info/sct&#39; and extension.where(url=&#39;http://hl7.org.au/fhir/CodeSystem/medication-type&#39;).valueCoding=&#39;UPDSF&#39;).first().code in &#39;http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes&#39;"/>
