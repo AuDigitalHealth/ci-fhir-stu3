@@ -70,7 +70,7 @@
                                 <li><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></li>
                            </ul>
                            <ul class="frm-set">
-                                <li><a href="StructureDefinition-list-meditems-1.html">List (List of Medicine Items for a Patient)</a></li>
+                                <li><a href="StructureDefinition-list-meds-current-1.html">List (List of Medicine Items for a Patient)</a></li>
                            </ul>
                         </td>
                         <td class="frm-null"/>
@@ -91,7 +91,11 @@
                             <li><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></li>
                            </ul>
                        </td>
-                      <td class="frm-null"/>
+                      <td class="frm-set">
+                          <ul class="frm-set">
+                              <li><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></li>
+                          </ul>
+                      </td>
                       <td class="frm-set">
                         <ul class="frm-set">
                             <li><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Detailed Statement of Known Medicine)</a></li>
@@ -173,7 +177,7 @@
   </tr>
   
    <tr>
-        <td><a href="StructureDefinition-list-meditems-1.html">List (List of Medicine Items)</a></td>
+        <td><a href="StructureDefinition-list-meds-current-1.html">List (List of Medicine Items)</a></td>
         <td><a href="http://hl7.org.au/fhir/StructureDefinition/au-medlist">AU Medicine List</a></td>
         <td><a href="http://hl7.org/fhir/STU3/list.html">List</a></td>
   </tr> 
@@ -187,6 +191,11 @@
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
     </tr> 
+    <tr>
+       <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
+       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
+       <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
+  </tr>    
     <tr>
       <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
