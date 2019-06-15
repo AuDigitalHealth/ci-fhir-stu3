@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="list-meditems-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1"/>
+  <id value="list-meds-current-1"/>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1"/>
   <version value="1.0.0"/>
   <name value="ListMedicineItems"/>
   <title value="List of Medicine Items for a Patient"/>
@@ -39,9 +39,9 @@
         <key value="inv-dh-lst-01"/>
         <severity value="error"/>
         <human
-          value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1'"/>
+          value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1'"/>
         <expression
-          value="Composition.meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meditems-1').exists()"
+          value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1').exists()"
         />
       </constraint>
     </element>

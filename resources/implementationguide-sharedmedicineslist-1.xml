@@ -2,7 +2,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
     <id value="implementationguide-sharedmedicineslist-1"/>
     <language value="en-AU"/>
-    <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1"/>
+    <url
+        value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1"/>
     <version value="1.0.0"/>
     <name value="Shared Medicines List"/>
     <status value="draft"/>
@@ -31,7 +32,8 @@
         <resource>
             <example value="false"/>
             <name value="patient-dh-base-1"/>
-            <description value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+            <description
+                value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
             <sourceReference>
                 <reference value="StructureDefinition/patient-dh-base-1"/>
             </sourceReference>
@@ -54,7 +56,8 @@
         <resource>
             <example value="false"/>
             <name value="relatedperson-dh-base-1"/>
-            <description value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
+            <description
+                value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
             <sourceReference>
                 <reference value="StructureDefinition/relatedperson-dh-base-1"/>
             </sourceReference>
@@ -62,7 +65,8 @@
         <resource>
             <example value="false"/>
             <name value="organization-dh-base-1"/>
-            <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <description
+                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
             <sourceReference>
                 <reference value="StructureDefinition/organization-dh-base-1"/>
             </sourceReference>
@@ -70,7 +74,8 @@
         <resource>
             <example value="false"/>
             <name value="organization-ident-1"/>
-            <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <description
+                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
             <sourceReference>
                 <reference value="StructureDefinition/organization-ident-1"/>
             </sourceReference>
@@ -84,7 +89,8 @@
         <resource>
             <example value="false"/>
             <name value="practitioner-ident-1"/>
-            <description value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
+            <description
+                value="The Agency Practitioner profile, as derived from the HL7 AU practitioner profile with a mandatory identifier."/>
             <sourceReference>
                 <reference value="StructureDefinition/practitioner-ident-1"/>
             </sourceReference>
@@ -137,9 +143,9 @@
         </resource>
         <resource>
             <example value="false"/>
-            <name value="list-meditems-1"/>
+            <name value="list-meds-current-1"/>
             <sourceReference>
-                <reference value="StructureDefinition/list-meditems-1"/>
+                <reference value="StructureDefinition/list-meds-current-1"/>
             </sourceReference>
         </resource>
         <resource>
@@ -191,13 +197,149 @@
             <sourceReference>
                 <reference value="MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b"/>
             </sourceReference>
-        </resource>      
-         
-        
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 2"/>
+            <description value="Medication example Amoxicillin/Augmentin Duo Forte"/>
+            <sourceReference>
+                <reference value="Medication/9fd129a4-8596-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 2"/>
+            <description value="MedicationStatement example Amoxicillin/Augmentin Duo Forte"/>
+            <sourceReference>
+                <reference value="MedicationStatement/7ad75182-859b-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 3"/>
+            <description value="Medication example Metformin/Sandoz"/>
+            <sourceReference>
+                <reference value="Medication/a1f99f90-8631-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 3"/>
+            <description value="MedicationStatement example Metformin/Sandoz "/>
+            <sourceReference>
+                <reference value="MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 4"/>
+            <description value="Medication example Multi-vitamins"/>
+            <sourceReference>
+                <reference value="Medication/1c9dee66-8639-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 4"/>
+            <description value="MedicationStatement example Multi-vitamins"/>
+            <sourceReference>
+                <reference value="MedicationStatement/f5ac8802-8639-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 5"/>
+            <description value="Medication example Paracetamol 665mg caplet/ Panadol Osteo"/>
+            <sourceReference>
+                <reference value="Medication/9574e2d4-863b-11e9-a159-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 5"/>
+            <description value="MedicationStatement example Paracetamol 665mg caplet/Panadol Osteo"/>
+            <sourceReference>
+                <reference value="MedicationStatement/e5b4616a-863c-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 6"/>
+            <description value="Medication example Warfarin/Coumadin "/>
+            <sourceReference>
+                <reference value="Medication/26b6b80a-8653-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 6"/>
+            <description value="MedicationStatement example Warfarin/Coumadin "/>
+            <sourceReference>
+                <reference value="MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 7"/>
+            <description value="Medication example Paracetamol 500 mg tablet"/>
+            <sourceReference>
+                <reference value="Medication/77dbc052-8655-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 7"/>
+            <description value="MedicationStatement example Paracetamol 500 mg tablet"/>
+            <sourceReference>
+                <reference value="MedicationStatement/1b1d78d2-8656-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Medication example 8"/>
+            <description value="Medication example Ibuprofen"/>
+            <sourceReference>
+                <reference value="Medication/b2169d6e-8664-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="MedicationStatement example 8"/>
+            <description value="MedicationStatement example Ibuprofen"/>
+            <sourceReference>
+                <reference value="MedicationStatement/298ca924-8665-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="List example 1"/>
+            <description value="List example Community pharmacy medicines review"/>
+            <sourceReference>
+                <reference value="List/5044db7a-8595-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Encounter example 1"/>
+            <description value="Encounter/Community pharmacy medicines review"/>
+            <sourceReference>
+                <reference value="Encounter/1bcf0c88-8e4d-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <name value="Composition example 1"/>
+            <description value="Composition/Community pharmacy medicines review"/>
+            <sourceReference>
+                <reference value="Composition/aa15201c-8e49-11e9-bc42-526af7764f64"/>
+            </sourceReference>
+        </resource>
+
     </package>
     <page>
         <source value="index.html"/>
-        <title value="Australian Digital Health Agency Shared Medicines List FHIR Implementation Guide"/>
+        <title
+            value="Australian Digital Health Agency Shared Medicines List FHIR Implementation Guide"/>
         <kind value="page"/>
     </page>
 </ImplementationGuide>
