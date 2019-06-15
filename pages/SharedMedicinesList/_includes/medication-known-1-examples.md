@@ -28,8 +28,8 @@
                 <td><a href="Medication-1c9dee66-8639-11e9-bc42-526af7764f64.ttl.html">Turtle</a></td>
            </tr>          
                <tr>
-                <td><a href="Medication-1c9dee66-8639-11e9-bc42-526af7764f64.html">Medication example 5</a></td>
-                <td>1c9dee66-8639-11e9-bc42-526af7764f64</td>
+                <td><a href="Medication-9574e2d4-863b-11e9-a159-526af7764f64.html">Medication example 5</a></td>
+                <td>9574e2d4-863b-11e9-a159-526af7764f64</td>
                 <td><a href="Medication-9574e2d4-863b-11e9-a159-526af7764f64.xml.html">XML</a></td>
                 <td><a href="Medication-9574e2d4-863b-11e9-a159-526af7764f64.json.html">JSON</a></td>
                 <td><a href="Medication-9574e2d4-863b-11e9-a159-526af7764f64.ttl.html">Turtle</a></td>

@@ -2,6 +2,13 @@
 
 #####  Implementation guidance 
 
+* Where the code identifies a branded medicine item, brand name is expected to be provided in code.text and optionally in brand name extension. 
+* Where the code identifies a generic medicine item, generic name is expected to be provided in code.text and optionally in generic name extension.
+* When a medicine item is identified by a brand name only, the name is expected to be provided in code.text and optionally in brand name extension. 
+* When a medicine item is identified by a generic name only, the name is expected to be provided in code.text and optionally in generic name extension.
+* When both brand and generic names are available, brand name in expected to be provided in code.text and optionally in brand name extension, and generic name is expected to be provided in the generic name extension.
+* When it is unknown if the medicine item name is a brand or a generic name, the name is expected to be provided in code.text only.
+
 ##### PSML implementation guidance
 
 For the expected usage scenarios in this implementation guide:
