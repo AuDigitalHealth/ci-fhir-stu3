@@ -5,8 +5,10 @@
             value="http://hl7.org.au/fhir/StructureDefinition/au-medication"
         />
     </meta>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
+        <valueString value="Coumadin"/>
+    </extension>
     <code>
-        <!--  Paracetamol 500 mg tablet-->
         <coding>
             <extension
                 url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
@@ -18,7 +20,8 @@
             </extension>
             <system value="http://snomed.info/sct"/>
             <code value="22464011000036101"/>
-        </coding>
-        <text value="Paracetamol 500 mg tablet"/>
+            <display value="warfarin sodium 5 mg tablet"/>
+           </coding>
+        <text value="Coumadin"/>
     </code>
 </Medication>
