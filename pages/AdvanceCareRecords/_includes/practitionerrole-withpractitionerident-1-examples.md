@@ -16,4 +16,20 @@
                 <td><a href="Composition-3354a586-67ce-4038-bc62-9d226cac0d83.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+            <tr>
+                <td><a href="practitionerrole-cb9d944f-1b75-4603-b63a-167460882287.html">PractitionerRole example 1</a></td>
+                <td>cb9d944f-1b75-4603-b63a-167460882287</td>
+                <td><a href="practitionerrole-cb9d944f-1b75-4603-b63a-167460882287.xml.html">XML</a></td>
+                <td><a href="practitionerrole-cb9d944f-1b75-4603-b63a-167460882287.json.html">JSON</a></td>
+                <td><a href="practitionerrole-cb9d944f-1b75-4603-b63a-167460882287.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8.html">PractitionerRole example 2</a></td>
+                <td>459a5ae6-ee37-4151-9dfd-e8094c4a23b8</td>
+                <td><a href="practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8.xml.html">XML</a></td>
+                <td><a href="practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8.json.html">JSON</a></td>
+                <td><a href="practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
  </table>
