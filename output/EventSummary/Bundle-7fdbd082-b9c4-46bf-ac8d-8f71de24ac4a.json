@@ -521,7 +521,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6c39fd65-2a5f-42d0-b3db-20b6416e2b9a</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: outpatient (Details: [not stated] code outpatient = 'outpatient', stated as 'null')</p><p><b>subject</b>: <a href=\"urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a\">urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a</a></p><p><b>period</b>: 30/05/2019 9:00:00 AM --&gt; 30/05/2019 9:30:00 AM</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6c39fd65-2a5f-42d0-b3db-20b6416e2b9a</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>subject</b>: <a href=\"urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a\">urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a</a></p><p><b>period</b>: 30/05/2019 9:00:00 AM --&gt; 30/05/2019 9:30:00 AM</p></div>"
         },
         "extension": [
           {
@@ -531,7 +531,9 @@
         ],
         "status": "finished",
         "class": {
-          "code": "outpatient"
+          "system": "http://hl7.org/fhir/v3/ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
         },
         "subject": {
           "reference": "urn:uuid:3a72f2d2-c9ed-40a4-beac-01c14dcf244a"

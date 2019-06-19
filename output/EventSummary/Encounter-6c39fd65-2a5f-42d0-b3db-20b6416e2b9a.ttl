@@ -13,7 +13,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6c39fd65-2a5f-42d0-b3db-20b6416e2b9a</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: outpatient (Details: [not stated] code outpatient = 'outpatient', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-3a72f2d2-c9ed-40a4-beac-01c14dcf244a.html\">Generated Summary: id: 3a72f2d2-c9ed-40a4-beac-01c14dcf244a; Health Card Number = 307111942H; Gough Goodpatient ; gender: male</a></p><p><b>period</b>: 30/05/2019 9:00:00 AM --&gt; 30/05/2019 9:30:00 AM</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6c39fd65-2a5f-42d0-b3db-20b6416e2b9a</p><p><b>meta</b>: </p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>subject</b>: <a href=\"Patient-3a72f2d2-c9ed-40a4-beac-01c14dcf244a.html\">Generated Summary: id: 3a72f2d2-c9ed-40a4-beac-01c14dcf244a; Health Card Number = 307111942H; Gough Goodpatient ; gender: male</a></p><p><b>period</b>: 30/05/2019 9:00:00 AM --&gt; 30/05/2019 9:30:00 AM</p></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
@@ -22,7 +22,9 @@
   ];
   fhir:Encounter.status [ fhir:value "finished"];
   fhir:Encounter.class [
-     fhir:Coding.code [ fhir:value "outpatient" ]
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/ActCode" ];
+     fhir:Coding.code [ fhir:value "AMB" ];
+     fhir:Coding.display [ fhir:value "ambulatory" ]
   ];
   fhir:Encounter.subject [
      fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a>;

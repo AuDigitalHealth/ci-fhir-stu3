@@ -2,40 +2,30 @@
   "resourceType": "MedicationStatement",
   "id": "32def593-e104-4cee-b8f5-d1f923efd94b",
   "meta": {
-    "lastUpdated": "2018-09-21T09:00:00+10:00"
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+    ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 32def593-e104-4cee-b8f5-d1f923efd94b</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: sumatriptan 100 mg <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '45219011000036101' = '45219011000036101', given as 'sumatriptan 100 mg tablet'})</span></p><p><b>subject</b>: <a href=\"urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe\">urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: Migraine <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>note</b>: Patient advised that usually takes sumatriptan for migraine; they took one             tablet during the event, and during the event they were given one tablet to take home.</p><p><b>dosage</b>: </p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 32def593-e104-4cee-b8f5-d1f923efd94b</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: <a href=\"Medication/2f70f312-8323-11e9-bc42-526af7764f64\">Medication/2f70f312-8323-11e9-bc42-526af7764f64</a></p><p><b>subject</b>: <a href=\"Patient/55a2e4fc-8321-11e9-bc42-526af7764f64\">Patient/55a2e4fc-8321-11e9-bc42-526af7764f64</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: Iron supplement <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>dosage</b>: </p></div>"
   },
   "status": "active",
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "45219011000036101",
-        "display": "sumatriptan 100 mg tablet"
-      }
-    ],
-    "text": "sumatriptan 100 mg"
+  "medicationReference": {
+    "reference": "Medication/2f70f312-8323-11e9-bc42-526af7764f64"
   },
   "subject": {
-    "reference": "urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe"
+    "reference": "Patient/55a2e4fc-8321-11e9-bc42-526af7764f64"
   },
   "taken": "y",
   "reasonCode": [
     {
-      "text": "Migraine"
-    }
-  ],
-  "note": [
-    {
-      "text": "Patient advised that usually takes sumatriptan for migraine; they took one             tablet during the event, and during the event they were given one tablet to take home."
+      "text": "Iron supplement"
     }
   ],
   "dosage": [
     {
-      "text": "As required"
+      "text": "One tablet daily"
     }
   ]
 }
