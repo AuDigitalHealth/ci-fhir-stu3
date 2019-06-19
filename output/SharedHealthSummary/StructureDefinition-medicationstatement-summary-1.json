@@ -11,7 +11,7 @@
   "title": "Summary Statement of Known Medicine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-05-31T11:35:25+10:00",
+  "date": "2019-06-19T09:03:50+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -811,7 +811,7 @@
             "expression": "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'"
           },
           {
-            "key": "inv-amp-mpuu",
+            "key": "inv-amt-mpuu",
             "severity": "error",
             "human": "AMT MPUU valueset membership required",
             "expression": "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'"

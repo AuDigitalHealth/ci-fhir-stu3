@@ -25,11 +25,113 @@ The table below matches the data items to the corresponding supported element in
             </tfoot>
             <tbody>
                 <tr>
+                    <td>Pharmacist shared medicines list</td>
+                    <td>027948</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Components in the PSML document</td>
+                    <td>028321</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Document conformance levels</td>
+                    <td>028315</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>            
+                <tr>
+                    <td>Point-to-point transmission</td>
+                    <td>027954</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>                        
+                <tr>
+                    <td>HPI-I relaxed template package</td>
+                    <td>028394</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>                                     
+                 <tr>
+                    <td>Compatible with Prescription and Dispense Record</td>
+                    <td>028323</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>                                                
+                 <tr>
+                    <td>Prompt to upload recent PSML</td>
+                    <td>028325</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>                                                                          
+                <tr>
+                    <td>Medicines information presentation</td>
+                    <td>028359</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>
+                <tr>
+                    <td>Allergies and Adverse Reactions section</td>
+                    <td>028355</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>
+                <tr>
+                    <td>Allergies and Adverse Reactions header</td>
+                    <td>028360</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>                                
+                <tr>
+                    <td>No known allergies or adverse reactions</td>
+                    <td>028411</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>
+                 <tr>
+                    <td>Current Medicines section</td>
+                    <td>028361</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr> 
+                 <tr>
+                    <td>Current Medicines header</td>
+                    <td>028362</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>                             
+                <tr>
+                    <td>Ceased Medicines section</td>
+                    <td>028363</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>
+                 <tr>
+                    <td>Ceased Medicines header</td>
+                    <td>028364</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>
+               <tr>
+                    <td>Suppressing Ceased Medicines section</td>
+                    <td>028358</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>
+               <tr>
+                    <td>Suppressing codes and medicine identifiers</td>
+                    <td>028625</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                </tr>               
+               <tr>
                     <td>Completeness of PSML document</td>
                     <td>028324</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                </tr>
+                </tr>                                                                                                         
                 <tr>
                     <td rowspan="2">Identifier for document author</td>
                     <td rowspan="2">028317</td>
@@ -61,7 +163,7 @@ The table below matches the data items to the corresponding supported element in
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Packed medicines present</td>
+                    <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
                     <td></td>
                     <td></td>
@@ -77,6 +179,12 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
                 <tr>
                     <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.note</td>
+                </tr>
+                <tr>
+                    <td>Attribute for Ceased Date</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td rowspan="4">Attribute for Substance/ Agent of allergy and adverse
@@ -266,9 +374,58 @@ The table below matches the data items to the corresponding supported element in
                     <td>List.entry.flag</td>
                     <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.entry.flag</td>
                 </tr>
+                <tr>
+                    <td>Witheld Medicine</td>
+                    <td>028620</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                <tr>
+                    <td>Witheld Medicine Ordering</td>
+                    <td>028626</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ceased medicines</td>
+                    <td>028623</td>
+                    <td></td>
+                    <td></td>
+                </tr>                                                 
              </tbody>
         </table>
+
             
+## Mapping from information requirements
+
+ <table class="list" width="100%">
+            <thead>
+                <tr>
+                    <th>Data Item</th>
+                    <th>Req. No</th>
+                    <th>Element</th>
+                    <th>Hierarchy</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Supported element</td>
+                    <td>The path to the supported element from the root Composition</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>    
+            </tbody>
+<table>                                    
+                                    
+                                                            
              
           
 

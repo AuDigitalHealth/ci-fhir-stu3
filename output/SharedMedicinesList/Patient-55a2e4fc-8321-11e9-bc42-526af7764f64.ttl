@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/55a2e4fc-8321-11e9-bc42-526af7764f64> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "55a2e4fc-8321-11e9-bc42-526af7764f64"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 55a2e4fc-8321-11e9-bc42-526af7764f64</p><p><b>meta</b>: </p><p><b>identifier</b>: National unique individual identifier = 8003608500062732</p><p><b>name</b>: Frank Harding </p><p><b>gender</b>: male</p><p><b>generalPractitioner</b>: <a href=\"Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654\">Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654</a></p><p><b>managingOrganization</b>: <a href=\"Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a\">Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a</a></p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NI" ];
+         fhir:Coding.display [ fhir:value "National unique individual identifier" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003608500062732" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Harding" ];
+     fhir:HumanName.given [
+       fhir:value "Frank";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.generalPractitioner [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654>;
+     fhir:Reference.reference [ fhir:value "Practitioner/b44c4b41-16ae-46b1-b7b4-f4dd2bcd3654" ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a>;
+     fhir:Reference.reference [ fhir:value "Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/55a2e4fc-8321-11e9-bc42-526af7764f64.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

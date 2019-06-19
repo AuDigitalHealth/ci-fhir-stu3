@@ -101,6 +101,12 @@ This section lists known issues with authoring and rendering content in this imp
 </td>
     <td>???</td>
   </tr>
+   <tr>
+    <td>Composition.information-recipient</td>
+    <td>A FHIRPath expression for the invariant inv-dh-cmp-11 is required. This is yet to be created.</td>
+    <td></td>
+  </tr>
+  
  </tbody>
 </table> 
 
