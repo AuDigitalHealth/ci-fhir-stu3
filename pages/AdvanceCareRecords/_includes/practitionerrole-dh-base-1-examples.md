@@ -30,6 +30,7 @@
                 <td><a href="Composition-3354a586-67ce-4038-bc62-9d226cac0d83.xml.html">XML</a></td>
                 <td><a href="Composition-3354a586-67ce-4038-bc62-9d226cac0d83.json.html">JSON</a></td>
                 <td><a href="Composition-3354a586-67ce-4038-bc62-9d226cac0d83.ttl.html">Turtle</a></td>
-                <td></td>                
+                <td></td>    
+            </tr>            
             
  </table>
