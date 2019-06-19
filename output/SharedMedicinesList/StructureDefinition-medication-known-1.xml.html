@@ -159,7 +159,7 @@ Raw <a href="StructureDefinition-medication-known-1.xml" download>xml</a>
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Known Medicine&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-06-11T09:21:44+10:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-06-16T08:18:19+10:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Australian Digital Health Agency&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -458,42 +458,6 @@ This element is labelled as a modifier because the implicit rules may provide ad
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Extension&quot;/&gt;
       &lt;/type&gt;
-    &lt;/element&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;Medication.extension:pbsSponsor&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medication.extension&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;pbsSponsor&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PBS Sponsor&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
-                  <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Reference to the sponsor organisation that is responsible for the supply of the medicine.&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;DomainResource.extension&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
-      &lt;/base&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Extension&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor&quot;/&gt;
-      &lt;/type&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;ele-1&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;ele-1&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;All FHIR elements must have a @value or children&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;hasValue() | (children().count() &amp;gt; id.count())&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;@value|f:*|h:div&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Element&quot;/&gt;
-      &lt;/constraint&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;ext-1&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;error&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Must have either extensions or value[x], not both&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;extension.exists() != value.exists()&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;exists(f:extension)!=exists(f:*[starts-with(local-name(.), &amp;#39;value&amp;#39;)])&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Extension&quot;/&gt;
-      &lt;/constraint&gt;
     &lt;/element&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;Medication.extension:brandName&quot;&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Medication.extension&quot;/&gt;
@@ -2799,7 +2763,7 @@ False indicates that the ingredient does not affect the therapeutic action of th
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jun 11, 2019 09:21+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Sun, Jun 16, 2019 08:18+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
