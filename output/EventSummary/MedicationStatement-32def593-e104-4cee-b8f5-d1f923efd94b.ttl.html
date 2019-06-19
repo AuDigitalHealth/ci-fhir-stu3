@@ -133,7 +133,6 @@ Raw <a href="MedicationStatement-32def593-e104-4cee-b8f5-d1f923efd94b.ttl" downl
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
@@ -142,37 +141,29 @@ Raw <a href="MedicationStatement-32def593-e104-4cee-b8f5-d1f923efd94b.ttl" downl
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;32def593-e104-4cee-b8f5-d1f923efd94b&quot;];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">fhir:Resource.meta</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#instant">fhir:value</a> &quot;2018-09-21T09:00:00+10:00&quot;^^xsd:dateTime ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1&quot;;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0     ]
   ];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 32def593-e104-4cee-b8f5-d1f923efd94b&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: sumatriptan 100 mg &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '45219011000036101' = '45219011000036101', given as 'sumatriptan 100 mg tablet'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe\&quot;&gt;urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Migraine &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;note&lt;/b&gt;: Patient advised that usually takes sumatriptan for migraine; they took one             tablet during the event, and during the event they were given one tablet to take home.&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 32def593-e104-4cee-b8f5-d1f923efd94b&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;Medication/2f70f312-8323-11e9-bc42-526af7764f64\&quot;&gt;Medication/2f70f312-8323-11e9-bc42-526af7764f64&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient/55a2e4fc-8321-11e9-bc42-526af7764f64\&quot;&gt;Patient/55a2e4fc-8321-11e9-bc42-526af7764f64&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Iron supplement &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">fhir:MedicationStatement.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;active&quot;];
-  <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">fhir:MedicationStatement.medicationCodeableConcept</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       a sct:45219011000036101;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;45219011000036101&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;sumatriptan 100 mg tablet&quot; ]     ];
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;sumatriptan 100 mg&quot; ]
+  <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">fhir:MedicationStatement.medicationReference</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication/2f70f312-8323-11e9-bc42-526af7764f64&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">fhir:MedicationStatement.subject</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;urn:uuid:792b4811-2ce7-4531-8893-af827175bcfe&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/55a2e4fc-8321-11e9-bc42-526af7764f64&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">fhir:MedicationStatement.taken</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;y&quot;];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.reasonCode">fhir:MedicationStatement.reasonCode</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Migraine&quot; ]
-  ];
-  <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.note">fhir:MedicationStatement.note</a> [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Annotation#Annotation.text">fhir:Annotation.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient advised that usually takes sumatriptan for migraine; they took one             tablet during the event, and during the event they were given one tablet to take home.&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Iron supplement&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">fhir:MedicationStatement.dosage</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">fhir:Dosage.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;As required&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">fhir:Dosage.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;One tablet daily&quot; ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -213,7 +204,7 @@ Raw <a href="MedicationStatement-32def593-e104-4cee-b8f5-d1f923efd94b.ttl" downl
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jun 11, 2019 09:24+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jun 19, 2019 12:25+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
