@@ -12,7 +12,6 @@
   <sch:pattern>
     <sch:title>f:Medication</sch:title>
     <sch:rule context="f:Medication">
-      <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/medication-brand-name']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/medication-brand-name': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/medication-generic-name']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/medication-generic-name': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/medication-strength-text']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/medication-strength-text': maximum cardinality of 'extension' is 1</sch:assert>
@@ -31,8 +30,6 @@
   <sch:pattern>
     <sch:title>Medication.extension</sch:title>
     <sch:rule context="f:Medication/f:extension">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both</sch:assert>
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>

@@ -16,6 +16,7 @@
       <sch:assert test="count(f:language) &gt;= 1">language: minimum cardinality of 'language' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/composition-author-role']) &gt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/composition-author-role': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/composition-author-role']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/composition-author-role': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:encounter) &gt;= 1">encounter: minimum cardinality of 'encounter' is 1</sch:assert>
       <sch:assert test="count(f:author) &lt;= 1">author: maximum cardinality of 'author' is 1</sch:assert>
       <sch:assert test="count(f:confidentiality) &lt;= 0">confidentiality: maximum cardinality of 'confidentiality' is 0</sch:assert>
       <sch:assert test="count(f:custodian) &gt;= 1">custodian: minimum cardinality of 'custodian' is 1</sch:assert>

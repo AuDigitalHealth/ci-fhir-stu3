@@ -11,7 +11,7 @@
   "title": "Known Medicine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-06-11T09:21:44+10:00",
+  "date": "2019-06-16T08:18:19+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -316,47 +316,6 @@
         "type": [
           {
             "code": "Extension"
-          }
-        ]
-      },
-      {
-        "id": "Medication.extension:pbsSponsor",
-        "path": "Medication.extension",
-        "sliceName": "pbsSponsor",
-        "short": "PBS Sponsor",
-        "definition": "Reference to the sponsor organisation that is responsible for the supply of the medicine.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://hl7.org.au/fhir/StructureDefinition/pbs-sponsor"
-          }
-        ],
-        "condition": [
-          "ele-1"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() | (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
           }
         ]
       },
