@@ -1,7 +1,7 @@
 ### Summary of an Encounter for an Event *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Usage scenarios
-* A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry in a Composition and/or in a List
+* A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry.
 
 Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing profile.
 
