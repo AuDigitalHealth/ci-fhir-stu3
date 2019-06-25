@@ -1,16 +1,16 @@
-### List of Medicine Items for a Patient *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+### List of Medicine Items for a Patient with Chnage Information *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 
 The following are the overarching usage scenarios this profile is intended to support:
-* A clinical information system (CIS) sends or receives a shared medicines list with the My Health Record system
-* A contracted service provider (CSP) sends or receives a shared medicines list with the My Health Record system
-* A CIS sends or receives a shared medicines list with another CIS or CSP
-* A CSP sends or receives a shared medicines list with a CIS or another CSP
-* A registered portal or registered repository receives a shared medicines list
+* A clinical information system (CIS) sends or receives a practitioner authored shared medicines list with the My Health Record system
+* A contracted service provider (CSP) sends or receives a practitioner authored shared medicines list with the My Health Record system
+* A CIS sends or receives a practitioner authored shared medicines list with another CIS or CSP
+* A CSP sends or receives a practitioner authored shared medicines list with a CIS or another CSP
+* A registered portal or registered repository receives a practitioner authored shared medicines list
 
 An expected usage scenario, further scoping the above overarching scenarios is:
-* A shared medicines list exchanged as a pharmacist shared medicines list (PSML) document 
+* A practitioner authored shared medicines list exchanged as a pharmacist shared medicines list (PSML) document 
 
 This profile does not support sending an absence of clinical information as a list, e.g. no medicines information available.
 
@@ -18,13 +18,12 @@ This profile does not support sending an absence of clinical information as a li
 
 For the supported scenarios in this implementation guide:
 
-* Where a sending system wants to include information that cannot be directly included in a supported list entry resource, the information may be included via a resource that is referenced from the supported list entries
 * All medicine items considered relevant by the practitioner preparing the list (the source) should be included in the list:
-* A new medicine item should be represented with the flag of ‘new’ or ‘prescribed’ and a change description that described the reason for introducing the medicine item.
-* An existing unchanged medicine item should be represented with the flag of ‘nochange’ and no change description.
-* A changed medicine item should be represented with the flag of ‘amended’ and a change description that describes the change, e.g. dose, form, route, frequency change.
-* A ceased medicine item should be represented with the flag of ‘ceased’ and a change description that describes the reason for ceasing the medicine item.
-* A withheld medicine item should be represented with the flag of ‘suspended’ and a change-description supplied that describes reason for withholding the medicine, expected restart date or request for a clinical review.
+  * A new medicine item should be represented with the flag of ‘new’ or ‘prescribed’ and a change description that described the reason for introducing the medicine item.
+  * An existing unchanged medicine item should be represented with the flag of ‘nochange’ and no change description.
+  * An existing changed medicine item should be represented with the flag of ‘amended’ and a change description that describes the change, e.g. dose, form, route, frequency change.
+  * A ceased medicine item should be represented with the flag of ‘ceased’ and a change description that describes the reason for ceasing the medicine item.
+  * A withheld medicine item should be represented with the flag of ‘suspended’ and a change description supplied that describes reason for withholding the medicine, expected restart date or request for a clinical review.
 
 
 ##### When a shared medicines list is part of a document
@@ -37,7 +36,7 @@ When a shared medicines list is sent as part of a document (referenced in Compos
     <th>Guidance</th>
    </tr>
      <tr>
-        <td>list source role</td>
+        <td>author-role</td>
         <td>Will reference the same PractitionerRole as in Composition.composition-author-role</td>
     </tr>
    <tr>
