@@ -10,29 +10,14 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent the [Advance Care Planning (ACP)](StructureDefinition-composition-acp-1.html) and Advance Care Directive Custodian Record (ACDCR).
+This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent {{ site.data.fhir.igName }}.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing ACP and ACDCR in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of advance care record information between healthcare providers.
-
-This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
-
-This document does not describe transport or persistence mechanism of the resources described by it.
-
-Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
-* [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3)
-* [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)
-
-Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
-
-This implementation guide is the basis for the corresponding [Advance Care Planning CDA Implementation Guide [DH2019x1]](#DH2019x1) and [Advance Care Directive Custodian Record CDA Implementation Guide [DH2019x2]](#DH2019x2). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
-
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a ACR CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
-
+_to be completed_
 
 ## Context and use
 A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.
@@ -52,10 +37,7 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
-This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of ACR. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
-
-The starting point for the profiles included in this implementation guide are the [Advance Care Planning](StructureDefinition-composition-acp-1.html) and Advance Care Directive Custodian Record profiles, which reference the additional profiles necessary to assert conformance for this implementation guide.
-
+This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of PDL. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
@@ -112,18 +94,10 @@ This implementation guide and related artefacts are technical in nature and the 
 
 ## References
 
+_to be completed_: references relevant to this specific implementation guide are still unknown
+
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
-
-|[<a name="DH2019x1">DH2019x1</a>]| Australian Digital Health Agency, Not yet published, Advance Care Planning CDA Implementation Guide, Version 2.0.|
-
-|[<a name="DH2019x2">DH2019x2</a>]| Australian Digital Health Agency, Not yet published, Advance Care Directive Custodian Record CDA Implementation Guide, Version 2.0.|
-
-|[<a name="NEHT2011bf">NEHT2011bf</a>]| Australian Digital Health Agency, 12 December 2011, Information Requirements - Information regarding the Custodian of an Advance Care Directive, Version 1.0.|
-||[https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/advance-care-document-custodian/NEHTA-0944-2011](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/advance-care-document-custodian/NEHTA-0944-2011)|
-
-|[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
-| |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|

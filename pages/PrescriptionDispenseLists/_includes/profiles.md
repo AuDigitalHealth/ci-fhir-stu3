@@ -1,8 +1,8 @@
 <html>
-	<div id="segment-content" class="segment"> 
-	<div class="container">
-            <div class="row">
-            	<div class="inner-wrapper">
+  <div id="segment-content" class="segment"> 
+  <div class="container">
+  <div class="row">
+  <div class="inner-wrapper">
 
 <div class="col-12">
 
@@ -10,8 +10,8 @@
 
 <p>The following profiles form part of this implementation guide:</p>
 
-<div style="border-right-style: none;" id="tabs">
-   <div style="border-right-style: none;" id="tabs">
+    <div style="border-right-style: none;" id="tabs">
+      <div style="border-right-style: none;" id="tabs">
             <ul>
                 <li><a href="#tabs-1">Categorized</a></li>
                 <li><a href="#tabs-2">Based on</a></li>
@@ -30,11 +30,7 @@
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
-                        <td class="frm-set">
-                                <ul>
-                                    <li><a href="StructureDefinition-composition-pdl-1.html">Composition (Prescription and Dispense Lists)</a></li>
-                                </ul>
-                            </td>
+                        <td class="frm-null"/>
                         <td class="frm-null"/>
                     </tr>
                     <tr class="frm-break">
@@ -48,25 +44,9 @@
                         <td class="frm-category">Management</td>
                         <td class="frm-null"/>
                     </tr> 
-                    <tr class="frm-contents">
-                        <td class="frm-set">
-                            <ul class="frm-set">
-                                <li><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></li>
-                                <li><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></li>
-                                <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
-                                <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>                                
-                                <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
-                                <li><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></li>
-                                <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
-                                <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (RelatedPerson with Mandatory Identifier)</a></li>
-                            </ul>
-                       </td>
-                       <td class="frm-set">
-                            <ul class="frm-set">
-                                <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
-                                 <li><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></li>
-                            </ul>
-                        </td>
+                    <tr class="frm-contents" height="80">
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
@@ -121,83 +101,26 @@
                     </tr> 
                     <tr class="frm-break"><td colspan="6"/></tr>
                 </table>
-</div>
-
- </div>
-  <div id="tabs-2">
-
-<table width="100%">
-    <tr>
-      <th>Implementation guide profile</th>
-      <th>Implementation guide profile base</th>
-      <th>FHIR base resource</th>
-   </tr>
-   <tr>
-      <td><a href="StructureDefinition-composition-pdl-1.html">Composition (Prescription and Dispense Lists)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
-     <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
-    </tr>
-        <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
-   </tr>
-   <tr>
-        <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
-    </tr> 
-        <tr>
-         <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
-    </tr> 
-    <tr>
-      <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
-    </tr>
-     <tr>
-      <td><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
-    </tr>
-        <tr>
-      <td><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
-    </tr>
-    <tr>
-       <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
-       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
-       <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
-    </tr> 
-    <tr>
-       <td><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (Base RelatedPerson with Mandatory Identifier)</a></td>
-       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
-       <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a></td>
-    </tr> 
-</table>
-  </div>
-				</div>  <!-- /inner-wrapper -->
-            </div>  <!-- /row -->
-        </div>  <!-- /container -->
-        
-    </div>  <!-- /segment-content -->
+            </div>
+      </div>
+      <div id="tabs-2">
+        <table width="100%">
+          <tr>
+            <th>Implementation guide profile</th>
+            <th>Implementation guide profile base</th>
+            <th>FHIR base resource</th>
+          </tr>
+          <tr>
+            <td class="frm-null"/>
+            <td class="frm-null"/>
+            <td class="frm-null"/>
+          </tr>
+        </table>
+      </div>
+  </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /row -->
+  </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
 
 	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
 		<div class="container">  <!-- container -->

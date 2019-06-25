@@ -24,4 +24,4 @@ All examples included in this implementation guide are available for download in
 
 The corresponding {{site.data.fhir.igName}} CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
 
-[DH_xxxx_PrescriptionDispenseLists_CDA_IG_v1.0.pdf](..\..\..\ci-fhir-stu3\pages\AdvanceCareRecords\_includes\DH_xxxx_PrescriptionDispenseLists_CDA_IG_v1.0.pdf)
+_to be completed_

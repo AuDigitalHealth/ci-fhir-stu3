@@ -1,9 +1,3 @@
 # {{ page.title }}
 
-This informative section is empty as there is no requirements specification available at this time.
-
-            
-             
-          
-
-
+No requirements specifications are available for this implementation guide.
