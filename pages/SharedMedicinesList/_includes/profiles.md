@@ -32,7 +32,7 @@
                         <td class="frm-null"/>
                         <td class="frm-set">
                                 <ul>
-                                    <li><a href="StructureDefinition-composition-sml-1.html">Composition (Shared Medicines List)</a></li>
+                                    <li><a href="StructureDefinition-composition-sml-prac-1.html">Composition (Shared Medicines List)</a></li>
                                 </ul>
                             </td>
                         <td class="frm-null"/>
@@ -156,7 +156,7 @@
      <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">AllergyIntolerance </a></td>
     </tr>    
     <tr>
-      <td><a href="StructureDefinition-composition-sml-1.html">Composition (Shared Medicines List)</a></td>
+      <td><a href="StructureDefinition-composition-sml-prac-1.html">Composition (Shared Medicines List)</a></td>
       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
      <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
     </tr>        
