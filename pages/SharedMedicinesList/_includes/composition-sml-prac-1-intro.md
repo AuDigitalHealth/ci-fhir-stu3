@@ -18,7 +18,7 @@ An expected usage scenario, further scoping the above overarching scenarios is:
 For the supported scenarios in this implementation guide:
 
 * In the Allergies section, where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 \|No known allergy\|) is sent as the code.
-* In the Allerguies section, where a sending system does not have any clinical data to provide it is expected that section.emptyReason is used.
+* In the Allergies section, where a sending system does not have any clinical data to provide it is expected that section.emptyReason is used.
 * In the Medications section, where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 \|No known current medications\|) 
 
 
