@@ -14,7 +14,6 @@ This implementation guide is an Australian realm implementation guide of the HL7
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
-
 ## Document purpose and scope
 
 The primary aim of this implementation guide is to support implementing Prescription List, Dispense List, and Prescription and Dispense List in [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The resulting FHIR structure can be used for the electronic exchange of this information between healthcare providers.
@@ -53,31 +52,22 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
+
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of lists of prescriptions and dispenses for a patient. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide for a prescription list is the Prescription List profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+For implementers interested in representing a prescription list, or a dispense list, or a prescription and dispense list as a document, the starting point is the Prescription and or Dispense List profile, which references the additional profiles necessary to assert conformance for this implementation guide.
 
-For implementers interested in representing prescription list information as a list, and not a document, the starting point is the List of Prescriptions for a Patient profile.
-
-The starting point for the profiles included in this implementation guide for a dispense list is the Dispense List profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
-
-For implementers interested in representing dispense list information as a list, and not a document, the starting point is the List of Dispenses for a Patient profile.
-
-The starting point for the profiles included in this implementation guide for a prescription and dispense list is the Prescription and Dispense List profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
-
-For implementers interested in representing prescription and dispense list information as a list, and not a document, the starting point is the List of Prescriptions and Dispenses for a Patient profile.
+For implementers interested in representing a prescription list, or a dispense list, or a prescription and dispense list as a list, and not a document, the starting point is the List of Prescription and or Dispense Records profile, which references the additional profiles necessary to assert conformance for this implementation guide.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
 
 This implementation guide may not considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
 
-
 ## Intended audience
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
-This document and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
-
+This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 ## Document Information
 
@@ -117,8 +107,6 @@ This document and related artefacts are technical in nature and the audience is 
         </tr>
     </tbody>
 </table> 
-
-
 
 ## References
 
