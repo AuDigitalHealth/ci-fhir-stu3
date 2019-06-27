@@ -22,7 +22,7 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding {{site.data.fhir.igName}} CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+The corresponding Advance Care Planning [DH2019x1] and Advance Care Directive Custodian Record [DH2019x2] implementation guide that use the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
 
-
-[DH_xxxx_AdvanceCarePlanning_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\AdvanceCareRecords\_includes\DH_xxxx_AdvanceCarePlanning_CDA_IG_v2.0.pdf)
+- [DH_xxxx_AdvanceCarePlanning_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\AdvanceCareRecords\_includes\DH_xxxx_AdvanceCarePlanning_CDA_IG_v2.0.pdf)
+- [DH_xxxx_AdvanceCareDirectiveCustodianRecord_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\AdvanceCareRecords\_includes\DH_xxxx_AdvanceCareDirectiveCustodianRecord_CDA_IG_v2.0.pdf)
