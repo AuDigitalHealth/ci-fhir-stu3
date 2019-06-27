@@ -11,7 +11,7 @@
   "title": "Summary Statement of Allergy or Intolerance",
   "status": "draft",
   "experimental": true,
-  "date": "2019-05-31T11:35:25+10:00",
+  "date": "2019-06-26T15:39:00+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -120,8 +120,8 @@
           {
             "key": "inv-ait-0",
             "severity": "error",
-            "human": "Recorder and recorder related party shall not coexist",
-            "expression": "(extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').exists() and recorder.exists()).not()",
+            "human": "Recorder and author related party shall not coexist",
+            "expression": "(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and recorder.exists()).not()",
             "source": "AllergyIntolerance"
           }
         ],
@@ -338,9 +338,9 @@
         "path": "AllergyIntolerance.extension",
         "sliceName": "recorderRelatedPerson",
         "short": "Related person that recorded the sensitivity",
-        "definition": "Reference to related person that recorded the record and takes responsibility for its content.",
+        "definition": "Reference to related person that authored the resource and takes responsibility for its content.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "DomainResource.extension",
           "min": 0,
@@ -349,7 +349,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org.au/fhir/StructureDefinition/recorder-related-person"
+            "profile": "http://hl7.org.au/fhir/StructureDefinition/author-related-person"
           }
         ],
         "condition": [
@@ -730,10 +730,10 @@
               "valueString": "AllergyIntoleranceCode"
             }
           ],
-          "strength": "example",
-          "description": "Type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies.",
+          "strength": "preferred",
+          "description": "Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies.",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1"
           }
         },
         "mapping": [
@@ -748,200 +748,6 @@
           {
             "identity": "w5",
             "map": "what"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.code.id",
-        "path": "AllergyIntolerance.code.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.code.extension",
-        "path": "AllergyIntolerance.code.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.code.coding",
-        "path": "AllergyIntolerance.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:snomedAllergyCode",
-        "path": "AllergyIntolerance.code.coding",
-        "sliceName": "snomedAllergyCode",
-        "short": "Allergy or Intolerance to Substance (SNOMED CT)",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.code.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "AllergyIntolerance.code.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
           }
         ]
       },
@@ -1191,7 +997,7 @@
       {
         "id": "AllergyIntolerance.reaction",
         "path": "AllergyIntolerance.reaction",
-        "short": "Adverse Reaction Events linked to exposure to substance",
+        "short": "Reaction details",
         "definition": "Details about each adverse reaction event linked to exposure to the identified substance.",
         "min": 0,
         "max": "*",
@@ -1337,210 +1143,16 @@
               "valueString": "SubstanceCode"
             }
           ],
-          "strength": "example",
-          "description": "Codes defining the type of the substance (including pharmaceutical products).",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/substance-code"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.substance.id",
-        "path": "AllergyIntolerance.reaction.substance.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.substance.extension",
-        "path": "AllergyIntolerance.reaction.substance.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.substance.coding",
-        "path": "AllergyIntolerance.reaction.substance.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.substance.coding:snomedSubstance",
-        "path": "AllergyIntolerance.reaction.substance.coding",
-        "sliceName": "snomedSubstance",
-        "short": "Substance or Agent (SNOMED CT)",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
+          "strength": "preferred",
+          "description": "Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products).",
           "valueSetReference": {
             "reference": "https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1"
           }
         },
         "mapping": [
           {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
             "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.substance.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "AllergyIntolerance.reaction.substance.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+            "map": "outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code <= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code <= ExposureAgentEntityType]"
           }
         ]
       },
@@ -1574,10 +1186,10 @@
               "valueString": "Manifestation"
             }
           ],
-          "strength": "example",
-          "description": "Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event.",
+          "strength": "preferred",
+          "description": "Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event.",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/clinical-findings"
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"
           }
         },
         "mapping": [
@@ -1588,200 +1200,6 @@
           {
             "identity": "rim",
             "map": "code"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation.id",
-        "path": "AllergyIntolerance.reaction.manifestation.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation.extension",
-        "path": "AllergyIntolerance.reaction.manifestation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation.coding",
-        "path": "AllergyIntolerance.reaction.manifestation.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation.coding:snomedManifestation",
-        "path": "AllergyIntolerance.reaction.manifestation.coding",
-        "sliceName": "snomedManifestation",
-        "short": "Clinical Finding (SNOMED CT)",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "AllergyIntolerance.reaction.manifestation.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
           }
         ]
       },

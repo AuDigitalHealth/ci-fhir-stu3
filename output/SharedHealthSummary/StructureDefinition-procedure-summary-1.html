@@ -192,7 +192,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a>.</p>
 <p>
-This profile was published on Fri May 31 11:35:25 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Wed Jun 26 15:39:00 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -603,8 +603,20 @@ Summary
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
+<tr><td>Procedure.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
 <tr><td>Procedure.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A code specifying the state of the procedure."><a href="http://hl7.org/fhir/STU3/valueset-event-status.html">EventStatus</a></td></tr>
+<tr><td>Procedure.notDoneReason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A code that identifies the reason a procedure was not performed."><a href="http://hl7.org/fhir/STU3/valueset-procedure-not-performed-reason.html">Procedure Not Performed Reason (SNOMED-CT)</a></td></tr>
+<tr><td>Procedure.category</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A code that classifies a procedure for searching, sorting and display purposes."><a href="http://hl7.org/fhir/STU3/valueset-procedure-category.html">Procedure Category Codes (SNOMED CT)</a></td></tr>
 <tr><td>Procedure.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A code to identify a specific procedure ."><a href="http://hl7.org/fhir/STU3/valueset-procedure-code.html">Procedure Codes (SNOMED CT)</a></td></tr>
+<tr><td>Procedure.code.coding:snomedCode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="SNOMED CT-AU procedure"><a href="https://healthterminologies.gov.au/fhir/ValueSet/procedure-1">https://healthterminologies.gov.au/fhir/ValueSet/procedure-1</a></td></tr>
+<tr><td>Procedure.performer.role</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A code that identifies the role of a performer of the procedure."><a href="http://hl7.org/fhir/STU3/valueset-performer-role.html">Procedure Performer Role Codes</a></td></tr>
+<tr><td>Procedure.reasonCode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A code that identifies the reason a procedure is  required."><a href="http://hl7.org/fhir/STU3/valueset-procedure-reason.html">Procedure Reason Codes</a></td></tr>
+<tr><td>Procedure.bodySite</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Codes describing anatomical locations. May include laterality."><a href="http://hl7.org/fhir/STU3/valueset-body-site.html">SNOMED CT Body Structures</a></td></tr>
+<tr><td>Procedure.outcome</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="An outcome of a procedure - whether it was resolved or otherwise."><a href="http://hl7.org/fhir/STU3/valueset-procedure-outcome.html">Procedure Outcome Codes (SNOMED CT)</a></td></tr>
+<tr><td>Procedure.complication</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Codes describing complications that resulted from a procedure."><a href="http://hl7.org/fhir/STU3/valueset-condition-code.html">Condition/Problem/Diagnosis Codes</a></td></tr>
+<tr><td>Procedure.followUp</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Specific follow up required for a procedure e.g. removal of sutures."><a href="http://hl7.org/fhir/STU3/valueset-procedure-followup.html">Procedure Follow up Codes (SNOMED CT)</a></td></tr>
+<tr><td>Procedure.focalDevice.action</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="A kind of change that happened to the device during the procedure."><a href="http://hl7.org/fhir/STU3/valueset-device-action.html">Procedure Device Action Codes</a></td></tr>
+<tr><td>Procedure.usedCode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Codes describing items used during a procedure"><a href="http://hl7.org/fhir/STU3/valueset-device-kind.html">FHIR Device Types</a></td></tr>
 </table>
 
 
@@ -680,7 +692,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, May 31, 2019 11:35+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jun 26, 2019 15:39+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

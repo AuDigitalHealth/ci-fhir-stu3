@@ -24,7 +24,7 @@
   <title value="Summary Statement of Allergy or Intolerance"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-05-31T11:35:25+10:00"/>
+  <date value="2019-06-26T15:39:00+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -122,8 +122,8 @@
       <constraint>
         <key value="inv-ait-0"/>
         <severity value="error"/>
-        <human value="Recorder and recorder related party shall not coexist"/>
-        <expression value="(extension(&#39;http://hl7.org.au/fhir/StructureDefinition/recorder-related-person&#39;).exists() and recorder.exists()).not()"/>
+        <human value="Recorder and author related party shall not coexist"/>
+        <expression value="(extension(&#39;http://hl7.org.au/fhir/StructureDefinition/author-related-person&#39;).exists() and recorder.exists()).not()"/>
         <source value="AllergyIntolerance"/>
       </constraint>
       <mapping>
@@ -298,9 +298,9 @@
       <path value="AllergyIntolerance.extension"/>
       <sliceName value="recorderRelatedPerson"/>
       <short value="Related person that recorded the sensitivity"/>
-      <definition value="Reference to related person that recorded the record and takes responsibility for its content."/>
+      <definition value="Reference to related person that authored the resource and takes responsibility for its content."/>
       <min value="0"/>
-      <max value="1"/>
+      <max value="*"/>
       <base>
         <path value="DomainResource.extension"/>
         <min value="0"/>
@@ -308,7 +308,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/recorder-related-person"/>
+        <profile value="http://hl7.org.au/fhir/StructureDefinition/author-related-person"/>
       </type>
       <condition value="ele-1"/>
       <constraint>
@@ -614,10 +614,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="AllergyIntoleranceCode"/>
         </extension>
-        <strength value="example"/>
-        <description value="Type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies."/>
+        <strength value="preferred"/>
+        <description value="Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies."/>
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/allergyintolerance-code"/>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1"/>
         </valueSetReference>
       </binding>
       <mapping>
@@ -631,164 +631,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="what"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.code.id">
-      <path value="AllergyIntolerance.code.id"/>
-      <representation value="xmlAttr"/>
-      <short value="xml:id (or equivalent in JSON)"/>
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Element.id"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.code.extension">
-      <path value="AllergyIntolerance.code.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Additional Content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Element.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.code.coding">
-      <path value="AllergyIntolerance.code.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Code defined by a terminology system"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.code.coding:snomedAllergyCode">
-      <path value="AllergyIntolerance.code.coding"/>
-      <sliceName value="snomedAllergyCode"/>
-      <short value="Allergy or Intolerance to Substance (SNOMED CT)"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="AllergyIntolerance.code.text"/>
-      <short value="Plain text representation of the concept"/>
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
-      <comment value="Very often the text is the same as a displayName of one of the codings."/>
-      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.text"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.9. But note many systems use C*E.2 for this"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.patient">
@@ -995,7 +837,7 @@
     </element>
     <element id="AllergyIntolerance.reaction">
       <path value="AllergyIntolerance.reaction"/>
-      <short value="Adverse Reaction Events linked to exposure to substance"/>
+      <short value="Reaction details"/>
       <definition value="Details about each adverse reaction event linked to exposure to the identified substance."/>
       <min value="0"/>
       <max value="*"/>
@@ -1108,173 +950,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="SubstanceCode"/>
         </extension>
-        <strength value="example"/>
-        <description value="Codes defining the type of the substance (including pharmaceutical products)."/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/substance-code"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="rim"/>
-        <map value="outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.id">
-      <path value="AllergyIntolerance.reaction.substance.id"/>
-      <representation value="xmlAttr"/>
-      <short value="xml:id (or equivalent in JSON)"/>
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Element.id"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.extension">
-      <path value="AllergyIntolerance.reaction.substance.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Additional Content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Element.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.coding">
-      <path value="AllergyIntolerance.reaction.substance.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Code defined by a terminology system"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.coding:snomedSubstance">
-      <path value="AllergyIntolerance.reaction.substance.coding"/>
-      <sliceName value="snomedSubstance"/>
-      <short value="Substance or Agent (SNOMED CT)"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <strength value="required"/>
+        <strength value="preferred"/>
+        <description value="Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products)."/>
         <valueSetReference>
           <reference value="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1"/>
         </valueSetReference>
       </binding>
       <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
         <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="AllergyIntolerance.reaction.substance.text"/>
-      <short value="Plain text representation of the concept"/>
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
-      <comment value="Very often the text is the same as a displayName of one of the codings."/>
-      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.text"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.9. But note many systems use C*E.2 for this"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
+        <map value="outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.manifestation">
@@ -1299,10 +983,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Manifestation"/>
         </extension>
-        <strength value="example"/>
-        <description value="Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event."/>
+        <strength value="preferred"/>
+        <description value="Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event."/>
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/clinical-findings"/>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
         </valueSetReference>
       </binding>
       <mapping>
@@ -1312,164 +996,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="code"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.id">
-      <path value="AllergyIntolerance.reaction.manifestation.id"/>
-      <representation value="xmlAttr"/>
-      <short value="xml:id (or equivalent in JSON)"/>
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Element.id"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.extension">
-      <path value="AllergyIntolerance.reaction.manifestation.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Additional Content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Element.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.coding">
-      <path value="AllergyIntolerance.reaction.manifestation.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Code defined by a terminology system"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.coding:snomedManifestation">
-      <path value="AllergyIntolerance.reaction.manifestation.coding"/>
-      <sliceName value="snomedManifestation"/>
-      <short value="Clinical Finding (SNOMED CT)"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="AllergyIntolerance.reaction.manifestation.text"/>
-      <short value="Plain text representation of the concept"/>
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
-      <comment value="Very often the text is the same as a displayName of one of the codings."/>
-      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.text"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.9. But note many systems use C*E.2 for this"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
       </mapping>
     </element>
     <element id="AllergyIntolerance.reaction.description">

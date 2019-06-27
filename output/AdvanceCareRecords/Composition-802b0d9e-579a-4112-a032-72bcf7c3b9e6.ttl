@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "802b0d9e-579a-4112-a032-72bcf7c3b9e6"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acp-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 802b0d9e-579a-4112-a032-72bcf7c3b9e6</p><p><b>meta</b>: </p><p><b>language</b>: en-AU</p><p><b>status</b>: final</p><p><b>type</b>: Advance Care Planning <span style=\"background: LightGoldenRodYellow\">(Details : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1 code '100.16975' = '100.16975', given as 'Advance Care Planning'})</span></p><p><b>date</b>: 21 Jun. 2017, 9:00:15 am</p><p><b>author</b>: <a href=\"Practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e.html\">Generated Summary: id: 4af51762-11cd-4bd6-8212-d6b1dc85696e; HPI-I = 8003610000000000; Peter Chalmers (OFFICIAL)</a></p><p><b>title</b>: Advance Care Planning Document</p><h3>Attesters</h3><table class=\"grid\"><tr><td>-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td>*</td><td>legal</td><td>21 Jun. 2017, 9:00:15 am</td><td><a href=\"Practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e.html\">Generated Summary: id: 4af51762-11cd-4bd6-8212-d6b1dc85696e; HPI-I = 8003610000000000; Peter Chalmers (OFFICIAL)</a></td></tr></table><p><b>custodian</b>: <a href=\"Organization-1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63.html\">Generated Summary: id: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ABN = 51824754455; name: Devonport Family Medicine Clinic; reception@example.dfmc.com.au(WORK), fax: (03) 8543 5557(WORK), ph: (03) 8543 5556(WORK)</a></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/composition-author-role" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8>;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8" ]
+     ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+       fhir:Coding.code [ fhir:value "100.16975" ];
+       fhir:Coding.display [ fhir:value "Advance Care Planning" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8>;
+     fhir:Reference.reference [ fhir:value "Patient/f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8" ]
+  ];
+  fhir:Composition.date [ fhir:value "2017-06-21T09:00:15+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e>;
+     fhir:Reference.reference [ fhir:value "Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e" ]
+  ];
+  fhir:Composition.title [ fhir:value "Advance Care Planning Document"];
+  fhir:Composition.attester [
+     fhir:index 0;
+     fhir:Composition.attester.mode [
+       fhir:value "legal";
+       fhir:index 0
+     ];
+     fhir:Composition.attester.time [ fhir:value "2017-06-21T09:00:15+10:00"^^xsd:dateTime ];
+     fhir:Composition.attester.party [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e>;
+       fhir:Reference.reference [ fhir:value "Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e" ]
+     ]
+  ];
+  fhir:Composition.custodian [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63>;
+     fhir:Reference.reference [ fhir:value "Organization/1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Advance Care Planning Document" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.16973" ];
+         fhir:Coding.display [ fhir:value "Advance Care Information Section" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p><a href=\"#ACP01\">Advance Care Plan for Adam</a></p>\n        <p>Created on: 03 November 2009</p>\n        <p>Created by: Adam Everyman</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531>;
+       fhir:Reference.reference [ fhir:value "DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

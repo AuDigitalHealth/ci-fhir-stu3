@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="cb9d944f-1b75-4603-b63a-167460882287"/>
+    <meta>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1"
+        />
+    </meta>
+    <identifier>
+        <type>
+            <coding>
+                <system value="http://hl7.org/fhir/v2/0203"/>
+                <code value="NPI"/>
+                <display value="National provider identifier"/>
+            </coding>
+            <text value="HPI-I"/>
+        </type>
+        <system value="http://ns.electronichealth.net.au/id/hi/hpii/1.0"/>
+        <value value="8003610000000000"/>
+    </identifier>
+    <practitioner>
+        <reference value="Practitioner/e75140ff-3476-4efb-b508-20aa6c6fbc77"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/0b27b9e9-50fb-4975-9e60-d053e461828"/>
+    </organization>
+    <code>
+        <coding>
+            <system value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+            <code value="253111"/>
+            <display value="General Practitioner"/>
+        </coding>
+        <text value="GP"/>
+    </code>
+</PractitionerRole>

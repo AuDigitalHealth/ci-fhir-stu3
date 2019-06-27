@@ -29,7 +29,7 @@ Reference has been made to International and Australian Standards, and to Standa
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
-This implementation guide is the basis for the corresponding [{{site.data.fhir.igName}} CDA implementation guide [DH2019x]](#DH2019x). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
+This implementation guide is the basis for the corresponding [Advance Care Planning CDA Implementation Guide [DH2019x1]](#DH2019x1) and [Advance Care Directive Custodian Record CDA Implementation Guide [DH2019x2]](#DH2019x2). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
 This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a ACR CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
 
@@ -66,7 +66,7 @@ This implementation guide may not considered to be complete enough or sufficient
 ## Intended audience
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
-This document and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
+This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 
 ## Document Information
