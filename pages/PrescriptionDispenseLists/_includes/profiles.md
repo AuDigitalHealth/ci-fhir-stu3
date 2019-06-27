@@ -1,0 +1,172 @@
+<html>
+  <div id="segment-content" class="segment"> 
+  <div class="container">
+  <div class="row">
+  <div class="inner-wrapper">
+
+<div class="col-12">
+
+<h2>Profiles</h2>
+
+<p>The following profiles form part of this implementation guide:</p>
+
+    <div style="border-right-style: none;" id="tabs">
+      <div style="border-right-style: none;" id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Categorized</a></li>
+                <li><a href="#tabs-2">Based on</a></li>
+            </ul>
+            <div id="tabs-1">
+                <table width="100%">
+                    <tr class="frm-group">
+                        <td rowspan="2" class="frm-group rotate"><div>Foundation</div></td>
+                        <td class="frm-category">Conformance</td>
+                        <td class="frm-category">Terminology</td>
+                        <td class="frm-category">Security</td>
+                        <td class="frm-category">Documents</td>
+                        <td class="frm-category">Other</td>
+                    </tr> 
+                    <tr class="frm-contents" height="80">
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                    </tr>
+                    <tr class="frm-break">
+                        <td colspan="6"/>
+                   </tr>
+                    <tr class="frm-group">
+                        <td rowspan="2" class="frm-group rotate"><div>Base</div></td>
+                        <td class="frm-category">Individuals</td>
+                        <td class="frm-category">Entities</td>
+                        <td class="frm-category">Workflow</td>
+                        <td class="frm-category">Management</td>
+                        <td class="frm-null"/>
+                    </tr> 
+                    <tr class="frm-contents" height="80">
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                    </tr> 
+                    <tr class="frm-break"><td colspan="6"/></tr>
+                    <tr class="frm-group">
+                        <td rowspan="2" class="frm-group rotate"><div>Clinical</div></td>
+                        <td class="frm-category">Summary</td>
+                        <td class="frm-category">Diagnostics</td>
+                        <td class="frm-category">Medications</td>
+                        <td class="frm-category">Care Provision</td>
+                        <td class="frm-category">Request &amp; Response</td>
+                    </tr> 
+                    <tr class="frm-contents" height="80">
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                    </tr> 
+                    <tr class="frm-break"><td colspan="6"/></tr>
+                    <tr class="frm-group">
+                        <td rowspan="2" class="frm-group rotate"><div>Financial</div></td>
+                        <td class="frm-category">Support</td>
+                        <td class="frm-category">Billing</td>
+                        <td class="frm-category">Payment</td>
+                        <td class="frm-category">General</td>
+                        <td class="frm-null"/>
+                    </tr> 
+                    <tr class="frm-contents" height="80">
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                    </tr> 
+                    <tr class="frm-break"><td colspan="6"/></tr>
+                    <tr class="frm-group">
+                        <td rowspan="2" class="frm-group rotate"><div>Specialized</div></td>
+                        <td class="frm-category">Public Health &amp; Research</td>
+                        <td class="frm-category">Definitional Artifacts</td>
+                        <td class="frm-category">Clinical Decision Support</td>
+                        <td class="frm-category">Quality Reporting</td>
+                        <td class="frm-category">Testing</td>
+                    </tr> 
+                    <tr class="frm-contents" height="80">
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                        <td class="frm-null"/>
+                    </tr> 
+                    <tr class="frm-break"><td colspan="6"/></tr>
+                </table>
+            </div>
+      </div>
+      <div id="tabs-2">
+        <table width="100%">
+          <tr>
+            <th>Implementation guide profile</th>
+            <th>Implementation guide profile base</th>
+            <th>FHIR base resource</th>
+          </tr>
+          <tr>
+            <td class="frm-null"/>
+            <td class="frm-null"/>
+            <td class="frm-null"/>
+          </tr>
+        </table>
+      </div>
+  </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /row -->
+  </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+	<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+		<div class="container">  <!-- container -->
+		</div>  <!-- /container -->
+	</div>  <!-- /segment-post-footer -->
+    
+      <!-- JS and analytics only. -->
+      <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+  <!-- Analytics Below
+================================================== -->
+
+
+<script src="external/jquery/jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+try {
+  var currentTabIndex = sessionStorage.getItem('fhir-resourcelist-tab-index');
+}
+catch(exception){
+}
+
+if (!currentTabIndex)
+  currentTabIndex = '0';
+
+$( '#tabs' ).tabs({
+         active: currentTabIndex,
+         activate: function( event, ui ) {
+             var active = $('.selector').tabs('option', 'active');
+             currentTabIndex = ui.newTab.index();
+             document.activeElement.blur();
+             try {
+               sessionStorage.setItem('fhir-resourcelist-tab-index', currentTabIndex);
+             }
+             catch(exception){
+             }
+         }
+     });
+</script>
+</div>
+</div>
+</html>
