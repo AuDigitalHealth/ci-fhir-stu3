@@ -19,7 +19,7 @@
   fhir:StructureDefinition.title [ fhir:value "List of Medicine Items for a Patient"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-06-19T12:49:09+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-06-26T15:42:39+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -291,7 +291,7 @@
        fhir:Element.id [ fhir:value "List.meta.profile" ];
        fhir:ElementDefinition.path [ fhir:value "List.meta.profile" ];
        fhir:ElementDefinition.short [ fhir:value "Profiles this resource claims to conform to" ];
-       fhir:ElementDefinition.definition [ fhir:value "A list of profiles (references to [StructureDefinition](https://build.fhir.org/ig/hl7au/au-fhir-base/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](https://build.fhir.org/ig/hl7au/au-fhir-base/)." ];
+       fhir:ElementDefinition.definition [ fhir:value "A list of profiles (references to [StructureDefinition](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/)." ];
        fhir:ElementDefinition.comment [ fhir:value "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
@@ -544,7 +544,7 @@
        fhir:ElementDefinition.path [ fhir:value "List.extension" ];
        fhir:ElementDefinition.sliceName [ fhir:value "sourceRole" ];
        fhir:ElementDefinition.short [ fhir:value "Practitioner role that authored the list" ];
-       fhir:ElementDefinition.definition [ fhir:value "The entity (practitioner role) responsible for deciding what the contents of the list were. Where the list was created by a human, this is the same as the author of the list." ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifies the practitioner role responsible for the information in the resource (aka author), not necessarily who typed it in." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
@@ -555,7 +555,7 @@
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
-         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/list-source-role" ]
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/author-role" ]
        ];
        fhir:ElementDefinition.condition [
          fhir:value "ele-1";
@@ -587,6 +587,46 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 16;
+       fhir:Element.id [ fhir:value "List.extension:sourceRelatedPerson" ];
+       fhir:ElementDefinition.path [ fhir:value "List.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "sourceRelatedPerson" ];
+       fhir:ElementDefinition.short [ fhir:value "Related person that defined the list contents (aka Author)" ];
+       fhir:ElementDefinition.definition [ fhir:value "The entity (related person) responsible for deciding what the contents of the list were. Where the list was created by a human, this is the same as the author of the list." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ];
+         fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/author-related-person" ]
+       ];
+       fhir:ElementDefinition.condition [
+         fhir:value "ele-1";
+         fhir:index 0
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() | (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Element" ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
+         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+       ]
+     ], [
+       fhir:index 17;
        fhir:Element.id [ fhir:value "List.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "List.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
@@ -617,7 +657,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.id [ fhir:value "List.identifier" ];
        fhir:ElementDefinition.path [ fhir:value "List.identifier" ];
        fhir:ElementDefinition.short [ fhir:value "Business identifier" ];
@@ -643,7 +683,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.id [ fhir:value "List.status" ];
        fhir:ElementDefinition.path [ fhir:value "List.status" ];
        fhir:ElementDefinition.short [ fhir:value "current | retired | entered-in-error" ];
@@ -687,7 +727,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "status" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.id [ fhir:value "List.mode" ];
        fhir:ElementDefinition.path [ fhir:value "List.mode" ];
        fhir:ElementDefinition.short [ fhir:value "working | snapshot | changes" ];
@@ -731,7 +771,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "class" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.id [ fhir:value "List.title" ];
        fhir:ElementDefinition.path [ fhir:value "List.title" ];
        fhir:ElementDefinition.short [ fhir:value "Descriptive name for the list" ];
@@ -761,7 +801,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".title" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.id [ fhir:value "List.code" ];
        fhir:ElementDefinition.path [ fhir:value "List.code" ];
        fhir:ElementDefinition.short [ fhir:value "What the purpose of this list is" ];
@@ -812,7 +852,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "what" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.id [ fhir:value "List.subject" ];
        fhir:ElementDefinition.path [ fhir:value "List.subject" ];
        fhir:ElementDefinition.short [ fhir:value "If all resources have the same subject" ];
@@ -843,7 +883,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "who.focus" ]
        ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.id [ fhir:value "List.encounter" ];
        fhir:ElementDefinition.path [ fhir:value "List.encounter" ];
        fhir:ElementDefinition.short [ fhir:value "Context in which list created" ];
@@ -871,7 +911,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "context" ]
        ]
      ], [
-       fhir:index 24;
+       fhir:index 25;
        fhir:Element.id [ fhir:value "List.date" ];
        fhir:ElementDefinition.path [ fhir:value "List.date" ];
        fhir:ElementDefinition.short [ fhir:value "When the list was prepared" ];
@@ -901,7 +941,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "when.recorded" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 26;
        fhir:Element.id [ fhir:value "List.source" ];
        fhir:ElementDefinition.path [ fhir:value "List.source" ];
        fhir:ElementDefinition.short [ fhir:value "Practitioner referenced by list source role" ];
@@ -936,7 +976,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "who.author" ]
        ]
      ], [
-       fhir:index 26;
+       fhir:index 27;
        fhir:Element.id [ fhir:value "List.orderedBy" ];
        fhir:ElementDefinition.path [ fhir:value "List.orderedBy" ];
        fhir:ElementDefinition.short [ fhir:value "What order the list has" ];
@@ -973,7 +1013,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=COMP].sequenceNumber > 1" ]
        ]
      ], [
-       fhir:index 27;
+       fhir:index 28;
        fhir:Element.id [ fhir:value "List.note" ];
        fhir:ElementDefinition.path [ fhir:value "List.note" ];
        fhir:ElementDefinition.short [ fhir:value "Comments about the list" ];
@@ -996,7 +1036,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".inboundRelationship[typeCode=SUBJ].act.text" ]
        ]
      ], [
-       fhir:index 28;
+       fhir:index 29;
        fhir:Element.id [ fhir:value "List.entry" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry" ];
        fhir:ElementDefinition.short [ fhir:value "Medicine item with change information" ];
@@ -1033,7 +1073,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]" ]
        ]
      ], [
-       fhir:index 29;
+       fhir:index 30;
        fhir:Element.id [ fhir:value "List.entry.id" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.id" ];
        fhir:ElementDefinition.representation [
@@ -1059,7 +1099,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 30;
+       fhir:index 31;
        fhir:Element.id [ fhir:value "List.entry.extension" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.extension" ];
        fhir:ElementDefinition.slicing [
@@ -1084,7 +1124,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
        ]
      ], [
-       fhir:index 31;
+       fhir:index 32;
        fhir:Element.id [ fhir:value "List.entry.extension:changeDescription" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -1130,7 +1170,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 32;
+       fhir:index 33;
        fhir:Element.id [ fhir:value "List.entry.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
@@ -1165,7 +1205,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 33;
+       fhir:index 34;
        fhir:Element.id [ fhir:value "List.entry.flag" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.flag" ];
        fhir:ElementDefinition.short [ fhir:value "Medicine item change" ];
@@ -1202,7 +1242,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".outBoundRelationship[typeCode=COMP].target[classCode=OBS\"].value" ]
        ]
      ], [
-       fhir:index 34;
+       fhir:index 35;
        fhir:Element.id [ fhir:value "List.entry.deleted" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.deleted" ];
        fhir:ElementDefinition.short [ fhir:value "If this item is actually marked as deleted" ];
@@ -1232,7 +1272,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "added: .updateMode=(\"A\",\"AR\")  retained: .updateMode=\"NC\"  updated: .updateMode=\"R\"  deleted: .updateMode=\"D\"" ]
        ]
      ], [
-       fhir:index 35;
+       fhir:index 36;
        fhir:Element.id [ fhir:value "List.entry.date" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.date" ];
        fhir:ElementDefinition.short [ fhir:value "When item added to list" ];
@@ -1256,7 +1296,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".availabilityTime" ]
        ]
      ], [
-       fhir:index 36;
+       fhir:index 37;
        fhir:Element.id [ fhir:value "List.entry.item" ];
        fhir:ElementDefinition.path [ fhir:value "List.entry.item" ];
        fhir:ElementDefinition.short [ fhir:value "Medicine item" ];
@@ -1280,7 +1320,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".target or .role or .role.entity" ]
        ]
      ], [
-       fhir:index 37;
+       fhir:index 38;
        fhir:Element.id [ fhir:value "List.emptyReason" ];
        fhir:ElementDefinition.path [ fhir:value "List.emptyReason" ];
        fhir:ElementDefinition.short [ fhir:value "Why list is empty" ];

@@ -143,7 +143,7 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a>" : "Known Medicine",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a>" : true,
-  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2019-06-19T12:49:09+10:00",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2019-06-26T15:42:39+10:00",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "Australian Digital Health Agency",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -456,7 +456,7 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "brandName",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Medication brand name",
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The brand medication text name for an associated medication, this may be supplied if a coded brand name is not available.",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
@@ -498,7 +498,7 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "genericName",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Medication generic drug name",
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The generic medication text name for an associated medication, this may not be the same as the subject medication (prescribed, dispensed or stated) but may be used to provide an additional or equivalent drug name that is a generic medication concept.",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
@@ -537,18 +537,12 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
       },
       {
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.extension:strengthText",
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a>" : "draft"
-          }
-        ],
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a>" : "strengthText",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Medication strength text",
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A textual representation of medication strength to support systems with limited atomic ingredient data support.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "An Extension",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "DomainResource.extension",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
@@ -556,32 +550,239 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.profile">profile</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-strength-text"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.condition">condition</a>" : [
-          "ele-1"
-        ],
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() | (children().count() &gt; id.count())",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Element"
-          },
-          {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Extension"
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
           }
         ],
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
+      },
+      {
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.extension:strengthText.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension.id",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "xml:id (or equivalent in JSON)",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.extension:strengthText.extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension.extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional Content defined by implementations",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.extension:strengthText.url",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension.url",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "identifies the meaning of the extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Source of the definition for the extension code - a logical name or a URL.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Extension.url",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.extension:strengthText.value[x]",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.extension.value[x]",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Value of extension",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Extension.value[x]",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "base64Binary"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "boolean"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "code"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "date"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "dateTime"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "decimal"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "id"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "instant"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "integer"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "markdown"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "oid"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "positiveInt"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "string"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "time"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "unsignedInt"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "uri"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Address"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Age"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Annotation"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Attachment"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "CodeableConcept"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Coding"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "ContactPoint"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Count"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Distance"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Duration"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "HumanName"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Money"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Period"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Quantity"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Range"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Ratio"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "SampledData"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Signature"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Timing"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Meta"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        ]
       },
       {
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.modifierExtension",
@@ -636,42 +837,42 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-tpuu",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT TPUU valueset membership required",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes'",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Medication.code"
           },
           {
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-tpp",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT TPU valueset membership required",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpp-codes'",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Medication.code"
           },
           {
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-tp",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT TP valueset membership required",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='BPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tp-codes'",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Medication.code"
           },
           {
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-mpuu",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT MPUU valueset membership required",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPDSF').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpuu-codes'",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Medication.code"
           },
           {
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-mpp",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT MPP valueset membership required",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPG').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mpp-codes'",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Medication.code"
           },
           {
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "inv-amt-mp",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "AMT MP valueset membership required",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extention.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').exists() implies coding.where(system='http://snomed.info/sct' and extension.where(url='http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding='UPD').first().code in 'http://hl7.org.au/fhir/ValueSet/amt-mp-codes'",
             "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "Medication.code"
           },
           {
@@ -1562,7 +1763,7 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
       {
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "Medication.form",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "Medication.form",
-        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "powder | tablets | capsule + ",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "powder | tablets | capsule +",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Describes the form of the item.  Powder; tablets; capsule.",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form.",
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
@@ -2960,7 +3161,7 @@ Raw <a href="StructureDefinition-medication-known-1.json" download>json</a>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jun 19, 2019 12:49+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jun 26, 2019 15:42+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
