@@ -417,12 +417,429 @@ The table below matches the data items to the corresponding supported element in
             </tfoot>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Individual's address (optional)</td>
+                    <td>028640</td>
+                    <td>Patient.address</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.address</td>
+                </tr>  
+                <tr>
+                    <td>Individual's electronic communication details (optional)</td>
+                    <td>024042</td>
+                    <td>Patient.telecom</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.telecom</td>
+                </tr> 
+                <tr>
+                    <td>Individual (subject of care)</td>
+                    <td>027984</td>
+                    <td>Patient</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier)</td>
+                </tr>
+                <tr>
+                    <td>Individual Healthcare Identifier (mandatory)</td>
+                    <td>022082</td>
+                    <td>Patient.identifier</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.identifier</td>
+                </tr>
+                <tr>
+                    <td>Individual's title (optional)</td>
+                    <td>022081</td>
+                    <td>Patient.name</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.name</td>
+                </tr>                   
+                <tr>
+                    <td>Individual's given name (optional)</td>
+                    <td>023056</td>
+                    <td>Patient.name</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.name</td>
+                </tr>
+                 <tr>
+                    <td>Individual's family name (mandatory)</td>
+                    <td>023058</td>
+                    <td>Patient.name</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.name</td>
                 </tr>    
-            </tbody>
+                  <tr>
+                    <td>Individual's name suffix (optional)</td>
+                    <td>023059</td>
+                   <td>Patient.name</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.name</td>
+                </tr>  
+                <tr>
+                    <td>Individual's gender (mandatory)</td>
+                    <td>027983</td>
+                    <td>Patient.gender</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.gender</td>
+                </tr>  
+                <tr>
+                    <td>Individual's sex (optional)</td>
+                    <td>028570</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Individual's date of birth (mandatory)</td>
+                    <td>023060</td>
+                    <td>Patient.birthDate</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.birthDate</td>
+                </tr>  
+                <tr>
+                    <td rowspan="2">Date of birth accuracy indicator (optional)</td>
+                    <td>024026</td>
+                    <td rowspan="2">Patient.birthDate.date-accuracy-indicator</td>
+                    <td rowspan="2">Composition.subject(Patient as Patient with Mandatory Identifier).Patient.date-accuracy-indicator</td>
+                </tr>  
+                <tr>
+                    <td>027005</td>
+                </tr>  
+                <tr>
+                    <td>Indigenous status (mandatory)</td>
+                    <td>024033</td>
+                    <td>Patient.indigenous-status</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.indigenous-status</td>
+                </tr>  
+                <tr>
+                    <td>Document author (mandatory)</td>
+                    <td>027985</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Healthcare provider organisation name (mandatory)</td>
+                    <td>023070</td>
+                    <td>Organization.name</td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Healthcare provider individual's workplace address (mandatory)</td>
+                    <td>024891</td>
+                    <td>Organization.address</td>
+                    <td></td>
+                </tr>  
+               <tr>
+                    <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
+                    <td>024036</td>
+                    <td>Organization.telecom</td>
+                    <td></td>
+                </tr>  
+               <tr>
+                    <td>Healthcare Provider Identifier-Individual (optional)</td>
+                    <td>024601</td>
+                    <td>Practitioner.identifier</td>
+                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier</td>
+                </tr>  
+                <tr>
+                    <td>Healthcare Provider Identifier-Organisation (optional)</td>
+                    <td>024602</td>
+                    <td></td>
+                    <td></td>
+                </tr>                   
+                <tr>
+                    <td>Healthcare provider's title (optional)</td>
+                    <td>023061</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr> 
+                <tr>
+                    <td>Healthcare provider given name (optional)</td>
+                    <td>023062</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr> 
+                <tr>
+                    <td>Healthcare provider family name (mandatory)</td>
+                    <td>023064</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Healthcare provider name suffix (optional)</td>
+                    <td>023065</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Primary healthcare provider (optional)</td>
+                    <td>028028</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                <tr>
+                    <td>Healthcare Provider Identifier-Individual (optional)</td>
+                    <td>024601</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Healthcare Provider Identifier-Organisation (optional)</td>
+                    <td>024602</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Healthcare provider's title (optional)</td>
+                    <td>023061</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Healthcare provider given name (optional)</td>
+                    <td>023062</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+              <tr>
+                    <td>Healthcare provider family name (optional)</td>
+                    <td>028638</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr> 
+                 <tr>
+                    <td>Healthcare provider name suffix (optional)</td>
+                    <td>023065</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr>      
+                 <tr>
+                    <td>Healthcare provider organisation name (mandatory)</td>
+                    <td>023070</td>
+                    <td>Practitioner.name</td>
+                    <td></td>
+                </tr>  
+                 <tr>
+                    <td>Healthcare provider individual's workplace address (optional)</td>
+                    <td>024035</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
+                    <td>024036</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Healthcare provider professional role (mandatory)</td>
+                    <td>024040</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                                 <tr>
+                    <td rowspan="2">Healthcare setting (mandatory)</td>
+                    <td>028435</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+               <tr>
+                   <td>028534</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Additional comments (optional)</td>
+                    <td>028403</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Dose Administration Aid medicines present (mandatory)</td>
+                    <td>028441</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Allergy and Adverse Reaction (optional)</td>
+                    <td>028631</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Substance/Agent (optional)</td>
+                    <td>028436</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Reaction type (optional)</td>
+                    <td>028437</td>
+                    <td>AllergyIntolerance.type</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.type</td>
+                </tr>  
+                <tr>
+                    <td>Reaction (optional)</td>
+                    <td>028438</td>
+                    <td>AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.manifestation</td>
+                </tr>  
+                <tr>
+                    <td>Reaction Onset Date (optional)</td>
+                    <td>028439</td>
+                    <td>AllergyIntolerance.onset</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.onset</td>
+                </tr>  
+               <tr>
+                    <td>Medicine Item (mandatory)</td>
+                    <td>028632</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td rowspan="2">Medicine identifier (mandatory)</td>
+                    <td>028633</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>028634</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Active Ingredient (optional)</td>
+                    <td>028014</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Brand name (optional)</td>
+                    <td>028442</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Medicine strength (optional)</td>
+                    <td>028635</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dose form (optional)</td>
+                    <td>028026</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Route (optional)</td>
+                    <td>028443</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Direction (mandatory)</td>
+                    <td>028021</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Medicine purpose (optional)</td>
+                    <td>028016</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Expected end date (optional)</td>
+                    <td>028445</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Special instructions (optional)</td>
+                    <td>028446</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td rowspan="2">Medicine image (optional)</td>
+                    <td>028018</td>
+                    <td></td>
+                    <td></td>
+                </tr>               
+                <tr>
+                    <td>028535</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Physical description (optional)</td>
+                    <td>028020</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td rowspan="3">Medicine status (optional)</td>
+                    <td>028017</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>028027</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>028636</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td rowspan="2">Medicine identifier (mandatory)</td>
+                    <td>028633</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>028634</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Reason for ceasing medicine (optional)</td>
+                    <td>028447</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Ceased date (optional)</td>
+                    <td>028629</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Ceased medicines (mandatory)</td>
+                    <td>028636</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Extensions not permitted (mandatory)</td>
+                    <td>028637</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                <tr>
+                    <td>Document version number (mandatory)</td>
+                    <td>023068</td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+                                <tr>
+                    <td>Document instance identifier (mandatory)</td>
+                    <td>023067</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Date and time of document creation (mandatory)</td>
+                    <td>024025</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+                                <tr>
+                    <td>Document type (mandatory)</td>
+                    <td>024027</td>
+                    <td></td>
+                    <td></td>
+                </tr> 
+     </tbody>
 <table>                                    
                                     
                                                             
