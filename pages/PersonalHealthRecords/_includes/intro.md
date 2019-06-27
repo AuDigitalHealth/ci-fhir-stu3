@@ -73,11 +73,11 @@ This implementation guide and related artefacts are technical in nature and the 
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
-|[<a name="DH2019k">DH2019k</a>]| Australian Digital Health Agency, Not yet published, Personal Health Notes CDA implementation guide, Version 2.0.|
-||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|
+<!--|[<a name="DH2019k">DH2019k</a>]| Australian Digital Health Agency, Not yet published, Personal Health Notes CDA implementation guide, Version 2.0.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|-->
 
-|[<a name="DH2019j">DH2019j</a>]| Australian Digital Health Agency, Not yet published, Personal Health Summary CDA implementation guide, Version 2.0.|
-||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|
+<!--|[<a name="DH2019j">DH2019j</a>]| Australian Digital Health Agency, Not yet published, Personal Health Summary CDA implementation guide, Version 2.0.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents](https://developer.digitalhealth.gov.au/specifications/clinical-documents)|-->
 
 |[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019.|
 ||[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
