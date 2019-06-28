@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+    <id value="c7dfc1e4-e2e0-4542-b93a-be297efb0f95"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <p><b>Allergy Intolerance</b>: Allergic reaction to adhesive tape</p>
+            <p><b>Substance</b>: Adhesive tape</p>
+            <p><b>Reaction</b>: Urticaria</p>
+            <p><b>Clinical status</b>: active</p>
+            <p><b>Verification status</b>: confirmed</p>
+            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:
+                307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo
+                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not
+                Torres Strait Islander origin</p>
+        </div>
+    </text>
+    <clinicalStatus value="active"/>
+    <verificationStatus value="confirmed"/>
+    <type value="allergy"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="418325008"/>
+            <display value="Allergic reaction to adhesive"/>
+        </coding>
+        <text value="Allergic reaction to adhesive tape"/>
+    </code>
+    <patient>
+        <reference value="Patient/d422d1da-6280-4335-8795-b101a61134e4"/>
+    </patient>
+    <reaction>
+        <substance>
+            <text value="Adhesive tape"/>
+        </substance>
+        <manifestation>
+            <text value="Urticaria"/>
+        </manifestation>
+    </reaction>
+</AllergyIntolerance>

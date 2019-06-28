@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="fed6e796-ac88-459c-af61-de718a48423d"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <p><b>Procedure</b>: Dressing of wound</p>
+            <p><b>Procedure status</b>: completed</p>
+            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:
+                307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo
+                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not
+                Torres Strait Islander origin</p>
+            <p><b>Procedure performed date</b>: 31/3/2019 15:30</p>
+            <p><b>Procedure reason</b>: condition - Puncture wound from stepping on a
+                rusty nail, sole of left foot</p>
+            <p><b>Procedure note</b>: Dressing of puncture wound sole of left foot,
+                caused by stepping on a rusty nail</p>
+            <p><b>Procedure note</b>: Advised to present in 2 days to the usual GPs
+                clinic for a change of dressings.</p>
+        </div>
+    </text>
+    <status value="completed"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="182531007"/>
+            <display value="Dressing of wound"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/d422d1da-6280-4335-8795-b101a61134e4"/>
+    </subject>
+    <performedDateTime value="2019-03-31T15:30:00+10:00"/>
+    <!-- reference to the condition above re 'foot wound due to rusty nail' -->
+    <reasonReference>
+        <reference value="Condition/e11fd841-5200-4657-9260-3a041a98ae31"/>
+    </reasonReference>
+    <note>
+        <text
+            value="Dressing of puncture wound sole of left foot, caused by stepping on a
+            rusty nail."
+        />
+    </note>
+    <note>
+        <text
+            value="Advised to present in 2 days to the usual GPs clinic 
+            for a change of dressings."
+        />
+    </note>
+</Procedure>

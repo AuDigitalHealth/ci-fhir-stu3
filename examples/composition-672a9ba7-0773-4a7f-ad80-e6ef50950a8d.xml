@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+    <id value="672a9ba7-0773-4a7f-ad80-e6ef50950a8d"/>
+    <meta>
+        <lastUpdated value="2019-03-31T15:38:00+10:00"/>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1"
+        />
+    </meta>
+    <language value="en-AU"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <h2>Event Summary for Billy Tjakamarra on 31 Mar 2019</h2>
+            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:
+                307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo
+                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not
+                Torres Strait Islander origin</p>
+            <p><b>Document status</b>: final</p>
+            <p><b>Document date</b>: 31/03/2019 15:38</p>
+            <p><b>Document author</b>: Dr Sonia Strempel (OFFICIAL); HPI-I =
+                8003610000000000; Prescriber Number = 459999
+                sonia.strempel@mail.topendmedicalclinic.com.au (WORK)</p>
+            <p><b>Document author role</b>: General Practitioner Registrar; Medicare
+                Provider Number = 5544887B, HPI-I = 8003610000000000; Top End Medical
+                Clinic</p>
+            <p><b>Document attester (legal)</b>: Dr Sonia Strempel (HPI-I =
+                8003610000000000); time: 31/03/2019 15:39 AM</p>
+            <p><b>Document custodian</b>: Top End Medical Clinic; HPI-O =
+                8003621566684455; ACN = 123456789; email:
+                admin@mail.topendmedicalclinic.com.au (WORK); phone: (08) 8423 9999
+                (WORK); address: 102 Rowling Street, Casuarina NT 0810 (physical)</p>
+        </div>
+    </text>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
+        <valueReference>
+            <reference value="PractitionerRole/e99357bd-b6ad-4ae7-9d99-27cb929e48af"/>
+        </valueReference>
+    </extension>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="a1a25cd7-6553-4a47-9c5c-399050a80f9d"/>
+    </identifier>
+    <status value="final"/>
+    <type>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="34133-9"/>
+        </coding>
+    </type>
+    <subject>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://hl7.org/fhir/v2/0203"/>
+                    <code value="PEN"/>
+                    <display value="Pension Number"/>
+                </coding>
+                <text value="Pensioner Concession Card Number"/>
+            </type>
+            <system
+                value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
+            <value value="307111942H"/>
+        </identifier>
+    </subject>
+    <encounter>
+        <reference value="Encounter/cead9124-f6d8-47ac-b785-8e0fcab3dc13"/>
+    </encounter>
+    <date value="2019-03-31T15:38:00+10:00"/>
+    <author>
+        <reference value="Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a"/>
+    </author>
+    <title value="Event Summary for Billy Tjakamarra on 31 Mar 2019"/>
+    <attester>
+        <mode value="legal"/>
+        <time value="2019-03-31T15:39:00+10:00"/>
+        <party>
+            <reference value="Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a"/>
+        </party>
+    </attester>
+    <custodian>
+        <reference value="Organization/0903c2ea-252f-4b03-85f4-2ddcf046fbc3"/>
+    </custodian>
+    
+    <!-- Section: Event Overview -->
+    <section>
+        <title value="Event Details"/>
+        <code>
+            <coding>
+                <system
+                    value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+                <code value="101.16672"/>
+            </coding>
+        </code>
+        <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+                <p><b>Event description</b>: Patient presented with open injury to sole
+                    of left foot caused by stepping on rusty nail yesterday. Wound red
+                    and swollen, no calf muscle tenderness, no coughing nor chest pain
+                    which excludes pulmonary embolism. Patient has an existing allergy
+                    to adhesive tape, which manifests as urticaria. Patient was given
+                    booster dose of anti tetanus and prescribed amoxicillin 500mg 3
+                    times a day. Wound was attended. Advised to present in 2 days to the
+                    usual GPs clinic for a change of dressings.</p>
+                <p><b>Event status</b>: finished</p>
+                <p><b>Event subject</b>: Billy Tjakamarra; Pensioner Concession Card
+                    Number: 307111942H; gender = male; birth date = 23/04/1954; address
+                    = 78 Bamboo Street, Nightcliff NT, 0810; indigenous status =
+                    Aboriginal but not Torres Strait Islander origin</p>
+                <p><b>Event start</b>: 31/03/2019 15:20</p>
+                <p><b>Event end</b>: 31/03/2019 15:40</p>
+            </div>
+        </text>
+        <entry>
+            <reference value="Encounter/cead9124-f6d8-47ac-b785-8e0fcab3dc13"/>
+        </entry>
+    </section>
+    
+    <!-- Section: Allergies -->
+    <section>
+        <title value="Allergies and Adverse Reactions"/>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="48765-2"/>
+                <display value="Allergies and adverse reactions Document"/>
+            </coding>
+        </code>
+        <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+                <p>Patient has an existing allergy to adhesive tape, which manifests as
+                    urticaria</p>
+            </div>
+        </text>
+        <entry>
+            <reference value="AllergyIntolerance/c7dfc1e4-e2e0-4542-b93a-be297efb0f95"/>
+        </entry>
+    </section>
+    
+    <!-- Section: Medications -->
+    <section>
+        <title value="Medications"/>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="10160-0"/>
+                <display value="History of Medication use Narrative"/>
+            </coding>
+        </code>
+        <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+                <table class="grid">
+                    <tr>
+                        <th>flag</th>
+                        <th>item</th>
+                        <th>dosage</th>
+                        <th>status</th>
+                        <th>change-description</th>
+                    </tr>
+                    <tr>
+                        <td>New prescription</td>
+                        <td>amoxicillin 500 mg capsule</td>
+                        <td>1 capsule three times a day</td>
+                        <td>intended</td>
+                        <td>prevention of wound infection</td>
+                    </tr>
+                </table>
+            </div>
+        </text>
+        <entry>
+            <reference value="List/e6e32a80-a307-4833-b997-1e6e7b3abbb3"/>
+        </entry>
+    </section>
+    
+    <!-- Section: Medical History -->
+    <section>
+        <title value="Medical History"/>
+        <code>
+            <coding>
+                <system
+                    value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+                <code value="101.16117"/>
+            </coding>
+        </code>
+        <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+                <p><b>Condition</b>: Puncture wound from stepping on a rusty nail, sole
+                    of left foot; onset = 30/03/2019</p>
+                <p><b>Procedure</b>: dressing of wound; performed = 31/03/2019</p>
+            </div>
+        </text>
+        <!-- Condition: foot wound due to stepping on a rusty nail -->
+        <entry>
+            <reference value="Condition/e11fd841-5200-4657-9260-3a041a98ae31"/>
+        </entry>
+        <!-- Procedure: wound dressing -->
+        <entry>
+            <reference value="Procedure/fed6e796-ac88-459c-af61-de718a48423d"/>
+        </entry>
+    </section>
+    
+    <!-- Section: Immunisations -->
+    <section>
+        <title value="Immunisations"/>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="11369-6"/>
+            </coding>
+        </code>
+        <text>
+            <status value="additional"/>
+            <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+                <p><b>Vaccine</b>: Boostrix injection, 0.5 mL syringe</p>
+                <p><b>Date given</b>: 31/03/2019 15:35</p>
+            </div>
+        </text>
+        <entry>
+            <reference value="Immunization/d2b71673-d1a5-4e1d-9b25-bba47aa26036"/>
+        </entry>
+    </section>
+    
+</Composition>
