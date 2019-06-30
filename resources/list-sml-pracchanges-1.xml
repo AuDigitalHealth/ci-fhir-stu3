@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="list-meds-current-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1"/>
+  <id value="list-sml-pracchanges-1"/>
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1"/>
   <version value="1.0.0"/>
-  <name value="ListMedicineItems"/>
-  <title value="List of Medicine Items for a Patient"/>
+  <name value="ListMedicineItemsChanges"/>
+  <title value="List of Medicine Items for a Patient with Change Information"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Australian Digital Health Agency"/>
@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description
-    value="This profile provides a generic structure for providing list of medicines for a patient.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element"/>
+    value="The purpose of this profile is to provide a practitioner authored list of medicine items for a patient with change information.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element"/>
   <copyright
     value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
@@ -39,9 +39,9 @@
         <key value="inv-dh-lst-01"/>
         <severity value="error"/>
         <human
-          value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1'"/>
+          value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1'"/>
         <expression
-          value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1').exists()"
+          value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1').exists()"
         />
       </constraint>
     </element>

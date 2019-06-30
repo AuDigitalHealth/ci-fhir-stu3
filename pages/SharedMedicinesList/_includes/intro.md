@@ -120,7 +120,9 @@ This document and related artefacts are technical in nature and the audience is 
 
 |[<a name="DH2019x">DH2019x</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
 
-|[<a name="DH2019xx">DH2019xx</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
+|[<a name="DH2019xx">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
+
+|[<a name="DH2019xx">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
 |[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
 | |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|

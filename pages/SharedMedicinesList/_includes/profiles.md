@@ -70,7 +70,7 @@
                                 <li><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></li>
                            </ul>
                            <ul class="frm-set">
-                                <li><a href="StructureDefinition-list-meds-current-1.html">List (List of Medicine Items for a Patient)</a></li>
+                                <li><a href="StructureDefinition-list-sml-pracchanges-1.html">List (List of Medicine Items for a Patient)</a></li>
                            </ul>
                         </td>
                         <td class="frm-null"/>
@@ -177,7 +177,7 @@
   </tr>
   
    <tr>
-        <td><a href="StructureDefinition-list-meds-current-1.html">List (List of Medicine Items)</a></td>
+        <td><a href="StructureDefinition-list-sml-pracchanges-1.html">List (List of Medicine Items)</a></td>
         <td><a href="http://hl7.org.au/fhir/StructureDefinition/au-medlist">AU Medicine List</a></td>
         <td><a href="http://hl7.org/fhir/STU3/list.html">List</a></td>
   </tr> 

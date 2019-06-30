@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d006][DH2019xx].
+This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d006][DH2019m].
 
 The table below matches the data items to the corresponding supported element in the {{site.data.fhir.igName}} profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
@@ -473,8 +473,8 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Individual's sex (optional)</td>
                     <td>028570</td>
-                    <td></td>
-                    <td></td>
+                    <td>n/a</td>
+                    <td>n/a</td>
                 </tr>  
                 <tr>
                     <td>Individual's date of birth (mandatory)</td>
@@ -500,20 +500,20 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Document author (mandatory)</td>
                     <td>027985</td>
-                    <td></td>
-                    <td></td>
+                    <td>Practitioner</td>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier)</td>
                 </tr>  
                 <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td></td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.organization(Organization as BaseOrganization).Organization.name</td>
                 </tr>  
                 <tr>
                     <td>Healthcare provider individual's workplace address (mandatory)</td>
                     <td>024891</td>
                     <td>Organization.address</td>
-                    <td></td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.organization(Organization as Base Organization).Organization.address</td>
                 </tr>  
                <tr>
                     <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
@@ -522,100 +522,115 @@ The table below matches the data items to the corresponding supported element in
                     <td></td>
                 </tr>  
                <tr>
+                    <td rowspan="2">Healthcare Provider Identifier-Individual (optional)</td>
+                    <td rowspan="2">024601</td>
+                    <td rowspan="2">Practitioner.identifier</td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier</td>
+                </tr>  
+                <tr>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier</td>
+                </tr> 
+                <tr>
+                    <td>Healthcare Provider Identifier-Organisation (optional)</td>
+                    <td>024602</td>
+                    <td>Organization.identifier</td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.organization(Orgnization as Base Organization).Organization.identifier</td>
+                </tr>                   
+                <tr>
+                    <td rowspan="2">Healthcare provider's title (optional)</td>
+                    <td rowspan="2">023061</td>
+                    <td rowspan="2">Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr> 
+                 <tr>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr> 
+                <tr>
+                    <td rowspan="2">Healthcare provider given name (optional)</td>
+                    <td rowspan="2">023062</td>
+                    <td rowspan="2">Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr>   
+                <tr>
+                    <td rowspan="2">Healthcare provider family name (mandatory)</td>
+                    <td rowspan="2">023064</td>
+                    <td rowspan="2">Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr> 
+                 <tr>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr>                
+                <tr>
+                    <td rowspan="2">Healthcare provider name suffix (optional)</td>
+                    <td rowspan="2">023065</td>
+                    <td rowspan="2">Practitioner.name</td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr> 
+                 <tr>
+                    <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
+                </tr> 
+                tr>
+                    <td>Primary healthcare provider (optional)</td>
+                    <td>028028</td>
+                    <td>Patient.generalPractitioner</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner</td>
+                </tr> 
+                <tr>
                     <td>Healthcare Provider Identifier-Individual (optional)</td>
                     <td>024601</td>
                     <td>Practitioner.identifier</td>
-                    <td>Composition.composition-author-role(PractitionerRole as Base PractitionerRole).PractitionerRole.practitioner(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier</td>
-                </tr>  
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.identifier</td>
+                </tr> 
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (optional)</td>
                     <td>024602</td>
                     <td></td>
                     <td></td>
-                </tr>                   
-                <tr>
+                </tr> 
+               <tr>
                     <td>Healthcare provider's title (optional)</td>
                     <td>023061</td>
                     <td>Practitioner.name</td>
-                    <td></td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.name</td>
                 </tr> 
-                <tr>
+                 <tr>
                     <td>Healthcare provider given name (optional)</td>
                     <td>023062</td>
                     <td>Practitioner.name</td>
-                    <td></td>
-                </tr> 
-                <tr>
-                    <td>Healthcare provider family name (mandatory)</td>
-                    <td>023064</td>
-                    <td>Practitioner.name</td>
-                    <td></td>
-                </tr> 
-                                <tr>
-                    <td>Healthcare provider name suffix (optional)</td>
-                    <td>023065</td>
-                    <td>Practitioner.name</td>
-                    <td></td>
-                </tr> 
-                                <tr>
-                    <td>Primary healthcare provider (optional)</td>
-                    <td>028028</td>
-                    <td></td>
-                    <td></td>
-                </tr> 
-                <tr>
-                    <td>Healthcare Provider Identifier-Individual (optional)</td>
-                    <td>024601</td>
-                    <td></td>
-                    <td></td>
-                </tr> 
-                                <tr>
-                    <td>Healthcare Provider Identifier-Organisation (optional)</td>
-                    <td>024602</td>
-                    <td></td>
-                    <td></td>
-                </tr> 
-                                <tr>
-                    <td>Healthcare provider's title (optional)</td>
-                    <td>023061</td>
-                    <td></td>
-                    <td></td>
-                </tr> 
-                                <tr>
-                    <td>Healthcare provider given name (optional)</td>
-                    <td>023062</td>
-                    <td></td>
-                    <td></td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.name</td>
                 </tr> 
               <tr>
                     <td>Healthcare provider family name (optional)</td>
                     <td>028638</td>
                     <td>Practitioner.name</td>
-                    <td></td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.name</td>
                 </tr> 
                  <tr>
                     <td>Healthcare provider name suffix (optional)</td>
                     <td>023065</td>
                     <td>Practitioner.name</td>
-                    <td></td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.name</td>
                 </tr>      
                  <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
-                    <td>Practitioner.name</td>
-                    <td></td>
+                    <td>Organization.name</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Organization as Base Organization).name</td>
                 </tr>  
                  <tr>
                     <td>Healthcare provider individual's workplace address (optional)</td>
                     <td>024035</td>
-                    <td></td>
-                    <td></td>
+                    <td>Practitioner.address</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.address</td>
                 </tr>  
                 <tr>
                     <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td>024036</td>
-                    <td></td>
-                    <td></td>
+                    <td>Practitioner.telecom</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Practitioner as Base Practitioner).Practitioner.telecom</td>
                 </tr>  
                 <tr>
                     <td>Healthcare provider professional role (mandatory)</td>
@@ -623,7 +638,7 @@ The table below matches the data items to the corresponding supported element in
                     <td></td>
                     <td></td>
                 </tr>  
-                                 <tr>
+                <tr>
                     <td rowspan="2">Healthcare setting (mandatory)</td>
                     <td>028435</td>
                     <td></td>
@@ -637,22 +652,30 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Additional comments (optional)</td>
                     <td>028403</td>
-                    <td></td>
+                    <td>List.note</td>
                     <td></td>
                 </tr>  
                 <tr>
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
-                    <td></td>
-                    <td></td>
+                    <td>List.note</td>
+                    <td>Composition.section(Medications).entry(List as ).List.note</td>
                 </tr>  
                 <tr>
-                    <td>Allergy and Adverse Reaction (optional)</td>
-                    <td>028631</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="3">Allergy and Adverse Reaction (optional)</td>
+                    <td rowspan="3">028631</td>
+                    <td>section(Allergies)</td>
+                    <td>Composition.section(Allergies)</td>
                 </tr>  
                 <tr>
+                    <td>Composition.section(Allergies).entry</td>
+                    <td>Composition.section(Allergies).entry</td>
+                </tr> 
+                <tr>
+                    <td>Composition.section(Allergies).emptyReason</td>
+                    <td>Composition.section(Allergies).emptyReason</td>
+                </tr>
+               <tr>
                     <td>Substance/Agent (optional)</td>
                     <td>028436</td>
                     <td></td>
@@ -677,16 +700,19 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.onset</td>
                 </tr>  
                <tr>
-                    <td>Medicine Item (mandatory)</td>
-                    <td>028632</td>
-                    <td></td>
-                    <td></td>
-                </tr>  
+                    <td rowspan="">Medicine Item (mandatory)</td>
+                    <td rowspan="">028632</td>
+                    <td>Composition.section(Medications)</td>
+                    <td>Composition.section(Medications)</td>
+                </tr>
+                    <td>Composition.section(Medications)</td>
+                    <td>Composition.section(Medications).entry</td>
+                </tr>    
                 <tr>
                     <td rowspan="2">Medicine identifier (mandatory)</td>
                     <td>028633</td>
-                    <td></td>
-                    <td></td>
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as TBD).List.entry(MedicationStatement as Detailed Statement of Known Medicine).MedicationStatement.medication(Medication as Known Medicine).Medication.code</td>
                 </tr>
                 <tr>
                     <td>028634</td>

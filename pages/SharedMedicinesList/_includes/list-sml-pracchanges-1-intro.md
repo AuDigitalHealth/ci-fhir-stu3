@@ -1,4 +1,4 @@
-### List of Medicine Items for a Patient with Chnage Information *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+### List of Medicine Items for a Patient with Change Information *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 

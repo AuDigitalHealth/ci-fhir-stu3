@@ -16,6 +16,7 @@ For the supported scenarios in this implementation guide:
   * type
   * reason
 * If provided, type is expected to support categorisation of the event from which the medicines list was generated, for example a code indicating a 'home medicines review' or 'pharmacist medicines review'.
+* Period is expected to be equal to or prior to the Composition date and the List date.
 
 When a shared medicines list is a PSML
 
