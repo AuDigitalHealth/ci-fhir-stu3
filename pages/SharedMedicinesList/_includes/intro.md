@@ -111,6 +111,33 @@ This document and related artefacts are technical in nature and the audience is 
     </tbody>
 </table> 
 
+## Known issues
+This section lists known issues with this specification at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.
+
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Reference</th>
+    <th>Description</th>
+  </tr>
+   <tr>
+    <td>Composition.information-recipient</td>
+    <td>A FHIRPath expression for the invariant inv-dh-cmp-11 is required. This is yet to be created.</td>
+  </tr>
+  <tr>
+    <td>Medication</td>
+    <td>medication-strength-text extension has been removed from the HL7 Au STU3 build.</td>
+  </tr>
+  <tr>
+    <td>Terminology publication</td>
+    <td>Encounter type</td>
+  </tr>
+    <tr>
+    <td>Examples</td>
+    <td>Examples are yet to be done.</td>
+  </tr>
+ </tbody>
+</table> 
 
 
 ## References
