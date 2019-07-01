@@ -18,7 +18,7 @@
             <Composition xmlns="http://hl7.org/fhir">
                 <id value="672a9ba7-0773-4a7f-ad80-e6ef50950a8d"/>
                 <meta>
-                    <lastUpdated value="2019-03-31T15:38:00+10:00"/>
+                    <lastUpdated value="2019-03-31T15:40:00+10:00"/>
                     <profile
                         value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1"
                     />
@@ -41,7 +41,7 @@
                             Provider Number = 5544887B, HPI-I = 8003610000000000; Top End Medical
                             Clinic</p>
                         <p><b>Document attester (legal)</b>: Dr Sonia Strempel (HPI-I =
-                            8003610000000000); time: 31/03/2019 15:39 AM</p>
+                            8003610000000000); time: 31/03/2019 15:39</p>
                         <p><b>Document custodian</b>: Top End Medical Clinic; HPI-O =
                             8003621566684455; ACN = 123456789; email:
                             admin@mail.topendmedicalclinic.com.au (WORK); phone: (08) 8423 9999
@@ -55,7 +55,7 @@
                 </extension>
                 <identifier>
                     <system value="urn:ietf:rfc:3986"/>
-                    <value value="a1a25cd7-6553-4a47-9c5c-399050a80f9d"/>
+                    <value value="bfb3dd71-e5ee-4df6-a315-9f1cbd509cd7"/>
                 </identifier>
                 <status value="final"/>
                 <type>
@@ -170,17 +170,15 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
                             <table class="grid">
                                 <tr>
-                                    <th>flag</th>
+                                    <th>change type</th>
                                     <th>item</th>
                                     <th>dosage</th>
-                                    <th>status</th>
-                                    <th>change-description</th>
+                                    <th>change description</th>
                                 </tr>
                                 <tr>
                                     <td>New prescription</td>
                                     <td>amoxicillin 500 mg capsule</td>
                                     <td>1 capsule three times a day</td>
-                                    <td>intended</td>
                                     <td>prevention of wound infection</td>
                                 </tr>
                             </table>
@@ -599,6 +597,7 @@
                             not Torres Strait Islander origin</p>
                         <p><b>Encounter start</b>: 31/03/2019 15:20</p>
                         <p><b>Encounter end</b>: 31/03/2019 15:40</p>
+                        <p><b>Encounter reason</b>: Nail wound of sole of foot</p>
                     </div>
                 </text>
                 <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
@@ -618,6 +617,13 @@
                     <start value="2019-03-31T15:20:00+10:00"/>
                     <end value="2019-03-31T15:40:00+10:00"/>
                 </period>
+                <reason>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="283680004"/>
+                        <display value="Nail wound of sole of foot"/>
+                    </coding>
+                </reason>
             </Encounter>
         </resource>
     </entry>
@@ -644,17 +650,15 @@
                         <p><b>Medicines list</b>:</p>
                         <table class="grid">
                             <tr>
-                                <th>flag</th>
+                                <th>change type</th>
                                 <th>item</th>
                                 <th>dosage</th>
-                                <th>status</th>
-                                <th>change-description</th>
+                                <th>change description</th>
                             </tr>
                             <tr>
                                 <td>New prescription</td>
                                 <td>amoxicillin 500 mg capsule</td>
                                 <td>1 capsule three times a day</td>
-                                <td>intended</td>
                                 <td>prevention of wound infection</td>
                             </tr>
                         </table>

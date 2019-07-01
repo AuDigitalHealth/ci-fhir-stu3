@@ -19,6 +19,7 @@
                 not Torres Strait Islander origin</p>
             <p><b>Encounter start</b>: 31/03/2019 15:20</p>
             <p><b>Encounter end</b>: 31/03/2019 15:40</p>
+            <p><b>Encounter reason</b>: Nail wound of sole of foot</p>
         </div>
     </text>
     <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
@@ -38,4 +39,11 @@
         <start value="2019-03-31T15:20:00+10:00"/>
         <end value="2019-03-31T15:40:00+10:00"/>
     </period>
+    <reason>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="283680004"/>
+            <display value="Nail wound of sole of foot"/>
+        </coding>
+    </reason>
 </Encounter>
