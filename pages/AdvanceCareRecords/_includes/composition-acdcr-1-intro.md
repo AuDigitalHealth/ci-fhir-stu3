@@ -1,4 +1,4 @@
-### Advance Directive Custodian Record *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+### Advance Care Directive Custodian Record *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### **Usage Scenarios**
 The following are the usage scenarios expected:
