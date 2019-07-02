@@ -16,6 +16,22 @@
                 <td></td>
             </tr>
             <tr>
+                <td><a href="Bundle-a1a25cd7-6553-4a47-9c5c-399050a80f9d.html">Event Summary example 2 (bundle)</a></td>
+                <td>a1a25cd7-6553-4a47-9c5c-399050a80f9d</td>
+                <td><a href="Bundle-a1a25cd7-6553-4a47-9c5c-399050a80f9d.xml.html">XML</a></td>
+                <td><a href="Bundle-a1a25cd7-6553-4a47-9c5c-399050a80f9d.json.html">JSON</a></td>
+                <td><a href="Bundle-a1a25cd7-6553-4a47-9c5c-399050a80f9d.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="Composition-672a9ba7-0773-4a7f-ad80-e6ef50950a8d.html">Event Summary example 2 (referenced)</a></td>
+                <td>672a9ba7-0773-4a7f-ad80-e6ef50950a8d</td>
+                <td><a href="Composition-672a9ba7-0773-4a7f-ad80-e6ef50950a8d.xml.html">XML</a></td>
+                <td><a href="Composition-672a9ba7-0773-4a7f-ad80-e6ef50950a8d.json.html">JSON</a></td>
+                <td><a href="Composition-672a9ba7-0773-4a7f-ad80-e6ef50950a8d.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+            <tr>
                 <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.html">Event Summary example 3 (bundle)</a></td>
                 <td>7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a</td>
                 <td><a href="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.xml.html">XML</a></td>
@@ -30,8 +46,6 @@
                 <td><a href="composition-2384da13-ff91-4e05-930f-2d7a034ea713.json.html">JSON</a></td>
                 <td><a href="composition-2384da13-ff91-4e05-930f-2d7a034ea713.ttl.html">Turtle</a></td>
                 <td></td>
-            </tr>  			
- 
-
+            </tr>
  </table>
  
