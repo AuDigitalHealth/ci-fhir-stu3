@@ -62,10 +62,13 @@ When a shared medicines list is sent as part of a document (referenced in Compos
 
 For the expected usage scenario of a PSML document the following guidance applies:
 
-* The role of ‘pharmacist’ will be recorded in the list source role as PractitionerRole.code
-* Information relating to the pharmacist such as contact details will be recorded in the source as one more more elements of Practitioner
+* The author will be a pharmacist and as such information relating to the pharmacist such as contact details will be recorded in the author as one more more elements of Practitioner.
+* The role of ‘pharmacist’ will be recorded in the list source role as PractitionerRole.code.
+* Encounter details, such as encounter type and period, are expected to be provided.
 * All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, are expected to be included in the list.
-* Relevant ceased medicine items for the patient may be included in the list.
+* The list is expected to include at least one medicine item that the patient is taking, i.e. the flag is not 'ceased'.
+* The list may include relevant ceased medicine items for the patient.
+* The list is not expected to include medicine item change recommendations; the flag is never expected to have one of thes values: 'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended'. 
 
 
 
