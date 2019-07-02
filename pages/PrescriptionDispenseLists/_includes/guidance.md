@@ -18,7 +18,6 @@ The following references are recommended to gain a better understanding of FHIR:
 * [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3)
 * [FHIR Overview](https://www.hl7.org/fhir/stu3/overview.html)
 * [HL7 International FHIR Wiki](http://wiki.hl7.org/index.php?title=FHIR) [[HL7FHIR]](index.html#HL7FHIR)
-
  
 
 ## Profile / extension representation and structure
@@ -43,19 +42,21 @@ The Formal Views of Profile Content contains:
 
 The fields used to present the Differential Table and the Snapshot Table in this implementation guide are described in [Logical table](http://hl7.org/fhir/stu3/formats.html#table).
 
+## Validating resources using profiles from this implementation guide
 
-## Known issues with supporting and implementing FHIR
+There are several means of validating resources against a set of rules, each with differing coverage and capabilities.
 
-This section identifies issues with the FHIR standard or related tooling that may affect implementing the content of this guide or supporting the described usage scenarios. Solutions to these issues are being worked on and readers of this implementation guide are encouraged to actively participate in the FHIR community. 
+Some rules may be defined in a machine-processable manner and thus can be checked by automated means, however some rules are defined solely in human-readable descriptions. The profiles and extensions described by this implementation guide can contain both.
 
-[Implementation Support Module](http://hl7.org/fhir/stu3/implsupport-module.html) provides a helpful reference for information about available tools, libraries and other similar resources.
+Existing validation tools differ in their support for machine-processable rules. These tools continue to evolve and progressively implement the FHIR standard; it should be noted that different servers and tools may not provide equivalent responses when executing the same operation.
 
+The profiles and extensions described in this implementation guide have been developed using [Forge](https://fire.ly/products/forge/), [IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) and the [FHIR Validator](http://build.fhir.org/validation.html#jar).
 
-FHIR standard offers a number of tools for development and implementations of FHIR, e.g. IG Publisher tool used for producing and publishing this implementation guide, FHIR Validator used to validate examples in this implementation guide.
+## Known issues relating to the support and implementation of FHIR
 
-These tools are under continues development and as such may have issues that could affect development and implementation of FHIR. 
+The table below describes some issues that may affect implementing the content of this guide or supporting the described usage scenarios. [Implementation Support Module](http://hl7.org/fhir/stu3/implsupport-module.html) provides a helpful reference for information about available tools, libraries and other similar resources.
 
-This section lists known issues with authoring and rendering content in this implementation guide. 
+Readers of this implementation guide are encouraged to actively participate in the FHIR community and get involved in the development of the standard and related tooling. 
 
 <table border="1" cellpadding="1" valign="middle">
 <tbody>
@@ -66,40 +67,41 @@ This section lists known issues with authoring and rendering content in this imp
   </tr>
   <tr>
     <td>Invariants may not constrain as intended</td>
-    <td>Current validation capabilities of the FHIR Validator and IG Publisher do not fully support all expressions defined in the FHIR specification. Invariants using conformsTo() or … have not been able to be confirmed and do not reject resources that are expected to fail.</td>
-    <td>???</td>
+    <td>
+        <p>Currently the FHIR Validator (which is used by IG Publisher) does not fully support all constraints defined in the FHIR specification. For example invariants using conformsTo() have not been able to be confirmed and do not reject resources that are expected to fail.</p>
+    </td>
+    <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">conformance</a> stream</td>
   </tr>
   <tr>
     <td>Rendering of Composition narrative in examples</td>
     <td>
-        <p>The tooling used to generate this implementation guide (IG publisher) does nor render narrative in Composition examples in line with the expectations for <a href="http://hl7.org/fhir/stu3/documents.html#presentation">presenting a document for human consumption</a>.</p>
-        <p>The human friendly rendered format of Composition examples in this implementation guide is missing content, e.g. section narrative, forcing the reader to refer to XML or JSON format to view the full example narrative.</p>
+        <p>The tooling used to generate this implementation guide (IG Publisher) does not render narrative in Composition examples in line with the expectations for presenting a FHIR document for human consumption.</p>
+        <p>The human friendly rendered format of Composition examples in this implementation guide may be missing content, e.g. section narrative, forcing the reader to refer to XML or JSON format to view the full example narrative. Alternatively in order to demonstrate example narrative rendering the construction of the narrative is against good practice in order to provide complete readable content.</p>
     </td>
     <td>
-        <p>gForge Change Request #17401</p>
-        <p><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=17401">Allow ig publisher to render documents as documents</a></p>
+        <p>gForge Change Request <a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=17401">#17401</a></p>
     </td>
   </tr>
   <tr>
-    <td>Patient element missing Must Support flag</td>
-    <td>The tooling (Forge) used to author Patient with Mandatory Identifier and Patient with Mandatory IHI throws an error when mustSupport is set to true on Patient.deceased.deceasedDateTime.date-accuracy-indicator. </td>
-    <td>???</td>
-  </tr>
-    <tr>
     <td>Slicing types may not constrain as intended</td>
     <td>
-        <p>Current validation capability of the FHIR Validator and IG Publisher do not fully support the use of all discriminator types defined by the FHIR standard.</p>
-        <p>At this stage we are not using designs that control the members of sets such as Composition.section.entry that used slicing as slicing by type:resolve() and profile:resolve do not function as expected.</p>
- </td>
-    <td>???</td>
+        <p>Currently the FHIR Validator and IG Publisher do not fully support the use of all discriminator types defined by the FHIR standard.</p>
+        <p>At this stage we are not using designs that control the members of sets such as Composition.section.entry that use slicing. Slicing by type:resolve() and profile:resolve() do not function as expected.</p>
+        <p>Designs that use slicing on value set binding are not supported by the FHIR Validator or IG Publisher.</p>
+    </td>
+    <td>
+        <p>gForge Change Request <a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=20572">#20572</a></p>
+    </td>
   </tr>
-    <tr>
+  <tr>
     <td>Constraining via a derived profile an extension added to source profile</td>
     <td>
         <p>The tooling (Forge) used to author profiles does not allow for the constraining of an extension via reference.</p>
         <p>At this stage only designs that use an invariant to constrain the reference may be authored (though they may not constrain as intended).</p>
-</td>
-    <td>???</td>
+    </td>
+    <td>
+        <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
+    </td>
   </tr>
  </tbody>
 </table> 
