@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/c7dfc1e4-e2e0-4542-b93a-be297efb0f95> a fhir:AllergyIntolerance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "c7dfc1e4-e2e0-4542-b93a-be297efb0f95"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <p><b>Allergy Intolerance</b>: Allergic reaction to adhesive tape</p>\n            <p><b>Substance</b>: Adhesive tape</p>\n            <p><b>Reaction</b>: Urticaria</p>\n            <p><b>Clinical status</b>: active</p>\n            <p><b>Verification status</b>: confirmed</p>\n            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo\n                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                Torres Strait Islander origin</p>\n        </div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "confirmed"];
+  fhir:AllergyIntolerance.type [ fhir:value "allergy"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:418325008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "418325008" ];
+       fhir:Coding.display [ fhir:value "Allergic reaction to adhesive" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Allergic reaction to adhesive tape" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d422d1da-6280-4335-8795-b101a61134e4>;
+     fhir:Reference.reference [ fhir:value "Patient/d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0;
+     fhir:AllergyIntolerance.reaction.substance [
+       fhir:CodeableConcept.text [ fhir:value "Adhesive tape" ]
+     ];
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Urticaria" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/c7dfc1e4-e2e0-4542-b93a-be297efb0f95.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

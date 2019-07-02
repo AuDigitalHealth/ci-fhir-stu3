@@ -1,0 +1,34 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <p><b>Medication</b>: amoxicillin 500 mg capsule</p>\n            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo\n                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                Torres Strait Islander origin</p>\n            <p><b>Medication status</b>: intended</p>\n            <p><b>Taken</b>: no</p>\n            <p><b>Dosage</b>: 1 capsule three times a day</p>\n        </div>"
+  },
+  "status": "intended",
+  "medicationCodeableConcept": {
+    "text": "amoxicillin 500 mg capsule"
+  },
+  "subject": {
+    "reference": "Patient/d422d1da-6280-4335-8795-b101a61134e4"
+  },
+  "taken": "n",
+  "dosage": [
+    {
+      "text": "1 capsule three times a day",
+      "timing": {
+        "repeat": {
+          "frequency": 3,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "doseQuantity": {
+        "value": 1,
+        "unit": "capsule",
+        "system": "http://snomed.info/sct",
+        "code": "107011000036108"
+      }
+    }
+  ]
+}

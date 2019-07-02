@@ -1,0 +1,36 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "c7dfc1e4-e2e0-4542-b93a-be297efb0f95",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <p><b>Allergy Intolerance</b>: Allergic reaction to adhesive tape</p>\n            <p><b>Substance</b>: Adhesive tape</p>\n            <p><b>Reaction</b>: Urticaria</p>\n            <p><b>Clinical status</b>: active</p>\n            <p><b>Verification status</b>: confirmed</p>\n            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo\n                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                Torres Strait Islander origin</p>\n        </div>"
+  },
+  "clinicalStatus": "active",
+  "verificationStatus": "confirmed",
+  "type": "allergy",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "418325008",
+        "display": "Allergic reaction to adhesive"
+      }
+    ],
+    "text": "Allergic reaction to adhesive tape"
+  },
+  "patient": {
+    "reference": "Patient/d422d1da-6280-4335-8795-b101a61134e4"
+  },
+  "reaction": [
+    {
+      "substance": {
+        "text": "Adhesive tape"
+      },
+      "manifestation": [
+        {
+          "text": "Urticaria"
+        }
+      ]
+    }
+  ]
+}
