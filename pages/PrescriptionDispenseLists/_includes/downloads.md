@@ -22,6 +22,6 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding {{site.data.fhir.igName}} CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+The corresponding CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
 
 _to be completed_
