@@ -22,7 +22,6 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding Shared Health Summary CDA implementation guide [[DF2019c]](index.html#DH2019c) that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
-
+The corresponding CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
 
 - [DH_xxxx_SharedHealthSummary_CDA_IG_v2.0.pdf](..\..\..\ci-fhir-stu3\pages\SharedHealthSummary\_includes\DH_xxxx_SharedHealthSummary_CDA_IG_v2.0.pdf)
