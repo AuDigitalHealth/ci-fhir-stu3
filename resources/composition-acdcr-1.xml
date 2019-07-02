@@ -190,7 +190,7 @@
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <short value="Advance Care Information" />
+      <short value="Advance Care Directive Custodians" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -198,6 +198,7 @@
     <element id="Composition.section.title">
       <path value="Composition.section.title" />
       <min value="1" />
+      <fixedString value="Advance Care Directive Custodians"/>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section.code">
@@ -206,7 +207,7 @@
       <fixedCodeableConcept>
         <coding>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" />
-          <code value="101.16973" />
+          <code value="101.16694" />
         </coding>
       </fixedCodeableConcept>
       <mustSupport value="true" />
@@ -220,7 +221,6 @@
       <path value="Composition.section.entry" />
       <short value="Persons acting as custodians (holders) of a patient's advance care directive responsible" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1" />
