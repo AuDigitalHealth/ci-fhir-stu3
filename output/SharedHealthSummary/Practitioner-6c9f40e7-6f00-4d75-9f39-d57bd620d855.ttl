@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/6c9f40e7-6f00-4d75-9f39-d57bd620d855> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6c9f40e7-6f00-4d75-9f39-d57bd620d855"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2018-07-19T11:00:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 6c9f40e7-6f00-4d75-9f39-d57bd620d855</p><p><b>meta</b>: </p><p><b>identifier</b>: HPI-I = 8003611234567893</p><p><b>name</b>: Francis Smith </p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td>*</td><td>AHPRA Registration Number = MED0000197980</td><td>AHPRA qualification for General Practitioner <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '253111' = '253111', given as 'General Medical Practitioner'})</span></td><td>AHPRA</td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NPI" ];
+         fhir:Coding.display [ fhir:value "National provider identifier" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-I" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpii/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003611234567893" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Smith" ];
+     fhir:HumanName.given [
+       fhir:value "Francis";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.qualification [
+     fhir:index 0;
+     fhir:Practitioner.qualification.identifier [
+       fhir:index 0;
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "AHPRA" ];
+           fhir:Coding.display [ fhir:value "Australian Health Practitioner Regulation Agency Registration Number" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "AHPRA Registration Number" ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/ahpra-registration-number" ];
+       fhir:Identifier.value [ fhir:value "MED0000197980" ]
+     ];
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" ];
+         fhir:Coding.code [ fhir:value "253111" ];
+         fhir:Coding.display [ fhir:value "General Medical Practitioner" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "AHPRA qualification for General Practitioner" ]
+     ];
+     fhir:Practitioner.qualification.issuer [
+       fhir:Reference.display [ fhir:value "AHPRA" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/6c9f40e7-6f00-4d75-9f39-d57bd620d855.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
