@@ -38,9 +38,9 @@
       <constraint>
         <key value="inv-dh-phn-01"/>
         <severity value="error"/>
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1'"/>
-        <expression value="meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1').exists()"/>
-      </constraint>
+        <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1'" />
+        <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1').exists()" />
+       </constraint>
     </element>
     <element id="Composition.meta.profile">
       <path value="Composition.meta.profile"/>
