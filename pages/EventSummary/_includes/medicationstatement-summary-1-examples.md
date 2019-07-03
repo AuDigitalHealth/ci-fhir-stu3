@@ -40,7 +40,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="MedicationStatement-fc257fb0-8325-4f85-b29f-4c100346f527.html">MedicationStatement example 6</a></td>
+                <td><a href="MedicationStatement-df0af202-6da0-4e67-9c22-ebc21ee34309.html">MedicationStatement example 6</a></td>
                 <td>df0af202-6da0-4e67-9c22-ebc21ee34309</td>
                 <td><a href="MedicationStatement-df0af202-6da0-4e67-9c22-ebc21ee34309.xml.html">XML</a></td>
                 <td><a href="MedicationStatement-df0af202-6da0-4e67-9c22-ebc21ee34309.json.html">JSON</a></td>
