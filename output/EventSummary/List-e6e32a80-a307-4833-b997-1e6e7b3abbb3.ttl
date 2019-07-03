@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/List/e6e32a80-a307-4833-b997-1e6e7b3abbb3> a fhir:List;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "e6e32a80-a307-4833-b997-1e6e7b3abbb3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <p><b>Medicines list status</b>: current</p>\n            <p><b>Medicines list subject</b>: Billy Tjakamarra; Pensioner Concession\n                Card Number: 307111942H; gender = male; birth date = 23/04/1954; address\n                = 78 Bamboo Street, Nightcliff NT, 0810; indigenous status = Aboriginal\n                but not Torres Strait Islander origin</p>\n            <p><b>Medicines list date</b>: 31/03/2019 15:36</p>\n            <p><b>Medicines list source</b>: Dr Sonia Strempel (OFFICIAL); HPI-I =\n                8003610000000000; prescriber number = 459999; email =\n                sonia.strempel@mail.topendmedicalclinic.com.au (WORK)</p>\n            <p><b>Medicines list</b>:</p>\n            <table class=\"grid\">\n                <tr>\n                    <th>change type</th>\n                    <th>item</th>\n                    <th>dosage</th>\n                    <th>change description</th>\n                </tr>\n                <tr>\n                    <td>New prescription</td>\n                    <td>amoxicillin 500 mg capsule</td>\n                    <td>1 capsule three times a day</td>\n                    <td>prevention of wound infection</td>\n                </tr>\n            </table>\n        </div>"
+  ];
+  fhir:List.status [ fhir:value "current"];
+  fhir:List.mode [ fhir:value "snapshot"];
+  fhir:List.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:10160-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "10160-0" ];
+       fhir:Coding.display [ fhir:value "History of Medication use Narrative" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Medicines" ]
+  ];
+  fhir:List.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d422d1da-6280-4335-8795-b101a61134e4>;
+     fhir:Reference.reference [ fhir:value "Patient/d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:List.date [ fhir:value "2019-03-31T15:36:00+10:00"^^xsd:dateTime];
+  fhir:List.source [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a>;
+     fhir:Reference.reference [ fhir:value "Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ]
+  ];
+  fhir:List.entry [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/change-description" ];
+       fhir:Extension.valueString [ fhir:value "New prescription to prevent wound infection" ]
+     ];
+     fhir:List.entry.flag [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/CodeSystem/medicine-item-change" ];
+         fhir:Coding.code [ fhir:value "prescribed" ]
+       ]
+     ];
+     fhir:List.entry.item [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a>;
+       fhir:Reference.reference [ fhir:value "MedicationStatement/bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/List/e6e32a80-a307-4833-b997-1e6e7b3abbb3.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
