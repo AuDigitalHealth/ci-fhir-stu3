@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d422d1da-6280-4335-8795-b101a61134e4> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "d422d1da-6280-4335-8795-b101a61134e4"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <p><b>Name</b>: Billy Tjakamarra</p>\n            <p><b>Identifier</b>: Medical Record Number = 999111999\n                (http://territorymedicalcentre.com.au/identifiers/patient)</p>\n            <p><b>Identifier</b>: Pensioner Concession Card Number = 307111942H</p>\n            <p><b>Telecom</b>: phone = 0958 233 666</p>\n            <p><b>Gender</b>: male</p>\n            <p><b>Birth date</b>: 23/04/1954</p>\n            <p><b>Address</b>: 78 Bamboo Street, Nightcliff NT, 0810</p>\n            <p><b>Marital status</b>: Never Married</p>\n            <p><b>Communication</b>: language = Burarra; preferred = false</p>\n            <p><b>General Practitioner</b>: Territory Medical Centre; telecom = phone\n                (08) 8948 9999 (work); telecom = url\n                https://territorymedicalcentre.com.au (work); address = 159 Clematis\n                Street, Nightcliff NT 0810</p>\n            <p><b>Indigenous status</b>: Aboriginal but not Torres Strait Islander\n                origin</p>\n            <p><b>Closing the gap registration</b>: true</p>\n        </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/indigenous-status" ];
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1" ];
+       fhir:Coding.code [ fhir:value "1" ];
+       fhir:Coding.display [ fhir:value "Aboriginal but not Torres Strait Islander origin" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "MR" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://territorymedicalcentre.com.au/identifiers/patient" ];
+     fhir:Identifier.value [ fhir:value "999111999" ];
+     fhir:Identifier.assigner [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13>;
+       fhir:Reference.reference [ fhir:value "Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "PEN" ];
+         fhir:Coding.display [ fhir:value "Pension Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Pensioner Concession Card Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" ];
+     fhir:Identifier.value [ fhir:value "307111942H" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Tjakamarra" ];
+     fhir:HumanName.given [
+       fhir:value "Billy";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "0958 233 666" ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1954-04-23"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "78 Bamboo Street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Nightcliff" ];
+     fhir:Address.state [ fhir:value "NT" ];
+     fhir:Address.postalCode [ fhir:value "0810" ];
+     fhir:Address.country [ fhir:value "AU" ]
+  ];
+  fhir:Patient.maritalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/MaritalStatus" ];
+       fhir:Coding.code [ fhir:value "S" ];
+       fhir:Coding.display [ fhir:value "Never Married" ]
+     ]
+  ];
+  fhir:Patient.communication [
+     fhir:index 0;
+     fhir:Patient.communication.language [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:ietf:bcp:47" ];
+         fhir:Coding.code [ fhir:value "bvr" ];
+         fhir:Coding.display [ fhir:value "Burarra" ]
+       ]
+     ];
+     fhir:Patient.communication.preferred [ fhir:value "false"^^xsd:boolean ]
+  ];
+  fhir:Patient.generalPractitioner [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13>;
+     fhir:Reference.reference [ fhir:value "Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d422d1da-6280-4335-8795-b101a61134e4.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
