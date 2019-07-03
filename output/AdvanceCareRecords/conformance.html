@@ -131,19 +131,28 @@
 <h1 id="conformance">Conformance</h1>
 
 <h2 id="conformance-requirements">Conformance requirements</h2>
-<p>This specification describes how an SML is implemented in <a href="http://hl7.org/fhir/STU3/index.html">FHIR, Release 3 (STU)</a> <a href="index.html#HL7FHIR3">[HL7FHIR3]</a>. Any FHIR resource that claims conformance to a profile in this implementation guide, or any derived profile, SHALL meet these requirements:</p>
+<p>Any FHIR resource that claims conformance to a profile in this implementation guide, or any derived profile, SHALL meet these requirements:</p>
 
 <ul>
-  <li>It SHALL be a valid HL7 FHIR instance. In particular:</li>
-  <li>It SHALL conform to <a href="http://hl7.org/fhir/STU3/index.html">FHIR, Release 3 (STU)</a> <a href="index.html#HL7FHIR3">[HL7FHIR3]</a>.</li>
-  <li>It SHALL conform to the profile it claims conformance to including:</li>
-  <li>conforming to the requirements described on the corresponding profile or extension page of this implementation guide</li>
-  <li>conforming to the requirements in the base resource as specified in <a href="http://hl7.org/fhir/STU3/index.html">FHIR, Release 3 (STU)</a> <a href="index.html#HL7FHIR3">[HL7FHIR3]</a></li>
-  <li>conforming to the requirements in the base profile where the profile described in this implementation guide is derived from a base profile</li>
+  <li>It SHALL be a valid HL7 FHIR instance. In particular:
+    <ul>
+      <li>It SHALL conform to <a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</li>
+      <li>It SHALL conform to the profile it claims conformance to including:
+        <ul>
+          <li>conforming to the requirements described on the corresponding profile or extension page of this implementation guide</li>
+          <li>conforming to the requirements in the base resource as specified in <a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a></li>
+          <li>conforming to the requirements in the base profile where the profile described in this implementation guide is derived from a base profile</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
   <li>It SHALL conform to the requirements specified in the Must Support section below.</li>
-  <li>Where additional content beyond that flagged with must support is provided it:</li>
-  <li>SHALL NOT qualify or negate content described by this profile as must support</li>
-  <li>SHALL be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
+  <li>Where additional content beyond that flagged with must support is provided it:
+    <ul>
+      <li>SHALL NOT qualify or negate content described by this profile as must support</li>
+      <li>SHALL be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
+    </ul>
+  </li>
 </ul>
 
 <p>A profile, derived from a profile described in this implementation guide may make additional rules that override this implementation guide:</p>
@@ -201,7 +210,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 11:53+1000. |
+            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 13:36+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
