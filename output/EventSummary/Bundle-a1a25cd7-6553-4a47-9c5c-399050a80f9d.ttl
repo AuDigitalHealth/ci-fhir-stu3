@@ -1,0 +1,768 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "a1a25cd7-6553-4a47-9c5c-399050a80f9d"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-03-31T15:50:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:8478a550-e159-4398-8f42-085e36783b93" ]
+  ];
+  fhir:Bundle.type [ fhir:value "document"];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:672a9ba7-0773-4a7f-ad80-e6ef50950a8d" ];
+     fhir:Bundle.entry.resource <urn:uuid:672a9ba7-0773-4a7f-ad80-e6ef50950a8d>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ];
+     fhir:Bundle.entry.resource <urn:uuid:d422d1da-6280-4335-8795-b101a61134e4>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ];
+     fhir:Bundle.entry.resource <urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e99357bd-b6ad-4ae7-9d99-27cb929e48af" ];
+     fhir:Bundle.entry.resource <urn:uuid:e99357bd-b6ad-4ae7-9d99-27cb929e48af>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d93e5527-afd9-4c54-ab09-ada4fdd8ff13" ];
+     fhir:Bundle.entry.resource <urn:uuid:d93e5527-afd9-4c54-ab09-ada4fdd8ff13>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:0903c2ea-252f-4b03-85f4-2ddcf046fbc3" ];
+     fhir:Bundle.entry.resource <urn:uuid:0903c2ea-252f-4b03-85f4-2ddcf046fbc3>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:cead9124-f6d8-47ac-b785-8e0fcab3dc13" ];
+     fhir:Bundle.entry.resource <urn:uuid:cead9124-f6d8-47ac-b785-8e0fcab3dc13>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e6e32a80-a307-4833-b997-1e6e7b3abbb3" ];
+     fhir:Bundle.entry.resource <urn:uuid:e6e32a80-a307-4833-b997-1e6e7b3abbb3>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a" ];
+     fhir:Bundle.entry.resource <urn:uuid:bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a>
+  ], [
+     fhir:index 9;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c7dfc1e4-e2e0-4542-b93a-be297efb0f95" ];
+     fhir:Bundle.entry.resource <urn:uuid:c7dfc1e4-e2e0-4542-b93a-be297efb0f95>
+  ], [
+     fhir:index 10;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d2b71673-d1a5-4e1d-9b25-bba47aa26036" ];
+     fhir:Bundle.entry.resource <urn:uuid:d2b71673-d1a5-4e1d-9b25-bba47aa26036>
+  ], [
+     fhir:index 11;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e11fd841-5200-4657-9260-3a041a98ae31" ];
+     fhir:Bundle.entry.resource <urn:uuid:e11fd841-5200-4657-9260-3a041a98ae31>
+  ], [
+     fhir:index 12;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:fed6e796-ac88-459c-af61-de718a48423d" ];
+     fhir:Bundle.entry.resource <urn:uuid:fed6e796-ac88-459c-af61-de718a48423d>
+  ] .
+
+<urn:uuid:672a9ba7-0773-4a7f-ad80-e6ef50950a8d> a fhir:Composition;
+  fhir:Resource.id [ fhir:value "672a9ba7-0773-4a7f-ad80-e6ef50950a8d"];
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2019-03-31T15:40:00+10:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <h2>Event Summary for Billy Tjakamarra on 31 Mar 2019</h2>\n                        <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                            307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo\n                            Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                            Torres Strait Islander origin</p>\n                        <p><b>Document status</b>: final</p>\n                        <p><b>Document date</b>: 31/03/2019 15:38</p>\n                        <p><b>Document author</b>: Dr Sonia Strempel (OFFICIAL); HPI-I =\n                            8003610000000000; Prescriber Number = 459999\n                            sonia.strempel@mail.topendmedicalclinic.com.au (WORK)</p>\n                        <p><b>Document author role</b>: General Practitioner Registrar; Medicare\n                            Provider Number = 5544887B, HPI-I = 8003610000000000; Top End Medical\n                            Clinic</p>\n                        <p><b>Document attester (legal)</b>: Dr Sonia Strempel (HPI-I =\n                            8003610000000000); time: 31/03/2019 15:39</p>\n                        <p><b>Document custodian</b>: Top End Medical Clinic; HPI-O =\n                            8003621566684455; ACN = 123456789; email:\n                            admin@mail.topendmedicalclinic.com.au (WORK); phone: (08) 8423 9999\n                            (WORK); address: 102 Rowling Street, Casuarina NT 0810 (physical)</p>\n                    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/composition-author-role" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.reference [ fhir:value "urn:uuid:e99357bd-b6ad-4ae7-9d99-27cb929e48af" ]
+     ]
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "bfb3dd71-e5ee-4df6-a315-9f1cbd509cd7" ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:34133-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "34133-9" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+           fhir:Coding.code [ fhir:value "PEN" ];
+           fhir:Coding.display [ fhir:value "Pension Number" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Pensioner Concession Card Number" ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" ];
+       fhir:Identifier.value [ fhir:value "307111942H" ]
+     ]
+  ];
+  fhir:Composition.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:cead9124-f6d8-47ac-b785-8e0fcab3dc13" ]
+  ];
+  fhir:Composition.date [ fhir:value "2019-03-31T15:38:00+10:00"^^xsd:dateTime];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ]
+  ];
+  fhir:Composition.title [ fhir:value "Event Summary for Billy Tjakamarra on 31 Mar 2019"];
+  fhir:Composition.attester [
+     fhir:index 0;
+     fhir:Composition.attester.mode [
+       fhir:value "legal";
+       fhir:index 0
+     ];
+     fhir:Composition.attester.time [ fhir:value "2019-03-31T15:39:00+10:00"^^xsd:dateTime ];
+     fhir:Composition.attester.party [
+       fhir:Reference.reference [ fhir:value "urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ]
+     ]
+  ];
+  fhir:Composition.custodian [
+     fhir:Reference.reference [ fhir:value "urn:uuid:0903c2ea-252f-4b03-85f4-2ddcf046fbc3" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Event Details" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.16672" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <p><b>Event description</b>: Patient presented with open injury to sole\n                                of left foot caused by stepping on rusty nail yesterday. Wound red\n                                and swollen, no calf muscle tenderness, no coughing nor chest pain\n                                which excludes pulmonary embolism. Patient has an existing allergy\n                                to adhesive tape, which manifests as urticaria. Patient was given\n                                booster dose of anti tetanus and prescribed amoxicillin 500mg 3\n                                times a day. Wound was attended. Advised to present in 2 days to the\n                                usual GPs clinic for a change of dressings.</p>\n                            <p><b>Event status</b>: finished</p>\n                            <p><b>Event subject</b>: Billy Tjakamarra; Pensioner Concession Card\n                                Number: 307111942H; gender = male; birth date = 23/04/1954; address\n                                = 78 Bamboo Street, Nightcliff NT, 0810; indigenous status =\n                                Aboriginal but not Torres Strait Islander origin</p>\n                            <p><b>Event start</b>: 31/03/2019 15:20</p>\n                            <p><b>Event end</b>: 31/03/2019 15:40</p>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:cead9124-f6d8-47ac-b785-8e0fcab3dc13" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Allergies and Adverse Reactions" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48765-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48765-2" ];
+         fhir:Coding.display [ fhir:value "Allergies and adverse reactions Document" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <p>Patient has an existing allergy to adhesive tape, which manifests as\n                                urticaria</p>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:c7dfc1e4-e2e0-4542-b93a-be297efb0f95" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.title [ fhir:value "Medications" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:10160-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "10160-0" ];
+         fhir:Coding.display [ fhir:value "History of Medication use Narrative" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <table class=\"grid\">\n                                <tr>\n                                    <th>change type</th>\n                                    <th>item</th>\n                                    <th>dosage</th>\n                                    <th>change description</th>\n                                </tr>\n                                <tr>\n                                    <td>New prescription</td>\n                                    <td>amoxicillin 500 mg capsule</td>\n                                    <td>1 capsule three times a day</td>\n                                    <td>prevention of wound infection</td>\n                                </tr>\n                            </table>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:e6e32a80-a307-4833-b997-1e6e7b3abbb3" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Composition.section.title [ fhir:value "Medical History" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" ];
+         fhir:Coding.code [ fhir:value "101.16117" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <p><b>Condition</b>: Puncture wound from stepping on a rusty nail, sole\n                                of left foot; onset = 30/03/2019</p>\n                            <p><b>Procedure</b>: dressing of wound; performed = 31/03/2019</p>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:e11fd841-5200-4657-9260-3a041a98ae31" ]
+     ], [
+       fhir:index 1;
+       fhir:Reference.reference [ fhir:value "urn:uuid:fed6e796-ac88-459c-af61-de718a48423d" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Composition.section.title [ fhir:value "Immunisations" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:11369-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "11369-6" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                            <p><b>Vaccine</b>: Boostrix injection, 0.5 mL syringe</p>\n                            <p><b>Date given</b>: 31/03/2019 15:35</p>\n                        </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:Reference.reference [ fhir:value "urn:uuid:d2b71673-d1a5-4e1d-9b25-bba47aa26036" ]
+     ]
+  ] .
+
+<urn:uuid:d422d1da-6280-4335-8795-b101a61134e4> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "d422d1da-6280-4335-8795-b101a61134e4"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Name</b>: Billy Tjakamarra</p>\n                        <p><b>Identifier</b>: Medical Record Number = 999111999\n                            (http://territorymedicalcentre.com.au/identifiers/patient)</p>\n                        <p><b>Identifier</b>: Pensioner Concession Card Number = 307111942H</p>\n                        <p><b>Telecom</b>: phone = 0958 233 666</p>\n                        <p><b>Gender</b>: male</p>\n                        <p><b>Birth date</b>: 23/04/1954</p>\n                        <p><b>Address</b>: 78 Bamboo Street, Nightcliff NT, 0810</p>\n                        <p><b>Marital status</b>: Never Married</p>\n                        <p><b>Communication</b>: language = Burarra; preferred = false</p>\n                        <p><b>General Practitioner</b>: Territory Medical Centre; telecom = phone\n                            (08) 8948 9999 (work); telecom = url\n                            https://territorymedicalcentre.com.au (work); address = 159 Clematis\n                            Street, Nightcliff NT 0810</p>\n                        <p><b>Indigenous status</b>: Aboriginal but not Torres Strait Islander\n                            origin</p>\n                        <p><b>Closing the gap registration</b>: true</p>\n                    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/indigenous-status" ];
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1" ];
+       fhir:Coding.code [ fhir:value "1" ];
+       fhir:Coding.display [ fhir:value "Aboriginal but not Torres Strait Islander origin" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "MR" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://territorymedicalcentre.com.au/identifiers/patient" ];
+     fhir:Identifier.value [ fhir:value "999111999" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.reference [ fhir:value "urn:uuid:d93e5527-afd9-4c54-ab09-ada4fdd8ff13" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "PEN" ];
+         fhir:Coding.display [ fhir:value "Pension Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Pensioner Concession Card Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/centrelink-customer-reference-number" ];
+     fhir:Identifier.value [ fhir:value "307111942H" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Tjakamarra" ];
+     fhir:HumanName.given [
+       fhir:value "Billy";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "0958 233 666" ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "1954-04-23"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "78 Bamboo Street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Nightcliff" ];
+     fhir:Address.state [ fhir:value "NT" ];
+     fhir:Address.postalCode [ fhir:value "0810" ];
+     fhir:Address.country [ fhir:value "AU" ]
+  ];
+  fhir:Patient.maritalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v3/MaritalStatus" ];
+       fhir:Coding.code [ fhir:value "S" ];
+       fhir:Coding.display [ fhir:value "Never Married" ]
+     ]
+  ];
+  fhir:Patient.communication [
+     fhir:index 0;
+     fhir:Patient.communication.language [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:ietf:bcp:47" ];
+         fhir:Coding.code [ fhir:value "bvr" ];
+         fhir:Coding.display [ fhir:value "Burarra" ]
+       ]
+     ];
+     fhir:Patient.communication.preferred [ fhir:value "false"^^xsd:boolean ]
+  ];
+  fhir:Patient.generalPractitioner [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:d93e5527-afd9-4c54-ab09-ada4fdd8ff13" ]
+  ] .
+
+<urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a> a fhir:Practitioner;
+  fhir:Resource.id [ fhir:value "7bfbb28b-e57b-4961-b5f9-4bfc5391b44a"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Name</b>: Dr Sonia Strempel (official)</p>\n                        <p><b>Identifier</b>: HPI-I = 8003610000000000</p>\n                        <p><b>Identifier</b>: Prescriber Number = 459999</p>\n                        <p><b>Telecom</b>: email = sonia.strempel@mail.topendmedicalclinic.com.au\n                            (work)</p>\n                    </div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NPI" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-I" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpii/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003610000000000" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "PRES" ];
+         fhir:Coding.display [ fhir:value "Prescriber Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Prescriber Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/medicare-prescriber-number" ];
+     fhir:Identifier.value [ fhir:value "459999" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Strempel" ];
+     fhir:HumanName.given [
+       fhir:value "Sonia";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "sonia.strempel@mail.topendmedicalclinic.com.au" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] .
+
+<urn:uuid:e99357bd-b6ad-4ae7-9d99-27cb929e48af> a fhir:PractitionerRole;
+  fhir:Resource.id [ fhir:value "e99357bd-b6ad-4ae7-9d99-27cb929e48af"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Practitioner Role</b>: General Practitioner Registrar</p>\n                        <p><b>Identifier</b>: Medicare Provider Number = 5544887B</p>\n                        <p><b>Practitioner</b>: Dr Sonia Strempel; telecom = email\n                            sonia.strempel@mail.topendmedicalclinic.com.au (work)</p>\n                        <p><b>Organization</b>: Top End Medical Clinic; HPI-O = 8003621566684455;\n                            ABN = 51824754455; telecom = phone (08) 8948 9999 (work); telecom = url\n                            = https://territorymedicalcentre.com.au (work); address = 159 Clematis\n                            Street, Nightcliff NT 0810</p>\n                    </div>"
+  ];
+  fhir:PractitionerRole.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "UPIN" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medicare Provider Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/medicare-provider-number" ];
+     fhir:Identifier.value [ fhir:value "5544887B" ]
+  ];
+  fhir:PractitionerRole.practitioner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ]
+  ];
+  fhir:PractitionerRole.organization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:0903c2ea-252f-4b03-85f4-2ddcf046fbc3" ]
+  ];
+  fhir:PractitionerRole.code [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:309327004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "309327004" ];
+       fhir:Coding.display [ fhir:value "General practitioner registrar" ]
+     ]
+  ] .
+
+<urn:uuid:d93e5527-afd9-4c54-ab09-ada4fdd8ff13> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "d93e5527-afd9-4c54-ab09-ada4fdd8ff13"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Name</b>: Territory Medical Centre</p>\n                        <p><b>Identifier</b>: HPI-O = 8003621566684455</p>\n                        <p><b>Identifier</b>: ABN = 51824994455</p>\n                        <p><b>Telecom</b>: phone = (08) 8948 9999 (work)</p>\n                        <p><b>Telecom</b>: url = https://territorymedicalcentre.com.au (work)</p>\n                        <p><b>Address</b>: 159 Clematis Street, Nightcliff NT 0810 (both)</p>\n                    </div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "ABN" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/abn" ];
+     fhir:Identifier.value [ fhir:value "51824994455" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NOI" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-O" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpio/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003621566684455" ]
+  ];
+  fhir:Organization.name [ fhir:value "Territory Medical Centre"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(08) 8948 9999" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "url" ];
+     fhir:ContactPoint.value [ fhir:value "https://territorymedicalcentre.com.au" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "both" ];
+     fhir:Address.line [
+       fhir:value "159 Clematis Street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Nightcliff" ];
+     fhir:Address.state [ fhir:value "NT" ];
+     fhir:Address.postalCode [ fhir:value "0810" ];
+     fhir:Address.country [ fhir:value "AU" ]
+  ] .
+
+<urn:uuid:0903c2ea-252f-4b03-85f4-2ddcf046fbc3> a fhir:Organization;
+  fhir:Resource.id [ fhir:value "0903c2ea-252f-4b03-85f4-2ddcf046fbc3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Name</b>: Top End Medical Clinic</p>\n                        <p><b>Identifier</b>: HPI-O = 8003621566684455</p>\n                        <p><b>Identifier</b>: ACN = 123456789</p>\n                        <p><b>Telecom</b>: phone (08) 8423 9999 (work)</p>\n                        <p><b>Telecom</b>: email admin@topendmedicalclinic.com.au (work)</p>\n                        <p><b>Address</b>: 102 Rowling Street, Casuarina NT 0810 (physical)</p>\n                    </div>"
+  ];
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.text [ fhir:value "ACN" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org.au/id/acn" ];
+     fhir:Identifier.value [ fhir:value "123456789" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "NOI" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "HPI-O" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/hpio/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003621566684455" ]
+  ];
+  fhir:Organization.name [ fhir:value "Top End Medical Clinic"];
+  fhir:Organization.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "(08) 8423 9999" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "admin@topendmedicalclinic.com.au" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.type [ fhir:value "physical" ];
+     fhir:Address.line [
+       fhir:value "102 Rowling Street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Casuarina" ];
+     fhir:Address.state [ fhir:value "NT" ];
+     fhir:Address.postalCode [ fhir:value "0810" ];
+     fhir:Address.country [ fhir:value "AU" ]
+  ] .
+
+<urn:uuid:cead9124-f6d8-47ac-b785-8e0fcab3dc13> a fhir:Encounter;
+  fhir:Resource.id [ fhir:value "cead9124-f6d8-47ac-b785-8e0fcab3dc13"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Encounter description</b>: Patient presented with open injury to sole\n                            of left foot caused by stepping on rusty nail yesterday. Wound red and\n                            swollen, no calf muscle tenderness, no coughing nor chest pain which\n                            excludes pulmonary embolism. Patient has an existing allergy to adhesive\n                            tape, which manifests as urticaria. Patient was given booster dose of\n                            anti tetanus and prescribed amoxicillin 500mg 3 times a day. Wound was\n                            attended. Advised to present in 2 days to the usual GPs clinic for a\n                            change of dressings.</p>\n                        <p><b>Encounter status</b>: finished</p>\n                        <p><b>Encounter subject</b>: Billy Tjakamarra; Pensioner Concession Card\n                            Number: 307111942H; gender = male; birth date = 23/04/1954; address = 78\n                            Bamboo Street, Nightcliff NT, 0810; indigenous status = Aboriginal but\n                            not Torres Strait Islander origin</p>\n                        <p><b>Encounter start</b>: 31/03/2019 15:20</p>\n                        <p><b>Encounter end</b>: 31/03/2019 15:40</p>\n                    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/encounter-description" ];
+     fhir:Extension.valueString [ fhir:value "Patient presented with open injury to sole of left foot caused by stepping on rusty nail yesterday.                          Wound red and swollen, no calf muscle tenderness, no coughing nor chest pain which excludes pulmonary embolism.                          Patient has an existing allergy to adhesive tape, which manifests as urticaria.                          Patient was given booster dose of anti tetanus and prescribed amoxicillin 500mg 3 times a day.                          Wound was attended. Advised to present in 2 days to the usual GPs clinic for a change of dressings." ]
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2019-03-31T15:20:00+10:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2019-03-31T15:40:00+10:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.reason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:283680004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "283680004" ];
+       fhir:Coding.display [ fhir:value "Nail wound of sole of foot" ]
+     ]
+  ] .
+
+<urn:uuid:e6e32a80-a307-4833-b997-1e6e7b3abbb3> a fhir:List;
+  fhir:Resource.id [ fhir:value "e6e32a80-a307-4833-b997-1e6e7b3abbb3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Medicines list status</b>: current</p>\n                        <p><b>Medicines list subject</b>: Billy Tjakamarra; Pensioner Concession\n                            Card Number: 307111942H; gender = male; birth date = 23/04/1954; address\n                            = 78 Bamboo Street, Nightcliff NT, 0810; indigenous status = Aboriginal\n                            but not Torres Strait Islander origin</p>\n                        <p><b>Medicines list date</b>: 31/03/2019 15:36</p>\n                        <p><b>Medicines list source</b>: Dr Sonia Strempel (OFFICIAL); HPI-I =\n                            8003610000000000; prescriber number = 459999; email =\n                            sonia.strempel@mail.topendmedicalclinic.com.au (WORK)</p>\n                        <p><b>Medicines list</b>:</p>\n                        <table class=\"grid\">\n                            <tr>\n                                <th>change type</th>\n                                <th>item</th>\n                                <th>dosage</th>\n                                <th>change description</th>\n                            </tr>\n                            <tr>\n                                <td>New prescription</td>\n                                <td>amoxicillin 500 mg capsule</td>\n                                <td>1 capsule three times a day</td>\n                                <td>prevention of wound infection</td>\n                            </tr>\n                        </table>\n                    </div>"
+  ];
+  fhir:List.status [ fhir:value "current"];
+  fhir:List.mode [ fhir:value "snapshot"];
+  fhir:List.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:10160-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "10160-0" ];
+       fhir:Coding.display [ fhir:value "History of Medication use Narrative" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Medicines" ]
+  ];
+  fhir:List.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:List.date [ fhir:value "2019-03-31T15:36:00+10:00"^^xsd:dateTime];
+  fhir:List.source [
+     fhir:Reference.reference [ fhir:value "urn:uuid:7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ]
+  ];
+  fhir:List.entry [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/change-description" ];
+       fhir:Extension.valueString [ fhir:value "New prescription to prevent wound infection" ]
+     ];
+     fhir:List.entry.flag [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/CodeSystem/medicine-item-change" ];
+         fhir:Coding.code [ fhir:value "prescribed" ]
+       ]
+     ];
+     fhir:List.entry.item [
+       fhir:Reference.reference [ fhir:value "urn:uuid:bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a" ]
+     ]
+  ] .
+
+<urn:uuid:bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a> a fhir:MedicationStatement;
+  fhir:Resource.id [ fhir:value "bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Medication</b>: amoxicillin 500 mg capsule</p>\n                        <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                            307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo\n                            Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                            Torres Strait Islander origin</p>\n                        <p><b>Medication status</b>: intended</p>\n                        <p><b>Taken</b>: no</p>\n                        <p><b>Dosage</b>: 1 capsule three times a day</p>\n                    </div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "intended"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "amoxicillin 500 mg capsule" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "n"];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "1 capsule three times a day" ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "3"^^xsd:integer ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "capsule" ];
+       fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Quantity.code [ fhir:value "107011000036108" ]
+     ]
+  ] .
+
+<urn:uuid:c7dfc1e4-e2e0-4542-b93a-be297efb0f95> a fhir:AllergyIntolerance;
+  fhir:Resource.id [ fhir:value "c7dfc1e4-e2e0-4542-b93a-be297efb0f95"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Allergy Intolerance</b>: Allergic reaction to adhesive tape</p>\n                        <p><b>Substance</b>: Adhesive tape</p>\n                        <p><b>Reaction</b>: Urticaria</p>\n                        <p><b>Clinical status</b>: active</p>\n                        <p><b>Verification status</b>: confirmed</p>\n                        <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                            307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo\n                            Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                            Torres Strait Islander origin</p>\n                    </div>"
+  ];
+  fhir:AllergyIntolerance.clinicalStatus [ fhir:value "active"];
+  fhir:AllergyIntolerance.verificationStatus [ fhir:value "confirmed"];
+  fhir:AllergyIntolerance.type [ fhir:value "allergy"];
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:418325008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "418325008" ];
+       fhir:Coding.display [ fhir:value "Allergic reaction to adhesive" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Allergic reaction to adhesive tape" ]
+  ];
+  fhir:AllergyIntolerance.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0;
+     fhir:AllergyIntolerance.reaction.substance [
+       fhir:CodeableConcept.text [ fhir:value "Adhesive tape" ]
+     ];
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0;
+       fhir:CodeableConcept.text [ fhir:value "Urticaria" ]
+     ]
+  ] .
+
+<urn:uuid:d2b71673-d1a5-4e1d-9b25-bba47aa26036> a fhir:Immunization;
+  fhir:Resource.id [ fhir:value "d2b71673-d1a5-4e1d-9b25-bba47aa26036"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Vaccine</b>: Boostrix injection, 0.5 mL syringe</p>\n                        <p><b>Vaccine status</b>: completed</p>\n                        <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                            307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo\n                            Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                            Torres Strait Islander origin</p>\n                        <p><b>Vaccine date</b>: 31/03/2019 15:35</p>\n                    </div>"
+  ];
+  fhir:Immunization.status [ fhir:value "completed"];
+  fhir:Immunization.notGiven [ fhir:value "false"^^xsd:boolean];
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:837641000168108;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "837641000168108" ];
+       fhir:Coding.display [ fhir:value "Boostrix injection, 0.5 mL syringe" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats" ];
+       fhir:Coding.code [ fhir:value "BOOST" ];
+       fhir:Coding.display [ fhir:value "Boostrix" ]
+     ]
+  ];
+  fhir:Immunization.patient [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:Immunization.date [ fhir:value "2019-03-31T15:35:00+10:00"^^xsd:dateTime];
+  fhir:Immunization.primarySource [ fhir:value "true"^^xsd:boolean] .
+
+<urn:uuid:e11fd841-5200-4657-9260-3a041a98ae31> a fhir:Condition;
+  fhir:Resource.id [ fhir:value "e11fd841-5200-4657-9260-3a041a98ae31"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Condition</b>: Nail wound of sole of foot</p>\n                        <p><b>Condition clinical status</b>: active</p>\n                        <p><b>Condition verification status</b>: confirmed</p>\n                        <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                            307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo\n                            Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                            Torres Strait Islander origin</p>\n                        <p><b>Condition onset date</b>: 30/03/2019</p>\n                        <p><b>Condition note</b>: Puncture wound to sole of left foot from stepping\n                            on a rusty nail. Wound red and swollen, no calf muscle tenderness, no\n                            coughing nor chest pain which excludes pulmonary embolism.</p>\n                    </div>"
+  ];
+  fhir:Condition.clinicalStatus [ fhir:value "active"];
+  fhir:Condition.verificationStatus [ fhir:value "confirmed"];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:283680004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "283680004" ];
+       fhir:Coding.display [ fhir:value "Nail wound of sole of foot" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2019-03-30"^^xsd:date];
+  fhir:Condition.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "Puncture wound to sole of left foot from stepping on a rusty nail.                          Wound red and swollen, no calf muscle tenderness, no coughing nor chest pain                          which excludes pulmonary embolism." ]
+  ] .
+
+<urn:uuid:fed6e796-ac88-459c-af61-de718a48423d> a fhir:Procedure;
+  fhir:Resource.id [ fhir:value "fed6e796-ac88-459c-af61-de718a48423d"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                        <p><b>Procedure</b>: Dressing of wound</p>\n                        <p><b>Procedure status</b>: completed</p>\n                        <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                            307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo\n                            Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                            Torres Strait Islander origin</p>\n                        <p><b>Procedure performed date</b>: 31/3/2019 15:30</p>\n                        <p><b>Procedure reason</b>: condition - Puncture wound from stepping on a\n                            rusty nail, sole of left foot</p>\n                        <p><b>Procedure note</b>: Dressing of puncture wound sole of left foot,\n                            caused by stepping on a rusty nail</p>\n                        <p><b>Procedure note</b>: Advised to present in 2 days to the usual GPs\n                            clinic for a change of dressings.</p>\n                    </div>"
+  ];
+  fhir:Procedure.status [ fhir:value "completed"];
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:182531007;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "182531007" ];
+       fhir:Coding.display [ fhir:value "Dressing of wound" ]
+     ]
+  ];
+  fhir:Procedure.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:Procedure.performedDateTime [ fhir:value "2019-03-31T15:30:00+10:00"^^xsd:dateTime];
+  fhir:Procedure.reasonReference [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "urn:uuid:e11fd841-5200-4657-9260-3a041a98ae31" ]
+  ];
+  fhir:Procedure.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "Dressing of puncture wound sole of left foot, caused by stepping on a                         rusty nail." ]
+  ], [
+     fhir:index 1;
+     fhir:Annotation.text [ fhir:value "Advised to present in 2 days to the usual GPs clinic                          for a change of dressings." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+            <p><b>Medication</b>: amoxicillin 500 mg capsule</p>
+            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:
+                307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo
+                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not
+                Torres Strait Islander origin</p>
+            <p><b>Medication status</b>: intended</p>
+            <p><b>Taken</b>: no</p>
+            <p><b>Dosage</b>: 1 capsule three times a day</p>
+        </div>
+  </text>
+  <status value="intended"/>
+  <medicationCodeableConcept>
+    <text value="amoxicillin 500 mg capsule"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/d422d1da-6280-4335-8795-b101a61134e4"/>
+  </subject>
+  <taken value="n"/>
+  <dosage>
+    <text value="1 capsule three times a day"/>
+    <timing>
+      <repeat>
+        <frequency value="3"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <doseQuantity>
+      <value value="1"/>
+      <unit value="capsule"/>
+      <system value="http://snomed.info/sct"/>
+      <code value="107011000036108"/>
+    </doseQuantity>
+  </dosage>
+</MedicationStatement>
