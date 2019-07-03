@@ -40,8 +40,8 @@
       <constraint>
         <key value="inv-dh-docref-01" />
         <severity value="error" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1'" />
-        <expression value="DocumentReference.meta.profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1').exists()" />
+        <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1'" />
+        <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1').exists()" />
       </constraint>
     </element>
     <element id="DocumentReference.meta.profile">
