@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1" />
+  <name value="ProvenanceListGeneration" />
+  <title value="Provenance for the Generation of a List" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Provenance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance">
+      <path value="Provenance" />
+      <short value="A record of the creation of a list resource" />
+      <constraint>
+        <key value="inv-dh-prov-02" />
+        <severity value="warning" />
+        <human value="At least one agent acting as a preparing entity or an assembling entity shall be provided but not both" />
+        <expression value="Provenence" />
+      </constraint>
+    </element>
+    <element id="Provenance.meta">
+      <path value="Provenance.meta" />
+      <min value="1" />
+      <constraint>
+        <key value="inv-dh-prov-01" />
+        <severity value="warning" />
+        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1'" />
+        <expression value="Provenance.meta" />
+        <xpath value="Provenance.meta" />
+      </constraint>
+    </element>
+    <element id="Provenance.meta.profile">
+      <path value="Provenance.meta.profile" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.target">
+      <path value="Provenance.target" />
+      <short value="The created resources, i.e. list(s)" />
+      <constraint>
+        <key value="inv-dh-prov-03" />
+        <severity value="warning" />
+        <human value="At least one target shall be a list" />
+        <expression value="Provenance.target" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.period">
+      <path value="Provenance.period" />
+      <short value="The relevant period for list generation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.recorded">
+      <path value="Provenance.recorded" />
+      <short value="The relevant period for list generation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.policy">
+      <path value="Provenance.policy" />
+      <short value="The policy or algorithm defining how the list is generated or populated" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.activity">
+      <path value="Provenance.activity" />
+      <min value="1" />
+      <fixedCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation" />
+        <code value="CREATE" />
+      </fixedCoding>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="role" />
+        </discriminator>
+        <description value="Assembling device" />
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.role">
+      <path value="Provenance.agent.role" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Provenance.agent.who[x]">
+      <path value="Provenance.agent.who[x]" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Provenance.agent.onBehalfOf[x]">
+      <path value="Provenance.agent.onBehalfOf[x]" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Provenance.agent:preparingEntity">
+      <path value="Provenance.agent" />
+      <sliceName value="preparingEntity" />
+      <code>
+        <system value="http://hl7.org/fhir/v3/ParticipationType" />
+        <code value="AUT" />
+      </code>
+      <short value="Authoring entity" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent:preparingEntity.role">
+      <path value="Provenance.agent.role" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent:preparingEntity.role.coding.system">
+      <path value="Provenance.agent.role.coding.system" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+    </element>
+    <element id="Provenance.agent:preparingEntity.role.coding.code">
+      <path value="Provenance.agent.role.coding.code" />
+      <fixedCode value="assembler" />
+    </element>
+    <element id="Provenance.agent:preparingEntity.who[x]">
+      <path value="Provenance.agent.who[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent:preparingEntity.onBehalfOf[x]">
+      <path value="Provenance.agent.onBehalfOf[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent:assemblingDevice">
+      <path value="Provenance.agent" />
+      <sliceName value="assemblingDevice" />
+      <short value="Assembling device" />
+      <max value="1" />
+    </element>
+    <element id="Provenance.agent:assemblingDevice.role">
+      <path value="Provenance.agent.role" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent:assemblingDevice.role.coding.system">
+      <path value="Provenance.agent.role.coding.system" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+    </element>
+    <element id="Provenance.agent:assemblingDevice.role.coding.code">
+      <path value="Provenance.agent.role.coding.code" />
+      <fixedCode value="author" />
+    </element>
+    <element id="Provenance.agent:assemblingDevice.who[x]:whoReference">
+      <path value="Provenance.agent.whoReference" />
+      <sliceName value="whoReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-device" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent:assemblingDevice.onBehalfOf[x]">
+      <path value="Provenance.agent.onBehalfOf[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-organisation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity">
+      <path value="Provenance.entity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity.role">
+      <path value="Provenance.entity.role" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity.what[x]">
+      <path value="Provenance.entity.what[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.entity.agent">
+      <path value="Provenance.entity.agent" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -29,7 +29,11 @@
                     <tr class="frm-contents" height="80">
                         <td class="frm-null"/>
                         <td class="frm-null"/>
-                        <td class="frm-null"/>
+                        <td class="frm-set">
+                            <ul class="frm-set">
+                               <li><a href="StructureDefinition-provenance-list-gen-1.html">Provenance (Provenance for the Generation of a List)</a></li>
+                            </ul>
+                        </td>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                     </tr>
@@ -45,8 +49,19 @@
                         <td class="frm-null"/>
                     </tr> 
                     <tr class="frm-contents" height="80">
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
+                        <td class="frm-set">
+                        <ul class="frm-set">
+                            <li><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></li>
+                            <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
+                            <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
+                        </ul>
+                        </td>
+                        <td class="frm-set">
+                            <ul class="frm-set">
+                                <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
+                                <li><a href="StructureDefinition-device-dh-base-1.html">Device (Base Device)</a></li>
+                            </ul>
+                        </td>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
@@ -110,12 +125,37 @@
             <th>Implementation guide profile base</th>
             <th>FHIR base resource</th>
           </tr>
-          <tr>
-            <td class="frm-null"/>
-            <td class="frm-null"/>
-            <td class="frm-null"/>
-          </tr>
-        </table>
+        <tr>
+            <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
+            <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
+            <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
+        </tr> 
+       <tr>
+        <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
+    </tr> 
+    <tr>
+        <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
+    </tr>
+     <tr>
+        <td><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
+    </tr>
+    <tr>
+        <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
+    </tr> 
+    <tr>
+        <td><a href="StructureDefinition-device-dh-base-1.html">Device (Base Device)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-device.html">AU Base Device</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/device.html">Device </a></td>
+    </tr>
+   </table>
       </div>
   </div>  <!-- /inner-wrapper -->
   </div>  <!-- /row -->

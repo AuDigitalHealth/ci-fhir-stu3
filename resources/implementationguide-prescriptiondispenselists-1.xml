@@ -18,11 +18,65 @@
     <copyright
         value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
     <fhirVersion value="3.0.1"/>
-    <!--<package>
+    <package>
         <name value="PDL"/>
         <resource>
+            <example value="false"/>
+            <name value="provenance-list-gen-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/provenance-list-gen-1"/>
+            </sourceReference>
         </resource>
-    </package>-->
+        <resource>
+            <example value="false"/>
+            <name value="patient-dh-base-1"/>
+            <description
+                value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="relatedperson-dh-base-1"/>
+            <description
+                value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
+            <sourceReference>
+                <reference value="StructureDefinition/relatedperson-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <name value="organization-dh-base-1"/>
+            <description
+                value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/organization-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/practitioner-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/device-dh-base-1"/>
+            </sourceReference>
+        </resource>
+ 
+        <!-- Datatype profiles -->      
+        <resource>
+            <example value="false"/>
+            <sourceReference>
+                <reference value="StructureDefinition/humanname-dh-base-1"/>
+            </sourceReference>
+        </resource>
+        
+        <!--   Examples -->
+    </package>
     <page>
         <source value="index.html"/>
         <title value="Australian Digital Health Agency Prescription and Dispense Lists FHIR Implementation Guide"/>
