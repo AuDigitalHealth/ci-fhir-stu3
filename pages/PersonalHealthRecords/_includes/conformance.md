@@ -5,7 +5,7 @@
 # {{ page.title }}
 
 ## Conformance requirements
-This specification describes how a SHS is implemented in [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3). Any FHIR resource that claims conformance to a profile in this implementation guide, or any derived profile, SHALL meet these requirements:
+Any FHIR resource that claims conformance to a profile in this implementation guide, or any derived profile, SHALL meet these requirements:
 
 * It SHALL be a valid HL7 FHIR instance. In particular:
     * It SHALL conform to [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).

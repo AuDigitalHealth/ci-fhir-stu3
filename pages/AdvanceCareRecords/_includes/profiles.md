@@ -34,6 +34,7 @@
                                 <ul>
                                     <li><a href="StructureDefinition-composition-acp-1.html">Composition (Advanced Care Planning)</a></li>
                                     <li><a href="StructureDefinition-documentreference-acp-1.html">DocumentReference (Advance Care Planning Document Reference)</a></li>
+                                    <li><a href="StructureDefinition-composition-acdcr-1.html">Composition (Advance Care Directive Custodian Record)</a></li>
                                 </ul>
                             </td>
                         <td class="frm-null"/>

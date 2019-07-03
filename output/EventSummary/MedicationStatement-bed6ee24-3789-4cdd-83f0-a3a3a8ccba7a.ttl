@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <p><b>Medication</b>: amoxicillin 500 mg capsule</p>\n            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                307111942H; gender = male; birthDate = 23/04/1954; address = 78 Bamboo\n                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                Torres Strait Islander origin</p>\n            <p><b>Medication status</b>: intended</p>\n            <p><b>Taken</b>: no</p>\n            <p><b>Dosage</b>: 1 capsule three times a day</p>\n        </div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "intended"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.text [ fhir:value "amoxicillin 500 mg capsule" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/d422d1da-6280-4335-8795-b101a61134e4>;
+     fhir:Reference.reference [ fhir:value "Patient/d422d1da-6280-4335-8795-b101a61134e4" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "n"];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "1 capsule three times a day" ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "3"^^xsd:integer ];
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ];
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ];
+     fhir:Dosage.doseQuantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "capsule" ];
+       fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Quantity.code [ fhir:value "107011000036108" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

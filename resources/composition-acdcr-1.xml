@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="composition-acdcr-1" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1" />
+  <version value="1.0.0" />
+  <name value="CompositionACDCR" />
+  <title value="Advance Care Directive Custodian Record" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Australian Digital Health Agency" />
+  <contact>
+    <telecom>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
+    </telecom>
+  </contact>
+  <description value="The purpose of this profile is to define a representation of a document (Advance Care Directive Custodian Record) that includes one or more custodian details for a patient's advance care directive in an Australian healthcare context. The author of the Advance Care Directive Custodian Record (the Composition) may not be the author of the referenced advance care directive. &#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-composition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Composition">
+      <path value="Composition" />
+      <short value="Advance Care Directive Custodian Record" />
+      <definition value="A record of the custodians of an individual's advance care directive." />
+      <constraint>
+        <key value="inv-dh-cmp-03" />
+        <severity value="error" />
+        <human value="If the author is a practitioner, the role shall be provided" />
+        <expression value="(Composition.author.resolve() is Practitioner) implies Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').exists()" />
+      </constraint>
+    </element>
+    <element id="Composition.meta">
+      <path value="Composition.meta" />
+      <min value="1" />
+      <constraint>
+        <key value="inv-dh-cmp-01" />
+        <severity value="error" />
+        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1'" />
+        <expression value="Composition.meta.profile.where($this='http://hl7.org.au/fhir/3.0/StructureDefinition/composition-acdcr-1').exists()" />
+      </constraint>
+    </element>
+    <element id="Composition.meta.profile">
+      <path value="Composition.meta.profile" />
+      <min value="1" />
+    </element>
+    <element id="Composition.language">
+      <path value="Composition.language" />
+      <min value="1" />
+      <fixedCode value="en-AU" />
+    </element>
+    <element id="Composition.extension:compositionAuthorRole">
+      <path value="Composition.extension" />
+      <sliceName value="compositionAuthorRole" />
+      <short value="Practitioner role that authored the composition"/>      
+      <max value="1" />
+      <constraint>
+        <key value="inv-dh-cmp-04" />
+        <severity value="error" />
+        <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
+        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.status">
+      <path value="Composition.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" />
+          <code value="100.16696" />
+        </coding>
+      </fixedCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.date">
+      <path value="Composition.date" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <short value="Author of the composition; may not be the author of the referenced advance care directive" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.confidentiality">
+      <path value="Composition.confidentiality" />
+      <max value="0" />
+    </element>
+    <element id="Composition.attester">
+      <path value="Composition.attester" />
+      <short value="Legal attester" />
+      <max value="1" />
+      <constraint>
+        <key value="inv-dh-cmp-02" />
+        <severity value="error" />
+        <human value="A legal attester shall have a party or a related party" />
+        <expression value="Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.attester.extension:attesterRelatedParty">
+      <path value="Composition.attester.extension" />
+      <sliceName value="attesterRelatedParty" />
+      <constraint>
+        <key value="inv-dh-cmp-05" />
+        <severity value="error" />
+        <human value="A related party shall conform to RelatedPerson with Mandatory Identifier" />
+        <expression value="Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.attester.mode">
+      <path value="Composition.attester.mode" />
+      <max value="1" />
+      <fixedCode value="legal" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.attester.time">
+      <path value="Composition.attester.time" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.attester.party">
+      <path value="Composition.attester.party" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.custodian">
+      <path value="Composition.custodian" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <short value="Advance Care Directive Custodians" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section.title">
+      <path value="Composition.section.title" />
+      <min value="1" />
+      <fixedString value="Advance Care Directive Custodians"/>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" />
+          <code value="101.16694" />
+        </coding>
+      </fixedCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section.text">
+      <path value="Composition.section.text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section.entry">
+      <path value="Composition.section.entry" />
+      <short value="Persons acting as custodians (holders) of a patient's advance care directive responsible" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
