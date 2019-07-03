@@ -84,20 +84,6 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Provenance.agent.role">
-      <path value="Provenance.agent.role" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Provenance.agent.who[x]">
-      <path value="Provenance.agent.who[x]" />
-      <mustSupport value="false" />
-    </element>
-    <element id="Provenance.agent.onBehalfOf[x]">
-      <path value="Provenance.agent.onBehalfOf[x]" />
-      <mustSupport value="false" />
-    </element>
     <element id="Provenance.agent:preparingEntity">
       <path value="Provenance.agent" />
       <sliceName value="preparingEntity" />
@@ -106,6 +92,7 @@
         <code value="AUT" />
       </code>
       <short value="Authoring entity" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -135,7 +122,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -155,7 +142,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -171,7 +158,9 @@
       <path value="Provenance.agent" />
       <sliceName value="assemblingDevice" />
       <short value="Assembling device" />
+      <min value="0" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Provenance.agent:assemblingDevice.role">
       <path value="Provenance.agent.role" />
@@ -208,7 +197,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
       </type>
       <type>
         <code value="Reference" />
