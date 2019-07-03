@@ -5,18 +5,18 @@
 # {{ page.title }}
 
 ## Conformance requirements
-This specification describes how an SML is implemented in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). Any FHIR resource that claims conformance to a profile in this implementation guide, or any derived profile, SHALL meet these requirements:
+Any FHIR resource that claims conformance to a profile in this implementation guide, or any derived profile, SHALL meet these requirements:
 
 * It SHALL be a valid HL7 FHIR instance. In particular:
-* It SHALL conform to [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
-* It SHALL conform to the profile it claims conformance to including:
-* conforming to the requirements described on the corresponding profile or extension page of this implementation guide
-* conforming to the requirements in the base resource as specified in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3)
-* conforming to the requirements in the base profile where the profile described in this implementation guide is derived from a base profile
+    * It SHALL conform to [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).
+    * It SHALL conform to the profile it claims conformance to including:
+        * conforming to the requirements described on the corresponding profile or extension page of this implementation guide
+        * conforming to the requirements in the base resource as specified in [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3)
+        * conforming to the requirements in the base profile where the profile described in this implementation guide is derived from a base profile
 * It SHALL conform to the requirements specified in the Must Support section below.
 * Where additional content beyond that flagged with must support is provided it:
-* SHALL NOT qualify or negate content described by this profile as must support
-* SHALL be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
+    * SHALL NOT qualify or negate content described by this profile as must support
+    * SHALL be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content
 
 A profile, derived from a profile described in this implementation guide may make additional rules that override this implementation guide:
 
