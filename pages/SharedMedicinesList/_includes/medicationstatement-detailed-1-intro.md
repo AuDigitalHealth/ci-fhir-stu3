@@ -16,4 +16,6 @@ For the supported scenarios in this implementation guide:
     * medicine item the patient is currently taking or has taken should be represented with taken 'y'.
 
 
+* Additinal information about the TBD should be provided in note.
 
+*  

@@ -1,4 +1,4 @@
-### List of Medicine Items for a Patient with Change Information *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+### List of Medicine Items with Change Information Authored by Practitioner *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 
@@ -66,9 +66,9 @@ For the expected usage scenario of a PSML document the following guidance applie
 * The role of ‘pharmacist’ will be recorded in the list source role as PractitionerRole.code.
 * Encounter details, such as encounter type and period, are expected to be provided.
 * All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, are expected to be included in the list.
-* The list is expected to include at least one medicine item that the patient is taking, i.e. the flag is not 'ceased'.
+* The list is expected to include at least one medicine item that the patient is known to be taking, i.e. the flag is not 'ceased'.
 * The list may include relevant ceased medicine items for the patient.
-* The list is not expected to include medicine item change recommendations; the flag is never expected to have one of thes values: 'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended'. 
+* The list is not expected to include prescribed medicine items and change recommendations for the existing medicine items; the flag is never expected to have one of thes values: 'presribed',  'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended'. 
 
 
 
