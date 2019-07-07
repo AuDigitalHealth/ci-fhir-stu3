@@ -15,13 +15,14 @@ For the supported scenarios in this implementation guide:
     * A medicine item that has not yet been taken or has never been taken should be represented with taken 'n'.
     * A medicine item the patient is currently taking or has taken should be represented with taken 'y'.
 
-* Additinal information about a medicine item that cannot be included in one of the existing elements is expected to be included in note. 
+* MedicationStatement effective should be interpreted in regards to the combination of status and/or taken values:
+    * When taken is 'n' and status is 'active' 'on-hold' or 'intended', the effective[x] is the interval of time during which it is being asserted  the patient intends to take or is instructed to take a medicine item
+    * When taken is 'y' and status is 'active', 'on-hold' or 'intended', the effective[x] is the interval of time during which it is being asserted that the patient is taking a medicine. The end date of the period is expected to be omitted; if included, the end date represents the date the patient is expected to stop taking a medicine item.
+    * When taken is 'n' and status is 'completed', the effective[x] is the interval of time during which it is being asserted that the patient was not taking a medicine.
+    * When taken is 'y' and status is 'completed', the effective[x] is the interval of time during which it is being asserted that the patient was taking a medicine. 
 
-* MedicationStatement effective[x] is expected to be included. 
-* MedicationStatement effective should be interpreset in regards to the taken value:
-    * When taken is 'n', the effective
-    * When taken is 'y', 
-  * Expected end date of a medicine item that a patient is currently taking is expected to be recorded as the end date in the effectivePeriod. 
-  * 
-   
- 
+* If structured dosage is included, 
+
+* Additinal information about a medicine item that cannot be included in one of the existing elements is expected to be included in note.
+
+  
