@@ -1,0 +1,183 @@
+{
+  "resourceType": "Composition",
+  "id": "672a9ba7-0773-4a7f-ad80-e6ef50950a8d",
+  "meta": {
+    "lastUpdated": "2019-03-31T15:40:00+10:00",
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1"
+    ]
+  },
+  "language": "en-AU",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <h2>Event Summary for Billy Tjakamarra on 31 Mar 2019</h2>\n            <p><b>Subject</b>: Billy Tjakamarra; Pensioner Concession Card Number:\n                307111942H; gender = male; birth date = 23/04/1954; address = 78 Bamboo\n                Street, Nightcliff NT, 0810; indigenous status = Aboriginal but not\n                Torres Strait Islander origin</p>\n            <p><b>Document status</b>: final</p>\n            <p><b>Document date</b>: 31/03/2019 15:38</p>\n            <p><b>Document author</b>: Dr Sonia Strempel (OFFICIAL); HPI-I =\n                8003610000000000; Prescriber Number = 459999\n                sonia.strempel@mail.topendmedicalclinic.com.au (WORK)</p>\n            <p><b>Document author role</b>: General Practitioner Registrar; Medicare\n                Provider Number = 5544887B, HPI-I = 8003610000000000; Top End Medical\n                Clinic</p>\n            <p><b>Document attester (legal)</b>: Dr Sonia Strempel (HPI-I =\n                8003610000000000); time: 31/03/2019 15:39</p>\n            <p><b>Document custodian</b>: Top End Medical Clinic; HPI-O =\n                8003621566684455; ACN = 123456789; email:\n                admin@mail.topendmedicalclinic.com.au (WORK); phone: (08) 8423 9999\n                (WORK); address: 102 Rowling Street, Casuarina NT 0810 (physical)</p>\n        </div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org.au/fhir/StructureDefinition/composition-author-role",
+      "valueReference": {
+        "reference": "PractitionerRole/e99357bd-b6ad-4ae7-9d99-27cb929e48af"
+      }
+    }
+  ],
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "bfb3dd71-e5ee-4df6-a315-9f1cbd509cd7"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "34133-9"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "PEN",
+            "display": "Pension Number"
+          }
+        ],
+        "text": "Pensioner Concession Card Number"
+      },
+      "system": "http://ns.electronichealth.net.au/id/centrelink-customer-reference-number",
+      "value": "307111942H"
+    }
+  },
+  "encounter": {
+    "reference": "Encounter/cead9124-f6d8-47ac-b785-8e0fcab3dc13"
+  },
+  "date": "2019-03-31T15:38:00+10:00",
+  "author": [
+    {
+      "reference": "Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a"
+    }
+  ],
+  "title": "Event Summary for Billy Tjakamarra on 31 Mar 2019",
+  "attester": [
+    {
+      "mode": [
+        "legal"
+      ],
+      "time": "2019-03-31T15:39:00+10:00",
+      "party": {
+        "reference": "Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a"
+      }
+    }
+  ],
+  "custodian": {
+    "reference": "Organization/0903c2ea-252f-4b03-85f4-2ddcf046fbc3"
+  },
+  "section": [
+    {
+      "title": "Event Details",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "101.16672"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <p><b>Event description</b>: Patient presented with open injury to sole\n                    of left foot caused by stepping on rusty nail yesterday. Wound red\n                    and swollen, no calf muscle tenderness, no coughing nor chest pain\n                    which excludes pulmonary embolism. Patient has an existing allergy\n                    to adhesive tape, which manifests as urticaria. Patient was given\n                    booster dose of anti tetanus and prescribed amoxicillin 500mg 3\n                    times a day. Wound was attended. Advised to present in 2 days to the\n                    usual GPs clinic for a change of dressings.</p>\n                <p><b>Event status</b>: finished</p>\n                <p><b>Event subject</b>: Billy Tjakamarra; Pensioner Concession Card\n                    Number: 307111942H; gender = male; birth date = 23/04/1954; address\n                    = 78 Bamboo Street, Nightcliff NT, 0810; indigenous status =\n                    Aboriginal but not Torres Strait Islander origin</p>\n                <p><b>Event start</b>: 31/03/2019 15:20</p>\n                <p><b>Event end</b>: 31/03/2019 15:40</p>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "Encounter/cead9124-f6d8-47ac-b785-8e0fcab3dc13"
+        }
+      ]
+    },
+    {
+      "title": "Allergies and Adverse Reactions",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "48765-2",
+            "display": "Allergies and adverse reactions Document"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <p>Patient has an existing allergy to adhesive tape, which manifests as\n                    urticaria</p>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "AllergyIntolerance/c7dfc1e4-e2e0-4542-b93a-be297efb0f95"
+        }
+      ]
+    },
+    {
+      "title": "Medications",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10160-0",
+            "display": "History of Medication use Narrative"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <table class=\"grid\">\n                    <tr>\n                        <th>change type</th>\n                        <th>item</th>\n                        <th>dosage</th>\n                        <th>change description</th>\n                    </tr>\n                    <tr>\n                        <td>New prescription</td>\n                        <td>amoxicillin 500 mg capsule</td>\n                        <td>1 capsule three times a day</td>\n                        <td>prevention of wound infection</td>\n                    </tr>\n                </table>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "List/e6e32a80-a307-4833-b997-1e6e7b3abbb3"
+        }
+      ]
+    },
+    {
+      "title": "Medical History",
+      "code": {
+        "coding": [
+          {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1",
+            "code": "101.16117"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <p><b>Condition</b>: Puncture wound from stepping on a rusty nail, sole\n                    of left foot; onset = 30/03/2019</p>\n                <p><b>Procedure</b>: dressing of wound; performed = 31/03/2019</p>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "Condition/e11fd841-5200-4657-9260-3a041a98ae31"
+        },
+        {
+          "reference": "Procedure/fed6e796-ac88-459c-af61-de718a48423d"
+        }
+      ]
+    },
+    {
+      "title": "Immunisations",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "11369-6"
+          }
+        ]
+      },
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <p><b>Vaccine</b>: Boostrix injection, 0.5 mL syringe</p>\n                <p><b>Date given</b>: 31/03/2019 15:35</p>\n            </div>"
+      },
+      "entry": [
+        {
+          "reference": "Immunization/d2b71673-d1a5-4e1d-9b25-bba47aa26036"
+        }
+      ]
+    }
+  ]
+}
