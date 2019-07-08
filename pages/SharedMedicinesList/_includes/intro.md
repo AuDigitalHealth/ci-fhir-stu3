@@ -119,28 +119,36 @@ This section lists known issues with this specification at the time of publishin
   <tr bgcolor="#DCDCDC">
     <th>Reference</th>
     <th>Description</th>
-    <th>Issue No.</th>
   </tr>
    <tr>
         <td>Composition.information-recipient</td>
-        <td>A FHIRPath expression for the invariant inv-dh-cmp-11 is required. This is yet to be created.</td>
-        <td/>
+        <td>FHIRPath expression for the invariant inv-dh-cmp-11 is yet to be thoroughly tested.</td>
   </tr>
   <tr>
         <td>Medication</td>
         <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This is yet to be confirmed with the HL7 AU.</td>
-        <td/>
   </tr>
   <tr>
         <td>Terminology bindings</td>
-        <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set in not yet available.</td>
-        <td/>
+        <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set is not yet available.</td>
     </tr>
     <tr>
         <td>Examples</td>
         <td>Examples are yet to be done. Existing examples are in the draft state and need improvements.</td>
-        <td/>
     </tr>
+    <tr>
+        <td>Sex</td>
+        <td>The Patient model referenced by this implementation guide includes a data component for gender but not a data component for sex. The preferred Australian Government approach is to collect and use gender information.</td>
+    </tr>
+    <tr>
+        <td>Medicine image</td>
+        <td>HL7 AU Medication model referenced by this implementation guide discourages the direct use of the image element. The element is available in FHIR STU3 Medication but it has been removed from the standard structure of R4 Medication.</td>
+    </tr> 
+    <tr>
+        <td>Physical description</td>
+        <td>The Medication model referenced by this implementation guide does not support a data component for medication physical description.</td>
+    </tr>    
+
  </tbody>
 </table> 
 

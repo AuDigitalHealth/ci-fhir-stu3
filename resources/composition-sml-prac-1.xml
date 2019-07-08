@@ -57,7 +57,7 @@
         <key value="inv-dh-cmp-02" />
         <severity value="error" />
         <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -69,37 +69,37 @@
         <key value="inv-dh-cmp-06" />
         <severity value="error" />
         <human value="A practitioner shall conform to Base Practitioner" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-07" />
         <severity value="error" />
         <human value="A patient shall conform to Base Patient" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
         <human value="A related person shall conform to Base RelatedPerson" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-09" />
         <severity value="error" />
         <human value="A practitioner role shall conform to Base PractitionerRole" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-10" />
         <severity value="error" />
         <human value="An organisation shall conform to Base Organization" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
       </constraint>
       <constraint>
-        <key value="inv-dh-cmp-10" />
+        <key value="inv-dh-cmp-11" />
         <severity value="error" />
         <human value="Information recipient shall not be a device" />
-        <expression value="TBD" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().where($this is Device).exists().not()"/>
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -233,7 +233,7 @@
         <key value="inv-dh-cmp-03" />
         <severity value="error" />
         <human value="The section shall at least have one entry or an empty reason, but not both" />
-        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').entry.exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').emptyReason.exists()" />
+        <expression value="section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').entry.exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').emptyReason.exists()" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -298,13 +298,13 @@
         <key value="inv-dh-cmp-04" />
         <severity value="error" />
         <human value="If present, the assertion of no relevant finding entry shall assert no known current medications" />
-        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())" />
+        <expression value="section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-05" />
         <severity value="error" />
         <human value="The section shall at least have one entry or an empty reason, but not both" />
-        <expression value="Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.exists() xor Composition.section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').emptyReason.exists()" />
+        <expression value="section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').emptyReason.exists()" />
       </constraint>
       <mustSupport value="true" />
     </element>

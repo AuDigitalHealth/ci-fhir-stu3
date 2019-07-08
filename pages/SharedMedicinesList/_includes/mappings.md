@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 d006][DH2019m].
+This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0][DH2019m] and [Pharmacist Shared Medicines List Information Requirements v2.0][DH2019n].
 
 The table below matches the data items to the corresponding supported element in the {{site.data.fhir.igName}} profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
@@ -33,38 +33,38 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Components in the PSML document</td>
                     <td>028321</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>This high-level business requirement cannot be mapped directly. Please see Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
+                    <td>This high-level business requirement cannot be mapped directly. Please see Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
                 </tr>
                 <tr>
                     <td>Document conformance levels</td>
                     <td>028315</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>This high-level business requirement cannot be mapped directly. See Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
+                    <td>This high-level business requirement cannot be mapped directly. See Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
                 </tr>            
                 <tr>
                     <td>Point-to-point transmission</td>
                     <td>027954</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>This requirement is managed in the implementation level. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
+                    <td>This requirement is managed in the implementation level. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
                 </tr>                        
                 <tr>
                     <td>HPI-I relaxed template package</td>
                     <td>028394</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>This requirement is best managed in a conformance profile.A</td>
+                    <td>This requirement is best managed in a conformance profile.</td>
                 </tr>                                     
                  <tr>
                     <td>Compatible with Prescription and Dispense Record</td>
                     <td>028323</td>
-                    <td>N/A</td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
                     <td>N/A</td>
                 </tr>                                                
                  <tr>
                     <td>Prompt to upload recent PSML</td>
                     <td>028325</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>This is managed in the implementation level.</td>
+                    <td>This requirement is managed in the implementation level.</td>
                 </tr>                                                                          
                 <tr>
                     <td>Medicines information presentation</td>
@@ -129,7 +129,7 @@ The table below matches the data items to the corresponding supported element in
                <tr>
                     <td>Completeness of PSML document</td>
                     <td>028324</td>
-                    <td>N/A</td>
+                    <td>Th</td>
                     <td>N/A</td>
                 </tr>                                                                                                         
                 <tr>
@@ -159,46 +159,33 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Attribute for Healthcare Setting</td>
                     <td>028349</td>
-                    <td></td>
-                    <td></td>
+                    <td>Encounter.type</td>
+                    <td>Composition.encounter(Encounter as Summary of an Encounter for an Event).Encounter.type</td>
                 </tr>
                 <tr>
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
-                    <td></td>
-                    <td></td>
+                    <td>List.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.note</td>
                 </tr>
                 <tr>
-                    <td rowspan="3">Additional Comment</td>
-                    <td rowspan="3">028348</td>
-                    <td rowspan="3">List.note</td>
-                    <td>Composition.section(Medications)</td>
-                </tr>
-                <tr>
-                    <td>Composition.section(Medications).entry</td>
-                </tr>
-                <tr>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.note</td>
+                    <td>Additional Comment</td>
+                    <td>028348</td>
+                    <td>List.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.note</td>
                 </tr>
                 <tr>
                     <td>Attribute for Ceased Date</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>028352</td>
+                    <td>MedicationStatement.effective[x]</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medicine).MedicationStatement.effective[x]</td>
                 </tr>
                 <tr>
-                    <td rowspan="4">Attribute for Substance/ Agent of allergy and adverse
+                    <td rowspan="2">Attribute for Substance/ Agent of allergy and adverse
                         reaction</td>
-                    <td rowspan="4">028330</td>
-                    <td rowspan="3">AllergyIntolerance.code</td>
-                    <td>Composition.section(Allergies)</td>
-                </tr>
-                <tr>
-                    <td>Composition.section(Allergies).entry</td>
-                </tr>
-                <tr>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement
-                        of Allergy or Intolerance).AllergyIntolerance.code</td>
+                    <td rowspan="2">028330</td>
+                    <td>AllergyIntolerance.code</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.code</td>
                 </tr>
                 <tr>
                     <td>AllergyIntolerance.reaction.substance</td>
@@ -230,167 +217,155 @@ The table below matches the data items to the corresponding supported element in
                     <td>Attribute for Medicine Identifier</td>
                     <td>028329</td>
                     <td>Medication.code</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
                         Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Attribute for Active Ingredient</td>
                     <td rowspan="2">028333</td>
                     <td>Medication.ingredient</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient</td>
                 </tr>
                 <tr>
                     <td>Medication.code</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known
                         Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>No Latin words or abbreviations of Active Ingredient</td>
                     <td>028390</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
                 </tr>
 
                 <tr>
                     <td rowspan="2">Attribute for Brand Name</td>
                     <td rowspan="2">028335</td>
                     <td>Medication.code</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>Medication.medication-brand-name</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.medication-brand-name</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.medication-brand-name</td>
                 </tr>
                 <tr>
                     <td>Active Ingredient or Brand Name</td>
                     <td>028412</td>
-                    <td></td>
-                    <td></td>
+                    <td>This is managed in the implementation level.</td>
+                    <td>This is managed in the implementation level.</td>
                 </tr>
 
                 <tr>
                     <td rowspan="2">Attribute for Strength</td>
                     <td  rowspan="2">028392</td>
                     <td>Medication.ingredient.amount</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient.amount</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient.amount</td>
                 </tr>
                 <tr>
                     <td>Medication.code</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Attribute for Dose Form</td>
                     <td rowspan="2">028391</td>
-                    <td>Medication.code</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
-                        Medication).Medication.code</td>
-                </tr>
-                <tr>
                     <td>Medication.form</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
                         Medication).Medication.form</td>
+                </tr>
+                <tr>          
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
+                        Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>Attribute for Route</td>
                     <td>028399</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>Attribute for Direction</td>
                     <td>028336</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>No Latin words or abbreviations for Direction</td>
                     <td>028337</td>
-                    <td></td>
-                    <td></td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Medicine Purpose</td>
                     <td>028338</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.reasonCode</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.reasonCode</td>
                 </tr>
                 <tr>
                     <td>Terminology for Medicine Purpose</td>
                     <td>028339</td>
-                    <td></td>
-                    <td></td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td>This high-level business requirement cannot be mapped directly.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Expected End Date</td>
                     <td>028343</td>
-                    <td></td>
-                    <td></td>
+                   <td>MedicationStatement.effective[x]</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.effective[x]</td>
                 </tr>
                 <tr>
                     <td>Attribute for Special Instruction</td>
                     <td>028345</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(Medications).entry(List as
-                        List of Medicine Items for a Patient).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>Attribute for Medicine Image</td>
                     <td>028346</td>
-                    <td></td>
-                    <td></td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
                 </tr>
                 <tr>
                     <td>Image sizes</td>
                     <td>028406</td>
-                    <td></td>
-                    <td></td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Physical Descriptions</td>
                     <td>028347</td>
-                    <td></td>
-                    <td></td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
                 </tr>
                 <tr>
                     <td>Attribute for reason for ceasing medicine</td>
                     <td>028351</td>
-                    <td></td>
-                    <td></td>
+                    <td>List.entry.change-description</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.change-description</td>
                 </tr>
                 <tr>
                     <td>Attribute for Medicine Status</td>
                     <td>028342</td>
                     <td>List.entry.flag</td>
-                    <td>Composition.section(Medications).entry(List as List of Medicine Items for a Patient).List.entry.flag</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.flag</td>
                 </tr>
                 <tr>
                     <td>Witheld Medicine</td>
                     <td>028620</td>
-                    <td></td>
-                    <td></td>
+                    <td>List.entry.change-description</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.change-description</td>
                 </tr> 
                 <tr>
                     <td>Witheld Medicine Ordering</td>
                     <td>028626</td>
-                    <td></td>
-                    <td></td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
                 </tr>
                 <tr>
                     <td>Ceased medicines</td>
                     <td>028623</td>
-                    <td></td>
-                    <td></td>
+                    <td>This requirement is managed in the rendering specification.</td>
+                    <td>This requirement is managed in the rendering specification.</td>
                 </tr>                                                 
              </tbody>
         </table>
@@ -572,7 +547,7 @@ The table below matches the data items to the corresponding supported element in
                  <tr>
                     <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.name</td>
                 </tr> 
-                tr>
+                <tr>
                     <td>Primary healthcare provider (optional)</td>
                     <td>028028</td>
                     <td>Patient.generalPractitioner</td>
@@ -641,25 +616,23 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td rowspan="2">Healthcare setting (mandatory)</td>
                     <td>028435</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="2">Encounter.type</td>
+                    <td rowspan="2">Composition.encounter(Encounter as Summary of an Encounter for an Event).Encounter.type</td>
                 </tr>  
                <tr>
                    <td>028534</td>
-                    <td></td>
-                    <td></td>
                 </tr>  
                 <tr>
                     <td>Additional comments (optional)</td>
                     <td>028403</td>
                     <td>List.note</td>
-                    <td></td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.note </td>
                 </tr>  
                 <tr>
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
                     <td>List.note</td>
-                    <td>Composition.section(Medications).entry(List as ).List.note</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.note</td>
                 </tr>  
                 <tr>
                     <td rowspan="3">Allergy and Adverse Reaction (optional)</td>
@@ -700,140 +673,150 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.onset</td>
                 </tr>  
                <tr>
-                    <td rowspan="">Medicine Item (mandatory)</td>
-                    <td rowspan="">028632</td>
+                    <td rowspan="2">Medicine Item (mandatory)</td>
+                    <td rowspan="2">028632</td>
                     <td>Composition.section(Medications)</td>
                     <td>Composition.section(Medications)</td>
                 </tr>
+                <tr>
                     <td>Composition.section(Medications)</td>
                     <td>Composition.section(Medications).entry</td>
                 </tr>    
                 <tr>
                     <td rowspan="2">Medicine identifier (mandatory)</td>
                     <td>028633</td>
-                    <td>Medication.code</td>
-                    <td>Composition.section(Medications).entry(List as TBD).List.entry(MedicationStatement as Detailed Statement of Known Medicine).MedicationStatement.medication(Medication as Known Medicine).Medication.code</td>
+                    <td rowspan="2">Medication.code</td>
+                    <td rowspan="2">Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medicine).MedicationStatement.medication(Medication as Known Medicine).Medication.code</td>
                 </tr>
                 <tr>
                     <td>028634</td>
-                    <td></td>
-                    <td></td>
+               </tr>
+                <tr>
+                    <td rowspan="2">Active Ingredient (optional)</td>
+                    <td rowspan="2">028014</td>
+                    <td>Medication.ingredient</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient</td>
+                </tr>
+                 <tr>
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known
+                        Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
-                    <td>Active Ingredient (optional)</td>
-                    <td>028014</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="2">Brand name (optional)</td>
+                    <td rowspan="2">028442</td>
+                     <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
+                </tr>
+               <tr>
+                    <td>Medication.medication-brand-name</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.medication-brand-name</td>
                 </tr>
                 <tr>
-                    <td>Brand name (optional)</td>
-                    <td>028442</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="2">Medicine strength (optional)</td>
+                    <td rowspan="2">028635</td>
+                    <td>Medication.ingredient.amount</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.ingredient.amount</td>
                 </tr>
                 <tr>
-                    <td>Medicine strength (optional)</td>
-                    <td>028635</td>
-                    <td></td>
-                    <td></td>
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known Medication).Medication.code</td>
                 </tr>
                 <tr>
-                    <td>Dose form (optional)</td>
-                    <td>028026</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="2">Dose form (optional)</td>
+                    <td rowspan="2">028026</td>
+                    <td>Medication.form</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
+                        Medication).Medication.form</td>
+                </tr>
+                <tr>          
+                    <td>Medication.code</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.medication(Medication as Known
+                        Medication).Medication.code</td>
                 </tr>
                 <tr>
                     <td>Route (optional)</td>
                     <td>028443</td>
-                    <td></td>
-                    <td></td>
+                    <td>MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>Direction (mandatory)</td>
                     <td>028021</td>
-                    <td></td>
-                    <td></td>
+                    <td>MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                 <tr>
                     <td>Medicine purpose (optional)</td>
                     <td>028016</td>
-                    <td></td>
-                    <td></td>
+                    <td>MedicationStatement.reasonCode</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.reasonCode</td>
                 </tr>
                 <tr>
                     <td>Expected end date (optional)</td>
                     <td>028445</td>
-                    <td></td>
-                    <td></td>
+                    <td>MedicationStatement.effective[x]</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.effective[x]</td>
                 </tr>
                 <tr>
                     <td>Special instructions (optional)</td>
                     <td>028446</td>
-                    <td></td>
-                    <td></td>
+                     <td>MedicationStatement.dosage</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medication).MedicationStatement.dosage</td>
                 </tr>
                  <tr>
                     <td rowspan="2">Medicine image (optional)</td>
                     <td>028018</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="2">This requirement is not compatible with the current model. See known issues.</td>
+                    <td rowspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>               
                 <tr>
                     <td>028535</td>
-                    <td></td>
-                    <td></td>
-                </tr>  
+               </tr>  
                 <tr>
                     <td>Physical description (optional)</td>
                     <td>028020</td>
-                    <td></td>
-                    <td></td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td>This requirement is not compatible with the current model. See known issues.</td>
                 </tr>  
                 <tr>
                     <td rowspan="3">Medicine status (optional)</td>
                     <td>028017</td>
-                    <td></td>
-                    <td></td>
+                    <td rowspan="3">List.entry.flag</td>
+                    <td rowspan="3">Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.flag</td>
                 </tr>  
                 <tr>
                     <td>028027</td>
-                    <td></td>
-                    <td></td>
-                </tr>  
+               </tr>  
                 <tr>
                     <td>028636</td>
-                    <td></td>
-                    <td></td>
                 </tr>  
                 <tr>
                     <td rowspan="2">Medicine identifier (mandatory)</td>
                     <td>028633</td>
-                    <td></td>
-                    <td></td>
-                </tr>  
+                    <td rowspan="2">Medication.code</td>
+                    <td rowspan="2">Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medicine).MedicationStatement.medication(Medication as Known Medicine).Medication.code</td>
+                </tr>
                 <tr>
                     <td>028634</td>
-                    <td></td>
-                    <td></td>
                 </tr>  
                 <tr>
                     <td>Reason for ceasing medicine (optional)</td>
                     <td>028447</td>
-                    <td></td>
-                    <td></td>
+                    <td>List.entry.change-description</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.change-description</td>
                 </tr>  
                 <tr>
                     <td>Ceased date (optional)</td>
                     <td>028629</td>
-                    <td></td>
-                    <td></td>
+                    <td>MedicationStatement.effective[x]</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Detailed Statement of Known Medicine).MedicationStatement.effective[x]</td>
                 </tr>  
                 <tr>
                     <td>Ceased medicines (mandatory)</td>
                     <td>028636</td>
-                    <td></td>
-                    <td></td>
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(Medications).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.flag</td>
                 </tr>  
                 <tr>
                     <td>Extensions not permitted (mandatory)</td>
@@ -844,26 +827,26 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Document version number (mandatory)</td>
                     <td>023068</td>
-                    <td></td>
-                    <td></td>
+                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
                 </tr>  
-                                <tr>
+                <tr>
                     <td>Document instance identifier (mandatory)</td>
                     <td>023067</td>
-                    <td></td>
-                    <td></td>
+                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.) </td>
+                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
                 </tr> 
-                                <tr>
+                <tr>
                     <td>Date and time of document creation (mandatory)</td>
                     <td>024025</td>
-                    <td></td>
-                    <td></td>
+                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
                 </tr> 
-                                <tr>
+                <tr>
                     <td>Document type (mandatory)</td>
                     <td>024027</td>
-                    <td></td>
-                    <td></td>
+                    <td>Composition.type</td>
+                    <td>Composition.type</td>
                 </tr> 
      </tbody>
 <table>                                    

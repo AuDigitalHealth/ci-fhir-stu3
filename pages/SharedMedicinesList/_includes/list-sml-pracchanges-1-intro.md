@@ -68,7 +68,8 @@ For the expected usage scenario of a PSML document the following guidance applie
 * All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, are expected to be included in the list.
 * The list is expected to include at least one medicine item that the patient is known to be taking, i.e. the flag is not 'ceased'.
 * The list may include relevant ceased medicine items for the patient.
-* The list is not expected to include prescribed medicine items and change recommendations for the existing medicine items; the flag is never expected to have one of thes values: 'presribed',  'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended'. 
-
+* The list is not expected to include prescribed medicine items and change recommendations for the existing medicine items; the flag is never expected to have one of thes values: 'presribed',  'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended'.
+* Information that the PSML contains one or more medicines that are packed by a pharmacy in a dose administration aid is expected to be included in note with preferred text 'Packed medicines: Yes', 'Packed medicines: No' or 'Packed medicines: Unknown'.
+* Additional comments that apply to the PSML, and not to any specific medicine item, can be provided in note.
 
 

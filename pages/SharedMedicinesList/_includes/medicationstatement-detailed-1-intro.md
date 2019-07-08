@@ -21,7 +21,7 @@ For the supported scenarios in this implementation guide:
     * When taken is 'n' and status is 'completed', the effective[x] is the interval of time during which it is being asserted that the patient was not taking a medicine.
     * When taken is 'y' and status is 'completed', the effective[x] is the interval of time during which it is being asserted that the patient was taking a medicine. 
 
-* If structured dosage is included, 
+* If structured dosage is included, only route, text or patient instructions are expected to be provided.
 
 * Additinal information about a medicine item that cannot be included in one of the existing elements is expected to be included in note.
 
