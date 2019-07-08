@@ -119,23 +119,28 @@ This section lists known issues with this specification at the time of publishin
   <tr bgcolor="#DCDCDC">
     <th>Reference</th>
     <th>Description</th>
+    <th>Issue No.</th>
   </tr>
    <tr>
-    <td>Composition.information-recipient</td>
-    <td>A FHIRPath expression for the invariant inv-dh-cmp-11 is required. This is yet to be created.</td>
+        <td>Composition.information-recipient</td>
+        <td>A FHIRPath expression for the invariant inv-dh-cmp-11 is required. This is yet to be created.</td>
+        <td/>
   </tr>
   <tr>
-    <td>Medication</td>
-    <td>medication-strength-text extension has been removed from the HL7 Au STU3 build.</td>
+        <td>Medication</td>
+        <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This is yet to be confirmed with the HL7 AU.</td>
+        <td/>
   </tr>
   <tr>
-    <td>Terminology publication</td>
-    <td>Encounter type</td>
-  </tr>
+        <td>Terminology bindings</td>
+        <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set in not yet available.</td>
+        <td/>
+    </tr>
     <tr>
-    <td>Examples</td>
-    <td>Examples are yet to be done.</td>
-  </tr>
+        <td>Examples</td>
+        <td>Examples are yet to be done. Existing examples are in the draft state and need improvements.</td>
+        <td/>
+    </tr>
  </tbody>
 </table> 
 
