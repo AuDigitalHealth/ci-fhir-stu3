@@ -27,104 +27,87 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Pharmacist shared medicines list</td>
                     <td>027948</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
+                    <td colspan="2">This high-level business requirement cannot be mapped directly. Please see Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
                 </tr>
                 <tr>
                     <td>Components in the PSML document</td>
                     <td>028321</td>
-                    <td>This high-level business requirement cannot be mapped directly. Please see Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
-                    <td>This high-level business requirement cannot be mapped directly. Please see Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
-                </tr>
+                    <td colspan="2">This high-level business requirement cannot be mapped directly. Please see Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
+                 </tr>
                 <tr>
                     <td>Document conformance levels</td>
                     <td>028315</td>
-                    <td>This high-level business requirement cannot be mapped directly. See Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
-                    <td>This high-level business requirement cannot be mapped directly. See Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
-                </tr>            
+                    <td  colspan="2">This high-level business requirement cannot be mapped directly. See Mappings from information requirements for individual information requirements and associated business requirements mappings.</td>
+                    </tr>            
                 <tr>
                     <td>Point-to-point transmission</td>
                     <td>027954</td>
-                    <td>This requirement is managed in the implementation level. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
-                    <td>This requirement is managed in the implementation level. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
+                    <td  colspan="2">This requirement is managed in the implementation level. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
                 </tr>                        
                 <tr>
                     <td>HPI-I relaxed template package</td>
                     <td>028394</td>
-                    <td>This requirement is best managed in a conformance profile.A</td>
-                    <td>This requirement is best managed in a conformance profile.</td>
+                    <td colspan="2">This requirement is best managed in a conformance profile.</td>
                 </tr>                                     
                  <tr>
                     <td>Compatible with Prescription and Dispense Record</td>
                     <td>028323</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
-                    <td>N/A</td>
-                </tr>                                                
+                    <td colspan="2">This high-level business requirement cannot be mapped directly.</td>
+                 </tr>                                                
                  <tr>
                     <td>Prompt to upload recent PSML</td>
                     <td>028325</td>
-                    <td>This is managed in the implementation level.</td>
-                    <td>This requirement is managed in the implementation level.</td>
+                     <td colspan="2">This requirement is managed in the implementation level.</td>
                 </tr>                                                                          
                 <tr>
                     <td>Medicines information presentation</td>
                     <td>028359</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>
                 <tr>
                     <td>Allergies and Adverse Reactions section</td>
                     <td>028355</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>
                 <tr>
                     <td>Allergies and Adverse Reactions header</td>
                     <td>028360</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>                                
                 <tr>
                     <td>No known allergies or adverse reactions</td>
                     <td>028411</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>
                  <tr>
                     <td>Current Medicines section</td>
                     <td>028361</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr> 
                  <tr>
                     <td>Current Medicines header</td>
                     <td>028362</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>                             
                 <tr>
                     <td>Ceased Medicines section</td>
                     <td>028363</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>
                  <tr>
                     <td>Ceased Medicines header</td>
                     <td>028364</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                </tr>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
+                                    </tr>
                <tr>
                     <td>Suppressing Ceased Medicines section</td>
                     <td>028358</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>
                <tr>
                     <td>Suppressing codes and medicine identifiers</td>
                     <td>028625</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>               
                <tr>
                     <td>Completeness of PSML document</td>
@@ -147,14 +130,12 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>No Address for the consumer</td>
                     <td>028319</td>
-                    <td>Adress is optional in the model.This requirement is best managed in a conformance profile.</td>
-                    <td>Adress is optional in the model.This requirement is best managed in a conformance profile.</td>
+                    <td colspan="2">Adress is optional in the model.This requirement is best managed in a conformance profile.</td>
                 </tr>
                 <tr>
                     <td>No Electronic Communication Detail for the consumer</td>
                     <td>028320</td>
-                    <td>Electronic Communication Detail is optional in the model.This requirement is best managed in a conformance profile.</td>
-                    <td>Electronic Communication Detail is optional in the model.This requirement is best managed in a conformance profile.</td>
+                    <td colspan="2">Electronic Communication Detail is optional in the model.This requirement is best managed in a conformance profile.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Healthcare Setting</td>
@@ -234,8 +215,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>No Latin words or abbreviations of Active Ingredient</td>
                     <td>028390</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td colspan="2">This high-level business requirement cannot be mapped directly.</td>
                 </tr>
 
                 <tr>
@@ -251,8 +231,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Active Ingredient or Brand Name</td>
                     <td>028412</td>
-                    <td>This is managed in the implementation level.</td>
-                    <td>This is managed in the implementation level.</td>
+                    <td colspan="2">This is managed in the implementation level.</td>
                 </tr>
 
                 <tr>
@@ -292,9 +271,8 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>No Latin words or abbreviations for Direction</td>
                     <td>028337</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
-                </tr>
+                    <td colspan="2">This high-level business requirement cannot be mapped directly.</td>
+                 </tr>
                 <tr>
                     <td>Attribute for Medicine Purpose</td>
                     <td>028338</td>
@@ -304,8 +282,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Terminology for Medicine Purpose</td>
                     <td>028339</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td colspan="2">This high-level business requirement cannot be mapped directly.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Expected End Date</td>
@@ -322,20 +299,17 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Attribute for Medicine Image</td>
                     <td>028346</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td colspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>
                 <tr>
                     <td>Image sizes</td>
                     <td>028406</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
-                </tr>
+                    <td colspan="2">This requirement is not compatible with the current model. See known issues.</td>
+                </tr>    
                 <tr>
                     <td>Attribute for Physical Descriptions</td>
                     <td>028347</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td colspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>
                 <tr>
                     <td>Attribute for reason for ceasing medicine</td>
@@ -358,15 +332,13 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Witheld Medicine Ordering</td>
                     <td>028626</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>
                 <tr>
                     <td>Ceased medicines</td>
                     <td>028623</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                    <td>This requirement is managed in the rendering specification.</td>
-                </tr>                                                 
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
+                  </tr>                                                 
              </tbody>
         </table>
 
@@ -448,8 +420,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Individual's sex (optional)</td>
                     <td>028570</td>
-                    <td>n/a</td>
-                    <td>n/a</td>
+                    <td colspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>  
                 <tr>
                     <td>Individual's date of birth (mandatory)</td>
@@ -494,7 +465,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td>024036</td>
                     <td>Organization.telecom</td>
-                    <td></td>
+                    <td>Composition.composition-author-role(PractitionerRole as PractitionerRole with Practitioner with Mandatory Identifier).PractitionerRole.organization(Organization as Base Organization).Organization.telecom</td>
                 </tr>  
                <tr>
                     <td rowspan="2">Healthcare Provider Identifier-Individual (optional)</td>
@@ -562,8 +533,8 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (optional)</td>
                     <td>024602</td>
-                    <td></td>
-                    <td></td>
+                    <td>Organization.identifier</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Organization as Base Organization).Organization.identifier</td>
                 </tr> 
                <tr>
                     <td>Healthcare provider's title (optional)</td>
@@ -593,7 +564,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Organization as Base Organization).name</td>
+                    <td>Composition.subject(Patient as Patient with Mandatory Identifier).Patient.generalPractitioner(Organization as Base Organization).Organization.name</td>
                 </tr>  
                  <tr>
                     <td>Healthcare provider individual's workplace address (optional)</td>
@@ -610,8 +581,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Healthcare provider professional role (mandatory)</td>
                     <td>024040</td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>  
                 <tr>
                     <td rowspan="2">Healthcare setting (mandatory)</td>
@@ -649,11 +619,15 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.section(Allergies).emptyReason</td>
                 </tr>
                <tr>
-                    <td>Substance/Agent (optional)</td>
-                    <td>028436</td>
-                    <td></td>
-                    <td></td>
-                </tr>  
+                    <td rowspan="2">Substance/Agent (optional)</td>
+                    <td rowspan="2">028436</td>
+                    <td>AllergyIntolerance.code</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.code</td>
+                </tr>
+                 <tr>
+                    <td>AllergyIntolerance.reaction.substance</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.substance</td>
+                </tr>    
                 <tr>
                     <td>Reaction type (optional)</td>
                     <td>028437</td>
@@ -767,8 +741,7 @@ The table below matches the data items to the corresponding supported element in
                  <tr>
                     <td rowspan="2">Medicine image (optional)</td>
                     <td>028018</td>
-                    <td rowspan="2">This requirement is not compatible with the current model. See known issues.</td>
-                    <td rowspan="2">This requirement is not compatible with the current model. See known issues.</td>
+                    <td rowspan="2" colspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>               
                 <tr>
                     <td>028535</td>
@@ -776,8 +749,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Physical description (optional)</td>
                     <td>028020</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
-                    <td>This requirement is not compatible with the current model. See known issues.</td>
+                    <td colspan="2">This requirement is not compatible with the current model. See known issues.</td>
                 </tr>  
                 <tr>
                     <td rowspan="3">Medicine status (optional)</td>
@@ -821,27 +793,23 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Extensions not permitted (mandatory)</td>
                     <td>028637</td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="2">This requirement is managed in the rendering specification.</td>
                 </tr>  
                 <tr>
                     <td>Document version number (mandatory)</td>
                     <td>023068</td>
-                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
-                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td colspan="2">This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
                 </tr>  
                 <tr>
                     <td>Document instance identifier (mandatory)</td>
                     <td>023067</td>
-                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.) </td>
-                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td colspan="2">This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.) </td>
                 </tr> 
                 <tr>
                     <td>Date and time of document creation (mandatory)</td>
                     <td>024025</td>
-                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
-                    <td>This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
-                </tr> 
+                    <td colspan="2">This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                 </tr> 
                 <tr>
                     <td>Document type (mandatory)</td>
                     <td>024027</td>

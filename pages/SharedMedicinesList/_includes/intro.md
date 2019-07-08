@@ -137,18 +137,9 @@ This section lists known issues with this specification at the time of publishin
         <td>Examples are yet to be done. Existing examples are in the draft state and need improvements.</td>
     </tr>
     <tr>
-        <td>Sex</td>
-        <td>The Patient model referenced by this implementation guide includes a data component for gender but not a data component for sex. The preferred Australian Government approach is to collect and use gender information.</td>
+        <td>Data components not supported by this implementation guide</td>
+        <td>Information requirements document details a number of data components that are not supported by models included in this implementation guide: sex, medicine image, physical description of the medicine and patient's primary healthcare provider professional role.</td>
     </tr>
-    <tr>
-        <td>Medicine image</td>
-        <td>HL7 AU Medication model referenced by this implementation guide discourages the direct use of the image element. The element is available in FHIR STU3 Medication but it has been removed from the standard structure of R4 Medication.</td>
-    </tr> 
-    <tr>
-        <td>Physical description</td>
-        <td>The Medication model referenced by this implementation guide does not support a data component for medication physical description.</td>
-    </tr>    
-
  </tbody>
 </table> 
 
