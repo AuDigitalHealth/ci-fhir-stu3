@@ -1,1 +1,1 @@
-none defined
+Search parameters have not been defined.

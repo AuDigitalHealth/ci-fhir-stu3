@@ -1,20 +1,13 @@
 #### Known Medicine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #####  Implementation guidance 
+For the supported scenarios in this implementation guide:
+* Medication code from the [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) value set is preferred.
+* Where possible additional codes from the [PBSMedicinesItemCodes](http://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value set are expected to be supplied.
+* Where the medication code identifies a branded medicine item, the brand name may also be provided in code.text. 
+* Where the medication code identifies a generic medicine item, the generic name may also be provided in code.text.
+* Where a medication item is identified by a brand name only (and not by medication code), the brand name is expected to be provided in code.text and optionally in brand name extension. 
+* Where a medicine item is identified by a generic name only (and not by medication code), the generic name is expected to be provided in code.text and optionally in generic name extension.
+* Where both brand and generic names for a medicine item are available (and no medication code), the brand name in expected to be provided in code.text and optionally in brand name extension, and the generic name is expected to be provided in the generic name extension.
+* Where a medicine item is identified by a name only (and not by medication code), and is unknown whether this is a brand or a generic name, the name is expected to be provided in code.text only.
 
-* Where the code identifies a branded medicine item, brand name is expected to be provided in code.text and optionally in brand name extension. 
-* Where the code identifies a generic medicine item, generic name is expected to be provided in code.text and optionally in generic name extension.
-* When a medicine item is identified by a brand name only, the name is expected to be provided in code.text and optionally in brand name extension. 
-* When a medicine item is identified by a generic name only, the name is expected to be provided in code.text and optionally in generic name extension.
-* When both brand and generic names are available, brand name in expected to be provided in code.text and optionally in brand name extension, and generic name is expected to be provided in the generic name extension.
-* When it is unknown if the medicine item name is a brand or a generic name, the name is expected to be provided in code.text only.
-
-##### PSML implementation guidance
-
-For the expected usage scenarios in this implementation guide:
-
-* Medication code from the [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) value set is preffered.
-* Where possible supply additional codes from the [PBSMedicinesItemCodes](http://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html) value set.
-* Either the active ingredient(s) or a brand name, or both, is expected to be included.
-* The amount and strength of an active ingredient is expected to be included.
-* For a medicine item with four or more active ingredients strength may be omitted.

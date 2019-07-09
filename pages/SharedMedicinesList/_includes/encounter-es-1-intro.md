@@ -1,10 +1,9 @@
 ### Summary of an Encounter for an Event *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Usage scenarios
-* A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry in a Composition and/or in a List
+* A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry.
 
 Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing profile.
-
 
 ##### Implementation guidance
 
@@ -16,9 +15,18 @@ For the supported scenarios in this implementation guide:
   * type
   * reason
 * If provided, type is expected to support categorisation of the event from which the medicines list was generated, for example a code indicating a 'home medicines review' or 'pharmacist medicines review'.
+* Period is expected to be equal to or prior to the Composition date and the List date.
 
 When a shared medicines list is a PSML
 
-* TBD (type)
+* Type is expected to be provided.
+* Type will have one of the following values:
+  * Home medicine review
+  * Community pharmacy medicine review
+  * Hospital pharmacy medicine review
+  * Non-dispensing pharmacy medicine review
+  * Medicine review at discharge
+  * Residential care medicine review
+  * DAA packing pharmacy medicine review 
 
 

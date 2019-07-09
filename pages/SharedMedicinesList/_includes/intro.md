@@ -111,6 +111,41 @@ This document and related artefacts are technical in nature and the audience is 
     </tbody>
 </table> 
 
+## Known issues
+This section lists known issues with this specification at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.
+
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Reference</th>
+    <th>Description</th>
+  </tr>
+   <tr>
+        <td>Composition.information-recipient</td>
+        <td>FHIRPath expression for the invariant inv-dh-cmp-11 is yet to be thoroughly tested.</td>
+  </tr>
+  <tr>
+        <td>Medication</td>
+        <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This is yet to be confirmed with the HL7 AU.</td>
+  </tr>
+  <tr>
+        <td>Terminology bindings</td>
+        <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set is not yet available.</td>
+    </tr>
+    <tr>
+        <td>Examples</td>
+        <td>More examples are yet to be done.</td>
+    </tr>
+    <tr>
+        <td>Data components not supported by this implementation guide</td>
+        <td>Information requirements document details a number of data components that are not supported by models included in this implementation guide: sex, medicine image, physical description of the medicine and patient's primary healthcare provider professional role.</td>
+    </tr>
+    <tr>
+        <td>Relative FHIRPaths</td>
+        <td>Following profiles still include absolute FHIRPaths in invariant expressions: Base Patient, Patient with Mandatory Identifier, Base Practitioner,Practitioner with Mandatory Identifier, Base RelatedPerson and Summary Statement of Allergy or Intolerance. These will need to be changed to be relative; work to be done in a different branch and merged into SML. </td>
+    </tr>
+ </tbody>
+</table> 
 
 
 ## References
@@ -120,7 +155,9 @@ This document and related artefacts are technical in nature and the audience is 
 
 |[<a name="DH2019x">DH2019x</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
 
-|[<a name="DH2019xx">DH2019xx</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
+|[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
+
+|[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
 |[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
 | |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
