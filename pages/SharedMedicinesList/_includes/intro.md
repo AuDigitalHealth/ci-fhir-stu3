@@ -134,11 +134,15 @@ This section lists known issues with this specification at the time of publishin
     </tr>
     <tr>
         <td>Examples</td>
-        <td>Examples are yet to be done. Existing examples are in the draft state and need improvements.</td>
+        <td>More examples are yet to be done.</td>
     </tr>
     <tr>
         <td>Data components not supported by this implementation guide</td>
         <td>Information requirements document details a number of data components that are not supported by models included in this implementation guide: sex, medicine image, physical description of the medicine and patient's primary healthcare provider professional role.</td>
+    </tr>
+    <tr>
+        <td>Relative FHIRPaths</td>
+        <td>Following profiles still include absolute FHIRPaths in invariant expressions: Base Patient, Patient with Mandatory Identifier, Base Practitioner,Practitioner with Mandatory Identifier, Base RelatedPerson and Summary Statement of Allergy or Intolerance. These will need to be changed to be relative; work to be done in a different branch and merged into SML. </td>
     </tr>
  </tbody>
 </table> 
