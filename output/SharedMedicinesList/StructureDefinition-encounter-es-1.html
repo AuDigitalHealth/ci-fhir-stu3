@@ -149,7 +149,7 @@
 
 <h5 id="usage-scenarios">Usage scenarios</h5>
 <ul>
-  <li>A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry in a Composition and/or in a List</li>
+  <li>A summary of an encounter between a patient and a healthcare provider exchanged as a referenced entry.</li>
 </ul>
 
 <p>Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing profile.</p>
@@ -168,12 +168,24 @@
     </ul>
   </li>
   <li>If provided, type is expected to support categorisation of the event from which the medicines list was generated, for example a code indicating a ‘home medicines review’ or ‘pharmacist medicines review’.</li>
+  <li>Period is expected to be equal to or prior to the Composition date and the List date.</li>
 </ul>
 
 <p>When a shared medicines list is a PSML</p>
 
 <ul>
-  <li>TBD (type)</li>
+  <li>Type is expected to be provided.</li>
+  <li>Type will have one of the following values:
+    <ul>
+      <li>Home medicine review</li>
+      <li>Community pharmacy medicine review</li>
+      <li>Hospital pharmacy medicine review</li>
+      <li>Non-dispensing pharmacy medicine review</li>
+      <li>Medicine review at discharge</li>
+      <li>Residential care medicine review</li>
+      <li>DAA packing pharmacy medicine review</li>
+    </ul>
+  </li>
 </ul>
 
 
@@ -213,7 +225,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-encounter.html">AUBaseEncounter</a>.</p>
 <p>
-This profile was published on Wed Jul 03 12:00:20 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Tue Jul 09 15:02:53 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -738,7 +750,7 @@ This would be used for a case where an admission starts of as an emergency encou
 <h4><span class="sectioncount">SD.14.2 - </span> Quick Start <a title="link to here" class="self-link" href="StructureDefinition-encounter-es-1.html#search"><img src="target.png"/></a></h4>
 <!--<p>Below is an overview of the required search and read operations for this profile.  See the <a href="capstatements.html"/>Conformance requirements</a> for a complete list of supported RESTful operations and search parameters for this IG.</p>-->
 
-<p>none defined</p>
+<p>Search parameters have not been defined.</p>
 
 
 
@@ -750,24 +762,10 @@ This would be used for a case where an admission starts of as an emergency encou
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
-<tr><td>Encounter.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
 <tr><td>Encounter.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Current state of the encounter"><a href="http://hl7.org/fhir/STU3/valueset-encounter-status.html">EncounterStatus</a></td></tr>
-<tr><td>Encounter.statusHistory.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Current state of the encounter"><a href="http://hl7.org/fhir/STU3/valueset-encounter-status.html">EncounterStatus</a></td></tr>
 <tr><td>Encounter.class</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Classification of the encounter"><a href="http://hl7.org/fhir/STU3/v3/ActEncounterCode/vs.html">ActEncounterCode</a></td></tr>
-<tr><td>Encounter.classHistory.class</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Classification of the encounter"><a href="http://hl7.org/fhir/STU3/v3/ActEncounterCode/vs.html">ActEncounterCode</a></td></tr>
 <tr><td>Encounter.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The type of encounter"><a href="http://hl7.org/fhir/STU3/valueset-encounter-type.html">EncounterType</a></td></tr>
-<tr><td>Encounter.priority</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Indicates the urgency of the encounter."><a href="http://hl7.org/fhir/STU3/v3/ActPriority/vs.html">v3 Code System ActPriority</a></td></tr>
-<tr><td>Encounter.participant.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Role of participant in encounter"><a href="http://hl7.org/fhir/STU3/valueset-encounter-participant-type.html">ParticipantType</a></td></tr>
 <tr><td>Encounter.reason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Reason why the encounter takes place."><a href="http://hl7.org/fhir/STU3/valueset-encounter-reason.html">Encounter Reason Codes</a></td></tr>
-<tr><td>Encounter.diagnosis.role</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="The type of diagnosis this condition represents"><a href="http://hl7.org/fhir/STU3/valueset-diagnosis-role.html">DiagnosisRole</a></td></tr>
-<tr><td>Encounter.hospitalization.admitSource</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="From where the patient was admitted."><a href="http://hl7.org/fhir/STU3/valueset-encounter-admit-source.html">AdmitSource</a></td></tr>
-<tr><td>Encounter.hospitalization.reAdmission</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The reason for re-admission of this hospitalization encounter."><a href="http://hl7.org/fhir/STU3/v2/0092/index.html">v2 Re-Admission Indicator</a></td></tr>
-<tr><td>Encounter.hospitalization.dietPreference</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Medical, cultural or ethical food preferences to help with catering requirements."><a href="http://hl7.org/fhir/STU3/valueset-encounter-diet.html">Diet</a></td></tr>
-<tr><td>Encounter.hospitalization.specialCourtesy</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Special courtesies"><a href="http://hl7.org/fhir/STU3/valueset-encounter-special-courtesy.html">SpecialCourtesy</a></td></tr>
-<tr><td>Encounter.hospitalization.specialArrangement</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Special arrangements"><a href="http://hl7.org/fhir/STU3/valueset-encounter-special-arrangements.html">SpecialArrangements</a></td></tr>
-<tr><td>Encounter.hospitalization.dischargeDisposition</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Discharge Disposition"><a href="http://hl7.org/fhir/STU3/valueset-encounter-discharge-disposition.html">DischargeDisposition</a></td></tr>
-<tr><td>Encounter.hospitalization.dischargeDisposition.coding:separationMode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1">https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1</a></td></tr>
-<tr><td>Encounter.location.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The status of the location."><a href="http://hl7.org/fhir/STU3/valueset-encounter-location-status.html">EncounterLocationStatus</a></td></tr>
 </table>
 
 
@@ -858,7 +856,7 @@ This would be used for a case where an admission starts of as an emergency encou
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 12:00+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jul 9, 2019 15:02+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

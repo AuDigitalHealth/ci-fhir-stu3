@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Detailed Statement of Known Medicine"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-07-03T12:00:20+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-07-09T15:02:53+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -2308,7 +2308,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-mst-01" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The dosage shall at least have text or patient instructions" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "dosage.text.exists() or dosage.patientInstruction.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -4089,7 +4089,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-mst-01" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The dosage shall at least have text or patient instructions" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "dosage.text.exists() or dosage.patientInstruction.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ]
