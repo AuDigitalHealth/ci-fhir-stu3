@@ -8,11 +8,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html">Organization example 2</a></td>
-                <td>021fff67-c5ec-438f-9520-ce9bafee1306</td>
-                <td><a href="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.xml.html">XML</a></td>
-                <td><a href="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.json.html">JSON</a></td>
-                <td><a href="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.ttl.html">Turtle</a></td>
+                <td><a href="Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.html">Organization example 2</a></td>
+                <td>f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4</td>
+                <td><a href="Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.xml.html">XML</a></td>
+                <td><a href="Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.json.html">JSON</a></td>
+                <td><a href="Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
   </table>

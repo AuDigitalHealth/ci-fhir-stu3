@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Organization>
-    <id value="d93e5527-afd9-4c54-ab09-ada4fdd8ff13"/>
-    <type>
-        <coding>
-            <system value="http://hl7.org/fhir/organization-type"/>
-            <code value="prov"/>
-            <display value="Healthcare Provider"/>
-        </coding>
-    </type>
+<?xml-model href="../../tests/stu3/schema/fhir-all-xsd/organization.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Organization xmlns="http://hl7.org/fhir"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://hl7.org/fhir ../../tests/stu3/schema/fhir-all-xsd/organization.xsd">
+    <id value="f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4"/>
     <identifier>
         <type>
             <text value="ABN"/>
@@ -27,6 +23,13 @@
         <system value="http://ns.electronichealth.net.au/id/hi/hpio/1.0"/>
         <value value="8003621566684455"/>
     </identifier>
+    <type>
+        <coding>
+            <system value="http://hl7.org/fhir/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+        </coding>
+    </type>
     <name value="Ascot Family Medical Centre"/>
     <telecom>
         <system value="phone"/>
@@ -45,4 +48,4 @@
         <postalCode value="4007"/>
         <country value="AU"/>
     </address>
-</Organization>
+  </Organization>
