@@ -203,7 +203,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-allergyintolerance.html">AUBaseAllergyIntolerance</a>.</p>
 <p>
-This profile was published on Tue Jul 09 15:02:53 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Thu Jul 11 12:44:44 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -572,10 +572,10 @@ Summary
 <tr><td>inv-ait-0</td><td>AllergyIntolerance</td><td>Recorder and author related party shall not coexist<br/>: (extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and recorder.exists()).not()</td><td></td></tr>
 <tr><td>ele-1</td><td>AllergyIntolerance.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>AllergyIntolerance.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: AllergyIntolerance.extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
+<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
 <tr><td>ele-1</td><td>AllergyIntolerance.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>AllergyIntolerance.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: AllergyIntolerance.extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
+<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
 <tr><td>ele-1</td><td>AllergyIntolerance.reaction</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 </table>
 
@@ -638,7 +638,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jul 9, 2019 15:02+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 11, 2019 12:44+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

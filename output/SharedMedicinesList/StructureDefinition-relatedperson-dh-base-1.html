@@ -188,7 +188,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-relatedperson.html">AUBaseRelatedPerson</a>.</p>
 <p>
-This profile was published on Tue Jul 09 15:02:53 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Thu Jul 11 12:44:44 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -978,7 +978,7 @@ Summary
 <tr><td>dom-1</td><td>RelatedPerson</td><td>If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>: contained.text.empty()</td><td></td></tr>
 <tr><td>dom-4</td><td>RelatedPerson</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
 <tr><td>dom-3</td><td>RelatedPerson</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>: contained.where(('#'+id in %resource.descendants().reference).not()).empty()</td><td></td></tr>
-<tr><td>inv-dh-relper-01</td><td>RelatedPerson</td><td>The related person shall at least have a name, an identifier or a relationship with the patient<br/>: RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()</td><td></td></tr>
+<tr><td>inv-dh-relper-01</td><td>RelatedPerson</td><td>The related person shall at least have a name, an identifier or a relationship with the patient<br/>: identifier.exists() or name.exists() or relationship.exists()</td><td></td></tr>
 </table>
 
 
@@ -1040,7 +1040,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jul 9, 2019 15:02+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 11, 2019 12:44+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

@@ -30,7 +30,7 @@
   <title value="Base Practitioner"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-07-04T08:22:31+10:00"/>
+  <date value="2019-07-11T12:38:09+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -118,7 +118,7 @@
         <key value="inv-dh-prac-01"/>
         <severity value="error"/>
         <human value="The practitioner shall at least have an identifier or a name"/>
-        <expression value="Practitioner.identifier.exists() or Practitioner.name.exists()"/>
+        <expression value="identifier.exists() or name.exists()"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -3937,7 +3937,7 @@
         <key value="inv-dh-prac-01"/>
         <severity value="error"/>
         <human value="The practitioner shall at least have an identifier or a name"/>
-        <expression value="Practitioner.identifier.exists() or Practitioner.name.exists()"/>
+        <expression value="identifier.exists() or name.exists()"/>
       </constraint>
     </element>
     <element id="Practitioner.identifier">

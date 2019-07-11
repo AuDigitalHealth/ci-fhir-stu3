@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Allergy or Intolerance"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-07-03T13:48:11+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-07-11T12:56:45+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -387,7 +387,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-ait-02" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A related person shall conform to Base RelatedPerson" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "AllergyIntolerance.extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -1382,7 +1382,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-ait-02" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A related person shall conform to Base RelatedPerson" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "AllergyIntolerance.extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [

@@ -19,7 +19,7 @@
   fhir:StructureDefinition.title [ fhir:value "Shared Medicines List Authored by Practitioner"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-07-09T15:02:53+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-07-11T12:44:44+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -557,7 +557,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-02" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -604,37 +604,37 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-06" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner shall conform to Base Practitioner" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" ]
        ], [
          fhir:index 3;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-07" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A patient shall conform to Base Patient" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" ]
        ], [
          fhir:index 4;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-08" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A related person shall conform to Base RelatedPerson" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
        ], [
          fhir:index 5;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-09" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner role shall conform to Base PractitionerRole" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" ]
        ], [
          fhir:index 6;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-10" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "An organisation shall conform to Base Organization" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" ]
        ], [
          fhir:index 7;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-11" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Information recipient shall not be a device" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().where($this is Device).exists().not()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().where($this is Device).exists().not()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -2629,7 +2629,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-03" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The section shall at least have one entry or an empty reason, but not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').entry.exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').emptyReason.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "entry.exists() xor emptyReason.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -3135,13 +3135,13 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-04" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "If present, the assertion of no relevant finding entry shall assert no known current medications" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "entry.resolve().where($this is Observation ).exists() implies entry.resolve().where($this is value and value.coding.code = '1234391000168107').exists()" ]
        ], [
          fhir:index 4;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-05" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The section shall at least have one entry or an empty reason, but not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').emptyReason.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "entry.exists() xor emptyReason.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -3644,7 +3644,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-02" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -3658,37 +3658,37 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-06" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner shall conform to Base Practitioner" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-07" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A patient shall conform to Base Patient" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" ]
        ], [
          fhir:index 2;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-08" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A related person shall conform to Base RelatedPerson" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" ]
        ], [
          fhir:index 3;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-09" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner role shall conform to Base PractitionerRole" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" ]
        ], [
          fhir:index 4;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-10" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "An organisation shall conform to Base Organization" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" ]
        ], [
          fhir:index 5;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-11" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "Information recipient shall not be a device" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension('http://hl7.org.au/fhir/StructureDefinition/information-recipient').resolve().where($this is Device).exists().not()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().where($this is Device).exists().not()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -3853,7 +3853,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-03" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The section shall at least have one entry or an empty reason, but not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').entry.exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '48765-2').emptyReason.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "entry.exists() xor emptyReason.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -3934,13 +3934,13 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-04" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "If present, the assertion of no relevant finding entry shall assert no known current medications" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').exists() implies (section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is List).exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.resolve().where($this is Observation ).exists())" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "entry.resolve().where($this is Observation ).exists() implies entry.resolve().where($this is value and value.coding.code = '1234391000168107').exists()" ]
        ], [
          fhir:index 1;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-05" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The section shall at least have one entry or an empty reason, but not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').entry.exists() xor section.where($this.code.coding.system='http://loinc.org' and $this.code.coding.code = '10160-0').emptyReason.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "entry.exists() xor emptyReason.exists()" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [

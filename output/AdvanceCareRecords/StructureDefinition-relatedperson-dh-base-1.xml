@@ -23,7 +23,7 @@
   <title value="Base RelatedPerson"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-07-04T15:17:34+10:00"/>
+  <date value="2019-07-11T12:54:47+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -102,7 +102,7 @@
         <key value="inv-dh-relper-01"/>
         <severity value="error"/>
         <human value="The related person shall at least have a name, an identifier or a relationship with the patient"/>
-        <expression value="RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()"/>
+        <expression value="identifier.exists() or name.exists() or relationship.exists()"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -4356,7 +4356,7 @@
         <key value="inv-dh-relper-01"/>
         <severity value="error"/>
         <human value="The related person shall at least have a name, an identifier or a relationship with the patient"/>
-        <expression value="RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()"/>
+        <expression value="identifier.exists() or name.exists() or relationship.exists()"/>
       </constraint>
     </element>
     <element id="RelatedPerson.identifier">

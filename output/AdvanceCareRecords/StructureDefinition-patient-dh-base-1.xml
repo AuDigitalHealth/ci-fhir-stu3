@@ -45,7 +45,7 @@
   <title value="Base Patient"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-07-04T15:17:34+10:00"/>
+  <date value="2019-07-11T12:54:47+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -145,7 +145,7 @@
         <key value="inv-dh-pat-03"/>
         <severity value="error"/>
         <human value="The patient shall at least have an identifier or a name"/>
-        <expression value="Patient.identifier.exists() or Patient.name.exists()"/>
+        <expression value="identifier.exists() or name.exists()"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -5987,7 +5987,7 @@
         <key value="inv-dh-pat-03"/>
         <severity value="error"/>
         <human value="The patient shall at least have an identifier or a name"/>
-        <expression value="Patient.identifier.exists() or Patient.name.exists()"/>
+        <expression value="identifier.exists() or name.exists()"/>
       </constraint>
     </element>
     <element id="Patient.extension:birthPlace">

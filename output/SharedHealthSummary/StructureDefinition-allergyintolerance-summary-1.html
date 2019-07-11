@@ -203,7 +203,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-allergyintolerance.html">AUBaseAllergyIntolerance</a>.</p>
 <p>
-This profile was published on Wed Jul 03 13:51:12 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Thu Jul 11 12:41:47 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -550,17 +550,12 @@ Summary
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
-<tr><td>AllergyIntolerance.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
 <tr><td>AllergyIntolerance.clinicalStatus</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The clinical status of the allergy or intolerance."><a href="http://hl7.org/fhir/STU3/valueset-allergy-clinical-status.html">AllergyIntoleranceClinicalStatus</a></td></tr>
 <tr><td>AllergyIntolerance.verificationStatus</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance."><a href="http://hl7.org/fhir/STU3/valueset-allergy-verification-status.html">AllergyIntoleranceVerificationStatus</a></td></tr>
 <tr><td>AllergyIntolerance.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identification of the underlying physiological mechanism for a Reaction Risk."><a href="http://hl7.org/fhir/STU3/valueset-allergy-intolerance-type.html">AllergyIntoleranceType</a></td></tr>
-<tr><td>AllergyIntolerance.category</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Category of an identified substance."><a href="http://hl7.org/fhir/STU3/valueset-allergy-intolerance-category.html">AllergyIntoleranceCategory</a></td></tr>
-<tr><td>AllergyIntolerance.criticality</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance."><a href="http://hl7.org/fhir/STU3/valueset-allergy-intolerance-criticality.html">AllergyIntoleranceCriticality</a></td></tr>
 <tr><td>AllergyIntolerance.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Preferred SNOMED-CT coding for type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies."><a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1">https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1</a></td></tr>
 <tr><td>AllergyIntolerance.reaction.substance</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Preferred SNOMED-CT coding defining the type of the substance (including pharmaceutical products)."><a href="https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1">https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1</a></td></tr>
 <tr><td>AllergyIntolerance.reaction.manifestation</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Preferred SNOMED-CT coding of clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event."><a href="https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1">https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1</a></td></tr>
-<tr><td>AllergyIntolerance.reaction.severity</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations."><a href="http://hl7.org/fhir/STU3/valueset-reaction-event-severity.html">AllergyIntoleranceSeverity</a></td></tr>
-<tr><td>AllergyIntolerance.reaction.exposureRoute</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."><a href="http://hl7.org/fhir/STU3/valueset-route-codes.html">SNOMED CT Route Codes</a></td></tr>
 </table>
 
 
@@ -577,10 +572,10 @@ Summary
 <tr><td>inv-ait-0</td><td>AllergyIntolerance</td><td>Recorder and author related party shall not coexist<br/>: (extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and recorder.exists()).not()</td><td></td></tr>
 <tr><td>ele-1</td><td>AllergyIntolerance.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>AllergyIntolerance.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: AllergyIntolerance.extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
+<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
 <tr><td>ele-1</td><td>AllergyIntolerance.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>AllergyIntolerance.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: AllergyIntolerance.extension('http://hl7.org.au/fhir/StructureDefinition/recorder-related-person').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
+<tr><td>inv-dh-ait-02</td><td>AllergyIntolerance.extension</td><td>A related person shall conform to Base RelatedPerson<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')</td><td></td></tr>
 <tr><td>ele-1</td><td>AllergyIntolerance.reaction</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 </table>
 
@@ -643,7 +638,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 13:51+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 11, 2019 12:41+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

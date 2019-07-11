@@ -11,7 +11,7 @@
   "title": "Base Practitioner",
   "status": "draft",
   "experimental": true,
-  "date": "2019-07-03T13:48:11+10:00",
+  "date": "2019-07-11T12:56:45+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -111,7 +111,7 @@
             "key": "inv-dh-prac-01",
             "severity": "error",
             "human": "The practitioner shall at least have an identifier or a name",
-            "expression": "Practitioner.identifier.exists() or Practitioner.name.exists()"
+            "expression": "identifier.exists() or name.exists()"
           }
         ],
         "mapping": [
@@ -4805,7 +4805,7 @@
             "key": "inv-dh-prac-01",
             "severity": "error",
             "human": "The practitioner shall at least have an identifier or a name",
-            "expression": "Practitioner.identifier.exists() or Practitioner.name.exists()"
+            "expression": "identifier.exists() or name.exists()"
           }
         ]
       },

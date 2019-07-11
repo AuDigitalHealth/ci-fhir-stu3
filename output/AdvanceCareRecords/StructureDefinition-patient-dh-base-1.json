@@ -11,7 +11,7 @@
   "title": "Base Patient",
   "status": "draft",
   "experimental": true,
-  "date": "2019-07-04T15:17:34+10:00",
+  "date": "2019-07-11T12:54:47+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -125,7 +125,7 @@
             "key": "inv-dh-pat-03",
             "severity": "error",
             "human": "The patient shall at least have an identifier or a name",
-            "expression": "Patient.identifier.exists() or Patient.name.exists()"
+            "expression": "identifier.exists() or name.exists()"
           }
         ],
         "mapping": [
@@ -7292,7 +7292,7 @@
             "key": "inv-dh-pat-03",
             "severity": "error",
             "human": "The patient shall at least have an identifier or a name",
-            "expression": "Patient.identifier.exists() or Patient.name.exists()"
+            "expression": "identifier.exists() or name.exists()"
           }
         ]
       },

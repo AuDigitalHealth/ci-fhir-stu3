@@ -11,7 +11,7 @@
   "title": "Base RelatedPerson",
   "status": "draft",
   "experimental": true,
-  "date": "2019-07-03T13:48:11+10:00",
+  "date": "2019-07-11T12:56:45+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -99,7 +99,7 @@
             "key": "inv-dh-relper-01",
             "severity": "error",
             "human": "The related person shall at least have a name, an identifier or a relationship with the patient",
-            "expression": "RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()"
+            "expression": "identifier.exists() or name.exists() or relationship.exists()"
           }
         ],
         "mapping": [
@@ -5341,7 +5341,7 @@
             "key": "inv-dh-relper-01",
             "severity": "error",
             "human": "The related person shall at least have a name, an identifier or a relationship with the patient",
-            "expression": "RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()"
+            "expression": "identifier.exists() or name.exists() or relationship.exists()"
           }
         ]
       },

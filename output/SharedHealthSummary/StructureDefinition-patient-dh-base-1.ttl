@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Base Patient"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-07-03T13:51:12+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-07-11T12:41:47+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -129,7 +129,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-pat-03" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The patient shall at least have an identifier or a name" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "Patient.identifier.exists() or Patient.name.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "identifier.exists() or name.exists()" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -7007,7 +7007,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-pat-03" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The patient shall at least have an identifier or a name" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "Patient.identifier.exists() or Patient.name.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "identifier.exists() or name.exists()" ]
        ]
      ], [
        fhir:index 1;
