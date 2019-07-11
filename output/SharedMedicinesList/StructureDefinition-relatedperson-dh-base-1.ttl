@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Base RelatedPerson"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-07-09T15:02:53+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-07-11T12:44:44+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -103,7 +103,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-relper-01" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The related person shall at least have a name, an identifier or a relationship with the patient" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "identifier.exists() or name.exists() or relationship.exists()" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -5114,7 +5114,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-relper-01" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "The related person shall at least have a name, an identifier or a relationship with the patient" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "identifier.exists() or name.exists() or relationship.exists()" ]
        ]
      ], [
        fhir:index 1;

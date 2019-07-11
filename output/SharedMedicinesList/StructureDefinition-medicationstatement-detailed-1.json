@@ -11,7 +11,7 @@
   "title": "Detailed Statement of Known Medicine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-07-09T15:02:53+10:00",
+  "date": "2019-07-11T12:44:44+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -2387,7 +2387,7 @@
             "key": "inv-dh-mst-01",
             "severity": "error",
             "human": "The dosage shall at least have text or patient instructions",
-            "expression": "dosage.text.exists() or dosage.patientInstruction.exists()"
+            "expression": "text.exists() or patientInstruction.exists()"
           }
         ],
         "mustSupport": true,
@@ -4255,7 +4255,7 @@
             "key": "inv-dh-mst-01",
             "severity": "error",
             "human": "The dosage shall at least have text or patient instructions",
-            "expression": "dosage.text.exists() or dosage.patientInstruction.exists()"
+            "expression": "text.exists() or patientInstruction.exists()"
           }
         ],
         "mustSupport": true

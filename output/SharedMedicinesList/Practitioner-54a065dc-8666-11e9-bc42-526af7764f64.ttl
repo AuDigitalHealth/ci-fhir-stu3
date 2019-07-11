@@ -10,16 +10,13 @@
   fhir:Resource.id [ fhir:value "54a065dc-8666-11e9-bc42-526af7764f64"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1";
-       fhir:index 0
-     ], [
        fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1";
-       fhir:index 1
+       fhir:index 0
      ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 54a065dc-8666-11e9-bc42-526af7764f64</p><p><b>meta</b>: </p><p><b>identifier</b>: HPI-I = 8003610000000000</p><p><b>name</b>: Mosenna Joanne </p><p><b>telecom</b>: ph: 98046688(WORK), joanne.mosenna@test.teshealth.com.au(WORK)</p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td>*</td><td>AHPRA Registration Number = PHA000123test</td><td>Pharmacists <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '251513' = '251513', given as 'Pharmacists'})</span></td><td>AHPRA</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 54a065dc-8666-11e9-bc42-526af7764f64</p><p><b>meta</b>: </p><p><b>identifier</b>: HPI-I = 8003610000000000</p><p><b>name</b>: Mosenna Joanne </p><p><b>telecom</b>: ph: 98046688(WORK), joanne.mosenna@test.teshealth.com.au(WORK)</p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td>*</td><td>AHPRA Registration Number = PHA000123test</td><td>Pharmacist <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '251513' = '251513', given as 'Pharmacists'})</span></td><td>AHPRA</td></tr></table></div>"
   ];
   fhir:Practitioner.identifier [
      fhir:index 0;
@@ -76,7 +73,8 @@
          fhir:Coding.system [ fhir:value "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0" ];
          fhir:Coding.code [ fhir:value "251513" ];
          fhir:Coding.display [ fhir:value "Pharmacists" ]
-       ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Pharmacist" ]
      ];
      fhir:Practitioner.qualification.issuer [
        fhir:Reference.display [ fhir:value "AHPRA" ]
