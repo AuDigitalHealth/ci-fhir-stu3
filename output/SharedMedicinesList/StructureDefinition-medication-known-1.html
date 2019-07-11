@@ -148,27 +148,18 @@
 <h4 id="known-medicine-draft">Known Medicine <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h4>
 
 <h5 id="implementation-guidance">Implementation guidance</h5>
-
+<p>For the supported scenarios in this implementation guide:</p>
 <ul>
-  <li>Where the code identifies a branded medicine item, brand name is expected to be provided in code.text and optionally in brand name extension.</li>
-  <li>Where the code identifies a generic medicine item, generic name is expected to be provided in code.text and optionally in generic name extension.</li>
-  <li>When a medicine item is identified by a brand name only, the name is expected to be provided in code.text and optionally in brand name extension.</li>
-  <li>When a medicine item is identified by a generic name only, the name is expected to be provided in code.text and optionally in generic name extension.</li>
-  <li>When both brand and generic names are available, brand name in expected to be provided in code.text and optionally in brand name extension, and generic name is expected to be provided in the generic name extension.</li>
-  <li>When it is unknown if the medicine item name is a brand or a generic name, the name is expected to be provided in code.text only.</li>
+  <li>Medication code from the <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a> value set is preferred.</li>
+  <li>Where possible additional codes from the <a href="http://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html">PBSMedicinesItemCodes</a> value set are expected to be supplied.</li>
+  <li>Where the medication code identifies a branded medicine item, the brand name may also be provided in code.text.</li>
+  <li>Where the medication code identifies a generic medicine item, the generic name may also be provided in code.text.</li>
+  <li>Where a medication item is identified by a brand name only (and not by medication code), the brand name is expected to be provided in code.text and optionally in brand name extension.</li>
+  <li>Where a medicine item is identified by a generic name only (and not by medication code), the generic name is expected to be provided in code.text and optionally in generic name extension.</li>
+  <li>Where both brand and generic names for a medicine item are available (and no medication code), the brand name in expected to be provided in code.text and optionally in brand name extension, and the generic name is expected to be provided in the generic name extension.</li>
+  <li>Where a medicine item is identified by a name only (and not by medication code), and is unknown whether this is a brand or a generic name, the name is expected to be provided in code.text only.</li>
 </ul>
 
-<h5 id="psml-implementation-guidance">PSML implementation guidance</h5>
-
-<p>For the expected usage scenarios in this implementation guide:</p>
-
-<ul>
-  <li>Medication code from the <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">Australian Medication</a> value set is preffered.</li>
-  <li>Where possible supply additional codes from the <a href="http://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-pbs-item.html">PBSMedicinesItemCodes</a> value set.</li>
-  <li>Either the active ingredient(s) or a brand name, or both, is expected to be included.</li>
-  <li>The amount and strength of an active ingredient is expected to be included.</li>
-  <li>For a medicine item with four or more active ingredients strength may be omitted.</li>
-</ul>
 
 
 <!-- example here -->
@@ -206,7 +197,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medication.html">AUBaseMedication</a>.</p>
 <p>
-This profile was published on Wed Jul 03 12:00:20 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Tue Jul 09 15:02:53 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -847,18 +838,8 @@ This may be a brand or generic name as suitable for the intent of the entry" cla
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
-<tr><td>Medication.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
 <tr><td>Medication.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A coded concept that defines the type of a medication"><a href="http://hl7.org/fhir/STU3/valueset-medication-codes.html">SNOMED CT Medication Codes</a></td></tr>
-<tr><td>Medication.code.coding:pbs</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//ValueSet-pbs-item.html">PBSMedicinesItemCodes</a></td></tr>
-<tr><td>Medication.code.coding:gtin</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//ValueSet-gtin.html">GTINforMedicines</a></td></tr>
-<tr><td>Medication.code.coding:amt</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1">https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1</a></td></tr>
-<tr><td>Medication.code.coding:amt.extension:medicationClass.valueCoding:valueCoding</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Medication Type"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//ValueSet-medication-type.html">MedicationType</a></td></tr>
-<tr><td>Medication.code.coding:mimsPackage</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//ValueSet-mims.html">MIMSTerminology</a></td></tr>
-<tr><td>Medication.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="A coded concept defining if the medication is in active use"><a href="http://hl7.org/fhir/STU3/valueset-medication-status.html">MedicationStatus</a></td></tr>
 <tr><td>Medication.form</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A coded concept defining the form of a medication"><a href="http://hl7.org/fhir/STU3/valueset-medication-form-codes.html">SNOMED CT Form Codes</a></td></tr>
-<tr><td>Medication.form.coding:snomedForm</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1">https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1</a></td></tr>
-<tr><td>Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding:amtMP</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//ValueSet-amt-mp-codes.html">AMTMedicinalProduct</a></td></tr>
-<tr><td>Medication.package.container</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="A coded concept defining the kind of container a medication package is packaged in"><a href="http://hl7.org/fhir/STU3/valueset-medication-package-form.html">MedicationContainer</a></td></tr>
 </table>
 
 
@@ -942,7 +923,7 @@ This may be a brand or generic name as suitable for the intent of the entry" cla
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 12:00+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jul 9, 2019 15:02+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

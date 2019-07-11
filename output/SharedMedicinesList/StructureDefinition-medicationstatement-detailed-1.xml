@@ -26,7 +26,7 @@
   <title value="Detailed Statement of Known Medicine"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-07-03T12:00:20+10:00"/>
+  <date value="2019-07-09T15:02:53+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -2007,7 +2007,7 @@
         <key value="inv-dh-mst-01"/>
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
-        <expression value="MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"/>
+        <expression value="dosage.text.exists() or dosage.patientInstruction.exists()"/>
       </constraint>
       <mustSupport value="true"/>
       <mapping>
@@ -3504,7 +3504,7 @@
         <key value="inv-dh-mst-01"/>
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
-        <expression value="MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"/>
+        <expression value="dosage.text.exists() or dosage.patientInstruction.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

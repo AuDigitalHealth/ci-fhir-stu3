@@ -141,6 +141,7 @@
       <li><a href="#product-version-history" id="markdown-toc-product-version-history">Product Version History</a></li>
     </ul>
   </li>
+  <li><a href="#known-issues" id="markdown-toc-known-issues">Known issues</a></li>
   <li><a href="#references" id="markdown-toc-references">References</a></li>
 </ul>
 <!-- end TOC -->
@@ -246,6 +247,42 @@
     </tbody>
 </table>
 
+<h2 id="known-issues">Known issues</h2>
+<p>This section lists known issues with this specification at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.</p>
+
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Reference</th>
+    <th>Description</th>
+  </tr>
+   <tr>
+        <td>Composition.information-recipient</td>
+        <td>FHIRPath expression for the invariant inv-dh-cmp-11 is yet to be thoroughly tested.</td>
+  </tr>
+  <tr>
+        <td>Medication</td>
+        <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This is yet to be confirmed with the HL7 AU.</td>
+  </tr>
+  <tr>
+        <td>Terminology bindings</td>
+        <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set is not yet available.</td>
+    </tr>
+    <tr>
+        <td>Examples</td>
+        <td>More examples are yet to be done.</td>
+    </tr>
+    <tr>
+        <td>Data components not supported by this implementation guide</td>
+        <td>Information requirements document details a number of data components that are not supported by models included in this implementation guide: sex, medicine image, physical description of the medicine and patient's primary healthcare provider professional role.</td>
+    </tr>
+    <tr>
+        <td>Relative FHIRPaths</td>
+        <td>Following profiles still include absolute FHIRPaths in invariant expressions: Base Patient, Patient with Mandatory Identifier, Base Practitioner,Practitioner with Mandatory Identifier, Base RelatedPerson and Summary Statement of Allergy or Intolerance. These will need to be changed to be relative; work to be done in a different branch and merged into SML. </td>
+    </tr>
+ </tbody>
+</table>
+
 <h2 id="references">References</h2>
 
 <table>
@@ -273,7 +310,16 @@
 <table>
   <tbody>
     <tr>
-      <td>[<a name="DH2019xx">DH2019xx</a>]</td>
+      <td>[<a name="DH2019n">DH2019n</a>]</td>
+      <td>Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[<a name="DH2019m">DH2019m</a>]</td>
       <td>Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.</td>
     </tr>
   </tbody>
@@ -382,7 +428,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 12:00+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Jul 9, 2019 15:02+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

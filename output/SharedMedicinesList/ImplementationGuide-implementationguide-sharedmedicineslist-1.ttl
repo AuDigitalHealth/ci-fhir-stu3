@@ -8,10 +8,9 @@
 <http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1> a fhir:ImplementationGuide;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "implementationguide-sharedmedicineslist-1"];
-  fhir:Resource.language [ fhir:value "en-AU"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Shared Medicines List</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1</pre><div><p>Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications.</p>\n</div></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Shared Medicines List</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1</pre><div><p>Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records.</p>\n</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1"];
   fhir:ImplementationGuide.version [ fhir:value "1.0.0"];
@@ -27,7 +26,7 @@
        fhir:ContactPoint.value [ fhir:value "help@digitalhealth.gov.au" ]
      ]
   ];
-  fhir:ImplementationGuide.description [ fhir:value "Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications."];
+  fhir:ImplementationGuide.description [ fhir:value "Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records."];
   fhir:ImplementationGuide.copyright [ fhir:value "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."];
   fhir:ImplementationGuide.fhirVersion [ fhir:value "3.0.1"];
   fhir:ImplementationGuide.package [
@@ -39,13 +38,13 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-composition-sml-1.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-composition-sml-prac-1.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "Practitioner Shared Medicines List" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Shared Medicine List Authored by Practitioner" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-1>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/composition-sml-1" ]
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/composition-sml-prac-1" ]
        ]
      ], [
        fhir:index 1;
@@ -223,13 +222,13 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-list-meds-current-1.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-list-sml-pracchanges-1.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.name [ fhir:value "list-meds-current-1" ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "list-sml-pracchnages-1" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/list-meds-current-1" ]
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/list-sml-pracchanges-1" ]
        ]
      ], [
        fhir:index 15;
@@ -363,7 +362,7 @@
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "MedicationStatement example 3" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement example Metformin/Sandoz " ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement example Metformin/Sandoz" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64>;
          fhir:Reference.reference [ fhir:value "MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64" ]
@@ -433,7 +432,7 @@
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "Medication example 6" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "Medication example Warfarin/Coumadin " ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Medication example Warfarin/Coumadin" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Medication/26b6b80a-8653-11e9-bc42-526af7764f64>;
          fhir:Reference.reference [ fhir:value "Medication/26b6b80a-8653-11e9-bc42-526af7764f64" ]
@@ -447,7 +446,7 @@
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
        fhir:ImplementationGuide.package.resource.name [ fhir:value "MedicationStatement example 6" ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement example Warfarin/Coumadin " ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement example Warfarin/Coumadin" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64>;
          fhir:Reference.reference [ fhir:value "MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64" ]
@@ -549,6 +548,62 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/aa15201c-8e49-11e9-bc42-526af7764f64>;
          fhir:Reference.reference [ fhir:value "Composition/aa15201c-8e49-11e9-bc42-526af7764f64" ]
+       ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "PractitionerRole example 1" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "PractitionerRole with practitioner with mandatory identifier" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64" ]
+       ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Organization-084bafa0-866d-11e9-bc42-526af7764f64.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Organization example 1" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Organization" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/084bafa0-866d-11e9-bc42-526af7764f64>;
+         fhir:Reference.reference [ fhir:value "Organization/084bafa0-866d-11e9-bc42-526af7764f64" ]
+       ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Organization example 2" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Patient's managing organization" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4>;
+         fhir:Reference.reference [ fhir:value "Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4" ]
+       ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Practitioner-54a065dc-8666-11e9-bc42-526af7764f64.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Practitioner example 1" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Practitioner pharmacist" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/54a065dc-8666-11e9-bc42-526af7764f64>;
+         fhir:Reference.reference [ fhir:value "Practitioner/54a065dc-8666-11e9-bc42-526af7764f64" ]
        ]
      ]
   ];
