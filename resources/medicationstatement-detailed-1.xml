@@ -125,7 +125,7 @@
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
         <expression
-          value="dosage.text.exists() or dosage.patientInstruction.exists()"
+          value="text.exists() or patientInstruction.exists()"
         />
       </constraint>
       <mustSupport value="true"/>
