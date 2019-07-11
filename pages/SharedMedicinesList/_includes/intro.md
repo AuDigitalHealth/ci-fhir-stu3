@@ -120,10 +120,6 @@ This section lists known issues with this specification at the time of publishin
     <th>Reference</th>
     <th>Description</th>
   </tr>
-   <tr>
-        <td>Composition.information-recipient</td>
-        <td>FHIRPath expression for the invariant inv-dh-cmp-11 is yet to be thoroughly tested.</td>
-  </tr>
   <tr>
         <td>Medication</td>
         <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This has resulted in a empty extension slice in the Known Medicine profile. This change is yet to be confirmed with the HL7 AU.</td>
@@ -139,10 +135,6 @@ This section lists known issues with this specification at the time of publishin
     <tr>
         <td>Data components not supported by this implementation guide</td>
         <td>Information requirements document details a number of data components that are not supported by models included in this implementation guide: sex, medicine image, physical description of the medicine and patient's primary healthcare provider professional role.</td>
-    </tr>
-    <tr>
-        <td>Relative FHIRPaths</td>
-        <td>Following profiles still include absolute FHIRPaths in invariant expressions: Base Patient, Base Practitioner, Base RelatedPerson and Summary Statement of Allergy or Intolerance. These will need to be changed to be relative; work to be done in a different branch and merged into SML. </td>
     </tr>
  </tbody>
 </table> 
