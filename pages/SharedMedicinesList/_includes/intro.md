@@ -126,7 +126,7 @@ This section lists known issues with this specification at the time of publishin
   </tr>
   <tr>
         <td>Medication</td>
-        <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This is yet to be confirmed with the HL7 AU.</td>
+        <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This has resulted in a empty extension slice in the Known Medicine profile. This change is yet to be confirmed with the HL7 AU.</td>
   </tr>
   <tr>
         <td>Terminology bindings</td>
@@ -142,7 +142,7 @@ This section lists known issues with this specification at the time of publishin
     </tr>
     <tr>
         <td>Relative FHIRPaths</td>
-        <td>Following profiles still include absolute FHIRPaths in invariant expressions: Base Patient, Patient with Mandatory Identifier, Base Practitioner,Practitioner with Mandatory Identifier, Base RelatedPerson and Summary Statement of Allergy or Intolerance. These will need to be changed to be relative; work to be done in a different branch and merged into SML. </td>
+        <td>Following profiles still include absolute FHIRPaths in invariant expressions: Base Patient, Base Practitioner, Base RelatedPerson and Summary Statement of Allergy or Intolerance. These will need to be changed to be relative; work to be done in a different branch and merged into SML. </td>
     </tr>
  </tbody>
 </table> 
