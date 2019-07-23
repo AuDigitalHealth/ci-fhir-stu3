@@ -12,5 +12,5 @@ Where coding cannot be supplied and the medicine item is identified by:
 * by generic name only, the generic name is expected to be provided in code.text and optionally in generic name extension
 * by both brand and generic names, the brand name is expected to be provided in code.text and optionally in brand name extension, and the generic name is expected to be provided in the generic name extension
 
-###### When a shared medicines list is a PSML
+For the expected usage scenario of a PSML document the following guidance applies:
 * where possible additional medication codes from the PBSMedicinesItemCodes value set should be supplied
