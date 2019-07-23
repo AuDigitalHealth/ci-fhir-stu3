@@ -15,21 +15,19 @@ An expected usage scenario, further scoping the above overarching scenarios is:
 
 #####  Implementation guidance 
 
-For the supported scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide:
 
-* In the Allergies section, where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 \|No known allergy\|) is sent as the code.
-* In the Allergies section, where a sending system does not have any clinical data to provide it is expected that section.emptyReason is used.
-* In the Medications section, where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 \|No known current medications\|) 
-* In the Medications section, where a sending system does not have any clinical data to provide it is expected that section.emptyReason is used.
+* Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code in the Allergies section.
+* Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|) in the Medications section.
+* If a sending system has no clinical data for a particular section then section.emptyReason may be used.
 
-##### When a shared medicines list is a PSML
+For the expected usage scenario of a PSML document the following guidance applies:
 
 * It is expected that status will be ‘final’.
-* The author will be a pharmacist and as such information relating to the pharmacist such as contact details will be recorded in the author as one more more elements of Practitioner.
-* The role of ‘pharmacist’ will be recorded in the composition author role as PractitionerRole.code.
-* Encounter details, such as encounter type and period, are expected to be provided.
-* Allergies section is only expected to be provided when a clinical system has data relating allergy or category of allergies.
-* In the Medications section, a medicines list entry is always expected to be provided.
+* It is expected that author will be the person acting as the pharmacist, and composition author role is pharmacist
+* It is expected that encounter will be sent
+* It is expected that the Allergies section is only sent if there is one or more entries
+* It is expected that the Medications section will contain a medication list entry
 
 
 
