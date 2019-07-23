@@ -15,9 +15,9 @@ This implementation guide describes FHIR resources built following the rules des
 The FHIR specification is evolving; the current FHIR specification is available at [http://hl7.org/fhir](http://hl7.org/fhir). A [Publication (Version) History](http://www.hl7.org/fhir/directory.cfml) of past and current working versions, including [FHIR Release 4 (First Normative content) [HL7FHIR4]](index.html#HL7FHIR4) is available.
 
 The following references are recommended to gain a better understanding of FHIR:
-* [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3)
+* [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3)
 * [FHIR Overview](https://www.hl7.org/fhir/stu3/overview.html)
-* [HL7 International FHIR Wiki](http://wiki.hl7.org/index.php?title=FHIR) [[HL7FHIR]](index.html#HL7FHIR)
+* [HL7 International FHIR Wiki [HL7FHIR]](index.html#HL7FHIR)
 
  
 ## Profile / extension representation and structure
@@ -116,7 +116,7 @@ The following resources are available to raise questions or issues relating to F
 ## Conformance conventions
 
 ### StructureDefinition
-The content of this implementation guide is a set of FHIR [StructureDefinition](FHIR http://hl7.org/fhir/stu3/structuredefinition.html)resources for implementing the document model that is the subject of this implementation guide.
+The content of this implementation guide is a set of FHIR [StructureDefinition](FHIR http://hl7.org/fhir/stu3/structuredefinition.html) resources for implementing the document model that is the subject of this implementation guide.
 
 This implementation guide includes FHIR profiles that are a set of constraints and/or extensions to FHIR base resources or a data types in the format of a StructureDefinition resource. A StructureDefinition describes a structure - a set of data element definitions, and their associated rules of usage – and is hereafter referred to as a ‘profile’ or an ‘extension’.
 
