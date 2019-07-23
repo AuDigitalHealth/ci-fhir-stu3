@@ -1,4 +1,4 @@
-#### Known Medicine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Base Medicine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #####  Implementation guidance 
 For the supported scenarios in this implementation guide:
