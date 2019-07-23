@@ -10,31 +10,28 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-1.html), such as a pharmacist shared medicines list (PSML).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-prac-1.html), such as a pharmacist shared medicines list (PSML).
 
-This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
+This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) (HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing an SML in [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The resulting FHIR structure can be used for the electronic exchange of SML information, such as a PSML document, between healthcare providers.
+The primary aim of this implementation guide is to support implementing SML in [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.
 
-This implementation guide is defined to support a generic practitioner-author list as either a document or as a list. At the time of publication of this implementation guide it is expected that in the near term implementations will be of a pharmacist shared medicines list, exchanged as a document, with the My Health Record.
+This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.
 
-This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
-
-This document does not describe transport or persistence mechanism of the resources described by it.
+This implementation guide does not describe transport or persistence mechanism of the resources described by it.
 
 Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
-* [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3)
-* [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)
+* [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3)
+* [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3)
 
-Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
+Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
-This implementation guide is the basis for the corresponding [{{site.data.fhir.igName}} CDA implementation guide [DH2019x]](#DH2019x). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
+This implementation guide is the basis for the corresponding [{{site.data.fhir.igName}} CDA implementation guide [DH2019b]](#DH2019b). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SML CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
-
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3) or [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SML CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).
 
 ## Context and use
 A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.
@@ -44,21 +41,21 @@ An Agency clinical document specification package supports software developers t
 Supplementary contents of the package include statements of scenarios for which the specification is appropriate, guidance on implementing the specification, and guidance on testing purported instances.
 
 The contents may include:
-* statement of requirements
-* CDA implementation guide (CDA IG) – a statement of constraints and custom extensions on [HL7 Clinical Document Architecture](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7) [[HL7CDAR2]](#HL7CDAR2)
+* Information Requirements - statement of requirements
+* CDA implementation guide (CDA IG) – a statement of constraints and custom extensions on [HL7 Clinical Document Architecture [HL7CDAR2]](#HL7CDAR2)
 * FHIR implementation guide (FHIR IG) - a statement of constraints and custom extensions on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3)
 * template package library – a set of Schematron schema to test conformance of CDA documents with the specification
 * conformance profile – a statement of conformance requirements for exchanging documents within a particular scenario such as the My Health Record
-* A set of release notes
+* a set of release notes
 
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of SML. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide for a pharmacist shared medicines list is the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide for a pharmacist shared medicines list is the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
-For implementers interested in representing shared medicines list information as a list, and not a document, the starting point is the [List of Medicine Items for a Patient](StructureDefinition-list-meditems-1.html) profile.
+For implementers interested in representing shared medicines list information as a list, and not a document, the starting point is the [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html) profile.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
@@ -105,8 +102,8 @@ This document and related artefacts are technical in nature and the audience is 
         </tr>
         <tr>
             <td>1.0</td>
-            <td>27 May 2019</td>
-            <td>Brand new - TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
         </tr>
     </tbody>
 </table> 
@@ -120,11 +117,7 @@ This section lists known issues with this specification at the time of publishin
     <th>Reference</th>
     <th>Description</th>
   </tr>
-  <tr>
-        <td>Medication</td>
-        <td>medication-strength-text extension has been removed from the HL7 Au STU3 build. This has resulted in a empty extension slice in the Known Medicine profile. This change is yet to be confirmed with the HL7 AU.</td>
-  </tr>
-  <tr>
+ <tr>
         <td>Terminology bindings</td>
         <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set is not yet available.</td>
     </tr>
@@ -132,10 +125,10 @@ This section lists known issues with this specification at the time of publishin
         <td>Examples</td>
         <td>More examples are yet to be done.</td>
     </tr>
-    <tr>
-        <td>Data components not supported by this implementation guide</td>
-        <td>Information requirements document details a number of data components that are not supported by models included in this implementation guide: sex, medicine image, physical description of the medicine and patient's primary healthcare provider professional role.</td>
-    </tr>
+       <tr>
+        <td>Pharmacist Shared Medicines List CDA Implementation Guide [DH2019b]</td>
+        <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: [https://github.com/-AuDigitalHealth/ci-fhir-stu3](https://github.com/-AuDigitalHealth/ci-fhir-stu3)(public) | [https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse](https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse)(internal).</td>
+    </tr> 
  </tbody>
 </table> 
 
@@ -145,25 +138,25 @@ This section lists known issues with this specification at the time of publishin
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
-|[<a name="DH2019x">DH2019x</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
+|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
 
 |[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
 |[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
-|[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
+|[<a name="HL7AUBIGSTU3">HL7AUBIGSTU3</a>]| HL7 Australia, Continuous Integration Build STU3, Australian Base Profiles Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019|
 | |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
 
-|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019|
+|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 23 July 2019|
 | |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
 
-|[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019|
+|[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 23 July 2019|
 | |[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
 
-|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019|
+|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 23 July 2019|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
 
 
