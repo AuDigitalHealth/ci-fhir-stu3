@@ -24,14 +24,14 @@ This implementation guide is not to be used as a guide to presentation (or rende
 This implementation guide does not describe transport or persistence mechanism of the resources described by it.
 
 Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
-* [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3)
+* [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3)
 * [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3)
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
 This implementation guide is the basis for the corresponding [{{site.data.fhir.igName}} CDA implementation guide [DH2019b]](#DH2019b). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3) or [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SML CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3) or [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SML CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 ## Context and use
 A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.
@@ -127,7 +127,7 @@ This section lists known issues with this specification at the time of publishin
     </tr>
        <tr>
         <td>Pharmacist Shared Medicines List CDA Implementation Guide [DH2019b]</td>
-        <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: [https://github.com/-AuDigitalHealth/ci-fhir-stu3](https://github.com/-AuDigitalHealth/ci-fhir-stu3)(public) | [https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse](https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse)(internal).</td>
+        <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: <a href="https://github.com/-AuDigitalHealth/ci-fhir-stu3">https://github.com/-AuDigitalHealth/ci-fhir-stu3</a> (public) | <a href="https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse">https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse</a> (internal).</td>
     </tr> 
  </tbody>
 </table> 

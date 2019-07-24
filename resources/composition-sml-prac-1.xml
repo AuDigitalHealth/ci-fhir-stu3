@@ -143,7 +143,7 @@
     </element>
     <element id="Composition.author">
       <path value="Composition.author" />
-      <short value="Practitioner referenced by composition-author-role" />
+      <short value="Practitioner referenced by composition author role" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -227,7 +227,7 @@
       <path value="Composition.section" />
       <sliceName value="allergies" />
       <short value="Allergies" />
-      <definition value="Information about allergies or intolerances identified or reported during this encounter. This may include statements that a patient does not have an allergy or category of allergies." />
+      <definition value="Information about allergies or intolerances. Information may include allergies or intolerances that have been identified or reported, or may include statements that a patient is not known to have an allergy or category of allergies." />
       <max value="1" />
       <constraint>
         <key value="inv-dh-cmp-03" />
@@ -290,8 +290,8 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="medications" />
-      <short value="Medications" />
-      <definition value="Medicines the patient is currently taking including self-prescribed, clinician prescribed and nonprescription medicines, as well as all regular, intermittent and as required medicines. This also includes changes to the therapy, including dose changes, new medicines and ceased medicines." />
+      <short value="Medicines list" />
+      <definition value="Information about medicines. This may include self-prescribed, clinician prescribed and nonprescription medicines, as well as all regular, intermittent and as required medicines pertinent to a patient. Information may also include changes to the therapy, including dose changes, new medicines and ceased medicines." />
       <min value="1" />
       <max value="1" />
       <constraint>
@@ -335,7 +335,7 @@
     </element>
     <element id="Composition.section:medications.entry">
       <path value="Composition.section.entry" />
-      <short value="Medicines list" />
+      <short value="Medicines list with change information" />
       <max value="1" />
       <type>
         <code value="Reference" />

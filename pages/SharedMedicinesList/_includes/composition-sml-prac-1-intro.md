@@ -17,8 +17,8 @@ An expected usage scenario, further scoping the above overarching scenarios is:
 
 For the overarching usage scenarios in this implementation guide:
 
-* Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code in the Allergies section.
-* Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|) in the Medications section.
+* Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 \|No known allergy\|) is sent as the code in the Allergies section.
+* Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 \|No known current medications\|) in the Medications section.
 * If a sending system has no clinical data for a particular section then section.emptyReason may be used.
 
 For the expected usage scenario of a PSML document the following guidance applies:
