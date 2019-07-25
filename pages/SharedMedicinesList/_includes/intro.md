@@ -118,14 +118,17 @@ This section lists known issues with this specification at the time of publishin
     <th>Description</th>
   </tr>
  <tr>
-        <td>Terminology bindings</td>
-        <td>Encounter type terminology binding to the NCTS Encounter Type value set is yet to be added. The value set is not yet available.</td>
+        <td>Terminology publication</td>
+        <td>
+            <p>The following terminology resources are not yet available in NCTS:</p>
+            <p><a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1</a></p> 
+       </td>
     </tr>
     <tr>
         <td>Examples</td>
         <td>More examples are yet to be done.</td>
     </tr>
-       <tr>
+    <tr>
         <td>Pharmacist Shared Medicines List CDA Implementation Guide [DH2019b]</td>
         <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: <a href="https://github.com/-AuDigitalHealth/ci-fhir-stu3">https://github.com/-AuDigitalHealth/ci-fhir-stu3</a> (public) | <a href="https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse">https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse</a> (internal).</td>
     </tr> 

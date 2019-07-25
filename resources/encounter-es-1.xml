@@ -1,74 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="encounter-es-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"/>
-  <version value="1.0.0"/>
-  <name value="EncounterEventSummary"/>
-  <title value="Summary of an Encounter for an Event"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <publisher value="Australian Digital Health Agency"/>
+  <id value="encounter-es-1" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1" />
+  <version value="1.0.0" />
+  <name value="EncounterEventSummary" />
+  <title value="Summary of an Encounter for an Event" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description
-    value="The purpose of this profile is to provide a summary statement of an encounter for an event between a patient and a healthcare provider. This can include a narrative description of the encounter that is not captured in other fields and include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
-  <copyright
-    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Encounter"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-encounter"/>
-  <derivation value="constraint"/>
+  <description value="The purpose of this profile is to provide a summary statement of an encounter for an event between a patient and a healthcare provider. This can include a narrative description of the encounter that is not captured in other fields and include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-encounter" />
+  <derivation value="constraint" />
   <differential>
     <element id="Encounter">
-      <path value="Encounter"/>
+      <path value="Encounter" />
     </element>
     <element id="Encounter.extension:encounterDescription">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/>
+        <valueCode value="draft" />
       </extension>
-      <path value="Encounter.extension"/>
-      <sliceName value="encounterDescription"/>
-      <short value="Encounter description"/>
-      <mustSupport value="true"/>
+      <path value="Encounter.extension" />
+      <sliceName value="encounterDescription" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.status">
-      <path value="Encounter.status"/>
-      <mustSupport value="true"/>
+      <path value="Encounter.status" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.class">
-      <path value="Encounter.class"/>
-      <mustSupport value="true"/>
+      <path value="Encounter.class" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.type">
-      <path value="Encounter.type"/>
-      <mustSupport value="true"/>
+      <path value="Encounter.type" />
+      <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="EncounterType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1" />
+      </binding>
     </element>
     <element id="Encounter.subject">
-      <path value="Encounter.subject"/>
-      <min value="1"/>
-      <max value="1"/>
+      <path value="Encounter.subject" />
+      <min value="1" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
       </type>
-      <mustSupport value="true"/>
+      <constraint>
+        <key value="inv-dh-enc-01" />
+        <severity value="error" />
+        <human value="The subject shall at least have a reference or an identifier" />
+        <expression value="reference.exists() or identifier.exists()" />
+      </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.period">
-      <path value="Encounter.period"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
+      <path value="Encounter.period" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.reason">
-      <path value="Encounter.reason"/>
-      <mustSupport value="true"/>
+      <path value="Encounter.reason" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
