@@ -1,6 +1,6 @@
 #### Medicine Item Statement *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### Implementation guidance
+#### Implementation guidance
 
 For the overarching usage scenarios in this implementation guide:
 * A medicine item that has not yet been taken or has never been taken should be represented with taken ‘n’.

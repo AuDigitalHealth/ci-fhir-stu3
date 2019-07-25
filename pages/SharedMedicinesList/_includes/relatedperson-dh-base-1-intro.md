@@ -1,6 +1,6 @@
 ### Base RelatedPerson
 
-##### Implementation guidance
+#### Implementation guidance
 
 For the overarching usage scenarios in this implementation guide:
 

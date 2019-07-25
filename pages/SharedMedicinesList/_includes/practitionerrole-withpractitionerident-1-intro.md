@@ -1,6 +1,6 @@
 #### PractitionerRole with Practitioner with Mandatory Identifier *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### Implementation guidance
+#### Implementation guidance
 
 For the expected usage scenario of a PSML document the following guidance applies:
 

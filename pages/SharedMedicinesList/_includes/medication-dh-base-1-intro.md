@@ -1,6 +1,6 @@
 #### Base Medicine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-#####  Implementation guidance 
+#### Implementation guidance 
 
 For the overarching usage scenarios in this implementation guide:
 * the medication code is preferred to be a member of the Australian Medication value set

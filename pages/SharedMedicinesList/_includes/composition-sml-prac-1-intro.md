@@ -1,6 +1,6 @@
 #### Shared Medicines List Authored by Practitioner *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### Usage scenarios 
+#### Usage scenarios 
 
 The following are the overarching usage scenarios this profile is intended to support:
 
@@ -13,7 +13,7 @@ The following are the overarching usage scenarios this profile is intended to su
 An expected usage scenario, further scoping the above overarching scenarios is:
 * A practitioner authored shared medicines list document exchanged as a pharmacist shared medicines list (PSML)
 
-#####  Implementation guidance 
+#### Implementation guidance 
 
 For the overarching usage scenarios in this implementation guide:
 

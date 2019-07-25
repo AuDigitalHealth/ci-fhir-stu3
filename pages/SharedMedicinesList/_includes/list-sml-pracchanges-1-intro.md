@@ -14,7 +14,7 @@ An expected usage scenario, further scoping the above overarching scenarios is:
 
 This profile does not support sending an absence of clinical information as a list, e.g. no medicines information available.
 
-##### Implementation guidance
+#### Implementation guidance
 
 For the overarching usage scenarios in this implementation guide:
 
