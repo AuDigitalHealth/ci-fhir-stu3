@@ -10,8 +10,8 @@ Search parameters have not been defined.
     <th>Issue No.</th>
   </tr>
   <tr>
-        <td>Elements missing must support flag</td>
-        <td>Due to tooling issues the element Patient.deceased.deceasedDateTime.date-accuracy-indicator is missing the must support flag.</td>
+        <td>Patient.deceased.deceasedDateTime.date-accuracy-indicator</td>
+        <td>Due to tooling issues must support flag could not be set to true for these element.</td>
         <td><a href="https://jira.digitalhealth.gov.au/browse/CIFMM-2530">CIFMM-2530</a></td>
   </tr>
  </tbody>
