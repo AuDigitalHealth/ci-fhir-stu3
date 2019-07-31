@@ -91,7 +91,7 @@
   <div class="container">  <!-\- container -\->
    <ul class="breadcrumb">
         <li title="home"><a href="index.html"><b>Home</b></a></li>
-     <li><b>MedicationKnown Mappings</b></li>
+     <li><b>MedicationBase Mappings</b></li>
    </ul>
   </div>  <!-\- /container -\->
  </div>  <!-\- /segment-breadcrumb -\->-->
@@ -106,21 +106,21 @@
         <div class="col-9">
           
           <ul class="nav nav-tabs">
-            <li><a href="StructureDefinition-medication-known-1.html">Content</a></li>
-             <li><a href="StructureDefinition-medication-known-1-examples.html">Examples</a></li>
-            <li><a href="StructureDefinition-medication-known-1-definitions.html">Detailed Descriptions</a></li>
+            <li><a href="StructureDefinition-medication-dh-base-1.html">Content</a></li>
+             <li><a href="StructureDefinition-medication-dh-base-1-examples.html">Examples</a></li>
+            <li><a href="StructureDefinition-medication-dh-base-1-definitions.html">Detailed Descriptions</a></li>
             <li class="active"><a href="#">Mappings</a></li>
-            <li><a href="StructureDefinition-medication-known-1.xml.html">XML</a></li>
-            <li><a href="StructureDefinition-medication-known-1.json.html">JSON</a></li>
-            <li><a href="StructureDefinition-medication-known-1.ttl.html">Turtle</a></li>
+            <li><a href="StructureDefinition-medication-dh-base-1.xml.html">XML</a></li>
+            <li><a href="StructureDefinition-medication-dh-base-1.json.html">JSON</a></li>
+            <li><a href="StructureDefinition-medication-dh-base-1.ttl.html">Turtle</a></li>
           </ul>
           
-          <h4><span class="sectioncount">D.6.1.4<a name="D.6.1.4"> </a></span> StructureDefinition: MedicationKnown - Mappings <a title="link to here" class="self-link" href="StructureDefinition-medication-known-1-definitions.html#D.6.1.4"><img src="target.png"/></a></h4>
-          
-          <p>Mappings for the StructureDefinition-medication-known-1 Profile.</p>
+          <!--<h4><span class="sectioncount">D.6.1.4<a name="D.6.1.4"> </a></span> StructureDefinition: MedicationBase - Mappings <a title="link to here" class="self-link" href="StructureDefinition-medication-dh-base-1-definitions.html#D.6.1.4"><img src="target.png"/></a></h4>-->
+          <h4><span class="sectioncount">D.6.1.4<a name="D.6.1.4"> </a></span> StructureDefinition-medication-dh-base-1 - Mappings <a title="link to here" class="self-link" href="StructureDefinition-medication-dh-base-1-definitions.html#D.6.1.4"><img src="target.png"/></a></h4>
+          <p>Mappings for the StructureDefinition-medication-dh-base-1 Profile.</p>
           
           <a name="script10.6"> </a><h3>Mappings for Mapping to NCPDP SCRIPT 10.6 (http://ncpdp.org/SCRIPT10_6)</h3><table class="grid">
- <tr><td colspan="3"><b>MedicationKnown</b></td></tr>
+ <tr><td colspan="3"><b>MedicationBase</b></td></tr>
  <tr><td>Medication</td><td>NewRx/MedicationPrescribed
 -or-
 RxFill/MedicationDispensed
@@ -160,18 +160,10 @@ coding.display = //element(*,MedicationType)/DrugDescription</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expirationDate</td><td>no mapping</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>MedicationKnown</b></td></tr>
+ <tr><td colspan="3"><b>MedicationBase</b></td></tr>
  <tr><td>Medication</td><td>Entity. Role, or Act</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (brandName)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (genericName)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (strengthText)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>.code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
@@ -237,7 +229,7 @@ coding.display = //element(*,MedicationType)/DrugDescription</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;image</td><td>.participation[typeCode=SUBJ].role[classCode=MANU],source[classCode=OBS,moodCode=EVN,code=&quot;type of image&quot;].value(ED.image)</td> </tr>
 </table>
 <a name="w5"> </a><h3>Mappings for W5 Mapping (<a href="http://hl7.org/fhir/w5.html">http://hl7.org/fhir/w5</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>MedicationKnown</b></td></tr>
+ <tr><td colspan="3"><b>MedicationBase</b></td></tr>
  <tr><td>Medication</td><td>clinical.medication</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;isBrand</td><td>class</td> </tr>
@@ -245,7 +237,7 @@ coding.display = //element(*,MedicationType)/DrugDescription</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>who.actor</td> </tr>
 </table>
 <a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>MedicationKnown</b></td></tr>
+ <tr><td colspan="3"><b>MedicationBase</b></td></tr>
  <tr><td>Medication</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>RXO-1.1-Requested Give Code.code / RXE-2.1-Give Code.code / RXD-2.1-Dispense/Give Code.code / RXG-4.1-Give Code.code /RXA-5.1-Administered Code.code / RXC-2.1 Component Code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
@@ -295,14 +287,14 @@ coding.display = //element(*,MedicationType)/DrugDescription</td> </tr>
     </div>  <!-- /segment-content -->
 
 
-<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
             <p>Document ID: DH-xxx:2019</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 11, 2019 12:44+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 1, 2019 06:55+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
