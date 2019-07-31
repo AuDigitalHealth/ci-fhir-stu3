@@ -133,6 +133,12 @@
     </element>
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification"/>
+      <constraint>
+        <key value="inv-dh-prac-01" />
+        <severity value="error" />
+        <human value="The issuer organisation shall conform to Base Organization" />
+        <expression value="issuer.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Practitioner.communication">
