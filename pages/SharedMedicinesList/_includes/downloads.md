@@ -2,7 +2,7 @@
 
 **Validator pack and definitions**
 
-The following file contains all the value sets, profiles, extensions, list of pages and urls, etc defined as part of this implementation guide:
+The following file contains the profiles and extensions described as part of this implementation guide:
 - [Validator Pack](validator.pack)
 
 In addition there are format specific definitions files:
@@ -22,6 +22,6 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding {{site.data.fhir.igName}} CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+The corresponding CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
 
 [DH_xxxx_SharedMedsList_CDA_IG_v1.0](..\..\..\ci-fhir-stu3\pages\SharedMedicinesList\_includes\DH_xxxx_SharedMedsList_CDA_IG_v1.0.pdf)

@@ -14,19 +14,37 @@ An expected usage scenario, further scoping the above overarching scenarios is:
 
 This profile does not support sending an absence of clinical information as a list, e.g. no medicines information available.
 
-##### Implementation guidance
+#### Implementation guidance
 
-For the supported scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide:
 
 * All medicine items considered relevant by the practitioner preparing the list (the source) should be included in the list:
-  * A new medicine item should be represented with the flag of ‘new’ or ‘prescribed’ and a change description that described the reason for introducing the medicine item.
-  * An existing unchanged medicine item should be represented with the flag of ‘nochange’ and no change description.
-  * An existing changed medicine item should be represented with the flag of ‘amended’ and a change description that describes the change, e.g. dose, form, route, frequency change.
-  * A ceased medicine item should be represented with the flag of ‘ceased’ and a change description that describes the reason for ceasing the medicine item.
-  * A withheld medicine item should be represented with the flag of ‘suspended’ and a change description supplied that describes reason for withholding the medicine, expected restart date or request for a clinical review.
-
-
-##### When a shared medicines list is part of a document
+<table class="list" width="100%">
+  <tr>
+    <th>Item</th>
+    <th>Guidance</th>
+   </tr>
+     <tr>
+        <td>new medicine item</td>
+        <td>Will be represented with the flag of ‘new’ or ‘prescribed’ and a change description that described the reason for introducing the medicine item</td>
+    </tr>
+         <tr>
+        <td>existing unchanged medicine item</td>
+        <td>Will be represented with the flag of ‘nochange’ and no change description</td>
+    </tr>
+    <tr>
+        <td>existing changed medicine item</td>
+        <td>Will be represented with the flag of ‘amended’ and a change description that describes the change, e.g. dose, form, route, frequency change</td>
+    </tr>
+    <tr>
+        <td>ceased medicine item</td>
+        <td>Will be represented with the flag of ‘ceased’ and a change description that describes the reason for ceasing the medicine item</td>
+    </tr>
+        <tr>
+        <td>withheld medicine item</td>
+        <td>Will be represented with the flag of ‘suspended’ and a change description supplied that describes reason for withholding the medicine, expected restart date or request for a clinical review</td>
+    </tr>
+    </table>
 
 When a shared medicines list is sent as part of a document (referenced in Composition.section.entry) rather than as a standalone resource the following guidance applies:
 
@@ -53,23 +71,21 @@ When a shared medicines list is sent as part of a document (referenced in Compos
     </tr>    
        <tr>
         <td>title</td>
-        <td>Will not be provided</td>
+        <td>Not to be sent</td>
     </tr>  
   </table> 
 
 
-##### When a shared medicines list is a PSML
-
 For the expected usage scenario of a PSML document the following guidance applies:
 
-* The author will be a pharmacist and as such information relating to the pharmacist such as contact details will be recorded in the author as one more more elements of Practitioner.
-* The role of ‘pharmacist’ will be recorded in the list source role as PractitionerRole.code.
-* Encounter details, such as encounter type and period, are expected to be provided.
-* All medicines that the patient is known to be taking, including packed, non-packed, complementary and over the counter medicine items, are expected to be included in the list.
-* The list is expected to include at least one medicine item that the patient is known to be taking, i.e. the flag is not 'ceased'.
-* The list may include relevant ceased medicine items for the patient.
-* The list is not expected to include prescribed medicine items and change recommendations for the existing medicine items; the flag is never expected to have one of thes values: 'presribed',  'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended'.
-* Information that the PSML contains one or more medicines that are packed by a pharmacy in a dose administration aid is expected to be included in note with preferred text 'Packed medicines: Yes', 'Packed medicines: No' or 'Packed medicines: Unknown'.
-* Additional comments that apply to the PSML, and not to any specific medicine item, can be provided in note.
-
-
+* It is expected that status will be ‘final’.
+* It is expected that author will be the person acting as the pharmacist, and list source role is pharmacist.
+* It is expected that encounter will be sent.
+* Where a sending system can state that one or more medicine items in the list are packed by a pharmacy in a dose administration aid that the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’ or ‘Packed medicines: Unknown’ is sent in note.
+* The list is expected to:
+  * include at least one current medicine item (flag is not ‘ceased’).
+  * include all medicines the patient is known to be taking including packed, non-packed, complementary and over the counter medicine items.
+  * include relevant ceased medicine items.
+* The list is not expected to:
+  * include recommendations (flag is not to be ‘new-recommended’, ‘prescription-recommended’, ‘review-recommended’, ‘cessation-recommended’, ‘suspension-recommended’ and ‘cancellation-recommended’).
+  * include prescribed medicine items (flag is not to be 'prescribed').

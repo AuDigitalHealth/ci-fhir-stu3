@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="observation-norelevantfinding-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"/>
+  <url
+    value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"/>
   <version value="1.0.0"/>
   <name value="ObservationNoRelevantFinding"/>
   <title value="Assertion of No Relevant Finding"/>
@@ -14,8 +15,10 @@
       <value value="help@digitalhealth.gov.au"/>
     </telecom>
   </contact>
-  <description value="The purpose of this profile is to provide a statement that there is a clinical judgement that there are no items of specific interest, e.g. no allergies, no medications.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
-  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+  <description
+    value="The purpose of this profile is to provide a statement that there is a clinical judgement that there are no items of specific interest, e.g. no allergies, no medications.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element"/>
+  <copyright
+    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -31,7 +34,6 @@
         <valueString value="default: final"/>
       </extension>
       <path value="Observation.status"/>
-      <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.code">
@@ -42,8 +44,17 @@
       <path value="Observation.subject"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
+        />
       </type>
+      <constraint>
+        <key value="inv-dh-obs-01"/>
+        <severity value="error"/>
+        <human
+          value="The subject shall at least have a reference or an identifier"/>
+        <expression value="reference.exists() or identifier.exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]">
@@ -54,19 +65,27 @@
       <path value="Observation.performer"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"
+        />
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"
+        />
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"
+        />
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"
+        />
       </type>
       <mustSupport value="true"/>
     </element>
@@ -77,7 +96,8 @@
       <binding>
         <strength value="required"/>
         <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1"/>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1"
+          />
         </valueSetReference>
       </binding>
     </element>

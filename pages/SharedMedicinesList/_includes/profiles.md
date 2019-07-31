@@ -99,8 +99,8 @@
                       </td>
                       <td class="frm-set">
                         <ul class="frm-set">
-                            <li><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Detailed Statement of Known Medicine)</a></li>
-                            <li><a href="StructureDefinition-medication-known-1.html">Medication (Known Medicine)</a></li>
+                            <li><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Medicine Item Statement)</a></li>
+                            <li><a href="StructureDefinition-medication-dh-base-1.html">Medication (Base Medication)</a></li>
                          </ul>
                         </td>
                         <td class="frm-null"/>
@@ -232,17 +232,16 @@
        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
     </tr> 
- 
      <tr>
-      <td><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Detailed Statement of Known Medicine)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
-    </tr>  
-    <tr>
-      <td><a href="StructureDefinition-medication-known-1.html">Medication (Known Medicine)</a></td>
+      <td><a href="StructureDefinition-medication-dh-base-1.html">Medication (Base Medication)</a></td>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medication.html">AU Base Medication</a></td>
         <td><a href="http://hl7.org/fhir/STU3/medication.html">Medication</a></td>
     </tr> 
+     <tr>
+      <td><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Medicine Item Statement)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
+    </tr>  
 </table>
   </div>
 				</div>  <!-- /inner-wrapper -->

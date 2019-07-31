@@ -9,9 +9,9 @@ Search parameters have not been defined.
     <th>Issue No.</th>
   </tr>
   <tr>
-        <td>Element missing Must Support flag</td>
-        <td>Due to tooling issues must support flag could not be set to true for the following elements: Practitioner.qualification.identifier, Practitioner.qualification.code, Practitioner.qualification.period and Practitioner.qualification.issuer. </td>
-        <td><a href="https://jira.nehta.net.au/browse/CIFMM-2161">CIFMM-2161</a></td>
+        <td>qualification</td>
+        <td>The must support flag on the child elements of qualification only appears in the Differential and not in the Snapshot produced by IG Publisher. An implementer shall interpret the profile as having must support set on the child elements of qualification (i.e. qualification.identifier, qualification.code, qualification.period, qualification.issuer).</td>
+        <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance/topic/More.20about.20Slicing">More about Slicing</a> stream</td>
   </tr>
  </tbody>
 </table> 

@@ -1,1 +1,1 @@
-This file is intentionally empty. It is only included as IG Publisher requirement.
+This file is intentionally empty. It is required to be included by the IG Publisher.

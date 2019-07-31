@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="medication-known-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"/>
+  <id value="medication-dh-base-1"/>
+  <url
+    value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
   <version value="1.0.0"/>
-  <name value="MedicationKnown"/>
-  <title value="Known Medicine"/>
+  <name value="MedicationBase"/>
+  <title value="Base Medication"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Australian Digital Health Agency"/>
@@ -15,7 +16,7 @@
     </telecom>
   </contact>
   <description
-    value="The purpose of this profile is to provide detail for a known medicine but to not prescribe the amount or type of detail.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
+    value="The purpose of this profile is to provide a base model for the concept of a medicine, defining fundamental concepts that form a conforming representation of a medicine. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context and where it is desirable to provide some constraint to support appropriate terminology for a medicine.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
   <copyright
     value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
@@ -38,12 +39,6 @@
       <path value="Medication.extension"/>
       <sliceName value="genericName"/>
       <short value="Medication generic drug name"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Medication.extension:strengthText">
-      <path value="Medication.extension"/>
-      <sliceName value="strengthText"/>
-	  <short value="Medication strength text"/>
       <mustSupport value="true"/>
     </element>
     <element id="Medication.code">
@@ -81,7 +76,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
         />
       </type>
       <mustSupport value="true"/>
