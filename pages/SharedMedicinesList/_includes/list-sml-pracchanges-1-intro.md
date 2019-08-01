@@ -58,6 +58,10 @@ When a shared medicines list is sent as part of a document (referenced in Compos
         <td>Will reference the same PractitionerRole as in Composition.composition-author-role</td>
     </tr>
    <tr>
+        <td>code</td>
+        <td>Will hold the same value as Composition.section(Medicines list).code</td>
+   </tr>   
+   <tr>
         <td>subject</td>
         <td>Will reference the same Patient as in Composition.subject</td>
     </tr>   
