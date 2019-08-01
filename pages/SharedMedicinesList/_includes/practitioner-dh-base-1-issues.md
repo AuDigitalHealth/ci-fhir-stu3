@@ -1,6 +1,3 @@
-Search parameters have not been defined.
-
-### Known issues
 <table class="list" width="100%">
 <tbody>
   <tr>
