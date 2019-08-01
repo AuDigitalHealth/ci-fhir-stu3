@@ -141,8 +141,14 @@
       <constraint>
         <key value="inv-dh-prac-02" />
         <severity value="error" />
+        <human value="The issuer reference shall at least have a reference, an identifier or a display" />        
+        <expression value="issuer.exists() implies (issuer.reference.exists() or issuer.identifier.exists() or issuer.display.exists())" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-prac-03" />
+        <severity value="error" />
         <human value="The issuer organisation shall conform to Base Organization" />
-        <expression value="issuer.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
+        <expression value="issuer.exists() implies issuer.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
       </constraint>
       <mustSupport value="true"/>
     </element>
