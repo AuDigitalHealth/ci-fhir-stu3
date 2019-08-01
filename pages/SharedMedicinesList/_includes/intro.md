@@ -119,10 +119,15 @@ This section lists known issues with this specification at the time of publishin
   </tr>
  <tr>
         <td>Terminology publication</td>
-        <td>
-            <p>The following terminology resources are not yet available in NCTS:</p>
-            <p><a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1</a></p> 
+        <td>The following terminology resources are not yet available in NCTS:<ul>
+            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1</a></li> 
+            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 ">https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 </a></li>
+            </ul> 
        </td>
+    </tr>
+     <tr>
+        <td>Composition (Shared Medicines List)</td>
+        <td>FHIRPath expression for invariant inv-dh-cmp-19 has not been created.</td>
     </tr>
     <tr>
         <td>Examples</td>

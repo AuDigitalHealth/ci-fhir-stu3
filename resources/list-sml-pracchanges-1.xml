@@ -1,177 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="list-sml-pracchanges-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1"/>
-  <version value="1.0.0"/>
-  <name value="ListMedicineItemsChanges"/>
-  <title value="List of Medicine Items with Change Information Authored by Practitioner"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <publisher value="Australian Digital Health Agency"/>
+  <id value="list-sml-pracchanges-1" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1" />
+  <version value="1.0.0" />
+  <name value="ListMedicineItemsChanges" />
+  <title value="List of Medicine Items with Change Information Authored by Practitioner" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description
-    value="The purpose of this profile is to provide a practitioner authored list of medicine items for a patient with change information.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element"/>
-  <copyright
-    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="List"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medlist"/>
-  <derivation value="constraint"/>
+  <description value="The purpose of this profile is to provide a practitioner authored list of medicine items for a patient with change information.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="List" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-medlist" />
+  <derivation value="constraint" />
   <differential>
     <element id="List">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/>
-      </extension>
-      <path value="List"/>
-      <short value="A list of medicine items for a patient"/>
+      <path value="List" />
+      <short value="A list of medicine items for a patient" />
+      <constraint>
+        <key value="inv-dh-lst-03" />
+        <severity value="error" />
+        <human value="The subject reference shall at least have a reference or an identifier" />
+        <expression value="subject.reference.exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-lst-04" />
+        <severity value="error" />
+        <human value="The encounter reference shall at least have a reference" />
+        <expression value="encounter.exists() implies encounter .reference.exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-lst-05" />
+        <severity value="error" />
+        <human value="The source reference  shall at least have a reference or an identifier" />
+        <expression value="source.reference.exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-lst-07" />
+        <severity value="error" />
+        <human value="The author role reference shall at least have a reference or an identifier" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.exists()" />
+      </constraint>
     </element>
     <element id="List.meta">
-      <path value="List.meta"/>
-      <min value="1"/>
+      <path value="List.meta" />
+      <min value="1" />
       <constraint>
-        <key value="inv-dh-lst-01"/>
-        <severity value="error"/>
-        <human
-          value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1'"/>
-        <expression
-          value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1').exists()"
-        />
+        <key value="inv-dh-lst-01" />
+        <severity value="error" />
+        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1'" />
+        <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1').exists()" />
       </constraint>
     </element>
     <element id="List.meta.profile">
-      <path value="List.meta.profile"/>
-      <min value="1"/>
+      <path value="List.meta.profile" />
+      <min value="1" />
     </element>
     <element id="List.extension:sourceRole">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/>
+        <valueCode value="draft" />
       </extension>
-      <path value="List.extension"/>
-      <short value="Practitioner role that authored the list"/>
-      <sliceName value="sourceRole"/>
-      <min value="1"/>
-      <max value="1"/>
+      <path value="List.extension" />
+      <sliceName value="sourceRole" />
+      <short value="Practitioner role that authored the list" />
+      <min value="1" />
       <constraint>
-        <key value="inv-dh-lst-02"/>
-        <severity value="error"/>
-        <human
-          value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier"/>
-        <expression
-          value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
-        />
+        <key value="inv-dh-lst-02" />
+        <severity value="error" />
+        <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
+        <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
       </constraint>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="List.status">
-      <path value="List.status"/>
-      <fixedCode value="current"/>
-      <mustSupport value="true"/>
+      <path value="List.status" />
+      <fixedCode value="current" />
+      <mustSupport value="true" />
     </element>
     <element id="List.mode">
-      <path value="List.mode"/>
-      <fixedCode value="snapshot"/>
+      <path value="List.mode" />
+      <fixedCode value="snapshot" />
     </element>
     <element id="List.title">
-      <path value="List.title"/>
-      <mustSupport value="true"/>
+      <path value="List.title" />
+      <mustSupport value="true" />
     </element>
     <element id="List.code">
-      <path value="List.code"/>
-      <min value="1"/>
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://loinc.org"/>
-          <code value="10160-0"/>
-        </coding>
-      </fixedCodeableConcept>
-      <mustSupport value="true"/>
+      <path value="List.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ListPurpose" />
+        </extension>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1" />
+      </binding>
     </element>
     <element id="List.subject">
-      <path value="List.subject"/>
-      <min value="1"/>
+      <path value="List.subject" />
+      <min value="1" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="List.encounter">
-      <path value="List.encounter"/>
+      <path value="List.encounter" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"/>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="List.date">
-      <path value="List.date"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
+      <path value="List.date" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="List.source">
-      <path value="List.source"/>
-      <short value="Practitioner referenced by list source role"/>
-      <min value="1"/>
+      <path value="List.source" />
+      <short value="Practitioner referenced by list source role" />
+      <min value="1" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="List.note">
-      <path value="List.note"/>
-      <mustSupport value="true"/>
+      <path value="List.note" />
+      <mustSupport value="true" />
     </element>
     <element id="List.entry">
-      <path value="List.entry"/>
-      <short value="Medicine item with change information"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
+      <path value="List.entry" />
+      <short value="Medicine item with change information" />
+      <min value="1" />
+      <constraint>
+        <key value="inv-dh-lst-06" />
+        <severity value="error" />
+        <human value="The medicine item reference shall at least have a reference" />
+        <expression value="item.reference.exists()" />
+      </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="List.entry.extension:changeDescription">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft"/>
+        <valueCode value="draft" />
       </extension>
-      <path value="List.entry.extension"/>
-      <sliceName value="changeDescription"/>
-      <short value="Description of the change to the medicine item"/>
-      <mustSupport value="true"/>
+      <path value="List.entry.extension" />
+      <sliceName value="changeDescription" />
+      <short value="Description of the change to the medicine item" />
+      <mustSupport value="true" />
     </element>
     <element id="List.entry.flag">
-      <path value="List.entry.flag"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
+      <path value="List.entry.flag" />
+      <min value="1" />
+      <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ListItemFlag"/>
-        </extension>
-        <strength value="required"/>
-        <valueSetUri
-          value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1"/>
+        <strength value="required" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1" />
       </binding>
     </element>
     <element id="List.entry.item">
-      <path value="List.entry.item"/>
-      <short value="Medicine item"/>
+      <path value="List.entry.item" />
+      <short value="Medicine item" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
