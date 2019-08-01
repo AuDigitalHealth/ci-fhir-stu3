@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/aa15201c-8e49-11e9-bc42-526af7764f64> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "aa15201c-8e49-11e9-bc42-526af7764f64"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:Resource.language [ fhir:value "en-AU"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n      <h2>Pharmacist Shared Medicines List</h2>\n      <p><b>Patient</b>: Frank Goodpatient; Gender: MALE; DoB: 24 March 1981 (37 yrs); IHI 8003608666701594</p>\n      <p><b>Date:</b> 11 Dec 2018</p>\n      <p><b>Pharmacist:</b> Mosenna Joanne (Pharmacist); phone: 9804 6688; email: joanne.mosenna@test.teshealth.com.au; HPI-I 8003610000000000</p>\n      <p><b>Healthcare setting:</b>Community pharmacy</p>\n     </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/composition-author-role" ];
+     fhir:Extension.valueReference [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64>;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64" ]
+     ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:56445-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "56445-0" ];
+       fhir:Coding.display [ fhir:value "Medication summary Document" ]
+     ]
+  ];
+  fhir:Composition.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/55a2e4fc-8321-11e9-bc42-526af7764f64>;
+     fhir:Reference.reference [ fhir:value "Patient/55a2e4fc-8321-11e9-bc42-526af7764f64" ]
+  ];
+  fhir:Composition.encounter [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Encounter/1bcf0c88-8e4d-11e9-bc42-526af7764f64>;
+     fhir:Reference.reference [ fhir:value "Encounter/1bcf0c88-8e4d-11e9-bc42-526af7764f64" ]
+  ];
+  fhir:Composition.date [ fhir:value "2018-12-11"^^xsd:date];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/54a065dc-8666-11e9-bc42-526af7764f64>;
+     fhir:Reference.reference [ fhir:value "Practitioner/54a065dc-8666-11e9-bc42-526af7764f64" ]
+  ];
+  fhir:Composition.title [ fhir:value "Pharmacist Shared Medicines List"];
+  fhir:Composition.attester [
+     fhir:index 0;
+     fhir:Composition.attester.mode [
+       fhir:value "legal";
+       fhir:index 0
+     ];
+     fhir:Composition.attester.time [ fhir:value "2018-12-11"^^xsd:date ];
+     fhir:Composition.attester.party [
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/54a065dc-8666-11e9-bc42-526af7764f64>;
+       fhir:Reference.reference [ fhir:value "Practitioner/54a065dc-8666-11e9-bc42-526af7764f64" ]
+     ]
+  ];
+  fhir:Composition.custodian [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/084bafa0-866d-11e9-bc42-526af7764f64>;
+     fhir:Reference.reference [ fhir:value "Organization/084bafa0-866d-11e9-bc42-526af7764f64" ]
+  ];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Medications" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:10160-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "10160-0" ];
+         fhir:Coding.display [ fhir:value "History of Medication use Narrative" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>None</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/List/5044db7a-8595-11e9-bc42-526af7764f64>;
+       fhir:Reference.reference [ fhir:value "List/5044db7a-8595-11e9-bc42-526af7764f64" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Allergies" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:48765-2;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "48765-2" ];
+         fhir:Coding.display [ fhir:value "Allergies and adverse reactions Document" ]
+       ]
+     ];
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "additional" ];
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n        <p>None</p>\n      </div>"
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/AllergyIntolerance/96c1bf8a-8321-11e9-bc42-526af7764f64>;
+       fhir:Reference.reference [ fhir:value "AllergyIntolerance/96c1bf8a-8321-11e9-bc42-526af7764f64" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/aa15201c-8e49-11e9-bc42-526af7764f64.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

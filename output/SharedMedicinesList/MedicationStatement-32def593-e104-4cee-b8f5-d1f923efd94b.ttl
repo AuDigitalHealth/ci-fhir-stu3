@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "32def593-e104-4cee-b8f5-d1f923efd94b"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 32def593-e104-4cee-b8f5-d1f923efd94b</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>medication</b>: <a href=\"Medication-2f70f312-8323-11e9-bc42-526af7764f64.html\">Generated Summary: id: 2f70f312-8323-11e9-bc42-526af7764f64; <span title=\"Codes: {http://snomed.info/sct 53373011000036103}\">Ferro-Grad C</span></a></p><p><b>subject</b>: <a href=\"Patient-55a2e4fc-8321-11e9-bc42-526af7764f64.html\">Generated Summary: id: 55a2e4fc-8321-11e9-bc42-526af7764f64; National unique individual identifier = 8003608666701594; Frank Goodpatient ; gender: male; birthDate: 24/03/1981</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: Iron supplement <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationReference [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Medication/2f70f312-8323-11e9-bc42-526af7764f64>;
+     fhir:Reference.reference [ fhir:value "Medication/2f70f312-8323-11e9-bc42-526af7764f64" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/55a2e4fc-8321-11e9-bc42-526af7764f64>;
+     fhir:Reference.reference [ fhir:value "Patient/55a2e4fc-8321-11e9-bc42-526af7764f64" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "Iron supplement" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Take one tablet daily" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

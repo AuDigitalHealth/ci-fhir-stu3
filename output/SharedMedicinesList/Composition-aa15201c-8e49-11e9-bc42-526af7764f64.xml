@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="aa15201c-8e49-11e9-bc42-526af7764f64"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1"/>
+  </meta>
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+      <h2>Pharmacist Shared Medicines List</h2>
+      <p><b>Patient</b>: Frank Goodpatient; Gender: MALE; DoB: 24 March 1981 (37 yrs); IHI 8003608666701594</p>
+      <p><b>Date:</b> 11 Dec 2018</p>
+      <p><b>Pharmacist:</b> Mosenna Joanne (Pharmacist); phone: 9804 6688; email: joanne.mosenna@test.teshealth.com.au; HPI-I 8003610000000000</p>
+      <p><b>Healthcare setting:</b>Community pharmacy</p>
+     </div>
+  </text>
+  <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
+    <valueReference>
+      <reference value="PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64"/>
+    </valueReference>
+  </extension>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="56445-0"/>
+      <display value="Medication summary Document"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/55a2e4fc-8321-11e9-bc42-526af7764f64"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/1bcf0c88-8e4d-11e9-bc42-526af7764f64"/>
+  </encounter>
+  <date value="2018-12-11"/>
+  <author>
+    <reference value="Practitioner/54a065dc-8666-11e9-bc42-526af7764f64"/>
+  </author>
+  <title value="Pharmacist Shared Medicines List"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2018-12-11"/>
+    <party>
+      <reference value="Practitioner/54a065dc-8666-11e9-bc42-526af7764f64"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="Organization/084bafa0-866d-11e9-bc42-526af7764f64"/>
+  </custodian>
+  <section>
+    <title value="Medications"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="10160-0"/>
+        <display value="History of Medication use Narrative"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+        <p>None</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="List/5044db7a-8595-11e9-bc42-526af7764f64"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Allergies"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="48765-2"/>
+        <display value="Allergies and adverse reactions Document"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+        <p>None</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="AllergyIntolerance/96c1bf8a-8321-11e9-bc42-526af7764f64"/>
+    </entry>
+  </section>
+</Composition>

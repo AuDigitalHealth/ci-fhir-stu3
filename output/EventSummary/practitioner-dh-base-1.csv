@@ -243,7 +243,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "Practitioner.qualification","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Qualifications obtained by training and certification","Qualifications obtained by training and certification.","","","","","","","","","",,,,,"","value:identifier.system}
 ","",,"open","Practitioner.qualification",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
-inv-dh-prac-02:The issuer organisation shall conform to Base Organization {issuer.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')}","CER?",".playingEntity.playingRole[classCode=QUAL].code","./Qualifications"
+inv-dh-prac-02:The issuer reference shall at least have a reference, an identifier or a display {issuer.exists() implies (issuer.reference.exists() or issuer.identifier.exists() or issuer.display.exists())}inv-dh-prac-03:The issuer organisation shall conform to Base Organization {issuer.exists() implies issuer.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')}","CER?",".playingEntity.playingRole[classCode=QUAL].code","./Qualifications"
 "Practitioner.qualification.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.qualification.extension","","extensions
