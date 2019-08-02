@@ -2,9 +2,11 @@
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="implementationguide-sharedmedicineslist-1"/>
-  <language value="en-AU"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Shared Medicines List</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1</pre><div><p>Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications.</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Shared Medicines List</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1</pre><div><p>This implementation guide is an HL7™ FHIR® specification to represent a Shared Medicine List (SML).</p>
+<p>The primary aim of this implementation guide is to support implementing SML in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.</p>
+<p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>
+<p>This implementation guide does not describe transport or persistence mechanism of the resources described by it.</p>
 </div></div>
   </text>
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1"/>
@@ -19,19 +21,19 @@
       <value value="help@digitalhealth.gov.au"/>
     </telecom>
   </contact>
-  <description value="Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications."/>
+  <description value="This implementation guide is an HL7&#x2122; FHIR&#xAE; specification to represent a Shared Medicine List (SML).&#xA; &#xA;The primary aim of this implementation guide is to support implementing SML in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.&#xA; &#xA;This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.&#xA; &#xA;This implementation guide does not describe transport or persistence mechanism of the resources described by it."/>
   <copyright value="Copyright &#xA9; 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
   <package id="p1">
     <name value="SML"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-composition-sml-1.html"/>
+        <valueUri value="StructureDefinition-composition-sml-prac-1.html"/>
       </extension>
       <example value="false"/>
-      <name value="Practitioner Shared Medicines List"/>
+      <name value="Shared Medicine List Authored by Practitioner"/>
       <sourceReference>
-        <reference value="StructureDefinition/composition-sml-1"/>
+        <reference value="StructureDefinition/composition-sml-prac-1"/>
       </sourceReference>
     </resource>
     <resource>
@@ -168,22 +170,22 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-list-meds-current-1.html"/>
+        <valueUri value="StructureDefinition-list-sml-pracchanges-1.html"/>
       </extension>
       <example value="false"/>
-      <name value="list-meds-current-1"/>
+      <name value="list-sml-pracchnages-1"/>
       <sourceReference>
-        <reference value="StructureDefinition/list-meds-current-1"/>
+        <reference value="StructureDefinition/list-sml-pracchanges-1"/>
       </sourceReference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-medication-known-1.html"/>
+        <valueUri value="StructureDefinition-medication-dh-base-1.html"/>
       </extension>
       <example value="false"/>
-      <name value="medication-known-1"/>
+      <name value="medication-dh-base-1"/>
       <sourceReference>
-        <reference value="StructureDefinition/medication-known-1"/>
+        <reference value="StructureDefinition/medication-dh-base-1"/>
       </sourceReference>
     </resource>
     <resource>
@@ -278,7 +280,7 @@
       </extension>
       <example value="true"/>
       <name value="MedicationStatement example 3"/>
-      <description value="MedicationStatement example Metformin/Sandoz "/>
+      <description value="MedicationStatement example Metformin/Sandoz"/>
       <sourceReference>
         <reference value="MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64"/>
       </sourceReference>
@@ -333,7 +335,7 @@
       </extension>
       <example value="true"/>
       <name value="Medication example 6"/>
-      <description value="Medication example Warfarin/Coumadin "/>
+      <description value="Medication example Warfarin/Coumadin"/>
       <sourceReference>
         <reference value="Medication/26b6b80a-8653-11e9-bc42-526af7764f64"/>
       </sourceReference>
@@ -344,7 +346,7 @@
       </extension>
       <example value="true"/>
       <name value="MedicationStatement example 6"/>
-      <description value="MedicationStatement example Warfarin/Coumadin "/>
+      <description value="MedicationStatement example Warfarin/Coumadin"/>
       <sourceReference>
         <reference value="MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64"/>
       </sourceReference>
@@ -424,6 +426,50 @@
       <description value="Composition/Community pharmacy medicines review"/>
       <sourceReference>
         <reference value="Composition/aa15201c-8e49-11e9-bc42-526af7764f64"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="PractitionerRole example 1"/>
+      <description value="PractitionerRole with practitioner with mandatory identifier"/>
+      <sourceReference>
+        <reference value="PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-084bafa0-866d-11e9-bc42-526af7764f64.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organization example 1"/>
+      <description value="Organization"/>
+      <sourceReference>
+        <reference value="Organization/084bafa0-866d-11e9-bc42-526af7764f64"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Organization example 2"/>
+      <description value="Patient&#39;s managing organization"/>
+      <sourceReference>
+        <reference value="Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-54a065dc-8666-11e9-bc42-526af7764f64.html"/>
+      </extension>
+      <example value="true"/>
+      <name value="Practitioner example 1"/>
+      <description value="Practitioner pharmacist"/>
+      <sourceReference>
+        <reference value="Practitioner/54a065dc-8666-11e9-bc42-526af7764f64"/>
       </sourceReference>
     </resource>
   </package>

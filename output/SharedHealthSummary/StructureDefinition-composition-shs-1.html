@@ -270,7 +270,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-composition.html">AUBaseComposition</a>.</p>
 <p>
-This profile was published on Wed Jul 03 13:51:12 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Aug 02 06:41:48 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -1010,16 +1010,10 @@ Summary
 <p>&nbsp;</p>
 
 
-<!--Known issues-->
-<!--<h4>Known Issues </h4>-->
-
-
-<!-- search text here-->
+<!-- known issues -->
 <a name="search"> </a>
-<h4><span class="sectioncount">SD.1.2 - </span> Quick Start <a title="link to here" class="self-link" href="StructureDefinition-composition-shs-1.html#search"><img src="target.png"/></a></h4>
-<!--<p>Below is an overview of the required search and read operations for this profile.  See the <a href="capstatements.html"/>Conformance requirements</a> for a complete list of supported RESTful operations and search parameters for this IG.</p>-->
-
-<p>Search parameters have not been defined.</p>
+<h4><span class="sectioncount">SD.1.2 - </span> Known Issues <a title="link to here" class="self-link" href="StructureDefinition-composition-shs-1.html#issues"><img src="target.png"/></a></h4>
+<p>None.</p>
 
 
 
@@ -1031,35 +1025,16 @@ Summary
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td></tr>
-<tr><td>Composition.meta.security</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="Security Labels from the Healthcare Privacy and Security Classification System."><a href="http://hl7.org/fhir/STU3/valueset-security-labels.html">All Security Labels</a></td></tr>
-<tr><td>Composition.meta.tag</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;"><a href="http://hl7.org/fhir/STU3/valueset-common-tags.html">Common Tags</a></td></tr>
-<tr><td>Composition.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language.">Fixed Value: en-AU<br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
 <tr><td>Composition.status</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The workflow/clinical status of the composition."><a href="http://hl7.org/fhir/STU3/valueset-composition-status.html">CompositionStatus</a></td></tr>
 <tr><td>Composition.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="Type of a composition.">Fixed Value: LOINC code 60591-5</td></tr>
-<tr><td>Composition.class</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="High-level kind of a clinical document at a macro level."><a href="http://hl7.org/fhir/STU3/valueset-doc-classcodes.html">FHIR Document Class Codes</a></td></tr>
-<tr><td>Composition.attester.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The way in which a person authenticated a composition."><a href="http://hl7.org/fhir/STU3/valueset-composition-attestation-mode.html">CompositionAttestationMode</a></td></tr>
 <tr><td>Composition.attester:legal.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The way in which a person authenticated a composition.">Fixed Value: legal</td></tr>
-<tr><td>Composition.relatesTo.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The type of relationship between documents."><a href="http://hl7.org/fhir/STU3/valueset-document-relationship-type.html">DocumentRelationshipType</a></td></tr>
-<tr><td>Composition.event.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="This list of codes represents the main clinical acts being documented."><a href="http://hl7.org/fhir/STU3/v3/ActCode/vs.html">v3 Code System ActCode</a></td></tr>
-<tr><td>Composition.section.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document."><a href="http://hl7.org/fhir/STU3/valueset-doc-section-codes.html">Document Section Codes</a></td></tr>
-<tr><td>Composition.section.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section."><a href="http://hl7.org/fhir/STU3/valueset-list-mode.html">ListMode</a></td></tr>
-<tr><td>Composition.section.orderedBy</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a href="http://hl7.org/fhir/STU3/valueset-list-order.html">List Order Codes</a></td></tr>
-<tr><td>Composition.section.emptyReason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="If a section is empty, why it is empty."><a href="http://hl7.org/fhir/STU3/valueset-list-empty-reason.html">List Empty Reasons</a></td></tr>
 <tr><td>Composition.section:allergies.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document.">Fixed Value: LOINC code 48765-2</td></tr>
-<tr><td>Composition.section:allergies.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section.">Fixed Value: snapshot</td></tr>
-<tr><td>Composition.section:allergies.orderedBy</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a href="http://hl7.org/fhir/STU3/valueset-list-order.html">List Order Codes</a></td></tr>
 <tr><td>Composition.section:allergies.emptyReason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1</a></td></tr>
 <tr><td>Composition.section:medications.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document.">Fixed Value: <span title="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1">101.32009</a></td></tr>
-<tr><td>Composition.section:medications.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section.">Fixed Value: snapshot</td></tr>
-<tr><td>Composition.section:medications.orderedBy</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a href="http://hl7.org/fhir/STU3/valueset-list-order.html">List Order Codes</a></td></tr>
 <tr><td>Composition.section:medications.emptyReason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1</a></td></tr>
 <tr><td>Composition.section:medicalHistory.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document.">Fixed Value: <span title="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1">101.16117</a></td></tr>
-<tr><td>Composition.section:medicalHistory.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section.">Fixed Value: snapshot</td></tr>
-<tr><td>Composition.section:medicalHistory.orderedBy</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a href="http://hl7.org/fhir/STU3/valueset-list-order.html">List Order Codes</a></td></tr>
 <tr><td>Composition.section:medicalHistory.emptyReason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1</a></td></tr>
 <tr><td>Composition.section:immunisations.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document.">Fixed Value: LOINC code 11369-6</td></tr>
-<tr><td>Composition.section:immunisations.mode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section.">Fixed Value: snapshot</td></tr>
-<tr><td>Composition.section:immunisations.orderedBy</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a href="http://hl7.org/fhir/STU3/valueset-list-order.html">List Order Codes</a></td></tr>
 <tr><td>Composition.section:immunisations.emptyReason</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1">https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1</a></td></tr>
 </table>
 
@@ -1199,7 +1174,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 13:51+1000. |
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 2, 2019 06:41+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

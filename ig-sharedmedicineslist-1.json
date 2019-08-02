@@ -14,21 +14,21 @@
     },
     "sct-edition": "http://snomed.info/sct/32506021000036107",
     "extraTemplates": ["mappings","examples"],
-    "do-transforms": "true",
-    "spreadsheets": [],
     "source": "implementationguide-sharedmedicineslist-1.xml",
-    "npm-name": "fhir.dh.shared-medicines-list",
+    "npm-name": "au.electronichealth.shared-medicines-list",
     "tool": "jekyll",
-    "license": "CC0-1.0",
+    "license": "Apache-2.0",
     "canonicalBase": "http://ns.electronichealth.net.au/ci/fhir/3.0",
     "logging": [
         "init",
+        "progress",
         "context",
-        "html"
+        "html",
+        "tx"
     ],
     "dependencyList": [{
         "name": "aubase",
-        "location": "http://hl7.org.au/fhir/base",
+        "location": "http://hl7.org.au/fhir",
         "version": "current-stu3"
     }],
     "defaults": {
@@ -50,9 +50,9 @@
         "ConceptMap": {"template-base": "cm.html"}
     },
     "resources": {
-        "StructureDefinition/composition-sml-1": {
-            "base": "StructureDefinition-composition-sml-1.html",
-            "defns": "StructureDefinition-composition-sml-1-definitions.html"
+        "StructureDefinition/composition-sml-prac-1": {
+            "base": "StructureDefinition-composition-sml-prac-1.html",
+            "defns": "StructureDefinition-composition-sml-prac-1-definitions.html"
         },
         "StructureDefinition/patient-ident-1": {
             "base": "StructureDefinition-patient-ident-1.html",
@@ -106,13 +106,13 @@
             "base": "StructureDefinition-encounter-es-1.html",
             "defns": "StructureDefinition-encounter-es-1-definitions.html"
         },   
-        "StructureDefinition/list-meds-current-1": {
-            "base": "StructureDefinition-list-meds-current-1.html",
-            "defns": "StructureDefinition-list-meds-current-1-definitions.html"
+        "StructureDefinition/list-sml-pracchanges-1": {
+            "base": "StructureDefinition-list-sml-pracchanges-1.html",
+            "defns": "StructureDefinition-list-sml-pracchanges-1-definitions.html"
         },
-        "StructureDefinition/medication-known-1": {
-            "base": "StructureDefinition-medication-known-1.html",
-            "defns": "StructureDefinition-medication-known-1-definitions.html"
+        "StructureDefinition/medication-dh-base-1": {
+            "base": "StructureDefinition-medication-dh-base-1.html",
+            "defns": "StructureDefinition-medication-dh-base-1-definitions.html"
         },
         "StructureDefinition/observation-norelevantfinding-1": {
             "base": "StructureDefinition-observation-norelevantfinding-1.html",

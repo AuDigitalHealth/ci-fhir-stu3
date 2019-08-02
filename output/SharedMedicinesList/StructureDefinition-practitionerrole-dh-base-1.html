@@ -145,9 +145,9 @@
 
 <a name="introduction"> </a>
 
-<h2 id="base-practitioner-role">Base Practitioner Role</h2>
+<h2 id="base-practitionerrole">Base PractitionerRole</h2>
 
-<h5 id="implementation-guidance">Implementation guidance</h5>
+<h4 id="implementation-guidance">Implementation guidance</h4>
 
 <p>No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.</p>
 
@@ -188,7 +188,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitionerrole.html">AUBasePractitionerRole</a>.</p>
 <p>
-This profile was published on Wed Jul 03 12:00:20 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Aug 02 11:06:02 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -234,7 +234,7 @@ Summary
 
 -\->
 
-
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>
@@ -509,7 +509,7 @@ Summary
 </ul>
 
   -\->
-
+<p>This file is intentionally empty. It is required to be included by the IG Publisher.</p>
 
    </div>
   </div>-->
@@ -762,16 +762,10 @@ Summary
 <p>&nbsp;</p>
 
 
-<!--Known issues-->
-<!--<h4>Known Issues </h4>-->
-
-
-<!-- search text here-->
+<!-- known issues -->
 <a name="search"> </a>
-<h4><span class="sectioncount">SD.9.2 - </span> Quick Start <a title="link to here" class="self-link" href="StructureDefinition-practitionerrole-dh-base-1.html#search"><img src="target.png"/></a></h4>
-<!--<p>Below is an overview of the required search and read operations for this profile.  See the <a href="capstatements.html"/>Conformance requirements</a> for a complete list of supported RESTful operations and search parameters for this IG.</p>-->
-
-<p>Search parameters have not been defined.</p>
+<h4><span class="sectioncount">SD.9.2 - </span> Known Issues <a title="link to here" class="self-link" href="StructureDefinition-practitionerrole-dh-base-1.html#issues"><img src="target.png"/></a></h4>
+<p>None.</p>
 
 
 
@@ -782,17 +776,8 @@ Summary
 <h4><span class="sectioncount">D.4.1.3</span> Terminology Bindings <a title="link to here" class="self-link" href="StructureDefinition-practitionerrole-dh-base-1.html#tx"><img src="target.png"/></a></h4>
   <h4>Terminology Bindings</h4>
 <table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td></tr>
-<tr><td>PractitionerRole.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
-<tr><td>PractitionerRole.identifier:medicareProviderNumber.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>PractitionerRole.identifier:medicareProviderNumber.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#UPIN">UPIN</a></td></tr>
-<tr><td>PractitionerRole.identifier:nationalProviderAtOrganisation.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>PractitionerRole.identifier:nationalProviderAtOrganisation.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#NPIO">NPIO</a></td></tr>
-<tr><td>PractitionerRole.identifier:employeeNumber.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>PractitionerRole.identifier:employeeNumber.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="v2 Identifier Type" href="http://hl7.org/fhir/STU3/v2/0203/index.html#EI">EI</a></td></tr>
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
 <tr><td>PractitionerRole.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="The role a person plays representing an organization"><a href="http://hl7.org/fhir/STU3/valueset-practitioner-role.html">PractitionerRole</a></td></tr>
-<tr><td>PractitionerRole.code.coding:ANZSCOPractitionerRoleCode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The role a person plays representing an organization"><a href="https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1">https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1</a></td></tr>
-<tr><td>PractitionerRole.code.coding:SNOMEDPractitionerRoleCode</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The role a person plays representing an organization"><a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1</a></td></tr>
 <tr><td>PractitionerRole.specialty</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1">https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1</a></td></tr>
 <tr><td>PractitionerRole.availableTime.daysOfWeek</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The days of the week."><a href="http://hl7.org/fhir/STU3/valueset-days-of-week.html">DaysOfWeek</a></td></tr>
 </table>
@@ -862,14 +847,14 @@ Summary
     </div>  <!-- /segment-content -->
 
 
-<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
             <p>Document ID: DH-xxx:2019</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 12:00+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 2, 2019 11:06+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

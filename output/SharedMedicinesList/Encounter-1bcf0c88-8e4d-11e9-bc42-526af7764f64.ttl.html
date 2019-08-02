@@ -120,7 +120,7 @@
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h2>Example: Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64</h2>
+<h2>Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.ttl</h2>
 
 <p>
 Formats: <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.html">Narrative</a>, <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.xml.html">XML</a>, <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.json.html">JSON</a>, <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.ttl.html">Turtle</a>
@@ -140,9 +140,14 @@ Raw <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.ttl" download>ttl</a
  a fhir:Encounter;
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
   <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;1bcf0c88-8e4d-11e9-bc42-526af7764f64&quot;];
+  <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1&quot;;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0     ]
+  ];
   <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 1bcf0c88-8e4d-11e9-bc42-526af7764f64&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Community pharmacy medicine review &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-55a2e4fc-8321-11e9-bc42-526af7764f64.html\&quot;&gt;Generated Summary: id: 55a2e4fc-8321-11e9-bc42-526af7764f64; National unique individual identifier = 8003608500062732; Frank Harding ; gender: male&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 1bcf0c88-8e4d-11e9-bc42-526af7764f64&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'ambulatory')&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Community pharmacy medicine review &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-55a2e4fc-8321-11e9-bc42-526af7764f64.html\&quot;&gt;Generated Summary: id: 55a2e4fc-8321-11e9-bc42-526af7764f64; National unique individual identifier = 8003608666701594; Frank Goodpatient ; gender: male; birthDate: 24/03/1981&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 11/12/2018 10:00:00 AM --&amp;gt; 11/12/2018 12:30:00 PM&lt;/p&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.status">fhir:Encounter.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;finished&quot;];
   <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.class">fhir:Encounter.class</a> [
@@ -156,6 +161,10 @@ Raw <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.ttl" download>ttl</a
   ];
   <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.subject">fhir:Encounter.subject</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/55a2e4fc-8321-11e9-bc42-526af7764f64&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.period">fhir:Encounter.period</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-12-11T10:00:00+10:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">fhir:Period.end</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-12-11T12:30:00+10:00&quot;^^xsd:dateTime ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -189,14 +198,14 @@ Raw <a href="Encounter-1bcf0c88-8e4d-11e9-bc42-526af7764f64.ttl" download>ttl</a
     </div>  <!-- /segment-content -->
 
 
-<<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
             <p>Document ID: DH-xxx:2019</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 3, 2019 12:00+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 2, 2019 11:06+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

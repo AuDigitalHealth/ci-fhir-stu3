@@ -5,7 +5,7 @@
     value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
   <version value="1.0.0"/>
   <name value="MedicationStatementDetailed"/>
-  <title value="Detailed Statement of Known Medicine"/>
+  <title value="Medicine Item Statement"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Australian Digital Health Agency"/>
@@ -56,7 +56,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
         />
       </type>
       <mustSupport value="true"/>
@@ -99,6 +99,13 @@
           value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
         />
       </type>
+      <constraint>
+        <key value="inv-dh-mst-02"/>
+        <severity value="error"/>
+        <human
+          value="The subject shall at least have a reference or an identifier"/>
+        <expression value="reference.exists() or identifier.exists()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
         <element id="MedicationStatement.taken">
@@ -125,7 +132,7 @@
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
         <expression
-          value="MedicationStatement.dosage.text.exists() or MedicationStatement.dosage.patientInstruction.exists()"
+          value="text.exists() or patientInstruction.exists()"
         />
       </constraint>
       <mustSupport value="true"/>

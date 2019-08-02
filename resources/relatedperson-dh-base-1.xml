@@ -17,7 +17,7 @@
   </contact>
   <description value="The purpose of this profile is to provide a base model for the concept of a related person, defining fundamental concepts that form a conforming representation of a related person. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context and where it is desirable to provide some constraint to support unique identification of the related person.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa; * The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
   <copyright
-    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -33,7 +33,7 @@
         <human
           value="The related person shall at least have a name, an identifier or a relationship with the patient"/>
         <expression
-          value="RelatedPerson.identifier.exists() or RelatedPerson.name.exists() or RelatedPerson.relationship.exists()"
+          value="identifier.exists() or name.exists() or relationship.exists()"
         />
       </constraint>
     </element>
@@ -88,7 +88,6 @@
     <element id="RelatedPerson.photo">
       <path value="RelatedPerson.photo"/>
       <max value="0"/>
-      <mustSupport value="true"/>
     </element>
     <element id="RelatedPerson.period">
       <path value="RelatedPerson.period"/>

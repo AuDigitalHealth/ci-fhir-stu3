@@ -1,10 +1,9 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "implementationguide-sharedmedicineslist-1",
-  "language": "en-AU",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Shared Medicines List</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1</pre><div><p>Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications.</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Shared Medicines List</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1</pre><div><p>This implementation guide is an HL7™ FHIR® specification to represent a Shared Medicine List (SML).</p>\n<p>The primary aim of this implementation guide is to support implementing SML in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.</p>\n<p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>\n<p>This implementation guide does not describe transport or persistence mechanism of the resources described by it.</p>\n</div></div>"
   },
   "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-sharedmedicineslist-1",
   "version": "1.0.0",
@@ -22,7 +21,7 @@
       ]
     }
   ],
-  "description": "Australian realm implementation guide of the FHIR specification to represent Shared Medicines List records in the My Health Record system and related applications.",
+  "description": "This implementation guide is an HL7™ FHIR® specification to represent a Shared Medicine List (SML).\n \nThe primary aim of this implementation guide is to support implementing SML in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.\n \nThis implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.\n \nThis implementation guide does not describe transport or persistence mechanism of the resources described by it.",
   "copyright": "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
   "fhirVersion": "3.0.1",
   "package": [
@@ -34,13 +33,13 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "StructureDefinition-composition-sml-1.html"
+              "valueUri": "StructureDefinition-composition-sml-prac-1.html"
             }
           ],
           "example": false,
-          "name": "Practitioner Shared Medicines List",
+          "name": "Shared Medicine List Authored by Practitioner",
           "sourceReference": {
-            "reference": "StructureDefinition/composition-sml-1"
+            "reference": "StructureDefinition/composition-sml-prac-1"
           }
         },
         {
@@ -218,26 +217,26 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "StructureDefinition-list-meds-current-1.html"
+              "valueUri": "StructureDefinition-list-sml-pracchanges-1.html"
             }
           ],
           "example": false,
-          "name": "list-meds-current-1",
+          "name": "list-sml-pracchnages-1",
           "sourceReference": {
-            "reference": "StructureDefinition/list-meds-current-1"
+            "reference": "StructureDefinition/list-sml-pracchanges-1"
           }
         },
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "StructureDefinition-medication-known-1.html"
+              "valueUri": "StructureDefinition-medication-dh-base-1.html"
             }
           ],
           "example": false,
-          "name": "medication-known-1",
+          "name": "medication-dh-base-1",
           "sourceReference": {
-            "reference": "StructureDefinition/medication-known-1"
+            "reference": "StructureDefinition/medication-dh-base-1"
           }
         },
         {
@@ -359,7 +358,7 @@
           ],
           "example": true,
           "name": "MedicationStatement example 3",
-          "description": "MedicationStatement example Metformin/Sandoz ",
+          "description": "MedicationStatement example Metformin/Sandoz",
           "sourceReference": {
             "reference": "MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64"
           }
@@ -429,7 +428,7 @@
           ],
           "example": true,
           "name": "Medication example 6",
-          "description": "Medication example Warfarin/Coumadin ",
+          "description": "Medication example Warfarin/Coumadin",
           "sourceReference": {
             "reference": "Medication/26b6b80a-8653-11e9-bc42-526af7764f64"
           }
@@ -443,7 +442,7 @@
           ],
           "example": true,
           "name": "MedicationStatement example 6",
-          "description": "MedicationStatement example Warfarin/Coumadin ",
+          "description": "MedicationStatement example Warfarin/Coumadin",
           "sourceReference": {
             "reference": "MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64"
           }
@@ -544,6 +543,62 @@
           "description": "Composition/Community pharmacy medicines review",
           "sourceReference": {
             "reference": "Composition/aa15201c-8e49-11e9-bc42-526af7764f64"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.html"
+            }
+          ],
+          "example": true,
+          "name": "PractitionerRole example 1",
+          "description": "PractitionerRole with practitioner with mandatory identifier",
+          "sourceReference": {
+            "reference": "PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Organization-084bafa0-866d-11e9-bc42-526af7764f64.html"
+            }
+          ],
+          "example": true,
+          "name": "Organization example 1",
+          "description": "Organization",
+          "sourceReference": {
+            "reference": "Organization/084bafa0-866d-11e9-bc42-526af7764f64"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.html"
+            }
+          ],
+          "example": true,
+          "name": "Organization example 2",
+          "description": "Patient's managing organization",
+          "sourceReference": {
+            "reference": "Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Practitioner-54a065dc-8666-11e9-bc42-526af7764f64.html"
+            }
+          ],
+          "example": true,
+          "name": "Practitioner example 1",
+          "description": "Practitioner pharmacist",
+          "sourceReference": {
+            "reference": "Practitioner/54a065dc-8666-11e9-bc42-526af7764f64"
           }
         }
       ]

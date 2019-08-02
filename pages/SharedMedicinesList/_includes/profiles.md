@@ -32,7 +32,7 @@
                         <td class="frm-null"/>
                         <td class="frm-set">
                                 <ul>
-                                    <li><a href="StructureDefinition-composition-sml-1.html">Composition (Shared Medicines List)</a></li>
+                                    <li><a href="StructureDefinition-composition-sml-prac-1.html">Composition (Shared Medicines List Authored by Practitioner)</a></li>
                                 </ul>
                             </td>
                         <td class="frm-null"/>
@@ -55,14 +55,15 @@
                                 <li><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></li>
                                 <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
                                 <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>
-                                <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base PractitionerRole)</a></li>
+                                <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (PractitionerRole with Practitioner with Mandatory Identifier)</a></li>
                                 <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
                             </ul>
                        </td>
                        <td class="frm-set">
                             <ul class="frm-set">
                                 <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
-                                 <li><a href="StructureDefinition-organization-dh-ident-1.html">Organization (Organization with Mandatory Identifier)</a></li>
+                                 <li><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></li>
                             </ul>
                         </td>
                         <td class="frm-set">
@@ -70,7 +71,7 @@
                                 <li><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></li>
                            </ul>
                            <ul class="frm-set">
-                                <li><a href="StructureDefinition-list-meds-current-1.html">List (List of Medicine Items for a Patient)</a></li>
+                                <li><a href="StructureDefinition-list-sml-pracchanges-1.html">List (List of Medicine Items with Change Information Authored by Practitioner)</a></li>
                            </ul>
                         </td>
                         <td class="frm-null"/>
@@ -98,8 +99,8 @@
                       </td>
                       <td class="frm-set">
                         <ul class="frm-set">
-                            <li><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Detailed Statement of Known Medicine)</a></li>
-                            <li><a href="StructureDefinition-medication-known-1.html">Medication (Known Medicine)</a></li>
+                            <li><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Medicine Item Statement)</a></li>
+                            <li><a href="StructureDefinition-medication-dh-base-1.html">Medication (Base Medication)</a></li>
                          </ul>
                         </td>
                         <td class="frm-null"/>
@@ -152,12 +153,12 @@
     </tr>
    <tr>
      <td><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></td>
-     <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
+     <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
      <td><a href="http://hl7.org/fhir/STU3/allergyintolerance.html">AllergyIntolerance </a></td>
     </tr>    
     <tr>
-      <td><a href="StructureDefinition-composition-sml-1.html">Composition (Shared Medicines List)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-composition.html">AU Base Composition</a></td>
+      <td><a href="StructureDefinition-composition-sml-prac-1.html">Composition (Shared Medicines List Authored by Practitioner)</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-composition.html">AU Base Composition</a></td>
      <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
     </tr>        
     <tr>
@@ -167,7 +168,7 @@
   </tr>
       <tr>
         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></td>
-         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-encounter.html">AU Base Encounter</a></td>
+         <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-encounter.html">AU Base Encounter</a></td>
         <td><a href="http://hl7.org/fhir/stu3/encounter-definitions.html#Encounter">Encounter</a></td>
   </tr>
    <tr>
@@ -177,66 +178,70 @@
   </tr>
   
    <tr>
-        <td><a href="StructureDefinition-list-meds-current-1.html">List (List of Medicine Items)</a></td>
-        <td><a href="http://hl7.org.au/fhir/StructureDefinition/au-medlist">AU Medicine List</a></td>
+        <td><a href="StructureDefinition-list-sml-pracchanges-1.html">List (List of Medicine Items with Change Information Authored by Practitioner)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medlist.html">AU Medicine List</a></td>
         <td><a href="http://hl7.org/fhir/STU3/list.html">List</a></td>
   </tr> 
     <tr>
          <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
     </tr> 
         <tr>
-         <td><a href="StructureDefinition-organization-dh-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+         <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
     </tr> 
     <tr>
        <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
-       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
+       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
        <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
   </tr>    
     <tr>
       <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-patient.html">AU Base Patient</a></td>
       <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
     </tr>
      <tr>
       <td><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-patient.html">AU Base Patient</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-patient.html">AU Base Patient</a></td>
       <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
     </tr>
         <tr>
       <td><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
       <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
+      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
       <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
     </tr>
-        <tr>
-            <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
-            <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
-             <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
+    <tr>
+            <td><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base PractitionerRole)</a></td>
+            <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
+             <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole</a></td>
+    </tr>
+    <tr>
+            <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (PractitionerRole with Practitioner with Mandatory Identifier)</a></td>
+            <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
+             <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole</a></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
-       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
+       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
     </tr> 
- 
      <tr>
-      <td><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Detailed Statement of Known Medicine)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
-    </tr>  
-    <tr>
-      <td><a href="StructureDefinition-medication-known-1.html">Medication (Known Medicine)</a></td>
-        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-medication.html">AU Base Medication</a></td>
+      <td><a href="StructureDefinition-medication-dh-base-1.html">Medication (Base Medication)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medication.html">AU Base Medication</a></td>
         <td><a href="http://hl7.org/fhir/STU3/medication.html">Medication</a></td>
     </tr> 
+     <tr>
+      <td><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Medicine Item Statement)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
+    </tr>  
 </table>
   </div>
 				</div>  <!-- /inner-wrapper -->

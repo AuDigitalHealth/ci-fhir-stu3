@@ -1,4 +1,4 @@
-<table class="list" width="100%" cellspacing="4">
+<table class="list" width="100%">
 <tbody>
   <tr>
     <th>Reference</th>

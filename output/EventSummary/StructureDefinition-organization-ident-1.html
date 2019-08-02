@@ -187,7 +187,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AUBaseOrganisation</a>.</p>
 <p>
-This profile was published on Thu Jul 04 08:22:31 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Aug 02 06:39:08 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -859,16 +859,10 @@ Summary
 <p>&nbsp;</p>
 
 
-<!--Known issues-->
-<!--<h4>Known Issues </h4>-->
-
-
-<!-- search text here-->
+<!-- known issues -->
 <a name="search"> </a>
-<h4><span class="sectioncount">SD.7.2 - </span> Quick Start <a title="link to here" class="self-link" href="StructureDefinition-organization-ident-1.html#search"><img src="target.png"/></a></h4>
-<!--<p>Below is an overview of the required search and read operations for this profile.  See the <a href="capstatements.html"/>Conformance requirements</a> for a complete list of supported RESTful operations and search parameters for this IG.</p>-->
-
-<p>Search parameters have not been defined.</p>
+<h4><span class="sectioncount">SD.7.2 - </span> Known Issues <a title="link to here" class="self-link" href="StructureDefinition-organization-ident-1.html#issues"><img src="target.png"/></a></h4>
+<p>None.</p>
 
 
 
@@ -879,22 +873,7 @@ Summary
 <h4><span class="sectioncount">D.4.1.3</span> Terminology Bindings <a title="link to here" class="self-link" href="StructureDefinition-organization-ident-1.html#tx"><img src="target.png"/></a></h4>
   <h4>Terminology Bindings</h4>
 <table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td></tr>
-<tr><td>Organization.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
-<tr><td>Organization.identifier:hpio.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:hpio.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#NOI">NOI</a></td></tr>
-<tr><td>Organization.identifier:abn.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:abn.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a></td></tr>
-<tr><td>Organization.identifier:acn.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:acn.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a></td></tr>
-<tr><td>Organization.identifier:arbn.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:arbn.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a></td></tr>
-<tr><td>Organization.identifier:paio.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:paio.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a></td></tr>
-<tr><td>Organization.identifier:csp.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:csp.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a></td></tr>
-<tr><td>Organization.identifier:nataAccreditation.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Organization.identifier:nataAccreditation.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a href="http://hl7.org/fhir/STU3/valueset-identifier-type.html">Identifier Type Codes</a></td></tr>
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
 <tr><td>Organization.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Used to categorize the organization"><a href="http://hl7.org/fhir/STU3/valueset-organization-type.html">OrganizationType</a></td></tr>
 <tr><td>Organization.contact.purpose</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="The purpose for which you would contact a contact party"><a href="http://hl7.org/fhir/STU3/valueset-contactentity-type.html">ContactEntityType</a></td></tr>
 </table>
@@ -973,7 +952,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 4, 2019 08:22+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 2, 2019 06:39+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

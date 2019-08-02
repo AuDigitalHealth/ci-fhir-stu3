@@ -1,5 +1,5 @@
 {
-  "package": "fhir.dh.shared-medicines-list",
+  "package": "au.electronichealth.shared-medicines-list",
   "version": "1.0.0",
   "fhirVersion": "3.0.1",
   "extensions": [],
@@ -12,8 +12,8 @@
     ],
     "Composition": [
       {
-        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-1",
-        "title": "Shared Medicines List"
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1",
+        "title": "Shared Medicines List Authored by Practitioner"
       }
     ],
     "Encounter": [
@@ -24,20 +24,20 @@
     ],
     "List": [
       {
-        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-meds-current-1",
-        "title": "List of Medicine Items for a Patient"
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1",
+        "title": "List of Medicine Items with Change Information Authored by Practitioner"
       }
     ],
     "Medication": [
       {
-        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1",
-        "title": "Known Medicine"
+        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1",
+        "title": "Base Medication"
       }
     ],
     "MedicationStatement": [
       {
         "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1",
-        "title": "Detailed Statement of Known Medicine"
+        "title": "Medicine Item Statement"
       }
     ],
     "Observation": [
@@ -143,9 +143,6 @@
     "http://hl7.org.au/fhir/StructureDefinition/information-recipient": [
       "Composition"
     ],
-    "http://hl7.org.au/fhir/StructureDefinition/list-source-role": [
-      "List"
-    ],
     "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name": [
       "Medication",
       "MedicationStatement"
@@ -178,7 +175,6 @@
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
-      "StructureDefinition.differential.element",
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/patient-birthTime": [
