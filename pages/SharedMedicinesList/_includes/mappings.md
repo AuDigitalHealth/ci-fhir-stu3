@@ -1,4 +1,4 @@
-# {{ page.title }}
+# Th{{ page.title }}
 
 This informative section provides mapping from the data items (i.e. requirements) in [[Pharmacist Shared Medicines List scenarios and business requirements v2.0][DH2019m]](index.html#DH2019m) and [[Pharmacist Shared Medicines List Information Requirements v2.0][DH2019n]](index.html#DH2019n).
 
@@ -15,14 +15,6 @@ The table below matches the data items to the corresponding supported element in
                     <th>Hierarchy</th>
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Supported element</td>
-                    <td>The path to the supported element from the root Composition</td>
-                </tr>
-            </tfoot>
             <tbody>
                 <tr>
                     <td>Pharmacist shared medicines list</td>
@@ -42,12 +34,12 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Point-to-point transmission</td>
                     <td>027954</td>
-                    <td  colspan="2">This requirement is managed in the implementation level. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
+                    <td  colspan="2">This requirement is managed in the implementation. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
                 </tr>                        
                 <tr>
                     <td>HPI-I relaxed template package</td>
                     <td>028394</td>
-                    <td colspan="2">This requirement is best managed in a conformance profile.</td>
+                    <td colspan="2">N/A</td>
                 </tr>                                     
                  <tr>
                     <td>Compatible with Prescription and Dispense Record</td>
@@ -57,7 +49,7 @@ The table below matches the data items to the corresponding supported element in
                  <tr>
                     <td>Prompt to upload recent PSML</td>
                     <td>028325</td>
-                     <td colspan="2">This requirement is managed in the implementation level.</td>
+                     <td colspan="2">This requirement is managed in the implementation.</td>
                 </tr>                                                                          
                 <tr>
                     <td>Medicines information presentation</td>
@@ -112,7 +104,7 @@ The table below matches the data items to the corresponding supported element in
                <tr>
                     <td>Completeness of PSML document</td>
                     <td>028324</td>
-                    <td>Th</td>
+                    <td></td>
                     <td>N/A</td>
                 </tr>                                                                                                         
                 <tr>
@@ -130,12 +122,12 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>No Address for the consumer</td>
                     <td>028319</td>
-                    <td colspan="2">Adress is optional in the model.This requirement is best managed in a conformance profile.</td>
+                    <td colspan="2">Adress is optional in the model.This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by implementation.</td>
                 </tr>
                 <tr>
                     <td>No Electronic Communication Detail for the consumer</td>
                     <td>028320</td>
-                    <td colspan="2">Electronic Communication Detail is optional in the model.This requirement is best managed in a conformance profile.</td>
+                    <td colspan="2">Electronic Communication Detail is optional in the model.This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by implementation.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Healthcare Setting</td>
@@ -231,7 +223,7 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Active Ingredient or Brand Name</td>
                     <td>028412</td>
-                    <td colspan="2">This is managed in the implementation level.</td>
+                    <td colspan="2">This is managed in the implementation.</td>
                 </tr>
 
                 <tr>
@@ -798,17 +790,17 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Document version number (mandatory)</td>
                     <td>023068</td>
-                    <td colspan="2">This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td colspan="2">CDA)</td>
                 </tr>  
                 <tr>
                     <td>Document instance identifier (mandatory)</td>
                     <td>023067</td>
-                    <td colspan="2">This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.) </td>
+                    <td colspan="2">This is managed in the implementation(e.g. FHIR Bundle, HL7 CDA.) </td>
                 </tr> 
                 <tr>
                     <td>Date and time of document creation (mandatory)</td>
                     <td>024025</td>
-                    <td colspan="2">This is managed in the implementation level(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td colspan="2">This is managed in the implementation(e.g. FHIR Bundle, HL7 CDA.)</td>
                  </tr> 
                 <tr>
                     <td>Document type (mandatory)</td>
