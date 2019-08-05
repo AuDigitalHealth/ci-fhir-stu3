@@ -36,6 +36,12 @@
           value="identifier.exists() or name.exists() or relationship.exists()"
         />
       </constraint>
+	<constraint>
+		<key value="inv-dh-relper-02"/>
+		<severity value="error"/>
+		<human value="This reference shall at least have a reference, an identifier or a display"/>
+		<expression value="patient.reference.exists() or patient.identifier.exists() or patient.display.exists()"/>
+	</constraint>
     </element>
     <element id="RelatedPerson.identifier">
       <path value="RelatedPerson.identifier"/>
