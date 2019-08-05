@@ -30,13 +30,13 @@
       <constraint>
         <key value="inv-dh-relper-01" />
         <severity value="error" />
-        <human value="The organisation shall at least have one identifier with a system and a value" />
+        <human value="The related person shall at least have one identifier with a system and a value" />
         <expression value="identifier.where(system.count() + value.count() >1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-relper-02"/>
         <severity value="error"/>
-        <human value="This reference shall at least have a reference, an identifier or a display"/>
+        <human value="The patient reference shall at least have a reference, an identifier or a display"/>
         <expression value="patient.reference.exists() or patient.identifier.exists() or patient.display.exists()"/>
       </constraint>
     </element>
