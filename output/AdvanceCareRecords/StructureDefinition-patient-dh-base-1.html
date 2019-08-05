@@ -188,7 +188,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-patient.html">AUBasePatient</a>.</p>
 <p>
-This profile was published on Thu Aug 01 07:14:07 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Aug 02 06:44:42 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -1218,16 +1218,35 @@ Summary
 <p>&nbsp;</p>
 
 
-<!--Known issues-->
-<!--<h4>Known Issues </h4>-->
-
-
-<!-- search text here-->
+<!-- known issues -->
 <a name="search"> </a>
-<h4><span class="sectioncount">SD.4.2 - </span> Quick Start <a title="link to here" class="self-link" href="StructureDefinition-patient-dh-base-1.html#search"><img src="target.png"/></a></h4>
-<!--<p>Below is an overview of the required search and read operations for this profile.  See the <a href="capstatements.html"/>Conformance requirements</a> for a complete list of supported RESTful operations and search parameters for this IG.</p>-->
+<h4><span class="sectioncount">SD.4.2 - </span> Known Issues <a title="link to here" class="self-link" href="StructureDefinition-patient-dh-base-1.html#issues"><img src="target.png"/></a></h4>
+<table class="list" width="100%">
+<tbody>
+  <tr>
+    <th>Reference</th>
+    <th>Description</th>
+    <th>Issue No.</th>
+  </tr>
+  
+  <tr>
+        <td>Invariants may not constrain as intended</td>
+        <td>Current validation capabilities of the FHIR Validator and IG Publisher do not fully support all expressions defined in the FHIR specification. Invariants using conformsTo() or … have not been able to be confirmed and do not reject resources that are expected to fail.</td>
+        <td>???</td>
+  </tr>
+  
+  <tr>
+        <td>Element missing Must Support flag</td>
+        <td>The tooling (Forge) used to author this profile throws an error when mustSupport is set to true on Patient.deceased.deceasedDateTime.date-accuracy-indicator. </td>
+        <td>
+            <p>gForge Change Request #17165</p>
+            <p><a href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&amp;tracker_item_id=17165">IG Publisher - Adding Must Support to Patient.deceased.deceasedDateTime.date-accuracy-indicator</a></p>
+        </td>
+  </tr>
 
-<p>Search parameters have not been defined.</p>
+ </tbody>
+</table>
+
 
 
 
@@ -1342,7 +1361,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 1, 2019 07:14+1000. |
+            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 2, 2019 06:44+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
