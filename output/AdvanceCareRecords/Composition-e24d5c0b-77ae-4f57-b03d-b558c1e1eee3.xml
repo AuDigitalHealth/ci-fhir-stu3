@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="e24d5c0b-77ae-4f57-b03d-b558c1e1eee3"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acp-1"/>
+  </meta>
+  <language value="en-AU"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">     
+      <p><b>id</b>: 1840e786-bbd7-4abe-af3e-aa6e7f74c3f2</p>      
+      <p><b>language</b>: en-AU</p>      
+      <p><b>status</b>: final</p>
+      <p><b>type</b>: Advance Care Planning <span style="background: LightGoldenRodYellow">(Details
+        : {https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1 code
+        '100.16975' = '100.16975', given as 'Advance Care Planning'})</span></p>
+      <p><b>subject</b>: name = Adam A. Everyman; IHI = 8003608666701594; gender = male</p>
+      <p><b>date</b>: 21/06/2017 9:00:15 AM</p>
+      <p><b>author</b>: name = Adam A. Everyman; IHI = 8003608666701594; gender = male </p>
+      <p><b>title</b>: Advance Care Planning Document</p>
+      <p><b>custodian</b>: PAI-O = 8003640001000036</p>
+    </div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+      <code value="100.16975"/>
+      <display value="Advance Care Planning"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/7817adef-177a-464c-b56e-27ffc0af4606"/>
+  </subject>
+  <date value="2017-06-21T09:00:15+10:00"/>
+  <author>
+    <reference value="Patient/7817adef-177a-464c-b56e-27ffc0af4606"/>
+  </author>
+  <title value="Advance Care Planning Document"/>
+  <custodian>
+    <reference value="Organization/3192b0cd-3a67-4cb5-b7d8-198057ba8b67"/>
+  </custodian>
+  <section>
+    <title value="Advance Care Planning Document"/>
+    <code>
+      <coding>
+        <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
+        <code value="101.16973"/>
+        <display value="Advance Care Information Section"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a href="attachment.pdf">Advance Care Plan for Adam</a></p>
+        <p>Created on: 03 November 2009</p>
+        <p>Created by: Adam Everyman</p>
+      </div>
+    </text>
+    <entry>
+      <reference value="DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c"/>
+    </entry>
+  </section>
+</Composition>
