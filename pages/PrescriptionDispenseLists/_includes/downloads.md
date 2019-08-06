@@ -22,6 +22,6 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+The corresponding CDA implementation guides that use the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA are available for download:
 
-_to be completed_
+- [DH_xxxx_PrescriptionDispenseList_CDA_IG_v1.0.pdf](..\..\..\ci-fhir-stu3\pages\PrescriptionDispenseLists\_includes\DH_xxxx_PrescriptionDispenseList_CDA_IG_v1.0.pdf)
