@@ -1,7 +1,6 @@
 # {{ page.title }}
 
-<!--This informative section provides mapping from the data items (i.e. requirements) in [NEHTA Shared Health Summary Information Requirements](https://www.digitalhealth.gov.au/implementation-resources/clinical-documents/EP-1816-2015/NEHTA-1837-2015) [NEHT2015e].-->
-This informative section provides mapping from the data items (i.e. requirements) in [Shared Health Summary Information Requirements](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2397-2017/nehta-1837-2015) [NEHT2015e].
+This informative section provides mapping from the data items (i.e. requirements) in [Shared Health Summary Information Requirements [NEHT2015e]](index.html#NEHT2015e).
 
 The table below matches the data items to the corresponding supported element in the Shared Health Summary (SHS) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
