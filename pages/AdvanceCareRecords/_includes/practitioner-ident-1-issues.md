@@ -5,21 +5,10 @@
     <th>Description</th>
     <th>Issue No.</th>
   </tr>
-  
   <tr>
-        <td>Invariants may not constrain as intended</td>
-        <td>Current validation capabilities of the FHIR Validator and IG Publisher do not fully support all expressions defined in the FHIR specification. Invariants using conformsTo() or … have not been able to be confirmed and do not reject resources that are expected to fail.</td>
-        <td>???</td>
+        <td>qualification</td>
+        <td>The must support flag on the child elements of qualification only appears in the Differential and not in the Snapshot produced by IG Publisher. An implementer shall interpret the profile as having must support set on the child elements of qualification (i.e. qualification.identifier, qualification.code, qualification.period, qualification.issuer).</td>
+        <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance/topic/More.20about.20Slicing">More about Slicing</a> stream</td>
   </tr>
-  
-  <tr>
-        <td>Element missing Must Support flag</td>
-        <td>The tooling (Forge) used to author this profile throws an error when mustSupport is set to true on Practitioner.qualification.identifier, Practitioner.qualification.code, Practitioner.qualification.period and Practitioner.qualification.issuer. </td>
-        <td>
-            <p>JIRA Request CIFMM-2161</p>
-            <p><a href="https://jira.nehta.net.au/browse/CIFMM-2161">CIFMM-2161</a></p>
-        </td>
-  </tr>
-
  </tbody>
 </table> 
