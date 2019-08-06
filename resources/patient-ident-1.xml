@@ -39,6 +39,12 @@
         <human value="If present, the managing organisation shall at least have a reference, an identifier or a display"/>
         <expression value="managingOrganization.exists() implies (managingOrganization.reference.exists() or managingOrganization.identifier.exists() or managingOrganization.display.exists())"/>
       </constraint>
+      <constraint>
+        <key value="inv-dh-pat-03"/>
+        <severity value="error"/>
+        <human value="The patient shall at least have one identifier with a system and a value"/>
+        <expression value="identifier.where(system.count() + value.count() >1).exists()"/>
+      </constraint>
     </element>
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension"/>
