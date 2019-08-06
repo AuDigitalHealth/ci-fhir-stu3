@@ -27,6 +27,12 @@
   <differential>
     <element id="Patient">
       <path value="Patient"/>
+      <constraint>
+        <key value="inv-dh-pat-01"/>
+        <severity value="error"/>
+        <human value="All general practitioners present shall at least have a reference, an identifier or a display"/>
+        <expression value="generalPractitioner.exists() implies generalPractitioner.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+      </constraint>
     </element>
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension"/>
