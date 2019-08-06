@@ -37,4 +37,10 @@
       <sch:assert test="count(f:assigner) &gt;= 1">assigner: minimum cardinality of 'assigner' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>RelatedPerson.name</sch:title>
+    <sch:rule context="f:RelatedPerson/f:name">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

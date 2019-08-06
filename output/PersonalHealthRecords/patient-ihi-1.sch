@@ -58,6 +58,12 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>Patient.name</sch:title>
+    <sch:rule context="f:Patient/f:name">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>f:Patient/f:birthDate</sch:title>
     <sch:rule context="f:Patient/f:birthDate">
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator': maximum cardinality of 'extension' is 1</sch:assert>
@@ -85,6 +91,12 @@
     <sch:rule context="f:Patient/f:contact">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:name) or exists(f:telecom) or exists(f:address) or exists(f:organization)">SHALL at least contain a contact's details or a reference to an organization (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Patient.contact.name</sch:title>
+    <sch:rule context="f:Patient/f:contact/f:name">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
