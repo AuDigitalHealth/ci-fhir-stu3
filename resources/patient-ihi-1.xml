@@ -147,6 +147,12 @@
         <valueString value="Contact"/>
       </extension>
       <path value="Patient.contact"/>
+      <constraint>
+        <key value="inv-dh-pat-03"/>
+        <severity value="error"/>
+        <human value="If present, the contact's organisation shall at least have a reference, an identifier or a display"/>
+        <expression value="organization.exists() implies (organization.reference.exists() or organization.identifier.exists() or organization.display.exists())"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Patient.contact.relationship">
