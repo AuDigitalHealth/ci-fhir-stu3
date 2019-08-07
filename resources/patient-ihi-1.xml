@@ -29,13 +29,13 @@
       <constraint>
         <key value="inv-dh-pat-01"/>
         <severity value="error"/>
-        <human value="All general practitioners present shall at least have a reference, an identifier or a display"/>
+        <human value="If present, a general practitioner shall at least have a reference, an identifier or a display"/>
         <expression value="generalPractitioner.exists() implies generalPractitioner.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
       </constraint>
       <constraint>
         <key value="inv-dh-pat-02"/>
         <severity value="error"/>
-        <human value="If present, the managing organisation shall at least have a reference, an identifier or a display"/>
+        <human value="If present, a managing organisation shall at least have a reference, an identifier or a display"/>
         <expression value="managingOrganization.exists() implies (managingOrganization.reference.exists() or managingOrganization.identifier.exists() or managingOrganization.display.exists())"/>
       </constraint>
     </element>
@@ -150,7 +150,7 @@
       <constraint>
         <key value="inv-dh-pat-03"/>
         <severity value="error"/>
-        <human value="If present, the contact's organisation shall at least have a reference, an identifier or a display"/>
+        <human value="If present, a contact's organisation shall at least have a reference, an identifier or a display"/>
         <expression value="organization.exists() implies (organization.reference.exists() or organization.identifier.exists() or organization.display.exists())"/>
       </constraint>
       <mustSupport value="true"/>
