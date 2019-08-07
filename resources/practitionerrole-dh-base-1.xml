@@ -14,7 +14,7 @@
       <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description value="The purpose of this profile is to provide a base model for the concept of a practitioner role, defining fundamental concepts that form a conforming representation of a practitioner role. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context and where it is desirable to provide some constraint to support unique identification of the practitioner role.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
+  <description value="The purpose of this profile is to provide a base model for the concept of a practitioner role, defining fundamental concepts that form a conforming representation of a practitioner role. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
   <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -24,7 +24,31 @@
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole">
-      <path value="PractitionerRole" />
+      <path value="PractitionerRole" />	  
+      <constraint>
+        <key value="inv-dh-prarol-01" />
+        <severity value="error" />
+        <human value="The practitioner reference shall at least have a reference, an identifier or a display" />        
+        <expression value="practitioner.exists() implies (practitioner.reference.exists() or practitioner.identifier.exists() or practitioner.display.exists())" />
+      </constraint>
+	  <constraint>
+        <key value="inv-dh-prarol-02" />
+        <severity value="error" />
+        <human value="The organization reference shall at least have a reference, an identifier or a display" />        
+        <expression value="organization.exists() implies (organization.reference.exists() or organization.identifier.exists() or organization.display.exists())" />
+      </constraint>
+	  <constraint>
+        <key value="inv-dh-prarol-03" />
+        <severity value="error" />
+        <human value="The location reference shall at least have a reference, an identifier or a display" />        
+        <expression value="location.exists() implies location.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+      </constraint>
+	  <constraint>
+        <key value="inv-dh-prarol-04" />
+        <severity value="error" />
+        <human value="The healthcareService reference shall at least have a reference, an identifier or a display" />        
+        <expression value="healthcareService.exists() implies healthcareService.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+      </constraint>
     </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
