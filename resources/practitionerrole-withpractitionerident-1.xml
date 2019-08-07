@@ -31,7 +31,7 @@
       <constraint>
         <key value="inv-dh-prarol-01" />
         <severity value="error" />
-        <human value="The practitioner shall at least have a reference or an identifier with a system and a value"/>
+        <human value="The practitioner shall at least have a reference or an identifier with at least a system and a value"/>
         <expression value="practitioner.reference.exists() or practitioner.identifier.where(system.count() + value.count() >1).exists()"/>
       </constraint>
 	  <constraint>
