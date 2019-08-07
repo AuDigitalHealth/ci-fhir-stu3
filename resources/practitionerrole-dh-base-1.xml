@@ -28,7 +28,7 @@
       <constraint>
         <key value="inv-dh-prarol-01" />
         <severity value="error" />
-        <human value="If present, a general practitioner shall at least have a reference, an identifier or a display" />        
+        <human value="If present, a practitioner shall at least have a reference, an identifier or a display" />        
         <expression value="practitioner.exists() implies (practitioner.reference.exists() or practitioner.identifier.exists() or practitioner.display.exists())" />
       </constraint>
 	  <constraint>
