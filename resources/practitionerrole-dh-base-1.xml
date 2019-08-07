@@ -28,25 +28,25 @@
       <constraint>
         <key value="inv-dh-prarol-01" />
         <severity value="error" />
-        <human value="The practitioner reference shall at least have a reference, an identifier or a display" />        
+        <human value="If present, a general practitioner shall at least have a reference, an identifier or a display" />        
         <expression value="practitioner.exists() implies (practitioner.reference.exists() or practitioner.identifier.exists() or practitioner.display.exists())" />
       </constraint>
 	  <constraint>
         <key value="inv-dh-prarol-02" />
         <severity value="error" />
-        <human value="The organization reference shall at least have a reference, an identifier or a display" />        
+        <human value="If present, an organization shall at least have a reference, an identifier or a display" />        
         <expression value="organization.exists() implies (organization.reference.exists() or organization.identifier.exists() or organization.display.exists())" />
       </constraint>
 	  <constraint>
         <key value="inv-dh-prarol-03" />
         <severity value="error" />
-        <human value="The location reference shall at least have a reference, an identifier or a display" />        
+        <human value="If present, a location shall at least have a reference, an identifier or a display" />        
         <expression value="location.exists() implies location.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
 	  <constraint>
         <key value="inv-dh-prarol-04" />
         <severity value="error" />
-        <human value="The healthcareService reference shall at least have a reference, an identifier or a display" />        
+        <human value="If present, a healthcare service shall at least have a reference, an identifier or a display" />        
         <expression value="healthcareService.exists() implies healthcareService.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
     </element>
