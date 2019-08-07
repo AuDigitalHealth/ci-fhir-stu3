@@ -34,7 +34,7 @@
 	  <constraint>
         <key value="inv-dh-prarol-02" />
         <severity value="error" />
-        <human value="If present, an organization shall at least have a reference, an identifier or a display" />        
+        <human value="If present, an organisation shall at least have a reference, an identifier or a display" />        
         <expression value="organization.exists() implies (organization.reference.exists() or organization.identifier.exists() or organization.display.exists())" />
       </constraint>
 	  <constraint>
@@ -52,7 +52,7 @@
       <constraint>
         <key value="inv-dh-prarol-05" />
         <severity value="error" />
-        <human value="The practitioner role shall at least have one identifier with a system and a value" />
+        <human value="At least one practitioner role identifier shall at least have a system and a value" />
 		<expression value="identifier.where(system.count() + value.count() >1).exists()" />
       </constraint>
     </element>
