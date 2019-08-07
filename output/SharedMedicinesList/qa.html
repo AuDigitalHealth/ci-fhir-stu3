@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Medicines List</h1>
- <p>Generated Mon Aug 05 14:16:27 AEST 2019, IG-Publisher Version 3.8.21-SNAPSHOT - Built 2019-08-04T21:39:08.51Z - Git b4883554e5bb. FHIR version 3.0.1 for au.electronichealth.shared-medicines-list# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Wed Aug 07 07:37:22 AEST 2019, IG-Publisher Version 3.8.21-SNAPSHOT - Built 2019-08-04T21:39:08.51Z - Git b4883554e5bb. FHIR version 3.0.1 for au.electronichealth.shared-medicines-list# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -1237,11 +1237,11 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1&quot; could not be resolved</b></td>
-   </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.specialty[0]</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes, and a code is recommended to come from this value set) (codes = http://snomed.info/sct#46255001)</b></td>
+     <td><b>PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.identifier[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.specialty[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 not found</b></td>
    </tr>
 </table>
 <hr/>
