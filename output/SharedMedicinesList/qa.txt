@@ -2,7 +2,7 @@
 =========================================
 
 err = 106, warn = 54, info = 4
-Generated Mon Aug 05 14:16:28 AEST 2019. FHIR version 3.0.1 for au.electronichealth.shared-medicines-list# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+Generated Wed Aug 07 07:37:23 AEST 2019. FHIR version 3.0.1 for au.electronichealth.shared-medicines-list# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 235 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-96c1bf8a-8321-11e9-bc42-526af7764f64 : 0 / 3
@@ -370,8 +370,8 @@ WARNING: Patient/55a2e4fc-8321-11e9-bc42-526af7764f64: Patient.extension[0].valu
 ERROR: Practitioner/54a065dc-8666-11e9-bc42-526af7764f64: Practitioner.identifier[0]: The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]
 ERROR: Practitioner/54a065dc-8666-11e9-bc42-526af7764f64: Practitioner.qualification[0].identifier[0]: The AHPRA registration value shall start with 3 uppercase letters, followed by 10 digits. [value.matches('^[A-Z]{3}[0-9]{10}$')]
 == C:\work\git\ci-fhir-stu3\examples\practitionerrole-3283ca84-866b-11e9-bc42-526af7764f64.xml ==
-WARNING: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1" could not be resolved
-INFORMATION: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.specialty[0]: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes, and a code is recommended to come from this value set) (codes = http://snomed.info/sct#46255001)
+INFORMATION: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.identifier[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1
+WARNING: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.specialty[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 not found
 == C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\composition-sml-prac-1.xml ==
 ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[28].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
