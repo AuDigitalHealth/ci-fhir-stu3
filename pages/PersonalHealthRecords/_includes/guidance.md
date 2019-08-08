@@ -10,14 +10,14 @@ FHIR is a standard developed by HL7. The standard describes data formats and ele
 
 A FHIR resource may be supplied in one of the following formats: [XML](http://hl7.org/fhir/stu3/xml.html), [JSON](http://hl7.org/fhir/stu3/json.html) and [Turtle](http://hl7.org/fhir/stu3/rdf.html). FHIR supports four paradigms for exchange: the RESTful API (Application Programming Interface), messaging, documents, and services.
 
-This implementation guide describes FHIR resources built following the rules described in [FHIR, Release 3 (STU)] [[HL7FHIR3]](index.html#HL7FHIR3).
+This implementation guide describes FHIR resources built following the rules described in [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).
 
 The FHIR specification is evolving; the current FHIR specification is available at [http://hl7.org/fhir](http://hl7.org/fhir). A [Publication (Version) History](http://www.hl7.org/fhir/directory.cfml) of past and current working versions, including [FHIR Release 4 (First Normative content) [HL7FHIR4]](index.html#HL7FHIR4) is available.
  
 The following references are recommended to gain a better understanding of FHIR:
 * [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3)
 * [FHIR Overview](https://www.hl7.org/fhir/stu3/overview.html)
-* [HL7 International FHIR Wiki[HL7FHIR]](index.html#HL7FHIR)
+* [HL7 International FHIR Wiki [HL7FHIR]](index.html#HL7FHIR)
  
 
 ## Profile / extension representation and structure
@@ -32,7 +32,7 @@ The content of each page is structured as follows:
 * Formal Views of Profile Content includes the human readable view of the normative definition of the profile or extension
 
 The Formal Views of Profile Content contains:
-* The canonical url e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-1 
+* The canonical url e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1 
 * A free text natural language description of the structure and its use that also includes the information on meaning of must support
 * Identification of the base resource from which this profile is derived from; included in this implementation guide as “This profile builds on [base resource]”
 * A set of metadata that describes the version of the profile, publisher and the date of publishing; included as “This profile was published on [date] as a [status] by [publisher “Australian Digital Health Agency”].”
