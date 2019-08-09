@@ -29,7 +29,7 @@
       <constraint>
         <key value="inv-dh-relper-01"/>
         <severity value="error"/>
-        <human value="The patient reference shall at least have a reference, an identifier or a display"/>
+        <human value="The patient shall at least have a reference, an identifier or a display"/>
         <expression value="patient.reference.exists() or patient.identifier.exists() or patient.display.exists()"/>
       </constraint>
     </element>
