@@ -1,6 +1,6 @@
 ### Summary Statement of Condition *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### Implementation guidance
+#### Implementation guidance
 For the expected usage scenarios in this implementation guide:
     
 * It is expected that verificationStatus will be ‘confirmed’.
