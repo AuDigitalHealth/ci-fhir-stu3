@@ -148,11 +148,11 @@
 
 <p>This implementation guide describes FHIR resources built following the rules described in <a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
-<p>The FHIR specification is evolving; the current FHIR specification is available at <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>. A <a href="http://www.hl7.org/fhir/directory.cfml">Publication (Version) History</a> of past and current working versions, including <a href="index.html#HL7FHIR4">FHIR Release 4 (First Normative content)[HL7FHIR4]</a> is available.</p>
+<p>The FHIR specification is evolving; the current FHIR specification is available at <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>. A <a href="http://www.hl7.org/fhir/directory.cfml">Publication (Version) History</a> of past and current working versions, including <a href="index.html#HL7FHIR4">FHIR Release 4 (First Normative content) [HL7FHIR4]</a> is available.</p>
 
 <p>The following references are recommended to gain a better understanding of FHIR:</p>
 <ul>
-  <li><a href="index.html#HL7FHIR3">FHIR, Release 3 (STU)[HL7FHIR3]</a></li>
+  <li><a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a></li>
   <li><a href="https://www.hl7.org/fhir/stu3/overview.html">FHIR Overview</a></li>
   <li><a href="index.html#HL7FHIR">HL7 International FHIR Wiki [HL7FHIR]</a></li>
 </ul>
@@ -172,11 +172,10 @@
 
 <p>The Formal Views of Profile Content contains:</p>
 <ul>
-  <li>The canonical url e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1</li>
-  <li>The canonical url e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1</li>
+  <li>The canonical url e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1</li>
   <li>A free text natural language description of the structure and its use that also includes the information on meaning of must support</li>
   <li>Identification of the base resource from which this profile is derived from; included in this implementation guide as “This profile builds on [base resource]”</li>
-  <li>A set of metadata that describes the version of the profile, publisher and the date of publishing; included as “This profile was published on [date]as a [status] by [publisher “Australian Digital Health Agency”].”</li>
+  <li>A set of metadata that describes the version of the profile, publisher and the date of publishing; included as “This profile was published on [date] as a [status] by [publisher “Australian Digital Health Agency”].”</li>
   <li>A human readable view of the structure:
     <ul>
       <li><strong>Differential Table</strong>: Shows details of what is being changed in the profile in regards to its base resource</li>
@@ -189,13 +188,13 @@
 
 <h2 id="validating-resources-using-profiles-from-this-implementation-guide">Validating resources using profiles from this implementation guide</h2>
 
-<p>There are several means of validating resources against a set of rules, each with differing coverage and capabilities.</p>
+<p>There are several means of <a href="http://hl7.org/fhir/validation.html">validating resources</a> against a set of rules, each with differing coverage and capabilities.</p>
 
 <p>Some rules may be defined in a machine-processable manner and thus can be checked by automated means, however some rules are defined solely in human-readable descriptions. The profiles and extensions described by this implementation guide can contain both.</p>
 
 <p>Existing validation tools differ in their support for machine-processable rules. These tools continue to evolve and progressively implement the FHIR standard; it should be noted that different servers and tools may not provide equivalent responses when executing the same operation.</p>
 
-<p>The profiles and extensions described in this implementation guide have been developed using <a href="https://fire.ly/products/forge/">Forge</a>, <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG Publisher</a> and the <a href="http://build.fhir.org/validation.html#jar">FHIR Validator</a>.</p>
+<p>The validation tools used during development of the profiles and extensions described in this implementation guide include <a href="https://fire.ly/products/forge/">Forge</a> and the <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG Publisher</a> (with its in-built validation process).</p>
 
 <h2 id="known-issues-relating-to-the-support-and-implementation-of-fhir">Known issues relating to the support and implementation of FHIR</h2>
 
@@ -262,16 +261,14 @@
 <h2 id="conformance-conventions">Conformance conventions</h2>
 
 <h3 id="structuredefinition">StructureDefinition</h3>
-<p>The content of this implementation guide is a set of FHIR <a href="FHIR http://hl7.org/fhir/stu3/structuredefinition.html">StructureDefinition</a> resources for implementing the document model that is the subject of this implementation guide, i.e. Personal Health Records.</p>
+<p>The content of this implementation guide is a set of FHIR <a href="http://hl7.org/fhir/stu3/structuredefinition.html">StructureDefinition</a> resources for implementing the document model that is the subject of this implementation guide.</p>
 
 <p>This implementation guide includes FHIR profiles that are a set of constraints and/or extensions to FHIR base resources or a data types in the format of a StructureDefinition resource. A StructureDefinition describes a structure - a set of data element definitions, and their associated rules of usage – and is hereafter referred to as a ‘profile’ or an ‘extension’.</p>
 
-<p>A profile or extension is identified by its canonical URL (e.g.http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phn-1). These canonical URLs are unique to each profile or extension. When valued in an instance, the URL signals the imposition of a set of defined constraints. The URL value provides a globally unique identifier for the profile or extension in question and in the case of a profile or extension described in this implementation guide the major version number is identified by the final digit of the URL.</p>
-
-<p>A profile or extension is identified by its canonical URL (e.g.http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1). These canonical URLs are unique to each profile or extension. When valued in an instance, the URL signals the imposition of a set of defined constraints. The URL value provides a globally unique identifier for the profile or extension in question and in the case of a profile or extension described in this implementation guide the major version number is identified by the final digit of the URL.</p>
+<p>A profile or extension is identified by its canonical URL (e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-1). These canonical URLs are unique to each profile or extension. When valued in an instance, the URL signals the imposition of a set of defined constraints. The URL value provides a globally unique identifier for the profile or extension in question and in the case of a profile or extension described in this implementation guide the major version number is identified by the final digit of the URL.</p>
 
 <h3 id="must-support">Must Support</h3>
-<p>The Must Support rules for this implementation guide are defined in <a href="conformance.html">Conformance</a>. A must support flag, when present in this implementation guide, is displayed as letter “S” with red background in the Flag column of the Differential Table and Snapshot Table of a profile or extension.</p>
+<p>The Must Support rules for this implementation guide are defined in <a href="conformance.html">Conformance</a>. A must support flag, when present in this implementation guide, is displayed as letter “S” with red background in the Flag column of the Differential Table and Snapshot Table of a profile or extension, as such <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>.</p>
 
 <h3 id="conformance-verbs">Conformance verbs</h3>
 <p>The conformance verbs used in this implementation guide are defined in <a href="http://hl7.org/fhir/STU3/conformance-rules.html#conflang">FHIR Conformance Rules</a>. Conformance verbs are present in this implementation guide in <a href="conformance.html">Conformance requirements</a>, and in invariants which are visible in the “Description &amp; Constraints” column of the Differential Table and Snapshot Table of a profile or extension.</p>
@@ -333,9 +330,9 @@ in some cases binding an element to a value set or binding to a single fixed cod
 <h3 id="slicing">Slicing</h3>
 <p>Slicing rules in FHIR are defined in <a href="http://hl7.org/fhir/stu3/profiling.html">Profiling FHIR</a>. This section provides a description of slicing as present in this implementation guide.</p>
 
-<p>Slicing is a mechanism to describe patterns of restrictions (i.e. conformance requirements). Slicing, usually on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, the section element in the <a href="StructureDefinition-composition-phn-1.html">Personal Health Notes</a> profile is sliced into a list of slices in order to give each section slice a different set of restrictions.</p>
+<p>Slicing is a mechanism to describe patterns of restrictions (i.e. conformance requirements). Slicing, usually on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, the section element in a composition profile may be sliced into a list of slices in order to give each section slice a different set of restrictions.</p>
 
-<p>A sliced element can be identified by the following icon color:red[INSERT ICON]in the Name column of the Differential and Snapshot views of the Differential Table and Snapshot Table of a profile or extension.</p>
+<p>A sliced element can be identified by the following icon <span style="padding-left: 3px; padding-right: 3px"><img src="icon_slice.png" alt="." style="background-color: white; background-color: inherit" /></span> in the Name column of the Differential and Snapshot views of the Differential Table and Snapshot Table of a profile or extension.</p>
 
 <p>Slicing rules are:</p>
 <ul>
@@ -381,7 +378,7 @@ in some cases binding an element to a value set or binding to a single fixed cod
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Aug 6, 2019 15:28+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Aug 12, 2019 15:31+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
