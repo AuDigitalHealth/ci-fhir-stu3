@@ -11,7 +11,7 @@
   "title": "Related Person with Mandatory IHI",
   "status": "draft",
   "experimental": true,
-  "date": "2019-08-12T07:56:54+10:00",
+  "date": "2019-08-12T14:19:57+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -620,42 +620,8 @@
         ]
       },
       {
-        "id": "RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]",
-        "path": "RelatedPerson.identifier.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "closed"
-        },
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Extension.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]:valueCoding",
-        "path": "RelatedPerson.identifier.extension.value[x]",
+        "id": "RelatedPerson.identifier:ihiNumber.extension:ihiStatus.valueCoding:valueCoding",
+        "path": "RelatedPerson.identifier.extension.valueCoding",
         "sliceName": "valueCoding",
         "short": "IHI Number Status Code",
         "definition": "IHI number status associated with an IHI identifier.",
@@ -801,42 +767,8 @@
         ]
       },
       {
-        "id": "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]",
-        "path": "RelatedPerson.identifier.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "closed"
-        },
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Extension.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]:valueCoding",
-        "path": "RelatedPerson.identifier.extension.value[x]",
+        "id": "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.valueCoding:valueCoding",
+        "path": "RelatedPerson.identifier.extension.valueCoding",
         "sliceName": "valueCoding",
         "short": "IHI Record Status Code",
         "definition": "Coded IHI Record Status.",

@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Related Person with Mandatory IHI"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-08-12T07:56:54+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-08-12T14:19:57+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -618,39 +618,8 @@
        ]
      ], [
        fhir:index 17;
-       fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.value[x]" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
-         ];
-         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Value of extension" ];
-       fhir:ElementDefinition.definition [ fhir:value "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Extension.value[x]" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
-       ]
-     ], [
-       fhir:index 18;
-       fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]:valueCoding" ];
-       fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.value[x]" ];
+       fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiStatus.valueCoding:valueCoding" ];
+       fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.valueCoding" ];
        fhir:ElementDefinition.sliceName [ fhir:value "valueCoding" ];
        fhir:ElementDefinition.short [ fhir:value "IHI Number Status Code" ];
        fhir:ElementDefinition.definition [ fhir:value "IHI number status associated with an IHI identifier." ];
@@ -679,7 +648,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 18;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.sliceName [ fhir:value "ihiRecordStatus" ];
@@ -698,7 +667,7 @@
          fhir:ElementDefinition.type.profile [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 19;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.id" ];
        fhir:ElementDefinition.representation [
@@ -724,7 +693,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 20;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.extension" ];
        fhir:ElementDefinition.slicing [
@@ -763,7 +732,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 21;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.url" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.url" ];
        fhir:ElementDefinition.representation [
@@ -791,40 +760,9 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 23;
-       fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.value[x]" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
-         ];
-         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Value of extension" ];
-       fhir:ElementDefinition.definition [ fhir:value "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Extension.value[x]" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
-       ]
-     ], [
-       fhir:index 24;
-       fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]:valueCoding" ];
-       fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.value[x]" ];
+       fhir:index 22;
+       fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.valueCoding:valueCoding" ];
+       fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension.valueCoding" ];
        fhir:ElementDefinition.sliceName [ fhir:value "valueCoding" ];
        fhir:ElementDefinition.short [ fhir:value "IHI Record Status Code" ];
        fhir:ElementDefinition.definition [ fhir:value "Coded IHI Record Status." ];
@@ -853,7 +791,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 23;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -896,7 +834,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 26;
+       fhir:index 24;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for IHI" ];
@@ -949,7 +887,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 27;
+       fhir:index 25;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -975,7 +913,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 28;
+       fhir:index 26;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -1014,7 +952,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 29;
+       fhir:index 27;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -1047,7 +985,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 30;
+       fhir:index 28;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -1086,7 +1024,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 31;
+       fhir:index 29;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Namespace for IHI" ];
@@ -1124,7 +1062,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 32;
+       fhir:index 30;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "IHI number" ];
@@ -1166,7 +1104,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 33;
+       fhir:index 31;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -1197,7 +1135,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 34;
+       fhir:index 32;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:ihiNumber.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ];
@@ -1230,7 +1168,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 35;
+       fhir:index 33;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "medicareNumber" ];
@@ -1263,7 +1201,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 36;
+       fhir:index 34;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -1289,7 +1227,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 37;
+       fhir:index 35;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -1328,7 +1266,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 38;
+       fhir:index 36;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -1371,7 +1309,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 39;
+       fhir:index 37;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for Medicare number" ];
@@ -1424,7 +1362,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 40;
+       fhir:index 38;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -1450,7 +1388,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 41;
+       fhir:index 39;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -1489,7 +1427,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 42;
+       fhir:index 40;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -1522,7 +1460,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 43;
+       fhir:index 41;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -1561,7 +1499,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 44;
+       fhir:index 42;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Namespace for Medicare number" ];
@@ -1599,7 +1537,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 45;
+       fhir:index 43;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "Medicare number including optional individual reference number" ];
@@ -1641,7 +1579,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 46;
+       fhir:index 44;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Medicare number validity period" ];
@@ -1672,7 +1610,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 47;
+       fhir:index 45;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.period.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period.id" ];
        fhir:ElementDefinition.representation [
@@ -1698,7 +1636,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 48;
+       fhir:index 46;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.period.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period.extension" ];
        fhir:ElementDefinition.slicing [
@@ -1737,7 +1675,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 49;
+       fhir:index 47;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.period.start" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period.start" ];
        fhir:ElementDefinition.short [ fhir:value "Starting time with inclusive boundary" ];
@@ -1769,7 +1707,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./low" ]
        ]
      ], [
-       fhir:index 50;
+       fhir:index 48;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.period.end" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period.end" ];
        fhir:ElementDefinition.short [ fhir:value "Medicare number expiry date" ];
@@ -1802,7 +1740,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./high" ]
        ]
      ], [
-       fhir:index 51;
+       fhir:index 49;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicareNumber.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ];
@@ -1835,7 +1773,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 52;
+       fhir:index 50;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "dvaNumber" ];
@@ -1905,7 +1843,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 53;
+       fhir:index 51;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -1931,7 +1869,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 54;
+       fhir:index 52;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -1970,7 +1908,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 55;
+       fhir:index 53;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -2013,7 +1951,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 56;
+       fhir:index 54;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for DVA number" ];
@@ -2059,7 +1997,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 57;
+       fhir:index 55;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -2085,7 +2023,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 58;
+       fhir:index 56;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -2124,7 +2062,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 59;
+       fhir:index 57;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -2157,7 +2095,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 60;
+       fhir:index 58;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -2195,7 +2133,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 61;
+       fhir:index 59;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Namespace for DVA number" ];
@@ -2233,7 +2171,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 62;
+       fhir:index 60;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "DVA number" ];
@@ -2275,7 +2213,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 63;
+       fhir:index 61;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -2306,7 +2244,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 64;
+       fhir:index 62;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:dvaNumber.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ];
@@ -2339,7 +2277,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 65;
+       fhir:index 63;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "healthcareCard" ];
@@ -2372,7 +2310,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 66;
+       fhir:index 64;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -2398,7 +2336,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 67;
+       fhir:index 65;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -2437,7 +2375,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 68;
+       fhir:index 66;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -2480,7 +2418,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 69;
+       fhir:index 67;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for Health Care Card number" ];
@@ -2533,7 +2471,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 70;
+       fhir:index 68;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -2559,7 +2497,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 71;
+       fhir:index 69;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -2598,7 +2536,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 72;
+       fhir:index 70;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -2631,7 +2569,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 73;
+       fhir:index 71;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -2670,7 +2608,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 74;
+       fhir:index 72;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Namespace for Centrelink Customer Reference Number (CRN)" ];
@@ -2708,7 +2646,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 75;
+       fhir:index 73;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "Centrelink CRN" ];
@@ -2750,7 +2688,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 76;
+       fhir:index 74;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -2781,7 +2719,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 77;
+       fhir:index 75;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:healthcareCard.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ];
@@ -2814,7 +2752,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 78;
+       fhir:index 76;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "pensionerConcessionCard" ];
@@ -2847,7 +2785,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 79;
+       fhir:index 77;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -2873,7 +2811,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 80;
+       fhir:index 78;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -2912,7 +2850,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 81;
+       fhir:index 79;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -2955,7 +2893,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 82;
+       fhir:index 80;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for Pensioner Concession Card number" ];
@@ -3008,7 +2946,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 83;
+       fhir:index 81;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -3034,7 +2972,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 84;
+       fhir:index 82;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -3073,7 +3011,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 85;
+       fhir:index 83;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -3106,7 +3044,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 86;
+       fhir:index 84;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -3145,7 +3083,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 87;
+       fhir:index 85;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Namespace for Centrelink Customer Reference Number (CRN)" ];
@@ -3183,7 +3121,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 88;
+       fhir:index 86;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "Centrelink CRN" ];
@@ -3225,7 +3163,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 89;
+       fhir:index 87;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -3256,7 +3194,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 90;
+       fhir:index 88;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:pensionerConcessionCard.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ];
@@ -3289,7 +3227,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 91;
+       fhir:index 89;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "commonwealthSeniorsHealthCard" ];
@@ -3322,7 +3260,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 92;
+       fhir:index 90;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -3348,7 +3286,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 93;
+       fhir:index 91;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -3387,7 +3325,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 94;
+       fhir:index 92;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -3430,7 +3368,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 95;
+       fhir:index 93;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for Commonwealth Seniors Health Card number" ];
@@ -3483,7 +3421,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 96;
+       fhir:index 94;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -3509,7 +3447,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 97;
+       fhir:index 95;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -3548,7 +3486,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 98;
+       fhir:index 96;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -3581,7 +3519,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 99;
+       fhir:index 97;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -3620,7 +3558,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 100;
+       fhir:index 98;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Namespace for Centrelink Customer Reference Number (CRN)" ];
@@ -3658,7 +3596,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 101;
+       fhir:index 99;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "Centrelink CRN" ];
@@ -3700,7 +3638,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 102;
+       fhir:index 100;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -3731,7 +3669,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 103;
+       fhir:index 101;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:commonwealthSeniorsHealthCard.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Organization that issued id (may be just text)" ];
@@ -3764,7 +3702,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 104;
+       fhir:index 102;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "medicalRecordNumber" ];
@@ -3797,7 +3735,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 105;
+       fhir:index 103;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -3823,7 +3761,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 106;
+       fhir:index 104;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -3862,7 +3800,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 107;
+       fhir:index 105;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -3905,7 +3843,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 108;
+       fhir:index 106;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for MRN" ];
@@ -3958,7 +3896,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 109;
+       fhir:index 107;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -3984,7 +3922,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 110;
+       fhir:index 108;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -4023,7 +3961,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 111;
+       fhir:index 109;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -4056,7 +3994,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 112;
+       fhir:index 110;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -4095,7 +4033,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 113;
+       fhir:index 111;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "Medical record number system namespace" ];
@@ -4132,7 +4070,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 114;
+       fhir:index 112;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "Medical record number" ];
@@ -4169,7 +4107,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 115;
+       fhir:index 113;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -4200,7 +4138,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 116;
+       fhir:index 114;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:medicalRecordNumber.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Medical record number assigning entity" ];
@@ -4233,7 +4171,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 117;
+       fhir:index 115;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier" ];
        fhir:ElementDefinition.sliceName [ fhir:value "insurerNumber" ];
@@ -4266,7 +4204,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "id" ]
        ]
      ], [
-       fhir:index 118;
+       fhir:index 116;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.id" ];
        fhir:ElementDefinition.representation [
@@ -4292,7 +4230,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 119;
+       fhir:index 117;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.extension" ];
        fhir:ElementDefinition.slicing [
@@ -4331,7 +4269,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 120;
+       fhir:index 118;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.use" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.use" ];
        fhir:ElementDefinition.short [ fhir:value "usual | official | temp | secondary (If known)" ];
@@ -4374,7 +4312,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 121;
+       fhir:index 119;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.type" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type" ];
        fhir:ElementDefinition.short [ fhir:value "Coded identifier type for private health insurance member number" ];
@@ -4427,7 +4365,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Role.code or implied by context" ]
        ]
      ], [
-       fhir:index 122;
+       fhir:index 120;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.type.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.id" ];
        fhir:ElementDefinition.representation [
@@ -4453,7 +4391,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 123;
+       fhir:index 121;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.type.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.extension" ];
        fhir:ElementDefinition.slicing [
@@ -4492,7 +4430,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 124;
+       fhir:index 122;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.type.coding" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.type.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -4525,7 +4463,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 125;
+       fhir:index 123;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.type.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -4564,7 +4502,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 126;
+       fhir:index 124;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.system" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.system" ];
        fhir:ElementDefinition.short [ fhir:value "The namespace for the identifier value" ];
@@ -4601,7 +4539,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierType" ]
        ]
      ], [
-       fhir:index 127;
+       fhir:index 125;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.value" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.value" ];
        fhir:ElementDefinition.short [ fhir:value "Private health insurance member number" ];
@@ -4638,7 +4576,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./Value" ]
        ]
      ], [
-       fhir:index 128;
+       fhir:index 126;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period when id is/was valid for use" ];
@@ -4669,7 +4607,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./StartDate and ./EndDate" ]
        ]
      ], [
-       fhir:index 129;
+       fhir:index 127;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.assigner" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner" ];
        fhir:ElementDefinition.short [ fhir:value "Private health insurer" ];
@@ -4702,7 +4640,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "./IdentifierIssuingAuthority" ]
        ]
      ], [
-       fhir:index 130;
+       fhir:index 128;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.assigner.id" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner.id" ];
        fhir:ElementDefinition.representation [
@@ -4728,7 +4666,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 131;
+       fhir:index 129;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.assigner.extension" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner.extension" ];
        fhir:ElementDefinition.slicing [
@@ -4767,7 +4705,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 132;
+       fhir:index 130;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.assigner.reference" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner.reference" ];
        fhir:ElementDefinition.short [ fhir:value "Literal reference, Relative, internal or absolute URL" ];
@@ -4795,7 +4733,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 133;
+       fhir:index 131;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.assigner.identifier" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.identifier.assigner.identifier" ];
        fhir:ElementDefinition.short [ fhir:value "Logical reference, when literal reference is not known" ];
@@ -4819,7 +4757,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".identifier" ]
        ]
      ], [
-       fhir:index 134;
+       fhir:index 132;
        fhir:Element.id [ fhir:value "RelatedPerson.identifier:insurerNumber.assigner.display" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -4848,7 +4786,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 135;
+       fhir:index 133;
        fhir:Element.id [ fhir:value "RelatedPerson.active" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.active" ];
        fhir:ElementDefinition.short [ fhir:value "Whether this related person's record is in active use" ];
@@ -4880,7 +4818,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "status" ]
        ]
      ], [
-       fhir:index 136;
+       fhir:index 134;
        fhir:Element.id [ fhir:value "RelatedPerson.patient" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.patient" ];
        fhir:ElementDefinition.short [ fhir:value "The patient this person is related to" ];
@@ -4910,7 +4848,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "scoper[classCode=PSN|ANM and determinerCode='INSTANCE']/playedRole[classCode='PAT']/id" ]
        ]
      ], [
-       fhir:index 137;
+       fhir:index 135;
        fhir:Element.id [ fhir:value "RelatedPerson.relationship" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.relationship" ];
        fhir:ElementDefinition.short [ fhir:value "The nature of the relationship" ];
@@ -4955,7 +4893,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "class" ]
        ]
      ], [
-       fhir:index 138;
+       fhir:index 136;
        fhir:Element.id [ fhir:value "RelatedPerson.name" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.name" ];
        fhir:ElementDefinition.short [ fhir:value "Name of a human - parts and usage" ];
@@ -5014,7 +4952,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "ProviderName" ]
        ]
      ], [
-       fhir:index 139;
+       fhir:index 137;
        fhir:Element.id [ fhir:value "RelatedPerson.telecom" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.telecom" ];
        fhir:ElementDefinition.short [ fhir:value "A contact detail for the person" ];
@@ -5044,7 +4982,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "telecom" ]
        ]
      ], [
-       fhir:index 140;
+       fhir:index 138;
        fhir:Element.id [ fhir:value "RelatedPerson.gender" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.gender" ];
        fhir:ElementDefinition.short [ fhir:value "male | female | other | unknown" ];
@@ -5090,7 +5028,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "administrativeGender" ]
        ]
      ], [
-       fhir:index 141;
+       fhir:index 139;
        fhir:Element.id [ fhir:value "RelatedPerson.birthDate" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.birthDate" ];
        fhir:ElementDefinition.short [ fhir:value "The date on which the related person was born" ];
@@ -5114,7 +5052,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "player.birthTime" ]
        ]
      ], [
-       fhir:index 142;
+       fhir:index 140;
        fhir:Element.id [ fhir:value "RelatedPerson.address" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.address" ];
        fhir:ElementDefinition.short [ fhir:value "Address where the related person can be contacted or visited" ];
@@ -5143,7 +5081,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "addr" ]
        ]
      ], [
-       fhir:index 143;
+       fhir:index 141;
        fhir:Element.id [ fhir:value "RelatedPerson.photo" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.photo" ];
        fhir:ElementDefinition.short [ fhir:value "Image of the person" ];
@@ -5170,7 +5108,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "player[classCode='PSN' and determinerCode='INSTANCE']/desc" ]
        ]
      ], [
-       fhir:index 144;
+       fhir:index 142;
        fhir:Element.id [ fhir:value "RelatedPerson.period" ];
        fhir:ElementDefinition.path [ fhir:value "RelatedPerson.period" ];
        fhir:ElementDefinition.short [ fhir:value "Period of time that this relationship is considered valid" ];
