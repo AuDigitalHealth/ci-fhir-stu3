@@ -10,19 +10,19 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent the [Personal Health Notes (PHN)](StructureDefinition-composition-phn-1.html) and [Personal Health Summary (PHS)](StructureDefinition-composition-phs-1.html).
+This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent a personal health record, including Personal Health Notes (PHN) and Personal Health Summary (PHS).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing PHN and PHS in [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The resulting FHIR document can be used for the electronic exchange of Personal Health Records information between healthcare providers.
+The primary aim of this implementation guide is to support implementing personal health records in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of personal health record information between healthcare providers.
 
-This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
-
-This document does not describe transport or persistence mechanism of the resources described by it.
-
+This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.
+ 
+This implementation guide does not describe transport or persistence mechanism of the resources described by it.
+ 
 Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
 * [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3)
 * [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG)
@@ -42,19 +42,19 @@ An Agency clinical document specification package supports software developers t
 Supplementary contents of the package include statements of scenarios for which the specification is appropriate, guidance on implementing the specification, and guidance on testing purported instances.
 
 The contents may include:
-* statement of requirements
+* Information Requirements - statement of requirements
 * CDA implementation guide (CDA IG) – a statement of constraints and custom extensions on [HL7 Clinical Document Architecture [HL7CDAR2]](#HL7CDAR2)
 * FHIR implementation guide (FHIR IG) - a statement of constraints and custom extensions on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3)
 * template package library – a set of Schematron schema to test conformance of CDA documents with the specification
 * conformance profile – a statement of conformance requirements for exchanging documents within a particular scenario such as the My Health Record
-* A set of release notes
+* a set of release notes
 
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of Personal Health Records. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide are the [Personal Health Notes](StructureDefinition-composition-phn-1.html) and [Personal Health Summary](StructureDefinition-composition-phs-1.html) profiles, which reference the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide are the Personal Health Notes and Personal Health Summary profiles, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
@@ -66,7 +66,27 @@ This implementation guide may not considered to be complete enough or sufficient
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
 This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
-
+ 
+## Document Information
+ 
+### Key Information
+ 
+<table class="list" width="100%" cellspacing="6">
+    <tbody>
+        <tr>
+            <td><b>Owner</b></td>
+            <td>National Health Chief Information Officer, Infrastructure Operations</td>
+        </tr>
+        <tr>
+            <td><b>Contact for enquiries</b></td>
+            <td>
+                <p>Australian Digital Health Agency Help Centre <br />
+                t:   1300 901 001<br />
+                e:  <a href ="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>   
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## References
 
@@ -99,5 +119,3 @@ This implementation guide and related artefacts are technical in nature and the 
 
 |[<a name="NEHT2011ar">NEHT2011ar</a>]| National E-Health Transition Authority, 23 November 2011, Consumer Entered Health Summary Information Requirements, Version 1.0.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2272-2016/nehta-0950-2011](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2272-2016/nehta-0950-2011)|
-
-

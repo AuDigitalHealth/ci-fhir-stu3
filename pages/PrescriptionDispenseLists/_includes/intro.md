@@ -10,19 +10,17 @@
 
 ## Introduction
 
-This implementation guide is an Australian realm implementation guide of the HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a Prescription List, a Dispense List, and a Prescription and Dispense List.
+This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent a Prescription and Dispense Lists (PDL).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing Prescription List, Dispense List, and Prescription and Dispense List in [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The resulting FHIR structure can be used for the electronic exchange of this information between healthcare providers.
+The primary aim of this implementation guide is to support implementing PDL in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of PDL information between healthcare providers.&#xa; &#xa;This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.
 
-This implementation guide is defined to support a list as either a document or as a list.
-
-This document is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.
-
-This document does not describe transport or persistence mechanism of the resources described by it.
+This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.
+ 
+This implementation guide does not describe transport or persistence mechanism of the resources described by it.
 
 Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
 * [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3)
@@ -42,12 +40,12 @@ An Agency clinical document specification package supports software developers t
 Supplementary contents of the package include statements of scenarios for which the specification is appropriate, guidance on implementing the specification, and guidance on testing purported instances.
 
 The contents may include:
-* statement of requirements
+* Information Requirements - statement of requirements
 * CDA implementation guide (CDA IG) – a statement of constraints and custom extensions on [HL7 Clinical Document Architecture [HL7CDAR2]](#HL7CDAR2)
 * FHIR implementation guide (FHIR IG) - a statement of constraints and custom extensions on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3)
 * template package library – a set of Schematron schema to test conformance of CDA documents with the specification
 * conformance profile – a statement of conformance requirements for exchanging documents within a particular scenario such as the My Health Record
-* A set of release notes
+* a set of release notes
 
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
@@ -55,14 +53,12 @@ Specification packages contain only files relevant to the particular clinical do
 
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of lists of prescriptions and dispenses for a patient. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-For implementers interested in representing a prescription list, or a dispense list, or a prescription and dispense list as a document, the starting point is the Prescription and or Dispense List profile, which references the additional profiles necessary to assert conformance for this implementation guide.
-
-For implementers interested in representing a prescription list, or a dispense list, or a prescription and dispense list as a list, and not a document, the starting point is the List of Prescription and or Dispense Records profile, which references the additional profiles necessary to assert conformance for this implementation guide.
+The starting point is the List of Prescription and or Dispense Records profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
 
-This implementation guide may not considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
+This implementation guide may not be considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
 
 ## Intended audience
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
