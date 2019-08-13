@@ -19,7 +19,7 @@
   <title value="Summary of an Encounter for an Event"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-08-13T10:35:58+10:00"/>
+  <date value="2019-08-13T14:01:52+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -1504,6 +1504,9 @@
       </type>
     </element>
     <element id="Encounter.hospitalization.extension:originOrganisation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft"/>
+      </extension>
       <path value="Encounter.hospitalization.extension"/>
       <sliceName value="originOrganisation"/>
       <short value="The organisation from which the patient came before admission"/>
@@ -1538,6 +1541,9 @@
       </constraint>
     </element>
     <element id="Encounter.hospitalization.extension:destinationOrganisation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft"/>
+      </extension>
       <path value="Encounter.hospitalization.extension"/>
       <sliceName value="destinationOrganisation"/>
       <short value="Organisation to which the patient is discharged"/>

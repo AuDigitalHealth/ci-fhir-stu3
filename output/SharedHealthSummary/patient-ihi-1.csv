@@ -62,10 +62,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
 "Patient.identifier.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org.au/fhir/StructureDefinition/ihi-status""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"Patient.identifier.extension.value[x]","","","",0,1,"","","","Coding {[]} {[]}
-","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
-","",,"closed","Extension.value[x]",0,1,"","","N/A"
-"Patient.identifier.extension.value[x]","valueCoding","","",1,1,"","","","Coding {[]} {[]}
+"Patient.identifier.extension.valueCoding","valueCoding","","",1,1,"","","","Coding {[]} {[]}
 ","IHI Number Status Code","IHI number status associated with an IHI identifier.","","","","","","","","","",,"required","IHI Number Status","https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1","",,,,"Extension.value[x]",0,1,"","","N/A"
 "Patient.identifier.extension","ihiRecordStatus","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org.au/fhir/StructureDefinition/ihi-record-status]]} {[]}
 ","Individual Healthcare Identifier (IHI) Number Record Status","Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
@@ -77,10 +74,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
 "Patient.identifier.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org.au/fhir/StructureDefinition/ihi-record-status""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"Patient.identifier.extension.value[x]","","","",0,1,"","","","Coding {[]} {[]}
-","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
-","",,"closed","Extension.value[x]",0,1,"","","N/A"
-"Patient.identifier.extension.value[x]","valueCoding","","",1,1,"","","","Coding {[]} {[]}
+"Patient.identifier.extension.valueCoding","valueCoding","","",1,1,"","","","Coding {[]} {[]}
 ","IHI Record Status Code","Coded IHI Record Status.","","","","","","","","","",,"required","IHI Record Status","https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1","",,,,"Extension.value[x]",0,1,"","","N/A"
 "Patient.identifier.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","usual | official | temp | secondary (If known)","The purpose of this identifier.","This is labeled as ""Is Modifier"" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.","Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.","","","","","","","",,"required","Identifies the purpose for this identifier, if known .","http://hl7.org/fhir/ValueSet/identifier-use","",,,,"Identifier.use",0,1,"","","Role.code or implied by context","N/A"
@@ -430,23 +424,31 @@ dateTime {[]} {[]}","Indicates if the individual is deceased or not","Indicates 
 This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"","type:$this}
 ","",,"closed","Patient.deceased[x]",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
 "Patient.deceased[x]","deceasedBoolean","","",0,1,"Y","Y","Y","boolean {[]} {[]}
-","Boolean indicates if individual is deceased","Boolean indicator if the individual is deceased or not.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+dateTime {[]} {[]}","Boolean indicates if individual is deceased","Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
 
 This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
-"Patient.deceased[x]","deceasedDateTime","","",0,1,"Y","Y","Y","dateTime {[]} {[]}
-","Indicates date-time the individual died","Indivdual deceased date-time with optional accuracy indicator.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+"Patient.deceased[x]","deceasedDateTime","","",0,1,"Y","Y","Y","boolean {[]} {[]}
+dateTime {[]} {[]}","Indicates date-time the individual died","Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
 
 This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
-"Patient.deceased[x].id","","","",0,1,"","","","string {[]} {[]}
+"Patient.deceasedBoolean","deceasedBoolean","","",0,1,"","Y","Y","boolean {[]} {[]}
+","Deceased Indicator","Boolean indicator if the individual is deceased or not.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+
+This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
+"Patient.deceasedDateTime","deceasedDateTime","","",0,1,"","Y","Y","dateTime {[]} {[]}
+","Deceased Date Time","Indivdual deceased date-time with optional accuracy indicator.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
+
+This element is labeled as a modifier because once a patient is marked as deceased, the actions that are appropriate to perform on the patient may be significantly different.","The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.","","","","","","","",,,,,"",,,,"Patient.deceased[x]",0,1,"","","player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime","n/a","PID-30  (bool) and PID-29 (datetime)"
+"Patient.deceasedDateTime.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.deceased[x].extension","","","",0,1,"","","","Extension {[]} {[]}
+"Patient.deceasedDateTime.extension","","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"",""
-"Patient.deceased[x].extension","accuracyIndicator","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator]]} {[]}
+"Patient.deceasedDateTime.extension","accuracyIndicator","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator]]} {[]}
 ","Deceased Date Accuracy Indicator","General date accuracy indicator coding.","In some circumstances, systems may only have date or datetime data that has unknown or estimated parts.  This coding establishes the acuraccy of the day, month and year parts.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.deceased[x].value","","","",0,1,"","","","null {[]} {[]}
+"Patient.deceasedDateTime.value","","","",0,1,"","","","null {[]} {[]}
 ","Primitive value for dateTime","The actual value","","","","","","","","","",,,,,"",,,,"dateTime.value",0,1,"",""
 "Patient.address","","","",0,*,"Y","","Y","Address {[]} {[]}
 ","Addresses for the individual","Addresses for the individual.","Patient may have multiple addresses with different uses or applicable periods.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","","","",,,,,"",,,,"Patient.address",0,*,"","","addr",".addr","PID-11"

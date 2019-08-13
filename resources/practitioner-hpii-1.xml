@@ -79,13 +79,13 @@
       <constraint>
         <key value="inv-dh-prac-01" />
         <severity value="error" />
-        <human value="The issuer reference shall at least have a reference, an identifier or a display" />        
+        <human value="If present, an issuer shall at least have a reference, an identifier or a display" />        
         <expression value="issuer.exists() implies issuer.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
       <constraint>
         <key value="inv-dh-prac-02" />
         <severity value="error" />
-        <human value="The issuer organisation shall conform to Base Organization" />
+        <human value="If present, an issuer organisation shall conform to Base Organization" />
         <expression value="issuer.reference.exists() implies issuer.all($this.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1'))" />
       </constraint>
       <mustSupport value="true" />
