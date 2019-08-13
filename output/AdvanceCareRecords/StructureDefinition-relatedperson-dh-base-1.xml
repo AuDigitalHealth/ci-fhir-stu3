@@ -23,7 +23,7 @@
   <title value="Base RelatedPerson"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-08-13T10:19:18+10:00"/>
+  <date value="2019-08-13T14:03:31+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -522,35 +522,8 @@
         <map value="N/A"/>
       </mapping>
     </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]">
-      <path value="RelatedPerson.identifier.extension.value[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="closed"/>
-      </slicing>
-      <short value="Value of extension"/>
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Extension.value[x]"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]:valueCoding">
-      <path value="RelatedPerson.identifier.extension.value[x]"/>
+    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiStatus.valueCoding:valueCoding">
+      <path value="RelatedPerson.identifier.extension.valueCoding"/>
       <sliceName value="valueCoding"/>
       <short value="IHI Number Status Code"/>
       <definition value="IHI number status associated with an IHI identifier."/>
@@ -665,35 +638,8 @@
         <map value="N/A"/>
       </mapping>
     </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]">
-      <path value="RelatedPerson.identifier.extension.value[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="closed"/>
-      </slicing>
-      <short value="Value of extension"/>
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Extension.value[x]"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-    </element>
-    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]:valueCoding">
-      <path value="RelatedPerson.identifier.extension.value[x]"/>
+    <element id="RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.valueCoding:valueCoding">
+      <path value="RelatedPerson.identifier.extension.valueCoding"/>
       <sliceName value="valueCoding"/>
       <short value="IHI Record Status Code"/>
       <definition value="Coded IHI Record Status."/>
