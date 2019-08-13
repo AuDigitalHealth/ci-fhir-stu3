@@ -27,14 +27,31 @@
   <derivation value="constraint"/>
   <differential>
     <element id="PractitionerRole">
-      <path value="PractitionerRole"/>
+      <path value="PractitionerRole"/>	  
       <constraint>
-        <key value="inv-dh-prarol-01"/>
-        <severity value="error"/>
-        <human
-          value="The practitioner reference shall at least have a reference or an identifier"/>
-        <expression value="practitioner.reference.exists() or practitioner.identifier.exists()"/>
+        <key value="inv-dh-prarol-01" />
+        <severity value="error" />
+        <human value="The practitioner shall at least have a reference or an identifier with at least a system and a value"/>
+        <expression value="practitioner.reference.exists() or practitioner.identifier.where(system.count() + value.count() >1).exists()"/>
       </constraint>
+	  <constraint>
+        <key value="inv-dh-prarol-02" />
+        <severity value="error" />
+        <human value="If present, an organisation shall at least have a reference, an identifier or a display" />        
+        <expression value="organization.exists() implies (organization.reference.exists() or organization.identifier.exists() or organization.display.exists())" />
+      </constraint>
+	  <constraint>
+        <key value="inv-dh-prarol-03" />
+        <severity value="error" />
+        <human value="If present, a location shall at least have a reference, an identifier or a display" />        
+        <expression value="location.exists() implies location.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+      </constraint>
+	  <constraint>
+        <key value="inv-dh-prarol-04" />
+        <severity value="error" />
+        <human value="If present, a healthcare service shall at least have a reference, an identifier or a display" />        
+        <expression value="healthcareService.exists() implies healthcareService.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+      </constraint>	
     </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier"/>
