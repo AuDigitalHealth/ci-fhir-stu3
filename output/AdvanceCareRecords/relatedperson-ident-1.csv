@@ -45,10 +45,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
 "RelatedPerson.identifier.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org.au/fhir/StructureDefinition/ihi-status""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"RelatedPerson.identifier.extension.value[x]","","","",0,1,"","","","Coding {[]} {[]}
-","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
-","",,"closed","Extension.value[x]",0,1,"","","N/A"
-"RelatedPerson.identifier.extension.value[x]","valueCoding","","",1,1,"","","","Coding {[]} {[]}
+"RelatedPerson.identifier.extension.valueCoding","valueCoding","","",1,1,"","","","Coding {[]} {[]}
 ","IHI Number Status Code","IHI number status associated with an IHI identifier.","","","","","","","","","",,"required","IHI Number Status","https://healthterminologies.gov.au/fhir/ValueSet/ihi-status-1","",,,,"Extension.value[x]",0,1,"","","N/A"
 "RelatedPerson.identifier.extension","ihiRecordStatus","","",0,*,"","","","Extension {[CanonicalType[http://hl7.org.au/fhir/StructureDefinition/ihi-record-status]]} {[]}
 ","Individual Healthcare Identifier (IHI) Number Record Status","Individual Healthcare Identifier (IHI) value record status associated with an IHI identifier","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
@@ -60,10 +57,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","","n/a"
 "RelatedPerson.identifier.extension.url","","","",1,1,"","","","uri {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org.au/fhir/StructureDefinition/ihi-record-status""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"RelatedPerson.identifier.extension.value[x]","","","",0,1,"","","","Coding {[]} {[]}
-","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"","type:$this}
-","",,"closed","Extension.value[x]",0,1,"","","N/A"
-"RelatedPerson.identifier.extension.value[x]","valueCoding","","",1,1,"","","","Coding {[]} {[]}
+"RelatedPerson.identifier.extension.valueCoding","valueCoding","","",1,1,"","","","Coding {[]} {[]}
 ","IHI Record Status Code","Coded IHI Record Status.","","","","","","","","","",,"required","IHI Record Status","https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1","",,,,"Extension.value[x]",0,1,"","","N/A"
 "RelatedPerson.identifier.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","usual | official | temp | secondary (If known)","The purpose of this identifier.","This is labeled as ""Is Modifier"" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.","Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.","","","","","","","",,"required","Identifies the purpose for this identifier, if known .","http://hl7.org/fhir/ValueSet/identifier-use","",,,,"Identifier.use",0,1,"","","Role.code or implied by context","N/A"
