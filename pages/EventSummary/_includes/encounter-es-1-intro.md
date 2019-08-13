@@ -6,7 +6,7 @@
 Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
 
-##### Implementation guidance
+#### Implementation guidance
 
 For the expected usage scenarios in this implementation guide:
 

@@ -136,7 +136,7 @@
 <ul>
   <li>It SHALL be a valid HL7 FHIR instance. In particular:
     <ul>
-      <li>It SHALL conform to <a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</li>
+      <li>It SHALL conform to <a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a></li>
       <li>It SHALL conform to the profile it claims conformance to including:
         <ul>
           <li>conforming to the requirements described on the corresponding profile or extension page of this implementation guide</li>
@@ -146,24 +146,24 @@
       </li>
     </ul>
   </li>
-  <li>It SHALL conform to the requirements specified in the Must Support section below.</li>
   <li>Where additional content beyond that flagged with must support is provided it:
     <ul>
       <li>SHALL NOT qualify or negate content described by this profile as must support</li>
       <li>SHALL be clinically safe for receivers of the document to ignore the non-narrative additions when interpreting the existing content</li>
     </ul>
   </li>
+  <li>It SHALL conform to the requirements specified in the Must Support section below</li>
 </ul>
 
 <p>A profile, derived from a profile described in this implementation guide may make additional rules that override this implementation guide:</p>
 
 <ul>
-  <li>A derived profile SHALL be derived in accordance with the rules on profiling</li>
-  <li>A FHIR resource that is conformant to the derived profile SHALL be conformant to the profile in this implementation guide it was derived from</li>
+  <li>A derived profile SHALL be derived in accordance with the rules on profiling in <a href="index.html#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a></li>
+  <li>A FHIR resource that is conformant to the derived profile SHALL be conformant to the profile in this implementation guide it is derived from</li>
 </ul>
 
 <h2 id="must-support">Must Support</h2>
-<p>A <a href="http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport">Must Support</a> (see <a href="guidance.html#conformance-conventions">Conformance conventions</a>) specifies that an element must be supported. This section defines the support required from systems and applications wanting to claim conformance to a profile described in this implementation guide. This definition of support is present in the profile StructureDefinition.</p>
+<p>A <a href="http://hl7.org/fhir/stu3/conformance-rules.html#mustSupport">Must Support</a> flag (see <a href="guidance.html#conformance-conventions">Conformance conventions</a>) specifies that an element must be supported. This section defines the support required from systems and applications wanting to claim conformance to a profile described in this implementation guide. This definition of support is present in the profile StructureDefinition.</p>
 
 <p>In the context of this implementation guide, must support SHALL be interpreted as follows:</p>
 
@@ -210,7 +210,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Aug 12, 2019 07:49+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Aug 13, 2019 10:35+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
