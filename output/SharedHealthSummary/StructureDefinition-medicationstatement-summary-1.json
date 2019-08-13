@@ -11,7 +11,7 @@
   "title": "Summary Statement of Known Medicine",
   "status": "draft",
   "experimental": true,
-  "date": "2019-08-12T15:35:12+10:00",
+  "date": "2019-08-13T10:40:41+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -727,6 +727,16 @@
       {
         "id": "MedicationStatement.medication[x]",
         "path": "MedicationStatement.medication[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
         "short": "Medication Detail",
         "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
         "comment": "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example if you require form or lot number, then you must reference the Medication resource. .",
@@ -773,9 +783,9 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded",
-        "path": "MedicationStatement.medicationCodeableConcept",
-        "sliceName": "medicationCoded",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept",
+        "path": "MedicationStatement.medication[x]",
+        "sliceName": "medicationCodeableConcept",
         "short": "Coded Medication",
         "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
         "comment": "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example if you require form or lot number, then you must reference the Medication resource. .",
@@ -865,8 +875,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.id",
-        "path": "MedicationStatement.medicationCodeableConcept.id",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.id",
+        "path": "MedicationStatement.medication[x].id",
         "representation": [
           "xmlAttr"
         ],
@@ -892,8 +902,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.extension",
-        "path": "MedicationStatement.medicationCodeableConcept.extension",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.extension",
+        "path": "MedicationStatement.medication[x].extension",
         "slicing": {
           "discriminator": [
             {
@@ -931,8 +941,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding",
-        "path": "MedicationStatement.medicationCodeableConcept.coding",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding",
+        "path": "MedicationStatement.medication[x].coding",
         "slicing": {
           "discriminator": [
             {
@@ -979,8 +989,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:pbs",
-        "path": "MedicationStatement.medicationCodeableConcept.coding",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:pbs",
+        "path": "MedicationStatement.medication[x].coding",
         "sliceName": "pbs",
         "short": "PBS Item Code",
         "definition": "PBS code from http://pbs.gov.au/code/item. Use of PBS as a code to refer to a type of medication, this excludes implication of context based on the PBS code. Where context is to be implied or stated PBS code needs to be associated with recording a prescription (MedicationRequest) or dispense record(MedicationDispense)",
@@ -1021,8 +1031,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:gtin",
-        "path": "MedicationStatement.medicationCodeableConcept.coding",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:gtin",
+        "path": "MedicationStatement.medication[x].coding",
         "sliceName": "gtin",
         "short": "Medication Package Global Trade Item Number (GTIN)",
         "definition": "GTIN value from http://www.gs1.org/gtin.",
@@ -1063,8 +1073,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt",
-        "path": "MedicationStatement.medicationCodeableConcept.coding",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt",
+        "path": "MedicationStatement.medication[x].coding",
         "sliceName": "amt",
         "short": "AMT Medicines",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1105,8 +1115,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.id",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.id",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.id",
+        "path": "MedicationStatement.medication[x].coding.id",
         "representation": [
           "xmlAttr"
         ],
@@ -1132,8 +1142,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.extension",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.extension",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension",
+        "path": "MedicationStatement.medication[x].coding.extension",
         "slicing": {
           "discriminator": [
             {
@@ -1160,8 +1170,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.extension:medicationClass",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.extension",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass",
+        "path": "MedicationStatement.medication[x].coding.extension",
         "sliceName": "medicationClass",
         "short": "Class of Medication Coding",
         "definition": "General category of coding to allow usage of codes to be distinguished from the same CodeSystem",
@@ -1180,8 +1190,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.extension:medicationClass.id",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.extension.id",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass.id",
+        "path": "MedicationStatement.medication[x].coding.extension.id",
         "representation": [
           "xmlAttr"
         ],
@@ -1207,8 +1217,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.extension:medicationClass.extension",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.extension.extension",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass.extension",
+        "path": "MedicationStatement.medication[x].coding.extension.extension",
         "slicing": {
           "discriminator": [
             {
@@ -1246,8 +1256,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.extension:medicationClass.url",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.extension.url",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass.url",
+        "path": "MedicationStatement.medication[x].coding.extension.url",
         "representation": [
           "xmlAttr"
         ],
@@ -1275,8 +1285,42 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.extension:medicationClass.valueCoding:valueCoding",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.extension.valueCoding",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass.value[x]",
+        "path": "MedicationStatement.medication[x].coding.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.extension:medicationClass.value[x]:valueCoding",
+        "path": "MedicationStatement.medication[x].coding.extension.value[x]",
         "sliceName": "valueCoding",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -1312,8 +1356,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.system",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.system",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.system",
+        "path": "MedicationStatement.medication[x].coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
         "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
@@ -1347,8 +1391,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.version",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.version",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.version",
+        "path": "MedicationStatement.medication[x].coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
         "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
@@ -1381,8 +1425,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.code",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.code",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.code",
+        "path": "MedicationStatement.medication[x].coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
         "requirements": "Need to refer to a particular code in the system.",
@@ -1415,14 +1459,14 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.display",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
             "valueBoolean": true
           }
         ],
-        "path": "MedicationStatement.medicationCodeableConcept.coding.display",
+        "path": "MedicationStatement.medication[x].coding.display",
         "short": "Representation defined by the system",
         "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
         "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
@@ -1455,8 +1499,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:amt.userSelected",
-        "path": "MedicationStatement.medicationCodeableConcept.coding.userSelected",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:amt.userSelected",
+        "path": "MedicationStatement.medication[x].coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
         "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
@@ -1490,8 +1534,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.coding:mimsPackage",
-        "path": "MedicationStatement.medicationCodeableConcept.coding",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage",
+        "path": "MedicationStatement.medication[x].coding",
         "sliceName": "mimsPackage",
         "short": "MIMS Package",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1532,14 +1576,14 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationCodeableConcept:medicationCoded.text",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
             "valueBoolean": true
           }
         ],
-        "path": "MedicationStatement.medicationCodeableConcept.text",
+        "path": "MedicationStatement.medication[x].text",
         "short": "Plain text representation of the concept",
         "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
         "comment": "Very often the text is the same as a displayName of one of the codings.",
@@ -1573,8 +1617,8 @@
         ]
       },
       {
-        "id": "MedicationStatement.medicationReference:medicationReference",
-        "path": "MedicationStatement.medicationReference",
+        "id": "MedicationStatement.medication[x]:medicationReference",
+        "path": "MedicationStatement.medication[x]",
         "sliceName": "medicationReference",
         "short": "Medication Reference",
         "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
@@ -2409,1744 +2453,6 @@
           {
             "identity": "rim",
             "map": ".outboundRelationship[typeCode=COMP].target[classCode=SBADM, moodCode=INT]"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.id",
-        "path": "MedicationStatement.dosage.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.extension",
-        "path": "MedicationStatement.dosage.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.sequence",
-        "path": "MedicationStatement.dosage.sequence",
-        "short": "The order of the dosage instructions",
-        "definition": "Indicates the order in which the dosage instructions should be applied or interpreted.",
-        "requirements": "If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.sequence",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "integer"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".text"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.text",
-        "path": "MedicationStatement.dosage.text",
-        "short": "Free text dosage instructions e.g. SIG",
-        "definition": "Free text dosage instructions e.g. SIG.",
-        "requirements": "Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".text"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.additionalInstruction",
-        "path": "MedicationStatement.dosage.additionalInstruction",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding.system"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Supplemental instruction - e.g. \"with meals\"",
-        "definition": "Supplemental instruction - e.g. \"with meals\".",
-        "requirements": "Additional instruction such as \"Swallow with plenty of water\" which may or may not be coded.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Dosage.additionalInstruction",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AdditionalInstruction"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept identifying additional instructions such as \"take with water\" or \"avoid operating heavy machinery\".",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/additional-instruction-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".text"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.additionalInstruction:snomedAdditionalInstruction",
-        "path": "MedicationStatement.dosage.additionalInstruction",
-        "sliceName": "snomedAdditionalInstruction",
-        "short": "SNOMED CT Additional Instruction",
-        "definition": "Supplemental instruction - e.g. \"with meals\".",
-        "requirements": "Additional instruction such as \"Swallow with plenty of water\" which may or may not be coded.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Dosage.additionalInstruction",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AdditionalInstruction"
-            }
-          ],
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/additional-instruction-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".text"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.patientInstruction",
-        "path": "MedicationStatement.dosage.patientInstruction",
-        "short": "Patient or consumer oriented instructions",
-        "definition": "Instructions in terms that are understood by the patient or consumer.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.patientInstruction",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".text"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.timing",
-        "path": "MedicationStatement.dosage.timing",
-        "short": "When medication should be administered",
-        "definition": "When medication should be administered.",
-        "comment": "This attribute may not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing.",
-        "requirements": "The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions. For example: \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn't imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.timing",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Timing"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".effectiveTime"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeeded[x]",
-        "path": "MedicationStatement.dosage.asNeeded[x]",
-        "short": "Take \"as needed\" (for x)",
-        "definition": "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).",
-        "comment": "Can express \"as needed\" without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\".",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.asNeeded[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationAsNeededReason"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-as-needed-reason"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeeded[x]:asNeededCoding",
-        "path": "MedicationStatement.dosage.asNeeded[x]",
-        "sliceName": "asNeededCoding",
-        "short": "Take \"as needed\" (for x)",
-        "definition": "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).",
-        "comment": "Can express \"as needed\" without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\".",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.asNeeded[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationAsNeededReason"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-as-needed-reason"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeeded[x]:asNeededCoding.id",
-        "path": "MedicationStatement.dosage.asNeeded[x].id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeeded[x]:asNeededCoding.extension",
-        "path": "MedicationStatement.dosage.asNeeded[x].extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeededCodeableConcept:asNeededCoding",
-        "path": "MedicationStatement.dosage.asNeededCodeableConcept",
-        "sliceName": "asNeededCoding",
-        "short": "Coded Reason For Take \"as needed\"",
-        "definition": "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).",
-        "comment": "Can express \"as needed\" without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\".",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.asNeeded[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationAsNeededReason"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/medication-as-needed-reason"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=\"as needed\"].value=boolean or codable concept"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeededCodeableConcept:asNeededCoding.id",
-        "path": "MedicationStatement.dosage.asNeededCodeableConcept.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeededCodeableConcept:asNeededCoding.extension",
-        "path": "MedicationStatement.dosage.asNeededCodeableConcept.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeededCodeableConcept:asNeededCoding.coding",
-        "path": "MedicationStatement.dosage.asNeededCodeableConcept.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeededCodeableConcept:asNeededCoding.coding:snomedFinding",
-        "path": "MedicationStatement.dosage.asNeededCodeableConcept.coding",
-        "sliceName": "snomedFinding",
-        "short": "Clinical Finding (SNOMED CT)",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.asNeededCodeableConcept:asNeededCoding.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "MedicationStatement.dosage.asNeededCodeableConcept.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.site",
-        "path": "MedicationStatement.dosage.site",
-        "short": "Body site to administer to",
-        "definition": "Body site to administer to.",
-        "comment": "If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](http://hl7.org/fhir/STU3/extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
-        "requirements": "A coded specification of the anatomic site where the medication first enters the body.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.site",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationAdministrationSite"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept describing the site location the medicine enters into or onto the body.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/approach-site-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".approachSiteCode"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.site.id",
-        "path": "MedicationStatement.dosage.site.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.site.extension",
-        "path": "MedicationStatement.dosage.site.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.site.coding",
-        "path": "MedicationStatement.dosage.site.coding",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.site.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "MedicationStatement.dosage.site.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route",
-        "path": "MedicationStatement.dosage.route",
-        "short": "How drug should enter body",
-        "definition": "How drug should enter body.",
-        "requirements": "A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient's body.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.route",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "RouteOfAdministration"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".routeCode"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.id",
-        "path": "MedicationStatement.dosage.route.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.extension",
-        "path": "MedicationStatement.dosage.route.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.coding",
-        "path": "MedicationStatement.dosage.route.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "MedicationStatement.dosage.route.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.id",
-        "path": "MedicationStatement.dosage.route.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.extension",
-        "path": "MedicationStatement.dosage.route.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.coding",
-        "path": "MedicationStatement.dosage.route.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.coding:snomedRoute",
-        "path": "MedicationStatement.dosage.route.coding",
-        "sliceName": "snomedRoute",
-        "short": "Route of Administration (SNOMED CT)",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/route-of-administration-1"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.route.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "MedicationStatement.dosage.route.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method",
-        "path": "MedicationStatement.dosage.method",
-        "short": "Technique for administering medication",
-        "definition": "Technique for administering medication.",
-        "comment": "Terminologies used often pre-coordinate this term with the route and or form of administration.",
-        "requirements": "A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  For examples, Slow Push; Deep IV.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.method",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationAdministrationMethod"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept describing the technique by which the medicine is administered.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/administration-method-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".doseQuantity"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.id",
-        "path": "MedicationStatement.dosage.method.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.extension",
-        "path": "MedicationStatement.dosage.method.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.coding",
-        "path": "MedicationStatement.dosage.method.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "MedicationStatement.dosage.method.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.id",
-        "path": "MedicationStatement.dosage.method.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.extension",
-        "path": "MedicationStatement.dosage.method.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.coding",
-        "path": "MedicationStatement.dosage.method.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.coding:snomedMethod",
-        "path": "MedicationStatement.dosage.method.coding",
-        "sliceName": "snomedMethod",
-        "short": "SNOMED CT Administration Method",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/administration-method-codes"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.method.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "MedicationStatement.dosage.method.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.dose[x]",
-        "path": "MedicationStatement.dosage.dose[x]",
-        "short": "Amount of medication per dose",
-        "definition": "Amount of medication per dose.",
-        "comment": "Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours.",
-        "requirements": "The amount of therapeutic or other substance given at one administration event.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.dose[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Quantity",
-            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".doseQuantity"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod",
-        "short": "Upper limit on medication per unit of time",
-        "definition": "Upper limit on medication per unit of time.",
-        "comment": "This is intended for use as an adjunct to the dosage when there is an upper cap.  For example \"2 tablets every 4 hours to a maximum of 8/day\".",
-        "requirements": "The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time.  For example, 1000mg in 24 hours.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.maxDosePerPeriod",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Ratio"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".maxDoseQuantity"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerAdministration",
-        "path": "MedicationStatement.dosage.maxDosePerAdministration",
-        "short": "Upper limit on medication per administration",
-        "definition": "Upper limit on medication per administration.",
-        "comment": "This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg.",
-        "requirements": "The maximum total quantity of a therapeutic substance that may be administered to a subject per administration.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.maxDosePerAdministration",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity",
-            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "not supported"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerLifetime",
-        "path": "MedicationStatement.dosage.maxDosePerLifetime",
-        "short": "Upper limit on medication per lifetime of the patient",
-        "definition": "Upper limit on medication per lifetime of the patient.",
-        "requirements": "The maximum total quantity of a therapeutic substance that may be administered per lifetime of the subject.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.maxDosePerLifetime",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity",
-            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "not supported"
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement.dosage.rate[x]",
-        "path": "MedicationStatement.dosage.rate[x]",
-        "short": "Amount of medication per unit of time",
-        "definition": "Amount of medication per unit of time.",
-        "comment": "It is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate.",
-        "requirements": "Identifies the speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.   Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn't imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Dosage.rate[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Quantity",
-            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".rateQuantity"
           }
         ]
       }
