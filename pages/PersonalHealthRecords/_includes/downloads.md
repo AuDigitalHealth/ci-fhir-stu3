@@ -18,7 +18,7 @@ All examples included in this implementation guide are available for download in
 
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
-- [TTl](examples.ttl.zip)
+- [TTL](examples.ttl.zip)
 
 **CDA implementation guide**
 
