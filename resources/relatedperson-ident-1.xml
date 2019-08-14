@@ -30,7 +30,7 @@
       <constraint>
         <key value="inv-dh-relper-01" />
         <severity value="error" />
-        <human value="The related person shall at least have one identifier with a system and a value" />
+        <human value="At least one related person identifier shall at least have a system and a value" />
         <expression value="identifier.where(system.count() + value.count() >1).exists()" />
       </constraint>
       <constraint>
