@@ -98,7 +98,7 @@ This implementation guide and related artefacts are technical in nature and the 
         </tr>
         <tr>
             <td>1.0</td>
-            <td>Not yet published</td>
+            <td>TBD</td>
             <td>TBD</td>
         </tr>
     </tbody>
