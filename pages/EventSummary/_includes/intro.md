@@ -12,7 +12,7 @@
 
 This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent an Event Summary (ES).
 
-This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
+This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 ## Document purpose and scope
 
@@ -30,7 +30,7 @@ Wherever possible, material in this specification is based on existing standards
 
 This implementation guide is the basis for the corresponding [Event Summary CDA implementation guide [DH2019i]](#DH2019i). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. an ES CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide [HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. an ES CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 
 ## Context and use

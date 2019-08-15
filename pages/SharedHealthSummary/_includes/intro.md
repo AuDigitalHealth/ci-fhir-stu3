@@ -12,7 +12,7 @@
 
 This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent a Shared Health Summary (SHS).
 
-This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)[HL7FHIR3]](#HL7FHIR3).
+This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 
 ## Document purpose and scope
