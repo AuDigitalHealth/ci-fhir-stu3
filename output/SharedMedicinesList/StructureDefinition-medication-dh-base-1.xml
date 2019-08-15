@@ -27,7 +27,7 @@
   <title value="Base Medication"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-08-12T11:20:29+10:00"/>
+  <date value="2019-08-15T12:35:41+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -799,35 +799,8 @@
         <map value="N/A"/>
       </mapping>
     </element>
-    <element id="Medication.code.coding:amt.extension:medicationClass.value[x]">
-      <path value="Medication.code.coding.extension.value[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="closed"/>
-      </slicing>
-      <short value="Value of extension"/>
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Extension.value[x]"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A"/>
-      </mapping>
-    </element>
-    <element id="Medication.code.coding:amt.extension:medicationClass.value[x]:valueCoding">
-      <path value="Medication.code.coding.extension.value[x]"/>
+    <element id="Medication.code.coding:amt.extension:medicationClass.valueCoding:valueCoding">
+      <path value="Medication.code.coding.extension.valueCoding"/>
       <sliceName value="valueCoding"/>
       <short value="Value of extension"/>
       <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
@@ -1484,14 +1457,6 @@
     </element>
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="closed"/>
-      </slicing>
       <short value="Medication ingredient"/>
       <definition value="The actual ingredient - either a substance (simple ingredient) or another medication."/>
       <min value="1"/>
@@ -1526,8 +1491,8 @@
         <map value=".player"/>
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept">
-      <path value="Medication.ingredient.item[x]"/>
+    <element id="Medication.ingredient.itemCodeableConcept:itemCodeableConcept">
+      <path value="Medication.ingredient.itemCodeableConcept"/>
       <sliceName value="itemCodeableConcept"/>
       <short value="Coded Ingredient Product"/>
       <definition value="Coding for a substance or medicinal product  that is an ingredient of the medication."/>
@@ -1554,8 +1519,8 @@
         <map value=".player"/>
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.id">
-      <path value="Medication.ingredient.item[x].id"/>
+    <element id="Medication.ingredient.itemCodeableConcept:itemCodeableConcept.id">
+      <path value="Medication.ingredient.itemCodeableConcept.id"/>
       <representation value="xmlAttr"/>
       <short value="xml:id (or equivalent in JSON)"/>
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
@@ -1574,8 +1539,8 @@
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.extension">
-      <path value="Medication.ingredient.item[x].extension"/>
+    <element id="Medication.ingredient.itemCodeableConcept:itemCodeableConcept.extension">
+      <path value="Medication.ingredient.itemCodeableConcept.extension"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -1604,8 +1569,8 @@
         <map value="n/a"/>
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
-      <path value="Medication.ingredient.item[x].coding"/>
+    <element id="Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding">
+      <path value="Medication.ingredient.itemCodeableConcept.coding"/>
       <slicing>
         <discriminator>
           <type value="value"/>
@@ -1641,8 +1606,8 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:amtMP">
-      <path value="Medication.ingredient.item[x].coding"/>
+    <element id="Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding:amtMP">
+      <path value="Medication.ingredient.itemCodeableConcept.coding"/>
       <sliceName value="amtMP"/>
       <short value="AMT Medicinal Product Ingredient"/>
       <definition value="A reference to a code defined by a terminology system."/>
@@ -1678,11 +1643,11 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
       </mapping>
     </element>
-    <element id="Medication.ingredient.item[x]:itemCodeableConcept.text">
+    <element id="Medication.ingredient.itemCodeableConcept:itemCodeableConcept.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true"/>
       </extension>
-      <path value="Medication.ingredient.item[x].text"/>
+      <path value="Medication.ingredient.itemCodeableConcept.text"/>
       <short value="Plain text representation of the concept"/>
       <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
       <comment value="Very often the text is the same as a displayName of one of the codings."/>
