@@ -11,7 +11,7 @@
   "title": "Base Medication",
   "status": "draft",
   "experimental": true,
-  "date": "2019-08-12T11:20:29+10:00",
+  "date": "2019-08-15T12:35:41+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -941,42 +941,8 @@
         ]
       },
       {
-        "id": "Medication.code.coding:amt.extension:medicationClass.value[x]",
-        "path": "Medication.code.coding.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "closed"
-        },
-        "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Extension.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Medication.code.coding:amt.extension:medicationClass.value[x]:valueCoding",
-        "path": "Medication.code.coding.extension.value[x]",
+        "id": "Medication.code.coding:amt.extension:medicationClass.valueCoding:valueCoding",
+        "path": "Medication.code.coding.extension.valueCoding",
         "sliceName": "valueCoding",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -1774,16 +1740,6 @@
       {
         "id": "Medication.ingredient.item[x]",
         "path": "Medication.ingredient.item[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "closed"
-        },
         "short": "Medication ingredient",
         "definition": "The actual ingredient - either a substance (simple ingredient) or another medication.",
         "min": 1,
@@ -1823,8 +1779,8 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept",
-        "path": "Medication.ingredient.item[x]",
+        "id": "Medication.ingredient.itemCodeableConcept:itemCodeableConcept",
+        "path": "Medication.ingredient.itemCodeableConcept",
         "sliceName": "itemCodeableConcept",
         "short": "Coded Ingredient Product",
         "definition": "Coding for a substance or medicinal product  that is an ingredient of the medication.",
@@ -1856,8 +1812,8 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.id",
-        "path": "Medication.ingredient.item[x].id",
+        "id": "Medication.ingredient.itemCodeableConcept:itemCodeableConcept.id",
+        "path": "Medication.ingredient.itemCodeableConcept.id",
         "representation": [
           "xmlAttr"
         ],
@@ -1883,8 +1839,8 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.extension",
-        "path": "Medication.ingredient.item[x].extension",
+        "id": "Medication.ingredient.itemCodeableConcept:itemCodeableConcept.extension",
+        "path": "Medication.ingredient.itemCodeableConcept.extension",
         "slicing": {
           "discriminator": [
             {
@@ -1922,8 +1878,8 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
-        "path": "Medication.ingredient.item[x].coding",
+        "id": "Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
         "slicing": {
           "discriminator": [
             {
@@ -1966,8 +1922,8 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:amtMP",
-        "path": "Medication.ingredient.item[x].coding",
+        "id": "Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding:amtMP",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
         "sliceName": "amtMP",
         "short": "AMT Medicinal Product Ingredient",
         "definition": "A reference to a code defined by a terminology system.",
@@ -2008,14 +1964,14 @@
         ]
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.text",
+        "id": "Medication.ingredient.itemCodeableConcept:itemCodeableConcept.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
             "valueBoolean": true
           }
         ],
-        "path": "Medication.ingredient.item[x].text",
+        "path": "Medication.ingredient.itemCodeableConcept.text",
         "short": "Plain text representation of the concept",
         "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
         "comment": "Very often the text is the same as a displayName of one of the codings.",
