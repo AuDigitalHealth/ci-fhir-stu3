@@ -1,8 +1,8 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 106, warn = 54, info = 4
-Generated Mon Aug 05 14:16:28 AEST 2019. FHIR version 3.0.1 for au.electronichealth.shared-medicines-list# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 102, warn = 54, info = 4
+Generated Thu Aug 15 12:36:35 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 235 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-96c1bf8a-8321-11e9-bc42-526af7764f64 : 0 / 3
@@ -41,7 +41,7 @@ Generated Mon Aug 05 14:16:28 AEST 2019. FHIR version 3.0.1 for au.electronichea
  C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1 : 1 / 0
  C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\organization-ident-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 3 / 0
+ C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 1 / 0
  C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 1 / 0
  C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 0 / 0
@@ -50,7 +50,7 @@ Generated Mon Aug 05 14:16:28 AEST 2019. FHIR version 3.0.1 for au.electronichea
  C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1 : 0 / 0
 </table>
 == n/a ==
-WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be au.electronichealth.shared-medicines-list
+WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be au.electronichealth.sharedmedicineslist
 ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\AllergyIntolerance-96c1bf8a-8321-11e9-bc42-526af7764f64.html: The html source does not contain the publish box <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader--> (see note at http://wiki.hl7.org/index.php?title=FHIR_Implementation_Guide_Publishing_Requirements#HL7_HTML_Standards_considerations)
 ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\AllergyIntolerance-96c1bf8a-8321-11e9-bc42-526af7764f64.json.html: The html source does not contain the publish box
 ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\AllergyIntolerance-96c1bf8a-8321-11e9-bc42-526af7764f64.ttl.html: The html source does not contain the publish box
@@ -370,8 +370,8 @@ WARNING: Patient/55a2e4fc-8321-11e9-bc42-526af7764f64: Patient.extension[0].valu
 ERROR: Practitioner/54a065dc-8666-11e9-bc42-526af7764f64: Practitioner.identifier[0]: The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]
 ERROR: Practitioner/54a065dc-8666-11e9-bc42-526af7764f64: Practitioner.qualification[0].identifier[0]: The AHPRA registration value shall start with 3 uppercase letters, followed by 10 digits. [value.matches('^[A-Z]{3}[0-9]{10}$')]
 == C:\work\git\ci-fhir-stu3\examples\practitionerrole-3283ca84-866b-11e9-bc42-526af7764f64.xml ==
-WARNING: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitioner-1" could not be resolved
-INFORMATION: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.specialty[0]: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes, and a code is recommended to come from this value set) (codes = http://snomed.info/sct#46255001)
+INFORMATION: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.identifier[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1
+WARNING: PractitionerRole/3283ca84-866b-11e9-bc42-526af7764f64: PractitionerRole.specialty[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 not found
 == C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\composition-sml-prac-1.xml ==
 ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[28].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
@@ -397,8 +397,6 @@ ERROR: StructureDefinition/observation-norelevantfinding-1: StructureDefinition.
 == C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\organization-ident-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1.xml ==
-ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
-ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[25].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'
 == C:\work\git\ci-fhir-stu3\resources\patient-ident-1.xml ==
 ERROR: StructureDefinition/patient-ident-1: StructureDefinition.differential.element[25].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'

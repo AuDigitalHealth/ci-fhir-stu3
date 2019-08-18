@@ -1,16 +1,16 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "implementationguide-advancecarerecords-1",
-  "language": "en-AU",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Advance Care Records</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-advancecarerecords-1</pre><div><p>Australian realm implementation guide of the FHIR specification to represent Advance Care records in the My Health Record system and related applications.</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Advance Care Records</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-advancecarerecords-1</pre><div><p>This implementation guide is an HL7™ FHIR® specification to represent an advance care record, including Advance Care Planning (ACP) and Advance Care Directive Custodian Record (ACDCR).</p>\n<p>The primary aim of this implementation guide is to support implementing advance care records in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of advance care record information between healthcare providers.</p>\n<p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>\n<p>This implementation guide does not describe transport or persistence mechanism of the resources described by it.</p>\n</div></div>"
   },
   "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-advancecarerecords-1",
   "version": "1.0.0",
   "name": "Advance Care Records",
   "status": "draft",
   "experimental": true,
+  "date": "2019-08-15T09:52:16+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "Australian realm implementation guide of the FHIR specification to represent Advance Care records in the My Health Record system and related applications.",
+  "description": "This implementation guide is an HL7™ FHIR® specification to represent an advance care record, including Advance Care Planning (ACP) and Advance Care Directive Custodian Record (ACDCR).\n \nThe primary aim of this implementation guide is to support implementing advance care records in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of advance care record information between healthcare providers.\n \nThis implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.\n \nThis implementation guide does not describe transport or persistence mechanism of the resources described by it.",
   "copyright": "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
   "fhirVersion": "3.0.1",
   "package": [
@@ -32,6 +32,10 @@
       "resource": [
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-composition-acp-1.html"
@@ -47,6 +51,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-documentreference-acp-1.html"
             }
@@ -60,6 +68,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-composition-acdcr-1.html"
@@ -75,6 +87,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-patient-dh-base-1.html"
             }
@@ -88,6 +104,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-patient-ident-1.html"
@@ -103,6 +123,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-relatedperson-dh-base-1.html"
             }
@@ -116,6 +140,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-relatedperson-ident-1.html"
@@ -131,6 +159,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-organization-dh-base-1.html"
             }
@@ -144,6 +176,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-organization-ident-1.html"
@@ -159,6 +195,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-practitioner-dh-base-1.html"
             }
@@ -172,6 +212,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-practitioner-ident-1.html"
@@ -187,6 +231,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-practitionerrole-dh-base-1.html"
             }
@@ -200,6 +248,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-practitionerrole-withpractitionerident-1.html"
@@ -215,6 +267,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:complex-type"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-humanname-dh-base-1.html"
             }
@@ -228,6 +284,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2.html"
@@ -243,6 +303,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Composition-28bbf331-07d0-44a4-9d0b-927e83f483ec.html"
             }
@@ -256,6 +320,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Composition-3354a586-67ce-4038-bc62-9d226cac0d83.html"
@@ -271,6 +339,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Composition-e24d5c0b-77ae-4f57-b03d-b558c1e1eee3.html"
             }
@@ -284,6 +356,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Composition-802b0d9e-579a-4112-a032-72bcf7c3b9e6.html"
@@ -299,6 +375,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Composition-b482beb3-5b73-4dd1-abfc-74fdd77bb297.html"
             }
@@ -312,6 +392,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "DocumentReference"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "DocumentReference-aff0d4ad-15c3-4521-aaff-24371491b531.html"
@@ -327,6 +411,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "DocumentReference"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "DocumentReference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c.html"
             }
@@ -340,6 +428,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "DocumentReference"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "DocumentReference-fc7889ef-477b-45d2-9b76-968ecff5940b.html"
@@ -355,6 +447,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Organization"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Organization-0b27b9e9-50fb-4975-9e60-d053e461828.html"
             }
@@ -368,6 +464,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Organization"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Organization-1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63.html"
@@ -383,6 +483,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Organization"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Organization-3192b0cd-3a67-4cb5-b7d8-198057ba8b67.html"
             }
@@ -396,6 +500,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Patient"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Patient-137f2770-8a52-48c8-98c0-790a29645a1a.html"
@@ -411,6 +519,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Patient"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Patient-7817adef-177a-464c-b56e-27ffc0af4606.html"
             }
@@ -424,6 +536,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Patient"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Patient-f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8.html"
@@ -439,6 +555,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Practitioner"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e.html"
             }
@@ -452,6 +572,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Practitioner"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Practitioner-e75140ff-3476-4efb-b508-20aa6c6fbc77.html"
@@ -467,6 +591,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "PractitionerRole"
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "PractitionerRole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8.html"
             }
@@ -480,6 +608,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "PractitionerRole"
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "PractitionerRole-cb9d944f-1b75-4603-b63a-167460882287.html"
