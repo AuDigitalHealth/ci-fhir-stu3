@@ -153,7 +153,7 @@ This section lists known issues with this specification at the time of publishin
 |[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
 |[<a name="HL7AUBIGSTU3">HL7AUBIGSTU3</a>]| HL7 Australia, Continuous Integration Build STU3, Australian Base Profiles Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019|
-| |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
+| |[https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
