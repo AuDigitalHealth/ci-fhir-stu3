@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-prac-1.html), such as a pharmacist shared medicines list (PSML).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-prac-1.html), such as a pharmacist shared medicines list (PSML).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) (HL7FHIR3]](#HL7FHIR3).
 
