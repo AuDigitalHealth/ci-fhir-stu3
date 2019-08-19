@@ -25,7 +25,7 @@ The following references are recommended to gain a better understanding of FHIR:
 Each profile or extension (StructureDefinition) described by this implementation guide has a separate page that presents the normative definition of that profile or extension and informative content to support implementation.
 
 The content of each page is structured as follows:
-* Profile title followed by the profile status hyperlinked to FHIR  [PublicationStatus](http://hl7.org/fhir/stu3/valueset-publication-status.html).
+* Profile title followed by the profile status hyperlinked to FHIR [PublicationStatus](http://hl7.org/fhir/stu3/valueset-publication-status.html).
 * Usage scenarios includes a short description of the example or expected usage scenarios for that profile that are supported by this implementation guide.
 * Implementation guidance includes guidance specific to the usage scenarios supported by this implementation guide. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.
 * Examples include links to example resources that conform to the profile or extension and that support implementation by demonstrating one or more usage scenarios supported by this implementation guide.
@@ -194,7 +194,3 @@ Slicing rules are:
 * **Ordered**: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)
 * **Rules**: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)
 * **Discriminator**: an element or a list of elements used to discriminate the slices. When a discriminator is provided, the composite of the values of the elements designated in the discriminator is unique and distinct for each possible slice
-
-
-
-
