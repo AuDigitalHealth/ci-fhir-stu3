@@ -150,7 +150,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
   <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">fhir:StructureDefinition.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Base Medication&quot;];
   <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">fhir:StructureDefinition.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
   <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">fhir:StructureDefinition.experimental</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
-  <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">fhir:StructureDefinition.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2019-08-15T12:35:41+10:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">fhir:StructureDefinition.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2019-08-20T13:42:02+10:00&quot;^^xsd:dateTime];
   <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">fhir:StructureDefinition.publisher</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Australian Digital Health Agency&quot;];
   <a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">fhir:StructureDefinition.contact</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -900,8 +900,33 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 24;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.extension:medicationClass.valueCoding:valueCoding&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.extension.valueCoding&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.extension:medicationClass.value[x]&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.extension.value[x]&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">fhir:ElementDefinition.slicing</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">fhir:ElementDefinition.slicing.discriminator</a> [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">fhir:ElementDefinition.slicing.discriminator.type</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;type&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">fhir:ElementDefinition.slicing.discriminator.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;$this&quot; ]         ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">fhir:ElementDefinition.slicing.ordered</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">fhir:ElementDefinition.slicing.rules</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;closed&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Value of extension&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Extension.value[x]&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;Coding&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 25;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.extension:medicationClass.value[x]:valueCoding&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.extension.value[x]&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;valueCoding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Value of extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).&quot; ];
@@ -924,7 +949,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 25;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 26;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.system&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.system&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Identity of the terminology system&quot; ];
@@ -951,7 +976,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 26;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 27;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.version&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.version&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Version of the system - if relevant&quot; ];
@@ -977,7 +1002,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 27;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 28;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.code&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.code&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Symbol in syntax defined by the system&quot; ];
@@ -1003,7 +1028,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 28;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 29;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.display&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -1033,7 +1058,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 29;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 30;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:amt.userSelected&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding.userSelected&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;If this coding was chosen directly by the user&quot; ];
@@ -1060,7 +1085,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \&quot;true\&quot;;     fhir:target dt:CDCoding.codingRationale\\#O   ]&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 30;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 31;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding:mimsPackage&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.coding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;mimsPackage&quot; ];
@@ -1093,7 +1118,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 31;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 32;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.code.text&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -1124,7 +1149,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 32;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 33;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.status&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.status&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;active | inactive | entered-in-error&quot; ];
@@ -1154,7 +1179,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.statusCode&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 33;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 34;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.isBrand&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.isBrand&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;True if a brand&quot; ];
@@ -1179,7 +1204,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;class&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 34;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 35;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.isOverTheCounter&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.isOverTheCounter&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;True if medication does not require a prescription&quot; ];
@@ -1201,7 +1226,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;class&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 35;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 36;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.manufacturer&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.manufacturer&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Physical product manufacturer organisation&quot; ];
@@ -1231,7 +1256,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;w5&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;who.actor&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 36;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 37;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;powder | tablets | capsule +&quot; ];
@@ -1267,7 +1292,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.formCode&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 37;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 38;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">fhir:ElementDefinition.representation</a> [
@@ -1288,7 +1313,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 38;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 39;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">fhir:ElementDefinition.slicing</a> [
@@ -1319,7 +1344,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 39;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 40;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.coding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.coding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">fhir:ElementDefinition.slicing</a> [
@@ -1352,7 +1377,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 40;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 41;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.coding:snomedForm&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.coding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;snomedForm&quot; ];
@@ -1385,7 +1410,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 41;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 42;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.form.text&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -1416,7 +1441,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 42;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 43;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Active or inactive ingredient&quot; ];
@@ -1444,7 +1469,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.scopesRole[typeCode=INGR]&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 43;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 44;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">fhir:ElementDefinition.representation</a> [
@@ -1465,7 +1490,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 44;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 45;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Additional Content defined by implementations&quot; ];
@@ -1489,7 +1514,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 45;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 46;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Extensions that cannot be ignored&quot; ];
@@ -1517,9 +1542,16 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 46;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 47;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">fhir:ElementDefinition.slicing</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">fhir:ElementDefinition.slicing.discriminator</a> [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">fhir:ElementDefinition.slicing.discriminator.type</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;type&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">fhir:ElementDefinition.slicing.discriminator.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;$this&quot; ]         ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">fhir:ElementDefinition.slicing.ordered</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">fhir:ElementDefinition.slicing.rules</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;closed&quot; ]       ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication ingredient&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;The actual ingredient - either a substance (simple ingredient) or another medication.&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ];
@@ -1548,13 +1580,13 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.player&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 47;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept:itemCodeableConcept&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept&quot; ];
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 48;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemCodeableConcept&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;itemCodeableConcept&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Coded Ingredient Product&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;Coding for a substance or medicinal product  that is an ingredient of the medication.&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]&quot; ];
@@ -1573,9 +1605,9 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.player&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 48;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept:itemCodeableConcept.id&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept.id&quot; ];
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 49;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemCodeableConcept.id&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x].id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">fhir:ElementDefinition.representation</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;xmlAttr&quot;;
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0       ];
@@ -1594,9 +1626,9 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 49;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept:itemCodeableConcept.extension&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept.extension&quot; ];
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 50;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemCodeableConcept.extension&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x].extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">fhir:ElementDefinition.slicing</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">fhir:ElementDefinition.slicing.discriminator</a> [
            <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -1625,9 +1657,9 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 50;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept.coding&quot; ];
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 51;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemCodeableConcept.coding&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x].coding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">fhir:ElementDefinition.slicing</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">fhir:ElementDefinition.slicing.discriminator</a> [
            <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -1658,9 +1690,9 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 51;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept:itemCodeableConcept.coding:amtMP&quot; ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept.coding&quot; ];
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 52;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemCodeableConcept.coding:amtMP&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x].coding&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;amtMP&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;AMT Medicinal Product Ingredient&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;A reference to a code defined by a terminology system.&quot; ];
@@ -1691,13 +1723,13 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 52;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept:itemCodeableConcept.text&quot; ];
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 53;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemCodeableConcept.text&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable&quot; ];
          <a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueBoolean</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]       ];
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.itemCodeableConcept.text&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x].text&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Plain text representation of the concept&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.comment">fhir:ElementDefinition.comment</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;Very often the text is the same as a displayName of one of the codings.&quot; ];
@@ -1722,7 +1754,36 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;orim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 53;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 54;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]:itemReference&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:ElementDefinition.sliceName</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;itemReference&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Item Reference&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:ElementDefinition.definition</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;The actual ingredient - either a substance (simple ingredient) or another medication.&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">fhir:ElementDefinition.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;0&quot;^^xsd:nonNegativeInteger ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">fhir:ElementDefinition.max</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">fhir:ElementDefinition.base</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">fhir:ElementDefinition.base.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.item[x]&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">fhir:ElementDefinition.base.min</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:ElementDefinition.base.max</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:ElementDefinition.type</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;Reference&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">fhir:ElementDefinition.type.targetProfile</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org.au/fhir/StructureDefinition/au-medication&quot; ]       ], [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:ElementDefinition.type.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;Reference&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">fhir:ElementDefinition.type.targetProfile</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org.au/fhir/StructureDefinition/au-substance&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:ElementDefinition.mapping</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;script10.6&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;coding.code = //element(*,MedicationType)/DrugCoded/ProductCode\r\rcoding.system = //element(*,MedicationType)/DrugCoded/ProductCodeQualifier\r\rcoding.display = //element(*,MedicationType)/DrugDescription&quot; ]       ], [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;v2&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;RXC-2-Component Code  if medication: RXO-1-Requested Give Code / RXE-2-Give Code / RXD-2-Dispense/Give Code / RXG-4-Give Code / RXA-5-Administered Code&quot; ]       ], [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.player&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 55;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.isActive&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.isActive&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Active ingredient indicator&quot; ];
@@ -1742,7 +1803,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;NA&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 54;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 56;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.amount&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.ingredient.amount&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Strength of ingredient&quot; ];
@@ -1767,7 +1828,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.quantity&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 55;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 57;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Details about packaged medications&quot; ];
@@ -1797,7 +1858,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.player[classCode=CONT]&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 56;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 58;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">fhir:ElementDefinition.representation</a> [
@@ -1818,7 +1879,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 57;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 59;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Additional Content defined by implementations&quot; ];
@@ -1842,7 +1903,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 58;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 60;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Extensions that cannot be ignored&quot; ];
@@ -1870,7 +1931,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 59;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 61;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.container&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.container&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;E.g. box, vial, blister-pack&quot; ];
@@ -1901,7 +1962,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.code&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 60;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 62;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;What is  in the package&quot; ];
@@ -1930,7 +1991,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.scopesRole[typeCode=CONT]&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 61;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 63;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">fhir:ElementDefinition.representation</a> [
@@ -1951,7 +2012,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 62;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 64;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Additional Content defined by implementations&quot; ];
@@ -1975,7 +2036,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 63;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 65;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Extensions that cannot be ignored&quot; ];
@@ -2003,7 +2064,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 64;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 66;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.item[x]&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.item[x]&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;The item in the package&quot; ];
@@ -2027,7 +2088,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.player&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 65;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 67;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.amount&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.content.amount&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Quantity present in the package&quot; ];
@@ -2049,7 +2110,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.quantity&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 66;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 68;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Identifies a single production run&quot; ];
@@ -2079,7 +2140,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].id&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 67;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 69;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.id&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.representation">fhir:ElementDefinition.representation</a> [
@@ -2100,7 +2161,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 68;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 70;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.extension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Additional Content defined by implementations&quot; ];
@@ -2124,7 +2185,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;n/a&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 69;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 71;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.modifierExtension&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Extensions that cannot be ignored&quot; ];
@@ -2152,7 +2213,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;N/A&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 70;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 72;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.lotNumber&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.lotNumber&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Identifier assigned to batch&quot; ];
@@ -2177,7 +2238,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;.id&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 71;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 73;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.expirationDate&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.package.batch.expirationDate&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;When batch will expire&quot; ];
@@ -2202,7 +2263,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:ElementDefinition.mapping.identity</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;rim&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:ElementDefinition.mapping.map</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].expirationTime&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 72;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 74;
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.image&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:ElementDefinition.path</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Medication.image&quot; ];
        <a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:ElementDefinition.short</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Picture of the medication&quot; ];
@@ -2349,7 +2410,7 @@ Raw <a href="StructureDefinition-medication-dh-base-1.ttl" download>ttl</a>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 15, 2019 12:35+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Aug 20, 2019 13:42+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
