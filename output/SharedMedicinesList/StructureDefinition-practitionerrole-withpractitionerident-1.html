@@ -149,14 +149,15 @@
 
 <h4 id="implementation-guidance">Implementation guidance</h4>
 
+<p>No additional guidance is suggested to support implementation of this profile for the overarching usage scenarios this implementation guide is intended to support.</p>
+
 <p>For the expected usage scenario of a PSML document the following guidance applies:</p>
 
 <ul>
-  <li>The role of ‘pharmacist’ will be recorded in the composition author role as PractitionerRole.code.</li>
-  <li>The PractitionerRole.practitioner will be a pharmacist and as such information relating to the pharmacist such as contact details will be recorded in the referenced Practitioner as one more more elements of Practitioner.</li>
-  <li>Availability information (availableTime, notAvailable, and availabilityExceptions) are not expected</li>
+  <li>a code equivalent to pharmacist will be sent</li>
+  <li>the practitioner will be a reference to a Practitioner resource that includes information relating to the pharmacist such as contact details</li>
+  <li>availability information (availableTime, notAvailable, and availabilityExceptions) will not be sent</li>
 </ul>
-
 
 
 <!-- example here -->
@@ -194,7 +195,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitionerrole.html">AUBasePractitionerRole</a>.</p>
 <p>
-This profile was published on Thu Aug 15 12:35:41 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Tue Aug 20 13:42:02 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -939,7 +940,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 15, 2019 12:35+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Aug 20, 2019 13:42+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
