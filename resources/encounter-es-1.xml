@@ -25,6 +25,12 @@
   <differential>
     <element id="Encounter">
       <path value="Encounter" />
+      <constraint>
+        <key value="inv-dh-enc-01" />
+        <severity value="error" />
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()" />
+      </constraint>
     </element>
     <element id="Encounter.extension:encounterDescription">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
@@ -60,12 +66,6 @@
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
       </type>
-      <constraint>
-        <key value="inv-dh-enc-01" />
-        <severity value="error" />
-        <human value="The subject shall at least have a reference or an identifier" />
-        <expression value="reference.exists() or identifier.exists()" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Encounter.period">
