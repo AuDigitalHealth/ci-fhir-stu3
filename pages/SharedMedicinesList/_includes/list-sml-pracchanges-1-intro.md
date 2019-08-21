@@ -1,4 +1,4 @@
-### List of Medicine Items with Change Information Authored by Practitioner *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### List of Medicine Items with Change Information Authored by Practitioner *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 
