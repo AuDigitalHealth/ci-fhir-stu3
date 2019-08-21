@@ -31,7 +31,7 @@ Wherever possible, material in this specification is based on existing standards
 
 This implementation guide is the basis for the corresponding [{{site.data.fhir.igName}} CDA implementation guide [DH2019b]](#DH2019b). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3) or [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a SML CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 2) [HL7AUBIGSTU3]](#HL7AUBIGSTU3) or [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 ## Context and use
 A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.
@@ -60,7 +60,7 @@ For implementers interested in representing shared medicines list information as
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
 
-This implementation guide may not considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
+This implementation guide may not be considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
 
 
 ## Intended audience
@@ -148,12 +148,12 @@ This section lists known issues with this specification at the time of publishin
 
 |[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
 
-|[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
-
 |[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
+|[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
+
 |[<a name="HL7AUBIGSTU3">HL7AUBIGSTU3</a>]| HL7 Australia, Continuous Integration Build STU3, Australian Base Profiles Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019|
-| |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
+| |[http://hl7.org.au/fhir/base/aubase1/](http://hl7.org.au/fhir/base/aubase1/)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
