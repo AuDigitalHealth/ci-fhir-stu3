@@ -28,6 +28,20 @@
   <differential>
     <element id="MedicationStatement">
       <path value="MedicationStatement"/>
+      <constraint>
+        <key value="inv-dh-mst-02"/>
+        <severity value="error"/>
+        <human value="If present, an information source shall at least have a reference, an identifier or a display"/>
+        <expression
+          value="informationSource.exists() implies informationSource.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+      </constraint>
+      <constraint>
+        <key value="inv-dh-mst-03"/>
+        <severity value="error"/>
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value"/>
+        <expression
+          value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()"/>
+      </constraint>
     </element>
     <element id="MedicationStatement.identifier">
       <path value="MedicationStatement.identifier"/>
@@ -41,6 +55,10 @@
           value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"/>
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.context.reference">
+      <path value="MedicationStatement.context.reference" />
+      <min value="1" />
     </element>
     <element id="MedicationStatement.status">
       <path value="MedicationStatement.status"/>
@@ -56,14 +74,17 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
-        />
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
       </type>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationStatement.effective[x]">
       <path value="MedicationStatement.effective[x]"/>
       <mustSupport value="true"/>
+    </element>
+    <element id="MedicationStatement.medication[x]:medicationReference.reference">
+      <path value="MedicationStatement.medication[x].reference" />
+      <min value="1" />
     </element>
     <element id="MedicationStatement.dateAsserted">
       <path value="MedicationStatement.dateAsserted"/>
@@ -74,20 +95,17 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"
-        />
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"/>
       </type>
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"
-        />
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
       </type>
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"
-        />
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -96,16 +114,8 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
-        />
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
       </type>
-      <constraint>
-        <key value="inv-dh-mst-02"/>
-        <severity value="error"/>
-        <human
-          value="The subject shall at least have a reference or an identifier"/>
-        <expression value="reference.exists() or identifier.exists()"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
         <element id="MedicationStatement.taken">
@@ -132,8 +142,7 @@
         <severity value="error"/>
         <human value="The dosage shall at least have text or patient instructions"/>
         <expression
-          value="text.exists() or patientInstruction.exists()"
-        />
+          value="text.exists() or patientInstruction.exists()"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
