@@ -1,1 +1,1 @@
-*[[Draft](http://hl7.org/fhir/stu3/versions.html#maturity)]*
+*[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*

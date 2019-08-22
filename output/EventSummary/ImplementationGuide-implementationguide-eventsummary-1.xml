@@ -3,7 +3,10 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="implementationguide-eventsummary-1"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Event Summary</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-eventsummary-1</pre><div><p>Australian realm implementation guide of the FHIR specification to represent Event Summary records in the My Health Record system and related applications.</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Event Summary</h2><p>The official URL for this implementation guide is: </p><pre>http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-eventsummary-1</pre><div><p>This implementation guide is an HL7™ FHIR® specification to represent an Event Summary (ES).</p>
+<p>The primary aim of this implementation guide is to support implementing ES in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of ES information between healthcare providers.</p>
+<p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>
+<p>This implementation guide does not describe transport or persistence mechanism of the resources described by it.</p>
 </div></div>
   </text>
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/ImplementationGuide/implementationguide-eventsummary-1"/>
@@ -11,6 +14,7 @@
   <name value="Event Summary"/>
   <status value="draft"/>
   <experimental value="true"/>
+  <date value="2019-08-21T13:23:28+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -18,12 +22,15 @@
       <value value="help@digitalhealth.gov.au"/>
     </telecom>
   </contact>
-  <description value="Australian realm implementation guide of the FHIR specification to represent Event Summary records in the My Health Record system and related applications."/>
+  <description value="This implementation guide is an HL7&#x2122; FHIR&#xAE; specification to represent an Event Summary (ES).&#xA; &#xA;The primary aim of this implementation guide is to support implementing ES in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of ES information between healthcare providers.&#xA; &#xA;This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.&#xA; &#xA;This implementation guide does not describe transport or persistence mechanism of the resources described by it."/>
   <copyright value="Copyright &#xA9; 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
   <package id="p1">
     <name value="ES"/>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-composition-es-1.html"/>
       </extension>
@@ -34,6 +41,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-encounter-es-1.html"/>
       </extension>
@@ -44,6 +54,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-patient-dh-base-1.html"/>
       </extension>
@@ -55,6 +68,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-patient-ident-1.html"/>
       </extension>
@@ -65,6 +81,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-practitionerrole-withpractitionerident-1.html"/>
       </extension>
@@ -74,6 +93,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-practitioner-ident-1.html"/>
       </extension>
@@ -84,6 +106,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-organization-ident-1.html"/>
       </extension>
@@ -94,6 +119,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-allergyintolerance-summary-1.html"/>
       </extension>
@@ -104,6 +132,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-list-medseventchanges-1.html"/>
       </extension>
@@ -114,6 +145,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-observation-norelevantfinding-1.html"/>
       </extension>
@@ -124,6 +158,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-condition-summary-1.html"/>
       </extension>
@@ -134,6 +171,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-procedure-summary-1.html"/>
       </extension>
@@ -144,6 +184,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-immunization-summary-1.html"/>
       </extension>
@@ -154,6 +197,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-medicationstatement-summary-1.html"/>
       </extension>
@@ -164,6 +210,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-relatedperson-dh-base-1.html"/>
       </extension>
@@ -175,6 +224,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-organization-dh-base-1.html"/>
       </extension>
@@ -186,6 +238,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-practitioner-dh-base-1.html"/>
       </extension>
@@ -195,6 +250,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-humanname-dh-base-1.html"/>
       </extension>
@@ -204,6 +262,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Bundle-3bb44f10-4350-498c-a629-4bf43df620e9.html"/>
       </extension>
@@ -213,6 +274,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Bundle-a1a25cd7-6553-4a47-9c5c-399050a80f9d.html"/>
       </extension>
@@ -222,6 +286,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Bundle-7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a.html"/>
       </extension>
@@ -231,6 +298,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Composition-565b1e7e-01c1-4379-a3d6-6e21cdea43e9.html"/>
       </extension>
@@ -240,6 +310,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Composition-2384da13-ff91-4e05-930f-2d7a034ea713.html"/>
       </extension>
@@ -249,6 +322,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Composition-672a9ba7-0773-4a7f-ad80-e6ef50950a8d.html"/>
       </extension>
@@ -258,6 +334,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Patient-e6e84607-a0da-4ead-9ed6-5e064fea9fc4.html"/>
       </extension>
@@ -267,6 +346,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Patient-792b4811-2ce7-4531-8893-af827175bcfe.html"/>
       </extension>
@@ -276,6 +358,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Patient-3a72f2d2-c9ed-40a4-beac-01c14dcf244a.html"/>
       </extension>
@@ -285,6 +370,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Patient-d422d1da-6280-4335-8795-b101a61134e4.html"/>
       </extension>
@@ -294,6 +382,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Organization-021fff67-c5ec-438f-9520-ce9bafee1306.html"/>
       </extension>
@@ -303,6 +394,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Organization-d93e5527-afd9-4c54-ab09-ada4fdd8ff13.html"/>
       </extension>
@@ -312,6 +406,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Organization-0903c2ea-252f-4b03-85f4-2ddcf046fbc3.html"/>
       </extension>
@@ -321,6 +418,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="MedicationStatement-32def593-e104-4cee-b8f5-d1f923efd94b.html"/>
       </extension>
@@ -330,6 +430,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="MedicationStatement-9db8a050-0c25-4192-834d-bca1da8ff250.html"/>
       </extension>
@@ -339,6 +442,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="MedicationStatement-fc257fb0-8325-4f85-b29f-4c100346f527.html"/>
       </extension>
@@ -348,6 +454,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="MedicationStatement-df0af202-6da0-4e67-9c22-ebc21ee34309.html"/>
       </extension>
@@ -357,6 +466,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="MedicationStatement-c20c510b-fd91-45eb-bacc-171a9a0261e5.html"/>
       </extension>
@@ -366,6 +478,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="MedicationStatement-bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a.html"/>
       </extension>
@@ -375,6 +490,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="List"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="List-fa11a4f8-9ecc-4a65-9643-74c3c84880f4.html"/>
       </extension>
@@ -384,6 +502,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="List"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="List-6eeee721-3485-4e1f-81b8-450a2143f441.html"/>
       </extension>
@@ -393,6 +514,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="List"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="List-e6e32a80-a307-4833-b997-1e6e7b3abbb3.html"/>
       </extension>
@@ -402,6 +526,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Encounter-98900f15-67f8-48a1-9345-6d5968f2c23e.html"/>
       </extension>
@@ -411,6 +538,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Encounter-6c39fd65-2a5f-42d0-b3db-20b6416e2b9a.html"/>
       </extension>
@@ -420,6 +550,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Encounter-cead9124-f6d8-47ac-b785-8e0fcab3dc13.html"/>
       </extension>
@@ -429,6 +562,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="AllergyIntolerance-a5e03840-1be4-43e0-acd2-c9e288adc4f9.html"/>
       </extension>
@@ -438,6 +574,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="AllergyIntolerance-b21f4cad-024a-4101-a6dd-80d50e29e295.html"/>
       </extension>
@@ -447,6 +586,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="AllergyIntolerance-c7dfc1e4-e2e0-4542-b93a-be297efb0f95.html"/>
       </extension>
@@ -456,6 +598,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Practitioner-40a94071-8373-4d53-a788-63b79c75a3c1.html"/>
       </extension>
@@ -465,6 +610,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Practitioner-6c9f40e7-6f00-4d75-9f39-d57bd620d855.html"/>
       </extension>
@@ -474,6 +622,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c.html"/>
       </extension>
@@ -483,6 +634,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Practitioner-7bfbb28b-e57b-4961-b5f9-4bfc5391b44a.html"/>
       </extension>
@@ -492,6 +646,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="PractitionerRole-e99357bd-b6ad-4ae7-9d99-27cb929e48af.html"/>
       </extension>
@@ -501,6 +658,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="PractitionerRole-45cad6ac-e9a3-418a-8480-4e64132849f2.html"/>
       </extension>
@@ -510,6 +670,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Condition-ed5e2c34-2d28-4d21-a6aa-be7baad865b8.html"/>
       </extension>
@@ -519,6 +682,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Condition-e11fd841-5200-4657-9260-3a041a98ae31.html"/>
       </extension>
@@ -528,6 +694,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Immunization"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Immunization-d2b71673-d1a5-4e1d-9b25-bba47aa26036.html"/>
       </extension>
@@ -537,6 +706,9 @@
       </sourceReference>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Procedure-fed6e796-ac88-459c-af61-de718a48423d.html"/>
       </extension>
@@ -548,7 +720,7 @@
   </package>
   <page>
     <source value="index.html"/>
-    <title value="IG Templage Homepage"/>
+    <title value="Australian Digital Health Agency Event Summary FHIR Implementation Guide"/>
     <kind value="page"/>
   </page>
 </ImplementationGuide>

@@ -1,5 +1,5 @@
 {
-  "package": "au.electronichealth.shared-medicines-list",
+  "package": "au.electronichealth.sharedmedicineslist",
   "version": "1.0.0",
   "fhirVersion": "3.0.1",
   "extensions": [],
@@ -118,7 +118,7 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator": [
       "Patient.birthDate",
-      "Patient.deceasedDateTime"
+      "Patient.deceased[x]"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/encounter-description": [
       "Encounter"
@@ -156,7 +156,7 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/medication-type": [
       "Medication.code.coding",
-      "MedicationStatement.medicationCodeableConcept.coding"
+      "MedicationStatement.medication[x].coding"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/section-author": [
       "Composition.section"
@@ -201,11 +201,13 @@
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
-      "StructureDefinition.differential.element",
-      "StructureDefinition.snapshot.element"
+      "StructureDefinition.differential.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-xml-type": [
       "StructureDefinition.snapshot.element.type.code"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.package.resource"
     ]
   }
 }

@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-prac-1.html), such as a pharmacist shared medicines list (PSML).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a [{{site.data.fhir.igName}} (SML)](StructureDefinition-composition-sml-prac-1.html), such as a pharmacist shared medicines list (PSML).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) (HL7FHIR3]](#HL7FHIR3).
 
@@ -134,7 +134,7 @@ This section lists known issues with this specification at the time of publishin
         <td>More examples are yet to be done.</td>
     </tr>
     <tr>
-        <td>Pharmacist Shared Medicines List CDA Implementation Guide [DH2019b]</td>
+        <td>Shared Medicines List CDA Implementation Guide [DH2019b]</td>
         <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: <a href="https://github.com/-AuDigitalHealth/ci-fhir-stu3">https://github.com/-AuDigitalHealth/ci-fhir-stu3</a> (public) | <a href="https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse">https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse</a> (internal).</td>
     </tr> 
  </tbody>
@@ -146,14 +146,14 @@ This section lists known issues with this specification at the time of publishin
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
-|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
+|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Shared Medicines List CDA Implementation Guide, Version 1.0.|
 
 |[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
 |[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
 |[<a name="HL7AUBIGSTU3">HL7AUBIGSTU3</a>]| HL7 Australia, Continuous Integration Build STU3, Australian Base Profiles Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019|
-| |[http://build.fhir.org/ig/hl7au/au-fhir-base/index.html](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html)|
+| |[https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|

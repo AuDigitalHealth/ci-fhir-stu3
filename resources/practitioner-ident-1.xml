@@ -28,75 +28,18 @@
   <differential>
     <element id="Practitioner">
       <path value="Practitioner"/>
+      <constraint>
+        <key value="inv-dh-prac-01" />
+        <severity value="error" />
+        <human value="At least one practitioner identifier shall at least have a system and a value" />
+        <expression value="identifier.where(system.count() + value.count() >1).exists()" />
+      </constraint>
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier"/>
       <min value="1"/>
       <mustSupport value="true"/>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber">
-      <path value="Practitioner.identifier"/>
-      <sliceName value="employeeNumber"/>
-      <short value="Employee Number"/>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber.type">
-      <path value="Practitioner.identifier.type"/>
-      <short value="Employee number type"/>
-      <min value="1"/>
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/v2/0203"/>
-          <code value="EI"/>
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber.type.coding">
-      <path value="Practitioner.identifier.type.coding"/>
-      <min value="1"/>
-      <max value="1"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="http://hl7.org.au/fhir/ValueSet/au-hl7v2-0203"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber.type.coding.system">
-      <path value="Practitioner.identifier.type.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://hl7.org/fhir/v2/0203"/>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber.type.coding.code">
-      <path value="Practitioner.identifier.type.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="EI"/>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber.system">
-      <path value="Practitioner.identifier.system"/>
-      <short value="Namespace for employee number"/>
-      <min value="1"/>
-      <example>
-        <label value="1"/>
-        <valueUri
-          value="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0/8003620000000000"
-        />
-      </example>
-      <example>
-        <label value="2"/>
-        <valueUri
-          value="http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556"
-        />
-      </example>
-    </element>
-    <element id="Practitioner.identifier:employeeNumber.value">
-      <path value="Practitioner.identifier.value"/>
-      <short value="Employee number"/>
-      <min value="1"/>
-      <example>
-        <label value="1"/>
-        <valueString value="frankburns27"/>
-      </example>
-    </element>
+    </element>    
     <element id="Practitioner.active">
       <path value="Practitioner.active"/>
       <mustSupport value="true"/>
@@ -134,17 +77,33 @@
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification"/>
       <constraint>
-        <key value="inv-dh-prac-01" />
-        <severity value="error" />
-        <human value="The issuer reference shall at least have a reference, an identifier or a display" />        
-        <expression value="issuer.exists() implies (issuer.reference.exists() or issuer.identifier.exists() or issuer.display.exists())" />
-      </constraint>
-      <constraint>
         <key value="inv-dh-prac-02" />
         <severity value="error" />
-        <human value="The issuer organisation shall conform to Base Organization" />
-        <expression value="issuer.exists() implies issuer.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
+        <human value="If present, an issuer shall at least have a reference, an identifier or a display" />        
+        <expression value="issuer.exists() implies issuer.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
+      <constraint>
+        <key value="inv-dh-prac-03" />
+        <severity value="error" />
+        <human value="If present, an issuer organisation shall conform to Base Organization" />
+        <expression value="issuer.reference.exists() implies issuer.all($this.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1'))" />
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.qualification.identifier">
+      <path value="Practitioner.qualification.identifier"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.qualification.code">
+      <path value="Practitioner.qualification.code"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.qualification.period">
+      <path value="Practitioner.qualification.period"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Practitioner.qualification.issuer">
+      <path value="Practitioner.qualification.issuer"/>
       <mustSupport value="true"/>
     </element>
     <element id="Practitioner.communication">
