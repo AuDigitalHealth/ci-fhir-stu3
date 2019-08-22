@@ -25,45 +25,45 @@
   <differential>
     <element id="List">
       <path value="List" />
+      <definition value="A list of medicines authored by a provider at a point in time that describes the medicines an individual is taking."/>
       <short value="A list of medicine items for a patient" />
+      <constraint>
+        <key value="inv-dh-lst-01" />
+        <severity value="error" />
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-lst-02" />
+        <severity value="error" />
+        <human value="The source shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists()" />
+      </constraint>
       <constraint>
         <key value="inv-dh-lst-03" />
         <severity value="error" />
-        <human value="The subject reference shall at least have a reference or an identifier" />
-        <expression value="subject.reference.exists()" />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-lst-04" />
-        <severity value="error" />
-        <human value="The encounter reference shall at least have a reference" />
-        <expression value="encounter.exists() implies encounter .reference.exists()" />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-lst-05" />
-        <severity value="error" />
-        <human value="The source reference  shall at least have a reference or an identifier" />
-        <expression value="source.reference.exists()" />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-lst-07" />
-        <severity value="error" />
-        <human value="The author role reference shall at least have a reference or an identifier" />
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.exists()" />
+        <human value="The author role shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.reference.exists() or extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.identifier.where(system.count() + value.count() >1).exists()" />
       </constraint>
     </element>
     <element id="List.meta">
       <path value="List.meta" />
       <min value="1" />
       <constraint>
-        <key value="inv-dh-lst-01" />
+        <key value="inv-dh-lst-04" />
         <severity value="error" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1'" />
+        <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1'" />
         <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1').exists()" />
       </constraint>
     </element>
     <element id="List.meta.profile">
       <path value="List.meta.profile" />
       <min value="1" />
+    </element>
+    <element id="List.language">
+      <path value="List.language" />
+      <min value="1" />
+      <fixedCode value="en-AU" />
     </element>
     <element id="List.extension:sourceRole">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
@@ -74,14 +74,14 @@
       <short value="Practitioner role that authored the list" />
       <min value="1" />
       <constraint>
-        <key value="inv-dh-lst-02" />
+        <key value="inv-dh-lst-05" />
         <severity value="error" />
         <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
         <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
-    <element id="List.status">
+     <element id="List.status">
       <path value="List.status" />
       <fixedCode value="current" />
       <mustSupport value="true" />
@@ -123,6 +123,10 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="List.encounter.reference">
+      <path value="List.encounter.reference"/>
+      <min value="1"/>
+    </element>
     <element id="List.date">
       <path value="List.date" />
       <min value="1" />
@@ -130,7 +134,7 @@
     </element>
     <element id="List.source">
       <path value="List.source" />
-      <short value="Practitioner referenced by list source role" />
+      <short value="Practitioner referenced by practitioner role that authored the list" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -146,12 +150,6 @@
       <path value="List.entry" />
       <short value="Medicine item with change information" />
       <min value="1" />
-      <constraint>
-        <key value="inv-dh-lst-06" />
-        <severity value="error" />
-        <human value="The medicine item reference shall at least have a reference" />
-        <expression value="item.reference.exists()" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="List.entry.extension:changeDescription">
@@ -180,6 +178,10 @@
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="List.entry.item.reference">
+      <path value="List.entry.item.reference"/>
+      <min value="1"/>
     </element>
   </differential>
 </StructureDefinition>
