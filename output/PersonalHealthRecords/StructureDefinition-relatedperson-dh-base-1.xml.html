@@ -68,7 +68,7 @@
         <li><a href="profiles.html">Profiles</a></li>
         <!--<li><a href="structuremaps.html">Mappings</a></li>-->
         <li><a href="extensions.html">Extensions</a></li>
-       <li><a href="mappings.html">Mapping from Requirements</a></li>
+       <li><a href="mappings.html">Mapping from requirements</a></li>
        <!-- <li><a href="terminology.html">Terminology</a></li>-->
         <!--<li><a href="searchparams.html">Search Parameters</a></li>-->
         <!--<li><a href="capstatements.html">Capability Statements</a></li>-->
@@ -155,7 +155,7 @@ Raw <a href="StructureDefinition-relatedperson-dh-base-1.xml" download>xml</a>
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Base RelatedPerson&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-08-13T14:05:01+10:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-08-21T13:26:32+10:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Australian Digital Health Agency&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -712,8 +712,37 @@ This element is labelled as a modifier because the implicit rules may provide ad
       &lt;/mapping&gt;
     &lt;/element&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;RelatedPerson.identifier:ihiNumber.extension:ihiStatus.valueCoding:valueCoding&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;RelatedPerson.identifier.extension.valueCoding&quot;/&gt;
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;RelatedPerson.identifier.extension.value[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;type&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;$this&quot;/&gt;
+        &lt;/discriminator&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">ordered</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;closed&quot;/&gt;
+      &lt;/slicing&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Value of extension&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Extension.value[x]&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Coding&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;rim&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;N/A&quot;/&gt;
+      &lt;/mapping&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;RelatedPerson.identifier:ihiNumber.extension:ihiStatus.value[x]:valueCoding&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;RelatedPerson.identifier.extension.value[x]&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;valueCoding&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;IHI Number Status Code&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;IHI number status associated with an IHI identifier.&quot;/&gt;
@@ -841,8 +870,37 @@ This element is labelled as a modifier because the implicit rules may provide ad
       &lt;/mapping&gt;
     &lt;/element&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.valueCoding:valueCoding&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;RelatedPerson.identifier.extension.valueCoding&quot;/&gt;
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;RelatedPerson.identifier.extension.value[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;type&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;$this&quot;/&gt;
+        &lt;/discriminator&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">ordered</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;closed&quot;/&gt;
+      &lt;/slicing&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Value of extension&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Extension.value[x]&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/base&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;Coding&quot;/&gt;
+      &lt;/type&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;rim&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;N/A&quot;/&gt;
+      &lt;/mapping&gt;
+    &lt;/element&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.snapshot.element">element</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;RelatedPerson.identifier:ihiNumber.extension:ihiRecordStatus.value[x]:valueCoding&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;RelatedPerson.identifier.extension.value[x]&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.sliceName">sliceName</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;valueCoding&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;IHI Record Status Code&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Coded IHI Record Status.&quot;/&gt;
@@ -5034,7 +5092,7 @@ Applications converting a logical reference to a literal reference may choose to
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Aug 13, 2019 14:05+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Aug 21, 2019 13:26+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
