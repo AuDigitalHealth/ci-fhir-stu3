@@ -1,4 +1,4 @@
-#### Base RelatedPerson *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+### Base RelatedPerson
 
 #### Implementation guidance
 

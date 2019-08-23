@@ -147,18 +147,18 @@
 
 <h4 id="base-practitioner-draft">Base Practitioner <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h4>
 
-<h4 id="implementation-guidance">Implementation guidance</h4>
-<p>For the overarching usage scenarios in this implementation guide it is recommended that:</p>
+<h4 id="identifiers">Identifiers</h4>
+<p>These definitions represent common data held in the Practitioner.identifier element:</p>
 <ul>
-  <li>an Australian address conforms to <a href="http://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-address.html">AU Base Address</a></li>
-  <li>an employee identifier local to an organisation, e.g. a hospital or lab, be sent with:
-    <ul>
-      <li>a type code of ‘EI’ ‘http://terminology.hl7.org/CodeSystem/v2-0203’</li>
-      <li>the system will be filled with a namespace specific to the organisation, e.g. ‘https://territorymedicalcentre.example.com/provider’ or ‘http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556’</li>
-      <li>the value is the actual employee identifier in the organisation’s system, e.g. ‘frankburns27’ or ‘123456’</li>
-    </ul>
-  </li>
+  <li>Employee Number [<a href="http://ns.electronichealth.net.au/id/hpio-scoped/service-provider-individual/1.0">1</a>][<a href="http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0">2</a>]</li>
 </ul>
+
+<h4 id="implementation-guidance">Implementation guidance</h4>
+<p>For the overarching usage scenarios in this implementation guide:</p>
+<ul>
+  <li>it is recommended that an Australian address conforms to the <a href="http://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-address.html">AU Base Address Profile</a></li>
+</ul>
+
 
 
 <!-- example here -->
@@ -196,7 +196,11 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitioner.html">AUBasePractitioner</a>.</p>
 <p>
+<<<<<<< HEAD
+This profile was published on Thu Aug 15 12:35:41 AEST 2019 as a draft by Australian Digital Health Agency.
+=======
 This profile was published on Wed Aug 21 13:12:53 AEST 2019 as a draft by Australian Digital Health Agency.
+>>>>>>> master
 </p>
 
 
@@ -1027,7 +1031,11 @@ Work addresses are not typically entered in this property as they are usually ro
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
+<<<<<<< HEAD
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 15, 2019 12:35+1000. |
+=======
             <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Aug 21, 2019 13:12+1000. |
+>>>>>>> master
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
