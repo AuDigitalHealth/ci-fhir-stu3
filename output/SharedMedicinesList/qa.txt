@@ -1,8 +1,13 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
+<<<<<<< HEAD
+err = 102, warn = 54, info = 4
+Generated Thu Aug 15 12:36:35 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+=======
 err = 70, warn = 54, info = 4
 Generated Wed Aug 21 13:14:28 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+>>>>>>> master
 
  Build Errors : 235 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-96c1bf8a-8321-11e9-bc42-526af7764f64 : 0 / 3
@@ -17,14 +22,14 @@ Generated Wed Aug 21 13:14:28 AEST 2019. FHIR version 3.0.1 for au.electronichea
  C:\work\git\ci-fhir-stu3\examples\medication-9fd129a4-8596-11e9-bc42-526af7764f64 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\medication-a1f99f90-8631-11e9-bc42-526af7764f64 : 1 / 1
  C:\work\git\ci-fhir-stu3\examples\medication-b2169d6e-8664-11e9-bc42-526af7764f64 : 1 / 1
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-167902ee-8654-11e9-bc42-526af7764f64 : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-1b1d78d2-8656-11e9-bc42-526af7764f64 : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-298ca924-8665-11e9-bc42-526af7764f64 : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-32def593-e104-4cee-b8f5-d1f923efd94b : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-7ad75182-859b-11e9-bc42-526af7764f64 : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-e5b4616a-863c-11e9-bc42-526af7764f64 : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-ef09cbec-8637-11e9-bc42-526af7764f64 : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\medicationstatement-f5ac8802-8639-11e9-bc42-526af7764f64 : 0 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-167902ee-8654-11e9-bc42-526af7764f64 : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-1b1d78d2-8656-11e9-bc42-526af7764f64 : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-298ca924-8665-11e9-bc42-526af7764f64 : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-32def593-e104-4cee-b8f5-d1f923efd94b : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-7ad75182-859b-11e9-bc42-526af7764f64 : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-e5b4616a-863c-11e9-bc42-526af7764f64 : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-ef09cbec-8637-11e9-bc42-526af7764f64 : 2 / 0
+ C:\work\git\ci-fhir-stu3\examples\medicationstatement-f5ac8802-8639-11e9-bc42-526af7764f64 : 2 / 0
  C:\work\git\ci-fhir-stu3\examples\organization-084bafa0-866d-11e9-bc42-526af7764f64 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4 : 1 / 2
  C:\work\git\ci-fhir-stu3\examples\patient-55a2e4fc-8321-11e9-bc42-526af7764f64 : 0 / 1
@@ -335,13 +340,29 @@ ERROR: Medication/a1f99f90-8631-11e9-bc42-526af7764f64: Medication.code.coding[0
 WARNING: Medication/b2169d6e-8664-11e9-bc42-526af7764f64: Medication.meta.profile[0]: StructureDefinition reference "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1" could not be resolved
 ERROR: Medication/b2169d6e-8664-11e9-bc42-526af7764f64: Medication.code.coding[0]: unable to find code 21885011000036105 in http://snomed.info/sct for 'http://snomed.info/sct#21885011000036105'
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-167902ee-8654-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/167902ee-8654-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-1b1d78d2-8656-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/1b1d78d2-8656-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/1b1d78d2-8656-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-298ca924-8665-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/298ca924-8665-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/298ca924-8665-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-32def593-e104-4cee-b8f5-d1f923efd94b.xml ==
+ERROR: MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-7ad75182-859b-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/7ad75182-859b-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/7ad75182-859b-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-e5b4616a-863c-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/e5b4616a-863c-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/e5b4616a-863c-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-ef09cbec-8637-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/ef09cbec-8637-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-f5ac8802-8639-11e9-bc42-526af7764f64.xml ==
+ERROR: MedicationStatement/f5ac8802-8639-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medication[x][medicationReference]': minimum required = 1, but only found 0
+ERROR: MedicationStatement/f5ac8802-8639-11e9-bc42-526af7764f64: MedicationStatement: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1, Element 'MedicationStatement.medicationCodeableConcept[medicationCoded]': minimum required = 1, but only found 0
 == C:\work\git\ci-fhir-stu3\examples\organization-084bafa0-866d-11e9-bc42-526af7764f64.xml ==
 WARNING: Organization/084bafa0-866d-11e9-bc42-526af7764f64: Organization.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type
 == C:\work\git\ci-fhir-stu3\examples\organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.xml ==
