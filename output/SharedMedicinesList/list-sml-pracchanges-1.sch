@@ -13,6 +13,7 @@
     <sch:title>f:List</sch:title>
     <sch:rule context="f:List">
       <sch:assert test="count(f:meta) &gt;= 1">meta: minimum cardinality of 'meta' is 1</sch:assert>
+      <sch:assert test="count(f:language) &gt;= 1">language: minimum cardinality of 'language' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/author-role']) &gt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/author-role': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/author-role']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/author-role': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/author-related-person']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/author-related-person': maximum cardinality of 'extension' is 1</sch:assert>
@@ -53,6 +54,16 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:List/f:encounter</sch:title>
+    <sch:rule context="f:List/f:encounter">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &gt;= 1">reference: minimum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &lt;= 1">reference: maximum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
+      <sch:assert test="count(f:display) &lt;= 1">display: maximum cardinality of 'display' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>f:List/f:entry</sch:title>
     <sch:rule context="f:List/f:entry">
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/change-description']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/change-description': maximum cardinality of 'extension' is 1</sch:assert>
@@ -70,6 +81,16 @@
     <sch:rule context="f:List/f:entry/f:extension">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:List/f:entry/f:item</sch:title>
+    <sch:rule context="f:List/f:entry/f:item">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &gt;= 1">reference: minimum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &lt;= 1">reference: maximum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
+      <sch:assert test="count(f:display) &lt;= 1">display: maximum cardinality of 'display' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
