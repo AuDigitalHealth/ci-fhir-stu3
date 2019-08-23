@@ -25,7 +25,7 @@ The following references are recommended to gain a better understanding of FHIR:
 Each profile or extension (StructureDefinition) described by this implementation guide has a separate page that presents the normative definition of that profile or extension and informative content to support implementation.
 
 The content of each page is structured as follows:
-* Profile title followed by the profile status hyperlinked to FHIR [PublicationStatus](http://hl7.org/fhir/stu3/valueset-publication-status.html).
+* Profile title followed by the profile status hyperlinked to FHIR  [PublicationStatus](http://hl7.org/fhir/stu3/valueset-publication-status.html).
 * Usage scenarios includes a short description of the example or expected usage scenarios for that profile that are supported by this implementation guide.
 * Implementation guidance includes guidance specific to the usage scenarios supported by this implementation guide. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.
 * Examples include links to example resources that conform to the profile or extension and that support implementation by demonstrating one or more usage scenarios supported by this implementation guide.
@@ -120,10 +120,10 @@ The content of this implementation guide is a set of FHIR [StructureDefinition](
 
 This implementation guide includes FHIR profiles that are a set of constraints and/or extensions to FHIR base resources or a data types in the format of a StructureDefinition resource. A StructureDefinition describes a structure - a set of data element definitions, and their associated rules of usage – and is hereafter referred to as a ‘profile’ or an ‘extension’.
 
-A profile or extension is identified by its canonical URL (e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1). These canonical URLs are unique to each profile or extension. When valued in an instance, the URL signals the imposition of a set of defined constraints. The URL value provides a globally unique identifier for the profile or extension in question and in the case of a profile or extension described in this implementation guide the major version number is identified by the final digit of the URL.
+A profile or extension is identified by its canonical URL (e.g. http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-es-1). These canonical URLs are unique to each profile or extension. When valued in an instance, the URL signals the imposition of a set of defined constraints. The URL value provides a globally unique identifier for the profile or extension in question and in the case of a profile or extension described in this implementation guide the major version number is identified by the final digit of the URL.
 
 ### Must Support
-The Must Support rules for this implementation guide are defined in [Conformance](conformance.html). A must support flag, when present in this implementation guide, is displayed as letter “S” with red background in the Flag column of the Differential Table and Snapshot Table of a profile or extension, as such <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>.
+The Must Support rules for this implementation guide are defined in [Conformance](conformance.html). A must support flag, when present in this implementation guide, is displayed as letter “S” with red background in the Flag column of the Differential Table and Snapshot Table of a profile or extension.
 
 ### Conformance verbs
 The conformance verbs used in this implementation guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/stu3/conformance-rules.html#conflang). Conformance verbs are present in this implementation guide in [Conformance requirements](conformance.html), and in invariants which are visible in the “Description & Constraints” column of the Differential Table and Snapshot Table of a profile or extension.
@@ -194,3 +194,7 @@ Slicing rules are:
 * **Ordered**: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)
 * **Rules**: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)
 * **Discriminator**: an element or a list of elements used to discriminate the slices. When a discriminator is provided, the composite of the values of the elements designated in the discriminator is unique and distinct for each possible slice
+
+
+
+
