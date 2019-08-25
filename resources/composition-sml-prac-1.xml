@@ -104,13 +104,13 @@
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
         <human value="A patient shall conform to Base Patient" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is Patient).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1')" />
+        <expression value="all($this.reference.exists() implies resolve().where($this is Patient).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-09" />
         <severity value="error" />
         <human value="A related person shall conform to Base RelatedPerson" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is RelatedPerson).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1'))" />
+        <expression value="all($this.reference.exists() implies resolve().where($this is RelatedPerson).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-10" />
