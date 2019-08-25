@@ -98,31 +98,31 @@
         <key value="inv-dh-cmp-07" />
         <severity value="error" />
         <human value="A practitioner shall conform to Base Practitioner" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is Practitioner).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')" />       
+        <expression value="all($this.reference.exists() implies resolve().where($this is Practitioner).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1'))" />       
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
         <human value="A patient shall conform to Base Patient" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is Patient).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')" />
+        <expression value="all($this.reference.exists() implies resolve().where($this is Patient).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1'))" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-09" />
         <severity value="error" />
         <human value="A related person shall conform to Base RelatedPerson" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is RelatedPerson).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" />
+        <expression value="all($this.reference.exists() implies resolve().where($this is RelatedPerson).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1'))" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-10" />
         <severity value="error" />
         <human value="A practitioner role shall conform to Base PractitionerRole" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is PractitionerRole).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1')" />
+        <expression value="all($this.reference.exists() implies resolve().where($this is PractitionerRole).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1'))" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-11" />
         <severity value="error" />
         <human value="An organisation shall conform to Base Organization" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is Organization).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1')" />
+        <expression value="all($this.reference.exists() implies resolve().where($this is Organization).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1'))" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-12" />
