@@ -27,6 +27,19 @@
   <differential>
     <element id="List">
       <path value="List"/>
+      <short value="List of medicine items relevant to an event with change information" />
+      <constraint>
+        <key value="inv-dh-lst-01" />
+        <severity value="error" />
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-lst-02" />
+        <severity value="error" />
+        <human value="The source shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists()" />
+      </constraint>
     </element>
     <element id="List.status">
       <path value="List.status" />
@@ -95,10 +108,6 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="List.entry.deleted">
-      <path value="List.entry.deleted" />
-      <max value="0" />
-    </element>
     <element id="List.entry.item">
       <path value="List.entry.item" />
       <short value="Medicine item" />
@@ -107,6 +116,10 @@
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="List.entry.item.reference">
+      <path value="List.entry.item.reference"/>
+      <min value="1"/>
     </element>
   </differential>
 </StructureDefinition>
