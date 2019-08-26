@@ -69,8 +69,8 @@
       <constraint>
         <key value="inv-dh-sub-01" />
         <severity value="error" />
-        <human value="If present, a substance shall at least have a reference, an identifier or a display" />
-        <expression value="substance.exists() implies substance.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+        <human value="If present, a substance reference shall at least have a reference, an identifier or a display" />
+        <expression value="substanceReference.exists() implies substanceReference.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
       <mustSupport value="true" />
     </element>
