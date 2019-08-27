@@ -82,14 +82,14 @@ When a shared medicines list is sent as part of a document (referenced in Compos
 
 For the expected usage scenario of a PSML document the following guidance applies:
 
-* It is expected that status will be ‘final’.
-* It is expected that author will be the person acting as the pharmacist, and list source role is pharmacist.
-* It is expected that encounter will be sent.
-* Where a sending system can state that one or more medicine items in the list are packed by a pharmacy in a dose administration aid that the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’ or ‘Packed medicines: Unknown’ is sent in note.
+* It is expected that status will be ‘final’
+* It is expected that author will be the person acting as the pharmacist, and list source role is pharmacist
+* It is expected that encounter will be sent
+* Where a sending system can state that one or more medicine items in the list are packed by a pharmacy in a dose administration aid that the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’ or ‘Packed medicines: Unknown’ is sent in note
 * The list is expected to:
-  * include at least one current medicine item (flag is not ‘ceased’).
-  * include all medicines the patient is known to be taking including packed, non-packed, complementary and over the counter medicine items.
-  * include relevant ceased medicine items.
+  * include at least one current medicine item (flag is not ‘ceased’)
+  * include all medicines the patient is known to be taking including packed, non-packed, complementary and over the counter medicine items
+  * include relevant ceased medicine items
 * The list is not expected to:
-  * include recommendations (flag is not to be ‘new-recommended’, ‘prescription-recommended’, ‘review-recommended’, ‘cessation-recommended’, ‘suspension-recommended’ and ‘cancellation-recommended’).
-  * include prescribed medicine items (flag is not to be 'prescribed').
+  * include recommendations (flag is not to be ‘new-recommended’, ‘prescription-recommended’, ‘review-recommended’, ‘cessation-recommended’, ‘suspension-recommended’ and ‘cancellation-recommended’)
+  * include prescribed medicine items (flag is not to be 'prescribed')
