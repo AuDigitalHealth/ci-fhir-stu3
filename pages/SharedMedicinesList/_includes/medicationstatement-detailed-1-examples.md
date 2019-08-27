@@ -49,10 +49,10 @@
                 <td><a href="MedicationStatement-17affe2a-6496-437d-8d1a-22baae41a5ae.ttl.html">Turtle</a></td>
             </tr>     
                <tr>
-                <td><a href="MedicationStatement-298ca924-8665-11e9-bc42-526af7764f64.html">MedicationStatement example 8</a></td>
-                <td>298ca924-8665-11e9-bc42-526af7764f64</td>
-                <td><a href="MedicationStatement-298ca924-8665-11e9-bc42-526af7764f64.xml.html">XML</a></td>
-                <td><a href="MedicationStatement-298ca924-8665-11e9-bc42-526af7764f64.json.html">JSON</a></td>
-                <td><a href="MedicationStatement-298ca924-8665-11e9-bc42-526af7764f64.ttl.html">Turtle</a></td>
+                <td><a href="MedicationStatement-3f99bc18-7edf-4e2a-9eae-86629b56d06e.html">MedicationStatement example 8</a></td>
+                <td>3f99bc18-7edf-4e2a-9eae-86629b56d06e</td>
+                <td><a href="MedicationStatement-3f99bc18-7edf-4e2a-9eae-86629b56d06e.xml.html">XML</a></td>
+                <td><a href="MedicationStatement-3f99bc18-7edf-4e2a-9eae-86629b56d06e.json.html">JSON</a></td>
+                <td><a href="MedicationStatement-3f99bc18-7edf-4e2a-9eae-86629b56d06e.ttl.html">Turtle</a></td>
             </tr>    
 </table>
