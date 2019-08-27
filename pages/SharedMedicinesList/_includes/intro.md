@@ -134,7 +134,7 @@ This section lists known issues with this specification at the time of publishin
         <td>More examples are yet to be done.</td>
     </tr>
     <tr>
-        <td>Pharmacist Shared Medicines List CDA Implementation Guide [DH2019b]</td>
+        <td>Shared Medicines List CDA Implementation Guide [DH2019b]</td>
         <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: <a href="https://github.com/-AuDigitalHealth/ci-fhir-stu3">https://github.com/-AuDigitalHealth/ci-fhir-stu3</a> (public) | <a href="https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse">https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse</a> (internal).</td>
     </tr> 
  </tbody>
@@ -146,7 +146,7 @@ This section lists known issues with this specification at the time of publishin
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
-|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List CDA Implementation Guide, Version 1.0.|
+|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Shared Medicines List CDA Implementation Guide, Version 1.0.|
 
 |[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 

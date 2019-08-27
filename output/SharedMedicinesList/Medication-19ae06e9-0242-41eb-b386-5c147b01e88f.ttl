@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Medication/19ae06e9-0242-41eb-b386-5c147b01e88f> a fhir:Medication;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "19ae06e9-0242-41eb-b386-5c147b01e88f"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 19ae06e9-0242-41eb-b386-5c147b01e88f</p><p><b>meta</b>: </p><p><b>code</b>: warfarin sodium 5 mg tablet <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '22464011000036101' = '22464011000036101', given as 'warfarin sodium 5 mg tablet'})</span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name" ];
+     fhir:Extension.valueString [ fhir:value "Coumadin" ]
+  ];
+  fhir:Medication.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:22464011000036101;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/medication-type" ];
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "http://hl7.org.au/fhir/CodeSystem/medication-type" ];
+           fhir:Coding.code [ fhir:value "UPDSF" ];
+           fhir:Coding.display [ fhir:value "Unbranded product with strengths and form" ]
+         ]
+       ];
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "22464011000036101" ];
+       fhir:Coding.display [ fhir:value "warfarin sodium 5 mg tablet" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "warfarin sodium 5 mg tablet" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Medication/19ae06e9-0242-41eb-b386-5c147b01e88f.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
