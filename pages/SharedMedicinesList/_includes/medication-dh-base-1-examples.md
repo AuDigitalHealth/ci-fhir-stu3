@@ -14,11 +14,11 @@
                 <td><a href="Medication-c09df0db-3050-4b62-bb27-7c9b743d59bd.ttl.html">Turtle</a></td>
             </tr>            
              <tr>
-                <td><a href="Medication-a1f99f90-8631-11e9-bc42-526af7764f64.html">Medication example 3</a></td>
-                <td>a1f99f90-8631-11e9-bc42-526af7764f64</td>
-                <td><a href="Medication-a1f99f90-8631-11e9-bc42-526af7764f64.xml.html">XML</a></td>
-                <td><a href="Medication-a1f99f90-8631-11e9-bc42-526af7764f64.json.html">JSON</a></td>
-                <td><a href="Medication-a1f99f90-8631-11e9-bc42-526af7764f64.ttl.html">Turtle</a></td>
+                <td><a href="Medication-d45954e8-80ae-4610-b235-239e9d352799.html">Medication example 3</a></td>
+                <td>d45954e8-80ae-4610-b235-239e9d352799</td>
+                <td><a href="Medication-d45954e8-80ae-4610-b235-239e9d352799.xml.html">XML</a></td>
+                <td><a href="Medication-d45954e8-80ae-4610-b235-239e9d352799.json.html">JSON</a></td>
+                <td><a href="Medication-d45954e8-80ae-4610-b235-239e9d352799.ttl.html">Turtle</a></td>
            </tr>
               <tr>
                 <td><a href="Medication-4418bed2-2ae9-4d0a-9acd-d70ab8284c50.html">Medication example 4</a></td>
