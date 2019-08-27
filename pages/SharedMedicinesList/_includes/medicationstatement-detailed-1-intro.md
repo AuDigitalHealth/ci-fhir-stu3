@@ -3,8 +3,8 @@
 #### Implementation guidance
 
 For the overarching usage scenarios in this implementation guide:
-* A medicine item that has not yet been taken or has never been taken should be represented with taken ‘n’.
-* A medicine item the patient is currently taking or has taken in the past should be represented with taken ‘y’.
+* A medicine item that has not yet been taken or has never been taken should be represented with taken ‘n’
+* A medicine item the patient is currently taking or has taken in the past should be represented with taken ‘y’
 
 MedicationStatement status should be consistent with the value of List flag. A flag value of type recommendation is not directly linked to a MedicationStatement status. The status should represent the current state of the medicine item for the patient (active, completed, new) not the recommendation:
 
@@ -66,7 +66,7 @@ The datetime in effective[x] is to be interpreted in regards to the combination 
     <tr>
         <td>'y'</td>
         <td>‘completed’</td>
-        <td>effective[x] is the interval of time during which it is being asserted that the patient was taking a medicine.</td>
+        <td>effective[x] is the interval of time during which it is being asserted that the patient was taking a medicine</td>
     </tr>               
 </table>
 

@@ -64,6 +64,7 @@
                             <ul class="frm-set">
                                 <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
                                  <li><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></li>
+                                 <li><a href="StructureDefinition-substance-dh-base-1.html">Substance (Base Substance)</a></li>
                             </ul>
                         </td>
                         <td class="frm-set">

@@ -1,9 +1,9 @@
 <table class="list" width="100%">
             <tr>
-                <td><a href="PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.html">PractitionerRole example 1</a></td>
-                <td>3283ca84-866b-11e9-bc42-526af7764f64</td>
-                <td><a href="PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.xml.html">XML</a></td>
-                <td><a href="PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.json.html">JSON</a></td>
-                <td><a href="PractitionerRole-3283ca84-866b-11e9-bc42-526af7764f64.ttl.html">Turtle</a></td>
+                <td><a href="PractitionerRole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d.html">PractitionerRole example 1</a></td>
+                <td>eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d</td>
+                <td><a href="PractitionerRole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d.xml.html">XML</a></td>
+                <td><a href="PractitionerRole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d.json.html">JSON</a></td>
+                <td><a href="PractitionerRole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d.ttl.html">Turtle</a></td>
             </tr>
   </table>
