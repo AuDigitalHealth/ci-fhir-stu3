@@ -1,23 +1,23 @@
 <Medication xmlns="http://hl7.org/fhir">
-    <id value="b2169d6e-8664-11e9-bc42-526af7764f64"/>
+    <id value="27046ef9-d808-46d4-a028-0ef182b7a8b2"/>
     <meta>
         <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"/>
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
     </meta>
+    <!--  Ferro-Grad C-->
     <code>
-        <!--  Ibuprofen-->
         <coding>
             <extension
                 url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
                 <valueCoding>
                     <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
-                    <code value="UPDSF"/>
-                    <display value="Unbranded product with strengths and form"/>
+                    <code value="BPD"/>
+                    <display value="Branded product with no strengths or form"/>
                 </valueCoding>
             </extension>
             <system value="http://snomed.info/sct"/>
-            <code value="21885011000036105"/>
+            <code value="53373011000036103"/>
         </coding>
-        <text value="Ibuprofen"/>
+        <text value="Ferro-Grad C"/>
     </code>
 </Medication>

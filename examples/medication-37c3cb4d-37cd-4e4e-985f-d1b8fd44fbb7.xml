@@ -1,23 +1,23 @@
 <Medication xmlns="http://hl7.org/fhir">
-    <id value="2f70f312-8323-11e9-bc42-526af7764f64"/>
+    <id value="37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7"/>
     <meta>
         <profile
-            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-known-1"/>
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
     </meta>
-    <!--  Ferro-Grad C-->
     <code>
+        <!--  Paracetamol 500 mg tablet-->
         <coding>
             <extension
                 url="http://hl7.org.au/fhir/StructureDefinition/medication-type">
                 <valueCoding>
                     <system value="http://hl7.org.au/fhir/CodeSystem/medication-type"/>
-                    <code value="BPD"/>
-                    <display value="Branded product with no strengths or form"/>
+                    <code value="UPDSF"/>
+                    <display value="Unbranded product with strengths and form"/>
                 </valueCoding>
             </extension>
             <system value="http://snomed.info/sct"/>
-            <code value="53373011000036103"/>
+            <code value="22464011000036101"/>
         </coding>
-        <text value="Ferro-Grad C"/>
+        <text value="Paracetamol 500 mg tablet"/>
     </code>
 </Medication>
