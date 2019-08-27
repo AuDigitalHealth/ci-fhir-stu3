@@ -25,6 +25,12 @@
   <differential>
     <element id="Immunization">
       <path value="Immunization" />
+      <constraint>
+        <key value="inv-dh-imm-01" />
+        <severity value="error" />
+        <human value="The patient shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="patient.reference.exists() or patient.identifier.where(system.count() + value.count() > 1).exists()" />
+      </constraint>
     </element>
     <element id="Immunization.status">
       <path value="Immunization.status" />
