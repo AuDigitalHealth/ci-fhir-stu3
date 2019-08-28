@@ -52,6 +52,13 @@
       <sliceName value="recorderRelatedPerson"/>
       <short value="Related person that recorded the sensitivity" />
       <max value="1"/>
+      <constraint>
+        <key value="inv-dh-ait-04"/>
+        <severity value="error"/>
+        <human value="A related person shall conform to Base RelatedPerson"/>
+        <expression
+          value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="AllergyIntolerance.clinicalStatus">
