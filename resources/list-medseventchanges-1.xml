@@ -37,8 +37,8 @@
       <constraint>
         <key value="inv-dh-lst-02" />
         <severity value="error" />
-        <human value="The source shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists()" />
+        <human value="If present, a source shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists())" />
       </constraint>
     </element>
     <element id="List.status">
