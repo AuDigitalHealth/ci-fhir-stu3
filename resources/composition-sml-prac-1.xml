@@ -36,7 +36,7 @@
       <constraint>
         <key value="inv-dh-cmp-18" />
         <severity value="error" />
-        <human value="If present, a information recipient shall at least have a reference, an identifier or a display" />
+        <human value="If present, an information recipient shall at least have a reference, an identifier or a display" />
         <expression value="informationRecipient.exists() implies informationRecipient.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
       <constraint>
@@ -350,7 +350,7 @@
         <key value="inv-dh-cmp-17" />
         <severity value="error" />
         <human value="If present, a list shall have the same code as the section" />
-        <expression value="entry.reference.exists() implies entry.resolve().where($this is List).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1')" />
+        <expression value="entry.reference.exists() entry.resolve().where($this is List).exists() implies ((entry.resolve().code.coding.code) = code.coding.code)" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -365,7 +365,7 @@
         <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/administrative-gender" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1" />
       </binding>      
     </element>
     <element id="Composition.section:medications.text">
