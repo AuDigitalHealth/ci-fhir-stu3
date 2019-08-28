@@ -28,6 +28,18 @@
   <differential>
     <element id="Observation">
       <path value="Observation"/>
+      <constraint>
+        <key value="inv-dh-obs-01"/>
+        <severity value="error"/>
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value"/>
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()"/>
+      </constraint>
+      <constraint>
+        <key value="inv-dh-obs-02"/>
+        <severity value="error"/>
+        <human value="If present, a performer shall at least have a reference, an identifier or a display"/>
+        <expression value="performer.exists() implies performer.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+      </constraint>
     </element>
     <element id="Observation.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
@@ -45,16 +57,8 @@
       <type>
         <code value="Reference"/>
         <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
-        />
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"/>
       </type>
-      <constraint>
-        <key value="inv-dh-obs-01"/>
-        <severity value="error"/>
-        <human
-          value="The subject shall at least have a reference or an identifier"/>
-        <expression value="reference.exists() or identifier.exists()"/>
-      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]">

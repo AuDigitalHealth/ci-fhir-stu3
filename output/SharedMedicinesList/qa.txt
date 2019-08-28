@@ -2,7 +2,7 @@
 =========================================
 
 err = 222, warn = 38, info = 4
-Generated Wed Aug 28 08:12:46 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+Generated Wed Aug 28 13:40:40 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 242 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-7f834da9-63f5-4a66-a847-a32c366701ff : 0 / 3
@@ -312,7 +312,7 @@ WARNING: Encounter/038f9aaa-6c3d-4681-b9de-455de06a86d3: Encounter.type[0]: Valu
 ERROR: List/e3677c50-8940-4793-bc43-72a33e5b6460: List: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1, Element 'List.language': minimum required = 1, but only found 0
 ERROR: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.text.div: Illegal element name in the XHTML ('style')
 ERROR: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.text.div: Illegal attribute name in the XHTML ('type' on 'style')
-WARNING: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 not found
+WARNING: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1 not found
 WARNING: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.entry[0].flag: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found
 WARNING: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.entry[1].flag: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found
 WARNING: List/e3677c50-8940-4793-bc43-72a33e5b6460: List.entry[2].flag: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found
@@ -434,9 +434,9 @@ INFORMATION: PractitionerRole/eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d: Practitioner
 WARNING: PractitionerRole/eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d: PractitionerRole.specialty[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 not found
 == C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\composition-sml-prac-1.xml ==
-ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[28].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
-ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[31].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1'
-ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[35].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[30].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
+ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[33].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1'
+ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[38].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
 == C:\work\git\ci-fhir-stu3\resources\encounter-es-1.xml ==
 ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[1].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
 ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[1].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
@@ -446,7 +446,7 @@ ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.elem
 == C:\work\git\ci-fhir-stu3\resources\list-sml-pracchanges-1.xml ==
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[4].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[4].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
-ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1'
+ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1'
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[16].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[16].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[17].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1'
