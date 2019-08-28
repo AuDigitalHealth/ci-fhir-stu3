@@ -2,8 +2,7 @@
 
 #### Implementation guidance
 
-For the expected usage scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
-* It is expected that status will be ‘final’
- 
- 
+* status will be 'final'
+* Observation.value will be 1234391000168107 \|No known current medications\|
