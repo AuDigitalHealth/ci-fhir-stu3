@@ -16,9 +16,12 @@ This profile does not support sending an absence of clinical information as a li
 
 #### Implementation guidance
 
-For the overarching usage scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that a list:
 
-* All medicine items considered relevant by the practitioner preparing the list (the source) should be included in the list:
+* will be sent with all medicine items considered relevant by the practitioner preparing the list (the source) should be included in the list including packed, non-packed, complementary and over the counter medicine items
+* with a List.code of '101.32027' Ceased Medicines will be sent with only ceased medicine items
+* with a List.code of '101.32009' Current Medicines will be sent with new or existing medicine items and no ceased medicine items
+
 <table class="list" width="100%">
   <tr>
     <th>Item</th>
@@ -46,7 +49,7 @@ For the overarching usage scenarios in this implementation guide:
     </tr>
     </table>
 
-When a shared medicines list is sent as part of a document (referenced in Composition.section.entry) rather than as a standalone resource the following guidance applies:
+When a shared medicines list is sent as part of a document (referenced in Composition.section.entry) rather than as a standalone resource the guidance in the following table applies.
 
 <table class="list" width="100%">
   <tr>
@@ -79,17 +82,11 @@ When a shared medicines list is sent as part of a document (referenced in Compos
     </tr>  
   </table> 
 
+Additionally, when the shared medicines list is a PSML document it is expected that:
 
-For the expected usage scenario of a PSML document the following guidance applies:
-
-* It is expected that status will be ‘final’
-* It is expected that author will be the person acting as the pharmacist, and list source role is pharmacist
-* It is expected that encounter will be sent
-* Where a sending system can state that one or more medicine items in the list are packed by a pharmacy in a dose administration aid that the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’ or ‘Packed medicines: Unknown’ is sent in note
-* The list is expected to:
-  * include at least one current medicine item (flag is not ‘ceased’)
-  * include all medicines the patient is known to be taking including packed, non-packed, complementary and over the counter medicine items
-  * include relevant ceased medicine items
-* The list is not expected to:
-  * include recommendations (flag is not to be ‘new-recommended’, ‘prescription-recommended’, ‘review-recommended’, ‘cessation-recommended’, ‘suspension-recommended’ and ‘cancellation-recommended’)
-  * include prescribed medicine items (flag is not to be 'prescribed')
+* if the list has a List.code of '10160–0' History of Medication use Narrative, it will be sent with at least one new or existing medicine item
+* encounter will be sent
+* where a sending system can state that one or more medicine items are packed by a pharmacy in a dose administration aid, the preferred text 'Packed medicines: Yes', 'Packed medicines: No', or 'Packed medicines: Unknown' will be sent in note
+* list items will not include:
+  * recommendations (flag is not to be 'new-recommended', 'prescription-recommended', 'review-recommended', 'cessation-recommended', 'suspension-recommended' and 'cancellation-recommended')
+  * prescribed medicine items (flag is not to be ‘prescribed’)
