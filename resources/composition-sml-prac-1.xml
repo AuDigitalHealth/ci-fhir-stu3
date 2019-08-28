@@ -350,7 +350,7 @@
         <key value="inv-dh-cmp-17" />
         <severity value="error" />
         <human value="If present, a list shall have the same code as the section" />
-        <expression value="entry.reference.exists() entry.resolve().where($this is List).exists() implies ((entry.resolve().code.coding.code) = code.coding.code)" />
+        <expression value="entry.resolve().where($this is List).exists() implies ((entry.resolve().code.coding.code) = code.coding.code)" />
       </constraint>
       <mustSupport value="true" />
     </element>
