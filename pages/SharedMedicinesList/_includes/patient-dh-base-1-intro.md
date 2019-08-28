@@ -2,12 +2,9 @@
 
 #### Implementation guidance
 
-For the overarching usage scenarios in this implementation guide:
-* it is recommended that an Australian address conforms to the [AU Base Address Profile](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-address.html)
+For the overarching usage scenarios in this implementation guide it is recommended that:
+* an Australian address conforms to [AU Base Address](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-address.html)
 
 When sending a shared medicines list to the My Health Record system it is expected that:
-* patient will not include an address
-
-
-
-
+* indigenous status will be sent
+* address will not be sent
