@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="f02c54ad-3562-4f7b-8956-de16769a2a88"/>
+    <meta>
+        <profile
+            value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+        />
+    </meta>
+    <status value="active"/>
+    <medicationReference>
+        <reference value="Medication/c09df0db-3050-4b62-bb27-7c9b743d59bd"/>
+    </medicationReference>
+    <effectivePeriod>
+        <start value="2018-12-10"/>
+        <end value="2019-01-20"/>
+    </effectivePeriod>
+    <dateAsserted value="2018-12-11"/>
+    <subject>
+        <reference value="Patient/43acc1fd-9f9d-4f2f-8649-c290ac7ff847"/>
+    </subject>
+    <taken value="y"/>
+    <reasonCode>
+        <text value="Infection"/>
+    </reasonCode>
+    <dosage>
+        <text value="Take one tablet twice a day"/>
+    </dosage>
+</MedicationStatement>
