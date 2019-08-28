@@ -117,26 +117,25 @@ This section lists known issues with this specification at the time of publishin
     <th>Reference</th>
     <th>Description</th>
   </tr>
- <tr>
+    <tr>
+        <td>Status of this FHIR IG</td>
+        <td>This FHIR IG is currently in progress. While it is expected that a baseline of this FHIR IG will be frozen (possibly as at Trial Use) for the purposes of approval and publication of the corresponding CDA IG, it is not expected that the baseline of this FHIR IG will be approved for use in FHIR implementations.</td>
+    </tr>
+    <tr>
         <td>Terminology publication</td>
-        <td>The following terminology resources are not yet available in NCTS:<ul>
-            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1">https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1</a></li> 
+        <td>The following terminology resources are not yet available in NCTS:<ul> 
             <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 ">https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 </a></li>
             </ul> 
        </td>
     </tr>
-     <tr>
-        <td>Composition (Shared Medicines List)</td>
-        <td>FHIRPath expression for invariant inv-dh-cmp-19 has not been created.</td>
-    </tr>
     <tr>
         <td>Examples</td>
-        <td>More examples are yet to be done.</td>
+        <td>Work on examples in this implementation guide is very early. Fothcoming work is expected to result in several more examples including a Shared Medicines List Document, a Shared Medicines List (not a document), and several Pharmacist Shared Medicines List Documents.</td>
     </tr>
     <tr>
-        <td>Shared Medicines List CDA Implementation Guide [DH2019b]</td>
-        <td>The Shared Medicines List FHIR IG is not yet published; draft content is held in the following repository: <a href="https://github.com/-AuDigitalHealth/ci-fhir-stu3">https://github.com/-AuDigitalHealth/ci-fhir-stu3</a> (public) | <a href="https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse">https://stash.digitalhealth.gov.au/projects/CIL/repos/ci-fhir-stu3/browse</a> (internal).</td>
-    </tr> 
+        <td>Shared Medicines List CDA IG</td>
+        <td>The corresponding CDA IG is currently in progress; an early draft is available from the Downloads page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
+    </tr>
  </tbody>
 </table> 
 
