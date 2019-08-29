@@ -134,7 +134,7 @@ This section lists known issues with this specification at the time of publishin
     </tr>
     <tr>
         <td>Shared Medicines List CDA IG</td>
-        <td>The corresponding CDA IG is currently in progress; an early draft is available from the Downloads page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
+        <td>The corresponding CDA IG is currently in progress; an early draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
     </tr>
  </tbody>
 </table> 
