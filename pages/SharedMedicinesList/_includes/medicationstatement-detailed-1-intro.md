@@ -9,8 +9,8 @@ The value of status is expected to represent the current state of the medicine i
 <table class="list" width="100%">
     <tr>
         <th>Item</th>
-        <th>List flag</th>
-        <th>MedicationStatement status</th>
+        <th>List.entry.flag</th>
+        <th>MedicationStatement.status</th>
     </tr>
     <tr>
         <td>new medicine item</td>
@@ -20,7 +20,7 @@ The value of status is expected to represent the current state of the medicine i
     <tr>
         <td>existing unchanged medicine item</td>
         <td>‘nochange’</td>
-        <td>'active' or 'completed' depending if the patient is currently (active) taking the medicine item</td>
+        <td>'active' or 'completed'</td>
     </tr>
     <tr>
         <td>existing changed medicine item</td>
@@ -53,8 +53,8 @@ The datetime in effective[x] is to be interpreted in regards to the combination 
 
 <table  class="list" width="100%">
     <tr>
-        <th>taken</th>
-        <th>status</th>
+        <th>MedicationStatement.taken</th>
+        <th>MedicationStatement.status</th>
         <th>Intepretation</th>
     </tr>
     <tr>
