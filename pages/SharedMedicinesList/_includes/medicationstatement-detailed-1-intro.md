@@ -7,6 +7,9 @@ For the overarching usage scenarios in this implementation guide it is expected 
 The value of status is expected to represent the current state of the medicine item for the patient (active, completed, new) and be consistent with the value of the List.entry.flag, as per the guidance in the following table.
 
 <table class="list" width="100%">
+	<col style="width:25%"/>
+	<col style="width:50%"/>
+	<col style="width:25%"/>
     <tr>
         <th>Item</th>
         <th>List.entry.flag</th>
@@ -52,6 +55,9 @@ The value of status is expected to represent the current state of the medicine i
 The datetime in effective[x] is to be interpreted in regards to the combination of status and/or taken values, as per the guidance in the following table.
 
 <table  class="list" width="100%">
+	<col style="width:25%"/>
+	<col style="width:25%"/>
+	<col style="width:50%"/>
     <tr>
         <th>MedicationStatement.taken</th>
         <th>MedicationStatement.status</th>
