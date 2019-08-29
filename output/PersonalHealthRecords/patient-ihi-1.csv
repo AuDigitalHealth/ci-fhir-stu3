@@ -422,7 +422,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Time of day of birth","The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.birthDate.value","","","",0,1,"","","","date {[]} {[]}
+"Patient.birthDate.value","","","",0,1,"","","","null {[]} {[]}
 ","Primitive value for date","The actual value","","","","","","","","","",,,,,"",,,,"date.value",0,1,"",""
 "Patient.deceased[x]","","","",0,1,"Y","Y","Y","boolean {[]} {[]}
 dateTime {[]} {[]}","Indicates if the individual is deceased or not","Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
@@ -446,7 +446,7 @@ This element is labeled as a modifier because once a patient is marked as deceas
 ","Deceased Date Accuracy Indicator","General date accuracy indicator coding.","In some circumstances, systems may only have date or datetime data that has unknown or estimated parts.  This coding establishes the acuraccy of the day, month and year parts.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.deceased[x].value","","","",0,1,"","","","dateTime {[]} {[]}
+"Patient.deceased[x].value","","","",0,1,"","","","null {[]} {[]}
 ","Primitive value for dateTime","The actual value","","","","","","","","","",,,,,"",,,,"dateTime.value",0,1,"",""
 "Patient.address","","","",0,*,"Y","","Y","Address {[]} {[]}
 ","Addresses for the individual","Addresses for the individual.","Patient may have multiple addresses with different uses or applicable periods.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","","","",,,,,"",,,,"Patient.address",0,*,"","","addr",".addr","PID-11"

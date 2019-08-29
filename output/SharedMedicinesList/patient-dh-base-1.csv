@@ -452,7 +452,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.org/fhir/StructureDefinition/patient-birthTime""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
 "Patient.birthDate.extension.valueDateTime","valueDateTime","","",0,1,"","","","dateTime {[]} {[]}
 ","Value of extension","Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","","N/A"
-"Patient.birthDate.value","","","",0,1,"","","","date {[]} {[]}
+"Patient.birthDate.value","","","",0,1,"","","","null {[]} {[]}
 ","Primitive value for date","The actual value","","","","","","","","","",,,,,"",,,,"date.value",0,1,"",""
 "Patient.deceased[x]","","","",0,1,"Y","Y","Y","boolean {[]} {[]}
 dateTime {[]} {[]}","Indicates if the individual is deceased or not","Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional.","If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.
@@ -476,7 +476,7 @@ This element is labeled as a modifier because once a patient is marked as deceas
 ","Date accuracy indicator","General date accuracy indicator coding.","In some circumstances, systems may capture date or datetime data that has unknown or estimated parts. This coding indicates the accuracy of the day, month and year parts.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.deceased[x].value","","","",0,1,"","","","dateTime {[]} {[]}
+"Patient.deceased[x].value","","","",0,1,"","","","null {[]} {[]}
 ","Primitive value for dateTime","The actual value","","","","","","","","","",,,,,"",,,,"dateTime.value",0,1,"",""
 "Patient.address","","","",0,*,"Y","","Y","Address {[]} {[]}
 ","Addresses for the individual","Addresses for the individual.","Patient may have multiple addresses with different uses or applicable periods.","May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.","","","","","","","",,,,,"",,,,"Patient.address",0,*,"","","addr",".addr","PID-11"
