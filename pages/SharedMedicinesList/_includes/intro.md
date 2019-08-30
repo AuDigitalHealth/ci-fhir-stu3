@@ -10,10 +10,9 @@
 
 ## Introduction
 
-This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a Shared Medicines Lists (SML).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent Shared Medicines Lists (SML).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
-
 
 ## Document purpose and scope
 
@@ -62,15 +61,12 @@ This implementation guide is an early working specification that is available fo
 
 This implementation guide may not be considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
 
-
 ## Intended audience
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
-This document and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
-
+This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 ## Document Information
-
 
 ### Key Information
 
@@ -90,7 +86,6 @@ This document and related artefacts are technical in nature and the audience is 
         </tr>
     </tbody>
 </table> 
-
 
 ### Product Version History
 <table class="list" width="100%" cellspacing="6">
@@ -124,7 +119,7 @@ This section lists known issues with this specification at the time of publishin
     <tr>
         <td>Terminology publication</td>
         <td>The following terminology resources are not yet available in NCTS:<ul> 
-            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 ">https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 </a></li>
+            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 ">https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1</a></li>
             </ul> 
        </td>
     </tr>
@@ -138,7 +133,6 @@ This section lists known issues with this specification at the time of publishin
     </tr>
  </tbody>
 </table> 
-
 
 ## References
 
@@ -165,9 +159,3 @@ This section lists known issues with this specification at the time of publishin
 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 23 July 2019|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
-
-
-
-
-
-
