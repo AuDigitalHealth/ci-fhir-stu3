@@ -24,7 +24,8 @@ For the overarching usage scenarios in this implementation guide it is expected 
 When the shared medicines list is a PSML document it is expected that:
 
 * status will be ‘final’
-* author will be the person acting as the pharmacist, and composition author role is pharmacist
+* composition author role will be a reference to a PractitionerRole resource that describes the author’s professional role, e.g. 159011008 \|Community pharmacist\|
+* author will be a reference to a Practitioner resource that describes the author, e.g. the pharmacist
 * encounter will be sent
 * an allergies section will only be sent if at least one AllergyIntolerance can be sent
 * a non-empty medications section will be sent and it will contain a List
