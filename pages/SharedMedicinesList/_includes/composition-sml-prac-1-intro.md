@@ -31,4 +31,4 @@ When the shared medicines list is a PSML document it is expected that:
 * a non-empty medications section will be sent and it will contain a List
 * medications section content will be sent as either:
   * one section with the section.code '10160-0' History of Medication use Narrative, or
-  * two sections, one with the section.code '101.32009' Current Medicines and one with the section.code '101.32027' Ceased Medicines
+  * one section with the section.code ‘101.32009’ Current Medicines, and optionally one section with the section.code ‘101.32027’ Ceased Medicines
