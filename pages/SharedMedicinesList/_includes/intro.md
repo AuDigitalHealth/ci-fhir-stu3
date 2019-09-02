@@ -96,9 +96,9 @@ This implementation guide and related artefacts are technical in nature and the 
             <th>Release comments</th>
         </tr>
         <tr>
-            <td>1.0</td>
+            <td>1.0.0</td>
             <td>TBD</td>
-            <td>TBD</td>
+            <td>Initial public release of the shared medicines list implementation guide. Developed to serve as the model for the corresponding shared medicines list CDA IG to support Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table> 
