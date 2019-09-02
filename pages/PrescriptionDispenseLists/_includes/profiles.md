@@ -1,5 +1,6 @@
 <html>
   <div id="segment-content" class="segment"> 
+  {% include publish-box.html %}
   <div class="container">
   <div class="row">
   <div class="inner-wrapper">

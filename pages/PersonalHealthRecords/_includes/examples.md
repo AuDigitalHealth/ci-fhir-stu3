@@ -1,5 +1,5 @@
 # {{ page.title }}
-
+{% include publish-box.html %}
 #### AllergyIntolerance
 
 #### Condition
