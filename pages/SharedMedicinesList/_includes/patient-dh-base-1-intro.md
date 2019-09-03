@@ -1,4 +1,4 @@
-### Base Patient *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Base Patient *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 
