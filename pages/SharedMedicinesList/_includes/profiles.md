@@ -6,7 +6,7 @@
 
 <div class="col-12">
 
-<h2>Profiles</h2>
+<h1>Profiles</h1>
 {% include publish-box.html %}
 <p>The following profiles form part of this implementation guide:</p>
 
