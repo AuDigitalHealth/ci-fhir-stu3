@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "20f15728-f3ac-4877-b55a-107f94dbd00c"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 20f15728-f3ac-4877-b55a-107f94dbd00c</p><p><b>meta</b>: </p><p><b>name</b>: Good Doctor (OFFICIAL)</p></div>"
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "Doctor" ];
+     fhir:HumanName.given [
+       fhir:value "Good";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Dr.";
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
