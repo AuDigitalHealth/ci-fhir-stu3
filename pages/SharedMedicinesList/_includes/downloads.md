@@ -24,4 +24,4 @@ All examples included in this implementation guide are available for download in
 
 The corresponding CDA implementation guides that use the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA are available for download:
 
-[DH_xxxx_SharedMedsList_CDA_IG_v1.0](..\..\..\ci-fhir-stu3\pages\SharedMedicinesList\_includes\DH_xxxx_SharedMedsList_CDA_IG_v1.0.pdf)
+- [DH_xxxx_SharedMedsList_CDA_IG_v1.0](..\..\..\ci-fhir-stu3\pages\SharedMedicinesList\_includes\DH_xxxx_SharedMedsList_CDA_IG_v1.0.pdf)
