@@ -1,14 +1,13 @@
 <html>
 	<div id="segment-content" class="segment">  <!-- segment-content -->
-	{% include publish-box.html %}
-	<div class="container">  <!-- container -->
+		<div class="container">  <!-- container -->
             <div class="row">
             	<div class="inner-wrapper">
 
 <div class="col-12">
 
 <h2>Profiles</h2>
-
+{% include publish-box.html %}
 <div style="border-right-style: none;" id="tabs">
    <div style="border-right-style: none;" id="tabs">
             <ul>

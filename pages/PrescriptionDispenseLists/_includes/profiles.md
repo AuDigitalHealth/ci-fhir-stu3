@@ -1,6 +1,5 @@
 <html>
   <div id="segment-content" class="segment"> 
-  {% include publish-box.html %}
   <div class="container">
   <div class="row">
   <div class="inner-wrapper">
@@ -8,7 +7,7 @@
 <div class="col-12">
 
 <h2>Profiles</h2>
-
+{% include publish-box.html %}
 <p>The following profiles form part of this implementation guide:</p>
 
     <div style="border-right-style: none;" id="tabs">
