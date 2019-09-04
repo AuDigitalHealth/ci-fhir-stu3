@@ -125,7 +125,7 @@ This section lists known issues with this specification at the time of publishin
     </tr>
     <tr>
         <td>Examples</td>
-        <td>Work on examples in this implementation guide is very early. Fothcoming work is expected to result in several more examples including a Shared Medicines List Document, a Shared Medicines List (not a document), and several Pharmacist Shared Medicines List Documents.</td>
+        <td>Work on examples in this implementation guide is very early. Forthcoming work is expected to result in several more examples including a Shared Medicines List Document, a Shared Medicines List (not a document), and several Pharmacist Shared Medicines List Documents.</td>
     </tr>
     <tr>
         <td>Shared Medicines List CDA IG</td>
