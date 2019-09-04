@@ -834,19 +834,19 @@ The table below matches the data items to the corresponding supported element in
                     <td>Document version number (mandatory)</td>
                     <td>023068</td>
                     <td>N/A</td>
-                    <td>CDA</td>
+                    <td>This is managed in the implementation (e.g. FHIR Bundle, CDA)</td>
                 </tr>  
                 <tr>
                     <td>Document instance identifier (mandatory)</td>
                     <td>023067</td>
                     <td>N/A</td>
-                    <td>This is managed in the implementation(e.g. FHIR Bundle, HL7 CDA.) </td>
+                    <td>This is managed in the implementation (e.g. FHIR Bundle, CDA)</td>
                 </tr> 
                 <tr>
                     <td>Date and time of document creation (mandatory)</td>
                     <td>024025</td>
                     <td>N/A</td>
-                    <td>This is managed in the implementation(e.g. FHIR Bundle, HL7 CDA.)</td>
+                    <td>This is managed in the implementation (e.g. FHIR Bundle, CDA)</td>
                  </tr> 
                 <tr>
                     <td>Document type (mandatory)</td>
