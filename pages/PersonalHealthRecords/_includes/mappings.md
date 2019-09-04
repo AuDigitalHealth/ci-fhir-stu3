@@ -1,5 +1,5 @@
 # {{ page.title }}
-
+{% include publish-box.html %}
 This informative section provides mapping from the data items (i.e. requirements) in [Consumer Entered Notes Information Requirements [NEHT2011ao]](index.html#NEHT2011ao) and  [Consumer Entered Health Summary Information Requirements [NEHT2011ar]](index.html#NEHT2011ar).
 
 ### Personal Health Notes
