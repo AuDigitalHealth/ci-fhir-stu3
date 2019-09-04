@@ -131,6 +131,14 @@ This section lists known issues with this specification at the time of publishin
         <td>Shared Medicines List CDA IG</td>
         <td>The corresponding CDA IG is currently in progress; an early draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
     </tr>
+    <tr>
+        <td>Source material errors</td>
+        <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
+    </tr>
+    <tr>
+        <td>Medication instance errors</td>
+        <td>All instances of medication resources that are configured to conform to the <a href="StructureDefinition-medication-dh-base-1.html">Base Medication profile</a> have numerous QA report errors. The source of these errors is the HL7 AU <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medication.html">AU Base Medication profile</a> from which the Agency profile has been derived. Efforts are underway to find an upstream solution.</td>
+    </tr>
  </tbody>
 </table> 
 
