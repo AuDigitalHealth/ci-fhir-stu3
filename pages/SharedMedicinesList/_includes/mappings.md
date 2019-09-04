@@ -61,61 +61,61 @@ The table below matches the data items to the corresponding supported element in
                     <td>Medicines information presentation</td>
                     <td>028359</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
                 <tr>
                     <td>Allergies and Adverse Reactions section</td>
                     <td>028355</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
                 <tr>
                     <td>Allergies and Adverse Reactions header</td>
                     <td>028360</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>                                
                 <tr>
                     <td>No known allergies or adverse reactions</td>
                     <td>028411</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
                  <tr>
                     <td>Current Medicines section</td>
                     <td>028361</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr> 
                  <tr>
                     <td>Current Medicines header</td>
                     <td>028362</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>                             
                 <tr>
                     <td>Ceased Medicines section</td>
                     <td>028363</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
                  <tr>
                     <td>Ceased Medicines header</td>
                     <td>028364</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                </tr>
                <tr>
                     <td>Suppressing Ceased Medicines section</td>
                     <td>028358</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
                <tr>
                     <td>Suppressing codes and medicine identifiers</td>
                     <td>028625</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>               
                <tr>
                     <td>Completeness of PSML document</td>
@@ -139,13 +139,13 @@ The table below matches the data items to the corresponding supported element in
                     <td>No Address for the consumer</td>
                     <td>028319</td>
                     <td>N/A</td>
-                    <td>The business requirements document requires the prohibition of any address for the consumer within the document when uploading to My Health Record. This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by implementation.</td>
+                    <td>The business requirements document requires the prohibition of any address for the consumer within the document when uploading to My Health Record. This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
                 </tr>
                 <tr>
                     <td>No Electronic Communication Detail for the consumer</td>
                     <td>028320</td>
                      <td>N/A</td>
-                    <td>The business requirements document requires the prohibition of any types of electronic communication contact detail for the consumer within the document when uploading to My Health Record. This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by implementation.</td>
+                    <td>The business requirements document requires the prohibition of any types of electronic communication contact detail for the consumer within the document when uploading to My Health Record. This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
                 </tr>
                 <tr>
                     <td>Attribute for Healthcare Setting</td>
@@ -242,7 +242,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Active Ingredient or Brand Name</td>
                     <td>028412</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
 
                 <tr>
@@ -349,13 +349,13 @@ The table below matches the data items to the corresponding supported element in
                     <td>Witheld Medicine Ordering</td>
                     <td>028626</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
                 <tr>
                     <td>Ceased medicines</td>
                     <td>028623</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                   </tr>                                                 
              </tbody>
         </table>
@@ -828,7 +828,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Extensions not permitted (mandatory)</td>
                     <td>028637</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>  
                 <tr>
                     <td>Document version number (mandatory)</td>
@@ -858,7 +858,7 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Document sub-type (mandatory)</td>
                     <td>028671</td>
                     <td rowspan="2">N/A</td>
-                    <td rowspan="2">This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by implementation.</td>
+                    <td rowspan="2">This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
                 </tr> 
                 <tr>
                     <td>028672</td>
