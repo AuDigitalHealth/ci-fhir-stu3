@@ -43,7 +43,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>HPI-I relaxed template package</td>
                     <td>028394</td>
                      <td>N/A</td>
-                    <td> </td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile and handled by an implementation.</td>
                 </tr>                                     
                  <tr>
                     <td>Compatible with Prescription and Dispense Record</td>
