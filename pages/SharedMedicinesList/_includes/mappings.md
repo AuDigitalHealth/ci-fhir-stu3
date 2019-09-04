@@ -1,5 +1,5 @@
 # {{ page.title }}
-
+{% include publish-box.html %}
 ## Mapping from PSML business requirements
 This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0[DH2019m]](index.html#DH2019m).
 
