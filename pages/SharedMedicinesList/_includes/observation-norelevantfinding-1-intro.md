@@ -5,4 +5,4 @@
 For the overarching usage scenarios in this implementation guide it is expected that:
 
 * status will be 'final'
-* Observation.value will be 1234391000168107 \|No known current medications\|
+* Observation.valueCodeableConcept will be 1234391000168107 \|No known current medications\|

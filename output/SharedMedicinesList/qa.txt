@@ -1,8 +1,8 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 204, warn = 34, info = 4
-Generated Tue Sep 03 08:22:02 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 192, warn = 34, info = 4
+Generated Thu Sep 05 13:22:01 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 246 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-7f834da9-63f5-4a66-a847-a32c366701ff : 0 / 3
@@ -33,10 +33,10 @@ Generated Tue Sep 03 08:22:02 AEST 2019. FHIR version 3.0.1 for au.electronichea
  C:\work\git\ci-fhir-stu3\examples\practitionerrole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d : 0 / 2
  C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\composition-sml-prac-1 : 3 / 0
- C:\work\git\ci-fhir-stu3\resources\encounter-es-1 : 3 / 0
+ C:\work\git\ci-fhir-stu3\resources\encounter-es-1 : 1 / 0
  C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\implementationguide-sharedmedicineslist-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\list-sml-pracchanges-1 : 6 / 0
+ C:\work\git\ci-fhir-stu3\resources\list-sml-pracchanges-1 : 2 / 0
  C:\work\git\ci-fhir-stu3\resources\medication-dh-base-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\medicationstatement-detailed-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\observation-norelevantfinding-1 : 1 / 0
@@ -416,9 +416,9 @@ ERROR: Medication/d45954e8-80ae-4610-b235-239e9d352799: Medication.code.coding[0
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-f02c54ad-3562-4f7b-8956-de16769a2a88.xml ==
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-f27faa7d-0433-484a-94ab-5a3f966bd7b1.xml ==
 == C:\work\git\ci-fhir-stu3\examples\organization-24391534-dbe5-44f0-af74-07ca016e7446.xml ==
-WARNING: Organization/24391534-dbe5-44f0-af74-07ca016e7446: Organization.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type
+WARNING: Organization/24391534-dbe5-44f0-af74-07ca016e7446: Organization.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)
 == C:\work\git\ci-fhir-stu3\examples\organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.xml ==
-WARNING: Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4: Organization.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type
+WARNING: Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4: Organization.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)
 == C:\work\git\ci-fhir-stu3\examples\patient-43acc1fd-9f9d-4f2f-8649-c290ac7ff847.xml ==
 WARNING: Patient/43acc1fd-9f9d-4f2f-8649-c290ac7ff847: Patient.extension[0].value.ofType(Coding): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c.xml ==
@@ -433,17 +433,11 @@ ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.different
 ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[33].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1'
 ERROR: StructureDefinition/composition-sml-prac-1: StructureDefinition.differential.element[38].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
 == C:\work\git\ci-fhir-stu3\resources\encounter-es-1.xml ==
-ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[1].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
-ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[1].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/encounter-es-1: StructureDefinition.differential.element[4].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1'
 == C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\implementationguide-sharedmedicineslist-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\list-sml-pracchanges-1.xml ==
-ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[4].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
-ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[4].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1'
-ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[16].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
-ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[16].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/list-sml-pracchanges-1: StructureDefinition.differential.element[17].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1'
 == C:\work\git\ci-fhir-stu3\resources\medication-dh-base-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\medicationstatement-detailed-1.xml ==

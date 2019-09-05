@@ -25,8 +25,8 @@
   <differential>
     <element id="List">
       <path value="List" />
-      <definition value="A list of medicines authored by a provider at a point in time that describes the medicines an individual is taking."/>
       <short value="A list of medicine items for a patient" />
+      <definition value="A list of medicines authored by a provider at a point in time that describes the medicines an individual is taking."/>
       <constraint>
         <key value="inv-dh-lst-01" />
         <severity value="error" />
@@ -66,9 +66,6 @@
       <fixedCode value="en-AU" />
     </element>
     <element id="List.extension:sourceRole">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft" />
-      </extension>
       <path value="List.extension" />
       <sliceName value="sourceRole" />
       <short value="Practitioner role that authored the list" />
@@ -153,9 +150,6 @@
       <mustSupport value="true" />
     </element>
     <element id="List.entry.extension:changeDescription">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="draft" />
-      </extension>
       <path value="List.entry.extension" />
       <sliceName value="changeDescription" />
       <short value="Description of the change to the medicine item" />
