@@ -98,6 +98,9 @@
 
 <div class="col-12">
 
+<p id="publish-box">
+    This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+</p>
 
 <!-- ============BreadCrumb=============== -->
 
@@ -120,7 +123,7 @@
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h2>StructureDefinition-substance-dh-base-1.json</h2>
+<h1>StructureDefinition-substance-dh-base-1.json</h1>
 
 <p>
 Formats: <a href="StructureDefinition-substance-dh-base-1.html">Narrative</a>, <a href="StructureDefinition-substance-dh-base-1.xml.html">XML</a>, <a href="StructureDefinition-substance-dh-base-1.json.html">JSON</a>, <a href="StructureDefinition-substance-dh-base-1.ttl.html">Turtle</a>
@@ -143,7 +146,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a>" : "Base Substance",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a>" : true,
-  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2019-09-03T08:19:31+10:00",
+  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a>" : "2019-09-05T13:20:47+10:00",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "Australian Digital Health Agency",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -156,7 +159,6 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
     }
   ],
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.description">description</a>" : "The purpose of this profile is to provide a base model for the concept of a substance, defining fundamental concepts that form a conforming representation of a substance. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context and where it is desirable to provide some constraint to support appropriate terminology for a substance.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element",
-  "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.purpose">purpose</a>" : "The purpose of this profile is to provide detail for a known substance but to not prescribe the amount or type of detail. ",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.copyright">copyright</a>" : "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a>" : "3.0.1",
   "<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
@@ -331,7 +333,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
             {
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
+                "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
               }
             },
             {
@@ -346,7 +348,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A human language.",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/languages"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/languages"
           }
         }
       },
@@ -533,7 +535,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A code to indicate if the substance is actively used",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-status"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-status"
           }
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
@@ -577,7 +579,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Category or classification of substance",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-category"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-category"
           }
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
@@ -621,7 +623,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Substance codes",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-code"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-code"
           }
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
@@ -1058,7 +1060,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Substance Ingredient codes",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-code"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/substance-code"
           }
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
@@ -1187,7 +1189,7 @@ Raw <a href="StructureDefinition-substance-dh-base-1.json" download>json</a>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Sep 3, 2019 08:19+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 5, 2019 13:20+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
