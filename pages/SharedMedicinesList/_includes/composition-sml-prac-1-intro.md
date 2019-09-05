@@ -1,4 +1,4 @@
-### Shared Medicines List Authored by Practitioner *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Shared Medicines List Authored by Practitioner *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios 
 
@@ -24,10 +24,11 @@ For the overarching usage scenarios in this implementation guide it is expected 
 When the shared medicines list is a PSML document it is expected that:
 
 * status will be ‘final’
-* author will be the person acting as the pharmacist, and composition author role is pharmacist
+* composition author role will be a reference to a PractitionerRole resource that describes the author’s professional role, e.g. 159011008 \|Community pharmacist\|
+* author will be a reference to a Practitioner resource that describes the author, e.g. the pharmacist
 * encounter will be sent
 * an allergies section will only be sent if at least one AllergyIntolerance can be sent
 * a non-empty medications section will be sent and it will contain a List
 * medications section content will be sent as either:
   * one section with the section.code '10160-0' History of Medication use Narrative, or
-  * two sections, one with the section.code '101.32009' Current Medicines and one with the section.code '101.32027' Ceased Medicines
+  * one section with the section.code ‘101.32009’ Current Medicines, and optionally one section with the section.code ‘101.32027’ Ceased Medicines

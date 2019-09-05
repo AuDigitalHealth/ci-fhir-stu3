@@ -1,4 +1,4 @@
-### Medicine Item Statement *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Medicine Item Statement *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 
@@ -7,10 +7,13 @@ For the overarching usage scenarios in this implementation guide it is expected 
 The value of status is expected to represent the current state of the medicine item for the patient (active, completed, new) and be consistent with the value of the List.entry.flag, as per the guidance in the following table.
 
 <table class="list" width="100%">
+	<col style="width:25%"/>
+	<col style="width:50%"/>
+	<col style="width:25%"/>
     <tr>
         <th>Item</th>
-        <th>List flag</th>
-        <th>MedicationStatement status</th>
+        <th>List.entry.flag</th>
+        <th>MedicationStatement.status</th>
     </tr>
     <tr>
         <td>new medicine item</td>
@@ -20,7 +23,7 @@ The value of status is expected to represent the current state of the medicine i
     <tr>
         <td>existing unchanged medicine item</td>
         <td>‘nochange’</td>
-        <td>'active' or 'completed' depending if the patient is currently (active) taking the medicine item</td>
+        <td>'active' or 'completed'</td>
     </tr>
     <tr>
         <td>existing changed medicine item</td>
@@ -52,10 +55,13 @@ The value of status is expected to represent the current state of the medicine i
 The datetime in effective[x] is to be interpreted in regards to the combination of status and/or taken values, as per the guidance in the following table.
 
 <table  class="list" width="100%">
+	<col style="width:25%"/>
+	<col style="width:25%"/>
+	<col style="width:50%"/>
     <tr>
-        <th>taken</th>
-        <th>status</th>
-        <th>Intepretation</th>
+        <th>MedicationStatement.taken</th>
+        <th>MedicationStatement.status</th>
+        <th>Interpretation</th>
     </tr>
     <tr>
         <td>'n'</td>

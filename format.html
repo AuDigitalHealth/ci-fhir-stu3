@@ -6,14 +6,14 @@ active: profiles
 {% include header.html %}
 
 {% include container-start.html %}
-
+{% include publish-box.html %}
 <!-- ============BreadCrumb=============== -->
 
 {% include breadcrumbs.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h2>{{[type]}}-{{[id]}}.{{[fmt]}}</h2>
+<h1>{{[type]}}-{{[id]}}.{{[fmt]}}</h1>
 
 <p>
 Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
