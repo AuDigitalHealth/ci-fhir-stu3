@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Health Summary</h1>
- <p>Generated Mon Sep 02 10:34:29 AEST 2019, IG-Publisher Version 3.8.24-SNAPSHOT - Built 2019-08-09T04:44:53.224+10:00 - Git 2a234a81c24f. FHIR version 3.0.1 for au.electronichealth.sharedhealthsummary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Thu Sep 05 14:58:55 AEST 2019, IG-Publisher Version 4.0.5-SNAPSHOT - Built 2019-09-03T13:06:20.836+10:00 - Git bd382306624d. FHIR version 3.0.1 for au.electronichealth.sharedhealthsummary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -1309,19 +1309,19 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[0].resource.section[1].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[0].resource.section[1].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[1].resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[1].resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[1].resource.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[1].resource.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[3].resource.identifier[0]</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[6].resource.medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 22087011000036100 in http://snomed.info/sct for 'http://snomed.info/sct#22087011000036100'</b></td>
@@ -1360,13 +1360,13 @@
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[6].resource.medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, code]) for slice MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1 - None of the discriminator [system, code] have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[6].resource.subject.resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[6].resource.subject.resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[6].resource.subject.resource.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[6].resource.subject.resource.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource.value.ofType(CodeableConcept)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
+     <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource.value.ofType(CodeableConcept)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/205fcc4b-baf2-4683-a48f-b087a5937230: Bundle.entry[7].resource.value.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 1224831000168103 in http://snomed.info/sct for 'http://snomed.info/sct#1224831000168103'</b></td>
@@ -1491,7 +1491,7 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[2].medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, code]) for slice MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1 - None of the discriminator [system, code] have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[3].extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[3].extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[4].identifier[0]</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -1506,37 +1506,37 @@
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[6].code[0].coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice PractitionerRole.code.coding:SNOMEDPractitionerRoleCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[7].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[7].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[8].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1&quot; could not be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[8].patient.contained.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[8].patient.contained.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[8].patient.contained.managingOrganization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[8].patient.contained.managingOrganization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[9].code.coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Procedure.code.coding:snomedCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/procedure-summary-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[10].code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[10].code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[11].code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[11].code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].entry[0].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].entry[0].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1559,7 +1559,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[2].code[0].coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice PractitionerRole.code.coding:SNOMEDPractitionerRoleCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[4].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1&quot; could not be resolved</b></td>
@@ -1568,7 +1568,7 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[5].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1&quot; could not be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[6].value.ofType(CodeableConcept)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[6].value.ofType(CodeableConcept)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[6].value.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 1234391000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1234391000168107'</b></td>
@@ -1583,28 +1583,28 @@
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[9].vaccineCode.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 709541000168107 in http://snomed.info/sct for 'http://snomed.info/sct#709541000168107'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[0].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[0].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[0].contained.reaction[0].manifestation[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[0].contained.reaction[0].manifestation[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[1].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[1].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[1].contained.reaction[0].manifestation[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[1].contained.reaction[0].manifestation[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1627,13 +1627,13 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[2].code[0].coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice PractitionerRole.code.coding:SNOMEDPractitionerRoleCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[4].meta.profile[0]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintollerance-summary-1&quot; could not be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[4].patient.contained.managingOrganization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[4].patient.contained.managingOrganization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[5].medication.ofType(CodeableConcept)</b></td><td><b>error</b></td><td><b>AMT TPUU valueset membership required [coding.where((system = 'http://snomed.info/sct') and (extension.where(url = 'http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding = 'BPDSF')).exists() implies coding.where((system = 'http://snomed.info/sct') and (extension.where(url = 'http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding = 'BPDSF')).first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes']</b></td>
@@ -1771,13 +1771,13 @@
      <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].entry[0].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].entry[0].contained.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1788,7 +1788,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.section[3].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1802,10 +1802,10 @@
      <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1819,10 +1819,10 @@
      <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Patient Summary&quot; is not a valid display for the code {http://loinc.org}60591-5 - should be one of [&quot;Patient summary Document&quot;,&quot;Patient summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies and or adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
+     <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]</b></td><td><b>warning</b></td><td><b>The display &quot;Allergies andor adverse reactions&quot; is not a valid display for the code {http://loinc.org}48765-2 - should be one of [&quot;Allergies and adverse reactions Document&quot;,&quot;Allergies &amp;or adverse reactions Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[2].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1833,7 +1833,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999: Composition.section[1].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found</b></td>
+     <td><b>Composition/ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999: Composition.section[1].emptyReason</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1844,7 +1844,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Condition/b021320c-bc5e-4ae8-b9fc-1ed2d876e889: Condition.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found</b></td>
+     <td><b>Condition/b021320c-bc5e-4ae8-b9fc-1ed2d876e889: Condition.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1855,7 +1855,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Condition/cfa41daf-b5a6-4a05-9166-a4b7c23f08a1: Condition.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found</b></td>
+     <td><b>Condition/cfa41daf-b5a6-4a05-9166-a4b7c23f08a1: Condition.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -2260,7 +2260,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2: Observation.value.ofType(CodeableConcept)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found</b></td>
+     <td><b>Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2: Observation.value.ofType(CodeableConcept)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Observation/dd82cc78-60b0-41cb-83d4-32521d3b9fa2: Observation.value.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 1234391000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1234391000168107'</b></td>
@@ -2274,7 +2274,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/021fff67-c5ec-438f-9520-ce9bafee1306: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/021fff67-c5ec-438f-9520-ce9bafee1306: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -2285,7 +2285,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/64e56b9c-e51d-4157-b379-34e71e3dbfa4: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -2296,7 +2296,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/9df89ebf-b9ab-4ed5-b865-90892c1bbb1a: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -2315,10 +2315,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -2337,10 +2337,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7: Patient.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Patient/cc246543-a0da-4ead-9ed6-5e064fea9ff7: Patient.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -2359,7 +2359,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
