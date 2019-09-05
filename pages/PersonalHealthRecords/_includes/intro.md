@@ -1,4 +1,4 @@
-## {{ site.data.fhir.igName }} FHIR Implementation Guide
+# {{ site.data.fhir.igName }} FHIR Implementation Guide
 <h3 style="color:#ff0000;">Draft for internal use</h3>
 {:.no_toc}
 
@@ -97,7 +97,7 @@ This implementation guide and related artefacts are technical in nature and the 
             <th>Release comments</th>
         </tr>
         <tr>
-            <td>1.0</td>
+            <td>1.0.0</td>
             <td>TBD</td>
             <td>TBD</td>
         </tr>

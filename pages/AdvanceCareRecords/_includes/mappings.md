@@ -1,4 +1,5 @@
 # {{ page.title }}
+{% include publish-box.html %}
 
 This informative section provides mapping from the data items (i.e. requirements) in [Information Requirements - Information regarding the Custodian of an Advance Care Directive v1.0][NEHT2011bf].
 
