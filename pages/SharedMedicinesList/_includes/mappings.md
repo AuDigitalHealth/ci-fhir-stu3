@@ -134,7 +134,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.author(Practitioner as Practitioner with Mandatory
                         Identifier).Practitioner.identifier</td>
                 </tr>
-
                 <tr>
                     <td>No Address for the consumer</td>
                     <td>028319</td>
@@ -227,7 +226,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>N/A</td>
                     <td>This high-level business requirement cannot be mapped directly.</td>
                 </tr>
-
                 <tr>
                     <td rowspan="2">Attribute for Brand Name</td>
                     <td rowspan="2">028335</td>
@@ -244,7 +242,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>N/A</td>
                     <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
-
                 <tr>
                     <td rowspan="2">Attribute for Strength</td>
                     <td  rowspan="2">028392</td>
@@ -481,8 +478,7 @@ The table below matches the data items to the corresponding supported element in
                 </tr>  
                 <tr>
                     <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.address</td>
-                </tr>                  
-             
+                </tr>
                <tr>
                     <td rowspan="2">Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td rowspan="2">024036</td>
@@ -864,10 +860,4 @@ The table below matches the data items to the corresponding supported element in
                     <td>028672</td>
                 </tr>    
      </tbody>
-<table>                                    
-                                    
-                                                            
-             
-          
-
-
+</table>
