@@ -2,7 +2,7 @@
 {% include publish-box.html %}
 This informative section provides mapping from the data items (i.e. requirements) in [Event Summary Information Requirements [NEHT2015a]](index.html#NEHT2015a).
 
-The table below matches the data items to the corresponding supported element in the Event Summary (ES) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [Event Summary](StructureDefinition-composition-es-1.html) (ES) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
 <table class="list" width="100%">
                <thead>
