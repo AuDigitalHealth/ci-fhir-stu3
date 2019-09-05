@@ -47,7 +47,11 @@
                     <tr class="frm-contents" height="80">
                         <td class="frm-null"/>
                         <td class="frm-null"/>
-                        <td class="frm-null"/>
+                       <td class="frm-set">
+                           <ul class="frm-set">
+                                <li><a href="StructureDefinition-list-pdl-1.html">List (List of Prescription and or Dispense Records)</a></li>
+                           </ul>
+                        </td>
                         <td class="frm-null"/>
                         <td class="frm-null"/>
                     </tr> 
