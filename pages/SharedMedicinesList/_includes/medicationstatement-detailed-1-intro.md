@@ -61,7 +61,7 @@ The datetime in effective[x] is to be interpreted in regards to the combination 
     <tr>
         <th>MedicationStatement.taken</th>
         <th>MedicationStatement.status</th>
-        <th>Intepretation</th>
+        <th>Interpretation</th>
     </tr>
     <tr>
         <td>'n'</td>
