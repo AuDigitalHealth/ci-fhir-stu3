@@ -6,11 +6,13 @@
                     
                     <div class="col-12">
                         
-                        <h2>Profiles</h2>
-                        
-                        <p>The following profiles form part of this implementation guide:</p>
-                        
+
+<h1>Profiles</h1>
+{% include publish-box.html %}
+<p>The following profiles form part of this implementation guide:</p>
+
                         <div style="border-right-style: none;" id="tabs">
+                        
                             <div style="border-right-style: none;" id="tabs">
                                 <ul>
                                     <li><a href="#tabs-1">Categorized</a></li>
