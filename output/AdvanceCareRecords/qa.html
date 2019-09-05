@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Advance Care Records</h1>
- <p>Generated Mon Sep 02 10:23:59 AEST 2019, IG-Publisher Version 3.8.24-SNAPSHOT - Built 2019-08-09T04:44:53.224+10:00 - Git 2a234a81c24f. FHIR version 3.0.1 for au.electronichealth.advancecarerecords# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Thu Sep 05 14:46:15 AEST 2019, IG-Publisher Version 4.0.5-SNAPSHOT - Built 2019-09-03T13:06:20.836+10:00 - Git bd382306624d. FHIR version 3.0.1 for au.electronichealth.advancecarerecords# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -710,10 +710,10 @@
      <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found</b></td>
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[2].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[2].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
@@ -739,7 +739,7 @@
      <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].code[0].coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice PractitionerRole.code.coding:SNOMEDPractitionerRoleCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4]</b></td><td><b>error</b></td><td><b>If the author is a practitioner, the role shall be provided [(DocumentReference.author.resolve() is Practitioner) implies DocumentReference.extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()]</b></td>
@@ -754,10 +754,10 @@
      <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
@@ -789,7 +789,7 @@
      <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].code[0].coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice PractitionerRole.code.coding:SNOMEDPractitionerRoleCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].extension[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
@@ -801,10 +801,10 @@
      <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
@@ -872,7 +872,7 @@
      <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found</b></td>
+     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -886,7 +886,7 @@
      <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found</b></td>
+     <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -909,7 +909,7 @@
      <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found</b></td>
+     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.content[0].attachment.contentType</b></td><td><b>warning</b></td><td><b>ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -920,7 +920,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/0b27b9e9-50fb-4975-9e60-d053e461828: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/0b27b9e9-50fb-4975-9e60-d053e461828: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -931,7 +931,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -942,7 +942,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/3192b0cd-3a67-4cb5-b7d8-198057ba8b67: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/3192b0cd-3a67-4cb5-b7d8-198057ba8b67: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>

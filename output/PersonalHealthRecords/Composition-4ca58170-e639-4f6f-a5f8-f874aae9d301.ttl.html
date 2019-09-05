@@ -97,6 +97,9 @@
 
 <div class="col-12">
 
+<p id="publish-box">
+    This is release 1.0.0 of Personal Health Records FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+</p>
 
 <!-- ============BreadCrumb=============== -->
 
@@ -119,7 +122,7 @@
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h2>Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl</h2>
+<h1>Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl</h1>
 
 <p>
 Formats: <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.html">Narrative</a>, <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.xml.html">XML</a>, <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.json.html">JSON</a>, <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl.html">Turtle</a>
@@ -154,16 +157,16 @@ Raw <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl" download>ttl<
        <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Personal Health Summary&quot; ]     ]
   ];
   <a href="http://hl7.org/fhir/STU3/composition.html#Composition.subject">fhir:Composition.subject</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/5440dd6d-154e-44ef-881b-19caa274b6c4&quot; ]
+     <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/5440dd6d-154e-44ef-881b-19caa274b6c4&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/composition.html#Composition.date">fhir:Composition.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-12-01T09:00:15+10:00&quot;^^xsd:dateTime];
   <a href="http://hl7.org/fhir/STU3/composition.html#Composition.author">fhir:Composition.author</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/5440dd6d-154e-44ef-881b-19caa274b6c4&quot; ]
+     <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/5440dd6d-154e-44ef-881b-19caa274b6c4&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/composition.html#Composition.title">fhir:Composition.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Personal Health Summary&quot;];
   <a href="http://hl7.org/fhir/STU3/composition.html#Composition.custodian">fhir:Composition.custodian</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Organization/e497754a-860b-4777-b583-aca1137d2b46&quot; ]
+     <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Organization/e497754a-860b-4777-b583-aca1137d2b46&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/composition.html#Composition.section">fhir:Composition.section</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -179,11 +182,11 @@ Raw <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl" download>ttl<
        fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n        &lt;table&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Medicine&lt;/th&gt;\n              &lt;th&gt;Dosage&lt;/th&gt;\n              &lt;th&gt;Reason for Medicine&lt;/th&gt;\n              &lt;th&gt;Notes&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Lasix tablet&lt;/td&gt;\n              &lt;td&gt;1 tablet daily&lt;/td&gt;\n              &lt;td&gt;Fluid retention&lt;/td&gt;\n              &lt;td&gt;Prescribed by GP&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Ventolin&lt;/td&gt;\n              &lt;td&gt;Used when necessary&lt;/td&gt;\n              &lt;td&gt;Asthma&lt;/td&gt;\n              &lt;td&gt;Asthma is worse in springtime&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;St John‘s Wort&lt;/td&gt;\n              &lt;td&gt;Directions on bottle&lt;/td&gt;\n              &lt;td&gt;Depression&lt;/td&gt;\n              &lt;td/&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;&quot;     ];
      <a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">fhir:Composition.section.entry</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MedicationStatement/30ea501d-0804-48bc-8585-d35f2441d3a1&quot; ]     ], [
+       <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MedicationStatement/30ea501d-0804-48bc-8585-d35f2441d3a1&quot; ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MedicationStatement/3aa60974-f765-4665-82a4-20bc1afd569b&quot; ]     ], [
+       <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MedicationStatement/3aa60974-f765-4665-82a4-20bc1afd569b&quot; ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MedicationStatement/2d37384a-232c-4e0d-bd31-a3c667bae843&quot; ]     ]
+       <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;MedicationStatement/2d37384a-232c-4e0d-bd31-a3c667bae843&quot; ]     ]
   ], [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
      <a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">fhir:Composition.section.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Allergies and Adverse Reactions&quot; ];
@@ -199,9 +202,9 @@ Raw <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl" download>ttl<
        fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n        &lt;table&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Agent&lt;/th&gt;\n              &lt;th&gt;Reaction Description&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Penicillin&lt;/td&gt;\n              &lt;td&gt;Rash; Nausea and vomiting&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Nuts&lt;/td&gt;\n              &lt;td&gt;Breathing problems&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;&quot;     ];
      <a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">fhir:Composition.section.entry</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;AllergyIntolerance/598b360a-0eb1-4738-9055-8ff40624f8e2&quot; ]     ], [
+       <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;AllergyIntolerance/598b360a-0eb1-4738-9055-8ff40624f8e2&quot; ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;AllergyIntolerance/bd965a8e-344f-44d0-9367-ccd22ee2a5a1&quot; ]     ]
+       <a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;AllergyIntolerance/bd965a8e-344f-44d0-9367-ccd22ee2a5a1&quot; ]     ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -242,7 +245,7 @@ Raw <a href="Composition-4ca58170-e639-4f6f-a5f8-f874aae9d301.ttl" download>ttl<
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Sep 2, 2019 10:27+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 5, 2019 14:47+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

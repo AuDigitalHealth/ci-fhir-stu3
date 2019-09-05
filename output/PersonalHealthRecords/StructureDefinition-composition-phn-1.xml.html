@@ -97,6 +97,9 @@
 
 <div class="col-12">
 
+<p id="publish-box">
+    This is release 1.0.0 of Personal Health Records FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+</p>
 
 <!-- ============BreadCrumb=============== -->
 
@@ -119,7 +122,7 @@
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h2>StructureDefinition-composition-phn-1.xml</h2>
+<h1>StructureDefinition-composition-phn-1.xml</h1>
 
 <p>
 Formats: <a href="StructureDefinition-composition-phn-1.html">Narrative</a>, <a href="StructureDefinition-composition-phn-1.xml.html">XML</a>, <a href="StructureDefinition-composition-phn-1.json.html">JSON</a>, <a href="StructureDefinition-composition-phn-1.ttl.html">Turtle</a>
@@ -160,7 +163,7 @@ Raw <a href="StructureDefinition-composition-phn-1.xml" download>xml</a>
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Personal Health Notes&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-09-02T10:27:25+10:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-09-05T14:47:50+10:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Australian Digital Health Agency&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -462,7 +465,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Security Labels from the Healthcare Privacy and Security Classification System.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/security-labels&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/security-labels&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
     &lt;/element&gt;
@@ -493,7 +496,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Codes that represent various types of tags, commonly workflow-related; e.g. &amp;quot;Needs review by Dr. Jones&amp;quot;&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/common-tags&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/common-tags&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
     &lt;/element&gt;
@@ -540,7 +543,7 @@ This element is labelled as a modifier because the implicit rules may provide ad
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/all-languages&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/all-languages&quot;/&gt;
           &lt;/valueReference&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>
@@ -554,7 +557,7 @@ This element is labelled as a modifier because the implicit rules may provide ad
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;extensible&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A human language.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/languages&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/languages&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
     &lt;/element&gt;
@@ -795,7 +798,7 @@ Some reporting work flows require that the original narrative of a final documen
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;required&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The workflow/clinical status of the composition.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/composition-status&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/composition-status&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -848,7 +851,7 @@ Some reporting work flows require that the original narrative of a final documen
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Type of a composition.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/doc-typecodes&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/doc-typecodes&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -893,7 +896,7 @@ Some reporting work flows require that the original narrative of a final documen
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;High-level kind of a clinical document at a macro level.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/doc-classcodes&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/doc-classcodes&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -1110,7 +1113,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Codes specifying the level of confidentiality of the composition.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
@@ -1300,7 +1303,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The way in which a person authenticated a composition.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/composition-attestation-mode&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
@@ -1546,7 +1549,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;required&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The type of relationship between documents.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/document-relationship-type&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
@@ -1726,7 +1729,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;This list of codes represents the main clinical acts being documented.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/v3-ActCode&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/v3-ActCode&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -2019,7 +2022,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Classification of a section of a composition/document.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/doc-section-codes&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/doc-section-codes&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -2089,7 +2092,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;required&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The processing mode that applies to this section.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/list-mode&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/list-mode&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -2133,7 +2136,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;What order applies to the items in the entry.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/list-order&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/list-order&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -2203,7 +2206,7 @@ This element is labeled as a modifier because highly confidential documents must
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;preferred&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If a section is empty, why it is empty.&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/list-empty-reason&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://hl7.org/fhir/ValueSet/list-empty-reason&quot;/&gt;
         &lt;/valueSetReference&gt;
       &lt;/binding&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
@@ -2361,7 +2364,7 @@ This element is labeled as a modifier because highly confidential documents must
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Sep 2, 2019 10:27+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 5, 2019 14:47+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
