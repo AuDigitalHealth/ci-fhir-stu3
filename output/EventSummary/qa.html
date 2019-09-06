@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 295, errors = 117, warn = 34, info = 2 -->
+<!-- broken links = 295, errors = 115, warn = 34, info = 2 -->
 <head>
   <title>Event Summary : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Event Summary</h1>
- <p>Generated Mon Sep 02 10:26:24 AEST 2019, IG-Publisher Version 3.8.24-SNAPSHOT - Built 2019-08-09T04:44:53.224+10:00 - Git 2a234a81c24f. FHIR version 3.0.1 for au.electronichealth.eventsummary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Thu Sep 05 14:53:02 AEST 2019, IG-Publisher Version 4.0.5-SNAPSHOT - Built 2019-09-03T13:06:20.836+10:00 - Git bd382306624d. FHIR version 3.0.1 for au.electronichealth.eventsummary# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -142,7 +142,7 @@
      <td><a href="#C__work_git_ci-fhir-stu3_resources_condition-summary-1"><b>C:\work\git\ci-fhir-stu3\resources\condition-summary-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_encounter-es-1"><b>C:\work\git\ci-fhir-stu3\resources\encounter-es-1</b></a></td><td><b>3</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_encounter-es-1"><b>C:\work\git\ci-fhir-stu3\resources\encounter-es-1</b></a></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_resources_humanname-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
@@ -1118,10 +1118,10 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[0].resource.section[2]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '10160-0')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[1].resource.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[2].resource.identifier[0]</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
@@ -1136,16 +1136,16 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[4].resource.code[0].coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice PractitionerRole.code.coding:SNOMEDPractitionerRoleCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.entry[2].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[6].resource.entry[2].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[8].resource.medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 45219011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#45219011000036101'</b></td>
@@ -1256,7 +1256,7 @@
      <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[10].resource.medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, code]) for slice MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1 - None of the discriminator [system, code] have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Bundle/3bb44f10-4350-498c-a629-4bf43df620e9: Bundle.entry[11].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1279,13 +1279,13 @@
      <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[2].resource.identifier[0]</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[6].resource.entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[6].resource.entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[6].resource.entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[6].resource.entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[8].resource.medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 6632011000036102 in http://snomed.info/sct for 'http://snomed.info/sct#6632011000036102'</b></td>
@@ -1363,10 +1363,10 @@
      <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[9].resource.medication.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td><b>Could not match any discriminators ([system, code]) for slice MedicationStatement.medication[x]:medicationCodeableConcept.coding:mimsPackage in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1 - None of the discriminator [system, code] have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[10].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[10].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[11].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found</b></td>
+     <td><b>Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a: Bundle.entry[11].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1389,28 +1389,28 @@
      <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[0].resource.section[4]</b></td><td><b>error</b></td><td><b>The section shall at least have one entry or an empty reason, but not both [Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '11369-6')).entry.exists() xor Composition.section.where(($this.code.coding.system = 'http://loinc.org') and ($this.code.coding.code = '11369-6')).emptyReason.exists()]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[1].resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[1].resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[2].resource.identifier[0]</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[4].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[4].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[5].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[6].resource.subject.resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[6].resource.subject.resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[6].resource.subject.resource.communication[0].language</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[6].resource.subject.resource.communication[0].language</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[6].resource.subject.resource.generalPractitioner[0].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[6].resource.subject.resource.generalPractitioner[0].resource.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[7].resource.entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[7].resource.entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[8].resource.medication.ofType(CodeableConcept)</b></td><td><b>error</b></td><td><b>AMT TPUU valueset membership required [coding.where((system = 'http://snomed.info/sct') and (extension.where(url = 'http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding = 'BPDSF')).exists() implies coding.where((system = 'http://snomed.info/sct') and (extension.where(url = 'http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding = 'BPDSF')).first().code in 'http://hl7.org.au/fhir/ValueSet/amt-tpuu-codes']</b></td>
@@ -1434,28 +1434,28 @@
      <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[8].resource.medication.ofType(CodeableConcept)</b></td><td><b>error</b></td><td><b>AMT CTPP valueset membership required [coding.where((system = 'http://snomed.info/sct') and (extension.where(url = 'http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding = 'BPGC')).exists() implies coding.where((system = 'http://snomed.info/sct') and (extension.where(url = 'http://hl7.org.au/fhir/CodeSystem/medication-type').valueCoding = 'BPGC')).first().code in 'http://hl7.org.au/fhir/ValueSet/amt-ctpp-codes']</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[9].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[9].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[9].resource.reaction[0].substance</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[9].resource.reaction[0].substance</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[9].resource.reaction[0].manifestation[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[9].resource.reaction[0].manifestation[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[10].resource.vaccineCode.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 837641000168108 in http://snomed.info/sct for 'http://snomed.info/sct#837641000168108'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[10].resource.vaccineCode.coding[1]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[10].resource.vaccineCode.coding[1]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-immunisation-register-vaccine-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[11].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[11].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[12].resource.code.coding[0]</b></td><td><b>error</b></td><td><b>Could not match discriminator ([system]) for slice Procedure.code.coding:snomedCode in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/procedure-summary-1 - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[12].resource.reasonReference[0].resource.subject.resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d: Bundle.entry[12].resource.reasonReference[0].resource.subject.resource.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1661,7 +1661,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/021fff67-c5ec-438f-9520-ce9bafee1306: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/021fff67-c5ec-438f-9520-ce9bafee1306: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1672,7 +1672,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/0903c2ea-252f-4b03-85f4-2ddcf046fbc3: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/0903c2ea-252f-4b03-85f4-2ddcf046fbc3: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1683,7 +1683,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type</b></td>
+     <td><b>Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1702,10 +1702,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found</b></td>
+     <td><b>Patient/792b4811-2ce7-4531-8893-af827175bcfe: Patient.birthDate.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1716,7 +1716,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/d422d1da-6280-4335-8795-b101a61134e4: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Patient/d422d1da-6280-4335-8795-b101a61134e4: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1730,7 +1730,7 @@
      <td><b>Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.meta.profile[1]</b></td><td><b>warning</b></td><td><b>StructureDefinition reference &quot;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ihi-1&quot; could not be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found</b></td>
+     <td><b>Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4: Patient.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1843,12 +1843,6 @@
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/encounter-es-1: StructureDefinition.differential.element[1].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/encounter-es-1: StructureDefinition.differential.element[1].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/encounter-es-1: StructureDefinition.differential.element[4].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1'</b></td>

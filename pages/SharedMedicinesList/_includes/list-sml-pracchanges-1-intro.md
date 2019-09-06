@@ -56,8 +56,8 @@ For the overarching usage scenarios in this implementation guide it is expected 
         <td>Will be represented with the flag of ‘suspended’ and a change description supplied that describes reason for withholding the medicine, expected restart date or request for a clinical review</td>
     </tr>
     <tr>
-        <td>wexisting medicine item with stop recommended</td>
-        <td>Will be represented with the flag of ‘cessation-recommended’, ‘suspension-recommended’ or‘cancellation-recommended’ and a change description that describes the reason for stopping the medicine item</td>
+        <td>existing medicine item with stop recommended</td>
+        <td>Will be represented with the flag of ‘cessation-recommended’, ‘suspension-recommended’ or ‘cancellation-recommended’ and a change description that describes the reason for stopping the medicine item</td>
     </tr>
     </table>
 
