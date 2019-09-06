@@ -14,7 +14,7 @@
       <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description value="The purpose of this profile is to define a representation of a list that may be a Prescription List, or a Dispense List, or a Prescription and Dispense List for a patient in an Australian healthcare context. The source of the list may not be the author of the prescriptions or dispense records.&amp;#xa;&amp;#xa;#### Must Support&amp;#xa;&amp;#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&amp;#xa;&amp;#xa;* The system SHALL be able to include the element when authoring a resource where data is available&amp;#xa;&amp;#xa;* The system SHALL be able to store and retrieve the element&amp;#xa;&amp;#xa;* The system SHALL be able to process resources containing the element" />
+  <description value="The purpose of this profile is to define a representation of a list that may be a Prescription List, or a Dispense List, or a Prescription and Dispense List for a patient in an Australian healthcare context. The source of the list may not be the author of the prescriptions or dispense records.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
   <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -25,25 +25,25 @@
   <differential>
     <element id="List">
       <path value="List" />
-      <short value="Prescription and or Dispense Record List" />
+      <short value="A list of prescriptions or dispense records for a patient" />
       <definition value="A list of all prescriptions, and or, dispense records for a patient." />
       <constraint>
         <key value="inv-dh-lst-01" />
         <severity value="error" />
         <human value="The list shall at least have one entry or an empty reason, but not both" />
-        <expression value="TBD" />
+        <expression value="(entry.exists() and emptyreason.exists()).not()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-02" />
         <severity value="error" />
         <human value="The list shall at least have an authoring related person or a source, but not both" />
-        <expression value="TBD" />
+        <expression value="(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-03" />
         <severity value="error" />
         <human value="If and only if the source is a practitioner, the authoring role shall be provided" />
-        <expression value="TBD" />
+        <expression value="source.resolve() is Practitioner implies extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-04" />
@@ -61,7 +61,7 @@
         <key value="inv-dh-lst-06" />
         <severity value="error" />
         <human value="If present, a source shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="TBD" />
+        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-07" />
@@ -77,7 +77,7 @@
         <key value="inv-dh-lst-08" />
         <severity value="error" />
         <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'" />
-        <expression value="TBD" />
+        <expression value="meta.profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()" />
       </constraint>
     </element>
     <element id="List.meta.profile">
@@ -108,7 +108,7 @@
         <key value="inv-dh-lst-09" />
         <severity value="error" />
         <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="TBD" />
+        <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -126,7 +126,7 @@
         <key value="inv-dh-lst-10" />
         <severity value="error" />
         <human value="A related person shall conform to RelatedPerson with Mandatory Identifier" />
-        <expression value="TBD" />
+        <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
