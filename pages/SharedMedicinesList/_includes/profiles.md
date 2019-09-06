@@ -67,6 +67,7 @@
                                  <li><a href="StructureDefinition-substance-dh-base-1.html">Substance (Base Substance)</a></li>
                             </ul>
                         </td>
+                        <td class="frm-null"/>
                         <td class="frm-set">
                            <ul class="frm-set">
                                 <li><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></li>
@@ -75,7 +76,6 @@
                                 <li><a href="StructureDefinition-list-sml-pracchanges-1.html">List (List of Medicine Items with Change Information Authored by Practitioner)</a></li>
                            </ul>
                         </td>
-                        <td class="frm-null"/>
                         <td class="frm-null"/>
                     </tr> 
                     <tr class="frm-break"><td colspan="6"/></tr>
