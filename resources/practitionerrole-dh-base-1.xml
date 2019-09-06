@@ -104,6 +104,11 @@
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1" />
       </binding>
     </element>
+    <element id="PractitionerRole.code.coding:ANZSCOPractitionerRoleCode.system">
+      <path value="PractitionerRole.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0"/>
+    </element>
     <element id="PractitionerRole.code.coding:SNOMEDPractitionerRoleCode">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="SNOMEDPractitionerRoleCode" />
@@ -115,6 +120,11 @@
         <description value="The role a person plays representing an organization" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1" />
       </binding>
+    </element>
+    <element id="PractitionerRole.code.coding:SNOMEDPractitionerRoleCode.system">
+      <path value="PractitionerRole.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
