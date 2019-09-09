@@ -54,7 +54,7 @@ Specification packages contain only files relevant to the particular clinical do
 ## How to read this document
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of advance care records. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide are the Advance Care Planning and Advance Care Directive Custodian Record profiles, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide are the [Advance Care Planning](StructureDefinition-composition-acp-1.html) and [Advance Care Directive Custodian Record](StructureDefinition-composition-acdcr-1.html) profiles, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 
 ## Editorial note
