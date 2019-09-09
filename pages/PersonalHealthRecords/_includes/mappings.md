@@ -3,7 +3,7 @@
 This informative section provides mapping from the data items (i.e. requirements) in [Consumer Entered Notes Information Requirements [NEHT2011ao]](index.html#NEHT2011ao) and  [Consumer Entered Health Summary Information Requirements [NEHT2011ar]](index.html#NEHT2011ar).
 
 ### Personal Health Notes
-The table below matches the data items to the corresponding supported element in the Personal Health Notes profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
 <table class="list" width="100%">
                <thead>
@@ -106,7 +106,7 @@ The table below matches the data items to the corresponding supported element in
     
 	
 ### Personal Health Summary
-The table below matches the data items to the corresponding supported element in the Personal Health Summary profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [Personal Health Summary](StructureDefinition-composition-phs-1.html) profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
 <table class="list" width="100%">
                <thead>

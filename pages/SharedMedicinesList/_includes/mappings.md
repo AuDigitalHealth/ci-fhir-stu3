@@ -3,7 +3,7 @@
 ## Mapping from PSML business requirements
 This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0[DH2019m]](index.html#DH2019m).
 
-The table below matches the data items to the corresponding supported element in the {{site.data.fhir.igName}} profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
  <table class="list" width="100%">
             <thead>
@@ -134,7 +134,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.author(Practitioner as Practitioner with Mandatory
                         Identifier).Practitioner.identifier</td>
                 </tr>
-
                 <tr>
                     <td>No Address for the consumer</td>
                     <td>028319</td>
@@ -227,7 +226,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>N/A</td>
                     <td>This high-level business requirement cannot be mapped directly.</td>
                 </tr>
-
                 <tr>
                     <td rowspan="2">Attribute for Brand Name</td>
                     <td rowspan="2">028335</td>
@@ -244,7 +242,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>N/A</td>
                     <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
                 </tr>
-
                 <tr>
                     <td rowspan="2">Attribute for Strength</td>
                     <td  rowspan="2">028392</td>
@@ -364,7 +361,7 @@ The table below matches the data items to the corresponding supported element in
 ## Mapping from PSML information requirements
 This informative section provides mapping from the data items (i.e. requirements) in [[Pharmacist Shared Medicines List Information Requirements v2.0][DH2019n]](index.html#DH2019n).
 
-The table below matches the data items to the corresponding supported element in the {{site.data.fhir.igName}} profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
  <table class="list" width="100%">
             <thead>
@@ -481,8 +478,7 @@ The table below matches the data items to the corresponding supported element in
                 </tr>  
                 <tr>
                     <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.address</td>
-                </tr>                  
-             
+                </tr>
                <tr>
                     <td rowspan="2">Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td rowspan="2">024036</td>
@@ -864,10 +860,4 @@ The table below matches the data items to the corresponding supported element in
                     <td>028672</td>
                 </tr>    
      </tbody>
-<table>                                    
-                                    
-                                                            
-             
-          
-
-
+</table>

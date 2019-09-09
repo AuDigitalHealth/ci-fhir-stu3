@@ -24,14 +24,14 @@ This implementation guide is not to be used as a guide to presentation (or rende
 This implementation guide does not describe transport or persistence mechanism of the resources described by it.
 
 Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
-* [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3)
-* [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)
+* [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3)
+* [Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]](#HL7AUF3B2)
 
-Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
+Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Implementation Guide (AU Base 2)] [[HL7AUF3B2]](#HL7AUF3B2)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
 This implementation guide is the basis for the corresponding [Advance Care Planning CDA Implementation Guide [DH2019x1]](#DH2019x1) and [Advance Care Directive Custodian Record CDA Implementation Guide [DH2019x2]](#DH2019x2). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Profiles Implementation Guide](http://build.fhir.org/ig/hl7au/au-fhir-base/index.html) [[HL7AUBIG]](#HL7AUBIG) or [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]](#HL7AUF3B2) or [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 
 ## Context and use
@@ -54,7 +54,7 @@ Specification packages contain only files relevant to the particular clinical do
 ## How to read this document
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of advance care records. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide are the Advance Care Planning and Advance Care Directive Custodian Record profiles, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide are the [Advance Care Planning](StructureDefinition-composition-acp-1.html) and [Advance Care Directive Custodian Record](StructureDefinition-composition-acdcr-1.html) profiles, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 
 ## Editorial note
@@ -117,7 +117,7 @@ This implementation guide and related artefacts are technical in nature and the 
 
 |[<a name="DH2019x2">DH2019x2</a>]| Australian Digital Health Agency, Not yet published, Advance Care Directive Custodian Record CDA Implementation Guide, Version 2.0.|
 
-|[<a name="HL7AUBIG">HL7AUBIG</a>]| HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019|
+|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, Continuous Integration Build STU3, Australian Base Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019|
 | |[https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
