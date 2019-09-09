@@ -106,7 +106,7 @@ The table below matches the data items to the corresponding supported element in
     
 	
 ### Personal Health Summary
-The table below matches the data items to the corresponding supported element in the Personal Health Summary profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [Personal Health Summary](StructureDefinition-composition-phs-1.html) profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
 <table class="list" width="100%">
                <thead>
