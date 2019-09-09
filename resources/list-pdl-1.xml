@@ -195,13 +195,13 @@
         <key value="inv-dh-lst-11" />
         <severity value="error" />
         <human value=" If this list is a Dispense List the item shall not be a prescription" />
-        <expression value="TBD" />
+        <expression value="code.coding.where(code='100.32014').exists() implies (item.reference.resolve()is MedicationRequest).not()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-12" />
         <severity value="error" />
         <human value="If this is list is a Prescription List the item shall not be a dispense record" />
-        <expression value="TBD" />
+        <expression value="code.coding.where(code='57828-6').exists() implies (item.reference.resolve() is MedicationDispense).not()" />
       </constraint>
       <mustSupport value="true" />
     </element>
