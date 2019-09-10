@@ -1,24 +1,6 @@
 This section lists known issues with this profile at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
 
-th {
-  background-color: #f2f2f2;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-</style>
-
-<table>
+<table class="list" width="100%">
 	<col style="width:20%"/>
 	<col style="width:60%"/>
 	<col style="width:20%"/>
