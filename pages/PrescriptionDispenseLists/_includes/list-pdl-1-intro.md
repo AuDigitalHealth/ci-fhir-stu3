@@ -8,26 +8,27 @@
 * A CSP sends or receives a prescription and or a dispense record list with a CIS or another CSP
 * A registered portal or registered repository receives a prescription and or a dispense record list
 
-Expected usage scenario, further scoping the above overarching scenarios is:
+Expected usage scenarios, further scoping the above overarching scenarios are:
 
 * Prescription and dispense view (PDV) exchanged with the My Health Record as a list
 * Prescription and dispense view (PDV) exchanged with the My Health Record as a document
 
 This profile does not support sending medicines change information (e.g. indicating cancellation or newly prescribed items) or event-specific information; in this case it is recommended that information is supplied as a shared medicines list.  
-Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
 #### Implementation guidance
 
-For the supported scenarios in this implementation guide:
+For the above overarching scenarios in this implementation guide:
 
-* Where a sending system wants to include information that cannot be directly included in a supported list entry resource, the information may be included via a resource that is referenced from the supported list entries
-* Although an allowed type of list item is MedicationStatement its use is discouraged 
+* with a List.code of ‘100.32014’ Dispense List will be sent with only dispensed medicine items
+* with a List.code of ‘57828-6’ Prescription list will be sent with only prescribed medicine items
+* although an allowed type of list item is MedicationStatement its use is discouraged 
 
-#### When the list is a PDV
+When the list is a PDV
 * The source will be a Device, and is expected to be the My Health Record system
 * The date will be the time the PDV is generated
 
 #### When the list is part of a document
+When the list is sent as part of a document (referenced in Composition.section.entry) rather than as a standalone resource the following guidance applies:
 <table class="list" width="100%">
   <tr>
     <th>Item</th>
