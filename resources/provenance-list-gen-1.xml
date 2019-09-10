@@ -1,229 +1,242 @@
-<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1" />
-  <name value="ProvenanceListGeneration" />
-  <title value="Provenance for the Generation of a List" />
-  <status value="draft" />
-  <fhirVersion value="3.0.1" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Provenance" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
-  <derivation value="constraint" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1"/>
+  <name value="ProvenanceListGeneration"/>
+  <title value="Provenance for the Generation of a List"/>
+  <status value="draft"/>
+  <fhirVersion value="3.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Provenance"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Provenance">
-      <path value="Provenance" />
-      <short value="A record of the creation of a list resource" />
+      <path value="Provenance"/>
+      <short value="A record of the creation of a list resource"/>
       <constraint>
-        <key value="inv-dh-prov-02" />
-        <severity value="warning" />
-        <human value="At least one agent acting as a authoring entity or an assembling entity shall be provided but not both" />
-        <expression value="Provenence" />
+        <key value="inv-dh-prov-02"/>
+        <severity value="error"/>
+        <human value="At least one agent acting as a authoring entity or an assembling entity shall be provided but not both"/>
+        <expression value="Provenance.agent.role.coding.where($this.system='http://terminology.hl7.org/CodeSystem/provenance-participant-type' and $this.code = 'assembler').exists() xor Provenance.agent.role.coding.where($this.system='http://terminology.hl7.org/CodeSystem/provenance-participant-type' and $this.code = 'author').exists()"/>
+      </constraint>
+      <constraint>
+        <key value="inv-dh-prov-03"/>
+        <severity value="error"/>
+        <human value="At least one target shall be a reference to, or an identifier with at least a system and value, of, a list"/>
+        <expression value="(target.reference.resolve() is List or target.reference.exists().not()) and (target.identifier.where(system.count() + value.count() &gt; 1).exists())"/>
       </constraint>
     </element>
     <element id="Provenance.meta">
-      <path value="Provenance.meta" />
-      <min value="1" />
+      <path value="Provenance.meta"/>
+      <min value="1"/>
       <constraint>
-        <key value="inv-dh-prov-01" />
-        <severity value="warning" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1'" />
-        <expression value="Provenance.meta" />
-        <xpath value="Provenance.meta" />
+        <key value="inv-dh-prov-01"/>
+        <severity value="error"/>
+        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1'"/>
+        <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1').exists()"/>
+        <xpath value="Provenance.meta"/>
       </constraint>
     </element>
     <element id="Provenance.meta.profile">
-      <path value="Provenance.meta.profile" />
-      <min value="1" />
+      <path value="Provenance.meta.profile"/>
+      <min value="1"/>
     </element>
     <element id="Provenance.target">
-      <path value="Provenance.target" />
-      <short value="The created resources, i.e. list(s)" />
-      <constraint>
-        <key value="inv-dh-prov-03" />
-        <severity value="warning" />
-        <human value="At least one target shall be a reference to, or an identifier of, a list" />
-        <expression value="Provenance.target" />
-      </constraint>
-      <mustSupport value="true" />
+      <path value="Provenance.target"/>
+      <short value="The created resources, i.e. list(s)"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.period">
-      <path value="Provenance.period" />
-      <short value="The relevant period for list generation" />
-      <mustSupport value="true" />
+      <path value="Provenance.period"/>
+      <short value="The relevant period for list generation"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.recorded">
-      <path value="Provenance.recorded" />
-      <short value="The relevant period for list generation" />
-      <mustSupport value="true" />
+      <path value="Provenance.recorded"/>
+      <short value="The relevant period for list generation"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.policy">
-      <path value="Provenance.policy" />
-      <short value="The policy or algorithm defining how the list is generated or populated" />
-      <mustSupport value="true" />
+      <path value="Provenance.policy"/>
+      <short value="The policy or algorithm defining how the list is generated or populated"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.activity">
-      <path value="Provenance.activity" />
-      <min value="1" />
+      <path value="Provenance.activity"/>
+      <min value="1"/>
       <fixedCoding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation" />
-        <code value="CREATE" />
+        <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+        <code value="CREATE"/>
       </fixedCoding>
-      <mustSupport value="true" />
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent">
-      <path value="Provenance.agent" />
+      <path value="Provenance.agent"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="role" />
+          <type value="value"/>
+          <path value="role"/>
         </discriminator>
-        <description value="Assembling device" />
-        <ordered value="false" />
-        <rules value="open" />
+        <description value="Assembling Device"/>
+        <ordered value="false"/>
+        <rules value="open"/>
       </slicing>
-      <mustSupport value="true" />
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:preparingEntity">
-      <path value="Provenance.agent" />
-      <sliceName value="preparingEntity" />
+      <path value="Provenance.agent"/>
+      <sliceName value="preparingEntity"/>
       <code>
-        <system value="http://hl7.org/fhir/v3/ParticipationType" />
-        <code value="AUT" />
+        <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+        <code value="AUT"/>
       </code>
-      <short value="Authoring entity" />
-      <min value="0" />
-      <max value="1" />
-      <mustSupport value="true" />
+      <short value="Authoring Entity"/>
+      <min value="0"/>
+      <max value="1"/>
+      <constraint>
+        <key value="inv-dh-prov-05"/>
+        <severity value="error"/>
+        <human value="The authoring entity who participated in the event shall at least have a reference, an identifier or a display"/>
+        <expression value="whoReference.reference.exists() or whoReference.identifier.exists() or whoReference.display.exists()"/>
+      </constraint>
+      <constraint>
+        <key value="inv-dh-prov-04"/>
+        <severity value="error"/>
+        <human value="If present, an entity for whom the change was made shall at least have a reference, an identifier or a display"/>
+        <expression value="onBehalfOfReference.exists() implies onBehalfOfReference.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+      </constraint>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:preparingEntity.role">
-      <path value="Provenance.agent.role" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Provenance.agent:preparingEntity.role.coding.system">
-      <path value="Provenance.agent.role.coding.system" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
-    </element>
-    <element id="Provenance.agent:preparingEntity.role.coding.code">
-      <path value="Provenance.agent.role.coding.code" />
-      <fixedCode value="assembler" />
+      <path value="Provenance.agent.role"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+          <code value="author"/>
+        </coding>
+      </fixedCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:preparingEntity.who[x]">
-      <path value="Provenance.agent.who[x]" />
+      <path value="Provenance.agent.who[x]"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"/>
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:preparingEntity.onBehalfOf[x]">
-      <path value="Provenance.agent.onBehalfOf[x]" />
+      <path value="Provenance.agent.onBehalfOf[x]"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"/>
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:assemblingDevice">
-      <path value="Provenance.agent" />
-      <sliceName value="assemblingDevice" />
-      <short value="Assembling device" />
-      <min value="0" />
-      <max value="1" />
-      <mustSupport value="true" />
+      <path value="Provenance.agent"/>
+      <sliceName value="assemblingDevice"/>
+      <short value="Assembling Device"/>
+      <min value="0"/>
+      <max value="1"/>
+      <constraint>
+        <key value="inv-dh-prov-06"/>
+        <severity value="error"/>
+        <human value="If present, an entity for whom the change was made shall at least have a reference, an identifier or a display"/>
+        <expression value="onBehalfOfReference.exists() implies onBehalfOfReference.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+      </constraint>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:assemblingDevice.role">
-      <path value="Provenance.agent.role" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Provenance.agent:assemblingDevice.role.coding.system">
-      <path value="Provenance.agent.role.coding.system" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
-    </element>
-    <element id="Provenance.agent:assemblingDevice.role.coding.code">
-      <path value="Provenance.agent.role.coding.code" />
-      <fixedCode value="author" />
+      <path value="Provenance.agent.role"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+          <code value="assembler"/>
+        </coding>
+      </fixedCodeableConcept>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:assemblingDevice.who[x]:whoReference">
-      <path value="Provenance.agent.whoReference" />
-      <sliceName value="whoReference" />
+      <path value="Provenance.agent.whoReference"/>
+      <sliceName value="whoReference"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1"/>
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.agent:assemblingDevice.onBehalfOf[x]">
-      <path value="Provenance.agent.onBehalfOf[x]" />
+      <path value="Provenance.agent.onBehalfOf[x]"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1"/>
       </type>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1" />
+        <code value="Reference"/>
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"/>
       </type>
-      <mustSupport value="true" />
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.entity">
-      <path value="Provenance.entity" />
-      <mustSupport value="true" />
+      <path value="Provenance.entity"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.entity.role">
-      <path value="Provenance.entity.role" />
-      <mustSupport value="true" />
+      <path value="Provenance.entity.role"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.entity.what[x]">
-      <path value="Provenance.entity.what[x]" />
-      <mustSupport value="true" />
+      <path value="Provenance.entity.what[x]"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Provenance.entity.agent">
-      <path value="Provenance.entity.agent" />
-      <mustSupport value="true" />
+      <path value="Provenance.entity.agent"/>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>
