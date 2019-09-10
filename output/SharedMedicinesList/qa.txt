@@ -1,8 +1,8 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 192, warn = 34, info = 4
-Generated Thu Sep 05 15:01:59 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 190, warn = 34, info = 4
+Generated Tue Sep 10 11:02:33 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 246 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-7f834da9-63f5-4a66-a847-a32c366701ff : 0 / 3
@@ -29,7 +29,7 @@ Generated Thu Sep 05 15:01:59 AEST 2019. FHIR version 3.0.1 for au.electronichea
  C:\work\git\ci-fhir-stu3\examples\organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\patient-43acc1fd-9f9d-4f2f-8649-c290ac7ff847 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c : 0 / 0
- C:\work\git\ci-fhir-stu3\examples\practitioner-6312677b-2e4a-4841-a986-915905e01931 : 1 / 0
+ C:\work\git\ci-fhir-stu3\examples\practitioner-6312677b-2e4a-4841-a986-915905e01931 : 0 / 0
  C:\work\git\ci-fhir-stu3\examples\practitionerrole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d : 0 / 2
  C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\composition-sml-prac-1 : 3 / 0
@@ -423,7 +423,6 @@ WARNING: Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4: Organization.identif
 WARNING: Patient/43acc1fd-9f9d-4f2f-8649-c290ac7ff847: Patient.extension[0].value.ofType(Coding): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c.xml ==
 == C:\work\git\ci-fhir-stu3\examples\practitioner-6312677b-2e4a-4841-a986-915905e01931.xml ==
-ERROR: Practitioner/6312677b-2e4a-4841-a986-915905e01931: Practitioner.identifier[0]: The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this < 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]
 == C:\work\git\ci-fhir-stu3\examples\practitionerrole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d.xml ==
 INFORMATION: PractitionerRole/eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d: PractitionerRole.identifier[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1
 WARNING: PractitionerRole/eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d: PractitionerRole.specialty[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1 not found by validator
@@ -453,9 +452,9 @@ ERROR: StructureDefinition/patient-ident-1: StructureDefinition.differential.ele
 == C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\practitionerrole-dh-base-1.xml ==
 ERROR: StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'
-ERROR: StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[9].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
+ERROR: StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
 == C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1.xml ==
 ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'
-ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[9].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
+ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
 == C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\substance-dh-base-1.xml ==
