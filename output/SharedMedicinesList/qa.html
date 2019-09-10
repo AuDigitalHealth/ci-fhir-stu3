@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 247, errors = 96, warn = 17, info = 2 -->
+<!-- broken links = 247, errors = 95, warn = 17, info = 2 -->
 <head>
   <title>Shared Medicines List : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Medicines List</h1>
- <p>Generated Thu Sep 05 15:01:59 AEST 2019, IG-Publisher Version 4.0.5-SNAPSHOT - Built 2019-09-03T13:06:20.836+10:00 - Git bd382306624d. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Tue Sep 10 11:02:33 AEST 2019, IG-Publisher Version 4.0.10-SNAPSHOT - Built 2019-09-09T15:10:10.891+10:00 - Git fc862d97e82c. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -90,8 +90,8 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c"><b>C:\work\git\ci-fhir-stu3\examples\practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitioner-6312677b-2e4a-4841-a986-915905e01931"><b>C:\work\git\ci-fhir-stu3\examples\practitioner-6312677b-2e4a-4841-a986-915905e01931</b></a></td><td><b>1</b></td><td><b>0</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitioner-6312677b-2e4a-4841-a986-915905e01931"><b>C:\work\git\ci-fhir-stu3\examples\practitioner-6312677b-2e4a-4841-a986-915905e01931</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_practitionerrole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d"><b>C:\work\git\ci-fhir-stu3\examples\practitionerrole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d</b></a></td><td><b>0</b></td><td><b>2</b></td>
@@ -1394,10 +1394,7 @@
 <h2><a href="Practitioner-6312677b-2e4a-4841-a986-915905e01931.html">C:\work\git\ci-fhir-stu3\examples\practitioner-6312677b-2e4a-4841-a986-915905e01931.xml</a></h2>
  <table class="grid">
    <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/6312677b-2e4a-4841-a986-915905e01931: Practitioner.identifier[0]</b></td><td><b>error</b></td><td><b>The identifier shall pass the Luhn algorithm check [((((select(value.substring(0, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(1, 1).toInteger()) + (select(value.substring(2, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(3, 1).toInteger()) + (select(value.substring(4, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(5, 1).toInteger()) + (select(value.substring(6, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(7, 1).toInteger()) + (select(value.substring(8, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(9, 1).toInteger()) + (select(value.substring(10, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(11, 1).toInteger()) + (select(value.substring(12, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(13, 1).toInteger()) + (select(value.substring(14, 1).toInteger()).select(iif($this &lt; 5, $this * 2, (($this * 2) - 9)))) + (value.substring(15, 1).toInteger())) mod 10) = 0)]</b></td>
+     <td>&check;</td>
    </tr>
 </table>
 <hr/>
@@ -1572,7 +1569,7 @@
      <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[9].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'</b></td>
+     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'</b></td>
    </tr>
 </table>
 <hr/>
@@ -1586,7 +1583,7 @@
      <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[9].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'</b></td>
+     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'</b></td>
    </tr>
 </table>
 <hr/>
