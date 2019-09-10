@@ -69,6 +69,20 @@
         <human value="If present, an authoring role shall at least have a reference or an identifier with at least a system and a value" />
         <expression value="authorRole.exists() implies (authorRole.reference.exists() or authorRole.identifier.where(system.count() + value.count() &gt;1).exists())" />
       </constraint>
+      <constraint>
+        <key value="inv-dh-lst-11" />
+        <severity value="error" />
+        <human value="If this list is a Dispense List the item shall not be a prescription" />
+        <!--If this list is NOT Dispense List the item CAN be a prescription-->
+        <expression value="code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest " />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-lst-12" />
+        <severity value="error" />
+        <human value="If this is list is a Prescription List the item shall not be a dispense record" />
+        <!--If this list is NOT Prescription List the item CAN be a dispense record-->
+        <expression value="code.coding.where(code='57828-6').exists().not() and entry.item.reference.resolve() is MedicationDispense" />
+      </constraint>
     </element>
     <element id="List.meta">
       <path value="List.meta" />
@@ -190,19 +204,7 @@
       <mustSupport value="true" />
     </element>
     <element id="List.entry">
-      <path value="List.entry" />
-      <constraint>
-        <key value="inv-dh-lst-11" />
-        <severity value="error" />
-        <human value=" If this list is a Dispense List the item shall not be a prescription" />
-        <expression value="code.coding.where(code='100.32014').exists() implies (item.reference.resolve()is MedicationRequest).not()" />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-lst-12" />
-        <severity value="error" />
-        <human value="If this is list is a Prescription List the item shall not be a dispense record" />
-        <expression value="code.coding.where(code='57828-6').exists() implies (item.reference.resolve() is MedicationDispense).not()" />
-      </constraint>
+      <path value="List.entry" />      
       <mustSupport value="true" />
     </element>
     <element id="List.entry.item">
