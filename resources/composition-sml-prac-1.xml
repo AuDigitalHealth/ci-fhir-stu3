@@ -341,6 +341,12 @@
         <expression value="entry.exists() xor emptyReason.exists()" />
       </constraint>
       <constraint>
+        <key value="inv-dh-cmp-19" />
+        <severity value="error" />
+        <human value="A Ceased Medicines section shall not have an assertion of no relevant finding entry" />
+        <expression value="code.coding.where(code='101.32027').exists() implies entry.reference.resolve().where($this is Observation).exists().not()" />
+      </constraint>
+      <constraint>
         <key value="inv-dh-cmp-16" />
         <severity value="error" />
         <human value="If present, the assertion of no relevant finding entry shall assert no known current medications" />
