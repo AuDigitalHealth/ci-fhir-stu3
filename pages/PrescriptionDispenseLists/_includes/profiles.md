@@ -45,10 +45,26 @@
                         <td class="frm-null"/>
                     </tr> 
                     <tr class="frm-contents" height="80">
+                        <td class="frm-set">
+                            <ul class="frm-set">
+                                <li><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
+                                <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (RelatedPerson with Mandatory Identifier)</a></li>
+                            </ul>
+                        </td>
+                       <td class="frm-set">
+                            <ul class="frm-set">
+                                <li><a href="StructureDefinition-device-ident-1.html">Device (Device with Mandatory Identifier)</a></li>
+
+                            </ul>
+                        </td>
                         <td class="frm-null"/>
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
-                        <td class="frm-null"/>
+                        <td class="frm-set">
+                           <ul class="frm-set">
+                                <li><a href="StructureDefinition-list-pdl-1.html">List (List of Prescription and or Dispense Records)</a></li>
+                           </ul>
+                        </td>
                         <td class="frm-null"/>
                     </tr> 
                     <tr class="frm-break"><td colspan="6"/></tr>
@@ -110,11 +126,36 @@
             <th>Implementation guide profile base</th>
             <th>FHIR base resource</th>
           </tr>
-          <tr>
-            <td class="frm-null"/>
-            <td class="frm-null"/>
-            <td class="frm-null"/>
-          </tr>
+            <tr>
+                <td><a href="StructureDefinition-list-pdl-1.html">List (List of Prescription and or Dispense Records)</a></td>
+                <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-medlist.html">AU Medicine List</a></td>
+                <td><a href="http://hl7.org/fhir/stu3/list.html">List</a></td>
+            </tr>
+            <tr>
+                <td><a href="StructureDefinition-patient-ident-1.html">Patient (Patient with Mandatory Identifier)</a></td>
+                <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-patient.html">AU Base Patient</a></td>
+                <td><a href="http://hl7.org/fhir/STU3/patient.html">Patient</a></td>
+            </tr>
+            <tr>
+                <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
+                <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
+                <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
+            </tr>  
+            <tr>
+                <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
+                <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
+                <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
+            </tr>   
+            <tr>
+                 <td><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (Base RelatedPerson with Mandatory Identifier)</a></td>
+                 <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
+                 <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson</a></td>
+            </tr> 
+            <tr>
+                <td><a href="StructureDefinition-device-ident-1.html">Device (Device with Mandatory Identifier)</a></td>
+                <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-device.html">AU Device</a></td>
+                <td><a href="http://hl7.org/fhir/STU3/device.html">Device </a></td>
+            </tr>                                           
         </table>
       </div>
   </div>  <!-- /inner-wrapper -->
