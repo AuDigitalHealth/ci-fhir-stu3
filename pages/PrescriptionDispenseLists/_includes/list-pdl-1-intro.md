@@ -1,4 +1,4 @@
-### List of Prescription and or Dispense Records *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### List of Prescription and or Dispense Records *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Usage scenarios
 
