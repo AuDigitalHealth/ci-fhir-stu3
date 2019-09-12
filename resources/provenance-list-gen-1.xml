@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="provenance-list-gen-1"/>
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/provenance-list-gen-1" />
   <name value="ProvenanceListGeneration" />
   <title value="Provenance for the Generation of a List" />
   <status value="draft" />
+  <experimental value="true"/>
+  <publisher value="Australian Digital Health Agency" />
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="help@digitalhealth.gov.au"/>
+    </telecom>
+  </contact>
+  <description value="The purpose of this profile is to define a representation of provenance record of the creation of a list resource.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
+  <copyright
+    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -23,7 +35,7 @@
       <constraint>
         <key value="inv-dh-prov-03" />
         <severity value="error" />
-        <human value="At least one target shall be a reference to, or an identifier with at least a system and value, of, a list" />
+        <human value="At least one target shall be a reference to, or an identifier with at least a system and value, of a list" />
         <expression value="(target.reference.resolve() is List or target.reference.exists().not()) and (target.identifier.where(system.count() + value.count() &gt; 1).exists())" />
       </constraint>
     </element>
@@ -187,9 +199,8 @@
       </fixedCodeableConcept>
       <mustSupport value="true" />
     </element>
-    <element id="Provenance.agent:assemblingDevice.who[x]:whoReference">
-      <path value="Provenance.agent.whoReference" />
-      <sliceName value="whoReference" />
+    <element id="Provenance.agent:assemblingDevice.who[x]">
+      <path value="Provenance.agent.who[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1" />
