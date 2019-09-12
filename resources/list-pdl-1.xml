@@ -74,7 +74,7 @@
         <severity value="error" />
         <human value="If this list is a Dispense List the item shall not be a prescription" />
         <!--If this list is NOT Dispense List the item CAN be a prescription-->
-        <expression value="code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest " />
+        <expression value="code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-12" />
@@ -91,7 +91,7 @@
         <key value="inv-dh-lst-08" />
         <severity value="error" />
         <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'" />
-        <expression value="meta.profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()" />
+        <expression value="profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()" />
       </constraint>
     </element>
     <element id="List.meta.profile">
@@ -166,7 +166,7 @@
           <valueString value="ListPurpose" />
         </extension>
         <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/prescription-dispense-list-type-1 " />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/prescription-dispense-list-type-1" />
       </binding>
     </element>
     <element id="List.subject">
