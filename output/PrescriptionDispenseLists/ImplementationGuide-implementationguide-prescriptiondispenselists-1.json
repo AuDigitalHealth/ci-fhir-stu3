@@ -10,7 +10,7 @@
   "name": "Prescription and Dispense Lists",
   "status": "draft",
   "experimental": true,
-  "date": "2019-09-12T15:27:46+10:00",
+  "date": "2019-09-13T08:42:57+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -25,6 +25,182 @@
   "description": "This implementation guide is an HL7™ FHIR® specification to represent a Prescription and Dispense Lists (PDL).\n \nThe primary aim of this implementation guide is to support implementing PDL in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of PDL information between healthcare providers.\n \nThis implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.\n \nThis implementation guide does not describe transport or persistence mechanism of the resources described by it.",
   "copyright": "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
   "fhirVersion": "3.0.1",
+  "package": [
+    {
+      "id": "p1",
+      "name": "PDL",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-list-pdl-1.html"
+            }
+          ],
+          "example": false,
+          "name": "list-pdl-1",
+          "sourceReference": {
+            "reference": "StructureDefinition/list-pdl-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-patient-ident-1.html"
+            }
+          ],
+          "example": false,
+          "name": "patient-ident-1",
+          "sourceReference": {
+            "reference": "StructureDefinition/patient-ident-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-practitioner-ident-1.html"
+            }
+          ],
+          "example": false,
+          "name": "patient-ident-1",
+          "sourceReference": {
+            "reference": "StructureDefinition/practitioner-ident-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-practitionerrole-withpractitionerident-1.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/practitionerrole-withpractitionerident-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-relatedperson-ident-1.html"
+            }
+          ],
+          "example": false,
+          "name": "relatedperson-ident-1",
+          "sourceReference": {
+            "reference": "StructureDefinition/relatedperson-ident-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-device-ident-1.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/device-ident-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-patient-dh-base-1.html"
+            }
+          ],
+          "example": false,
+          "name": "patient-dh-base-1",
+          "description": "The Agency Patient profile, as derived from the HL7 AU patient profile.",
+          "sourceReference": {
+            "reference": "StructureDefinition/patient-dh-base-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-organization-dh-base-1.html"
+            }
+          ],
+          "example": false,
+          "name": "organization-dh-base-1",
+          "description": "The Agency Organization profile, as derived from the HL7 AU Organization profile.",
+          "sourceReference": {
+            "reference": "StructureDefinition/organization-dh-base-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-practitioner-dh-base-1.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/practitioner-dh-base-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:complex-type"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-humanname-dh-base-1.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/humanname-dh-base-1"
+          }
+        }
+      ]
+    }
+  ],
   "page": {
     "source": "index.html",
     "title": "Australian Digital Health Agency Prescription and Dispense Lists FHIR Implementation Guide",
