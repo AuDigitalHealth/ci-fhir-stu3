@@ -1,4 +1,4 @@
-### Summary of an Encounter for an Event *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+### Provenance for the Generation of a List *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 ##### Usage scenarios
 * A clinical information system (CIS) sends or receives a list with provenance with the My Health Record system
