@@ -7,5 +7,6 @@ For the overarching usage scenarios in this implementation guide it is recommend
 
 When sending a shared medicines list to the My Health Record system it is expected that:
 * indigenous status will be sent
-* address will not be sent
 * an IHI will be sent
+* gender will be sent
+* address will not be sent

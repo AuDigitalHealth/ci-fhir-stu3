@@ -11,7 +11,7 @@
   "title": "Base Substance",
   "status": "draft",
   "experimental": true,
-  "date": "2019-09-10T11:01:17+10:00",
+  "date": "2019-09-13T15:02:36+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -485,10 +485,9 @@
               "valueString": "SubstanceCode"
             }
           ],
-          "strength": "example",
-          "description": "Substance codes",
+          "strength": "preferred",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/substance-code"
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/substance-1"
           }
         },
         "mapping": [
@@ -895,6 +894,16 @@
       {
         "id": "Substance.ingredient.substance[x]",
         "path": "Substance.ingredient.substance[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "closed"
+        },
         "short": "A component of the substance",
         "definition": "Another substance that is a component of this substance.",
         "min": 1,
@@ -928,6 +937,71 @@
             "reference": "http://hl7.org/fhir/ValueSet/substance-code"
           }
         },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".player"
+          }
+        ]
+      },
+      {
+        "id": "Substance.ingredient.substance[x]:substanceCodeableConcept",
+        "path": "Substance.ingredient.substance[x]",
+        "sliceName": "substanceCodeableConcept",
+        "short": "A component of the substance",
+        "definition": "Another substance that is a component of this substance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Substance.ingredient.substance[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "SubstanceIngredient"
+            }
+          ],
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/substance-1"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".player"
+          }
+        ]
+      },
+      {
+        "id": "Substance.ingredient.substance[x]:substanceReference",
+        "path": "Substance.ingredient.substance[x]",
+        "sliceName": "substanceReference",
+        "short": "A component of the substance",
+        "definition": "Another substance that is a component of this substance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Substance.ingredient.substance[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org.au/fhir/StructureDefinition/au-substance"
+          }
+        ],
+        "isSummary": true,
         "mapping": [
           {
             "identity": "rim",
