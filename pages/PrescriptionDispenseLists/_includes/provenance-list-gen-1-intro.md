@@ -6,9 +6,10 @@
 * A CIS sends or receives a list with provenance with another CIS or CSP
 * A CSP sends or receives a list with provenance a CIS or another CSP
 * A registered portal or registered repository receives a list with provenance
-* An expected usage scenario, further scoping the above overarching scenarios is:
 
-Prescription and dispense view (PDV) exchanged with the My Health Record as a list with provenance
+An expected usage scenario, further scoping the above overarching scenarios is:
+
+* Prescription and dispense view (PDV) exchanged with the My Health Record as a list with provenance
 Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
 
