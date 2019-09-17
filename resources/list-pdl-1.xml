@@ -37,13 +37,13 @@
         <key value="inv-dh-lst-02" />
         <severity value="error" />
         <human value="The list shall at least have an authoring related person or a source, but not both" />
-        <expression value="(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()" />
+        <expression value="(extension($this='http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-03" />
         <severity value="error" />
         <human value="If and only if the source is a practitioner, the authoring role shall be provided" />
-        <expression value="source.resolve() is Practitioner implies extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()" />
+        <expression value="source.resolve() is Practitioner implies extension($this='http://hl7.org.au/fhir/StructureDefinition/author-role').exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-05" />
@@ -61,7 +61,7 @@
         <key value="inv-dh-lst-06" />
         <severity value="error" />
         <human value="If present, a source shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() &gt;1).exists()" />
+        <expression value="source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() &gt;1).exists())" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-04" />
@@ -74,14 +74,14 @@
         <severity value="error" />
         <human value="If this list is a Dispense List the entry item shall not be a prescription" />
         <!--If this list is NOT Dispense List the item CAN be a prescription-->
-        <expression value="code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest" />
+        <expression value="code.coding.where($this.code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-12" />
         <severity value="error" />
         <human value="If this is list is a Prescription List the entry item shall not be a dispense record" />
         <!--If this list is NOT Prescription List the item CAN be a dispense record-->
-        <expression value="code.coding.where(code='57828-6').exists().not() and entry.item.reference.resolve() is MedicationDispense" />
+        <expression value="entry.item.reference.resolve() is MedicationDispense implies code.coding.where($this.code='57828-6').exists().not()" />
       </constraint>
     </element>
     <element id="List.meta">
@@ -91,7 +91,7 @@
         <key value="inv-dh-lst-08" />
         <severity value="error" />
         <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'" />
-        <expression value="profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()" />
+        <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()" />
       </constraint>
     </element>
     <element id="List.meta.profile">
@@ -122,7 +122,7 @@
         <key value="inv-dh-lst-09" />
         <severity value="error" />
         <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
+        <expression value="resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -140,7 +140,7 @@
         <key value="inv-dh-lst-10" />
         <severity value="error" />
         <human value="A related person shall conform to RelatedPerson with Mandatory Identifier" />
-        <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')" />
+        <expression value="resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
