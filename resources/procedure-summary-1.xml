@@ -24,7 +24,7 @@
     <element id="Procedure">
       <path value="Procedure"/>
       <constraint>
-        <key value="inv-dh-proc-01" />
+        <key value="inv-dh-pro-01" />
         <severity value="error" />
         <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
         <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt;1).exists()" />
