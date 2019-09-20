@@ -14,7 +14,7 @@
   <name value="Prescription and Dispense Lists"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-09-13T08:42:57+10:00"/>
+  <date value="2019-09-05T15:03:38+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -25,137 +25,6 @@
   <description value="This implementation guide is an HL7&#x2122; FHIR&#xAE; specification to represent a Prescription and Dispense Lists (PDL).&#xA; &#xA;The primary aim of this implementation guide is to support implementing PDL in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of PDL information between healthcare providers.&#xA; &#xA;This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.&#xA; &#xA;This implementation guide does not describe transport or persistence mechanism of the resources described by it."/>
   <copyright value="Copyright &#xA9; 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.1"/>
-  <package id="p1">
-    <name value="PDL"/>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-list-pdl-1.html"/>
-      </extension>
-      <example value="false"/>
-      <name value="list-pdl-1"/>
-      <sourceReference>
-        <reference value="StructureDefinition/list-pdl-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-patient-ident-1.html"/>
-      </extension>
-      <example value="false"/>
-      <name value="patient-ident-1"/>
-      <sourceReference>
-        <reference value="StructureDefinition/patient-ident-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-practitioner-ident-1.html"/>
-      </extension>
-      <example value="false"/>
-      <name value="patient-ident-1"/>
-      <sourceReference>
-        <reference value="StructureDefinition/practitioner-ident-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-practitionerrole-withpractitionerident-1.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/practitionerrole-withpractitionerident-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-relatedperson-ident-1.html"/>
-      </extension>
-      <example value="false"/>
-      <name value="relatedperson-ident-1"/>
-      <sourceReference>
-        <reference value="StructureDefinition/relatedperson-ident-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-device-ident-1.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/device-ident-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-patient-dh-base-1.html"/>
-      </extension>
-      <example value="false"/>
-      <name value="patient-dh-base-1"/>
-      <description value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
-      <sourceReference>
-        <reference value="StructureDefinition/patient-dh-base-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-organization-dh-base-1.html"/>
-      </extension>
-      <example value="false"/>
-      <name value="organization-dh-base-1"/>
-      <description value="The Agency Organization profile, as derived from the HL7 AU Organization profile."/>
-      <sourceReference>
-        <reference value="StructureDefinition/organization-dh-base-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-practitioner-dh-base-1.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/practitioner-dh-base-1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:complex-type"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-humanname-dh-base-1.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/humanname-dh-base-1"/>
-      </sourceReference>
-    </resource>
-  </package>
   <page>
     <source value="index.html"/>
     <title value="Australian Digital Health Agency Prescription and Dispense Lists FHIR Implementation Guide"/>
