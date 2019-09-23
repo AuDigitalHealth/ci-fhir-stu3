@@ -31,7 +31,7 @@
         <key value="inv-dh-cmp-01" />
         <severity value="error" />
         <human value="The author role shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.exists() or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() > 1).exists()" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.exists() or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-18" />
@@ -43,19 +43,19 @@
         <key value="inv-dh-cmp-02" />
         <severity value="error" />
         <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() > 1).exists()" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-03" />
         <severity value="error" />
         <human value="The author shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="author.reference.exists() or author.identifier.where(system.count() + value.count() > 1).exists()" />
+        <expression value="author.reference.exists() or author.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-04" />
         <severity value="error" />
         <human value="The custodian shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="custodian.reference.exists() or custodian.identifier.where(system.count() + value.count() > 1).exists()" />
+        <expression value="custodian.reference.exists() or custodian.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
     </element>
     <element id="Composition.meta">
@@ -98,7 +98,7 @@
         <key value="inv-dh-cmp-07" />
         <severity value="error" />
         <human value="A practitioner shall conform to Base Practitioner" />
-        <expression value="all($this.reference.exists() implies resolve().where($this is Practitioner).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1'))" />       
+        <expression value="all($this.reference.exists() implies resolve().where($this is Practitioner).conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1'))" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-08" />
@@ -213,7 +213,7 @@
         <key value="inv-dh-cmp-13" />
         <severity value="error" />
         <human value="The party shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="party.reference.exists() or party.identifier.where(system.count() + value.count() > 1).exists()" />
+        <expression value="party.reference.exists() or party.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -333,7 +333,7 @@
       <sliceName value="medications" />
       <short value="Medicines List" />
       <definition value="Information about medicines. This may include self-prescribed, clinician prescribed and nonprescription medicines, as well as all regular, intermittent and as required medicines pertinent to a patient. Information may also include changes to the therapy, including dose changes, new medicines and ceased medicines." />
-      <min value="1" />      
+      <min value="1" />
       <constraint>
         <key value="inv-dh-cmp-15" />
         <severity value="error" />
@@ -351,7 +351,7 @@
         <severity value="error" />
         <human value="If present, the assertion of no relevant finding entry shall assert no known current medications" />
         <expression value="entry.resolve().where($this is Observation ).exists() implies entry.resolve().where($this is value and value.coding.code = '1234391000168107').exists()" />
-      </constraint>      
+      </constraint>
       <constraint>
         <key value="inv-dh-cmp-17" />
         <severity value="error" />
@@ -367,12 +367,12 @@
     </element>
     <element id="Composition.section:medications.code">
       <path value="Composition.section.code" />
-      <min value="1" />          
-        <mustSupport value="true" />
+      <min value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1" />
-      </binding>      
+      </binding>
     </element>
     <element id="Composition.section:medications.text">
       <path value="Composition.section.text" />
