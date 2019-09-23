@@ -9,7 +9,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.html">Pharmacist Shared Medicines List example 2 (Bundle)</a></td>
+                <td><a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.html">Pharmacist Shared Medicines List example 2 (Bundle as type 'document')</a></td>
                 <td>e32a01d0-2610-4c99-ba46-9732aa975d41</td>
                 <td><a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.xml.html">XML</a></td>
                 <td><a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.json.html">JSON</a></td>
@@ -30,6 +30,14 @@
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.xml.html">XML</a></td>
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.json.html">JSON</a></td>
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.html">Ceased medicines list (Bundle of type 'message')</a></td>
+                <td>df9ae2cb-3f27-4d62-b3a2-fbdda1657d95</td>
+                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.xml.html">XML</a></td>
+                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.json.html">JSON</a></td>
+                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
  </table>
