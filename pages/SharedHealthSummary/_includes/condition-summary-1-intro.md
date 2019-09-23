@@ -1,4 +1,4 @@
-### Summary Statement of Condition *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Summary Statement of Condition *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 For the expected usage scenarios in this implementation guide:
