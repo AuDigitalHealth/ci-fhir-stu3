@@ -1,4 +1,4 @@
-#### Practitioner with mandatory HPI-I
+#### Practitioner with mandatory HPI-I *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 This profile builds on the details that have been defined by the HL7 Australia Australian Practitioner profile.
 
