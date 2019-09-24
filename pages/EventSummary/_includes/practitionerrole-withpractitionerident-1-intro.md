@@ -1,4 +1,4 @@
-### Practitioner Role with Practitioner with Mandatory Identifier *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Practitioner Role with Practitioner with Mandatory Identifier *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 
