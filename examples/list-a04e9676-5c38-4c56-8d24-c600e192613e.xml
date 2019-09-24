@@ -19,7 +19,7 @@
                         <th>Other names</th>
                         <th>Number to take/Directions</th>
                         <th>Purpose</th>
-                        <th>Medicine change</th>
+                        <th>Medicine status</th>
                         <th>Special instructions</th>
                     </tr>
                 </thead>
@@ -29,7 +29,7 @@
                         <td>Tritace</td>
                         <td>Take one in the morning</td>
                         <td>To reduce high blood pressure; treat heart failure after a heart attack; prevent progression of kidney failure; reduce the risk of heart attack; stroke and stenting</td>
-                        <td/>
+                        <td>Ceased</td>
                         <td>If you feel light-headed, dizzy or faint, get up slowly when getting our of bed. Make sure you drink enough water during excercise and hot weather when you are taking this medicine, especially if you sweat a lot. If you have excessive vomitting and or diarhoea while taking this medicine tell your doctor. May cause headache or unusal taste. Do not take potassium supplements while you are taking this medicine unless your doctor tells you to. If you develop signs of swelling of the lips or tongue, a dry cough or a rash see your doctor.</td>
                     </tr>
                     <tr>
@@ -37,15 +37,15 @@
                         <td>Lipitor</td>
                         <td>Take 1 in the evening</td>
                         <td>To lower cholestrol levels in the blood</td>
-                        <td/>
+                        <td>Ceased</td>
                         <td>Seek medical advice promptly if your urine is dark (brown) or if you have any unexplained muscle pain, tenderness or weakness. Grapefruit juice should be avoided as it may increase the amount of this medicine in your bloodstream and could increase the chances of side effects occuring.</td>
                     </tr>
                     <tr>
                         <td>DOCUSATE SENNA(TAB) 50 mg</td>
-                        <td>Coloxyl and Senna</td>
+                        <td/>
                         <td>Take two tablets in the morning and in the evening</td>
                         <td>Laxative for constipation, works by softening the stools and also assists by stimulating the gut to achieven bowel movements.</td>
-                        <td>New medicine</td>
+                        <td>Ceased</td>
                         <td>Take with a glass of fluid. May take 2-3 days for maximum effect. Do not take with laxatives containing liquid paraffin. Abdominal discomfort, nausea and rash may occur.</td>
                     </tr>
                 </tbody>
@@ -151,7 +151,7 @@
             <meta>
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
             </meta>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#a0f3f01a-be9f-48f6-ae6f-ce5179768889"/>
@@ -206,7 +206,7 @@
             <meta>
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
             </meta>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#5c13e76a-22da-4e67-a69a-0d3be5cd5495"/>
@@ -258,7 +258,7 @@
             <meta>
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
             </meta>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#44df5dcf-a870-4a49-980e-b295629c3e71"/>
@@ -269,6 +269,11 @@
             </subject>
             <taken value="y"/>
             <reasonCode>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="14760008"/>
+                    <display value="Constipation"/>
+                </coding>
                 <text value="Laxative for constipation, works by
                     softening the stools and also assists by
                     stimulating the gut to achieven bowel
@@ -296,10 +301,10 @@
             <code>
                 <coding>
                     <system value="http://snomed.info/sct"/>
-                    <code value="23173011000036104"/>
-                    <display value="aspirin 100 mg tablet"/>
+                    <code value="33647011000036109"/>
+                    <display value="docusate + sennoside B"/>
                 </coding>
-                <text value="DOCUSATE SENNA(TAB) 50 mg, Coloxyl and Senna"/>
+                <text value="DOCUSATE SENNA(TAB) 50 mg"/>
             </code>
         </Medication>
     </contained>
@@ -309,7 +314,6 @@
             <reference value="#2be6504a-160a-4cb0-ac4c-4b5aa503085d"/>
         </valueReference>
     </extension>
-    <!-- TODO: where to record "interim" as the status? -->
     <status value="current"/>
     <mode value="snapshot"/>
     <title value="Ceased medicines list"/>
@@ -332,8 +336,8 @@
         <flag>
             <coding>
                 <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-                <code value="nochange"/>
-                <display value="Unchanged"/>
+                <code value="ceased"/>
+                <display value="Ceased"/>
             </coding>
         </flag>
         <item>
@@ -345,8 +349,8 @@
         <flag>
             <coding>
                 <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-                <code value="nochange"/>
-                <display value="Unchanged"/>
+                <code value="ceased"/>
+                <display value="Ceased"/>
             </coding>
         </flag>
         <item>
@@ -361,10 +365,9 @@
         <flag>
             <coding>
                 <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-                <code value="new"/>
-                <display value="New"/>
+                <code value="ceased"/>
+                <display value="Ceased"/>
             </coding>
-            <text value="New medicine"/>
         </flag>
         <item>
             <reference value="#e558d94a-e4ba-4095-8d2e-74b9df14a9d1"/>

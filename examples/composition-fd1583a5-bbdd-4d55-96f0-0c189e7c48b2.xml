@@ -12,7 +12,44 @@
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>TODO</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Medicine name</th>
+                        <th>Other names</th>
+                        <th>Number to take/Directions</th>
+                        <th>Purpose</th>
+                        <th>Medicine status</th>
+                        <th>Special instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RAMIPRIL(TAB) 2.5 mg</td>
+                        <td>Tritace</td>
+                        <td>Take one in the morning</td>
+                        <td>To reduce high blood pressure; treat heart failure after a heart attack; prevent progression of kidney failure; reduce the risk of heart attack; stroke and stenting</td>
+                        <td>Ceased</td>
+                        <td>If you feel light-headed, dizzy or faint, get up slowly when getting our of bed. Make sure you drink enough water during excercise and hot weather when you are taking this medicine, especially if you sweat a lot. If you have excessive vomitting and or diarhoea while taking this medicine tell your doctor. May cause headache or unusal taste. Do not take potassium supplements while you are taking this medicine unless your doctor tells you to. If you develop signs of swelling of the lips or tongue, a dry cough or a rash see your doctor.</td>
+                    </tr>
+                    <tr>
+                        <td>ATORVASTATIN(TAB) 80 mg</td>
+                        <td>Lipitor</td>
+                        <td>Take 1 in the evening</td>
+                        <td>To lower cholestrol levels in the blood</td>
+                        <td>Ceased</td>
+                        <td>Seek medical advice promptly if your urine is dark (brown) or if you have any unexplained muscle pain, tenderness or weakness. Grapefruit juice should be avoided as it may increase the amount of this medicine in your bloodstream and could increase the chances of side effects occuring.</td>
+                    </tr>
+                    <tr>
+                        <td>DOCUSATE SENNA(TAB) 50 mg</td>
+                        <td/>
+                        <td>Take two tablets in the morning and in the evening</td>
+                        <td>Laxative for constipation, works by softening the stools and also assists by stimulating the gut to achieven bowel movements.</td>
+                        <td>Ceased</td>
+                        <td>Take with a glass of fluid. May take 2-3 days for maximum effect. Do not take with laxatives containing liquid paraffin. Abdominal discomfort, nausea and rash may occur.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </text>
 
@@ -153,8 +190,8 @@
                 <flag>
                     <coding>
                         <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-                        <code value="nochange"/>
-                        <display value="Unchanged"/>
+                        <code value="ceased"/>
+                        <display value="Ceased"/>
                     </coding>
                 </flag>
                 <item>
@@ -166,8 +203,8 @@
                 <flag>
                     <coding>
                         <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-                        <code value="nochange"/>
-                        <display value="Unchanged"/>
+                        <code value="ceased"/>
+                        <display value="Ceased"/>
                     </coding>
                 </flag>
                 <item>
@@ -182,10 +219,9 @@
                 <flag>
                     <coding>
                         <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
-                        <code value="new"/>
-                        <display value="New"/>
+                        <code value="ceased"/>
+                        <display value="Ceased"/>
                     </coding>
-                    <text value="New medicine"/>
                 </flag>
                 <item>
                     <reference value="#686ba017-b502-4441-a327-b2bb33ef6add"/>
@@ -201,7 +237,7 @@
             <meta>
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
             </meta>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#0b69ee72-808b-4575-bfe6-fd4e86e53622"/>
@@ -256,7 +292,7 @@
             <meta>
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
             </meta>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#d3410b43-69a3-4126-8f68-ebf9fadb4aac"/>
@@ -308,7 +344,7 @@
             <meta>
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
             </meta>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#398263a2-1aa2-49c3-8888-0ca5a826e120"/>
@@ -319,6 +355,11 @@
             </subject>
             <taken value="y"/>
             <reasonCode>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="14760008"/>
+                    <display value="Constipation"/>
+                </coding>
                 <text value="Laxative for constipation, works by
                     softening the stools and also assists by
                     stimulating the gut to achieven bowel
@@ -346,10 +387,10 @@
             <code>
                 <coding>
                     <system value="http://snomed.info/sct"/>
-                    <code value="23173011000036104"/>
-                    <display value="aspirin 100 mg tablet"/>
+                    <code value="33647011000036109"/>
+                    <display value="docusate + sennoside B"/>
                 </coding>
-                <text value="DOCUSATE SENNA(TAB) 50 mg, Coloxyl and Senna"/>
+                <text value="DOCUSATE SENNA(TAB) 50 mg"/>
             </code>
         </Medication>
     </contained>
@@ -393,12 +434,12 @@
 
     <!-- CEASED MEDICATIONS SECTION -->
     <section>
-        <title value="Medicines list"/>
+        <title value="Ceased Medicines"/>
         <code>
             <coding>
                 <system value="http://loinc.org"/>
-                <code value="10160-0"/>
-                <display value="History of Medication use Narrative"/>
+                <code value="101.32027"/>
+                <display value="Ceased Medicines"/>
             </coding>
         </code>
         <text>
