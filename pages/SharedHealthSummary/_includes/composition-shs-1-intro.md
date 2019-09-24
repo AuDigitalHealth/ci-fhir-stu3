@@ -1,6 +1,6 @@
 #### Shared Health Summary *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### Usage scenarios 
+#### Usage scenarios 
 
 The following are the usage scenarios expected:
 
@@ -11,7 +11,7 @@ The following are the usage scenarios expected:
 * A registered repository receives a Shared Health Summary from the My Health Record system
 
 
-#####  Implementation guidance 
+#### Implementation guidance 
 
 For the expected usage scenarios in this implementation guide:
 
