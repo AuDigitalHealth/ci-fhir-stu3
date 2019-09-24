@@ -1,0 +1,1364 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Shared Medicines List</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shared Medicines List Implemenation Guide" />
+  <meta name="author" content="http://argonautwiki.hl7.org"/>
+
+  <link href="fhir.css" rel="stylesheet"/>
+
+   <!-- Bootstrap core CSS -->
+
+   <!-- Latest compiled and minified CSS -->
+
+  <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+  <!-- Project extras -->
+  <link href="assets/css/project.css" rel="stylesheet"/>
+  <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+  <link href="assets/css/ci-styles-fig.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+</head>
+
+<body markdown="1"/>
+
+</html>
+ <div id="segment-header" class="segment">  <!-- segment-header -->
+  <div class="container">  <!-- container -->
+   <a id="logo" no-external="true" href="https://www.digitalhealth.gov.au/"><img alt="Agency logo" src="assets/images/agency-logo-www.png"/> </a>
+
+   <div id="ig-status">
+    <b>Shared Medicines List FHIR Implementation Guide  1.0.0</b>
+</div>
+
+  </div>
+  <div class="container">  <!-- container -->
+ </div>
+ </div>  <!-- /segment-header -->
+
+ <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+  <div id="stripe"> </div>
+  <div class="container">  <!-- container -->
+   <!-- HEADER CONTENT -->
+
+   <nav class="navbar navbar-inverse">
+    <div class="container">
+     <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+      <span class="icon-bar"> </span>
+     </button>
+     <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3//index.html">FHIR</a>
+     <div class="nav-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guidance.html">Guidance</a></li>
+       <li><a href="conformance.html">Conformance</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <!--<li><a href="structuremaps.html">Mappings</a></li>-->
+        <li><a href="extensions.html">Extensions</a></li>
+       <li><a href="mappings.html">Mapping from requirements</a></li>
+       <!-- <li><a href="terminology.html">Terminology</a></li>-->
+        <!--<li><a href="searchparams.html">Search Parameters</a></li>-->
+        <!--<li><a href="capstatements.html">Capability Statements</a></li>-->
+        <!--<li><a href="security.html">Security</a></li>-->
+        <li><a href="downloads.html">Downloads</a></li>
+       <li><a href="disclaimers.html">Disclaimers</a></li>
+      </ul>
+     </div>  <!-- /.nav-collapse -->
+    </div>  <!-- /.container -->
+   </nav>  <!-- /.navbar -->
+
+  <!-- /HEADER CONTENT -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-navbar -->
+
+
+
+</div>  <!-- /container -->
+</div>  <!-- /segment-breadcrumb -->
+
+<div id="segment-content" class="segment">  <!-- segment-content -->
+<div class="container">  <!-- container -->
+<div class="row">
+<div class="inner-wrapper">
+
+
+<div class="col-12">
+
+<p id="publish-box">
+    This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+</p>
+
+<!-- ============Tabs (only on Profile StructureDefinition Pages =============== -->
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h1>Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.json</h1>
+
+<p>
+Formats: <a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.html">Narrative</a>, <a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.xml.html">XML</a>, <a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.json.html">JSON</a>, <a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.ttl.html">Turtle</a>
+</p>
+<p>
+Raw <a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.json" download>json</a>
+</p>
+
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.id">id</a>" : "e32a01d0-2610-4c99-ba46-9732aa975d41",
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2018-12-11T12:30:00+10:00"
+  },
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:b8ee2120-18dc-420b-9f6a-d114eda7315b"
+  },
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.type">type</a>" : "document",
+  "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999",
+      "<a href="http://hl7.org/fhir/STU3/composition.html#Composition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/composition.html">resourceType</a>" : "Composition",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.id">id</a>" : "c6f90150-465c-4c16-8e99-c4efbda29036",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.language">language</a>" : "en-AU",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;\n                        \n                        &lt;table style=\&quot;border-collapse:collapse;border-spacing:0;width:100%;\&quot;&gt;\n                            &lt;tr&gt;\n                                &lt;th colspan=\&quot;4\&quot; style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;font-size:20px;background-color:#333333;color:#ffffff;border:none;text-align:center;vertical-align:top\&quot;&gt;Pharmacist Shared Medicines List&lt;/th&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td colspan=\&quot;4\&quot; style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#333333;color:#ffffff;border-color:#000000;text-align:center;vertical-align:top\&quot;&gt;11 Dec 2018&lt;/td&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#333333;color:#ffffff;border-color:#000000;text-align:center;vertical-align:top\&quot;&gt;FRANK GOODPATIENT&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#333333;color:#ffffff;border-color:#000000;text-align:center;vertical-align:top\&quot;&gt;DoB 24 Mar 1981 (37 yrs) &lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#333333;color:#ffffff;border-color:#000000;text-align:center;vertical-align:top\&quot;&gt;Gender MALE&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#333333;color:#ffffff;border-color:#000000;text-align:center;vertical-align:top\&quot;&gt;IHI 8003608833357361 &lt;/td&gt;\n                            &lt;/tr&gt;\n                        &lt;/table&gt;\n                        \n                        &lt;h3&gt;Tes Health Service&lt;/h3&gt;\n                        &lt;p&gt;&lt;b&gt;Pharmacist:&lt;/b&gt; Mosenna Joanne (Pharmacist)&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;Phone:&lt;/b&gt; 9804 6688&lt;/p&gt;\n                        &lt;p&gt;&lt;b&gt;Email:&lt;/b&gt; joanne.mosenna@test.teshealth.com.au&lt;/p&gt;\n\n                        &lt;h3 style=\&quot;color:red\&quot;&gt;Allergies and Adverse Reaction&lt;/h3&gt;\n                        &lt;table style=\&quot;border-collapse:collapse;border-spacing:0;width:100%;\&quot;&gt;\n                            &lt;tr&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Substance/Agent&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Reaction Type&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Reaction&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Reaction Onset Date&lt;/th&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;ibuprofen&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Allergic reaction&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Anaphylaxis&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;October 2016&lt;/td&gt;\n                            &lt;/tr&gt;\n                        &lt;/table&gt;\n                        \n                        &lt;h3&gt;Current medicines&lt;/h3&gt;\n                        &lt;table style=\&quot;border-collapse:collapse;border-spacing:0;width:100%;\&quot;&gt;\n                            &lt;tr&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Medicine&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Brand Name&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Direction&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Medicine Purpose&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Medicine Status&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Expected End Date&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Special Instructions&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Medicine Image&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Physical Description&lt;/th&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Ferro-Grad C&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Take one tablet daily&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Iron supplement&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Unchanged&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Amoxicillin 875 mg + clavulanic acid 125 mg tablet&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Augmentin Duo Forte&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Take one tablet twice a day&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Infection&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;New&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;20/01/2019&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Metformin 500mg tablet&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Sandoz&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Take one tablet twice a day&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Reduce blood sugar&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;\n                                      &lt;!-- &lt;img alt=\&quot;image\&quot;\n                                        src=\&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAyADIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD925BnczK23A8ze3X65xx/v4HoppHT5X3eXuRQZWZxypxjOccf72B6IaFAO3asYBbamG6NxkjGTnv8u5vVhVHUtej0t1RWjaSMk4UA7T+ZAP5t6sOlAF58Fm3eWu4bznPyjnAOex7b8L0wppfMyfmIG5QH+TovGCc4/wDHto9FOa5qTxJIE2q21c5OT39ajTxRNG24OfUYOKB8rOoDM275pNyD06D1Occd/mwvopofgNnzCrDPJxn3OeCBnjdtXphTWTpHihL6WOKTcJc4jPY/THRvcAsc4yK1kiGVCrjc37v5x8rd+meevTc/P3hQIe3nBjn7XnPOPPI/TA/ICiqzSWqsQwsd3fcYQc++WJ/Mk0UASTzLCkjMyqojLPhd2xBzznHHH+ymOzV5lL4km1INP/rZJTu2ghc57c4Ax+AGK9L1K3/tDT7i337ftCumfLGFdgwGOvPrjc/P8NeB6Bqkl7pyw+YLe5jyjBzjY68FfrwR9azqM0pnWJrMrFk+zMs0YHyF0/DDA7f17VGNYml8xfK2zRnBUyLg9/vA4rF82Z7Xyo/Lt8HgmXezc8knnk/kOOMDFONw0FuY1+zxddvzFsn1Y45P5/yrHmNDWh1qSS3Z2j8ttxC4cNnBxnI9wR+FemeHdTXXNDtbljHuuIAzN6Y4Ix/dyCMHag9GrxHVNVj03T9okzHbptDH+IDv+PX8a9c+FVtJafDbR1mbEjQLcEY5VpP3m3ofmAYDGGbjjFaU5a2IqbHTJeyhF2x/LjjCzYx/wFcflxRVdgpY7lty2ed0cWc++58/nzRWxkP+6MKZGjZMjHAYAfhlQT/spg9TXivxw+Hd54M1u68RabbT3Gl3jGXUYok3NZyc7psAZMbYyxAwrZOSpyvtflbvl2Phm+QM/R+M7sg8/Xc/sMU1SB821Btb5stg7+SCc5+YcddzcfdWoqQUlYqMrO58z2Hii31CFZIZkZW5BBzReeJorWNmkmVQvcnpXs3if9n7wf4qvZbi60e3tbrcTJLZzSWjSMf73ltgseuXDOcngVV0f9mPwRot4szaT9udTn/TppLpEPYGORjHn2Ks3PQVzexqd0be0jY85+F/gq4+L1/DcyRyL4bhbdLKy8X+08xxjIyhIwz5CgZGd3T6EVi0oVGkYrnytozuGRz2447bU9S1MX91GoX92qgIVChFjGAFHoDjjBDN0wop7q3pJw25d3YZJyQc/Nxnnc3XCiuinT5UYylcIwpRcSz4xxtJ2/hiPH5cUVIpjVRut5GbuTIOT+Mmfz5orQkhulEZvNoC+TLHGmP4FOMgegPcd6maNYm1Laqr5A2x4GPLHl5wPT8KKKADUB9mSQx/uzGY1QrxsBdsgemahvT5MWoBPlEEiLEBx5YPUD0B9qKKAG6hK0SakysymJkRCDjYpAyB6D2p14PJe+2fL5JjWPHHlg9QPTPtRRQBfazhRiqxRqq8ABRxRRRQB//Z\&quot;\n                                    /&gt; --&gt;\n                                    &lt;img src=\&quot;#ff67c94c-d6bb-491a-99a6-8dfa82000173\&quot; alt=\&quot;image\&quot;/&gt;\n                                &lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;White and round with 227 imprint&lt;/td&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Multi-vitamins&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Take one tablet daily&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Paracetamol 665mg caplet&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Panadol Osteo&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Take two caplets every 6 to 8 hours when required&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Osteoarthritis, pain relief&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;No more than 6 caplets in 24 hours&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Warfarin sodium 5 mg tablet&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Coumadin&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Take as directed by your doctor at night&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Blood thining&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Witheld&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Peach.Round.Imprint.&lt;/td&gt;\n                            &lt;/tr&gt;\n                        &lt;/table&gt;\n\n                        &lt;h3&gt;Ceased medicines&lt;/h3&gt;\n                        &lt;table style=\&quot;border-collapse:collapse;border-spacing:0;width:100%;\&quot;&gt;\n                            &lt;tr&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Ceased medicine&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Reason for ceasing medication&lt;/th&gt;\n                                &lt;th style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#9b9b9b;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Ceased date&lt;/th&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Paracetamol 500 mg tablet&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Duplicated medicine&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Dec 2018&lt;/td&gt;\n                            &lt;/tr&gt;\n                            &lt;tr&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Ibuprofen&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;&gt;Allergic reaction&lt;/td&gt;\n                                &lt;td style=\&quot;border-collapse:collapse;border-spacing:0;font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;border-color:#000000;text-align:left;vertical-align:top\&quot;/&gt;\n                            &lt;/tr&gt;\n                        &lt;/table&gt;\n                        \n                        &lt;p&gt;Packed medicines: No&lt;/p&gt;\n                        &lt;p&gt;Additional comments: Please review this list with your pharmacist on or soon after 02/April/2019.&lt;/p&gt;\n                        &lt;p&gt;Healthcare setting:Community pharmacy&lt;/p&gt;\n                    &lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/binary.html#Binary">contained</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/binary.html">resourceType</a>" : "Binary",
+            "<a href="http://hl7.org/fhir/STU3/binary.html#Binary.id">id</a>" : "ff67c94c-d6bb-491a-99a6-8dfa82000173",
+            "<a href="http://hl7.org/fhir/STU3/binary.html#Binary.contentType">contentType</a>" : "image/gif",
+            "<a href="http://hl7.org/fhir/STU3/binary.html#Binary.content">content</a>" : "/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAyADIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD925BnczK23A8ze3X65xx/v4HoppHT5X3eXuRQZWZxypxjOccf72B6IaFAO3asYBbamG6NxkjGTnv8u5vVhVHUtej0t1RWjaSMk4UA7T+ZAP5t6sOlAF58Fm3eWu4bznPyjnAOex7b8L0wppfMyfmIG5QH+TovGCc4/wDHto9FOa5qTxJIE2q21c5OT39ajTxRNG24OfUYOKB8rOoDM275pNyD06D1Occd/mwvopofgNnzCrDPJxn3OeCBnjdtXphTWTpHihL6WOKTcJc4jPY/THRvcAsc4yK1kiGVCrjc37v5x8rd+meevTc/P3hQIe3nBjn7XnPOPPI/TA/ICiqzSWqsQwsd3fcYQc++WJ/Mk0UASTzLCkjMyqojLPhd2xBzznHHH+ymOzV5lL4km1INP/rZJTu2ghc57c4Ax+AGK9L1K3/tDT7i337ftCumfLGFdgwGOvPrjc/P8NeB6Bqkl7pyw+YLe5jyjBzjY68FfrwR9azqM0pnWJrMrFk+zMs0YHyF0/DDA7f17VGNYml8xfK2zRnBUyLg9/vA4rF82Z7Xyo/Lt8HgmXezc8knnk/kOOMDFONw0FuY1+zxddvzFsn1Y45P5/yrHmNDWh1qSS3Z2j8ttxC4cNnBxnI9wR+FemeHdTXXNDtbljHuuIAzN6Y4Ix/dyCMHag9GrxHVNVj03T9okzHbptDH+IDv+PX8a9c+FVtJafDbR1mbEjQLcEY5VpP3m3ofmAYDGGbjjFaU5a2IqbHTJeyhF2x/LjjCzYx/wFcflxRVdgpY7lty2ed0cWc++58/nzRWxkP+6MKZGjZMjHAYAfhlQT/spg9TXivxw+Hd54M1u68RabbT3Gl3jGXUYok3NZyc7psAZMbYyxAwrZOSpyvtflbvl2Phm+QM/R+M7sg8/Xc/sMU1SB821Btb5stg7+SCc5+YcddzcfdWoqQUlYqMrO58z2Hii31CFZIZkZW5BBzReeJorWNmkmVQvcnpXs3if9n7wf4qvZbi60e3tbrcTJLZzSWjSMf73ltgseuXDOcngVV0f9mPwRot4szaT9udTn/TppLpEPYGORjHn2Ks3PQVzexqd0be0jY85+F/gq4+L1/DcyRyL4bhbdLKy8X+08xxjIyhIwz5CgZGd3T6EVi0oVGkYrnytozuGRz2447bU9S1MX91GoX92qgIVChFjGAFHoDjjBDN0wop7q3pJw25d3YZJyQc/Nxnnc3XCiuinT5UYylcIwpRcSz4xxtJ2/hiPH5cUVIpjVRut5GbuTIOT+Mmfz5orQkhulEZvNoC+TLHGmP4FOMgegPcd6maNYm1Laqr5A2x4GPLHl5wPT8KKKADUB9mSQx/uzGY1QrxsBdsgemahvT5MWoBPlEEiLEBx5YPUD0B9qKKAG6hK0SakysymJkRCDjYpAyB6D2p14PJe+2fL5JjWPHHlg9QPTPtRRQBfazhRiqxRqq8ABRxRRRQB//Z"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/composition-author-role",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.type">type</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "56445-0",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Medication summary"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.encounter">encounter</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:038f9aaa-6c3d-4681-b9de-455de06a86d3"
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.date">date</a>" : "2018-12-11T12:30:00+10:00",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.author">author</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:6312677b-2e4a-4841-a986-915905e01931"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.title">title</a>" : "Pharmacist Shared Medicines List",
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester">attester</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester.mode">mode</a>" : [
+              "legal"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester.time">time</a>" : "2018-12-11T12:30:00+10:00",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.attester.party">party</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:6312677b-2e4a-4841-a986-915905e01931"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.custodian">custodian</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:24391534-dbe5-44f0-af74-07ca016e7446"
+        },
+        "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section">section</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">title</a>" : "Medications",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "10160-0",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "History of Medication use Narrative"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                            &lt;table&gt;\n                                &lt;caption&gt;Current medicines&lt;/caption&gt;\n                                &lt;thead&gt;\n                                    &lt;tr&gt;\n                                        &lt;th&gt;Medicine&lt;/th&gt;\n                                        &lt;th&gt;Brand name&lt;/th&gt;\n                                        &lt;th&gt;Direction&lt;/th&gt;\n                                        &lt;th&gt;Medicine purpose&lt;/th&gt;\n                                        &lt;th&gt;Medicine status&lt;/th&gt;\n                                        &lt;th&gt;Expected end date&lt;/th&gt;\n                                        &lt;th&gt;Special instructions&lt;/th&gt;\n                                        &lt;th&gt;Medicine Image&lt;/th&gt;\n                                        &lt;th&gt;Physical Description&lt;/th&gt;\n                                    &lt;/tr&gt;\n                                &lt;/thead&gt;\n                                &lt;tbody&gt;\n                                    &lt;tr id=\&quot;medicationstatement-ferro-grad-c\&quot;&gt;\n                                        &lt;td/&gt;\n                                        &lt;td&gt;Ferro-Grad C&lt;/td&gt;\n                                        &lt;td&gt;Take one tablet daily&lt;/td&gt;\n                                        &lt;td&gt;Iron Supplement&lt;/td&gt;\n                                        &lt;td&gt;Unchanged&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr id=\&quot;medicationstatement-amoxicillin-875mg\&quot;&gt;\n                                        &lt;td&gt;Amoxicillin 875 mg + clavunalic acid 125 mg tablet&lt;/td&gt;\n                                        &lt;td&gt;Augmentin Duo Forte&lt;/td&gt;\n                                        &lt;td&gt;Take one tablet twice a day&lt;/td&gt;\n                                        &lt;td&gt;Infection&lt;/td&gt;\n                                        &lt;td&gt;New&lt;/td&gt;\n                                        &lt;td&gt;20/01/2019&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr id=\&quot;medicationstatement-metformin-500mg\&quot;&gt;\n                                        &lt;td&gt;Metformin 500mg tablet&lt;/td&gt;\n                                        &lt;td&gt;Sandoz&lt;/td&gt;\n                                        &lt;td&gt;Take one tablet twice a day&lt;/td&gt;\n                                        &lt;td&gt;Reduce blood sugar&lt;/td&gt;\n                                        &lt;td&gt;Dose changed&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td&gt;insert link&lt;/td&gt;\n                                        &lt;td&gt;White and round with 227 imprinted&lt;/td&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr id=\&quot;medicationstatement-multi-vitamins\&quot;&gt;\n                                        &lt;td&gt;Multi-vitamins&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td&gt;Take one tablet daily&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr id=\&quot;medicationstatement-paracetamol-665mg\&quot;&gt;\n                                        &lt;td&gt;Paracetamol 665 mg caplet&lt;/td&gt;\n                                        &lt;td&gt;Panadol Osteo&lt;/td&gt;\n                                        &lt;td&gt;Take two caplets every 6 to 8 hours when required&lt;/td&gt;\n                                        &lt;td&gt;Osteoarthritis, pain relief&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td&gt;No more than 6 caplets in 24 hours&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                    &lt;/tr&gt;\n                                    &lt;tr id=\&quot;medicationstatement-warfarin\&quot;&gt;\n                                        &lt;td&gt;Warfarin sodium 5 mg tablet&lt;/td&gt;\n                                        &lt;td&gt;Coumadin&lt;/td&gt;\n                                        &lt;td&gt;Take as directed by your doctor at night&lt;/td&gt;\n                                        &lt;td&gt;Blood thinning&lt;/td&gt;\n                                        &lt;td&gt;Withheld&lt;/td&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td/&gt;\n                                        &lt;td&gt;Peach.Round.Imprinted.&lt;/td&gt;\n                                    &lt;/tr&gt;\n                                &lt;/tbody&gt;\n                            &lt;/table&gt;\n                        &lt;/div&gt;"<a name="end-xhtml"></a>
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:e3677c50-8940-4793-bc43-72a33e5b6460"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.title">title</a>" : "Allergies",
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "48765-2",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Allergies &amp;or adverse reactions"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n                            &lt;table&gt;\n                                &lt;caption&gt;Allergies and Adverse Reactions&lt;/caption&gt;\n                                &lt;thead&gt;\n                                    &lt;tr&gt;\n                                        &lt;th&gt;Substance/Agent&lt;/th&gt;\n                                        &lt;th&gt;Reaction Type&lt;/th&gt;\n                                        &lt;th&gt;Reaction&lt;/th&gt;\n                                        &lt;th&gt;Reaction Onset Date&lt;/th&gt;\n                                    &lt;/tr&gt;\n                                &lt;/thead&gt;\n                                &lt;tbody&gt;\n                                    &lt;tr&gt;\n                                        &lt;td&gt;ibuprofen&lt;/td&gt;\n                                        &lt;td&gt;Allergic reaction&lt;/td&gt;\n                                        &lt;td&gt;Anaphylaxis&lt;/td&gt;\n                                        &lt;td&gt;October 2016&lt;/td&gt;\n                                    &lt;/tr&gt;\n                                &lt;/tbody&gt;\n                            &lt;/table&gt;\n                        &lt;/div&gt;"<a name="end-xhtml"></a>
+            },
+            "<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:7f834da9-63f5-4a66-a847-a32c366701ff"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847",
+      "<a href="http://hl7.org/fhir/STU3/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.id">id</a>" : "43acc1fd-9f9d-4f2f-8649-c290ac7ff847",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: National unique individual identifier = 8003608333563104&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Mac PRIEST &lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: male&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 09/03/1989&lt;/p&gt;&lt;p&gt;&lt;b&gt;generalPractitioner&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:b738af06-18f5-48b8-a0d6-96d0e97c0634\&quot;&gt;urn:uuid:b738af06-18f5-48b8-a0d6-96d0e97c0634&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueCoding</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "4",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Neither Aboriginal nor Torres Strait Islander origin"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NI",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "National unique individual identifier"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003608333563104"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a>" : "PRIEST",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Mac"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.gender">gender</a>" : "male",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.birthDate">birthDate</a>" : "1989-03-09",
+        "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.generalPractitioner">generalPractitioner</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:b738af06-18f5-48b8-a0d6-96d0e97c0634"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:6312677b-2e4a-4841-a986-915905e01931",
+      "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.id">id</a>" : "6312677b-2e4a-4841-a986-915905e01931",
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 6312677b-2e4a-4841-a986-915905e01931&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: HPI-I = 8003611566708354&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Zane Sinclair &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: zsin@gmail.com(WORK)&lt;/p&gt;&lt;h3&gt;Qualifications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Bachelor of Pharmacy &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NPI",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "National provider identifier"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "HPI-I"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003611566708354"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.family">family</a>" : "Sinclair",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Zane"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName#HumanName.prefix">prefix</a>" : [
+              "Mr."
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "zsin@gmail.com",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.qualification">qualification</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/practitioner.html#Practitioner.qualification.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Bachelor of Pharmacy"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d",
+      "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.id">id</a>" : "eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d",
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: HPI-I = 8003611566708354&lt;/p&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:6312677b-2e4a-4841-a986-915905e01931\&quot;&gt;urn:uuid:6312677b-2e4a-4841-a986-915905e01931&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:24391534-dbe5-44f0-af74-07ca016e7446\&quot;&gt;urn:uuid:24391534-dbe5-44f0-af74-07ca016e7446&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Pharmacist &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0 code '251513' = '251513', given as 'Retail Pharmacist'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: zsin@gmail.com(WORK)&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NPI",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "National provider identifier"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "HPI-I"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003611566708354"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:6312677b-2e4a-4841-a986-915905e01931"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:24391534-dbe5-44f0-af74-07ca016e7446"
+        },
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.code">code</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "251513",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Retail Pharmacist"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pharmacist"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/practitionerrole.html#PractitionerRole.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "zsin@gmail.com",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:24391534-dbe5-44f0-af74-07ca016e7446",
+      "<a href="http://hl7.org/fhir/STU3/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.id">id</a>" : "24391534-dbe5-44f0-af74-07ca016e7446",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 24391534-dbe5-44f0-af74-07ca016e7446&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: HPI-O = 8003629900033370&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Retail Pharmacy &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0 code '4271' = '4271', given as 'Retail Pharmacy'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Test Org - Retail Pharmacy&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 570 Whatcha St GLEBE NSW 2037 AU (WORK)&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/v2/0203",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "NOI"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "HPI-O"
+            },
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "http://ns.electronichealth.net.au/id/hi/hpio/1.0",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "8003629900033370"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "4271",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Retail Pharmacy"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.name">name</a>" : "Test Org - Retail Pharmacy",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.use">use</a>" : "work",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.line">line</a>" : [
+              "570 Whatcha St"
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.city">city</a>" : "GLEBE",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.state">state</a>" : "NSW",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.postalCode">postalCode</a>" : "2037",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Address#Address.country">country</a>" : "AU"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:b738af06-18f5-48b8-a0d6-96d0e97c0634",
+      "<a href="http://hl7.org/fhir/STU3/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.id">id</a>" : "b738af06-18f5-48b8-a0d6-96d0e97c0634",
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: b738af06-18f5-48b8-a0d6-96d0e97c0634&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Healthcare Provider &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://hl7.org/fhir/organization-type code 'prov' = 'Healthcare Provider', given as 'Healthcare Provider'})&lt;/span&gt;, primary care physician &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Test Medical Centre&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/organization-type",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "prov",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Healthcare Provider"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "primary care physician"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/organization.html#Organization.name">name</a>" : "Test Medical Centre"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:038f9aaa-6c3d-4681-b9de-455de06a86d3",
+      "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/encounter.html">resourceType</a>" : "Encounter",
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.id">id</a>" : "038f9aaa-6c3d-4681-b9de-455de06a86d3",
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 038f9aaa-6c3d-4681-b9de-455de06a86d3&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Community pharmacy medicine review &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '1348961000168104' = '1348961000168104', given as 'Community pharmacy medicines review'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 11/12/2018 10:00:00 AM --&amp;gt; 11/12/2018 12:30:00 PM&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.status">status</a>" : "finished",
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "1348961000168104",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Community pharmacy medicines review"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Community pharmacy medicine review"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.period">period</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">start</a>" : "2018-12-11T10:00:00+10:00",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">end</a>" : "2018-12-11T12:30:00+10:00"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:e3677c50-8940-4793-bc43-72a33e5b6460",
+      "<a href="http://hl7.org/fhir/STU3/list.html#List">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/list.html">resourceType</a>" : "List",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.id">id</a>" : "e3677c50-8940-4793-bc43-72a33e5b6460",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.language">language</a>" : "en-AU",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "additional",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot; lang=\&quot;en-AU\&quot;&gt;\n                        &lt;table&gt;\n                            &lt;caption&gt;Current medicines&lt;/caption&gt;\n                            &lt;thead&gt;\n                                &lt;tr&gt;\n                                    &lt;th&gt;Medicine&lt;/th&gt;\n                                    &lt;th&gt;Brand name&lt;/th&gt;\n                                    &lt;th&gt;Direction&lt;/th&gt;\n                                    &lt;th&gt;Medicine purpose&lt;/th&gt;\n                                    &lt;th&gt;Medicine status&lt;/th&gt;\n                                    &lt;th&gt;Expected end date&lt;/th&gt;\n                                    &lt;th&gt;Special instructions&lt;/th&gt;\n                                    &lt;th&gt;Medicine Image&lt;/th&gt;\n                                    &lt;th&gt;Physical Description&lt;/th&gt;\n                                &lt;/tr&gt;\n                            &lt;/thead&gt;\n                            &lt;tbody&gt;\n                                &lt;tr&gt;\n                                    &lt;td/&gt;\n                                    &lt;td&gt;Ferro-Grad C&lt;/td&gt;\n                                    &lt;td&gt;Take one tablet daily&lt;/td&gt;\n                                    &lt;td&gt;Iron Supplement&lt;/td&gt;\n                                    &lt;td&gt;Unchanged&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                &lt;/tr&gt;\n                                &lt;tr&gt;\n                                    &lt;td&gt;Amoxicillin 875 mg + clavulanic acid 125 mg tablet&lt;/td&gt;\n                                    &lt;td&gt;Augmentin Duo Forte&lt;/td&gt;\n                                    &lt;td&gt;Take one tablet twice a day&lt;/td&gt;\n                                    &lt;td&gt;Infection&lt;/td&gt;\n                                    &lt;td&gt;New&lt;/td&gt;\n                                    &lt;td&gt;20/01/2019&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                &lt;/tr&gt;\n                                &lt;tr&gt;\n                                    &lt;td&gt;Metformin 500mg tablet&lt;/td&gt;\n                                    &lt;td&gt;Sandoz&lt;/td&gt;\n                                    &lt;td&gt;Take one tablet twice a day&lt;/td&gt;\n                                    &lt;td&gt;Reduce blood sugar&lt;/td&gt;\n                                    &lt;td&gt;Dose changed&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                      &lt;!-- TOD add image link for 'ML1' --&gt;\n                                    &lt;td&gt;insert link&lt;/td&gt;\n                                    &lt;td&gt;White and round with 227 imprinted&lt;/td&gt;\n                                &lt;/tr&gt;\n                                &lt;tr&gt;\n                                    &lt;td&gt;Multi-vitamins&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td&gt;Take one tablet daily&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                &lt;/tr&gt;\n                                &lt;tr&gt;\n                                    &lt;td&gt;Paracetamol 665 mg caplet&lt;/td&gt;\n                                    &lt;td&gt;Panadol Osteo&lt;/td&gt;\n                                    &lt;td&gt;Take two caplets every 6 to 8 hours when required&lt;/td&gt;\n                                    &lt;td&gt;Osteoarthritis, pain relief&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td&gt;No more than 6 caplets in 24 hours&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                &lt;/tr&gt;\n                                &lt;tr&gt;\n                                    &lt;td&gt;Warfarin sodium 5 mg tablet&lt;/td&gt;\n                                    &lt;td&gt;Coumadin&lt;/td&gt;\n                                    &lt;td&gt;Take as directed by your doctor at night&lt;/td&gt;\n                                    &lt;td&gt;Blood thinning&lt;/td&gt;\n                                    &lt;td&gt;Withheld&lt;/td&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td/&gt;\n                                    &lt;td&gt;Peach.Round.Imprinted.&lt;/td&gt;\n                                &lt;/tr&gt;\n                            &lt;/tbody&gt;\n                        &lt;/table&gt;\n                        &lt;table&gt;\n                            &lt;caption&gt;Ceased medicines&lt;/caption&gt;\n                            &lt;thead&gt;\n                                &lt;tr&gt;\n                                    &lt;th&gt;Medicine&lt;/th&gt;\n                                    &lt;th&gt;Reason for ceasing medicine&lt;/th&gt;\n                                    &lt;th&gt;Ceased date&lt;/th&gt;\n                                &lt;/tr&gt;\n                            &lt;/thead&gt;\n                            &lt;tbody&gt;\n                                &lt;tr&gt;\n                                    &lt;td/&gt;\n                                    &lt;td&gt;Paracetamol 500mg tablet&lt;/td&gt;\n                                    &lt;td&gt;Duplicated medicine&lt;/td&gt;\n                                    &lt;td&gt;Dec 2018&lt;/td&gt;\n                                &lt;/tr&gt;\n                                &lt;tr&gt;\n                                    &lt;td&gt;Ibuprofen&lt;/td&gt;\n                                    &lt;td&gt;Allergic Reaction&lt;/td&gt;\n                                    &lt;td/&gt;\n                                &lt;/tr&gt;\n                            &lt;/tbody&gt;\n                        &lt;/table&gt;\n                        &lt;p&gt;Packed medicines: No. Please review this list with your pharmacist on or soon after 02/Apr/2019. Community pharmacy medicine review&lt;/p&gt;\n                    &lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/author-role",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.status">status</a>" : "current",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.mode">mode</a>" : "snapshot",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.title">title</a>" : "Medicines List",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "10160-0",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "History of Medication use Narrative"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.encounter">encounter</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:038f9aaa-6c3d-4681-b9de-455de06a86d3"
+        },
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.date">date</a>" : "2018-12-11T12:30:00+10:00",
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.source">source</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:6312677b-2e4a-4841-a986-915905e01931"
+        },
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.note">note</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Annotation#Annotation.text">text</a>" : "Packed medicines: No"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Annotation#Annotation.text">text</a>" : "Please review this list with your pharmacist on or soon                         after 02/Apr/2019."
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/list.html#List.entry">entry</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "nochange",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Unchanged"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:32def593-e104-4cee-b8f5-d1f923efd94b"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/change-description",
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Infection"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "new",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "New"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:f02c54ad-3562-4f7b-8956-de16769a2a88"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/change-description",
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Dose changed"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "amended",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Amended"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:f27faa7d-0433-484a-94ab-5a3f966bd7b1"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "nochange",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Unchanged"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:006679bd-44a9-49df-82ba-a41db0cd6298"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "nochange",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Unchanged"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:d14a5c15-87c9-4cf8-9047-657189898273"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/change-description",
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Stopped before surgery"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "suspended",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Suspended"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:ce9d0158-5f77-4c30-8aad-79500eb2c16f"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/change-description",
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Duplicated medicine"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "ceased",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Ceased"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:17affe2a-6496-437d-8d1a-22baae41a5ae"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/change-description",
+                "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Allergic reaction"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.flag">flag</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org.au/fhir/CodeSystem/medicine-item-change",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "ceased"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:3f99bc18-7edf-4e2a-9eae-86629b56d06e"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:32def593-e104-4cee-b8f5-d1f923efd94b",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "32def593-e104-4cee-b8f5-d1f923efd94b",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 32def593-e104-4cee-b8f5-d1f923efd94b&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:27046ef9-d808-46d4-a028-0ef182b7a8b2\&quot;&gt;urn:uuid:27046ef9-d808-46d4-a028-0ef182b7a8b2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Iron supplement &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:27046ef9-d808-46d4-a028-0ef182b7a8b2"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.reasonCode">reasonCode</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Iron supplement"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Take one tablet daily"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:27046ef9-d808-46d4-a028-0ef182b7a8b2",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "27046ef9-d808-46d4-a028-0ef182b7a8b2",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 27046ef9-d808-46d4-a028-0ef182b7a8b2&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Ferro-Grad C &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '53373011000036103' = '53373011000036103', given as 'Ferro-Grad C'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "53373011000036103",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Ferro-Grad C"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Ferro-Grad C"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:f02c54ad-3562-4f7b-8956-de16769a2a88",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "f02c54ad-3562-4f7b-8956-de16769a2a88",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: f02c54ad-3562-4f7b-8956-de16769a2a88&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:c09df0db-3050-4b62-bb27-7c9b743d59bd\&quot;&gt;urn:uuid:c09df0db-3050-4b62-bb27-7c9b743d59bd&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 10/12/2018 12:00:00 AM --&amp;gt; 20/01/2019 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Infection &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:c09df0db-3050-4b62-bb27-7c9b743d59bd"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.effective[x]">effectivePeriod</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">start</a>" : "2018-12-10",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">end</a>" : "2019-01-20"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.reasonCode">reasonCode</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Infection"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Take one tablet twice a day",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.timing">timing</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat">repeat</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat.frequency">frequency</a>" : 1,
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat.period">period</a>" : 12,
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Timing#Timing.repeat.periodUnit">periodUnit</a>" : "h"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:c09df0db-3050-4b62-bb27-7c9b743d59bd",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "c09df0db-3050-4b62-bb27-7c9b743d59bd",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: c09df0db-3050-4b62-bb27-7c9b743d59bd&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Augmentin Duo Forte &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '12758011000036106' = '12758011000036106', given as 'Augmentin Duo Forte 875/125 film-coated tablet, 10'}; {http://pbs.gov.au/code/item code '5006L' = '5006L', given as 'amoxicillin 875 mg + clavulanic acid 125 mg tablet, 10'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Augmentin Duo Forte"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-generic-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Amoxicillin 875 mg + clavulanic acid 125 mg tablet"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "12758011000036106",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Augmentin Duo Forte 875/125 film-coated tablet, 10"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://pbs.gov.au/code/item",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "5006L",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "amoxicillin 875 mg + clavulanic acid 125 mg tablet, 10"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Augmentin Duo Forte"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:f27faa7d-0433-484a-94ab-5a3f966bd7b1",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "f27faa7d-0433-484a-94ab-5a3f966bd7b1",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: f27faa7d-0433-484a-94ab-5a3f966bd7b1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:d45954e8-80ae-4610-b235-239e9d352799\&quot;&gt;urn:uuid:d45954e8-80ae-4610-b235-239e9d352799&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Reduce blood sugar &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:d45954e8-80ae-4610-b235-239e9d352799"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.reasonCode">reasonCode</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Reduce blood sugar"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Take one tablet twice a day"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:d45954e8-80ae-4610-b235-239e9d352799",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "d45954e8-80ae-4610-b235-239e9d352799",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: d45954e8-80ae-4610-b235-239e9d352799&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Metformin 500mg tablet, Sandoz &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '23358011000036102' = '23358011000036102', given as 'metformin hydrochloride 500 mg tablet'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Sandoz"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "23358011000036102",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "metformin hydrochloride 500 mg tablet"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Metformin 500mg tablet, Sandoz"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:006679bd-44a9-49df-82ba-a41db0cd6298",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "006679bd-44a9-49df-82ba-a41db0cd6298",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 006679bd-44a9-49df-82ba-a41db0cd6298&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:4418bed2-2ae9-4d0a-9acd-d70ab8284c50\&quot;&gt;urn:uuid:4418bed2-2ae9-4d0a-9acd-d70ab8284c50&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:4418bed2-2ae9-4d0a-9acd-d70ab8284c50"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Take one tablet daily"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:4418bed2-2ae9-4d0a-9acd-d70ab8284c50",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "4418bed2-2ae9-4d0a-9acd-d70ab8284c50",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 4418bed2-2ae9-4d0a-9acd-d70ab8284c50&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Multi-vitamins &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-generic-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Multi-vitamins"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Multi-vitamins"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:d14a5c15-87c9-4cf8-9047-657189898273",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "d14a5c15-87c9-4cf8-9047-657189898273",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: d14a5c15-87c9-4cf8-9047-657189898273&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:9574e2d4-863b-11e9-a159-526af7764f64\&quot;&gt;urn:uuid:9574e2d4-863b-11e9-a159-526af7764f64&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Osteoarthritis, pain relief &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:9574e2d4-863b-11e9-a159-526af7764f64"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.reasonCode">reasonCode</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Osteoarthritis, pain relief"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Take two caplets every 6 to 8 hours when required",
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.patientInstruction">patientInstruction</a>" : "No more than 6 caplets in 24 hours"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:9574e2d4-863b-11e9-a159-526af7764f64",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "9574e2d4-863b-11e9-a159-526af7764f64",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 9574e2d4-863b-11e9-a159-526af7764f64&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Panadol Osteo &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Panadol Osteo"
+          },
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-generic-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Paracetamol 665mg caplet"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Panadol Osteo"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:ce9d0158-5f77-4c30-8aad-79500eb2c16f",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "ce9d0158-5f77-4c30-8aad-79500eb2c16f",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: ce9d0158-5f77-4c30-8aad-79500eb2c16f&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:19ae06e9-0242-41eb-b386-5c147b01e88f\&quot;&gt;urn:uuid:19ae06e9-0242-41eb-b386-5c147b01e88f&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Blood thining &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:19ae06e9-0242-41eb-b386-5c147b01e88f"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.reasonCode">reasonCode</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Blood thining"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Take as directed by your doctor at night"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:19ae06e9-0242-41eb-b386-5c147b01e88f",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "19ae06e9-0242-41eb-b386-5c147b01e88f",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 19ae06e9-0242-41eb-b386-5c147b01e88f&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Warfarin sodium 5 mg tablet, Coumadin &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '22464011000036101' = '22464011000036101', given as 'warfarin sodium 5 mg tablet'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org.au/fhir/StructureDefinition/medication-brand-name",
+            "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Coumadin"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "22464011000036101",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "warfarin sodium 5 mg tablet"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Warfarin sodium 5 mg tablet, Coumadin"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:17affe2a-6496-437d-8d1a-22baae41a5ae",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "17affe2a-6496-437d-8d1a-22baae41a5ae",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 17affe2a-6496-437d-8d1a-22baae41a5ae&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: stopped&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7\&quot;&gt;urn:uuid:37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: ?? --&amp;gt; 01/12/2018 12:00:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "stopped",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.effective[x]">effectivePeriod</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">end</a>" : "2018-12"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Unknown; medication ceased"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Paracetamol 500 mg tablet &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '22464011000036101' = '22464011000036101', given as 'Paracetamol 500 mg tablet'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "22464011000036101",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Paracetamol 500 mg tablet"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Paracetamol 500 mg tablet"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:3f99bc18-7edf-4e2a-9eae-86629b56d06e",
+      "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a>" : "3f99bc18-7edf-4e2a-9eae-86629b56d06e",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 3f99bc18-7edf-4e2a-9eae-86629b56d06e&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: stopped&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;Medication-2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d.html\&quot;&gt;Generated Summary: id: 2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d; &lt;span title=\&quot;Codes: {http://snomed.info/sct 21885011000036105}\&quot;&gt;Ibuprofen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;taken&lt;/b&gt;: y&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;: &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a>" : "stopped",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.taken">taken</a>" : "y",
+        "<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage#Dosage.text">text</a>" : "Unknown; medication ceased"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d",
+      "<a href="http://hl7.org/fhir/STU3/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a>" : "2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d",
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Ibuprofen &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '21885011000036105' = '21885011000036105', given as 'Ibuprofen'})&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "21885011000036105",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Ibuprofen"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Ibuprofen"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:7f834da9-63f5-4a66-a847-a32c366701ff",
+      "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance">resource</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html">resourceType</a>" : "AllergyIntolerance",
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.id">id</a>" : "7f834da9-63f5-4a66-a847-a32c366701ff",
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: 7f834da9-63f5-4a66-a847-a32c366701ff&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;verificationStatus&lt;/b&gt;: unconfirmed&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: allergy&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: ibuprofen &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '21885011000036105' = '21885011000036105', given as 'Ibuprofen'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847\&quot;&gt;urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: 01/10/2016&lt;/p&gt;&lt;h3&gt;Reactions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Substance&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Manifestation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;ibuprofen &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '21885011000036105' = '21885011000036105', given as 'Ibuprofen'})&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Anaphylaxis &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {SNOMED CT code '39579001' = 'Generalized anaphylaxis', given as 'Anaphylaxis'})&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.clinicalStatus">clinicalStatus</a>" : "active",
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.verificationStatus">verificationStatus</a>" : "unconfirmed",
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.type">type</a>" : "allergy",
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "21885011000036105",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Ibuprofen"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "ibuprofen"
+        },
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.patient">patient</a>" : {
+          "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
+        },
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.onset[x]">onsetDateTime</a>" : "2016-10",
+        "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.reaction">reaction</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.reaction.substance">substance</a>" : {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "21885011000036105",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Ibuprofen"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "ibuprofen"
+            },
+            "<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.reaction.manifestation">manifestation</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "39579001",
+                    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Anaphylaxis"
+                  }
+                ],
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Anaphylaxis"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}</pre>
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+</div>
+
+
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+
+</div>  <!-- /segment-content -->
+
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+
+<div id="segment-footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+        <div class="inner-wrapper">
+            <p>Document ID: DH-2954:2019</p>
+            <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
+            <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
+            <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Sep 24, 2019 16:49+1000. |
+                <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
+                <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+                </span>
+            </p>
+   </div>  <!-- /inner-wrapper -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-footer -->
+  <!-- disqus thread -->
+  <!-- disqus -->
+  <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+  <div class="container">  <!-- container -->
+  </div>  <!-- /container -->
+ </div>  <!-- /segment-post-footer -->
+
+ <!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+
+<script src="./assets/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+
+</body>
+</html>
+
