@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="The purpose of this profile is to provide a summary statement relating to a condition, problem, or diagnosis including asserting negation for specific conditions or problems.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
-  <copyright value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/> 
+  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/> 
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -25,33 +25,34 @@
   <differential>
     <element id="Condition">
       <path value="Condition" />
+      <constraint>
+        <key value="inv-dh-cond-01"/>
+        <severity value="error"/>
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value"/>
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt;1).exists()"/>
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cond-02"/>
+        <severity value="error"/>
+        <human value="If present, a recorder shall at least have a reference, an identifier or a display"/>
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/recorder').exists() implies extension('http://hl7.org.au/fhir/StructureDefinition/recorder').valueReference.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+      </constraint> 
+      <constraint>
+        <key value="inv-dh-cond-03" />
+        <severity value="error" />
+        <human value="A practitioner shall conform to Base Practitioner, a patient shall conform to Base Patient, and a related person shall conform to Base RelatedPerson" />        
+        <expression value="resolve() is Practitioner implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1') and resolve() is Patient implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1') and resolve() is RelatedPerson implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" />   
+      </constraint>
     </element>
     <element id="Condition.extension">
       <path value="Condition.extension"/>
     </element>
     <element id="Condition.extension:recorder">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft"/>
+      </extension>
       <path value="Condition.extension"/>
-      <sliceName value="recorder"/>
-      <short value="Who recorded the condition"/>
-      <definition
-        value="Reference to an individual who recorded the condition and takes responsibility for its content."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="DomainResource.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>      
-      <type>
-        <code value="Extension"/>
-        <profile value="http://hl7.org.au/fhir/StructureDefinition/recorder"/>
-      </type>
-      <constraint>
-        <key value="inv-dh-cond-02" />
-        <severity value="error" />
-        <human value="A practitioner shall conform to Base Practitioner, a patient shall conform to Base Patient, and a related person shall conform to Base RelatedPerson" />
-        <expression value="Condition.extension('http://hl7.org.au/fhir/StructureDefinition/recorder').where(resolve() is Practitioner implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1')) and Condition.extension('http://hl7.org.au/fhir/StructureDefinition/recorder').where(resolve() is Patient implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1')) and Condition.extension('http://hl7.org.au/fhir/StructureDefinition/recorder').where(resolve() is RelatedPerson implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1'))" />
-      </constraint>      
+      <sliceName value="recorder"/>                
       <mustSupport value="true" />
     </element>
     <element id="Condition.clinicalStatus">
