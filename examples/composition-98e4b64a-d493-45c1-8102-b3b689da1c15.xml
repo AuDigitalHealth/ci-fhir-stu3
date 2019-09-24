@@ -17,7 +17,19 @@
             <h2>Home Medicines Review Report for Mr. Lenny Matterson</h2>
             <p><b>Date of Interview:</b> 5 Feb 1019 10:00AM - 5 Feb 1019 12:15AM</p>
             <p><b>General Assessment:</b></p>
-            <p>Patient has his medications packed into blister packs via ABC pharmacy. He finds them easy to use and they promote good adherence to his regime. His Bluecare nurse, Nurse B, was present for the interview. Of the medication listed on the referral, he is not currently taking Aldara 5% cream and Chloramphenicol ointment. He is having Coloxyl and senna tab - 2 nocte, rather than Coloxyl 50mg tablet -2 BD. He has Ferro-Tab - 1 BD rather than Ferrograd C - 1 daily. In addition to the medication listed on the referral, he is also taking coQ10 150mg tab - 1 nocte, and atrovent MDI - 2 puff before bed. He reports occasional dizziness if he changes position quickly, and does report falling outside in the garden; he wears a falls alarm buzzer. He reports that he generally only experiences chest pain when he becomes stressed (doesn’t like paperwork). His blood pressure at the time of the interview was 158 /76.</p>
+            <p>Patient has his medications packed into blister packs via
+                ABC pharmacy. He finds them easy to use and they promote
+                good adherence to his regime. His Bluecare nurse, Nurse B,
+                was present for the interview. Of the medication listed on
+                the referral, he is not currently taking Aldara 5% cream and
+                Chloramphenicol ointment. In addition to the medication
+                listed on the referral, he is also taking coQ10 150mg tab -
+                1 nocte.He reports occasional dizziness if he changes
+                position quickly, and does report falling outside in the
+                garden; he wears a falls alarm buzzer. He reports that he
+                generally only experiences chest pain when he becomes
+                stressed (doesn’t like paperwork). His blood pressure at the
+                time of the interview was 158 /76.</p>
             <h3>Current Medicines</h3>
             <table border="1">
                 <thead>
@@ -45,11 +57,11 @@
                         <td/>
                     </tr>
                     <tr>
-                        <td>Coloxyl and senna tab</td>
-                        <td>2 at night</td>
+                        <td>CoQ10 150mg tab</td>
+                        <td>1 at night</td>
                         <td/>
                         <td>New</td>
-                        <td>In pack - Instead of Coloxyl 50mg tab – 2/day</td>
+                        <td>In pack – history of Atrial fibrillation</td>
                     </tr>
                 </tbody>
             </table>
@@ -255,20 +267,17 @@
             </meta>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
                 <valueString
-                    value="Patient has his medications packed into blister
-                    packs via ABC pharmacy. He finds them easy to use and they
-                    promote good adherence to his regime. His Bluecare nurse,
-                    Nurse B, was present for the interview. Of the medication
-                    listed on the referral, he is not currently taking Aldara 5%
-                    cream and Chloramphenicol ointment. He is having Coloxyl and
-                    senna tab - 2 nocte, rather than Coloxyl 50mg tablet -2 BD.
-                    He has Ferro-Tab - 1 BD rather than Ferrograd C - 1 daily.
-                    In addition to the medication listed on the referral, he is
-                    also taking coQ10 150mg tab - 1 nocte, and atrovent MDI - 2
-                    puff before bed. He reports occasional dizziness if he
-                    changes position quickly, and does report falling outside in
-                    the garden; he wears a falls alarm buzzer. He reports that
-                    he generally only experiences chest pain when he becomes
+                    value="Patient has his medications packed into blister packs via
+                    ABC pharmacy. He finds them easy to use and they promote
+                    good adherence to his regime. His Bluecare nurse, Nurse B,
+                    was present for the interview. Of the medication listed on
+                    the referral, he is not currently taking Aldara 5% cream and
+                    Chloramphenicol ointment. In addition to the medication
+                    listed on the referral, he is also taking coQ10 150mg tab -
+                    1 nocte.He reports occasional dizziness if he changes
+                    position quickly, and does report falling outside in the
+                    garden; he wears a falls alarm buzzer. He reports that he
+                    generally only experiences chest pain when he becomes
                     stressed (doesn’t like paperwork). His blood pressure at the
                     time of the interview was 158 /76."
                 />
@@ -361,7 +370,7 @@
             <!-- current medicine #3 -->
             <entry>
                 <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
-                    <valueString value="In pack - Instead of Coloxyl 50mg tab – 2/day"/>
+                    <valueString value="In pack – history of Atrial fibrillation"/>
                 </extension>
                 <flag>
                     <coding>
@@ -486,7 +495,12 @@
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
             </meta>
             <code>
-                <text value="Coloxyl and senna tab"/>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="920941011000036100"/>
+                    <display value="CoQ10 (Blackmores)"/>
+                </coding>
+                <text value="CoQ10 150mg tab"/>
             </code>
         </Medication>
     </contained>
@@ -530,6 +544,9 @@
             </note>
             <!-- ceased medicine #1 -->
             <entry>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+                    <valueString value="Completed 8-week course"/>
+                </extension>
                 <flag>
                     <coding>
                         <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
@@ -544,6 +561,9 @@
             </entry>
             <!-- ceased medicine #2 -->
             <entry>
+                <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
+                    <valueString value="Stopped due to burning sensation in the eye."/>
+                </extension>
                 <flag>
                     <coding>
                         <system value="http://hl7.org.au/fhir/CodeSystem/medicine-item-change"/>
@@ -593,6 +613,11 @@
                 <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
             </meta>
             <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="119411000036106"/>
+                    <display value="Aldara 5% cream"></display>
+                </coding>
                 <text value="Aldara 5% cream"/>
             </code>
         </Medication>
@@ -633,10 +658,10 @@
             <code>
                 <coding>
                     <system value="http://snomed.info/sct"/>
-                    <code value="374484004"/>
-                    <display value="Chloramphenicol 1% ointment"/>
+                    <code value="22717011000036101"/>
+                    <display value="chloramphenicol 1% eye ointment"/>
                 </coding>
-                <text value="Chloramphenicol ointment"/>
+                <text value="Chloramphenicol 1% eye ointment"/>
             </code>
         </Medication>
     </contained>
@@ -708,7 +733,19 @@
                         <tr>
                             <td>5 Feb 1019 10:00AM - 5 Feb 1019 12:15AM</td>
                             <td>Home medicines review</td>
-                            <td>Patient has his medications packed into blister packs via ABC pharmacy. He finds them easy to use and they promote good adherence to his regime. His Bluecare nurse, Nurse B, was present for the interview. Of the medication listed on the referral, he is not currently taking Aldara 5% cream and Chloramphenicol ointment. He is having Coloxyl and senna tab - 2 nocte, rather than Coloxyl 50mg tablet -2 BD. He has Ferro-Tab - 1 BD rather than Ferrograd C - 1 daily. In addition to the medication listed on the referral, he is also taking coQ10 150mg tab - 1 nocte, and atrovent MDI - 2 puff before bed. He reports occasional dizziness if he changes position quickly, and does report falling outside in the garden; he wears a falls alarm buzzer. He reports that he generally only experiences chest pain when he becomes stressed (doesn’t like paperwork). His blood pressure at the time of the interview was 158 /76.</td>
+                            <td>Patient has his medications packed into blister packs via
+                                ABC pharmacy. He finds them easy to use and they promote
+                                good adherence to his regime. His Bluecare nurse, Nurse B,
+                                was present for the interview. Of the medication listed on
+                                the referral, he is not currently taking Aldara 5% cream and
+                                Chloramphenicol ointment. In addition to the medication
+                                listed on the referral, he is also taking coQ10 150mg tab -
+                                1 nocte.He reports occasional dizziness if he changes
+                                position quickly, and does report falling outside in the
+                                garden; he wears a falls alarm buzzer. He reports that he
+                                generally only experiences chest pain when he becomes
+                                stressed (doesn’t like paperwork). His blood pressure at the
+                                time of the interview was 158 /76.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -739,11 +776,11 @@
                             <td/>
                         </tr>
                         <tr>
-                            <td>Coloxyl and senna tab</td>
-                            <td>2 at night</td>
+                            <td>CoQ10 150mg tab</td>
+                            <td>1 at night</td>
                             <td/>
                             <td>New</td>
-                            <td>In pack - Instead of Coloxyl 50mg tab – 2/day</td>
+                            <td>In pack – history of Atrial fibrillation</td>
                         </tr>
                     </tbody>
                 </table>
@@ -774,14 +811,17 @@
                     <thead>
                         <tr>
                             <th>Ceased medicine</th>
+                            <th>Reason for ceasing</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Aldara 5% cream</td>
+                            <td>Completed 8-week course</td>
                         </tr>
                         <tr>
-                            <td>Chloramphenicol ointment</td>
+                            <td>Chloramphenicol 1% eye ointment</td>
+                            <td>Stopped due to burning sensation in the eye.</td>
                         </tr>
                     </tbody>
                 </table>
