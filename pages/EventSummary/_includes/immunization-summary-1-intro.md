@@ -1,4 +1,4 @@
-## Summary Statement of Vaccine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Summary Statement of Vaccine *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 
