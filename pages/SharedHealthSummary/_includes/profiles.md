@@ -204,6 +204,11 @@
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
     </tr> 
+    <tr>
+         <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
+   </tr> 
    <tr>
      <td><a href="StructureDefinition-allergyintolerance-summary-1.html">AllergyIntolerance (Summary Statement of Allergy or Intolerance)</a></td>
      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-allergyintolerance.html">AU Base Allergy Intolerance</a></td>
