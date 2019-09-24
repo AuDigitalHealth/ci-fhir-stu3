@@ -67,12 +67,20 @@
             </table>
             <h3>Ceased Medicines</h3>
             <table border="1">
+                <thead>
+                    <tr>
+                        <th>Ceased medicine</th>
+                        <th>Reason for ceasing</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
                         <td>Aldara 5% cream</td>
+                        <td>Completed 8-week course</td>
                     </tr>
                     <tr>
-                        <td>Chloramphenicol ointment</td>
+                        <td>Chloramphenicol 1% eye ointment</td>
+                        <td>Stopped due to burning sensation in the eye.</td>
                     </tr>
                 </tbody>
             </table>
@@ -595,12 +603,11 @@
                 <!-- reference to contained Patient resource -->
                 <reference value="#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"/>
             </subject>
-            <!-- TODO - not sure about this value -->
+            <!-- TODO - taken is mandatory, but not in source file -->
             <taken value="unk"/>
+            <!-- TODO - dosage is mandatory, but not in source file -->
             <dosage>
-                <!-- TODO - empty text in source file - line 983-985 -->
-                <text value="
-                    "/>
+                <text value="unk"/>
             </dosage>
         </MedicationStatement>
     </contained>
@@ -639,11 +646,11 @@
                 <!-- reference to contained Patient resource -->
                 <reference value="#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"/>
             </subject>
-            <!-- TODO - not sure about this value -->
+            <!-- TODO - taken is mandatory, but not in source file -->
             <taken value="unk"/>
+            <!-- TODO - dosage is mandatory, but not in source file -->
             <dosage>
-                <!-- TODO source file has reference to "#CM2M" but text doesn't exist -->
-                <text value="TODO"/>
+                <text value="unk"/>
             </dosage>
         </MedicationStatement>
     </contained>
