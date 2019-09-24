@@ -1,4 +1,4 @@
-### Summary Statement of Known Procedure *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Summary Statement of Known Procedure *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 
