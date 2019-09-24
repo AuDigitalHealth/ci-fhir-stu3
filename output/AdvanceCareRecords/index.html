@@ -165,15 +165,15 @@
 
 <p>Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:</p>
 <ul>
-  <li><a href="http://hl7.org/fhir/STU3/index.html">FHIR, Release 3 (STU)</a> <a href="index.html#HL7FHIR3">[HL7FHIR3]</a></li>
-  <li><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/index.html">Australian Base Profiles Implementation Guide</a> <a href="#HL7AUBIG">[HL7AUBIG]</a></li>
+  <li><a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a></li>
+  <li><a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]</a></li>
 </ul>
 
-<p>Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards (<a href="http://build.fhir.org/ig/hl7au/au-fhir-base/index.html">Australian Base Profiles Implementation Guide</a> <a href="#HL7AUBIG">[HL7AUBIG]</a>) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
+<p>Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Implementation Guide (AU Base 2)] <a href="#HL7AUF3B2">[HL7AUF3B2]</a>) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
 
 <p>This implementation guide is the basis for the corresponding <a href="#DH2019x1">Advance Care Planning CDA Implementation Guide [DH2019x1]</a> and <a href="#DH2019x2">Advance Care Directive Custodian Record CDA Implementation Guide [DH2019x2]</a>. The profiles referenced by this FHIR implementation guide are the ‘models’ that are mapped into CDA.</p>
 
-<p>This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the <a href="http://build.fhir.org/ig/hl7au/au-fhir-base/index.html">Australian Base Profiles Implementation Guide</a> <a href="#HL7AUBIG">[HL7AUBIG]</a> or <a href="http://hl7.org/fhir/STU3/index.html">FHIR, Release 3 (STU)</a> <a href="index.html#HL7FHIR3">[HL7FHIR3]</a>. The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
+<p>This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the <a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]</a> or <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>. The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
 <h2 id="context-and-use">Context and use</h2>
 <p>A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.</p>
@@ -197,7 +197,7 @@
 <h2 id="how-to-read-this-document">How to read this document</h2>
 <p>This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of advance care records. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
 
-<p>The starting point for the profiles included in this implementation guide are the Advance Care Planning and Advance Care Directive Custodian Record profiles, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a> for this implementation guide.</p>
+<p>The starting point for the profiles included in this implementation guide are the <a href="StructureDefinition-composition-acp-1.html">Advance Care Planning</a> and <a href="StructureDefinition-composition-acdcr-1.html">Advance Care Directive Custodian Record</a> profiles, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a> for this implementation guide.</p>
 
 <h2 id="editorial-note">Editorial note</h2>
 <p>This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.</p>
@@ -282,8 +282,8 @@
 <table>
   <tbody>
     <tr>
-      <td>[<a name="HL7AUBIG">HL7AUBIG</a>]</td>
-      <td>HL7 Australia, Continuous Integration Build, Australian Base Profiles Implementation Guide, v1.0.0 (Standard for Trial Use), accessed 07 March 2019</td>
+      <td>[<a name="HL7AUF3B2">HL7AUF3B2</a>]</td>
+      <td>HL7 Australia, Continuous Integration Build STU3, Australian Base Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019</td>
     </tr>
     <tr>
       <td> </td>
@@ -394,7 +394,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 5, 2019 14:45+1000. |
+            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Sep 24, 2019 16:39+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
