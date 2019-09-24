@@ -11,7 +11,7 @@
   "title": "List of Prescription and or Dispense Records",
   "status": "draft",
   "experimental": true,
-  "date": "2019-09-23T08:31:21+10:00",
+  "date": "2019-09-24T16:59:29+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -121,13 +121,13 @@
             "key": "inv-dh-lst-02",
             "severity": "error",
             "human": "The list shall at least have an authoring related person or a source, but not both",
-            "expression": "(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()"
+            "expression": "(extension($this='http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()"
           },
           {
             "key": "inv-dh-lst-03",
             "severity": "error",
             "human": "If and only if the source is a practitioner, the authoring role shall be provided",
-            "expression": "source.resolve() is Practitioner implies extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()"
+            "expression": "source.resolve() is Practitioner implies extension($this='http://hl7.org.au/fhir/StructureDefinition/author-role').exists()"
           },
           {
             "key": "inv-dh-lst-05",
@@ -145,7 +145,7 @@
             "key": "inv-dh-lst-06",
             "severity": "error",
             "human": "If present, a source shall at least have a reference or an identifier with at least a system and a value",
-            "expression": "source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists()"
+            "expression": "source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists())"
           },
           {
             "key": "inv-dh-lst-04",
@@ -157,13 +157,13 @@
             "key": "inv-dh-lst-11",
             "severity": "error",
             "human": "If this list is a Dispense List the entry item shall not be a prescription",
-            "expression": "code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest"
+            "expression": "entry.item.reference.resolve() is MedicationRequest implies code.coding.code!='100.32014'"
           },
           {
             "key": "inv-dh-lst-12",
             "severity": "error",
             "human": "If this is list is a Prescription List the entry item shall not be a dispense record",
-            "expression": "code.coding.where(code='57828-6').exists().not() and entry.item.reference.resolve() is MedicationDispense"
+            "expression": "entry.item.reference.resolve() is MedicationDispense implies code.coding.code!='57828-6'"
           }
         ],
         "mapping": [
@@ -223,7 +223,7 @@
             "key": "inv-dh-lst-08",
             "severity": "error",
             "human": "One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'",
-            "expression": "profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()"
+            "expression": "profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()"
           }
         ],
         "isSummary": true
@@ -684,7 +684,7 @@
             "key": "inv-dh-lst-09",
             "severity": "error",
             "human": "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier",
-            "expression": "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
+            "expression": "resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
           }
         ],
         "mustSupport": true
@@ -868,7 +868,7 @@
             "key": "inv-dh-lst-10",
             "severity": "error",
             "human": "A related person shall conform to RelatedPerson with Mandatory Identifier",
-            "expression": "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')"
+            "expression": "resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')"
           }
         ],
         "mustSupport": true
@@ -1961,13 +1961,13 @@
             "key": "inv-dh-lst-02",
             "severity": "error",
             "human": "The list shall at least have an authoring related person or a source, but not both",
-            "expression": "(extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()"
+            "expression": "(extension($this='http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()"
           },
           {
             "key": "inv-dh-lst-03",
             "severity": "error",
             "human": "If and only if the source is a practitioner, the authoring role shall be provided",
-            "expression": "source.resolve() is Practitioner implies extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()"
+            "expression": "source.resolve() is Practitioner implies extension($this='http://hl7.org.au/fhir/StructureDefinition/author-role').exists()"
           },
           {
             "key": "inv-dh-lst-05",
@@ -1985,7 +1985,7 @@
             "key": "inv-dh-lst-06",
             "severity": "error",
             "human": "If present, a source shall at least have a reference or an identifier with at least a system and a value",
-            "expression": "source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists()"
+            "expression": "source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists())"
           },
           {
             "key": "inv-dh-lst-04",
@@ -1997,13 +1997,13 @@
             "key": "inv-dh-lst-11",
             "severity": "error",
             "human": "If this list is a Dispense List the entry item shall not be a prescription",
-            "expression": "code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest"
+            "expression": "entry.item.reference.resolve() is MedicationRequest implies code.coding.code!='100.32014'"
           },
           {
             "key": "inv-dh-lst-12",
             "severity": "error",
             "human": "If this is list is a Prescription List the entry item shall not be a dispense record",
-            "expression": "code.coding.where(code='57828-6').exists().not() and entry.item.reference.resolve() is MedicationDispense"
+            "expression": "entry.item.reference.resolve() is MedicationDispense implies code.coding.code!='57828-6'"
           }
         ]
       },
@@ -2016,7 +2016,7 @@
             "key": "inv-dh-lst-08",
             "severity": "error",
             "human": "One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'",
-            "expression": "profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()"
+            "expression": "profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()"
           }
         ]
       },
@@ -2056,7 +2056,7 @@
             "key": "inv-dh-lst-09",
             "severity": "error",
             "human": "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier",
-            "expression": "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
+            "expression": "resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
           }
         ],
         "mustSupport": true
@@ -2079,7 +2079,7 @@
             "key": "inv-dh-lst-10",
             "severity": "error",
             "human": "A related person shall conform to RelatedPerson with Mandatory Identifier",
-            "expression": "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')"
+            "expression": "resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')"
           }
         ],
         "mustSupport": true

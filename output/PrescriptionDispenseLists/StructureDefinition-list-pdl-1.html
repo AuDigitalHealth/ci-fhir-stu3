@@ -262,7 +262,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medlist.html">AUMedicineList</a>.</p>
 <p>
-This profile was published on Mon Sep 23 08:31:21 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Tue Sep 24 16:59:29 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -736,20 +736,20 @@ Summary
 <tr><td>lst-2</td><td>List</td><td>The deleted flag can only be used if the mode of the list is &quot;changes&quot;<br/>: mode = 'changes' or entry.deleted.empty()</td><td></td></tr>
 <tr><td>lst-1</td><td>List</td><td>A list can only have an emptyReason if it is empty<br/>: emptyReason.empty() or entry.empty()</td><td></td></tr>
 <tr><td>inv-dh-lst-07</td><td>List</td><td>The subject shall at least have a reference or an identifier with at least a system and a value<br/>: subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt;1).exists()</td><td></td></tr>
-<tr><td>inv-dh-lst-02</td><td>List</td><td>The list shall at least have an authoring related person or a source, but not both<br/>: (extension('http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()</td><td></td></tr>
-<tr><td>inv-dh-lst-03</td><td>List</td><td>If and only if the source is a practitioner, the authoring role shall be provided<br/>: source.resolve() is Practitioner implies extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()</td><td></td></tr>
+<tr><td>inv-dh-lst-02</td><td>List</td><td>The list shall at least have an authoring related person or a source, but not both<br/>: (extension($this='http://hl7.org.au/fhir/StructureDefinition/author-related-person').exists() and source.exists()).not()</td><td></td></tr>
+<tr><td>inv-dh-lst-03</td><td>List</td><td>If and only if the source is a practitioner, the authoring role shall be provided<br/>: source.resolve() is Practitioner implies extension($this='http://hl7.org.au/fhir/StructureDefinition/author-role').exists()</td><td></td></tr>
 <tr><td>inv-dh-lst-05</td><td>List</td><td>If present, an authoring related person shall at least have a reference or an identifier with at least a system and a value<br/>: authorRelatedPerson.exists() implies (authorRelatedPerson.reference.exists() or authorRelatedPerson.identifier.where(system.count() + value.count() &gt;1).exists())</td><td></td></tr>
 <tr><td>inv-dh-lst-01</td><td>List</td><td>The list shall at least have one entry or an empty reason, but not both<br/>: (entry.exists() and emptyreason.exists()).not()</td><td></td></tr>
-<tr><td>inv-dh-lst-06</td><td>List</td><td>If present, a source shall at least have a reference or an identifier with at least a system and a value<br/>: source.reference.exists() or source.identifier.where(system.count() + value.count() &gt;1).exists()</td><td></td></tr>
+<tr><td>inv-dh-lst-06</td><td>List</td><td>If present, a source shall at least have a reference or an identifier with at least a system and a value<br/>: source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() &gt;1).exists())</td><td></td></tr>
 <tr><td>inv-dh-lst-04</td><td>List</td><td>If present, an authoring role shall at least have a reference or an identifier with at least a system and a value<br/>: authorRole.exists() implies (authorRole.reference.exists() or authorRole.identifier.where(system.count() + value.count() &gt;1).exists())</td><td></td></tr>
-<tr><td>inv-dh-lst-11</td><td>List</td><td>If this list is a Dispense List the entry item shall not be a prescription<br/>: code.coding.where(code='100.32014').exists().not() and entry.item.reference.resolve() is MedicationRequest</td><td></td></tr>
-<tr><td>inv-dh-lst-12</td><td>List</td><td>If this is list is a Prescription List the entry item shall not be a dispense record<br/>: code.coding.where(code='57828-6').exists().not() and entry.item.reference.resolve() is MedicationDispense</td><td></td></tr>
-<tr><td>inv-dh-lst-08</td><td>List.meta</td><td>One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'<br/>: profile('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()</td><td></td></tr>
-<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
-<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
-<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
-<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
-<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
+<tr><td>inv-dh-lst-11</td><td>List</td><td>If this list is a Dispense List the entry item shall not be a prescription<br/>: entry.item.reference.resolve() is MedicationRequest implies code.coding.code!='100.32014'</td><td></td></tr>
+<tr><td>inv-dh-lst-12</td><td>List</td><td>If this is list is a Prescription List the entry item shall not be a dispense record<br/>: entry.item.reference.resolve() is MedicationDispense implies code.coding.code!='57828-6'</td><td></td></tr>
+<tr><td>inv-dh-lst-08</td><td>List.meta</td><td>One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1'<br/>: profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1').exists()</td><td></td></tr>
+<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
+<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
+<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
+<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
+<tr><td>inv-dh-lst-10</td><td>List.extension</td><td>A related person shall conform to RelatedPerson with Mandatory Identifier<br/>: resolve().conformsTo($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')</td><td></td></tr>
 <tr><td>ele-1</td><td>List.entry</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ele-1</td><td>List.entry.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() | (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>List.entry.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
@@ -816,7 +816,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Sep 23, 2019 08:31+1000. |
+            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Sep 24, 2019 16:59+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

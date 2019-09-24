@@ -102,7 +102,7 @@
     This is release 1.0.0 of Prescription and Dispense Lists FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
 </p>
 
-<!-- ============Tabs=============== -->
+<!-- ============Tabs (only on Profile StructureDefinition Pages =============== -->
 <ul class="nav nav-tabs">
   <li><a href="StructureDefinition-list-pdl-1.html">Content</a></li>
   <li><a href="StructureDefinition-list-pdl-1-examples.html">Examples</a></li>
@@ -112,6 +112,7 @@
   <li class="" ><a href="StructureDefinition-list-pdl-1.json.html">JSON</a></li>
   <li class="" ><a href="StructureDefinition-list-pdl-1.ttl.html">Turtle</a></li>
 </ul>
+
   <!-- ============CONTENT CONTENT=============== -->
 
 <h1>StructureDefinition-list-pdl-1.xml</h1>
@@ -156,7 +157,7 @@ Raw <a href="StructureDefinition-list-pdl-1.xml" download>xml</a>
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;List of Prescription and or Dispense Records&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-09-23T08:31:21+10:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-09-24T16:59:29+10:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Australian Digital Health Agency&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -282,7 +283,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The list shall at least have an authoring related person or a source, but not both&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(extension(&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-related-person&amp;#39;).exists() and source.exists()).not()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(extension($this=&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-related-person&amp;#39;).exists() and source.exists()).not()&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-03&quot;/&gt;
@@ -290,7 +291,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If and only if the source is a practitioner, the authoring role shall be provided&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.resolve() is Practitioner implies extension(&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-role&amp;#39;).exists()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.resolve() is Practitioner implies extension($this=&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-role&amp;#39;).exists()&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-05&quot;/&gt;
@@ -313,7 +314,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If present, a source shall at least have a reference or an identifier with at least a system and a value&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.reference.exists() or source.identifier.where(system.count() + value.count() &amp;gt;1).exists()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() &amp;gt;1).exists())&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-04&quot;/&gt;
@@ -329,7 +330,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If this list is a Dispense List the entry item shall not be a prescription&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;code.coding.where(code=&amp;#39;100.32014&amp;#39;).exists().not() and entry.item.reference.resolve() is MedicationRequest&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;entry.item.reference.resolve() is MedicationRequest implies code.coding.code!=&amp;#39;100.32014&amp;#39;&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-12&quot;/&gt;
@@ -337,7 +338,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If this is list is a Prescription List the entry item shall not be a dispense record&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;code.coding.where(code=&amp;#39;57828-6&amp;#39;).exists().not() and entry.item.reference.resolve() is MedicationDispense&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;entry.item.reference.resolve() is MedicationDispense implies code.coding.code!=&amp;#39;57828-6&amp;#39;&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;rim&quot;/&gt;
@@ -392,7 +393,7 @@ In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conforman
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;One profile shall be &amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1&amp;#39;&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;profile(&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1&amp;#39;).exists()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;profile.where($this=&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1&amp;#39;).exists()&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;/element&gt;
@@ -803,7 +804,7 @@ This element is labelled as a modifier because the implicit rules may provide ad
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo(&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1&amp;#39;)&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo($this=&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1&amp;#39;)&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;/element&gt;
@@ -959,7 +960,7 @@ This element is labelled as a modifier because the implicit rules may provide ad
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A related person shall conform to RelatedPerson with Mandatory Identifier&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo(&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1&amp;#39;)&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo($this=&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1&amp;#39;)&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;/element&gt;
@@ -1923,7 +1924,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The list shall at least have an authoring related person or a source, but not both&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(extension(&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-related-person&amp;#39;).exists() and source.exists()).not()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;(extension($this=&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-related-person&amp;#39;).exists() and source.exists()).not()&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-03&quot;/&gt;
@@ -1931,7 +1932,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If and only if the source is a practitioner, the authoring role shall be provided&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.resolve() is Practitioner implies extension(&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-role&amp;#39;).exists()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.resolve() is Practitioner implies extension($this=&amp;#39;http://hl7.org.au/fhir/StructureDefinition/author-role&amp;#39;).exists()&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-05&quot;/&gt;
@@ -1954,7 +1955,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If present, a source shall at least have a reference or an identifier with at least a system and a value&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.reference.exists() or source.identifier.where(system.count() + value.count() &amp;gt;1).exists()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;source.exists() implies (source.reference.exists() or source.identifier.where(system.count() + value.count() &amp;gt;1).exists())&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-04&quot;/&gt;
@@ -1970,7 +1971,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If this list is a Dispense List the entry item shall not be a prescription&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;code.coding.where(code=&amp;#39;100.32014&amp;#39;).exists().not() and entry.item.reference.resolve() is MedicationRequest&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;entry.item.reference.resolve() is MedicationRequest implies code.coding.code!=&amp;#39;100.32014&amp;#39;&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;inv-dh-lst-12&quot;/&gt;
@@ -1978,7 +1979,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;If this is list is a Prescription List the entry item shall not be a dispense record&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;code.coding.where(code=&amp;#39;57828-6&amp;#39;).exists().not() and entry.item.reference.resolve() is MedicationDispense&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;entry.item.reference.resolve() is MedicationDispense implies code.coding.code!=&amp;#39;57828-6&amp;#39;&quot;/&gt;
       &lt;/constraint&gt;
     &lt;/element&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;List.meta&quot;&gt;
@@ -1990,7 +1991,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;One profile shall be &amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1&amp;#39;&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;profile(&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1&amp;#39;).exists()&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;profile.where($this=&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-pdl-1&amp;#39;).exists()&quot;/&gt;
       &lt;/constraint&gt;
     &lt;/element&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">id</a>=&quot;List.meta.profile&quot;&gt;
@@ -2023,7 +2024,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo(&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1&amp;#39;)&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo($this=&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1&amp;#39;)&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;/element&gt;
@@ -2044,7 +2045,7 @@ Applications converting a logical reference to a literal reference may choose to
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>
                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;A related person shall conform to RelatedPerson with Mandatory Identifier&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>
-                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo(&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1&amp;#39;)&quot;/&gt;
+                    <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;resolve().conformsTo($this=&amp;#39;http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1&amp;#39;)&quot;/&gt;
       &lt;/constraint&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;/element&gt;
@@ -2191,7 +2192,7 @@ Applications converting a logical reference to a literal reference may choose to
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Sep 23, 2019 08:31+1000. |
+            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Sep 24, 2019 16:59+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
