@@ -1,6 +1,6 @@
 #### Summary Statement of Allergy or Intolerance *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### **Implementation guidance**
+#### Implementation guidance
 For the expected usage scenarios in this implementation guide:
 
 * It is expected that verificationStatus will be ‘unconfirmed’ (where a sending system does not clearly have this element this should be the value sent), but may be ‘confirmed’.
