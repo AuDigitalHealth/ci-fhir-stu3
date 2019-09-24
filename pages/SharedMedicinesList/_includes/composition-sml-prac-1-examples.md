@@ -32,12 +32,4 @@
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
-            <tr>
-                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.html">Ceased medicines list (Bundle of type 'message')</a></td>
-                <td>df9ae2cb-3f27-4d62-b3a2-fbdda1657d95</td>
-                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.xml.html">XML</a></td>
-                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.json.html">JSON</a></td>
-                <td><a href="Bundle-df9ae2cb-3f27-4d62-b3a2-fbdda1657d95.ttl.html">Turtle</a></td>
-                <td></td>
-            </tr>
  </table>
