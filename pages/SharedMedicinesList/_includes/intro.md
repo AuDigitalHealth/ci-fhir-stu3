@@ -119,7 +119,7 @@ This section lists known issues with this specification at the time of publishin
     <tr>
         <td>Terminology publication</td>
         <td>The following terminology resources are not yet available in NCTS:<ul> 
-            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-list-type-1 ">https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1</a></li>
+            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1">https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1</a></li>
             </ul> 
        </td>
     </tr>
