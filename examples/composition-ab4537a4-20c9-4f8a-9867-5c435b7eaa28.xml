@@ -12,13 +12,77 @@
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>TODO</p>
+            <h2>Shared Medicines List</h2>
+            <ul>
+                <li>Date: 12/08/2018</li>
+                <li>Status: final</li>
+            </ul>
+            <h3>Patient details</h3>
+            <ul>
+                <li>Mrs Bonny Goodwin</li>
+                <li>Female</li>
+                <li>Married</li>
+                <li>IHI: 8003608000228445</li>
+                <li>Medicare number: 3951032981</li>
+            </ul>
+            <h3>Author details</h3>
+            <ul>
+                <li>Pharmacist</li>
+                <li>HPI-I: 8003619900041630</li>
+                <li>Test Hospital (HPI-O: 8003623233366573)</li>
+            </ul>
+            <h3>General Practitioner</h3>
+            <ul>
+                <li>Dr. G. Practitioner</li>
+            </ul>
+            <h3>Allergies and Intolerances</h3>
+			<p>No known allergies</p>
+            <h3>Current Medicines</h3>
+            <table border="1">
+                <caption>Current Medicines</caption>
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Medicine brand name</th>
+                        <th>Directions</th>
+                        <th>Purpose</th>
+                        <th>Status</th>
+                        <th>Status reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td/>
+                        <td>Tritace</td>
+                        <td>Take one tablet in the morning daily.</td>
+                        <td>To reduce high blood pressure; treat heart failure after a heart attack; prevent progresion of kidney failure; reduce the risk of heart attack, stroke and stenting</td>
+                        <td>Unchanged</td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td>docusate sodium 50 mg + sennoside B 8 mg tablet</td>
+                        <td>Co-Senna</td>
+                        <td>Take two tablets twice a day.</td>
+                        <td>Laxative for constipation, works by softening the stools and also assists by stimulating the gut to achieve bowel movements.</td>
+                        <td>New</td>
+                        <td>Laxative for constipation.</td>
+                    </tr>
+                    <tr>
+                        <td>Oxycodone</td>
+                        <td>Endone</td>
+                        <td>Take one to two tablets every four hours when required.</td>
+                        <td>For relief of moderate to severe pain.</td>
+                        <td>Amended</td>
+                        <td>Dose increased</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </text>
 
     <contained>
         <Encounter>
-            <id value="33a17c81-f588-4ccb-9860-aa739cb8497d"/>
+            <id value="encounter-01"/>
             <status value="finished"/>
             <type>
                 <coding>
@@ -51,7 +115,7 @@
 
     <contained>
         <AllergyIntolerance xmlns="http://hl7.org/fhir">
-            <id value="2b4a7d88-48f8-4ca3-b39b-5c0681363e72"/>
+            <id value="allergyintolerance-01"/>
             <clinicalStatus value="active"/>
             <verificationStatus value="unconfirmed"/>
             <code>
@@ -81,7 +145,7 @@
 
     <contained>
         <List>
-            <id value="618a2973-935d-4082-ba43-0a22487416a1"/>
+            <id value="list-01"/>
             <language value="en-AU"/>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/author-role">
                 <valueReference>
@@ -125,7 +189,7 @@
             </subject>
             <encounter>
                 <!-- reference to contained Encounter resource -->
-                <reference value="#33a17c81-f588-4ccb-9860-aa739cb8497d"/>
+                <reference value="#encounter-01"/>
             </encounter>
             <date value="2019-08-12"/>
             <source>
@@ -154,7 +218,7 @@
                 </flag>
                 <item>
                     <!-- reference to contained MedicationStatement resource #1 -->
-                    <reference value="#2b751c3e-dc61-4ecd-8110-bce194d146ad"/>
+                    <reference value="#medicationstatement-01"/>
                 </item>
             </entry>
             
@@ -171,7 +235,7 @@
                 </flag>
                 <item>
                     <!-- reference to contained MedicationStatement resource #2 -->
-                    <reference value="#b94a7467-b4fa-480f-a1af-4aa184fba577"/>
+                    <reference value="#medicationstatement-02"/>
                 </item>
             </entry>
             
@@ -188,7 +252,7 @@
                 </flag>
                 <item>
                     <!-- reference to contained MedicationStatement resource #3 -->
-                    <reference value="#4e9a54b2-fda5-40f6-8137-30cddbb946cd"/>
+                    <reference value="#medicationstatement-03"/>
                 </item>
             </entry>
             
@@ -197,11 +261,11 @@
     
     <contained>
         <MedicationStatement>
-            <id value="2b751c3e-dc61-4ecd-8110-bce194d146ad"/>
+            <id value="medicationstatement-01"/>
             <status value="active"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
-                <reference value="#c1d71e4b-afd6-440a-b31a-128df572cc2b"/>
+                <reference value="#medication-01"/>
             </medicationReference>
             <subject>
                 <!-- logical reference to Patient -->
@@ -232,7 +296,7 @@
     
     <contained>
         <Medication>
-            <id value="c1d71e4b-afd6-440a-b31a-128df572cc2b"/>
+            <id value="medication-01"/>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
                 <valueString value="Tritace"/>
             </extension>
@@ -244,11 +308,11 @@
     
     <contained>
         <MedicationStatement>
-            <id value="b94a7467-b4fa-480f-a1af-4aa184fba577"/>
+            <id value="medicationstatement-02"/>
             <status value="active"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
-                <reference value="#40dbab41-1e6b-4ab5-990b-865f0e736843"/>
+                <reference value="#medication-02"/>
             </medicationReference>
             <subject>
                 <!-- logical reference to Patient -->
@@ -284,7 +348,7 @@
     
     <contained>
         <Medication>
-            <id value="40dbab41-1e6b-4ab5-990b-865f0e736843"/>
+            <id value="medication-02"/>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
                 <valueString value="Co-Senna"/>
             </extension>
@@ -305,11 +369,11 @@
     
     <contained>
         <MedicationStatement>
-            <id value="4e9a54b2-fda5-40f6-8137-30cddbb946cd"/>
+            <id value="medicationstatement-03"/>
             <status value="active"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
-                <reference value="#22f154ff-5cee-4f35-8421-42a1aebfbcd5"/>
+                <reference value="#medication-03"/>
             </medicationReference>
             <subject>
                 <!-- logical reference to Patient -->
@@ -343,7 +407,7 @@
     
     <contained>
         <Medication>
-            <id value="22f154ff-5cee-4f35-8421-42a1aebfbcd5"/>
+            <id value="medication-03"/>
             <extension url="http://hl7.org.au/fhir/StructureDefinition/medication-brand-name">
                 <valueString value="Endone"/>
             </extension>
@@ -407,7 +471,7 @@
     </subject>
     <encounter>
         <!-- reference to contained Encounter resource -->
-        <reference value="#33a17c81-f588-4ccb-9860-aa739cb8497d"/>
+        <reference value="#encounter-01"/>
     </encounter>
     <date value="2019-08-12"/>
     <author>
@@ -470,14 +534,14 @@
             </coding>
         </code>
         <text>
-            <status value="additional"/>
+            <status value="generated"/>
             <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
                 <p>No known allergies</p>
             </div>
         </text>
         <entry>
             <!-- reference to contained AllergyIntolerance resource -->
-            <reference value="#2b4a7d88-48f8-4ca3-b39b-5c0681363e72"/>
+            <reference value="#allergyintolerance-01"/>
         </entry>
     </section>
 
@@ -491,7 +555,7 @@
             </coding>
         </code>
         <text>
-            <status value="additional"/>
+            <status value="extensions"/>
             <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
                 <table border="1">
                     <caption>Current Medicines</caption>
@@ -536,7 +600,7 @@
         </text>
         <entry>
             <!-- reference to contained List resource -->
-            <reference value="#618a2973-935d-4082-ba43-0a22487416a1"/>
+            <reference value="#list-01"/>
         </entry>
     </section>
 

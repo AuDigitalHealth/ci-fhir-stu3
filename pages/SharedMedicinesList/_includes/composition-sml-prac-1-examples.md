@@ -17,7 +17,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.html">Shared Medicines List (Composition with contained resources)</a></td>
+                <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.html">Pharmacist Shared Medicines List example 3 (Composition with contained resources)</a></td>
                 <td>ab4537a4-20c9-4f8a-9867-5c435b7eaa28</td>
                 <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml.html">XML</a></td>
                 <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.json.html">JSON</a></td>
