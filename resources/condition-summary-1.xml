@@ -35,14 +35,26 @@
         <key value="inv-dh-cond-02"/>
         <severity value="error"/>
         <human value="If present, a recorder shall at least have a reference, an identifier or a display"/>
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/recorder').exists() implies extension('http://hl7.org.au/fhir/StructureDefinition/recorder').valueReference.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"/>
+        <expression value="
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').exists() 
+          implies 
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.exists() 
+          or 
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.identifier.exists() 
+          or 
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.display.exists()"/>
       </constraint> 
       <constraint>
         <key value="inv-dh-cond-03" />
         <severity value="error" />
-        <human value="A practitioner shall conform to Base Practitioner, a patient shall conform to Base Patient, and a related person shall conform to Base RelatedPerson" />        
-        <expression value="resolve() is Practitioner implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1') and resolve() is Patient implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1') and resolve() is RelatedPerson implies resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1')" />   
-      </constraint>
+        <human value="A practitioner shall conform to Base Practitioner, a patient shall conform to Base Patient, and a related person shall conform to Base RelatedPerson" />
+        <expression value="
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.resolve() is Practitioner implies extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.conformsTo('http://hl7.org/fhir/StructureDefinition/Practitioner')
+          or 
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.resolve() is Patient implies extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.conformsTo('http://hl7.org/fhir/StructureDefinition/Patient')
+          or 
+          extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.resolve() is RelatedPerson implies extension('http://hl7.org.au/fhir/StructureDefinition/recorder').value.reference.conformsTo('http://hl7.org/fhir/StructureDefinition/RelatedPerson')" />
+      </constraint> 
     </element>
     <element id="Condition.extension">
       <path value="Condition.extension"/>
