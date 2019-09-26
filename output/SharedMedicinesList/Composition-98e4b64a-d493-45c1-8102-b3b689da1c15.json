@@ -2,7 +2,7 @@
   "resourceType": "Composition",
   "id": "98e4b64a-d493-45c1-8102-b3b689da1c15",
   "meta": {
-    "versionId": "2",
+    "versionId": "20190205",
     "profile": [
       "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1"
     ]
@@ -10,7 +10,7 @@
   "language": "en-AU",
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <h2>Home Medicines Review Report for Mr. Lenny Matterson</h2>\n            <p><b>Date of Interview:</b> 5 Feb 1019 10:00AM - 5 Feb 1019 12:15AM</p>\n            <p><b>General Assessment:</b></p>\n            <p>Patient has his medications packed into blister packs via\n                ABC pharmacy. He finds them easy to use and they promote\n                good adherence to his regime. His Bluecare nurse, Nurse B,\n                was present for the interview. Of the medication listed on\n                the referral, he is not currently taking Aldara 5% cream and\n                Chloramphenicol ointment. In addition to the medication\n                listed on the referral, he is also taking coQ10 150mg tab -\n                1 nocte.He reports occasional dizziness if he changes\n                position quickly, and does report falling outside in the\n                garden; he wears a falls alarm buzzer. He reports that he\n                generally only experiences chest pain when he becomes\n                stressed (doesn’t like paperwork). His blood pressure at the\n                time of the interview was 158 /76.</p>\n            <h3>Current Medicines</h3>\n            <table border=\"1\">\n                <thead>\n                    <tr>\n                        <th>Medicine</th>\n                        <th>Directions</th>\n                        <th>Medicine purpose</th>\n                        <th>Medicine status</th>\n                        <th>Status Reason/Comment</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Amiodarone 200mg tab</td>\n                        <td>1 in the morning</td>\n                        <td/>\n                        <td>Unchanged</td>\n                        <td/>\n                    </tr>\n                    <tr>\n                        <td>Bisoprolol 2.5mg tab</td>\n                        <td>1/2 tablet in the morning</td>\n                        <td/>\n                        <td>Unchanged</td>\n                        <td/>\n                    </tr>\n                    <tr>\n                        <td>CoQ10 150mg tab</td>\n                        <td>1 at night</td>\n                        <td/>\n                        <td>New</td>\n                        <td>In pack – history of Atrial fibrillation</td>\n                    </tr>\n                </tbody>\n            </table>\n            <h3>Ceased Medicines</h3>\n            <table border=\"1\">\n                <thead>\n                    <tr>\n                        <th>Ceased medicine</th>\n                        <th>Reason for ceasing</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Aldara 5% cream</td>\n                        <td>Completed 8-week course</td>\n                    </tr>\n                    <tr>\n                        <td>Chloramphenicol 1% eye ointment</td>\n                        <td>Stopped due to burning sensation in the eye.</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n            <h2>Home Medicines Review Report for Mr. Lenny Matterson</h2>\n            <p><b>Date of Interview:</b> 5 Feb 1019 10:00AM - 5 Feb 1019 11:15AM</p>\n            <p><b>General Assessment:</b></p>\n            <p>Patient has his medications packed into blister packs via\n                ABC pharmacy. He finds them easy to use and they promote\n                good adherence to his regime. His Bluecare nurse, Nurse B,\n                was present for the interview. Of the medication listed on\n                the referral, he is not currently taking Aldara 5% cream and\n                Chloramphenicol ointment. In addition to the medication\n                listed on the referral, he is also taking coQ10 150mg tab -\n                1 nocte.He reports occasional dizziness if he changes\n                position quickly, and does report falling outside in the\n                garden; he wears a falls alarm buzzer. He reports that he\n                generally only experiences chest pain when he becomes\n                stressed (doesn’t like paperwork). His blood pressure at the\n                time of the interview was 158 /76.</p>\n            <h3>Current Medicines</h3>\n            <table border=\"1\">\n                <thead>\n                    <tr>\n                        <th>Medicine</th>\n                        <th>Directions</th>\n                        <th>Medicine purpose</th>\n                        <th>Medicine status</th>\n                        <th>Status Reason/Comment</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Amiodarone 200mg tab</td>\n                        <td>1 in the morning</td>\n                        <td/>\n                        <td>Unchanged</td>\n                        <td/>\n                    </tr>\n                    <tr>\n                        <td>Bisoprolol 2.5mg tab</td>\n                        <td>1/2 tablet in the morning</td>\n                        <td/>\n                        <td>Unchanged</td>\n                        <td/>\n                    </tr>\n                    <tr>\n                        <td>CoQ10 150mg tab</td>\n                        <td>1 at night</td>\n                        <td/>\n                        <td>New</td>\n                        <td>In pack – history of Atrial fibrillation</td>\n                    </tr>\n                </tbody>\n            </table>\n            <h3>Ceased Medicines</h3>\n            <table border=\"1\">\n                <thead>\n                    <tr>\n                        <th>Ceased medicine</th>\n                        <th>Reason for ceasing</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>Aldara 5% cream (apply as required)</td>\n                        <td>Completed 8-week course</td>\n                    </tr>\n                    <tr>\n                        <td>Chloramphenicol 1% eye ointment (apply as required)</td>\n                        <td>Stopped due to burning sensation in the eye.</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>"
   },
   "contained": [
     {
@@ -98,7 +98,8 @@
             "coding": [
               {
                 "system": "urn:ietf:bcp:47",
-                "code": "pjt"
+                "code": "pjt",
+                "display": "Pitjantjatjara"
               }
             ]
           }
@@ -108,11 +109,6 @@
     {
       "resourceType": "PractitionerRole",
       "id": "91555386-d478-4e3d-bd3d-ac642ff603c4",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1"
-        ]
-      },
       "identifier": [
         {
           "type": {
@@ -155,23 +151,11 @@
             }
           ]
         }
-      ],
-      "telecom": [
-        {
-          "system": "fax",
-          "value": "0370102020",
-          "use": "work"
-        }
       ]
     },
     {
       "resourceType": "Practitioner",
       "id": "f9695b57-7502-4f50-bf36-b68a755e9956",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"
-        ]
-      },
       "identifier": [
         {
           "type": {
@@ -190,7 +174,7 @@
       ],
       "name": [
         {
-          "use": "official",
+          "use": "usual",
           "family": "DEACON",
           "given": [
             "Ned"
@@ -217,11 +201,6 @@
     {
       "resourceType": "Organization",
       "id": "1a8a2450-f190-4511-a24c-a2825a5ae1ee",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"
-        ]
-      },
       "identifier": [
         {
           "type": {
@@ -242,11 +221,6 @@
     {
       "resourceType": "Encounter",
       "id": "c97d9869-3d3b-4612-958d-7af2c1ffd1da",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"
-        ]
-      },
       "extension": [
         {
           "url": "http://hl7.org.au/fhir/StructureDefinition/encounter-description",
@@ -261,6 +235,13 @@
       },
       "type": [
         {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1348931000168107",
+              "display": "Home medicines review"
+            }
+          ],
           "text": "Home medicines review"
         }
       ],
@@ -269,17 +250,12 @@
       },
       "period": {
         "start": "2019-02-05T10:00:00+10:00",
-        "end": "2019-02-05T12:15:00+10:00"
+        "end": "2019-02-05T11:15:00+10:00"
       }
     },
     {
       "resourceType": "List",
       "id": "05ed5a63-70ab-4dfb-820c-4be0d79bb0d3",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1"
-        ]
-      },
       "language": "en-AU",
       "extension": [
         {
@@ -348,7 +324,7 @@
           "extension": [
             {
               "url": "http://hl7.org.au/fhir/StructureDefinition/change-description",
-              "valueString": "In pack – history of Atrial fibrillation"
+              "valueString": "New finding of Atrial fibrillation"
             }
           ],
           "flag": {
@@ -369,11 +345,6 @@
     {
       "resourceType": "MedicationStatement",
       "id": "b8353097-2f90-4397-95e0-b7c6f809b0eb",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
-        ]
-      },
       "status": "active",
       "medicationReference": {
         "reference": "#c75149aa-8bdd-401b-a234-3e533991cd92"
@@ -391,11 +362,6 @@
     {
       "resourceType": "Medication",
       "id": "c75149aa-8bdd-401b-a234-3e533991cd92",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
-        ]
-      },
       "code": {
         "text": "Amiodarone 200mg tab"
       }
@@ -403,11 +369,6 @@
     {
       "resourceType": "MedicationStatement",
       "id": "5cde18e4-2b6b-4081-9382-e37abdec5890",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
-        ]
-      },
       "status": "active",
       "medicationReference": {
         "reference": "#8a484362-afb0-4c28-b40b-d1a2ae677de3"
@@ -425,11 +386,6 @@
     {
       "resourceType": "Medication",
       "id": "8a484362-afb0-4c28-b40b-d1a2ae677de3",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
-        ]
-      },
       "code": {
         "coding": [
           {
@@ -444,11 +400,6 @@
     {
       "resourceType": "MedicationStatement",
       "id": "466c4379-3133-4498-ba33-94610ef35845",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
-        ]
-      },
       "status": "active",
       "medicationReference": {
         "reference": "#cd5a6cac-f6e5-4aa8-b497-6b0e903442cd"
@@ -459,18 +410,13 @@
       "taken": "y",
       "dosage": [
         {
-          "text": "2 at night"
+          "text": "1 at night"
         }
       ]
     },
     {
       "resourceType": "Medication",
       "id": "cd5a6cac-f6e5-4aa8-b497-6b0e903442cd",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
-        ]
-      },
       "code": {
         "coding": [
           {
@@ -513,18 +459,10 @@
       "subject": {
         "reference": "#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"
       },
-      "encounter": {
-        "reference": "#c97d9869-3d3b-4612-958d-7af2c1ffd1da"
-      },
       "date": "2019-02-05",
       "source": {
         "reference": "#f9695b57-7502-4f50-bf36-b68a755e9956"
       },
-      "note": [
-        {
-          "text": "Packed medicines: Yes"
-        }
-      ],
       "entry": [
         {
           "extension": [
@@ -571,11 +509,6 @@
     {
       "resourceType": "MedicationStatement",
       "id": "99d5fa08-35cd-47cc-9728-896476791b15",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
-        ]
-      },
       "status": "completed",
       "medicationReference": {
         "reference": "#84d6b33a-ffe3-42e1-8a97-2f32c611d1ed"
@@ -583,21 +516,16 @@
       "subject": {
         "reference": "#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"
       },
-      "taken": "unk",
+      "taken": "y",
       "dosage": [
         {
-          "text": "unk"
+          "text": "apply as required"
         }
       ]
     },
     {
       "resourceType": "Medication",
       "id": "84d6b33a-ffe3-42e1-8a97-2f32c611d1ed",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
-        ]
-      },
       "code": {
         "coding": [
           {
@@ -612,11 +540,6 @@
     {
       "resourceType": "MedicationStatement",
       "id": "c753dc46-f390-47c5-8760-241a3242279f",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"
-        ]
-      },
       "status": "completed",
       "medicationReference": {
         "reference": "#f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed"
@@ -624,21 +547,16 @@
       "subject": {
         "reference": "#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"
       },
-      "taken": "unk",
+      "taken": "y",
       "dosage": [
         {
-          "text": "unk"
+          "text": "apply as required"
         }
       ]
     },
     {
       "resourceType": "Medication",
       "id": "f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed",
-      "meta": {
-        "profile": [
-          "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"
-        ]
-      },
       "code": {
         "coding": [
           {
@@ -710,7 +628,7 @@
       },
       "text": {
         "status": "additional",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <table border=\"1\">\n                    <caption>Home Medicines Review</caption>\n                    <thead>\n                        <tr>\n                            <th>Date of Interview</th>\n                            <th/>\n                            <th>General Assessment</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>5 Feb 1019 10:00AM - 5 Feb 1019 12:15AM</td>\n                            <td>Home medicines review</td>\n                            <td>Patient has his medications packed into blister packs via\n                                ABC pharmacy. He finds them easy to use and they promote\n                                good adherence to his regime. His Bluecare nurse, Nurse B,\n                                was present for the interview. Of the medication listed on\n                                the referral, he is not currently taking Aldara 5% cream and\n                                Chloramphenicol ointment. In addition to the medication\n                                listed on the referral, he is also taking coQ10 150mg tab -\n                                1 nocte.He reports occasional dizziness if he changes\n                                position quickly, and does report falling outside in the\n                                garden; he wears a falls alarm buzzer. He reports that he\n                                generally only experiences chest pain when he becomes\n                                stressed (doesn’t like paperwork). His blood pressure at the\n                                time of the interview was 158 /76.</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <table border=\"1\">\n                    <caption>Current Medicines</caption>\n                    <thead>\n                        <tr>\n                            <th>Medicine</th>\n                            <th>Directions</th>\n                            <th>Medicine purpose</th>\n                            <th>Medicine status</th>\n                            <th>Status Reason/Comment</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>Amiodarone 200mg tab</td>\n                            <td>1 in the morning</td>\n                            <td/>\n                            <td>Unchanged</td>\n                            <td/>\n                        </tr>\n                        <tr>\n                            <td>Bisoprolol 2.5mg tab</td>\n                            <td>1/2 tablet in the morning</td>\n                            <td/>\n                            <td>Unchanged</td>\n                            <td/>\n                        </tr>\n                        <tr>\n                            <td>CoQ10 150mg tab</td>\n                            <td>1 at night</td>\n                            <td/>\n                            <td>New</td>\n                            <td>In pack – history of Atrial fibrillation</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <p>Packed medicines: Yes</p>\n            </div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <table border=\"1\">\n                    <caption>Home Medicines Review</caption>\n                    <thead>\n                        <tr>\n                            <th>Date of Interview</th>\n                            <th/>\n                            <th>General Assessment</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>5 Feb 1019 10:00AM - 5 Feb 1019 11:15AM</td>\n                            <td>Home medicines review</td>\n                            <td>Patient has his medications packed into blister packs via\n                                ABC pharmacy. He finds them easy to use and they promote\n                                good adherence to his regime. His Bluecare nurse, Nurse B,\n                                was present for the interview. Of the medication listed on\n                                the referral, he is not currently taking Aldara 5% cream and\n                                Chloramphenicol ointment. In addition to the medication\n                                listed on the referral, he is also taking coQ10 150mg tab -\n                                1 nocte.He reports occasional dizziness if he changes\n                                position quickly, and does report falling outside in the\n                                garden; he wears a falls alarm buzzer. He reports that he\n                                generally only experiences chest pain when he becomes\n                                stressed (doesn’t like paperwork). His blood pressure at the\n                                time of the interview was 158 /76.</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <table border=\"1\">\n                    <caption>Current Medicines</caption>\n                    <thead>\n                        <tr>\n                            <th>Medicine</th>\n                            <th>Directions</th>\n                            <th>Medicine purpose</th>\n                            <th>Medicine status</th>\n                            <th>Status Reason/Comment</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>Amiodarone 200mg tab</td>\n                            <td>1 in the morning</td>\n                            <td/>\n                            <td>Unchanged</td>\n                            <td/>\n                        </tr>\n                        <tr>\n                            <td>Bisoprolol 2.5mg tab</td>\n                            <td>1/2 tablet in the morning</td>\n                            <td/>\n                            <td>Unchanged</td>\n                            <td/>\n                        </tr>\n                        <tr>\n                            <td>CoQ10 150mg tab</td>\n                            <td>1 at night</td>\n                            <td/>\n                            <td>New</td>\n                            <td>In pack – new finding of Atrial fibrillation</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <p>Packed medicines: Yes</p>\n            </div>"
       },
       "entry": [
         {
@@ -719,7 +637,7 @@
       ]
     },
     {
-      "title": "Current Medicines",
+      "title": "Ceased medicines",
       "code": {
         "coding": [
           {
@@ -731,7 +649,7 @@
       },
       "text": {
         "status": "additional",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <table border=\"1\">\n                    <caption>Ceased medicines</caption>\n                    <thead>\n                        <tr>\n                            <th>Ceased medicine</th>\n                            <th>Reason for ceasing</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>Aldara 5% cream</td>\n                            <td>Completed 8-week course</td>\n                        </tr>\n                        <tr>\n                            <td>Chloramphenicol 1% eye ointment</td>\n                            <td>Stopped due to burning sensation in the eye.</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-AU\">\n                <table border=\"1\">\n                    <caption>Ceased medicines</caption>\n                    <thead>\n                        <tr>\n                            <th>Ceased medicine</th>\n                            <th>Reason for ceasing</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>Aldara 5% cream (apply as required)</td>\n                            <td>Completed 8-week course</td>\n                        </tr>\n                        <tr>\n                            <td>Chloramphenicol 1% eye ointment (apply as required)</td>\n                            <td>Stopped due to burning sensation in the eye.</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>"
       },
       "entry": [
         {

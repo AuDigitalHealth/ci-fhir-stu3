@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Base Substance"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-09-26T13:28:43+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-09-26T14:09:47+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -487,11 +487,10 @@
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
            fhir:Extension.valueString [ fhir:value "SubstanceCode" ]
          ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Substance codes" ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/substance-code>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/substance-code" ]
+           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/substance-1>;
+           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/substance-1" ]
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -887,6 +886,15 @@
        fhir:index 26;
        fhir:Element.id [ fhir:value "Substance.ingredient.substance[x]" ];
        fhir:ElementDefinition.path [ fhir:value "Substance.ingredient.substance[x]" ];
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "type" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
+       ];
        fhir:ElementDefinition.short [ fhir:value "A component of the substance" ];
        fhir:ElementDefinition.definition [ fhir:value "Another substance that is a component of this substance." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -919,6 +927,67 @@
            fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/substance-code" ]
          ]
        ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".player" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.id [ fhir:value "Substance.ingredient.substance[x]:substanceCodeableConcept" ];
+       fhir:ElementDefinition.path [ fhir:value "Substance.ingredient.substance[x]" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "substanceCodeableConcept" ];
+       fhir:ElementDefinition.short [ fhir:value "A component of the substance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Another substance that is a component of this substance." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Substance.ingredient.substance[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "SubstanceIngredient" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/substance-1>;
+           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/substance-1" ]
+         ]
+       ];
+       fhir:ElementDefinition.mapping [
+         fhir:index 0;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
+         fhir:ElementDefinition.mapping.map [ fhir:value ".player" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:Element.id [ fhir:value "Substance.ingredient.substance[x]:substanceReference" ];
+       fhir:ElementDefinition.path [ fhir:value "Substance.ingredient.substance[x]" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "substanceReference" ];
+       fhir:ElementDefinition.short [ fhir:value "A component of the substance" ];
+       fhir:ElementDefinition.definition [ fhir:value "Another substance that is a component of this substance." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Substance.ingredient.substance[x]" ];
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/au-substance" ]
+       ];
+       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
          fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
