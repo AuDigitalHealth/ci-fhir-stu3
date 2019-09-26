@@ -4,16 +4,33 @@
 <Composition xmlns="http://hl7.org/fhir">
   <id value="98e4b64a-d493-45c1-8102-b3b689da1c15"/>
   <meta>
-  <!--  the versionId taken from <versionNumber value="2"/>  -->
-    <versionId value="2"/>
+    <versionId value="20190205"/>
     <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1"/>
   </meta>
   <language value="en-AU"/>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
             <h2>Home Medicines Review Report for Mr. Lenny Matterson</h2>
-            <p><b>Date of Interview:</b> 5 Feb 1019 10:00AM - 5 Feb 1019 12:15AM</p>
-            <p><b>General Assessment:</b></p>
+			<p><b>Name:</b> Mr. Lenny MATTERSON</p>
+			<p><b>Identifiers:</b> IHI: 8003608166895854 and Medicare Number: 5950890021 (expiry May 2019)</p>
+			<p><b>Contact:</b> (08) 5550 1234 (home phone); 0491 570 006 (mobile)</p>
+			<p><b>Gender:</b> male</p>
+			<p><b>Birthdate:</b> 6 Feb 1955 6:17AM</p>			
+			<p><b>Indigenous status:</b> Aboriginal but not Torres Strait Islander origin</p>
+			<p><b>Languages spoken:</b> Pitjantjatjara</p>
+						
+			<h3>Author</h3>
+			<p><b>Name:</b> Mr. Ned DEACON (Retail Pharmacist)</p>			
+			<p><b>Identifiers:</b> HPI-I: 8003616566708106 and Medicare Provider Number: 5544887B</p>
+			<p><b>Contact:</b> 0370102020 (work fax)</p>
+			<p><b>Address:</b> 34 Queen St, Coburg, VIC 3058 (work)</p>
+			
+			<h3>Medication summary</h3>
+			<p><b>Date:</b> 5 Feb 1019 10:00AM - 5 Feb 1019 11:15AM</p>
+			<p><b>Attested by:</b> Mr. Ned DEACON (on 5 Feb 2019)</p>
+			<p><b>Document custodian:</b> Big Pharmacy (HPI-O: 8003626566699734)</p>
+            
+            <h3>General Assessment:</h3>
             <p>Patient has his medications packed into blister packs via
                 ABC pharmacy. He finds them easy to use and they promote
                 good adherence to his regime. His Bluecare nurse, Nurse B,
@@ -72,11 +89,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Aldara 5% cream</td>
+                        <td>Aldara 5% cream (apply as required)</td>
                         <td>Completed 8-week course</td>
                     </tr>
                     <tr>
-                        <td>Chloramphenicol 1% eye ointment</td>
+                        <td>Chloramphenicol 1% eye ointment (apply as required)</td>
                         <td>Stopped due to burning sensation in the eye.</td>
                     </tr>
                 </tbody>
@@ -116,7 +133,6 @@
         </type>
         <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
         <value value="5950890021"/>
-      <!--  period is mandatory in HL7 AU, but no value in CDA; thus made up  -->
         <period>
           <end value="2019-05"/>
         </period>
@@ -147,6 +163,7 @@
           <coding>
             <system value="urn:ietf:bcp:47"/>
             <code value="pjt"/>
+            <display value="Pitjantjatjara"/>
           </coding>
         </language>
       </communication>
@@ -155,9 +172,6 @@
   <contained>
     <PractitionerRole>
       <id value="91555386-d478-4e3d-bd3d-ac642ff603c4"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1"/>
-      </meta>
       <identifier>
         <type>
           <coding>
@@ -192,19 +206,11 @@
           <display value="Retail Pharmacist"/>
         </coding>
       </code>
-      <telecom>
-        <system value="fax"/>
-        <value value="0370102020"/>
-        <use value="work"/>
-      </telecom>
     </PractitionerRole>
   </contained>
   <contained>
     <Practitioner>
       <id value="f9695b57-7502-4f50-bf36-b68a755e9956"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1"/>
-      </meta>
       <identifier>
         <type>
           <coding>
@@ -218,7 +224,7 @@
         <value value="8003616566708106"/>
       </identifier>
       <name>
-        <use value="official"/>
+        <use value="usual"/>
         <family value="DEACON"/>
         <given value="Ned"/>
         <prefix value="Mr."/>
@@ -237,9 +243,6 @@
   <contained>
     <Organization>
       <id value="1a8a2450-f190-4511-a24c-a2825a5ae1ee"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"/>
-      </meta>
       <identifier>
         <type>
           <coding>
@@ -257,9 +260,6 @@
   <contained>
     <Encounter>
       <id value="c97d9869-3d3b-4612-958d-7af2c1ffd1da"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/encounter-es-1"/>
-      </meta>
       <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
         <valueString value="Patient has his medications packed into blister packs via                     ABC pharmacy. He finds them easy to use and they promote                     good adherence to his regime. His Bluecare nurse, Nurse B,                     was present for the interview. Of the medication listed on                     the referral, he is not currently taking Aldara 5% cream and                     Chloramphenicol ointment. In addition to the medication                     listed on the referral, he is also taking coQ10 150mg tab -                     1 nocte.He reports occasional dizziness if he changes                     position quickly, and does report falling outside in the                     garden; he wears a falls alarm buzzer. He reports that he                     generally only experiences chest pain when he becomes                     stressed (doesn&#x2019;t like paperwork). His blood pressure at the                     time of the interview was 158 /76."/>
       </extension>
@@ -270,6 +270,11 @@
         <display value="home health"/>
       </class>
       <type>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="1348931000168107"/>
+          <display value="Home medicines review"/>
+        </coding>
         <text value="Home medicines review"/>
       </type>
       <subject>
@@ -278,16 +283,13 @@
       </subject>
       <period>
         <start value="2019-02-05T10:00:00+10:00"/>
-        <end value="2019-02-05T12:15:00+10:00"/>
+        <end value="2019-02-05T11:15:00+10:00"/>
       </period>
     </Encounter>
   </contained>
   <contained>
     <List>
       <id value="05ed5a63-70ab-4dfb-820c-4be0d79bb0d3"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1"/>
-      </meta>
       <language value="en-AU"/>
       <extension url="http://hl7.org.au/fhir/StructureDefinition/author-role">
         <valueReference>
@@ -318,7 +320,6 @@
       <note>
         <text value="Packed medicines: Yes"/>
       </note>
-    <!--  current medicine #1  -->
       <entry>
         <flag>
           <coding>
@@ -332,7 +333,6 @@
           <reference value="#b8353097-2f90-4397-95e0-b7c6f809b0eb"/>
         </item>
       </entry>
-    <!--  current medicine #2  -->
       <entry>
         <flag>
           <coding>
@@ -346,10 +346,9 @@
           <reference value="#5cde18e4-2b6b-4081-9382-e37abdec5890"/>
         </item>
       </entry>
-    <!--  current medicine #3  -->
       <entry>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
-          <valueString value="In pack &#x2013; history of Atrial fibrillation"/>
+          <valueString value="New finding of Atrial fibrillation"/>
         </extension>
         <flag>
           <coding>
@@ -368,9 +367,6 @@
   <contained>
     <MedicationStatement>
       <id value="b8353097-2f90-4397-95e0-b7c6f809b0eb"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
-      </meta>
       <status value="active"/>
       <medicationReference>
       <!--  reference to contained Medication resource  -->
@@ -389,9 +385,6 @@
   <contained>
     <Medication>
       <id value="c75149aa-8bdd-401b-a234-3e533991cd92"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
-      </meta>
       <code>
         <text value="Amiodarone 200mg tab"/>
       </code>
@@ -400,9 +393,6 @@
   <contained>
     <MedicationStatement>
       <id value="5cde18e4-2b6b-4081-9382-e37abdec5890"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
-      </meta>
       <status value="active"/>
       <medicationReference>
       <!--  reference to contained Medication resource  -->
@@ -421,9 +411,6 @@
   <contained>
     <Medication>
       <id value="8a484362-afb0-4c28-b40b-d1a2ae677de3"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
-      </meta>
       <code>
         <coding>
           <system value="http://snomed.info/sct"/>
@@ -437,9 +424,6 @@
   <contained>
     <MedicationStatement>
       <id value="466c4379-3133-4498-ba33-94610ef35845"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
-      </meta>
       <status value="active"/>
       <medicationReference>
       <!--  reference to contained Medication resource  -->
@@ -451,16 +435,13 @@
       </subject>
       <taken value="y"/>
       <dosage>
-        <text value="2 at night"/>
+        <text value="1 at night"/>
       </dosage>
     </MedicationStatement>
   </contained>
   <contained>
     <Medication>
       <id value="cd5a6cac-f6e5-4aa8-b497-6b0e903442cd"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
-      </meta>
       <code>
         <coding>
           <system value="http://snomed.info/sct"/>
@@ -496,18 +477,11 @@
       <!--  reference to contained Patient resource  -->
         <reference value="#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"/>
       </subject>
-      <encounter>
-        <reference value="#c97d9869-3d3b-4612-958d-7af2c1ffd1da"/>
-      </encounter>
       <date value="2019-02-05"/>
       <source>
       <!--  reference to contained Practitioner resource  -->
         <reference value="#f9695b57-7502-4f50-bf36-b68a755e9956"/>
       </source>
-      <note>
-        <text value="Packed medicines: Yes"/>
-      </note>
-    <!--  ceased medicine #1  -->
       <entry>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
           <valueString value="Completed 8-week course"/>
@@ -524,7 +498,6 @@
           <reference value="#99d5fa08-35cd-47cc-9728-896476791b15"/>
         </item>
       </entry>
-    <!--  ceased medicine #2  -->
       <entry>
         <extension url="http://hl7.org.au/fhir/StructureDefinition/change-description">
           <valueString value="Stopped due to burning sensation in the eye."/>
@@ -546,9 +519,6 @@
   <contained>
     <MedicationStatement>
       <id value="99d5fa08-35cd-47cc-9728-896476791b15"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
-      </meta>
       <status value="completed"/>
       <medicationReference>
       <!--  reference to contained Medication resource #4  -->
@@ -558,20 +528,15 @@
       <!--  reference to contained Patient resource  -->
         <reference value="#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"/>
       </subject>
-    <!--  TODO - taken is mandatory, but not in source file  -->
-      <taken value="unk"/>
-    <!--  TODO - dosage is mandatory, but not in source file  -->
+      <taken value="y"/>
       <dosage>
-        <text value="unk"/>
+        <text value="apply as required"/>
       </dosage>
     </MedicationStatement>
   </contained>
   <contained>
     <Medication>
       <id value="84d6b33a-ffe3-42e1-8a97-2f32c611d1ed"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
-      </meta>
       <code>
         <coding>
           <system value="http://snomed.info/sct"/>
@@ -585,9 +550,6 @@
   <contained>
     <MedicationStatement>
       <id value="c753dc46-f390-47c5-8760-241a3242279f"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
-      </meta>
       <status value="completed"/>
       <medicationReference>
       <!--  reference to contained Medication resource #5  -->
@@ -597,20 +559,15 @@
       <!--  reference to contained Patient resource  -->
         <reference value="#1fbd9663-b4cd-4a33-9657-650eca3a6b3f"/>
       </subject>
-    <!--  TODO - taken is mandatory, but not in source file  -->
-      <taken value="unk"/>
-    <!--  TODO - dosage is mandatory, but not in source file  -->
+      <taken value="y"/>
       <dosage>
-        <text value="unk"/>
+        <text value="apply as required"/>
       </dosage>
     </MedicationStatement>
   </contained>
   <contained>
     <Medication>
       <id value="f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed"/>
-      <meta>
-        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1"/>
-      </meta>
       <code>
         <coding>
           <system value="http://snomed.info/sct"/>
@@ -653,7 +610,7 @@
     <mode value="legal"/>
     <time value="2019-02-05"/>
     <party>
-    <!--  reference to contained Author resource  -->
+    <!--  reference to contained Practitioner resource  -->
       <reference value="#f9695b57-7502-4f50-bf36-b68a755e9956"/>
     </party>
   </attester>
@@ -672,7 +629,7 @@
       </coding>
     </code>
     <text>
-      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+      <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
                 <table border="1">
                     <caption>Home Medicines Review</caption>
                     <thead>
@@ -684,7 +641,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>5 Feb 1019 10:00AM - 5 Feb 1019 12:15AM</td>
+                            <td>5 Feb 1019 10:00AM - 5 Feb 1019 11:15AM</td>
                             <td>Home medicines review</td>
                             <td>Patient has his medications packed into blister packs via
                                 ABC pharmacy. He finds them easy to use and they promote
@@ -733,7 +690,7 @@
                             <td>1 at night</td>
                             <td/>
                             <td>New</td>
-                            <td>In pack – history of Atrial fibrillation</td>
+                            <td>In pack – new finding of Atrial fibrillation</td>
                         </tr>
                     </tbody>
                 </table>
@@ -747,7 +704,7 @@
   </section>
 <!--  CEASED MEDICATIONS SECTION  -->
   <section>
-    <title value="Current Medicines"/>
+    <title value="Ceased medicines"/>
     <code>
       <coding>
         <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
@@ -756,7 +713,7 @@
       </coding>
     </code>
     <text>
-      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
+      <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
                 <table border="1">
                     <caption>Ceased medicines</caption>
                     <thead>
@@ -767,11 +724,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Aldara 5% cream</td>
+                            <td>Aldara 5% cream (apply as required)</td>
                             <td>Completed 8-week course</td>
                         </tr>
                         <tr>
-                            <td>Chloramphenicol 1% eye ointment</td>
+                            <td>Chloramphenicol 1% eye ointment (apply as required)</td>
                             <td>Stopped due to burning sensation in the eye.</td>
                         </tr>
                     </tbody>
