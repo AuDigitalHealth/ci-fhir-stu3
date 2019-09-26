@@ -129,12 +129,76 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-            &lt;p&gt;TODO&lt;/p&gt;
+            &lt;h2&gt;Shared Medicines List&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Date: 12/08/2018&lt;/li&gt;
+                &lt;li&gt;Status: final&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Patient details&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Mrs Bonny Goodwin&lt;/li&gt;
+                &lt;li&gt;Female&lt;/li&gt;
+                &lt;li&gt;Married&lt;/li&gt;
+                &lt;li&gt;IHI: 8003608000228445&lt;/li&gt;
+                &lt;li&gt;Medicare number: 3951032981&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Author details&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Pharmacist&lt;/li&gt;
+                &lt;li&gt;HPI-I: 8003619900041630&lt;/li&gt;
+                &lt;li&gt;Test Hospital (HPI-O: 8003623233366573)&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;General Practitioner&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Dr. G. Practitioner&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Allergies and Intolerances&lt;/h3&gt;
+			&lt;p&gt;No known allergies&lt;/p&gt;
+            &lt;h3&gt;Current Medicines&lt;/h3&gt;
+            &lt;table border=&quot;1&quot;&gt;
+                &lt;caption&gt;Current Medicines&lt;/caption&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Medicine&lt;/th&gt;
+                        &lt;th&gt;Medicine brand name&lt;/th&gt;
+                        &lt;th&gt;Directions&lt;/th&gt;
+                        &lt;th&gt;Purpose&lt;/th&gt;
+                        &lt;th&gt;Status&lt;/th&gt;
+                        &lt;th&gt;Status reason&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td/&gt;
+                        &lt;td&gt;Tritace&lt;/td&gt;
+                        &lt;td&gt;Take one tablet in the morning daily.&lt;/td&gt;
+                        &lt;td&gt;To reduce high blood pressure; treat heart failure after a heart attack; prevent progresion of kidney failure; reduce the risk of heart attack, stroke and stenting&lt;/td&gt;
+                        &lt;td&gt;Unchanged&lt;/td&gt;
+                        &lt;td/&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;docusate sodium 50 mg + sennoside B 8 mg tablet&lt;/td&gt;
+                        &lt;td&gt;Co-Senna&lt;/td&gt;
+                        &lt;td&gt;Take two tablets twice a day.&lt;/td&gt;
+                        &lt;td&gt;Laxative for constipation, works by softening the stools and also assists by stimulating the gut to achieve bowel movements.&lt;/td&gt;
+                        &lt;td&gt;New&lt;/td&gt;
+                        &lt;td&gt;Laxative for constipation.&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Oxycodone&lt;/td&gt;
+                        &lt;td&gt;Endone&lt;/td&gt;
+                        &lt;td&gt;Take one to two tablets every four hours when required.&lt;/td&gt;
+                        &lt;td&gt;For relief of moderate to severe pain.&lt;/td&gt;
+                        &lt;td&gt;Amended&lt;/td&gt;
+                        &lt;td&gt;Dose increased&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
         &lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter">Encounter</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;33a17c81-f588-4ccb-9860-aa739cb8497d&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;encounter-01&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;finished&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/encounter.html#Encounter.type">type</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
@@ -166,7 +230,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance">AllergyIntolerance</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;2b4a7d88-48f8-4ca3-b39b-5c0681363e72&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;allergyintolerance-01&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.clinicalStatus">clinicalStatus</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.verificationStatus">verificationStatus</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;unconfirmed&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/allergyintolerance.html#AllergyIntolerance.code">code</a>&gt;
@@ -195,7 +259,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/list.html#List">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/list.html#List">List</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;618a2973-935d-4082-ba43-0a22487416a1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;list-01&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.language">language</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;en-AU&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org.au/fhir/StructureDefinition/author-role&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;
@@ -240,7 +304,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
       &lt;/subject&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.encounter">encounter</a>&gt;
       &lt;!--  reference to contained Encounter resource  --&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#33a17c81-f588-4ccb-9860-aa739cb8497d&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#encounter-01&quot;/&gt;
       &lt;/encounter&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-08-12&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.source">source</a>&gt;
@@ -269,7 +333,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
         &lt;/flag&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>&gt;
         &lt;!--  reference to contained MedicationStatement resource #1  --&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#2b751c3e-dc61-4ecd-8110-bce194d146ad&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#medicationstatement-01&quot;/&gt;
         &lt;/item&gt;
       &lt;/entry&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.entry">entry</a>&gt;
@@ -287,7 +351,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
         &lt;/flag&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>&gt;
         &lt;!--  reference to contained MedicationStatement resource #2  --&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#b94a7467-b4fa-480f-a1af-4aa184fba577&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#medicationstatement-02&quot;/&gt;
         &lt;/item&gt;
       &lt;/entry&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.entry">entry</a>&gt;
@@ -305,18 +369,18 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
         &lt;/flag&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/list.html#List.entry.item">item</a>&gt;
         &lt;!--  reference to contained MedicationStatement resource #3  --&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#4e9a54b2-fda5-40f6-8137-30cddbb946cd&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#medicationstatement-03&quot;/&gt;
         &lt;/item&gt;
       &lt;/entry&gt;
     &lt;/List&gt;
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">MedicationStatement</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;2b751c3e-dc61-4ecd-8110-bce194d146ad&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;medicationstatement-01&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>&gt;
       &lt;!--  reference to contained Medication resource  --&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#c1d71e4b-afd6-440a-b31a-128df572cc2b&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#medication-01&quot;/&gt;
       &lt;/medicationReference&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>&gt;
       &lt;!--  logical reference to Patient  --&gt;
@@ -344,7 +408,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication">Medication</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;c1d71e4b-afd6-440a-b31a-128df572cc2b&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;medication-01&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org.au/fhir/StructureDefinition/medication-brand-name&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Tritace&quot;/&gt;
@@ -356,11 +420,11 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">MedicationStatement</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;b94a7467-b4fa-480f-a1af-4aa184fba577&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;medicationstatement-02&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>&gt;
       &lt;!--  reference to contained Medication resource  --&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#40dbab41-1e6b-4ab5-990b-865f0e736843&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#medication-02&quot;/&gt;
       &lt;/medicationReference&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>&gt;
       &lt;!--  logical reference to Patient  --&gt;
@@ -393,7 +457,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication">Medication</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;40dbab41-1e6b-4ab5-990b-865f0e736843&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;medication-02&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org.au/fhir/StructureDefinition/medication-brand-name&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Co-Senna&quot;/&gt;
@@ -415,11 +479,11 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement">MedicationStatement</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;4e9a54b2-fda5-40f6-8137-30cddbb946cd&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;medicationstatement-03&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>&gt;
       &lt;!--  reference to contained Medication resource  --&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#22f154ff-5cee-4f35-8421-42a1aebfbcd5&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#medication-03&quot;/&gt;
       &lt;/medicationReference&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medicationstatement.html#MedicationStatement.subject">subject</a>&gt;
       &lt;!--  logical reference to Patient  --&gt;
@@ -451,7 +515,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication">Medication</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;22f154ff-5cee-4f35-8421-42a1aebfbcd5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;medication-03&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/medication.html#Medication.extension">extension</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org.au/fhir/StructureDefinition/medication-brand-name&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Endone&quot;/&gt;
@@ -517,7 +581,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
   &lt;/subject&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.encounter">encounter</a>&gt;
   &lt;!--  reference to contained Encounter resource  --&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#33a17c81-f588-4ccb-9860-aa739cb8497d&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#encounter-01&quot;/&gt;
   &lt;/encounter&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-08-12&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.author">author</a>&gt;
@@ -579,14 +643,14 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
       &lt;/coding&gt;
     &lt;/code&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
       &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;en-AU&quot;&gt;
                 &lt;p&gt;No known allergies&lt;/p&gt;
             &lt;/div&gt;<a name="end-xhtml"></a>
     &lt;/text&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>&gt;
     &lt;!--  reference to contained AllergyIntolerance resource  --&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#2b4a7d88-48f8-4ca3-b39b-5c0681363e72&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#allergyintolerance-01&quot;/&gt;
     &lt;/entry&gt;
   &lt;/section&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section">section</a>&gt;
@@ -600,7 +664,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
       &lt;/coding&gt;
     &lt;/code&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.text">text</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
       &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;en-AU&quot;&gt;
                 &lt;table border=&quot;1&quot;&gt;
                     &lt;caption&gt;Current Medicines&lt;/caption&gt;
@@ -645,7 +709,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
     &lt;/text&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/composition.html#Composition.section.entry">entry</a>&gt;
     &lt;!--  reference to contained List resource  --&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#618a2973-935d-4082-ba43-0a22487416a1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#list-01&quot;/&gt;
     &lt;/entry&gt;
   &lt;/section&gt;
 &lt;/Composition&gt;</pre>
@@ -680,7 +744,7 @@ Raw <a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml" download>xml<
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 26, 2019 14:09+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 26, 2019 16:06+1000. |
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
