@@ -19,7 +19,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Pharmacist shared medicines list</td>
                     <td>027948</td>
                     <td>N/A</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td>This requirement is managed in the implementation.</td>
                 </tr>
                 <tr>
                     <td>Components in the PSML document</td>
@@ -124,9 +124,9 @@ The table below matches the data items to the corresponding supported element in
                     <td>This high-level business requirement cannot be mapped directly.</td>
                 </tr>                                                                                                         
                 <tr>
-                    <td rowspan="2">Identifier for document author</td>
-                    <td rowspan="2">028317</td>
-                    <td rowspan="2">Practitioner.identifier</td>
+                    <td>Identifier for document author</td>
+                    <td>028317</td>
+                    <td>Practitioner.identifier</td>
                   <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier</td>
                 </tr>
                 <tr>
@@ -151,7 +151,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported. See <a href="intro.md">Known issues</a>.</td>
+                    <td>This requirement is not directly supported. See <a href="index.html">Known issues</a>.</td>
                 </tr>
                 <tr>
                     <td>Additional Comment</td>
@@ -303,10 +303,9 @@ The table below matches the data items to the corresponding supported element in
                     <td>Attribute for Medicine Image</td>
                     <td>028346</td>
                     <td>N/A</td>
-                    <td><para>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
+                    <td>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
                             reason the use of medication image is strongly discouraged in the HL7 AU content based on a prior FHIR release (STU3) and unsupported by this
-                            implementation guide.</para> 
-                        <para>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</para>
+                            implementation guide.<br>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.
                     </td>
                 </tr>
                 <tr>
@@ -430,7 +429,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Individual's sex (optional)</td>
                     <td>028570</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported. See <a href="intro.md">Known issues</a>.</td>
+                    <td>This requirement is not directly supported. See <a href="index.html">Known issues</a>.</td>
                 </tr>  
                 <tr>
                     <td>Individual's date of birth (mandatory)</td>
@@ -609,7 +608,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported. See <a href="intro.md#">Known issues</a>.</td>
+                    <td>This requirement is not directly supported. See <a href="index.html#">Known issues</a>.</td>
                 </tr>
 
                 </tr>  
@@ -773,16 +772,14 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Medicine image (optional)</td>
                     <td>028018</td>
                     <td>N/A</td>
-                       <para>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
+                    <td>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
                             reason the use of medication image is strongly discouraged in the HL7 AU content based on a prior FHIR release (STU3) and unsupported by this
-                            implementation guide.</para> 
-                        <para>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</para>    
+                            implementation guide.<br>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</td>  
                  </tr>               
                 <tr>
                     <td>028535</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be
-                            enforced in a rendering specification, conformance profile or handled by
-                            implementation.</td>
+                    <td>N/A</td>
+                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
                </tr>  
                 <tr>
                     <td>Physical description (optional)</td>
