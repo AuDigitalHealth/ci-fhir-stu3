@@ -29,10 +29,13 @@
         <key value="inv-dh-enc-01" />
         <severity value="error" />
         <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
     </element>
     <element id="Encounter.extension:encounterDescription">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft" />
+      </extension>
       <path value="Encounter.extension" />
       <sliceName value="encounterDescription" />
       <mustSupport value="true" />
@@ -49,9 +52,6 @@
       <path value="Encounter.type" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterType" />
-        </extension>
         <strength value="preferred" />
         <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1" />
       </binding>
