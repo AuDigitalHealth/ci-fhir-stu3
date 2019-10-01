@@ -124,6 +124,26 @@ This section lists known issues with this specification at the time of publishin
        </td>
     </tr>
     <tr>
+        <td>Dose Administration Aid medicines present</td>
+        <td><para>The information requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported by a FHIR profile. A request has been submitted to HL7 AU to consider this requirement on the national level, see HL7 AU <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a> issue. </para>
+            <para>In the interim, HL7 AU recommends supporting this requirement as a comment about the medicines list: where a sending system can state that one or more medicine items are packed by a pharmacy in a dose administration aid, the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’ is expected to be sent in List.note</para>
+    </td>
+    </tr> 
+    <tr>
+        <td>Individual's sex</td>
+        <td><para>The information requirements document includes an optional requirement for recording individual’s biological sex. This requirement is different from recording individual’s gender which is a part of an individual’s personal and social identity. FHIR model includes support for gender but does not support sex. A request has been submitted to HL7 AU to provide a nationally agreed solution for recording individual’s sex in alignment with government guidelines on sex and gender, see HL7 AU <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a> issue.</para>
+             <para>Until the national agreement on how to represent this content is reached, sending systems are not expected to include sex element even when data is available. </para>
+             <para>TBD or include in the Composition or List subject resource narrative; as an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) (Observation.value???), extension??</para>
+        </td>
+    </tr> 
+    
+    
+    
+    <tr>
+        <td>Source material errors</td>
+        <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
+    </tr>
+    <tr>
         <td>Examples</td>
         <td>Work on examples in this implementation guide is very early. Forthcoming work is expected to result in several more examples including a Shared Medicines List Document, a Shared Medicines List (not a document), and several Pharmacist Shared Medicines List Documents.</td>
     </tr>
