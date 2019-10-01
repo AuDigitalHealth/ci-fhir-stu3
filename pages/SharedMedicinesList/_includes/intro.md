@@ -131,9 +131,9 @@ This section lists known issues with this specification at the time of publishin
     </tr> 
     <tr>
         <td>Individual's sex</td>
-        <td><para>The information requirements document includes an optional requirement for recording individual’s biological sex. This requirement is different from recording individual’s gender which is a part of an individual’s personal and social identity. FHIR model includes support for gender but does not support sex. A request has been submitted to HL7 AU to provide a nationally agreed solution for recording individual’s sex in alignment with government guidelines on sex and gender, see HL7 AU <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a> issue.</para>
-             <para>Until the national agreement on how to represent this content is reached, sending systems are not expected to include sex element even when data is available. </para>
-             <para>TBD or include in the Composition or List subject resource narrative; as an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) (Observation.value???), extension??</para>
+        <td><para>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide supports including patient’s gender as part of patient’s demographics used for identifying purposes in line with the Australian Government recommendations. Australian Government guidelines on sex and gender state that patient’s biological sex should only be collected when clinically relevant. </para>
+             <para>If required, systems can send patient’s sex in an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) and Observation.valueCodeableConcept value from <a href=http://hl7.org/fhir/administrative-gender> AdministrativeGender</a> code system or as a local extension.</para>
+             <para>Work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see HL7 AU <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a> issue.</para>
         </td>
     </tr> 
     
