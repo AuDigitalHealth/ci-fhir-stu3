@@ -1,5 +1,5 @@
 # {{ site.data.fhir.igName }} FHIR Implementation Guide
-<h3 style="color:#ff0000;">Draft for internal use</h3>
+<h3 style="color:#ff0000;">Draft for internal review</h3>
 {:.no_toc}
 
 {% include publish-box.html %}
@@ -89,6 +89,9 @@ This implementation guide and related artefacts are technical in nature and the 
 
 ### Product Version History
 <table class="list" width="100%" cellspacing="6">
+	<col style="width:15%"/>
+	<col style="width:15%"/>
+	<col style="width:70%"/>
     <tbody>
         <tr>
             <th>Product version</th>
@@ -97,7 +100,7 @@ This implementation guide and related artefacts are technical in nature and the 
         </tr>
         <tr>
             <td>1.0.0</td>
-            <td>TBD</td>
+            <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
             <td>Initial public release of the shared medicines list implementation guide. Developed to serve as the model for the corresponding shared medicines list CDA IG to support Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
@@ -129,14 +132,14 @@ This section lists known issues with this specification at the time of publishin
     </tr>
     <tr>
         <td>Dose Administration Aid medicines present</td>
-        <td>The information requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported by a FHIR profile. A request has been submitted to HL7 AU to consider this requirement on the national level, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br>
+        <td>The information requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported by a FHIR profile. A request has been submitted to HL7 AU to consider this requirement on the national level, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/>
             In the interim, HL7 AU recommends supporting this requirement as a comment about the medicines list: where a sending system can state that one or more medicine items are packed by a pharmacy in a dose administration aid, the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’ is expected to be sent in List.note
     </td>
     </tr>
     <tr>
         <td>Individual's sex</td>
-        <td>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide supports including patient’s gender as part of patient’s demographics used for identifying purposes in line with the Australian Government recommendations. Australian Government guidelines on sex and gender state that patient’s biological sex should only be collected when clinically relevant.<br>
-            If required, systems can send patient’s sex in an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) and Observation.valueCodeableConcept value from <a href="http://hl7.org/fhir/administrative-gender"> AdministrativeGender</a> code system or as a local extension.<br>
+        <td>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide supports including patient’s gender as part of patient’s demographics used for identifying purposes in line with the Australian Government recommendations. Australian Government guidelines on sex and gender state that patient’s biological sex should only be collected when clinically relevant.<br/>
+            If required, systems can send patient’s sex in an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) and Observation.valueCodeableConcept value from <a href="http://hl7.org/fhir/administrative-gender"> AdministrativeGender</a> code system or as a local extension.<br/>
             Work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.
         </td>
     </tr>
@@ -162,7 +165,7 @@ This section lists known issues with this specification at the time of publishin
 
 |[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
-|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, TBD, Australian Base Implementation Guide (AU Base 1.1), v1.x.x (TBD)|
+|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>, Australian Base Implementation Guide (AU Base 1.1), v1.<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">X.X</span> (<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>)|
 | |[https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
