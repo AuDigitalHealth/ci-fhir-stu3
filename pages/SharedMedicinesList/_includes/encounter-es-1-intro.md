@@ -11,4 +11,4 @@ For the overarching usage scenarios in this implementation guide it is expected 
 * type will support categorisation of the event from which the medicines list was generated, for example a code indicating a home medicines review
 * period is equal to, or prior to, Composition date and List date
 
-For the expected usage scenario of a PSML document, when sending type the codes from [Medicines Review Type](https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1) are [preferred](http://hl7.org/fhir/STU3/terminologies.html#preferred).
+For the expected usage scenario of a PSML document, when sending type, the codes from [Medicines Review Type](https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1) are [preferred](http://hl7.org/fhir/STU3/terminologies.html#preferred).
