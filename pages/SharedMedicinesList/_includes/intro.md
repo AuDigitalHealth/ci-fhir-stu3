@@ -113,6 +113,10 @@ This section lists known issues with this specification at the time of publishin
     <th>Description</th>
   </tr>
     <tr>
+        <td>Source material errors</td>
+        <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
+    </tr>
+    <tr>
         <td>Status of this FHIR IG</td>
         <td>This FHIR IG is currently in progress. While it is expected that a baseline of this FHIR IG will be frozen (possibly as at Trial Use) for the purposes of approval and publication of the corresponding CDA IG, it is not expected that the baseline of this FHIR IG will be approved for use in FHIR implementations.</td>
     </tr>
@@ -135,10 +139,6 @@ This section lists known issues with this specification at the time of publishin
             If required, systems can send patient’s sex in an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) and Observation.valueCodeableConcept value from <a href="http://hl7.org/fhir/administrative-gender"> AdministrativeGender</a> code system or as a local extension.<br>
             Work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.
         </td>
-    </tr> 
-    <tr>
-        <td>Source material errors</td>
-        <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
     </tr>
     <tr>
         <td>Examples</td>
@@ -147,10 +147,6 @@ This section lists known issues with this specification at the time of publishin
     <tr>
         <td>Shared Medicines List CDA IG</td>
         <td>The corresponding CDA IG is currently in progress; an early draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
-    </tr>
-    <tr>
-        <td>Source material errors</td>
-        <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
     </tr>
  </tbody>
 </table> 
