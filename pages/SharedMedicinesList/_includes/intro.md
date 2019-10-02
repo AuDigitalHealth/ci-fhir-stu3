@@ -124,13 +124,6 @@ This section lists known issues with this specification at the time of publishin
         <td>This FHIR IG is currently in progress. While it is expected that a baseline of this FHIR IG will be frozen (possibly as at Trial Use) for the purposes of approval and publication of the corresponding CDA IG, it is not expected that the baseline of this FHIR IG will be approved for use in FHIR implementations.</td>
     </tr>
     <tr>
-        <td>Terminology publication</td>
-        <td>The following terminology resources are not yet available in NCTS:<ul> 
-            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1">https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1</a></li>
-            </ul> 
-       </td>
-    </tr>
-    <tr>
         <td>Dose Administration Aid medicines present</td>
         <td>The information requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported by a FHIR profile. A request has been submitted to HL7 AU to consider this requirement on the national level, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/>
             In the interim, HL7 AU recommends supporting this requirement as a comment about the medicines list: where a sending system can state that one or more medicine items are packed by a pharmacy in a dose administration aid, the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’ is expected to be sent in List.note
