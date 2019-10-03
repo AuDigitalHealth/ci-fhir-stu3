@@ -344,13 +344,13 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.section(Medicines list).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.flag</td>
                 </tr>
                 <tr>
-                    <td>Witheld Medicine</td>
+                    <td>Withheld Medicine</td>
                     <td>028620</td>
                     <td>List.entry.change-description</td>
                     <td>Composition.section(Medicines list).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.change-description</td>
                 </tr> 
                 <tr>
-                    <td>Witheld Medicine Ordering</td>
+                    <td>Withheld Medicine Ordering</td>
                     <td>028626</td>
                      <td>N/A</td>
                     <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
