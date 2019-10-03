@@ -3,9 +3,13 @@
 ## Mapping from PSML business requirements
 This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0[DH2019m]](index.html#DH2019m).
 
-The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
  <table class="list" width="100%">
+	<col style="width:20%"/>
+	<col style="width:7%"/>
+	<col style="width:20%"/>
+	<col style="width:53%"/>
             <thead>
                 <tr>
                     <th>Data Item</th>
@@ -357,11 +361,15 @@ The table below matches the data items to the corresponding supported element in
 
             
 ## Mapping from PSML information requirements
-This informative section provides mapping from the data items (i.e. requirements) in [[Pharmacist Shared Medicines List Information Requirements v2.0][DH2019n]](index.html#DH2019n).
+This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List Information Requirements v2.0 [DH2019n]](index.html#DH2019n).
 
-The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. Summary Statement of Allergy or Intolerance). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
  <table class="list" width="100%">
+	<col style="width:20%"/>
+	<col style="width:7%"/>
+	<col style="width:20%"/>
+	<col style="width:53%"/>
             <thead>
                 <tr>
                     <th>Data Item</th>
@@ -473,8 +481,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>024891</td>
                     <td>Practitioner.address</td>
                     <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.address</td>
-                </tr>  
-              
+                </tr>
                <tr>
                     <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td>024036</td>
@@ -609,8 +616,6 @@ The table below matches the data items to the corresponding supported element in
                     <td>028441</td>
                     <td>N/A</td>
                     <td>This requirement is not directly supported. See <a href="index.html#">Known issues</a>.</td>
-                </tr>
-
                 </tr>  
                 <tr>
                     <td rowspan="4">Allergy and Adverse Reaction (optional)</td>
