@@ -160,7 +160,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported. See <a href="index.html">Known issues</a>.</td>
+                    <td>The requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported in FHIR; a request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br><br>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</td>
                 </tr>
                 <tr>
                     <td>Additional Comment</td>
@@ -442,7 +442,9 @@ The table below matches the data items to the corresponding supported element in
                     <td>Individual's sex (optional)</td>
                     <td>028570</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported. See <a href="index.html">Known issues</a>.</td>
+                    <td>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide only supports including a patient’s gender as part of a patient’s demographics for identification purposes in line with the Australian Government recommendations. <a href="https://www.ag.gov.au/Publications/Pages/AustralianGovernmentGuidelinesontheRecognitionofSexandGender.aspx">Australian Government Guidelines on the Recognition of Sex and Gender</a> state that patient’s biological sex should only be collected when clinically relevant.<br><br>
+                        Biological sex is not directly supported in FHIR; work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.
+                    </td>
                 </tr>  
                 <tr>
                     <td>Individual's date of birth (mandatory)</td>
@@ -620,7 +622,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported. See <a href="index.html#">Known issues</a>.</td>
+                    <td>The requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported in FHIR; a request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br><br>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</td>
                 </tr>  
                 <tr>
                     <td rowspan="4">Allergy and Adverse Reaction (optional)</td>
