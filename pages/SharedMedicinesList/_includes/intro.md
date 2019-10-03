@@ -101,7 +101,7 @@ This implementation guide and related artefacts are technical in nature and the 
         <tr>
             <td>1.0.0</td>
             <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
-            <td>Initial public release. For trial use. <br/>This  version of the SML FHIR implementation guide (in <a href="#HL7FHIR3">Release 3 (STU) [HL7FHIR3]</a>) supports the electronic exchange of SML information between healthcare providers, in an Australian healthcare context. Support is also provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td>Initial public release at (insert TBD spec status). <br/>This  version of the Shared Medicines List (SML) FHIR implementation guide (in <a href="#HL7FHIR3">Release 3 (STU) [HL7FHIR3]</a>) supports the exchange of medicines lists between healthcare providers, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table> 
@@ -134,7 +134,7 @@ This table lists known issues with this specification at the time of publishing.
     <tr>
         <td>Recording information that a medicine list contains medicine items packed in a dose administration aid</td>
         <td>National agreement on the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA) is not yet supported. A supporting data model would allow recording information about an individual receiving packed medicines so that consultations with healthcare providers and healthcare can be tailored to suit the individual. This has been raised in HL7 AU github for consideration in the HL7 AU Medications work group, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/><br/>
-           In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br><br/>
+           In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br/><br/>
            More information about dose administration aids: <a href="https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary">https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary</a>.
         </td>
     </tr>
