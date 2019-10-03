@@ -101,13 +101,13 @@ This implementation guide and related artefacts are technical in nature and the 
         <tr>
             <td>1.0.0</td>
             <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
-            <td>Initial public release of the shared medicines list implementation guide. Developed to serve as the model for the corresponding shared medicines list CDA IG to support Pharmacist Shared Medicines List (PSML).</td>
+            <td>Initial public release. For trial use. <br/>This  version of the SML FHIR implementation guide (in <a href="#HL7FHIR3">Release 3 (STU) [HL7FHIR3]</a>) supports the electronic exchange of SML information between healthcare providers, in an Australian healthcare context. Support is also provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table> 
 
 ## Known issues
-This section lists known issues with this specification at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.
+This table lists known issues with this specification at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.
 
 <table border="1" cellpadding="1" valign="middle">
 <tbody>
@@ -127,6 +127,7 @@ This section lists known issues with this specification at the time of publishin
         <td>Terminology publication</td>
         <td>The following terminology resources are not yet available in NCTS:<ul> 
             <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1">https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1</a></li>
+            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1">https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1</a></li>
             </ul> 
        </td>
     </tr>
@@ -144,12 +145,8 @@ This section lists known issues with this specification at the time of publishin
         </td>
     </tr>
     <tr>
-        <td>Examples</td>
-        <td>Work on examples in this implementation guide is very early. Forthcoming work is expected to result in several more examples including a Shared Medicines List Document, a Shared Medicines List (not a document), and several Pharmacist Shared Medicines List Documents.</td>
-    </tr>
-    <tr>
         <td>Shared Medicines List CDA IG</td>
-        <td>The corresponding CDA IG is currently in progress; an early draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
+        <td>The corresponding CDA IG is currently in progress and a draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
     </tr>
  </tbody>
 </table> 
@@ -159,23 +156,23 @@ This section lists known issues with this specification at the time of publishin
 |[<a name="DH2019a">DH2019a</a>]| Australian Digital Health Agency, 28 February 2019, Common - Clinical Document, Version 1.5.2.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2807-2019)|
 
-|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Shared Medicines List CDA Implementation Guide, Version 1.0.|
+|[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Shared Medicines List CDA Implementation Guide, Version 1.0.0.|
 
 |[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
 
 |[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
-|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>, Australian Base Implementation Guide (AU Base 1.1), v1.<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">X.X</span> (<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>)|
+|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>, Australian Base Implementation Guide (AU Base 1.1), v1.<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">X.X</span> (<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>).|
 | |[https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
 
-|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 2 October 2019|
+|[<a name="HL7FHIR">HL7FHIR</a>]| Health Level Seven, Inc., FHIR - HL7Wiki, accessed 2 October 2019.|
 | |[http://wiki.hl7.org/index.php?title=FHIR](http://wiki.hl7.org/index.php?title=FHIR)|
 
-|[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU)|
+|[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU).|
 | |[http://hl7.org/fhir/STU3/index.html](http://hl7.org/fhir/STU3/index.html)|
 
-|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 19 April 2017, FHIR, Release 4|
+|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 27 December 2018, FHIR, Release 4.|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
