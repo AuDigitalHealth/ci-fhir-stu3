@@ -132,16 +132,10 @@ This table lists known issues with this specification at the time of publishing.
        </td>
     </tr>
     <tr>
-        <td>Dose Administration Aid medicines present</td>
-        <td>The information requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported by a FHIR profile. A request has been submitted to HL7 AU to consider this requirement on the national level, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/>
-            In the interim, HL7 AU recommends supporting this requirement as a comment about the medicines list: where a sending system can state that one or more medicine items are packed by a pharmacy in a dose administration aid, the preferred text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’ is expected to be sent in List.note
-    </td>
-    </tr>
-    <tr>
-        <td>Individual's sex</td>
-        <td>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide supports including patient’s gender as part of patient’s demographics used for identifying purposes in line with the Australian Government recommendations. Australian Government guidelines on sex and gender state that patient’s biological sex should only be collected when clinically relevant.<br/>
-            If required, systems can send patient’s sex in an Observation with Observation.code '76689-9' Sex assigned at birth (LOINC) and Observation.valueCodeableConcept value from <a href="http://hl7.org/fhir/administrative-gender"> AdministrativeGender</a> code system or as a local extension.<br/>
-            Work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.
+        <td>Recording information that a medicine list contains medicine items packed in a dose administration aid</td>
+        <td>National agreement on the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA) is not yet supported. A supporting data model would allow recording information about an individual receiving packed medicines so that consultations with healthcare providers and healthcare can be tailored to suit the individual. This has been raised in HL7 AU github for consideration in the HL7 AU Medications work group, see <a href="hl7au/au-fhir-base#320">hl7au/au-fhir-base#320</a>.<br/>
+           In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br>
+           More information about dose administration aids: <a href="https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary">https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary</a>.
         </td>
     </tr>
     <tr>
