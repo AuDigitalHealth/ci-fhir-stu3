@@ -22,8 +22,8 @@ All examples included in this implementation guide are available for download in
 
 **CDA implementation guide**
 
-The corresponding CDA implementation guide that uses the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA is available for download:
+CDA implementation guides that use the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA are available for download:
 
 - [DH_2936_2020_Shared_Medicines_List_CDA_IG_v1.0.0.pdf](..\..\..\ci-fhir-stu3\pages\SharedMedicinesList\_includes\DH_2936_2020_Shared_Medicines_List_CDA_IG_v1.0.0.pdf)
 
-The approved release of this CDA IG for use in implementation is published on the Agency’s [developer centre](https://developer.digitalhealth.gov.au/).
+Approved releases of CDA implementation guides for use in implementation are published on the Agency’s [developer centre](https://developer.digitalhealth.gov.au/).
