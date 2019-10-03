@@ -98,5 +98,5 @@ Additionally, when the shared medicines list is a PSML document it is expected t
 
 * if the list has a List.code of '10160–0' History of Medication use Narrative, it will be sent with at least one new or existing medicine item
 * encounter will be sent
-* where a sending system can state that one or more medicine items are packed by a pharmacy in a dose administration aid, the preferred text 'Packed medicines: Yes', 'Packed medicines: No', or 'Packed medicines: Unknown' will be sent in note
+* when sending flag, the codes from [Medicine Item Change from Practitioner Medicine Review](https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1) are [preferred](http://hl7.org/fhir/STU3/terminologies.html#preferred).
 * list items will not include recommended medicine items, existing medicine items with changes recommended, existing medicine item with stop recommended, or new prescribed medicine items (flag is not to be ‘prescribed’)
