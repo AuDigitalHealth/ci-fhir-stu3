@@ -12,6 +12,9 @@
   <sch:pattern>
     <sch:title>f:MedicationStatement</sch:title>
     <sch:rule context="f:MedicationStatement">
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/medication-long-term']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/medication-long-term': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/medication-brand-name']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/medication-brand-name': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/medication-generic-name']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/medication-generic-name': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:dosage) &gt;= 1">dosage: minimum cardinality of 'dosage' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

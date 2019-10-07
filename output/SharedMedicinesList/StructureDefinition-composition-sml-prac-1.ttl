@@ -19,7 +19,7 @@
   fhir:StructureDefinition.title [ fhir:value "Shared Medicines List Authored by Practitioner"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-09-30T14:18:17+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-10-03T14:47:27+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -30,7 +30,7 @@
      ]
   ];
   fhir:StructureDefinition.description [ fhir:value "The purpose of this profile is to define a representation of a practitioner authored shared medicines list document for a patient in an Australian healthcare context.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element"];
-  fhir:StructureDefinition.copyright [ fhir:value "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/. This resource contains content from LOINC™ (http://loinc.org). The LOINC Table, LOINC Table Core, LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Hierarchies, LOINC Linguistic Variants File, LOINC/RSNA Radiology Playbook, and LOINC/IEEE Medical Device Code Mapping Table are copyright © 1995-2017, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license."];
+  fhir:StructureDefinition.copyright [ fhir:value "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/. This resource contains content from LOINC™ (http://loinc.org). The LOINC Table, LOINC Table Core, LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Hierarchies, LOINC Linguistic Variants File, LOINC/RSNA Radiology Playbook, and LOINC/IEEE Medical Device Code Mapping Table are copyright © 1995-2017, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. This resource includes SNOMED Clinical Terms™ (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. “SNOMED” and “SNOMED CT” are registered trademarks of the IHTSDO. The rights to use and implement or implementation of SNOMED CT content are limited to the extent it is necessary to allow for the end use of this material.  No further rights are granted in respect of the International Release and no further use of any SNOMED CT content by any other party is permitted. All copies of this resource must include this copyright statement and all information contained in this statement."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "3.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;
@@ -300,7 +300,7 @@
        fhir:Element.id [ fhir:value "Composition.meta.profile" ];
        fhir:ElementDefinition.path [ fhir:value "Composition.meta.profile" ];
        fhir:ElementDefinition.short [ fhir:value "Profiles this resource claims to conform to" ];
-       fhir:ElementDefinition.definition [ fhir:value "A list of profiles (references to [StructureDefinition](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/)." ];
+       fhir:ElementDefinition.definition [ fhir:value "A list of profiles (references to [StructureDefinition](http://hl7.org/fhir/STU3/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](http://hl7.org/fhir/STU3/)." ];
        fhir:ElementDefinition.comment [ fhir:value "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];

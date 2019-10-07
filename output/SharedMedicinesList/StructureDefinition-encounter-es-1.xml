@@ -19,7 +19,7 @@
   <title value="Summary of an Encounter for an Event"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-09-30T14:18:17+10:00"/>
+  <date value="2019-10-03T14:47:27+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -778,9 +778,6 @@
       <mustSupport value="true"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterType"/>
-        </extension>
         <strength value="preferred"/>
         <valueSetReference>
           <reference value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1"/>
@@ -1848,10 +1845,9 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DischargeDisp"/>
         </extension>
-        <strength value="example"/>
-        <description value="Discharge Disposition"/>
+        <strength value="preferred"/>
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/encounter-discharge-disposition"/>
+          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1"/>
         </valueSetReference>
       </binding>
       <mapping>
@@ -1861,163 +1857,6 @@
       <mapping>
         <identity value="rim"/>
         <map value=".dischargeDispositionCode"/>
-      </mapping>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.id">
-      <path value="Encounter.hospitalization.dischargeDisposition.id"/>
-      <representation value="xmlAttr"/>
-      <short value="xml:id (or equivalent in JSON)"/>
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="Element.id"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.extension">
-      <path value="Encounter.hospitalization.dischargeDisposition.extension"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="url"/>
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url"/>
-        <rules value="open"/>
-      </slicing>
-      <short value="Additional Content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="Element.extension"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Extension"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.coding">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="system"/>
-        </discriminator>
-        <rules value="open"/>
-      </slicing>
-      <short value="Code defined by a terminology system"/>
-      <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="*"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.coding:separationMode">
-      <path value="Encounter.hospitalization.dischargeDisposition.coding"/>
-      <sliceName value="separationMode"/>
-      <short value="Separation Mode"/>
-      <definition value="Category or kind of location after discharge."/>
-      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
-      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.coding"/>
-        <min value="0"/>
-        <max value="*"/>
-      </base>
-      <type>
-        <code value="Coding"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <strength value="required"/>
-        <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1"/>
-        </valueSetReference>
-      </binding>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.1-8, C*E.10-22"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="union(., ./translation)"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
-      </mapping>
-    </element>
-    <element id="Encounter.hospitalization.dischargeDisposition.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
-      </extension>
-      <path value="Encounter.hospitalization.dischargeDisposition.text"/>
-      <short value="Plain text representation of the concept"/>
-      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
-      <comment value="Very often the text is the same as a displayName of one of the codings."/>
-      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
-      <min value="0"/>
-      <max value="1"/>
-      <base>
-        <path value="CodeableConcept.text"/>
-        <min value="0"/>
-        <max value="1"/>
-      </base>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
-      <mapping>
-        <identity value="v2"/>
-        <map value="C*E.9. But note many systems use C*E.2 for this"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
-      </mapping>
-      <mapping>
-        <identity value="orim"/>
-        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
       </mapping>
     </element>
     <element id="Encounter.location">
@@ -2249,6 +2088,9 @@
       </constraint>
     </element>
     <element id="Encounter.extension:encounterDescription">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft"/>
+      </extension>
       <path value="Encounter.extension"/>
       <sliceName value="encounterDescription"/>
       <mustSupport value="true"/>
@@ -2265,9 +2107,6 @@
       <path value="Encounter.type"/>
       <mustSupport value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EncounterType"/>
-        </extension>
         <strength value="preferred"/>
         <valueSetReference>
           <reference value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1"/>

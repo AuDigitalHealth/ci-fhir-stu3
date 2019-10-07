@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "PractitionerRole with Practitioner with Mandatory Identifier"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-09-30T14:18:17+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-10-03T14:47:27+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -3455,6 +3455,11 @@
      fhir:StructureDefinition.differential.element [
        fhir:index 0;
        fhir:Element.id [ fhir:value "PractitionerRole" ];
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+         fhir:Extension.valueCode [ fhir:value "trial-use" ]
+       ];
        fhir:ElementDefinition.path [ fhir:value "PractitionerRole" ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;

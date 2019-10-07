@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary of an Encounter for an Event"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-09-30T14:18:17+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-10-03T14:47:27+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -944,11 +944,6 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "EncounterType" ]
-         ];
          fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.valueSetReference [
            fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1>;
@@ -2227,11 +2222,10 @@
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
            fhir:Extension.valueString [ fhir:value "DischargeDisp" ]
          ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Discharge Disposition" ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/encounter-discharge-disposition>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/encounter-discharge-disposition" ]
+           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1>;
+           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1" ]
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -2245,191 +2239,6 @@
        ]
      ], [
        fhir:index 65;
-       fhir:Element.id [ fhir:value "Encounter.hospitalization.dischargeDisposition.id" ];
-       fhir:ElementDefinition.path [ fhir:value "Encounter.hospitalization.dischargeDisposition.id" ];
-       fhir:ElementDefinition.representation [
-         fhir:value "xmlAttr";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.short [ fhir:value "xml:id (or equivalent in JSON)" ];
-       fhir:ElementDefinition.definition [ fhir:value "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 66;
-       fhir:Element.id [ fhir:value "Encounter.hospitalization.dischargeDisposition.extension" ];
-       fhir:ElementDefinition.path [ fhir:value "Encounter.hospitalization.dischargeDisposition.extension" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
-         ];
-         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 67;
-       fhir:Element.id [ fhir:value "Encounter.hospitalization.dischargeDisposition.coding" ];
-       fhir:ElementDefinition.path [ fhir:value "Encounter.hospitalization.dischargeDisposition.coding" ];
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "system" ]
-         ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to a code defined by a terminology system." ];
-       fhir:ElementDefinition.comment [ fhir:value "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.coding" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1-8, C*E.10-22" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "union(., ./translation)" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
-       ]
-     ], [
-       fhir:index 68;
-       fhir:Element.id [ fhir:value "Encounter.hospitalization.dischargeDisposition.coding:separationMode" ];
-       fhir:ElementDefinition.path [ fhir:value "Encounter.hospitalization.dischargeDisposition.coding" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "separationMode" ];
-       fhir:ElementDefinition.short [ fhir:value "Separation Mode" ];
-       fhir:ElementDefinition.definition [ fhir:value "Category or kind of location after discharge." ];
-       fhir:ElementDefinition.comment [ fhir:value "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.coding" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1>;
-           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1" ]
-         ]
-       ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1-8, C*E.10-22" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "union(., ./translation)" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
-       ]
-     ], [
-       fhir:index 69;
-       fhir:Element.id [ fhir:value "Encounter.hospitalization.dischargeDisposition.text" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ];
-         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-       ];
-       fhir:ElementDefinition.path [ fhir:value "Encounter.hospitalization.dischargeDisposition.text" ];
-       fhir:ElementDefinition.short [ fhir:value "Plain text representation of the concept" ];
-       fhir:ElementDefinition.definition [ fhir:value "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." ];
-       fhir:ElementDefinition.comment [ fhir:value "Very often the text is the same as a displayName of one of the codings." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.text" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.9. But note many systems use C*E.2 for this" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "./originalText[mediaType/code=\"text/plain\"]/data" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
-       ]
-     ], [
-       fhir:index 70;
        fhir:Element.id [ fhir:value "Encounter.location" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location" ];
        fhir:ElementDefinition.short [ fhir:value "List of locations where the patient has been" ];
@@ -2461,7 +2270,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".participation[typeCode=LOC]" ]
        ]
      ], [
-       fhir:index 71;
+       fhir:index 66;
        fhir:Element.id [ fhir:value "Encounter.location.id" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location.id" ];
        fhir:ElementDefinition.representation [
@@ -2487,7 +2296,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 72;
+       fhir:index 67;
        fhir:Element.id [ fhir:value "Encounter.location.extension" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional Content defined by implementations" ];
@@ -2517,7 +2326,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 73;
+       fhir:index 68;
        fhir:Element.id [ fhir:value "Encounter.location.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored" ];
@@ -2552,7 +2361,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 74;
+       fhir:index 69;
        fhir:Element.id [ fhir:value "Encounter.location.location" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location.location" ];
        fhir:ElementDefinition.short [ fhir:value "Location the encounter takes place" ];
@@ -2583,7 +2392,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "where" ]
        ]
      ], [
-       fhir:index 75;
+       fhir:index 70;
        fhir:Element.id [ fhir:value "Encounter.location.status" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location.status" ];
        fhir:ElementDefinition.short [ fhir:value "planned | active | reserved | completed" ];
@@ -2619,7 +2428,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".role.statusCode" ]
        ]
      ], [
-       fhir:index 76;
+       fhir:index 71;
        fhir:Element.id [ fhir:value "Encounter.location.period" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.location.period" ];
        fhir:ElementDefinition.short [ fhir:value "Time period during which the patient was present at the location" ];
@@ -2641,7 +2450,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".time" ]
        ]
      ], [
-       fhir:index 77;
+       fhir:index 72;
        fhir:Element.id [ fhir:value "Encounter.serviceProvider" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.serviceProvider" ];
        fhir:ElementDefinition.short [ fhir:value "The custodian organization of this Encounter record" ];
@@ -2668,7 +2477,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".particiaption[typeCode=PFM].role" ]
        ]
      ], [
-       fhir:index 78;
+       fhir:index 73;
        fhir:Element.id [ fhir:value "Encounter.partOf" ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.partOf" ];
        fhir:ElementDefinition.short [ fhir:value "Another Encounter this encounter is part of" ];
@@ -2708,6 +2517,11 @@
      ], [
        fhir:index 1;
        fhir:Element.id [ fhir:value "Encounter.extension:encounterDescription" ];
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+         fhir:Extension.valueCode [ fhir:value "draft" ]
+       ];
        fhir:ElementDefinition.path [ fhir:value "Encounter.extension" ];
        fhir:ElementDefinition.sliceName [ fhir:value "encounterDescription" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
@@ -2727,11 +2541,6 @@
        fhir:ElementDefinition.path [ fhir:value "Encounter.type" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "EncounterType" ]
-         ];
          fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.valueSetReference [
            fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1>;
@@ -2788,8 +2597,6 @@
 <http://hl7.org/fhir/ValueSet/encounter-special-courtesy> a fhir:ValueSet .
 
 <http://hl7.org/fhir/ValueSet/encounter-special-arrangements> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/encounter-discharge-disposition> a fhir:ValueSet .
 
 <http://hl7.org/fhir/ValueSet/encounter-location-status> a fhir:ValueSet .
 
