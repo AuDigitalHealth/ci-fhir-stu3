@@ -64,6 +64,12 @@ The following extensions form part of this implementation guide:
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#date">date</a>, <a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a> </td>
     </tr>
     <tr>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-encounter-description.html">Encounter Description</a></td>
+        <td>encounter-description</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/encounter.html">Encounter</a></td>
+    </tr>
+    <tr>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-information-recipient.html">Information Recipient</a></td>
         <td>information-recipient</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
