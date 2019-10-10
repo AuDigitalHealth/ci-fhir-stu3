@@ -69,5 +69,5 @@ For further information please refer to the comprehensive [Forge documentation](
 
 ### Viewing the Clinical Document Architecture (CDA) Implementation Guides
 
-The (CDA) Implementation Guides associated with each publication in this repository are not automatically included in the 'full-ig.zip' files but can be found in the 'output' folder of the desired publication. For example the CDA-IG for Shared Medicines List will be found here" ci-fhir-stu3/pages/SharedMedicinesList/_includes/DH_2936_2020_Shared_Medicines_List_CDA_IG_v1.0.0.pdf".
+The (CDA) Implementation Guides associated with each publication in this repository are not automatically included in the 'full-ig.zip' files but can be found in the 'output' folder of the desired publication. For example the CDA-IG for Shared Medicines List will be found here" ci-fhir-stu3/output/SharedMedicinesList/DH_2936_2020_Shared_Medicines_List_CDA_IG_v1.0.0.pdf".
 
