@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 163, errors = 61, warn = 54, info = 13 -->
+<!-- broken links = 163, errors = 61, warn = 53, info = 13 -->
 <head>
   <title>Shared Medicines List : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Medicines List</h1>
- <p>Generated Thu Oct 03 14:48:53 AEST 2019, FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+ <p>Generated Thu Oct 10 14:13:41 AEST 2019, FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
 <p>IG Publisher Version: v0.9.84-SNAPSHOT</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
@@ -23,7 +23,7 @@
      <td><a href="#C__work_git_ci-fhir-stu3_examples_bundle-e32a01d0-2610-4c99-ba46-9732aa975d41"><b>C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41</b></a></td><td><b>13</b></td><td><b>31</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-98e4b64a-d493-45c1-8102-b3b689da1c15"><b>C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15</b></a></td><td><b>8</b></td><td><b>11</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-98e4b64a-d493-45c1-8102-b3b689da1c15"><b>C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15</b></a></td><td><b>8</b></td><td><b>10</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28"><b>C:\work\git\ci-fhir-stu3\examples\composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28</b></a></td><td><b>2</b></td><td><b>6</b></td>
@@ -666,7 +666,7 @@
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[11].resource.code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 28152011000036108 in http://snomed.info/sct for 'http://snomed.info/sct#28152011000036108'</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[11].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system &quot;http://pbs.gov.au/code/item&quot; in the include in &quot;http://hl7.org.au/fhir/ValueSet/pbs-item&quot; is not known; The code system &quot;http://pbs.gov.au/code/item&quot; is not known for the code &quot;5006L&quot;; The code provided (http://pbs.gov.au/code/item#5006L) is not  valid in the value set PBSMedicinesItemCodes)</b></td>
+     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[11].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[12].resource.reasonCode[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator</b></td>
@@ -675,7 +675,7 @@
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[13].resource.code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 23358011000036102 in http://snomed.info/sct for 'http://snomed.info/sct#23358011000036102'</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[13].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system &quot;http://pbs.gov.au/code/item&quot; in the include in &quot;http://hl7.org.au/fhir/ValueSet/pbs-item&quot; is not known; The code system &quot;http://pbs.gov.au/code/item&quot; is not known for the code &quot;2430X&quot;; The code provided (http://pbs.gov.au/code/item#2430X) is not  valid in the value set PBSMedicinesItemCodes)</b></td>
+     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[13].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[15].resource.form</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 not found by validator</b></td>
@@ -690,7 +690,7 @@
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 22075011000036103 in http://snomed.info/sct for 'http://snomed.info/sct#22075011000036103'</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system &quot;http://pbs.gov.au/code/item&quot; in the include in &quot;http://hl7.org.au/fhir/ValueSet/pbs-item&quot; is not known; The code system &quot;http://pbs.gov.au/code/item&quot; is not known for the code &quot;8814X&quot;; The code provided (http://pbs.gov.au/code/item#8814X) is not  valid in the value set PBSMedicinesItemCodes)</b></td>
+     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.form</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 not found by validator</b></td>
@@ -708,7 +708,7 @@
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[21].resource.code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 21885011000036105 in http://snomed.info/sct for 'http://snomed.info/sct#21885011000036105'</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[21].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system &quot;http://pbs.gov.au/code/item&quot; in the include in &quot;http://hl7.org.au/fhir/ValueSet/pbs-item&quot; is not known; The code system &quot;http://pbs.gov.au/code/item&quot; is not known for the code &quot;3192B&quot;; The code provided (http://pbs.gov.au/code/item#3192B) is not  valid in the value set PBSMedicinesItemCodes)</b></td>
+     <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[21].resource.code.coding[1]</b></td><td><b>information</b></td><td><b>Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[22].resource.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator</b></td>
@@ -780,9 +780,6 @@
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[16].code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 22717011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#22717011000036101'</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Medication summary&quot; is not a valid display for the code {http://loinc.org}56445-0 - should be one of [&quot;Medication summary Document&quot;,&quot;Medication summary Doc&quot;]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.encounter.contained.type[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1 not found by validator</b></td>

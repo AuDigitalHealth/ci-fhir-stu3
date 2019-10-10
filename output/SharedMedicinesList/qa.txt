@@ -1,13 +1,13 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 122, warn = 108, info = 26
+err = 122, warn = 106, info = 26
 IG Publisher Version: v0.9.84-SNAPSHOT
-Generated Thu Oct 03 14:48:53 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+Generated Thu Oct 10 14:13:41 AEST 2019. FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 162 / 1
  C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41 : 13 / 31
- C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15 : 8 / 11
+ C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15 : 8 / 10
  C:\work\git\ci-fhir-stu3\examples\composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28 : 2 / 6
  C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2 : 1 / 11
  C:\work\git\ci-fhir-stu3\examples\list-a04e9676-5c38-4c56-8d24-c600e192613e : 0 / 8
@@ -220,21 +220,21 @@ WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[9].resource.f
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[9].resource.form.coding[0]: unable to find code 154011000036109 in http://snomed.info/sct for 'http://snomed.info/sct#154011000036109'
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[10].resource.reasonCode[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[11].resource.code.coding[0]: unable to find code 28152011000036108 in http://snomed.info/sct for 'http://snomed.info/sct#28152011000036108'
-INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[11].resource.code.coding[1]: The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system "http://pbs.gov.au/code/item" in the include in "http://hl7.org.au/fhir/ValueSet/pbs-item" is not known; The code system "http://pbs.gov.au/code/item" is not known for the code "5006L"; The code provided (http://pbs.gov.au/code/item#5006L) is not  valid in the value set PBSMedicinesItemCodes)
+INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[11].resource.code.coding[1]: Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[12].resource.reasonCode[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[13].resource.code.coding[0]: unable to find code 23358011000036102 in http://snomed.info/sct for 'http://snomed.info/sct#23358011000036102'
-INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[13].resource.code.coding[1]: The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system "http://pbs.gov.au/code/item" in the include in "http://hl7.org.au/fhir/ValueSet/pbs-item" is not known; The code system "http://pbs.gov.au/code/item" is not known for the code "2430X"; The code provided (http://pbs.gov.au/code/item#2430X) is not  valid in the value set PBSMedicinesItemCodes)
+INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[13].resource.code.coding[1]: Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[15].resource.form: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 not found by validator
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[15].resource.form.coding[0]: unable to find code 154011000036109 in http://snomed.info/sct for 'http://snomed.info/sct#154011000036109'
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[16].resource.reasonCode[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.code.coding[0]: unable to find code 22075011000036103 in http://snomed.info/sct for 'http://snomed.info/sct#22075011000036103'
-INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.code.coding[1]: The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system "http://pbs.gov.au/code/item" in the include in "http://hl7.org.au/fhir/ValueSet/pbs-item" is not known; The code system "http://pbs.gov.au/code/item" is not known for the code "8814X"; The code provided (http://pbs.gov.au/code/item#8814X) is not  valid in the value set PBSMedicinesItemCodes)
+INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.code.coding[1]: Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.form: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-form-1 not found by validator
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.form.coding[0]: unable to find code 261011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#261011000036101'
 INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[17].resource.ingredient[0].item.ofType(CodeableConcept): None of the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/amt-mp-codes (http://hl7.org.au/fhir/ValueSet/amt-mp-codes, and a code is recommended to come from this value set) (codes = http://snomed.info/sct#90332006)
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[19].resource.code.coding[0]: unable to find code 22464011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#22464011000036101'
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[21].resource.code.coding[0]: unable to find code 21885011000036105 in http://snomed.info/sct for 'http://snomed.info/sct#21885011000036105'
-INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[21].resource.code.coding[1]: The Coding provided is not in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set) (error message = The code system "http://pbs.gov.au/code/item" in the include in "http://hl7.org.au/fhir/ValueSet/pbs-item" is not known; The code system "http://pbs.gov.au/code/item" is not known for the code "3192B"; The code provided (http://pbs.gov.au/code/item#3192B) is not  valid in the value set PBSMedicinesItemCodes)
+INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[21].resource.code.coding[1]: Could not confirm that the codes provided are in the value set http://hl7.org.au/fhir/ValueSet/pbs-item (http://hl7.org.au/fhir/ValueSet/pbs-item, and a code is recommended to come from this value set)
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[22].resource.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[22].resource.code.coding[0]: unable to find code 21885011000036105 in http://snomed.info/sct for 'http://snomed.info/sct#21885011000036105'
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[22].resource.reaction[0].substance: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/adverse-reaction-agent-1 not found by validator
@@ -257,7 +257,6 @@ WARNING: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained
 WARNING: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].entry[1].flag: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[14].code.coding[0]: unable to find code 119411000036106 in http://snomed.info/sct for 'http://snomed.info/sct#119411000036106'
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[16].code.coding[0]: unable to find code 22717011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#22717011000036101'
-WARNING: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.type: The display "Medication summary" is not a valid display for the code {http://loinc.org}56445-0 - should be one of ["Medication summary Document","Medication summary Doc"]
 WARNING: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.encounter.contained.type[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1 not found by validator
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.encounter.contained.type[0].coding[0]: unable to find code 1348931000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1348931000168107'
 == C:\work\git\ci-fhir-stu3\examples\composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml ==
