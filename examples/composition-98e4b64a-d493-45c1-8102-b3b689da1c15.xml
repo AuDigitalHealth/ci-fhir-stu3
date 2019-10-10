@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Conversion of the CDA example 'SML02_Example.xml' as Composition with contained resources -->
+<!-- Representation of the CDA example 'SML02_Example.xml' as Composition with contained resources -->
 
 <Composition xmlns="http://hl7.org/fhir">
     <id value="98e4b64a-d493-45c1-8102-b3b689da1c15"/>
@@ -28,7 +28,7 @@
             <p><b>Contact:</b> 0370102020 (work fax)</p>
             <p><b>Address:</b> 34 Queen St, Coburg, VIC 3058 (work)</p>
 
-            <h3>Medication summary</h3>
+            <h3>Medicine summary</h3>
             <p><b>Date:</b> 5 Feb 2019 10:00AM - 5 Feb 2019 11:15AM</p>
             <p><b>Attested by:</b> Mr. Ned DEACON (on 5 Feb 2019)</p>
             <p><b>Document custodian:</b> Big Pharmacy (HPI-O: 8003626566699734)</p>
@@ -285,7 +285,6 @@
         </Encounter>
     </contained>
 
-    <!-- contained List resource #1 -->
     <contained>
         <List>
             <id value="05ed5a63-70ab-4dfb-820c-4be0d79bb0d3"/>
@@ -428,7 +427,7 @@
     <contained>
         <MedicationStatement>
             <id value="466c4379-3133-4498-ba33-94610ef35845"/>
-            <status value="active"/>
+            <status value="intended"/>
             <medicationReference>
                 <!-- reference to contained Medication resource -->
                 <reference value="#cd5a6cac-f6e5-4aa8-b497-6b0e903442cd"/>
@@ -458,7 +457,6 @@
         </Medication>
     </contained>
 
-    <!-- contained List resource #2 -->
     <contained>
         <List>
             <id value="c0c68add-8f8f-472e-98f3-ffcb0b6e016b"/>
@@ -557,7 +555,6 @@
         </Medication>
     </contained>
 
-    <!-- contained MedicationStatement resource #5 -->
     <contained>
         <MedicationStatement>
             <id value="c753dc46-f390-47c5-8760-241a3242279f"/>
@@ -577,7 +574,6 @@
         </MedicationStatement>
     </contained>
 
-    <!-- contained Medication resource #5 -->
     <contained>
         <Medication>
             <id value="f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed"/>
@@ -633,7 +629,7 @@
         <reference value="#1a8a2450-f190-4511-a24c-a2825a5ae1ee"/>
     </custodian>
 
-    <!-- CURRENT MEDICATIONS SECTION -->
+    <!-- CURRENT MEDICINES SECTION -->
     <section>
         <title value="Current Medicines"/>
         <code>
@@ -692,7 +688,7 @@
                             <td>1 at night</td>
                             <td/>
                             <td>New</td>
-                            <td>In pack – new finding of Atrial fibrillation</td>
+                            <td/>
                         </tr>
                     </tbody>
                 </table>
@@ -705,7 +701,7 @@
         </entry>
     </section>
 
-    <!-- CEASED MEDICATIONS SECTION -->
+    <!-- CEASED MEDICINES SECTION -->
     <section>
         <title value="Ceased medicines"/>
         <code>
