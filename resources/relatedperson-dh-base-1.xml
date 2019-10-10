@@ -1,103 +1,94 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="relatedperson-dh-base-1"/>
-  <url
-    value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
-  <version value="1.0.0"/>
-  <name value="RelatedPersonBase"/>
-  <title value="Base RelatedPerson"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <publisher value="Australian Digital Health Agency"/>
+  <id value="relatedperson-dh-base-1" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1" />
+  <version value="1.0.0" />
+  <name value="RelatedPersonBase" />
+  <title value="Base RelatedPerson" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description value="The purpose of this profile is to provide a base model for the concept of a related person, defining fundamental concepts that form a conforming representation of a related person. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa; * The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
-  <copyright
-    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="RelatedPerson"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"/>
-  <derivation value="constraint"/>
+  <description value="The purpose of this profile is to provide a base model for the concept of a related person, defining fundamental concepts that form a conforming representation of a related person. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA; * The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-relatedperson" />
+  <derivation value="constraint" />
   <differential>
     <element id="RelatedPerson">
-      <path value="RelatedPerson"/>
+      <path value="RelatedPerson" />
       <constraint>
-        <key value="inv-dh-relper-01"/>
-        <severity value="error"/>
-        <human
-          value="The related person shall at least have a name, an identifier or a relationship with the patient"/>
-        <expression
-          value="identifier.exists() or name.exists() or relationship.exists()"
-        />
+        <key value="inv-dh-relper-01" />
+        <severity value="error" />
+        <human value="The related person shall at least have a name, an identifier or a relationship with the patient" />
+        <expression value="identifier.exists() or name.exists() or relationship.exists()" />
       </constraint>
-	<constraint>
-		<key value="inv-dh-relper-02"/>
-		<severity value="error"/>
-		<human value="The patient shall at least have a reference, an identifier or a display"/>
-		<expression value="patient.reference.exists() or patient.identifier.exists() or patient.display.exists()"/>
-	</constraint>
+      <constraint>
+        <key value="inv-dh-relper-02" />
+        <severity value="error" />
+        <human value="The patient shall at least have a reference, an identifier or a display" />
+        <expression value="patient.reference.exists() or patient.identifier.exists() or patient.display.exists()" />
+      </constraint>
     </element>
     <element id="RelatedPerson.identifier">
-      <path value="RelatedPerson.identifier"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.identifier" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.active">
-      <path value="RelatedPerson.active"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.active" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.patient">
-      <path value="RelatedPerson.patient"/>
+      <path value="RelatedPerson.patient" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.relationship">
-      <path value="RelatedPerson.relationship"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.relationship" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name">
-      <path value="RelatedPerson.name"/>
+      <path value="RelatedPerson.name" />
       <type>
-        <code value="HumanName"/>
-        <profile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1"
-        />
+        <code value="HumanName" />
+        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.telecom">
-      <path value="RelatedPerson.telecom"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.telecom" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.gender">
-      <path value="RelatedPerson.gender"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.gender" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.birthDate">
-      <path value="RelatedPerson.birthDate"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.birthDate" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address">
-      <path value="RelatedPerson.address"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.address" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.photo">
-      <path value="RelatedPerson.photo"/>
-      <max value="0"/>
+      <path value="RelatedPerson.photo" />
+      <max value="0" />
     </element>
     <element id="RelatedPerson.period">
-      <path value="RelatedPerson.period"/>
-      <mustSupport value="true"/>
+      <path value="RelatedPerson.period" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
