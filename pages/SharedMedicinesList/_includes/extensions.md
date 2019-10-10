@@ -16,6 +16,24 @@ The following extensions form part of this implementation guide:
         <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
     </tr>
     <tr>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-author-related-person.html">Author as a RelatedPerson</a></td>
+        <td>author-related-person</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/resourcelist.html">Resource</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-composition-author-role.html">Authoring Practitioner Role</a></td>
+        <td>composition-author-role</td>
+        <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/composition.html">Composition</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-author-role.html">Authoring PractitionerRole</a></td>
+        <td>author-role</td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/resourcelist.html">Resource</a></td>
+    </tr>
+    <tr>
         <td><a href="http://hl7.org/fhir/STU3/extension-birthplace.html">Birth Place</a></td>
         <td>birthPlace</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Address">Address</a></td>
@@ -40,12 +58,6 @@ The following extensions form part of this implementation guide:
         <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
     </tr>
     <tr>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-composition-author-role.html">Authoring Practitioner Role</a></td>
-        <td>composition-author-role</td>
-        <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
-        <td><a href="http://hl7.org/fhir/stu3/composition.html">Composition</a></td>
-    </tr>
-    <tr>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-date-accuracy-indicator.html">Date Accuracy Indicator</a></td>
         <td>date-accuracy-indicator</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Coding">Coding</a></td>
@@ -56,12 +68,6 @@ The following extensions form part of this implementation guide:
         <td>information-recipient</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
         <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-author-role.html">Authoring PractitionerRole</a></td>
-        <td>author-role</td>
-        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
-        <td><a href="http://hl7.org/fhir/stu3/resourcelist.html">Resource</a></td>
     </tr>
     <tr>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-medication-brand-name.html">Medication Brand Name</a></td>
@@ -86,11 +92,5 @@ The following extensions form part of this implementation guide:
         <td>patient-mothersMaidenName</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#string">string</a></td>
         <td><a href="http://hl7.org/fhir/stu3/patient.html">Patient</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-author-related-person.html">Author as a RelatedPerson</a></td>
-        <td>author-related-person</td>
-        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
-        <td><a href="http://hl7.org/fhir/stu3/resourcelist.html">Resource</a></td>
     </tr>
 </table>
