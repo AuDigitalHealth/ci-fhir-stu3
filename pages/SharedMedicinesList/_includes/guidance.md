@@ -45,7 +45,7 @@ The fields used to present the Differential Table and the Snapshot Table in this
 
 ## Validating resources using profiles from this implementation guide
 
-There are several means of [validating resources](http://hl7.org/fhir/validation.html) against a set of rules, each with differing coverage and capabilities.
+There are several means of [validating resources](http://hl7.org/fhir/STU3/validation.html) against a set of rules, each with differing coverage and capabilities.
 
 Some rules may be defined in a machine-processable manner and thus can be checked by automated means, however some rules are defined solely in human-readable descriptions. The profiles and extensions described by this implementation guide can contain both.
 
@@ -117,7 +117,7 @@ The following resources are available to raise questions or issues relating to F
 ## Conformance conventions
 
 ### StructureDefinition
-The content of this implementation guide is a set of FHIR [StructureDefinition](FHIR http://hl7.org/fhir/stu3/structuredefinition.html) resources for implementing the document model that is the subject of this implementation guide.
+The content of this implementation guide is a set of FHIR [StructureDefinition](http://hl7.org/fhir/stu3/structuredefinition.html) resources for implementing the document model that is the subject of this implementation guide.
 
 This implementation guide includes FHIR profiles that are a set of constraints and/or extensions to FHIR base resources or a data types in the format of a StructureDefinition resource. A StructureDefinition describes a structure - a set of data element definitions, and their associated rules of usage – and is hereafter referred to as a ‘profile’ or an ‘extension’.
 

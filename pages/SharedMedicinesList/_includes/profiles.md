@@ -183,6 +183,16 @@
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medlist.html">AU Medicine List</a></td>
         <td><a href="http://hl7.org/fhir/STU3/list.html">List</a></td>
   </tr> 
+     <tr>
+      <td><a href="StructureDefinition-medication-dh-base-1.html">Medication (Base Medication)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medication.html">AU Base Medication</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/medication.html">Medication</a></td>
+    </tr> 
+     <tr>
+      <td><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Medicine Item Statement)</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
+    </tr> 
     <tr>
          <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AU Base Organization</a></td>
@@ -233,16 +243,11 @@
        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
        <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
     </tr> 
-     <tr>
-      <td><a href="StructureDefinition-medication-dh-base-1.html">Medication (Base Medication)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medication.html">AU Base Medication</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/medication.html">Medication</a></td>
+    <tr>
+       <td><a href="StructureDefinition-substance-dh-base-1.html">Substance (Base Substance)</a></td>
+       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-substance.html">AU Base Substance</a></td>
+       <td><a href="http://hl7.org/fhir/STU3/substance.html">Substance</a></td>
     </tr> 
-     <tr>
-      <td><a href="StructureDefinition-medicationstatement-detailed-1.html">MedicationStatement (Medicine Item Statement)</a></td>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
-        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
-    </tr>  
 </table>
   </div>
 				</div>  <!-- /inner-wrapper -->
