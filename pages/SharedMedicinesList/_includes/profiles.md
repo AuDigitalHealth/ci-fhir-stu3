@@ -194,6 +194,11 @@
         <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
     </tr> 
     <tr>
+       <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
+       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
+       <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
+  </tr>
+    <tr>
          <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
@@ -202,12 +207,7 @@
          <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
-    </tr> 
-    <tr>
-       <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
-       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
-       <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
-  </tr>    
+    </tr>   
     <tr>
       <td><a href="StructureDefinition-patient-dh-base-1.html">Patient (Base Patient)</a></td>
       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-patient.html">AU Base Patient</a></td>
