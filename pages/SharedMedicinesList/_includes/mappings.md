@@ -663,7 +663,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Reaction (optional)</td>
                     <td>028438</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.manifestation</td>
+                    <td>Composition.section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
                 </tr>  
                 <tr>
                     <td>Reaction Onset Date (optional)</td>
