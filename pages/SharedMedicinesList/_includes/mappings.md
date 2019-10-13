@@ -746,7 +746,7 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
                 <tr>
                     <td>Dose per administration (optional)</td>
-                    <td>028021</td>
+                    <td>028670</td>
                     <td>MedicationStatement.dosage</td>
                     <td>Composition.section(Medicines List).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.entry.item(MedicationStatement as Medicine Item Statement).MedicationStatement.dosage</td>
                 </tr>
