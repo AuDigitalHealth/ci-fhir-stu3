@@ -142,13 +142,22 @@
     </element>
     <element id="Composition.type">
       <path value="Composition.type" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="56445-0" />
-        </coding>
-      </fixedCodeableConcept>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.type.coding">
+      <path value="Composition.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.type.coding.system">
+      <path value="Composition.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Composition.type.coding.code">
+      <path value="Composition.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="56445-0" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
@@ -285,13 +294,22 @@
     <element id="Composition.section:allergies.code">
       <path value="Composition.section.code" />
       <min value="1" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="48765-2" />
-        </coding>
-      </fixedCodeableConcept>
       <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:allergies.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:allergies.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Composition.section:allergies.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="48765-2" />
     </element>
     <element id="Composition.section:allergies.text">
       <path value="Composition.section.text" />
