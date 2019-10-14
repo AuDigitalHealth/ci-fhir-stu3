@@ -17,7 +17,7 @@ The table below matches the data items to the corresponding supported element in
 	<col style="width:53%"/>
             <thead>
                 <tr>
-                    <th>Data Item</th>
+                    <th>Requirement</th>
                     <th>Req. No</th>
                     <th>Element</th>
                     <th>Hierarchy</th>
@@ -377,7 +377,7 @@ The table below matches the data items to the corresponding supported element in
 	<col style="width:53%"/>
             <thead>
                 <tr>
-                    <th>Data Item</th>
+                    <th>Requirement</th>
                     <th>Req. No</th>
                     <th>Element</th>
                     <th>Hierarchy</th>
