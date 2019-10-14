@@ -52,7 +52,7 @@ Specification packages contain only files relevant to the particular clinical do
 ## How to read this document
 This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of SML. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-The starting point for the profiles included in this implementation guide for a pharmacist shared medicines list is the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
+The starting point for the profiles included in this implementation guide for a pharmacist shared medicines list is the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html) for this implementation guide.
 
 For implementers interested in representing shared medicines list information as a list, and not a document, the starting point is the [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html) profile.
 
@@ -137,10 +137,6 @@ This table lists known issues with this specification at the time of publishing.
            In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br/><br/>
            More information about dose administration aids: <a href="https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary">https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary</a>.
         </td>
-    </tr>
-    <tr>
-        <td>Shared Medicines List CDA IG</td>
-        <td>The corresponding CDA IG is currently in progress and a draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
     </tr>
  </tbody>
 </table> 

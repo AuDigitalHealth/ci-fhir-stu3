@@ -22,13 +22,13 @@ The following extensions form part of this implementation guide:
         <td><a href="http://hl7.org/fhir/stu3/resourcelist.html">Resource</a></td>
     </tr>
     <tr>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-composition-author-role.html">Authoring Practitioner Role</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-composition-author-role.html">Authoring PractitionerRole</a></td>
         <td>composition-author-role</td>
-        <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
+        <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
         <td><a href="http://hl7.org/fhir/stu3/composition.html">Composition</a></td>
     </tr>
     <tr>
-        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-author-role.html">Authoring PractitionerRole</a></td>
+        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-author-role.html">Authoring Practitioner Role</a></td>
         <td>author-role</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
         <td><a href="http://hl7.org/fhir/stu3/resourcelist.html">Resource</a></td>
