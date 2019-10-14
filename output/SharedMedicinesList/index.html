@@ -196,7 +196,7 @@
 <h2 id="how-to-read-this-document">How to read this document</h2>
 <p>This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of SML. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
 
-<p>The starting point for the profiles included in this implementation guide for a pharmacist shared medicines list is the <a href="StructureDefinition-composition-sml-prac-1.html">Shared Medicines List</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a> for this implementation guide.</p>
+<p>The starting point for the profiles included in this implementation guide for a pharmacist shared medicines list is the <a href="StructureDefinition-composition-sml-prac-1.html">Shared Medicines List Authored by Practitioner</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a> for this implementation guide.</p>
 
 <p>For implementers interested in representing shared medicines list information as a list, and not a document, the starting point is the <a href="StructureDefinition-list-sml-pracchanges-1.html">List of Medicine Items with Change Information Authored by Practitioner</a> profile.</p>
 
@@ -281,10 +281,6 @@
            In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br /><br />
            More information about dose administration aids: <a href="https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary">https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary</a>.
         </td>
-    </tr>
-    <tr>
-        <td>Shared Medicines List CDA IG</td>
-        <td>The corresponding CDA IG is currently in progress and a draft is available from the <a href="downloads.html">Downloads</a> page of this FHIR IG. The approved release of this CDA IG for use in implementation is expected to be published on the Agency’s <a href="https://developer.digitalhealth.gov.au/">developer centre</a> in 2020.</td>
     </tr>
  </tbody>
 </table>
@@ -429,11 +425,11 @@
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-2954:2019</p>
+            <p>Document ID: DH-2954:2019 - <strong>Draft for external use</strong></p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Oct 14, 2019 08:11+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Oct 15, 2019 09:26+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
