@@ -5,170 +5,290 @@
 * Do not remove this line (it will not be displayed)
 {:toc}
 
+Intro sentence - TBD
+
 ## Mapping from PSML business requirements
 This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0[DH2019m]](index.html#DH2019m).
 
-The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the requirement to the corresponding supported element in the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)).
 
  <table class="list" width="100%">
 	<col style="width:20%"/>
 	<col style="width:7%"/>
 	<col style="width:20%"/>
-	<col style="width:53%"/>
+	<col style="width:25%"/>
+	<col style="width:28%"/>
             <thead>
                 <tr>
                     <th>Requirement</th>
                     <th>Req. No</th>
                     <th>Element</th>
                     <th>Hierarchy</th>
+                    <th>Additional notes</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Pharmacist shared medicines list</td>
                     <td>027948</td>
-                    <td>N/A</td>
-                    <td>This requirement is managed in the implementation.</td>
+                    <td>Composition.extension(composition-author-role)</td>
+                    <td>Composition.extension(composition-author-role)</td>
+                    <td/>
                 </tr>
                 <tr>
-                    <td>Components in the PSML document</td>
-                    <td>028321</td>
-                     <td>N/A</td>
-                    <td>This high-level business requirement cannot be mapped directly. See Mapping from PSML information requirements section for individual component mappings. </td>
+                    <td rowspan="9">Components in the PSML document</td>
+                    <td rowspan="9">028321</td>
+                    <td>Composition</td>
+                    <td>Composition</td>
+                    <td rowspan="9">
+                        <p>The requirements document states that the PSML document will contain the organisation the pharmacist is representing at the
+time of document authoring. The profile has this as optional.</p>
+                        <p>The requirements document states if the PSML document contains the primary healthcare provider then the
+name of the primary healthcare provider organisation is mandatory. The profile allows requires either a name or an identifier - it does not mandate name.</p>
+                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
+                     </td>
+                 </tr>
+                 <tr>
+                    <td>Composition.status</td>
+                    <td>Composition.status</td>
+                 </tr> 
+                 <tr>
+                    <td>Composition.date</td>
+                     <td>Composition.date</td>
+                 </tr> 
+                 <tr>
+                    <td>Composition.subject</td>
+                     <td>Composition.subject</td>
+                 </tr>
+                 <tr>
+                    <td>Composition.extension(composition-author-role)</td>
+                     <td>Composition.extension(composition-author-role)</td>
+                 </tr>  
+                 <tr>
+                    <td>PractitionerRole.organization</td>
+                     <td>Composition.extension(composition-author-role)->PractitionerRole.organization</td>
+                 </tr> 
+                 <tr>
+                    <td>Patient.generalPractitioner</td>
+                     <td>Composition.subject->Patient.generalPractitioner</td>
+                 </tr>  
+                 <tr>
+                    <td>Composition.section(allergies)</td>
+                     <td>Composition.section(allergies)</td>
+                 </tr>
+                 <tr>
+                    <td>Composition.section(medications)</td>
+                     <td>Composition.section(medications)</td>
                  </tr>
                 <tr>
                     <td>Document conformance levels</td>
                     <td>028315</td>
                      <td>N/A</td>
-                     <td>This requirement may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>  
+                     <td>N/A</td>
+                     <td><p>This requirement is applicable only to a CDA implementation.</p></td>
                 </tr>            
                 <tr>
-                    <td>Point-to-point transmission</td>
-                    <td>027954</td>
-                     <td>N/A</td>
-                    <td>This requirement is managed in the implementation. The models referenced by this implementation guide have been designed to support point-to-point transmissions.</td>
+                    <td rowspan="2">Point-to-point transmission</td>
+                    <td rowspan="2">027954</td>
+                     <td>Composition</td>
+                     <td>Composition</td>
+                    <td rowspan="2"><p></p></td>
+                </tr>
+                <tr>
+                     <td>List</td>
+                     <td>List</td>
                 </tr>                        
                 <tr>
                     <td>HPI-I relaxed template package</td>
                     <td>028394</td>
                      <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile and handled by an implementation.</td>
+                     <td>N/A</td>
+                     <td><p>This requirement is applicable only to a CDA implementation.</p></td>
                 </tr>                                     
                  <tr>
                     <td>Compatible with Prescription and Dispense Record</td>
                     <td>028323</td>
-                     <td>N/A</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td>TBD</td>
+                     <td>TBD</td>
+                     <td><p>TBD</p></td>
                  </tr>                                                
                  <tr>
                     <td>Prompt to upload recent PSML</td>
                     <td>028325</td>
                      <td>N/A</td>
-                     <td>This requirement is managed in the implementation.</td>
+                     <td>N/A</td>
+                     <td><p>This requirement is a producing system behavioural requirement.</p></td>
                 </tr>                                                                          
                 <tr>
-                    <td>Medicines information presentation</td>
-                    <td>028359</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td rowspan="2">Medicines information presentation</td>
+                    <td rowspan="2">028359</td>
+                     <td>Composition.section(allergies)</td>
+                     <td>Composition.section(allergies)</td>
+                    <td rowspan="2"><p>The requirements document states a rendered sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
+                </tr>
+                <tr>
+                     <td>Composition.section(medications)</td>
+                     <td>Composition.section(medications)</td>
                 </tr>
                 <tr>
                     <td>Allergies and Adverse Reactions section</td>
                     <td>028355</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                     <td>Composition.section(allergies).text</td>
+                     <td>Composition.section(allergies).text</td>
+                    <td><p>The requirements document states a rendered sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
                 </tr>
                 <tr>
                     <td>Allergies and Adverse Reactions header</td>
                     <td>028360</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                     <td>Composition.section(allergies).text</td>
+                     <td>Composition.section(allergies).text</td>
+                    <td><p>The requirements document states a rendered sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
                 </tr>                                
                 <tr>
                     <td>No known allergies or adverse reactions</td>
                     <td>028411</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>AllergyIntolerance.code</td>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.code</td>
+                    <td><p></p></td>
                 </tr>
                  <tr>
                     <td>Current Medicines section</td>
                     <td>028361</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>Composition.section(medications).text</td>
+                    <td>Composition.section(medications).text</td>
+                    <td><p>The requirements document states a requirement that is a rendering requirement and not applicable for the profile.</p></td>
                 </tr> 
                  <tr>
                     <td>Current Medicines header</td>
                     <td>028362</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>Composition.section(medications).text</td>
+                    <td>Composition.section(medications).text</td>
+                    <td><p>The requirements document states a requirement that is a rendering requirement and not applicable for the profile.</p></td>
                 </tr>                             
                 <tr>
                     <td>Ceased Medicines section</td>
                     <td>028363</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>Composition.section(medications).text</td>
+                    <td>Composition.section(medications).text</td>
+                    <td><p>The requirements document states a rendered sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
                 </tr>
                  <tr>
                     <td>Ceased Medicines header</td>
                     <td>028364</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>Composition.section(medications).text</td>
+                    <td>Composition.section(medications).text</td>
+                    <td><p>The requirements document states a requirement that is a rendering requirement and not applicable for the profile.</p></td>
                </tr>
                <tr>
                     <td>Suppressing Ceased Medicines section</td>
                     <td>028358</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td><p>TBD</p></td>
                 </tr>
                <tr>
                     <td>Suppressing codes and medicine identifiers</td>
                     <td>028625</td>
-                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>
+                        <p>This requirement is a system behavioural requirement.</p>
+                        <p>This requirement is satisifed by typical producing and consuming system behaviour. Only a display or text associated with a code is expected to be included in the narrative and rendered.</p>
+                    </td>
                 </tr>               
                <tr>
                     <td>Completeness of PSML document</td>
                     <td>028324</td>
                     <td>N/A</td>
-                    <td>This high-level business requirement cannot be mapped directly.</td>
+                    <td>N/A</td>
+                    <td>
+                        <p>This requirement is a producing system behavioural requirement.</p>
+                    </td>
                 </tr>                                                                                                         
                 <tr>
-                    <td>Identifier for document author</td>
-                    <td>028317</td>
-                    <td>Practitioner.identifier</td>
-                  <td>Composition.author(Practitioner as Practitioner with Mandatory Identifier).Practitioner.identifier</td>
+                    <td rowspan="3">Identifier for document author</td>
+                    <td rowspan="3">028317</td>
+                    <td>Composition.author.identifier</td>
+                    <td>Composition.author.identifier</td>
+                    <td rowspan="3"><p></p></td>
                 </tr>
                 <tr>
-                    <td>No Address for the consumer</td>
-                    <td>028319</td>
-                    <td>N/A</td>
-                    <td>The business requirements document requires the prohibition of any address for the consumer within the document when uploading to My Health Record. This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
+                    <td rowspan="2">Practitioner.identifier</td>
+                    <td>Composition.author->Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>No Electronic Communication Detail for the consumer</td>
-                    <td>028320</td>
-                     <td>N/A</td>
-                    <td>The business requirements document requires the prohibition of any types of electronic communication contact detail for the consumer within the document when uploading to My Health Record. This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
+                    <td>Composition.extension(composition-author-role)->PractitionerRole.practitioner->Practitioner.identifier</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">No Address for the consumer</td>
+                    <td rowspan="5">028319</td>
+                    <td rowspan="5">Patient.address</td>
+                    <td>Composition.subject->Patient.address</td>
+                    <td rowspan="5">
+                        <p>The requirements document states a PSML document, when uploaded to the My Health Record, will not contain any address for the consumer within the document. Patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send address when sending to the My Health Record.</p>
+                        <p>This requirement is best enforced in a conformance profile.</p>
+                     </td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry.AllergyIntolerance.patient->Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry.List.subject->Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry.List.entry.item->MedicationStatement.subject->Patient.address</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">No Electronic Communication Detail for the consumer</td>
+                    <td rowspan="5">028320</td>
+                    <td rowspan="5">Patient.telecom</td>
+                    <td>Composition.subject->Patient.telecom</td>
+                    <td rowspan="5">
+                        <p>The requirements document states a PSML document, when uploaded to the My Health Record, will not contain any types of electronic communication contact detail for the consumer within the document. Patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send address when sending to the My Health Record.</p>
+                        <p>This requirement is best enforced in a conformance profile.</p>
+                     </td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry.AllergyIntolerance.patient->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry.List.subject->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry.List.entry.item->MedicationStatement.subject->Patient.telecom</td>
                 </tr>
                 <tr>
                     <td>Attribute for Healthcare Setting</td>
                     <td>028349</td>
                     <td>Encounter.type</td>
                     <td>Composition.encounter(Encounter as Summary of an Encounter for an Event).Encounter.type</td>
+                    <td><p>TBD</p></td>
                 </tr>
                 <tr>
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
                     <td>N/A</td>
+                    <td>N/A</td>
                     <td>The requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported in FHIR; a request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br><br>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</td>
                 </tr>
                 <tr>
-                    <td>Additional Comment</td>
-                    <td>028348</td>
-                    <td>List.note</td>
-                    <td>Composition.section(Medicines List).entry(List as List of Medicine Items with Change Information Authored by Practitioner).List.note</td>
+                    <td rowspan="2">Additional Comment</td>
+                    <td rowspan="2">028348</td>
+                    <td>Composition.section(medications).text</td>
+                    <td>Composition.section(medications).text</td>
+                    <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
+                    <td>List.note</td>
+                    <td>Composition.section(medications).entry->List.note</td>
+                </tr>
+                <tr> uptohere ==========================================================
                     <td>Attribute for Ceased Date</td>
                     <td>028352</td>
                     <td>MedicationStatement.effective[x]</td>
