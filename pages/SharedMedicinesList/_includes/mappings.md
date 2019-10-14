@@ -812,7 +812,17 @@ The table below matches the data items to the corresponding supported element in
                     <td>028636</td>
                     <td>N/A</td>
                     <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
-                </tr>  
+                </tr>
+                <tr>
+                    <td rowspan="2">Ceased medicine (optional)</td>
+                    <td rowspan="2">028674</td>
+                    <td>Composition.section(Medicines list)</td>
+                    <td>Composition.section(Medicines list)</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(Medicines List).entry</td>
+                    <td>Composition.section(Medicines List).entry</td>
+                </tr> 
                 <tr>
                     <td rowspan="2">Medicine identifier (mandatory)</td>
                     <td>028633</td>
