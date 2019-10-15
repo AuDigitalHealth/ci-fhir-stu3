@@ -591,7 +591,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Individual's electronic communication details (optional)</td>
                     <td>024042</td>
                     <td>Patient.telecom</td>
-                    <td>Composition.subject.Patient.telecom</td>
+                    <td>Composition.subject->Patient.telecom</td>
                     <td><p></p></td>
                 </tr> 
                 <tr>
@@ -605,41 +605,41 @@ The table below matches the data items to the corresponding supported element in
                     <td>Individual Healthcare Identifier (mandatory)</td>
                     <td>022082</td>
                     <td>Patient.identifier</td>
-                    <td>Composition.subject.Patient.identifier</td>
+                    <td>Composition.subject->Patient.identifier</td>
                 </tr>
                 <tr>
                     <td>Individual's title (optional)</td>
                     <td>022081</td>
                     <td>Patient.name</td>
-                    <td>Composition.subject.Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
                     <td><p></p></td>
                 </tr>                   
                 <tr>
                     <td>Individual's given name (optional)</td>
                     <td>023056</td>
                     <td>Patient.name</td>
-                    <td>Composition.subject.Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
                     <td><p></p></td>
                 </tr>
                  <tr>
                     <td>Individual's family name (mandatory)</td>
                     <td>023058</td>
                     <td>Patient.name</td>
-                    <td>Composition.subject.Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
                     <td><p></p></td>
                 </tr>    
                   <tr>
                     <td>Individual's name suffix (optional)</td>
                     <td>023059</td>
                    <td>Patient.name</td>
-                    <td>Composition.subject.Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
                     <td>Individual's gender (mandatory)</td>
                     <td>027983</td>
                     <td>Patient.gender</td>
-                    <td>Composition.subject.Patient.gender</td>
+                    <td>Composition.subject->Patient.gender</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
@@ -655,14 +655,14 @@ The table below matches the data items to the corresponding supported element in
                     <td>Individual's date of birth (mandatory)</td>
                     <td>023060</td>
                     <td>Patient.birthDate</td>
-                    <td>Composition.subject.Patient.birthDate</td>
+                    <td>Composition.subject->Patient.birthDate</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
                     <td rowspan="2">Date of birth accuracy indicator (optional)</td>
                     <td>024026</td>
-                    <td rowspan="2">Patient.birthDate.date-accuracy-indicator</td>
-                    <td rowspan="2">Composition.subject.Patient.date-accuracy-indicator</td>
+                    <td rowspan="2">Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td rowspan="2">Composition.subject->Patient.extension(date-accuracy-indicator)</td>
                     <td rowspan="2"><p></p></td>
                 </tr>  
                 <tr>
@@ -672,13 +672,13 @@ The table below matches the data items to the corresponding supported element in
                     <td>Indigenous status (mandatory)</td>
                     <td>024033</td>
                     <td>Patient.indigenous-status</td>
-                    <td>Composition.subject.Patient.indigenous-status</td>
+                    <td>Composition.subject->Patient.extension(indigenous-status)</td>
                 </tr>  
                 <tr>
                     <td rowspan="2">Document author (mandatory)</td>
                     <td rowspan="2">027985</td>
                     <td>PractitionerRole</td>
-                    <td>Composition.composition-author-role.PractitionerRole</td>
+                    <td>Composition.extension(composition-author-role)->PractitionerRole</td>
                     <td rowspan="2"><p></p></td>
                 </tr> 
                 <tr>
@@ -689,7 +689,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization(Organization as BaseOrganization).Organization.name</td>
+                    <td>Composition.extension(composition-author-role)->PractitionerRole.organization->Organization.name</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
@@ -710,7 +710,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare provider professional role (mandatory)</td>
                     <td>024040</td>
                     <td>PractitionerRole.code</td>
-                    <td>Composition.composition-author-role.PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)->PractitionerRole.code</td>
                 </tr>             
                <tr>
                     <td>Healthcare Provider Identifier-Individual (optional)</td>
@@ -723,7 +723,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Healthcare Provider Identifier-Organisation (optional)</td>
                     <td>024602</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.composition-author-role.PractitionerRole.organization.Organization.identifier</td>
+                    <td>Composition.extension(composition-author-role)->PractitionerRole.organization->Organization.identifier</td>
                     <td><p></p></td>
                 </tr>                   
                 <tr>
@@ -756,70 +756,70 @@ The table below matches the data items to the corresponding supported element in
                     <td>Primary healthcare provider (optional)</td>
                     <td>028028</td>
                     <td>Patient.generalPractitioner</td>
-                    <td>Composition.subject.Patient.generalPractitioner</td>
+                    <td>Composition.subject->Patient.generalPractitioner</td>
                     <td><p></p></td>
                 </tr> 
                 <tr>
                     <td>Healthcare Provider Identifier-Individual (optional)</td>
                     <td>024601</td>
                     <td>Practitioner.identifier</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.identifier</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.identifier</td>
                     <td><p></p></td>
                 </tr> 
                 <tr>
                     <td>Healthcare Provider Identifier-Organisation (optional)</td>
                     <td>024602</td>
                     <td>Organization.identifier</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Organization.identifier</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Organization.identifier</td>
                     <td><p></p></td>
                 </tr> 
                <tr>
                     <td>Healthcare provider's title (optional)</td>
                     <td>023061</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.name</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.name</td>
                     <td><p></p></td>
                 </tr> 
                  <tr>
                     <td>Healthcare provider given name (optional)</td>
                     <td>023062</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.name</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.name</td>
                     <td><p></p></td>
                 </tr> 
               <tr>
                     <td>Healthcare provider family name (optional)</td>
                     <td>028638</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.name</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.name</td>
                     <td><p></p></td>
                 </tr> 
                  <tr>
                     <td>Healthcare provider name suffix (optional)</td>
                     <td>023065</td>
                     <td>Practitioner.name</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.name</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.name</td>
                     <td><p></p></td>
                 </tr>      
                  <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
                     <td>Organization.name</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Organization.name</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Organization.name</td>
                     <td><p></p></td>
                 </tr>  
                  <tr>
                     <td>Healthcare provider individual's workplace address (optional)</td>
                     <td>024035</td>
                     <td>Practitioner.address</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.address</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.address</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
                     <td>Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td>024036</td>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.subject.Patient.generalPractitioner.Practitioner.telecom</td>
+                    <td>Composition.subject->Patient.generalPractitioner->Practitioner.telecom</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
@@ -945,7 +945,7 @@ The table below matches the data items to the corresponding supported element in
                 </tr>
                <tr>
                     <td>medicationReference->Medication-brand-name</td>
-                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.medicationReference->Medication.medication-brand-name</td>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.medicationReference->Medication.extension(medication-brand-name)</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Medicine strength (optional)</td>
@@ -1021,23 +1021,23 @@ The table below matches the data items to the corresponding supported element in
                 <tr>
                     <td>Special instructions (optional)</td>
                     <td>028446</td>
-                     <td>MedicationStatement.dosage</td>
+                    <td>MedicationStatement.dosage</td>
                     <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.dosage</td>
                     <td><p></p></td>
                 </tr>
-                 <tr>
+                <tr>
                     <td rowspan="2">Medicine image (optional)</td>
                     <td>028018</td>
                     <td>N/A</td>
                     <td>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
                             reason the use of medication image is strongly discouraged in the HL7 AU content based on a prior FHIR release (STU3) and unsupported by this
                             implementation guide.<br>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</td>  
-                 </tr>               
+                </tr>               
                 <tr>
                     <td>028535</td>
                     <td>N/A</td>
                     <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
-               </tr>  
+                </tr>  
                 <tr>
                     <td>Physical description (optional)</td>
                     <td>028020</td>
@@ -1084,7 +1084,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Reason for ceasing medicine (optional)</td>
                     <td>028447</td>
                     <td>List.entry.change-description</td>
-                    <td>Composition.section(medications).entry->List.entry.change-description</td>
+                    <td>Composition.section(medications).entry->List.entry.extension(change-description)</td>
                     <td><p></p></td>
                 </tr>  
                 <tr>
