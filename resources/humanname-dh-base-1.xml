@@ -33,5 +33,14 @@
         <expression value="text.exists() or family.exists() or given.exists()" />
       </constraint>
     </element>
+    <element id="HumanName.prefix">
+      <path value="HumanName.prefix" />
+      <definition value="Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.&#xD;&#xA;Human Name Prefix SHOULD NOT be confused with job title.&#xD;&#xA;Mixed case SHOULD be used (rather than upper case only).&#xD;&#xA;Prefix of ‘Master’ SHOULD only be used for clients less than 15 years of age.&#xD;&#xA;Prefix of ‘Doctor’ and ‘Professor’ SHOULD only be applicable to clients of greater than 20 years of age.&#xD;&#xA;Prefixes of Dame, Miss, Mrs, Ms and Sr are only accepted for females.&#xD;&#xA;Prefixes of Br, Mstr, Mr and Sir are only accepted for males." />
+      <comment value="Prefix values can be populated as described in AS 4846:2014 Person and provider identification in healthcare, 4.4.2 Name Title." />
+    </element>
+    <element id="HumanName.suffix">
+      <path value="HumanName.suffix" />
+      <comment value="Suffix values can be populated as described in AS 4846:2014 Person and provider identification in healthcare, 4.5.3.2 Name Suffix." />
+    </element>
   </differential>
 </StructureDefinition>

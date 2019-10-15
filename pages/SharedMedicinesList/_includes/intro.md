@@ -174,6 +174,3 @@ This table lists known issues with this specification at the time of publishing.
 
 |[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 27 December 2018, FHIR R4.|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
-
-|[<a name="SA2014a">SA2014a</a>]|Standards Australia, 2014, AS 4846 (2014) – Person and provider identification in healthcare.|
-||[http://infostore.saiglobal.com/store/details.aspx?ProductID=1753860](http://infostore.saiglobal.com/store/details.aspx?ProductID=1753860)|
