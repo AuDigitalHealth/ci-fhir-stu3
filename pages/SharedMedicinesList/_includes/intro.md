@@ -142,6 +142,10 @@ This table lists known issues with this specification at the time of publishing.
         <td>Non-resolving profile URLs</td>
         <td>At the time of publication, canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that uniquely identifies them. Work is underway to address this so that these URLs resolve or redirect to a meaningful end point.</td>
     </tr>
+    <tr>
+        <td>Current scope of IG only covers practitioner authored SMLs</td>
+        <td>Currently, this SML IG only supports SMLs that have been authored by a practitioner. It is understood that SMLs may also be authored by non-practitioners, e.g. device-generated lists, consumer authored or single source co-authored. Work will be undertaken, in collaboration with <a href="https://confluence.hl7australia.com/display/HA">HL7 Australia working groups</a>, to support such broader usage of SMLs.</td>
+    </tr>
  </tbody>
 </table> 
 
