@@ -138,6 +138,10 @@ This table lists known issues with this specification at the time of publishing.
            More information about dose administration aids: <a href="https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary">https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary</a>.
         </td>
     </tr>
+    <tr>
+        <td>Non-resolving profile URLs</td>
+        <td>At the time of publication, canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that uniquely identifies them. Work is underway to address this so that these URLs resolve or redirect to a meaningful end point.</td>
+    </tr>
  </tbody>
 </table> 
 
