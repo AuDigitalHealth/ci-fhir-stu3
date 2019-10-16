@@ -11,7 +11,7 @@ The Shared Medicines List implementation guide is intended to support multiple u
 
 This informative section provides a mapping from the requirements of each end-product clinical specification to elements in a profiled FHIR resource. At the time of publication of this implementation guide the only end-product clinical specification supported is Pharmacist Shared Medicines List (PSML).
 
-The mapping from requirements table below demonstrates the logical decomposition of each requirement to the lowest possible element in an applicable profile. See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
+The mapping from requirements table below demonstrates the logical decomposition of each requirement to the lowest possible element in an applicable profile. 
 
 ## Mapping from PSML business requirements
 
@@ -1159,6 +1159,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 </table>
 
 ## Legend for mapping from requirements
+
+A mappings from requirements table demonstrates the logical decomposition of each requirement to the lowest possible element in an applicable profile.
 
 <table class="list" width="100%">
 	<col style="width:20%"/>
