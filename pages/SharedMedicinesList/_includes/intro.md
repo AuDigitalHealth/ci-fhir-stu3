@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a Shared Medicines List (SML).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a shared medicines list, including Pharmacist Shared Medicines List (PSML). A shared medicines list is a list of medicines, at a point in time, that describes the medicines an individual is taking.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
