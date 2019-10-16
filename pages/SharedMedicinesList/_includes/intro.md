@@ -10,27 +10,27 @@
 
 ## Introduction
 
-This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a Shared Medicines List (SML).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a shared medicines list, including Pharmacist Shared Medicines List (PSML). A shared medicines list is a list of medicines, at a point in time, that describes the medicines an individual is taking.
 
-This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
+This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 ## Document purpose and scope
 
-The primary aim of this implementation guide is to support implementing SML in [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.
+The primary aim of this implementation guide is to support implementing SML in [FHIR Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.
 
 This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.
 
 This implementation guide does not describe transport or persistence mechanism of the resources described by it.
 
 Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:
-* [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3)
+* [FHIR Release 3 (STU) [HL7FHIR3]](#HL7FHIR3)
 * [Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]](#HL7AUF3B2)
 
 Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards ([Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]](#HL7AUF3B2)) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.
 
 This implementation guide is the basis for the corresponding [{{site.data.fhir.igName}} CDA implementation guide [DH2019b]](#DH2019b). The profiles referenced by this FHIR implementation guide are the 'models' that are mapped into CDA.
 
-This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]](#HL7AUF3B2) or [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
+This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the [Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]](#HL7AUF3B2) or [FHIR Release 3 (STU) [HL7FHIR3]](#HL7FHIR3). The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the [FHIR Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
 ## Context and use
 A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.
@@ -143,8 +143,8 @@ This table lists known issues with this specification at the time of publishing.
         <td>At the time of publication, canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that uniquely identifies them. Work is underway to address this so that these URLs resolve or redirect to a meaningful end point.</td>
     </tr>
     <tr>
-        <td>Current scope of IG only covers practitioner authored SMLs</td>
-        <td>Currently, this SML IG only supports SMLs that have been authored by a practitioner. It is understood that SMLs may also be authored by non-practitioners, e.g. device-generated lists, consumer authored or single source co-authored. Work will be undertaken, in collaboration with <a href="https://confluence.hl7australia.com/display/HA">HL7 Australia working groups</a>, to support such broader usage of SMLs.</td>
+        <td>Supported usage scenarios</td>
+        <td>The profiles described in this implementation guide only support practitioner authoring usage scenarios. Future releases of this implementation guide are expected to provide support for additional usage scenarios including other authoring entities.</td>
     </tr>
  </tbody>
 </table> 

@@ -5,12 +5,19 @@
 * Do not remove this line (it will not be displayed)
 {:toc}
 
-Intro sentence - TBD
+## Introduction
+
+The Shared Medicines List implementation guide is intended to support multiple usage scenarios; some profiles described within this implementation guide are reused across usage scenarios and other implementation guides.
+
+This informative section provides a mapping from the requirements of each end-product clinical specification to elements in a profiled FHIR resource. At the time of publication of this implementation guide the only end-product clinical specification supported is Pharmacist Shared Medicines List (PSML).
+
+The mapping from requirements table below demonstrates the logical decomposition of each requirement to the lowest possible element in an applicable profile. 
 
 ## Mapping from PSML business requirements
-This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List scenarios and business requirements v2.0[DH2019m]](index.html#DH2019m).
 
-The table below matches the requirement to the corresponding supported element in the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)).
+The table below provides mapping from the requirements in [Pharmacist Shared Medicines List scenarios and business requirements v2.0 [DH2019m]](index.html#DH2019m) to the corresponding supported element in the [Shared Medicines List Authored by Practitioner profile](StructureDefinition-composition-sml-prac-1.html), or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)).
+
+See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
  <table class="list" width="100%">
 	<col style="width:20%"/>
@@ -33,7 +40,7 @@ The table below matches the requirement to the corresponding supported element i
                     <td>027948</td>
                     <td>Composition.extension(composition-author-role)</td>
                     <td>Composition.extension(composition-author-role)</td>
-                    <td/>
+                    <td><p></p></td>
                 </tr>
                 <tr>
                     <td rowspan="9">Components in the PSML document</td>
@@ -108,9 +115,9 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                  <tr>
                     <td>Compatible with Prescription and Dispense Record</td>
                     <td>028323</td>
-                    <td>TBD</td>
-                     <td>TBD</td>
-                     <td><p>TBD</p></td>
+                    <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
+                     <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
+                     <td><p><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></p></td>
                  </tr>                                                
                  <tr>
                     <td>Prompt to upload recent PSML</td>
@@ -184,7 +191,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>028358</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td><p>TBD</p></td>
+                    <td><p><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></p></td>
                 </tr>
                <tr>
                     <td>Suppressing codes and medicine identifiers</td>
@@ -291,7 +298,8 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                         <p>Not directly supported in FHIR.</p>
                         <p>The requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA).</p>
                         <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p></td>
+                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
+                    </td>
                 </tr>
                 <tr>
                     <td rowspan="2">Additional Comment</td>
@@ -328,7 +336,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>028331</td>
                     <td>AllergyIntolerance.type</td>
                     <td>Composition.section(allergies).entry->AllergyIntolerance.type</td>
-                    <td><p>This requirement as stated is satisifed however it is noted that the concept of 'reaction type' is not supported - TBD - SOMEONE GET ME A DEF OF REACTION TYPE AND WHY ITS NOT THIS</p></td>
+                    <td><p>This requirement as stated is satisifed however it is noted that the concept of 'reaction type' is not supported - <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span> - SOMEONE GET ME A DEF OF REACTION TYPE AND WHY ITS NOT THIS</p></td>
                 </tr>
                 <tr>
                     <td>Attribute for Reaction</td>
@@ -488,10 +496,10 @@ active ingredient(s) or a brand name, or both. The profile allows either a brand
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                    <p>Support for medicine image attribute has been removed from the Medication resource in the first normative release of FHIR (R4). For this
+                        <p>Support for medicine image attribute has been removed from the Medication resource in the first normative release of FHIR (R4). For this
                             reason the use of medication image is strongly discouraged in the HL7 AU content based on a prior FHIR release (STU3) and unsupported by this
                             implementation guide.</p>
-                            <p>One possible way a sending system can include a medicine image is to include the image in the section text element or List text element.</p>
+                        <p>One possible way a sending system can include a medicine image is to include the image in the section text element or List text element.</p>
                     </td>
                 </tr>
                 <tr>
@@ -509,7 +517,7 @@ active ingredient(s) or a brand name, or both. The profile allows either a brand
                     <td>
                         <p>Not directly supported in FHIR.</p>
                         <p>One possible way a sending system can include a physical description of the medicine item is to include such description in the section text element or Medication text element.</p>
-                     </td>
+                    </td>
                 </tr>
                 <tr>
                     <td>Attribute for reason for ceasing medicine</td>
@@ -562,7 +570,9 @@ active ingredient(s) or a brand name, or both. The profile allows either a brand
 ## Mapping from PSML information requirements
 This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List Information Requirements v2.0 [DH2019n]](index.html#DH2019n).
 
-The table below matches the data items to the corresponding supported element in the [{{site.data.fhir.igName}}](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below matches the data items to the corresponding supported element in the [Shared Medicines List Authored by Practitioner profile](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+
+See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
  <table class="list" width="100%">
 	<col style="width:20%"/>
@@ -581,110 +591,250 @@ The table below matches the data items to the corresponding supported element in
             </thead>
             <tbody>
                 <tr>
-                    <td>Individual's address (optional)</td>
-                    <td>028640</td>
-                    <td>Patient.address</td>
-                    <td>Composition.subject.Patient.address</td>
-                    <td><p></p></td>
-                </tr>  
+                    <td rowspan="5">Individual's address (optional)</td>
+                    <td rowspan="5">028640</td>
+                    <td rowspan="5">Patient.address</td>
+                    <td>Composition.subject->Patient.address</td>
+                    <td rowspan="5"><p></p></td>
+                </tr>
                 <tr>
-                    <td>Individual's electronic communication details (optional)</td>
-                    <td>024042</td>
-                    <td>Patient.telecom</td>
+                    <td>Composition.encounter->Encounter.subject->Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.address</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Individual's electronic communication details (optional)</td>
+                    <td rowspan="5">024042</td>
+                    <td rowspan="5">Patient.telecom</td>
                     <td>Composition.subject->Patient.telecom</td>
-                    <td><p></p></td>
-                </tr> 
-                <tr>
-                    <td>Individual (subject of care)</td>
-                    <td>027984</td>
-                    <td>Patient</td>
-                    <td>Composition.subject</td>
-                    <td><p></p></td>
+                    <td rowspan="5"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Individual Healthcare Identifier (mandatory)</td>
-                    <td>022082</td>
-                    <td>Patient.identifier</td>
+                    <td>Composition.encounter->Encounter.subject->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Individual (subject of care)</td>
+                    <td rowspan="5">027984</td>
+                    <td rowspan="5">Patient</td>
+                    <td>Composition.subject->Patient</td>
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient</td>
+                </tr>                
+                <tr>
+                    <td rowspan="5">Individual Healthcare Identifier (mandatory)</td>
+                    <td rowspan="5">022082</td>
+                    <td rowspan="5">Patient.identifier</td>
                     <td>Composition.subject->Patient.identifier</td>
+                    <td rowspan="5"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Individual's title (optional)</td>
-                    <td>022081</td>
-                    <td>Patient.name</td>
-                    <td>Composition.subject->Patient.name</td>
-                    <td><p></p></td>
-                </tr>                   
-                <tr>
-                    <td>Individual's given name (optional)</td>
-                    <td>023056</td>
-                    <td>Patient.name</td>
-                    <td>Composition.subject->Patient.name</td>
-                    <td><p></p></td>
+                    <td>Composition.encounter->Encounter.subject->Patient.identifier</td>
                 </tr>
-                 <tr>
-                    <td>Individual's family name (mandatory)</td>
-                    <td>023058</td>
-                    <td>Patient.name</td>
-                    <td>Composition.subject->Patient.name</td>
-                    <td><p></p></td>
-                </tr>    
-                  <tr>
-                    <td>Individual's name suffix (optional)</td>
-                    <td>023059</td>
-                   <td>Patient.name</td>
-                    <td>Composition.subject->Patient.name</td>
-                    <td><p></p></td>
-                </tr>  
                 <tr>
-                    <td>Individual's gender (mandatory)</td>
-                    <td>027983</td>
-                    <td>Patient.gender</td>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.identifier</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.identifier</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.identifier</td>
+                </tr>                
+                <tr>
+                    <td rowspan="5">Individual's title (optional)</td>
+                    <td rowspan="5">022081</td>
+                    <td rowspan="5">Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.name</td>
+                </tr>          
+                <tr>
+                    <td rowspan="5">Individual's given name (optional)</td>
+                    <td rowspan="5">023056</td>
+                    <td rowspan="5">Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Individual's family name (optional)</td>
+                    <td rowspan="5">023058</td>
+                    <td rowspan="5">Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Individual's name suffix (optional)</td>
+                    <td rowspan="5">023059</td>
+                    <td rowspan="5">Patient.name</td>
+                    <td>Composition.subject->Patient.name</td>
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.name</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.name</td>
+                </tr>        
+                <tr>
+                    <td rowspan="5">Individual's gender (mandatory)</td>
+                    <td rowspan="5">027983</td>
+                    <td rowspan="5">Patient.gender</td>
                     <td>Composition.subject->Patient.gender</td>
-                    <td><p></p></td>
-                </tr>  
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.gender</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.gender</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.gender</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.gender</td>
+                </tr>
                 <tr>
                     <td>Individual's sex (optional)</td>
                     <td>028570</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide only supports including a patient’s gender as part of a patient’s demographics for identification purposes in line with the Australian Government recommendations. <a href="https://www.ag.gov.au/Publications/Pages/AustralianGovernmentGuidelinesontheRecognitionofSexandGender.aspx">Australian Government Guidelines on the Recognition of Sex and Gender</a> state that patient’s biological sex should only be collected when clinically relevant.<br><br>
-                        Biological sex is not directly supported in FHIR; work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.
+                    <td>
+                        <p>The information requirements document includes an optional requirement for recording individual’s biological sex, interpreted as sex at birth. This implementation guide only supports including a patient’s gender as part of a patient’s demographics for identification purposes in line with the Australian Government recommendations. <a href="https://www.ag.gov.au/Publications/Pages/AustralianGovernmentGuidelinesontheRecognitionofSexandGender.aspx">Australian Government Guidelines on the Recognition of Sex and Gender</a> state that patient’s biological sex should only be collected when clinically relevant.</p>
+                        <p>Biological sex is not directly supported in FHIR; work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.</p>
                     </td>
-                </tr>  
+                </tr>
                 <tr>
-                    <td>Individual's date of birth (mandatory)</td>
-                    <td>023060</td>
-                    <td>Patient.birthDate</td>
+                    <td rowspan="5">Individual's date of birth (mandatory)</td>
+                    <td rowspan="5">023060</td>
+                    <td rowspan="5">Patient.birthDate</td>
                     <td>Composition.subject->Patient.birthDate</td>
-                    <td><p></p></td>
-                </tr>  
+                    <td rowspan="5"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Composition.encounter->Encounter.subject->Patient.birthDate</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.birthDate</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.birthDate</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.birthDate</td>
+                </tr>
                 <tr>
                     <td rowspan="2">Date of birth accuracy indicator (optional)</td>
                     <td>024026</td>
                     <td rowspan="2">Patient.birthDate.extension(date-accuracy-indicator)</td>
                     <td rowspan="2">Composition.subject->Patient.extension(date-accuracy-indicator)</td>
-                    <td rowspan="2"><p></p></td>
+                    <td rowspan="2"><p><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></p></td>
                 </tr>  
                 <tr>
                     <td>027005</td>
-                </tr>  
+                </tr>
                 <tr>
-                    <td>Indigenous status (mandatory)</td>
-                    <td>024033</td>
-                    <td>Patient.indigenous-status</td>
+                    <td rowspan="5">Indigenous status (mandatory)</td>
+                    <td rowspan="5">024033</td>
+                    <td rowspan="5">Patient.extension(indigenous-status)</td>
                     <td>Composition.subject->Patient.extension(indigenous-status)</td>
-                </tr>  
+                    <td rowspan="5"><p></p></td>
+                </tr>
                 <tr>
-                    <td rowspan="2">Document author (mandatory)</td>
-                    <td rowspan="2">027985</td>
+                    <td>Composition.encounter->Encounter.subject->Patient.extension(indigenous-status)</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(allergies).entry->AllergyIntolerance.patient->Patient.extension(indigenous-status)</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.subject->Patient.extension(indigenous-status)</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry->List.entry.item->MedicationStatement.subject->Patient.extension(indigenous-status)</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Document author (mandatory)</td>
+                    <td rowspan="3">027985</td>
                     <td>PractitionerRole</td>
                     <td>Composition.extension(composition-author-role)->PractitionerRole</td>
-                    <td rowspan="2"><p></p></td>
-                </tr> 
+                    <td rowspan="3"><p></p></td>
+                </tr>
                 <tr>
                     <td>Practitioner</td>
                     <td>Composition.author->Practitioner</td>
                 </tr>
+                <tr>
+                    <td>List.source</td>
+                    <td>Composition.section(medications).entry->List.source</td>
+                </tr>
+                <!-- ========================== UP TO HERE ========================== -->
                 <tr>
                     <td>Healthcare provider organisation name (mandatory)</td>
                     <td>023070</td>
@@ -787,7 +937,7 @@ The table below matches the data items to the corresponding supported element in
                     <td>Composition.subject->Patient.generalPractitioner->Practitioner.name</td>
                     <td><p></p></td>
                 </tr> 
-              <tr>
+                <tr>
                     <td>Healthcare provider family name (optional)</td>
                     <td>028638</td>
                     <td>Practitioner.name</td>
@@ -851,7 +1001,11 @@ The table below matches the data items to the corresponding supported element in
                     <td>028441</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>The requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). This requirement is not directly supported in FHIR; a request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br><br>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</td>
+                    <td>
+                        <p>Not directly supported in FHIR.</p>
+                        <p>The requirements document mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). A request has been submitted to HL7 AU to consider this requirement on the national level, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
+                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
+                    </td>
                 </tr>  
                 <tr>
                     <td rowspan="4">Allergy and Adverse Reaction (optional)</td>
@@ -1029,9 +1183,12 @@ The table below matches the data items to the corresponding supported element in
                     <td rowspan="2">Medicine image (optional)</td>
                     <td>028018</td>
                     <td>N/A</td>
-                    <td>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
+                    <td>
+                        <p>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
                             reason the use of medication image is strongly discouraged in the HL7 AU content based on a prior FHIR release (STU3) and unsupported by this
-                            implementation guide.<br>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</td>  
+                            implementation guide.</p>
+                        <p>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</p>
+                    </td>  
                 </tr>               
                 <tr>
                     <td>028535</td>
@@ -1147,4 +1304,49 @@ The table below matches the data items to the corresponding supported element in
                     <td>028672</td>
                 </tr>    
      </tbody>
+</table>
+
+## Legend for mapping from requirements
+
+A mappings from requirements table demonstrates the logical decomposition of each requirement to the lowest possible element in an applicable profile.
+
+<table class="list" width="100%">
+	<col style="width:20%"/>
+	<col style="width:20%"/>
+	<col style="width:20%"/>
+	<col style="width:20%"/>
+	<col style="width:20%"/>
+            <thead>
+                <tr>
+                    <th>Requirement</th>
+                    <th>Req. No</th>
+                    <th>Element</th>
+                    <th>Hierarchy</th>
+                    <th>Additional notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>The heading text of the requirement as taken from the requirements specification.</p></td>
+                    <td><p>The requirement number as taken from the requirement specification.</p></td>
+                    <td>
+                        <p>Either the name of the lowest element in a profiled FHIR resource that addresses the requirement or 'N/A'.</p>
+                       <p>If the lowest possible decomposition is to the resource then only the resource name (e.g. Patient) is present. 
+                    If the lowest possible decomposition is to one or more child elements of a FHIR resource then a dot notation is 
+                    used to indicate the hierarchical relationship.</p>
+                       <p>For example Patient.communication.language indicates 
+                    the requirement maps to the language element, that is a child of the communication element, 
+                    in the Patient FHIR resource.</p>
+                    </td>
+                    <td>
+                        <p>Either the full hierarchical path from the root FHIR resource (e.g. Composition) to the <strong>Element</strong> 
+                    the requirement is mapped to or 'N/A'.</p>
+                        <p>A dot notation is used to demonstrate hierarchy within a FHIR resource. 
+                    An arrow '<span style="font-family:courier;">-&#62;</span>' is used to denote the reference connecting one FHIR resource 
+                    to another from the linking element (e.g. Composition.subject->Patient or Composition.author->Patient).</p></td>
+                    <td><p>Additional notes are provided where a gap between a requirement, or parts of a requirement, and the 
+                    profiles is identified. Where a requirement is fully addressed by the mapped elements then no entry in this 
+                    column is expected.</p></td>
+                </tr>
+             </tbody>
 </table>
