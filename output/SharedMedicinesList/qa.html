@@ -1,14 +1,14 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 163, errors = 64, warn = 51, info = 12 -->
+<!-- broken links = 163, errors = 115, warn = 51, info = 12 -->
 <head>
   <title>Shared Medicines List : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Shared Medicines List</h1>
- <p>Generated Tue Oct 15 16:10:45 AEST 2019, FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
-<p>IG Publisher Version: v0.9.84-SNAPSHOT</p>
+ <p>Generated Wed Oct 16 15:55:48 AEST 2019, FHIR version 3.0.1 for au.electronichealth.sharedmedicineslist# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+<p>IG Publisher Version: v0.9.85-SNAPSHOT</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -23,16 +23,16 @@
      <td><a href="#C__work_git_ci-fhir-stu3_examples_bundle-e32a01d0-2610-4c99-ba46-9732aa975d41"><b>C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41</b></a></td><td><b>14</b></td><td><b>30</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-98e4b64a-d493-45c1-8102-b3b689da1c15"><b>C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15</b></a></td><td><b>9</b></td><td><b>9</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-98e4b64a-d493-45c1-8102-b3b689da1c15"><b>C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15</b></a></td><td><b>33</b></td><td><b>9</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28"><b>C:\work\git\ci-fhir-stu3\examples\composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28</b></a></td><td><b>3</b></td><td><b>5</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28"><b>C:\work\git\ci-fhir-stu3\examples\composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28</b></a></td><td><b>10</b></td><td><b>5</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2"><b>C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2</b></a></td><td><b>1</b></td><td><b>11</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2"><b>C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2</b></a></td><td><b>14</b></td><td><b>11</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_list-a04e9676-5c38-4c56-8d24-c600e192613e"><b>C:\work\git\ci-fhir-stu3\examples\list-a04e9676-5c38-4c56-8d24-c600e192613e</b></a></td><td><b>0</b></td><td><b>8</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_list-a04e9676-5c38-4c56-8d24-c600e192613e"><b>C:\work\git\ci-fhir-stu3\examples\list-a04e9676-5c38-4c56-8d24-c600e192613e</b></a></td><td><b>7</b></td><td><b>8</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_resources_allergyintolerance-summary-1"><b>C:\work\git\ci-fhir-stu3\resources\allergyintolerance-summary-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
@@ -746,19 +746,67 @@
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[0].extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[1].practitioner</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[4].type[0].coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 1348931000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1348931000168107'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[4].subject.contained.extension[0].value.ofType(Coding)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[4].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].extension[0].value.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 91555386-d478-4e3d-bd3d-ac642ff603c4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].encounter.contained.type[0].coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 1348931000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1348931000168107'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].encounter</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: c97d9869-3d3b-4612-958d-7af2c1ffd1da; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].source</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].entry[0].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: b8353097-2f90-4397-95e0-b7c6f809b0eb; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].entry[1].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 5cde18e4-2b6b-4081-9382-e37abdec5890; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[5].entry[2].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 466c4379-3133-4498-ba33-94610ef35845; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[6].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: c75149aa-8bdd-401b-a234-3e533991cd92; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[6].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[8].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 8a484362-afb0-4c28-b40b-d1a2ae677de3; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[8].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[9].code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 23281011000036106 in http://snomed.info/sct for 'http://snomed.info/sct#23281011000036106'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[10].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: cd5a6cac-f6e5-4aa8-b497-6b0e903442cd; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[10].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[11].code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 920941011000036100 in http://snomed.info/sct for 'http://snomed.info/sct#920941011000036100'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].extension[0].value.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 91555386-d478-4e3d-bd3d-ac642ff603c4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1 not found by validator</b></td>
@@ -769,14 +817,38 @@
    <tr style="background-color: #ffebcc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].subject.contained.communication[0].language</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2 not found by validator</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].source</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].entry[0].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 99d5fa08-35cd-47cc-9728-896476791b15; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[12].entry[1].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: c753dc46-f390-47c5-8760-241a3242279f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[13].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 84d6b33a-ffe3-42e1-8a97-2f32c611d1ed; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[13].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[14].code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 119411000036106 in http://snomed.info/sct for 'http://snomed.info/sct#119411000036106'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[15].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[15].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[16].code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 22717011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#22717011000036101'</b></td>
@@ -808,7 +880,28 @@
      <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition</b></td><td><b>information</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Composition.section[medications]'': Unable to check minimum required (1) due to lack of slicing validation</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[2].encounter</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: encounter-01; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[2].entry[0].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: medicationstatement-01; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[2].entry[1].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: medicationstatement-02; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[2].entry[2].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: medicationstatement-03; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[3].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: medication-01; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[5].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: medication-02; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[6].code.coding[0]</b></td><td><b>error</b></td><td><b>unable to find code 33690011000036100 in http://snomed.info/sct for 'http://snomed.info/sct#33690011000036100'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.contained[7].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: medication-03; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28: Composition.type</b></td><td><b>warning</b></td><td><b>The display &quot;Medication summary&quot; is not a valid display for the code {http://loinc.org}56445-0 - should be one of [&quot;Medication summary Document&quot;,&quot;Medication summary Doc&quot;]</b></td>
@@ -836,26 +929,65 @@
    <tr style="background-color: #ffffe6">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition</b></td><td><b>information</b></td><td><b>Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Composition.section[medications]'': Unable to check minimum required (1) due to lack of slicing validation</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[2].practitioner</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: ad5acaab-0e8b-41b6-b8fc-7be8dab96396; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].extension[0].value.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 7fd370a7-9b27-4cb6-af68-f86f2f702956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1 not found by validator</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 9d80809f-d287-4910-bc9a-adae62801052; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].source.contained.identifier[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].source</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: ad5acaab-0e8b-41b6-b8fc-7be8dab96396; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].entry[0].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].entry[0].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: ff6d07a8-5b5f-4c9e-8e6f-ef069b2c7850; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].entry[1].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].entry[1].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 2be6504a-160a-4cb0-ac4c-4b5aa503085d; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].entry[2].flag</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[4].entry[2].item</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 686ba017-b502-4441-a327-b2bb33ef6add; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[5].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 0b69ee72-808b-4575-bfe6-fd4e86e53622; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[5].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 9d80809f-d287-4910-bc9a-adae62801052; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[5].reasonCode[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[7].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: d3410b43-69a3-4126-8f68-ebf9fadb4aac; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[7].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 9d80809f-d287-4910-bc9a-adae62801052; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[7].reasonCode[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[9].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 398263a2-1aa2-49c3-8888-0ca5a826e120; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[9].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 9d80809f-d287-4910-bc9a-adae62801052; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.contained[9].reasonCode[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medication-reason-taken-1 not found by validator</b></td>
@@ -870,6 +1002,27 @@
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[2].practitioner</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 4e2ed22a-95c8-4403-87fa-9a6a171ddc8b; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[3].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: a0f3f01a-be9f-48f6-ae6f-ce5179768889; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[3].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: c7688ecf-5a6c-4a2f-ae2c-88a347278656; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[5].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 5c13e76a-22da-4e67-a69a-0d3be5cd5495; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[5].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: c7688ecf-5a6c-4a2f-ae2c-88a347278656; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[7].medication.ofType(Reference)</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: 44df5dcf-a870-4a49-980e-b295629c3e71; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.contained[7].subject</b></td><td><b>error</b></td><td><b>SHALL have a contained resource if a local reference is provided ( (url: c7688ecf-5a6c-4a2f-ae2c-88a347278656; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>List/a04e9676-5c38-4c56-8d24-c600e192613e: List.code</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1 not found by validator</b></td>
