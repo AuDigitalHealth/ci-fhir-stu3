@@ -50,7 +50,7 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
-This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
+This implementation guide contains descriptions of both constraints on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3) and, where necessary, custom extensions to [HL7 FHIR [HL7FHIR3]](#HL7FHIR3), for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
 For implementers interested in a practitioner authored shared medicine list as a document, such as a pharmacist shared medicines list, the starting point is the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
 
@@ -64,7 +64,7 @@ This implementation guide may not be considered to be complete enough or suffici
 ## Intended audience
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
-This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
+This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as [HL7 FHIR [HL7FHIR3]](#HL7FHIR3) and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.
 
 ## Document Information
 
