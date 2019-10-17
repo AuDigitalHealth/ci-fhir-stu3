@@ -140,7 +140,7 @@ This table lists known issues with this specification at the time of publishing.
     </tr>
     <tr>
         <td>Non-resolving profile URLs</td>
-        <td>At the time of publication, canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that uniquely identifies them. Work is underway to address this so that these URLs resolve or redirect to a meaningful end point.</td>
+        <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
     </tr>
     <tr>
         <td>Supported usage scenarios</td>
