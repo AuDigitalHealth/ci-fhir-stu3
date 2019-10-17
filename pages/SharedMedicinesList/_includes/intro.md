@@ -160,8 +160,8 @@ This table lists known issues with this specification at the time of publishing.
 
 |[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
-|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>, Australian Base Implementation Guide (AU Base 1.1), v1.<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">X.X</span> (<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span>).|
-| |[https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html](https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/index.html)|
+|[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, 17 October 2019, Australian Base Implementation Guide (AU Base 1.1), v1.1.0.|
+| |[http://hl7.org.au/fhir/base/aubase1.1/index.html](http://hl7.org.au/fhir/base/aubase1.1/index.html)|
 
 |[<a name="HL7CDAR2">HL7CDAR2</a>]|Health Level Seven, Inc., January 2010, HL7 Clinical Document Architecture, Release 2.|
 | |[http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7)|
