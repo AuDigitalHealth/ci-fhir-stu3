@@ -54,7 +54,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td rowspan="9">
                         <p>This requirement states that the PSML document will contain the organisation the pharmacist is representing at the
 time of document authoring. The profile has this as optional.</p>
-                        <p>TBD add comment on document version not supported in our profiles.</p>
+                        <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
                         <p>This requirement states if the PSML document contains the primary healthcare provider then the
 name of the primary healthcare provider organisation is mandatory. The profile requires either a name or an identifier - it does not mandate name.</p>
                         <p>These parts of the requirement are best enforced in a conformance profile.</p>
