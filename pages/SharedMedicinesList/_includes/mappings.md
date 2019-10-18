@@ -122,7 +122,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td rowspan="2">028323</td>
                     <td>MedicationStatement</td>
                     <td>Composition.section(medications).entry->List.entry.item->MedicationStatement</td>
-                     <td rowspan="2"><p><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD explain the limited compatability</span></p></td>
+                     <td rowspan="2"><p></p></td>
                  </tr>   
                  <tr>
                     <td>Medication</td>
