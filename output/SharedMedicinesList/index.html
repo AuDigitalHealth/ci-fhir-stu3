@@ -156,7 +156,7 @@
 
 <h2 id="document-purpose-and-scope">Document purpose and scope</h2>
 
-<p>The primary aim of this implementation guide is to support implementing SML in <a href="#HL7FHIR3">FHIR Release 3 (STU) [HL7FHIR3]</a>. The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.</p>
+<p>The primary aim of this implementation guide is to support implementing a shared medicines list in <a href="#HL7FHIR3">FHIR Release 3 (STU) [HL7FHIR3]</a>. The resulting FHIR can be used for the electronic exchange of shared medicines list information between healthcare providers.</p>
 
 <p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>
 
@@ -194,7 +194,7 @@
 <p>Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.</p>
 
 <h2 id="how-to-read-this-document">How to read this document</h2>
-<p>This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of SML. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
+<p>This implementation guide contains descriptions of both constraints on <a href="#HL7FHIR3">HL7 FHIR [HL7FHIR3]</a> and, where necessary, custom extensions to <a href="#HL7FHIR3">HL7 FHIR [HL7FHIR3]</a>, for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
 
 <p>For implementers interested in a practitioner authored shared medicine list as a document, such as a pharmacist shared medicines list, the starting point is the <a href="StructureDefinition-composition-sml-prac-1.html">Shared Medicines List Authored by Practitioner</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a>.</p>
 
@@ -208,7 +208,7 @@
 <h2 id="intended-audience">Intended audience</h2>
 <p>This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.</p>
 
-<p>This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.</p>
+<p>This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as <a href="#HL7FHIR3">HL7 FHIR [HL7FHIR3]</a> and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.</p>
 
 <h2 id="document-information">Document Information</h2>
 
@@ -245,7 +245,7 @@
         <tr>
             <td>1.0.0</td>
             <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
-            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br />This version of the Shared Medicines List (SML) FHIR implementation guide supports the exchange of medicines lists between healthcare providers, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br />This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists between healthcare providers, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table>
@@ -284,7 +284,7 @@
     </tr>
     <tr>
         <td>Non-resolving profile URLs</td>
-        <td>At the time of publication, canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that uniquely identifies them. Work is underway to address this so that these URLs resolve or redirect to a meaningful end point.</td>
+        <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
     </tr>
     <tr>
         <td>Supported usage scenarios</td>
@@ -437,7 +437,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Oct 17, 2019 14:49+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Oct 18, 2019 16:05+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
