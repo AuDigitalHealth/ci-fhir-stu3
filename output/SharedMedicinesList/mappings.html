@@ -185,11 +185,10 @@
                     <td>Composition</td>
                     <td>Composition</td>
                     <td rowspan="9">
-                        <p>This requirement states that the PSML document will contain the organisation the pharmacist is representing at the
-time of document authoring. The profile has this as optional.</p>
                         <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
-                        <p>This requirement states if the PSML document contains the primary healthcare provider then the
-name of the primary healthcare provider organisation is mandatory. The profile requires either a name or an identifier - it does not mandate name.</p>
+                        <p>This requirement states a PSML document will contain the organisation the pharmacist is representing at the
+time of document authoring. The profile has this as optional.</p>
+                        <p>The profile supports inclusion of a primary care provider as a practitioner or as an organisation - direct support is not provided in FHIR for a primary care provider practitioner with included organisational information. The profile for a primary care provider organisation allows a name or identifier - it does not mandate name.</p>
                         <p>These parts of the requirement are best enforced in a conformance profile.</p>
                      </td>
                  </tr>
@@ -211,11 +210,11 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                  </tr>  
                  <tr>
                     <td>PractitionerRole.organization</td>
-                     <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.organization</td>
+                     <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization</td>
                  </tr> 
                  <tr>
                     <td>Patient.generalPractitioner</td>
-                     <td>Composition.subject-&gt;Patient.generalPractitioner</td>
+                     <td>Composition.subject&gt; Patient.generalPractitioner</td>
                  </tr>  
                  <tr>
                     <td>Composition.section(allergies)</td>
@@ -258,12 +257,12 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td rowspan="2">Compatible with Prescription and Dispense Record</td>
                     <td rowspan="2">028323</td>
                     <td>MedicationStatement</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement</td>
                      <td rowspan="2"><p></p></td>
                  </tr>   
                  <tr>
                     <td>Medication</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication</td>
                  </tr>
                 <!-- ======================================================================== -->
                  <tr>
@@ -279,7 +278,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td rowspan="2">028359</td>
                      <td>Composition.section(allergies)</td>
                      <td>Composition.section(allergies)</td>
-                    <td rowspan="2"><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
+                    <td rowspan="2"><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is not applicable for the profile.</p></td>
                 </tr>
                 <tr>
                      <td>Composition.section(medications)</td>
@@ -291,7 +290,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>028355</td>
                      <td>Composition.section(allergies).text</td>
                      <td>Composition.section(allergies).text</td>
-                    <td><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
+                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -299,7 +298,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>028360</td>
                      <td>Composition.section(allergies).text</td>
                      <td>Composition.section(allergies).text</td>
-                    <td><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
+                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
                 </tr>
                 <!-- ======================================================================== -->                         
                 <tr>
@@ -308,7 +307,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                        <p>This requirement includes a rendering requirement in the absence of recorded allergy information. This part of the requirement is a rendering requirement and not applicable for the profile.</p>
+                        <p>This requirement includes a rendering requirement in the absence of recorded allergy information. This part of the requirement is not applicable for the profile.</p>
                         <p>Alternatively the profile caters for recording that a patient does not have an allergy or category of allergies in AllergyIntolerance.code.</p>
                     </td>
                 </tr>
@@ -318,7 +317,7 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>028361</td>
                     <td>Composition.section(medications).text</td>
                     <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement that is not applicable for the profile.</p></td>
+                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
                 </tr> 
                 <!-- ======================================================================== -->
                  <tr>
@@ -326,15 +325,15 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>028362</td>
                     <td>Composition.section(medications).text</td>
                     <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement that is not applicable for the profile.</p></td>
+                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
                 </tr>     
                 <!-- ======================================================================== -->                        
                 <tr>
                     <td>Ceased Medicines section</td>
                     <td>028363</td>
-                    <td>Composition.section(medications).text</td>
-                    <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is a rendering requirement and not applicable for the profile.</p></td>
+                    <td>Composition.section(medications)</td>
+                    <td>Composition.section(medications)</td>
+                    <td><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is not applicable for the profile.</p></td>
                 </tr>
                 <!-- ======================================================================== -->
                  <tr>
@@ -342,22 +341,22 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                     <td>028364</td>
                     <td>Composition.section(medications).text</td>
                     <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement that is not applicable for the profile.</p></td>
+                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
                </tr>
                 <!-- ======================================================================== -->
                <tr>
                     <td rowspan="2">Suppressing Ceased Medicines section</td>
                     <td rowspan="2">028358</td>
-                    <td>Composition.section(medications)</td>
-                    <td>Composition.section(medications)</td>
+                    <td>Composition.section(medications).entry</td>
+                    <td>Composition.section(medications).entry</td>
                     <td rowspan="2">
                         <p>This requirement states a ceased medicines section with no recorded ceased medicines will not be rendered.</p>
-                        <p>The profiles do not allow for an empty ceased medicines list (or section) - at least one medicine item is mandatory.</p>
-                     </td>
+                        <p>The profile allows the inclusion of a ceased medicines list section as a list of one or more medicine items or an empty section (i.e. emptyReason) - it does not mandate section entry.</p>
+                    </td>
                 </tr>
                 <tr>
                     <td>List.entry.item</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item</td>
                 </tr>
                 <!-- ======================================================================== -->
                <tr>
@@ -390,82 +389,90 @@ name of the primary healthcare provider organisation is mandatory. The profile r
                 </tr>
                 <tr>
                     <td rowspan="2">Practitioner.identifier</td>
-                    <td>Composition.author-&gt;Practitioner.identifier</td>
+                    <td>Composition.author&gt; Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.practitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.practitioner&gt; Practitioner.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="6">No Address for the consumer</td>
-                    <td rowspan="6">028319</td>
-                    <td rowspan="6">Patient.address</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.address</td>
-                    <td rowspan="6">
-                        <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any address for the consumer within the document. Patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send address when sending to the My Health Record.</p>
+                    <td rowspan="7">No Address for the consumer</td>
+                    <td rowspan="7">028319</td>
+                    <td rowspan="7">Patient.address</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.address</td>
+                    <td rowspan="7">
+                        <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any address for the consumer within the document.</p>
+                        <p>Patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send address when sending to the My Health Record.</p>
                         <p>This requirement is best enforced in a conformance profile.</p>
                      </td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.address</td>
+                    <td>Composition.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.address</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.address</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.address</td>
+                    <td>Composition.section(medications).entry&gt; Observation.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.address</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.address</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.address</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="6">No Electronic Communication Detail for the consumer</td>
-                    <td rowspan="6">028320</td>
-                    <td rowspan="6">Patient.telecom</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.telecom</td>
-                    <td rowspan="6">
-                        <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any types of electronic communication contact detail for the consumer within the document. Patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send telecom when sending to the My Health Record.</p>
+                    <td rowspan="7">No Electronic Communication Detail for the consumer</td>
+                    <td rowspan="7">028320</td>
+                    <td rowspan="7">Patient.telecom</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.telecom</td>
+                    <td rowspan="7">
+                        <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any types of electronic communication contact detail for the consumer within the document.</p>
+                        <p>Patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send telecom when sending to the My Health Record.</p>
                         <p>This requirement is best enforced in a conformance profile.</p>
                      </td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.telecom</td>
+                    <td>Composition.subject&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.telecom</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.telecom</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.telecom</td>
+                    <td>Composition.section(medications).entry&gt; Observation.subject&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.telecom</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.telecom</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="3">Attribute for Healthcare Setting</td>
                     <td rowspan="3">028349</td>
                     <td>Organization.type</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.organization-&gt;Organization.type</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization&gt; Organization.type</td>
                     <td rowspan="3">
-                        <p>This requirement states the PSML document will include the healthcare setting in which the
+                        <p>This requirement states a PSML document will include the healthcare setting in which the
 PSML document was authored. The profiles allow for an authoring role or organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review) - they do not mandate any of these elements.</p>
                         <p>These parts of the requirement are best enforced in a conformance profile.</p>
                     </td>
                 </tr>
                 <tr>
                     <td>PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.code</td>
                 </tr>
                 <tr>
                     <td>Encounter.type</td>
-                    <td>Composition.encounter-&gt;Encounter.type</td>
+                    <td>Composition.encounter&gt; Encounter.type</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -475,7 +482,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>N/A</td>
                     <td>
                         <p>Not directly supported in FHIR.</p>
-                        <p>This requirement states the PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
+                        <p>This requirement states a PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
                         <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
                         <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
                     </td>
@@ -490,14 +497,14 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                 </tr>
                 <tr>
                     <td>List.note</td>
-                    <td>Composition.section(medications).entry-&gt;List.note</td>
+                    <td>Composition.section(medications).entry&gt; List.note</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Attribute for Ceased Date</td>
                     <td>028352</td>
                     <td>MedicationStatement.effective[x]</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.effective[x]</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.effective[x]</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -506,19 +513,19 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                         reaction</td>
                     <td rowspan="2">028330</td>
                     <td>AllergyIntolerance.code</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.code</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.code</td>
                     <td rowspan="2"><p></p></td>
                </tr>
                <tr>
                     <td>AllergyIntolerance.reaction.substance</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.reaction.substance</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.reaction.substance</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Attribute for Reaction Type</td>
                     <td>028331</td>
                     <td>AllergyIntolerance.type</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.type</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.type</td>
                     <td><p>This requirement as stated is satisifed however it is noted that the concept of 'reaction type' is not supported - <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span> - SOMEONE GET ME A DEF OF REACTION TYPE AND WHY ITS NOT THIS</p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -526,7 +533,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Attribute for Reaction</td>
                     <td>028332</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.reaction.manifestation</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -534,7 +541,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Attribute for Reaction Onset Date</td>
                     <td>028410</td>
                     <td>AllergyIntolerance.onsetDateTime</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.onsetDateTime</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.onsetDateTime</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -542,7 +549,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Attribute for Medicine Identifier</td>
                     <td>028329</td>
                     <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -550,12 +557,12 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td rowspan="2">Attribute for Active Ingredient</td>
                     <td rowspan="2">028333</td>
                     <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                  <tr>
                     <td>Medication.ingredient.item[x]</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.ingredient.item[x]</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.ingredient.item[x]</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -570,19 +577,19 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td rowspan="2">Attribute for Brand Name</td>
                     <td rowspan="2">028335</td>
                     <td>Medication.extension(medication-brand-name)</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.extension(medication-brand-name)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.extension(medication-brand-name)</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                <tr>
                     <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="3">Active Ingredient or Brand Name</td>
                     <td rowspan="3">028412</td>
                     <td>Medication.extension(medication-brand-name)</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.extension(medication-brand-name)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.extension(medication-brand-name)</td>
                     <td rowspan="3">
                         <p>This requirement states each medicine item will have either the
 active ingredient(s) or a brand name, or both.</p>
@@ -592,58 +599,58 @@ active ingredient(s) or a brand name, or both.</p>
                 </tr>
                 <tr>
                     <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                 </tr>
                 <tr>
                     <td>Medication.ingredient.item[x]</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.ingredient.item[x]</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.ingredient.item[x]</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Attribute for Strength</td>
                     <td rowspan="2">028392</td>
                     <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
                     <td>Medication.ingredient.amount</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.ingredient.amount</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.ingredient.amount</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Attribute for Dose Form</td>
                     <td rowspan="2">028391</td>
                     <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
                     <td>Medication.form</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.form</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.form</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="3">Attribute for Route</td>
                     <td rowspan="3">028399</td>
                     <td>MedicationStatement.dosage.text</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage.text</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage.text</td>
                     <td rowspan="3"><p></p></td>
                 </tr>
                 <tr>
                     <td>MedicationStatement.dosage.patientInstruction</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage.patientInstruction</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage.patientInstruction</td>
                 </tr>
                 <tr>
                     <td>MedicationStatement.dosage.route</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage.route</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage.route</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Attribute for Direction</td>
                     <td>028336</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -659,7 +666,7 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Attribute for Medicine Purpose</td>
                     <td>028338</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.reasonCode</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.reasonCode</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -667,7 +674,7 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Terminology for Medicine Purpose</td>
                     <td>028339</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.reasonCode</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.reasonCode</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -675,7 +682,7 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Attribute for Expected End Date</td>
                     <td>028343</td>
                     <td>MedicationStatement.effectivePeriod</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.effectivePeriod</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.effectivePeriod</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -683,12 +690,12 @@ active ingredient(s) or a brand name, or both.</p>
                     <td rowspan="2">Attribute for Special Instruction</td>
                     <td rowspan="2">028345</td>
                     <td>MedicationStatement.note</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.note</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.note</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -727,7 +734,7 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Attribute for reason for ceasing medicine</td>
                     <td>028351</td>
                     <td>List.entry.extension(change-description)</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.extension(change-description)</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -735,19 +742,19 @@ active ingredient(s) or a brand name, or both.</p>
                     <td rowspan="2">Attribute for Medicine Status</td>
                     <td rowspan="2">028342</td>
                     <td>List.entry.extension(change-description)</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.extension(change-description)</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
                     <td>List.entry.flag</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.flag</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.flag</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Withheld Medicine</td>
                     <td>028620</td>
                     <td>List.entry.extension(change-description)</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.extension(change-description)</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -765,7 +772,7 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Ceased medicines</td>
                     <td>028623</td>
                     <td>MedicationStatement</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement</td>
                     <td>
                         <p>This requirement states a ceased medicine item has the same atomic data requirements (as a current medicine item) but different rendering requirements limiting the displayed information to medicine item description, reason for ceasing, and date of ceasing.</p> 
                         <p>These parts of the requirement are producing system behavioural requirements.</p>
@@ -798,212 +805,218 @@ active ingredient(s) or a brand name, or both.</p>
                 </tr>
             </thead>
             <tbody>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="6">Individual's address (optional)</td>
-                    <td rowspan="6">028640</td>
-                    <td rowspan="6">Patient.address</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.address</td>
-                    <td rowspan="6"><p></p></td>
+                    <td rowspan="7">Individual's address (optional)</td>
+                    <td rowspan="7">028640</td>
+                    <td rowspan="7">Patient.address</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.address</td>
+                    <td rowspan="7"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.address</td>
+                    <td>Composition.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.address</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.address</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.address</td>
+                    <td>Composition.section(medications).entry&gt; Observation.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.address</td>
-                </tr>
-                <!-- ======================================================================== DONE -->
-                <tr>
-                    <td rowspan="6">Individual's electronic communication details (optional)</td>
-                    <td rowspan="6">024042</td>
-                    <td rowspan="6">Patient.telecom</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.telecom</td>
-                    <td rowspan="6"><p></p></td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.telecom</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.address</td>
+                </tr>
+                <!-- ======================================================================== -->
+                <tr>
+                    <td rowspan="7">Individual's electronic communication details (optional)</td>
+                    <td rowspan="7">024042</td>
+                    <td rowspan="7">Patient.telecom</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.telecom</td>
+                    <td rowspan="7"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.telecom</td>
+                    <td>Composition.subject&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.telecom</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.telecom</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.telecom</td>
+                    <td>Composition.section(medications).entry&gt; Observation.subject&gt; Patient.telecom</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <tr>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.telecom</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.telecom</td>
+                </tr>
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual (subject of care)</td>
                     <td rowspan="6">027984</td>
                     <td rowspan="6">Patient</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient</td>
+                    <td>Composition.extension(information-recipient)&gt;Patient</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient</td>
+                    <td>Composition.subject&gt; Patient</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual Healthcare Identifier (mandatory)</td>
                     <td rowspan="6">022082</td>
                     <td rowspan="6">Patient.identifier</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.identifier</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.identifier</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.identifier</td>
+                    <td>Composition.subject&gt; Patient.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.identifier</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.identifier</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.identifier</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual's title (optional)</td>
                     <td rowspan="6">022081</td>
                     <td rowspan="6">Patient.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.name</td>
+                    <td>Composition.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual's given name (optional)</td>
                     <td rowspan="6">023056</td>
                     <td rowspan="6">Patient.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.name</td>
+                    <td>Composition.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual's family name (optional)</td>
                     <td rowspan="6">023058</td>
                     <td rowspan="6">Patient.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.name</td>
+                    <td>Composition.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual's name suffix (optional)</td>
                     <td rowspan="6">023059</td>
                     <td rowspan="6">Patient.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.name</td>
+                    <td>Composition.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual's gender (mandatory)</td>
                     <td rowspan="6">027983</td>
                     <td rowspan="6">Patient.gender</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.gender</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.gender</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.gender</td>
+                    <td>Composition.subject&gt; Patient.gender</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.gender</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.gender</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.gender</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.gender</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.gender</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.gender</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.gender</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.gender</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1016,464 +1029,464 @@ active ingredient(s) or a brand name, or both.</p>
                         <p>Biological sex is not directly supported in FHIR; work is underway via HL7 AU to define a nationally agreed model for representing biological sex at birth, see <a href="https://github.com/hl7au/au-fhir-base/issues/321">https://github.com/hl7au/au-fhir-base/issues/321</a>.</p>
                     </td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Individual's date of birth (mandatory)</td>
                     <td rowspan="6">023060</td>
                     <td rowspan="6">Patient.birthDate</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.birthDate</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.birthDate</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.birthDate</td>
+                    <td>Composition.subject&gt; Patient.birthDate</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.birthDate</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.birthDate</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.birthDate</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.birthDate</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.birthDate</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.birthDate</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.birthDate</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.birthDate</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Date of birth accuracy indicator (optional)</td>
                     <td rowspan="6">024026</td>
                     <td rowspan="6">Patient.birthDate.extension(date-accuracy-indicator)</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Date of birth accuracy indicator (optional)</td>
                     <td rowspan="6">027005</td>
                     <td rowspan="6">Patient.birthDate.extension(date-accuracy-indicator)</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.birthDate.extension(date-accuracy-indicator)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.birthDate.extension(date-accuracy-indicator)</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Indigenous status (mandatory)</td>
                     <td rowspan="6">024033</td>
                     <td rowspan="6">Patient.extension(indigenous-status)</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.extension(indigenous-status)</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.extension(indigenous-status)</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.extension(indigenous-status)</td>
+                    <td>Composition.subject&gt; Patient.extension(indigenous-status)</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.extension(indigenous-status)</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.extension(indigenous-status)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.extension(indigenous-status)</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.extension(indigenous-status)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.extension(indigenous-status)</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.extension(indigenous-status)</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.extension(indigenous-status)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.extension(indigenous-status)</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="3">Document author (mandatory)</td>
                     <td rowspan="3">027985</td>
                     <td>PractitionerRole</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole</td>
+                    <td>Composition.extension(composition-author-role)&gt;PractitionerRole</td>
                     <td rowspan="3"><p></p></td>
                 </tr>
                 <tr>
                     <td>Practitioner</td>
-                    <td>Composition.author-&gt;Practitioner</td>
+                    <td>Composition.author&gt;Practitioner</td>
                 </tr>
                 <tr>
                     <td>List.source</td>
-                    <td>Composition.section(medications).entry-&gt;List.source</td>
+                    <td>Composition.section(medications).entry&gt; List.source</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider organisation name (mandatory)</td>
                     <td rowspan="2">023070</td>
                     <td rowspan="2">Organization.name</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.organization-&gt;Organization.name</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization&gt; Organization.name</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.extension(author-role)-&gt;PractitionerRole.organization-&gt;Organization.name</td>
+                    <td>Composition.section(medications).entry&gt; List.extension(author-role)&gt; PractitionerRole.organization&gt; Organization.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider individual's workplace address (mandatory)</td>
                     <td rowspan="2">024891</td>
                     <td rowspan="2">Practitioner.address</td>
-                    <td>Composition.author-&gt;Practitioner.address</td>
+                    <td>Composition.author&gt; Practitioner.address</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.address</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.address</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="4">Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td rowspan="4">024036</td>
                     <td>PractitionerRole.telecom</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.telecom</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.telecom</td>
                     <td rowspan="4"><p></p></td>
                 </tr>
                 <tr>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.author-&gt;Practitioner.telecom</td>
+                    <td>Composition.author&gt; Practitioner.telecom</td>
                 </tr>
                 <tr>
                     <td>PractitionerRole.telecom</td>
-                    <td>Composition.section(medications).entry-&gt;List.extension(author-role)-&gt;PractitionerRole.telecom</td>
+                    <td>Composition.section(medications).entry&gt; List.extension(author-role)&gt; PractitionerRole.telecom</td>
                 </tr>
                 <tr>
                     <td>Practitioner.telecom</td>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.telecom</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.telecom</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider professional role (mandatory)</td>
                     <td rowspan="2">024040</td>
                     <td rowspan="2">PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.extension(author-role)-&gt;PractitionerRole.code</td>
+                    <td>Composition.section(medications).entry&gt; List.extension(author-role)&gt; PractitionerRole.code</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare Provider Identifier-Individual (optional)</td>
                     <td rowspan="2">024601</td>
                     <td rowspan="2">Practitioner.identifier</td>
-                    <td>Composition.author-&gt;Practitioner.identifier</td>
+                    <td>Composition.author&gt; Practitioner.identifier</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.identifier</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare Provider Identifier-Organisation (optional)</td>
                     <td rowspan="2">024602</td>
                     <td rowspan="2">Organization.identifier</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.organization-&gt;Organization.identifier</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization&gt; Organization.identifier</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.extension(author-role)-&gt;PractitionerRole.organization-&gt;Organization.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.extension(author-role)&gt; PractitionerRole.organization&gt; Organization.identifier</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider's title (optional)</td>
                     <td rowspan="2">023061</td>
                     <td rowspan="2">Practitioner.name</td>
-                    <td>Composition.author-&gt;Practitioner.name</td>
+                    <td>Composition.author&gt; Practitioner.name</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider given name (optional)</td>
                     <td rowspan="2">023062</td>
                     <td rowspan="2">Practitioner.name</td>
-                    <td>Composition.author-&gt;Practitioner.name</td> 
+                    <td>Composition.author&gt; Practitioner.name</td> 
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider family name (mandatory)</td>
                     <td rowspan="2">023064</td>
                     <td rowspan="2">Practitioner.name</td>
-                    <td>Composition.author-&gt;Practitioner.name</td>
+                    <td>Composition.author&gt; Practitioner.name</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Healthcare provider name suffix (optional)</td>
                     <td rowspan="2">023065</td>
                     <td rowspan="2">Practitioner.name</td>
-                    <td>Composition.author-&gt;Practitioner.name</td>  
+                    <td>Composition.author&gt; Practitioner.name</td>  
                     <td rowspan="2"><p></p></td>
                </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.source-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.source&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Primary healthcare provider (optional)</td>
                     <td rowspan="6">028028</td>
                     <td rowspan="6">Patient.generalPractitioner</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare Provider Identifier-Individual (optional)</td>
                     <td rowspan="6">024601</td>
                     <td rowspan="6">Practitioner.identifier</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.identifier</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.identifier</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare Provider Identifier-Organisation (optional)</td>
                     <td rowspan="6">024602</td>
                     <td rowspan="6">Organization.identifier</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Organization.identifier</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Organization.identifier</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Organization.identifier</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Organization.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Organization.identifier</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Organization.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Organization.identifier</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Organization.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Organization.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Organization.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Organization.identifier</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Organization.identifier</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider's title (optional)</td>
                     <td rowspan="6">023061</td>
                     <td rowspan="6">Practitioner.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider given name (optional)</td>
                     <td rowspan="6">023062</td>
                     <td rowspan="6">Practitioner.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider family name (optional)</td>
                     <td rowspan="6">028638</td>
                     <td rowspan="6">Practitioner.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt;Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider name suffix (optional)</td>
                     <td rowspan="6">023065</td>
                     <td rowspan="6">Practitioner.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt;Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider organisation name (mandatory)</td>
                     <td rowspan="6">023070</td>
                     <td rowspan="6">Organization.name</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Organization.name</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Organization.name</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Organization.name</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Organization.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Organization.name</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Organization.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Organization.name</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Organization.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Organization.name</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Organization.name</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Organization.name</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Organization.name</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider individual's workplace address (optional)</td>
                     <td rowspan="6">024035</td>
                     <td rowspan="6">Practitioner.address</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.address</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.address</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.address</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.address</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.address</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Practitioner.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.address</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.address</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.address</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.address</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="6">Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td rowspan="6">024036</td>
                     <td rowspan="6">Practitioner.telecom</td>
-                    <td>Composition.extension(information-recipient)-&gt;Patient.generalPractitioner-&gt;Practitioner.telecom</td>
+                    <td>Composition.extension(information-recipient)&gt; Patient.generalPractitioner&gt; Practitioner.telecom</td>
                     <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Composition.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.telecom</td>
+                    <td>Composition.subject&gt; Patient.generalPractitioner&gt; Practitioner.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.encounter-&gt;Encounter.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.telecom</td>
+                    <td>Composition.encounter&gt; Encounter.subject&gt; Patient.generalPractitioner&gt; Practitioner.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.patient-&gt;Patient.generalPractitioner-&gt;Practitioner.telecom</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.patient&gt; Patient.generalPractitioner&gt; Practitioner.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.telecom</td>
+                    <td>Composition.section(medications).entry&gt; List.subject&gt; Patient.generalPractitioner&gt; Practitioner.telecom</td>
                 </tr>
                 <tr>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.subject-&gt;Patient.generalPractitioner-&gt;Practitioner.telecom</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.subject&gt; Patient.generalPractitioner&gt; Practitioner.telecom</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td>Healthcare provider professional role (mandatory)</td>
                     <td>024040</td>
@@ -1484,52 +1497,52 @@ active ingredient(s) or a brand name, or both.</p>
                         <p>Where a sending system can state patient's generalPractitioner healthcare provider professional role, the role is expected to be sent in narrative or as local extension.</p>
                     </td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="3">Healthcare setting (mandatory)</td>
                     <td rowspan="3">028435</td>
                     <td>Organization.type</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.organization-&gt;Organization.type</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization&gt; Organization.type</td>
                     <td rowspan="3">
-                        <p>This requirement states the PSML document will include the healthcare setting in which the
-PSML document was authored. The profiles allow for an authoring role or organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review) - they do not mandate any of these elements.</p>
+                        <p>This requirement states a PSML document will include the healthcare setting in which the document was authored.</p>
+                        <p>The profiles allow for an authoring role or organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review) - they do not mandate any of these elements.</p>
                         <p>These parts of the requirement are best enforced in a conformance profile.</p>
                     </td>
                 </tr>
                 <tr>
                     <td>PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.code</td>
                 </tr>
                 <tr>
                     <td>Encounter.type</td>
-                    <td>Composition.encounter-&gt;Encounter.type</td>
+                    <td>Composition.encounter&gt; Encounter.type</td>
                 </tr>
-                <!-- ======================================================================== DONE -->
+                <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="3">Healthcare setting (mandatory)</td>
                     <td rowspan="3">028534</td>
                     <td>Organization.type</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.organization-&gt;Organization.type</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization&gt; Organization.type</td>
                     <td rowspan="3">
-                        <p>This requirement states the PSML document will include the healthcare setting in which the
+                        <p>This requirement states a PSML document will include the healthcare setting in which the
 PSML document was authored. The profiles allow for an authoring role or organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review) - they do not mandate any of these elements.</p>
                         <p>These parts of the requirement are best enforced in a conformance profile.</p>
                     </td>
                 </tr>
                 <tr>
                     <td>PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)-&gt;PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.code</td>
                 </tr>
                 <tr>
                     <td>Encounter.type</td>
-                    <td>Composition.encounter-&gt;Encounter.type</td>
+                    <td>Composition.encounter&gt; Encounter.type</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Additional comments (optional)</td>
                     <td>028403</td>
                     <td>List.note</td>
-                    <td>Composition.section(medications).entry-&gt;List.note </td>
+                    <td>Composition.section(medications).entry&gt; List.note </td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1541,7 +1554,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>
                         <p>Not directly supported in FHIR.</p>
                         <p>The requirements specification mandates the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA). A request has been submitted to HL7 AU to consider this requirement on the national level, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
+                        <p>See <a href="index.html#known-issues">Known issues</a> for further information on this issue and possible work arounds.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1550,6 +1563,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td rowspan="2">028631</td>
                     <td>Composition.section(Allergies)</td>
                     <td>Composition.section(Allergies)</td>
+                    <td rowspan="4"><p></p></td>
                 </tr>
                 <tr>
                     <td>Composition.section(allergies).entry</td>
@@ -1562,42 +1576,42 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                 </tr>
                 <tr>
                     <td>AllergyIntolerance.code</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.code</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.code</td>
                 </tr>
                 <!-- ======================================================================== -->
                <tr>
                     <td rowspan="2">Substance/Agent (optional)</td>
                     <td rowspan="2">028436</td>
-                    <td>AllergyIntolerance.reaction.substance</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.reaction.substance</td>
+                    <td>AllergyIntolerance.code</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.code</td>
                     <td rowspan="2"><p></p></td>
                </tr>
                <tr>
-                    <td>AllergyIntolerance.code</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.code</td>
+                    <td>AllergyIntolerance.reaction.substance</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.reaction.substance</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Reaction type (optional)</td>
                     <td>028437</td>
                     <td>AllergyIntolerance.type</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.type</td>
-                    <td><p></p></td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.type</td>
+                    <td><p>This requirement as stated is satisifed however it is noted that the concept of 'reaction type' is not supported - <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span> - SOMEONE GET ME A DEF OF REACTION TYPE AND WHY ITS NOT THIS</p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Reaction (optional)</td>
                     <td>028438</td>
                     <td>AllergyIntolerance.reaction.manifestation</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.reaction.manifestation</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.reaction.manifestation</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Reaction Onset Date (optional)</td>
                     <td>028439</td>
-                    <td>AllergyIntolerance.onset</td>
-                    <td>Composition.section(allergies).entry-&gt;AllergyIntolerance.onset</td>
+                    <td>AllergyIntolerance.onsetDateTime</td>
+                    <td>Composition.section(allergies).entry&gt; AllergyIntolerance.onsetDateTime</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1617,7 +1631,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td rowspan="2">Medicine identifier (mandatory)</td>
                     <td>028633</td>
                     <td rowspan="2">Medication.code</td>
-                    <td rowspan="2">Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td rowspan="2">Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
@@ -1627,64 +1641,72 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                 <tr>
                     <td rowspan="2">Active Ingredient (optional)</td>
                     <td rowspan="2">028014</td>
-                    <td>Medication.ingredient</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.ingredient</td>
+                    <td>Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                  <tr>
-                    <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Medication.ingredient.item[x]</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.ingredient.item[x]</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Brand name (optional)</td>
                     <td rowspan="2">028442</td>
-                    <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Medication.extension(medication-brand-name)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.extension(medication-brand-name)</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                <tr>
-                    <td>medicationReference-&gt;Medication-brand-name</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.extension(medication-brand-name)</td>
+                    <td>Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Medicine strength (optional)</td>
                     <td rowspan="2">028635</td>
-                    <td>Medication.ingredient.amount</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.ingredient.amount</td>
+                    <td>Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Medication.ingredient.amount</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.ingredient.amount</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="2">Dose form (optional)</td>
                     <td rowspan="2">028026</td>
-                    <td>Medication.form</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.form</td>
+                    <td>Medication.code</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>          
-                    <td>Medication.code</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td>Medication.form</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.form</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Route (optional)</td>
-                    <td>028443</td>
-                    <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
-                    <td><p></p></td>
+                    <td rowspan="3">Route (optional)</td>
+                    <td rowspan="3">028443</td>
+                    <td>MedicationStatement.dosage.text</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage.text</td>
+                    <td rowspan="3"><p></p></td>
+                </tr>
+                <tr>
+                    <td>MedicationStatement.dosage.patientInstruction</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage.patientInstruction</td>
+                </tr>
+                <tr>
+                    <td>MedicationStatement.dosage.route</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage.route</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Direction (mandatory)</td>
                     <td>028021</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1692,7 +1714,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Dose per administration (optional)</td>
                     <td>028670</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1700,7 +1722,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Frequency of administration (optional)</td>
                     <td>028668</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1708,7 +1730,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Timing of dministration (optional)</td>
                     <td>028669</td>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1716,41 +1738,41 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Medicine purpose (optional)</td>
                     <td>028016</td>
                     <td>MedicationStatement.reasonCode</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.reasonCode</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.reasonCode</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Expected end date (optional)</td>
                     <td>028445</td>
-                    <td>MedicationStatement.effective[x]</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.effective[x]</td>
+                    <td>MedicationStatement.effectivePeriod</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.effectivePeriod</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Special instructions (optional)</td>
-                    <td>028446</td>
+                    <td rowspan="2">Special instructions (optional)</td>
+                    <td rowspan="2">028446</td>
+                    <td>MedicationStatement.note</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.note</td>
+                    <td rowspan="2"><p></p></td>
+                </tr>
+                <tr>
                     <td>MedicationStatement.dosage</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.dosage</td>
-                    <td><p></p></td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.dosage</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="2">Medicine image (optional)</td>
-                    <td>028018</td>
+                    <td>Medicine image (optional)</td>
+                    <td>028346</td>
+                    <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                        <p>Support for medicine image attribute has been removed from the Medication model in the first normative release of FHIR (R4). For this
+                        <p>Support for medicine image attribute has been removed from the Medication resource in the first normative release of FHIR (R4). For this
                             reason the use of medication image is strongly discouraged in the HL7 AU content based on a prior FHIR release (STU3) and unsupported by this
                             implementation guide.</p>
-                        <p>Where a sending system can include a medicine image, it is expected to be sent in the Medicines List section narrative or List narrative.</p>
-                    </td>  
-                </tr>               
-                <tr>
-                    <td>028535</td>
-                    <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by implementation.</td>
+                        <p>One possible way a sending system can include a medicine image is to include the image in the section text element or List text element.</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1758,23 +1780,45 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>028020</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly supported by a FHIR profile. Where a sending system can include physical description of a medicine, it is expected to be sent in the Medicines List section narrative or List narrative.</td>
+                    <td>
+                        <p>Not directly supported in FHIR.</p>
+                        <p>One possible way a sending system can include a physical description of the medicine item is to include such description in the section text element or Medication text element.</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="3">Medicine status (optional)</td>
-                    <td>028017</td>
-                    <td rowspan="2">List.entry.flag</td>
-                    <td rowspan="2">Composition.section(medications).entry-&gt;List.entry.flag</td>
+                    <td rowspan="2">Medicine status (optional)</td>
+                    <td rowspan="2">028017</td>
+                    <td>List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.extension(change-description)</td>
                     <td rowspan="2"><p></p></td>
-                </tr>  
+                </tr>
                 <tr>
-                    <td>028027</td>
-               </tr>  
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.flag</td>
+                </tr>
+                <!-- ======================================================================== -->
                 <tr>
+                    <td rowspan="2">Medicine status (optional)</td>
+                    <td rowspan="2">028027</td>
+                    <td>List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.extension(change-description)</td>
+                    <td rowspan="2"><p></p></td>
+                </tr>
+                <tr>
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.flag</td>
+                </tr>
+                <!-- ======================================================================== -->
+                <tr>
+                    <td>Medicine status (optional)</td>
                     <td>028636</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Not directly supported in FHIR.</p>
+                        <p>This requirement is a system behavioural requirement.</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1793,7 +1837,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td rowspan="2">Medicine identifier (mandatory)</td>
                     <td>028633</td>
                     <td rowspan="2">Medication.code</td>
-                    <td rowspan="2">Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.medicationReference-&gt;Medication.code</td>
+                    <td rowspan="2">Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.medicationReference&gt; Medication.code</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
@@ -1803,8 +1847,8 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                 <tr>
                     <td>Reason for ceasing medicine (optional)</td>
                     <td>028447</td>
-                    <td>List.entry.change-description</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.extension(change-description)</td>
+                    <td>List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.extension(change-description)</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1812,7 +1856,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Ceased date (optional)</td>
                     <td>028629</td>
                     <td>MedicationStatement.effective[x]</td>
-                    <td>Composition.section(medications).entry-&gt;List.entry.item-&gt;MedicationStatement.effective[x]</td>
+                    <td>Composition.section(medications).entry&gt; List.entry.item&gt; MedicationStatement.effective[x]</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1821,7 +1865,10 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>028636</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a conformance profile or handled by an implementation.</td>
+                    <td>
+                        <p>Not directly supported in FHIR.</p>
+                        <p>This requirement is a system behavioural requirement.</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1829,7 +1876,10 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>028637</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>This requirement is not directly managed by a FHIR profile; it may be enforced in a rendering specification, conformance profile or handled by an implementation.</td>
+                    <td>
+                        <p>Not directly supported in FHIR.</p>
+                        <p>This requirement is a system behavioural requirement.</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1837,7 +1887,9 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>023068</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>This is managed in the implementation (e.g. FHIR Bundle, CDA)</td>
+                    <td>
+                        <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.)</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1845,7 +1897,9 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>023067</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>This is managed in the implementation (e.g. FHIR Bundle, CDA)</td>
+                    <td>
+                        <p>The profile does not mandate a document identification mechanism. This is an implementation environment concern and outside of the scope of the FHIR profiles.)</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1853,7 +1907,9 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>024025</td>
                     <td>N/A</td>
                     <td>N/A</td>
-                    <td>This is managed in the implementation (e.g. FHIR Bundle, CDA)</td>
+                    <td>
+                        <p>The profile does not mandate a date and time of document creation mechanism. This is an implementation environment concern and outside of the scope of the FHIR profiles.)</p>
+                    </td>
                  </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1865,16 +1921,24 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="2">Document sub-type (mandatory)</td>
-                    <td>028671</td>
-                    <td rowspan="2">Composition.type | Composition.composition-author-role</td>
-                    <td rowspan="2">Composition.type | Composition.composition-author-role</td>
-                    <td rowspan="2"><p></p></td>
-                </tr> 
-                <tr>
-                    <td>028672</td>
+                    <td rowspan="4">Document sub-type (mandatory)</td>
+                    <td rowspan="4">028671</td>
+                    <td>Composition.title</td>
+                    <td>Composition.title</td>
+                    <td rowspan="4"><p></p></td>
                 </tr>
-                <!-- ======================================================================== -->
+                <tr>
+                    <td>Encounter.type</td>
+                    <td>Composition.encounter&gt; Encounter.type</td>
+                </tr>
+                <tr>
+                    <td>PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.code</td>
+                </tr>
+                <tr>
+                    <td>Organization.type</td>
+                    <td>Composition.extension(composition-author-role)&gt; PractitionerRole.organization&gt; Organization.type</td>
+                </tr>
      </tbody>
 </table>
 
@@ -1915,9 +1979,9 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>
                         <p>Either the full hierarchical path from the root FHIR resource (e.g. Composition) to the element 
                     the requirement is mapped to or 'N/A' where the requirement has been deemed not applicable to a FHIR profile.</p>
-                        <p>A dot notation is used to demonstrate hierarchy within a FHIR resource. 
-                    An arrow '<span style="font-family:courier;">-&#62;</span>' is used to denote the reference connecting one FHIR resource 
-                    to another from the linking element (e.g. Composition.subject-&gt;Patient or Composition.author-&gt;Patient).</p></td>
+                        <p>A dot notation is used to demonstrate hierarchy within a FHIR resource.</p>
+                        <p>An arrow '<span style="font-family:courier;">&#62;</span>' is used to denote the reference connecting one FHIR resource 
+                    to another from the linking element. For example Composition.subject&gt; Patient or Composition.author&gt; Patient.</p></td>
                     <td><p>Additional notes are provided where a gap between a requirement, or parts of a requirement, and the 
                     profiles is identified. Where a requirement is fully addressed by the mapped elements then no entry in this 
                     column is expected.</p></td>
@@ -1962,7 +2026,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Oct 18, 2019 16:05+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Oct 21, 2019 13:27+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
