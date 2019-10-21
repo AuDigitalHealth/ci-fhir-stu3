@@ -146,6 +146,10 @@ This table lists known issues with this specification at the time of publishing.
         <td>Supported usage scenarios</td>
         <td>The profiles described in this implementation guide only support practitioner authoring usage scenarios. Future releases of this implementation guide are expected to provide support for additional usage scenarios including other authoring entities.</td>
     </tr>
+    <tr>
+        <td>Roadmap STU3 to R4</td>
+        <td>Work is underway to transition this IG from STU3 to R4. Various aspects of this activity has been documented on the <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/wiki/Road-map">FHIR roadmap</a>.</td>
+    </tr>
  </tbody>
 </table> 
 
