@@ -693,17 +693,20 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="5">Individual (subject of care)</td>
-                    <td rowspan="5">027984</td>
-                    <td rowspan="5">Patient</td>
+                    <td rowspan="6">Individual (subject of care)</td>
+                    <td rowspan="6">027984</td>
+                    <td rowspan="6">Patient</td>
                     <td>Composition.subject> Patient</td>
-                    <td rowspan="5"><p></p></td>
+                    <td rowspan="6"><p></p></td>
                 </tr>
                 <tr>
                     <td>Composition.encounter> Encounter.subject> Patient</td>
                 </tr>
                 <tr>
                     <td>Composition.section(allergies).entry> AllergyIntolerance.patient> Patient</td>
+                </tr>
+                <tr>
+                    <td>Composition.section(medications).entry> Observation.subject> Patient</td>
                 </tr>
                 <tr>
                     <td>Composition.section(medications).entry> List.subject> Patient</td>
