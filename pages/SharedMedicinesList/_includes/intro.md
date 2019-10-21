@@ -52,9 +52,9 @@ Specification packages contain only files relevant to the particular clinical do
 ## How to read this document
 This implementation guide contains descriptions of both constraints on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3) and, where necessary, custom extensions to [HL7 FHIR [HL7FHIR3]](#HL7FHIR3), for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
-For implementers interested in a practitioner authored shared medicine list as a document, such as a pharmacist shared medicines list, the starting point is the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
+For implementers interested in a practitioner authored medicines list as a document, such as a pharmacist shared medicines list, the starting point is the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
 
-For implementers interested in representing a practitioner authored shared medicines list as a list, and not a document, the starting point is the [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
+For implementers interested in representing a practitioner authored medicines list as a list, and not a document, the starting point is the [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
 
 ## Editorial note
 This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
@@ -101,7 +101,7 @@ This implementation guide and related artefacts are technical in nature and the 
         <tr>
             <td>1.0.0</td>
             <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
-            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br/>This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists between healthcare providers, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br/>This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table> 
