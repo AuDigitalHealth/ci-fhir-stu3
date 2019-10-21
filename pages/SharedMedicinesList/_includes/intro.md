@@ -50,7 +50,7 @@ The contents may include:
 Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
-This implementation guide contains descriptions of both constraints on [HL7 FHIR [HL7FHIR3]](#HL7FHIR3) and, where necessary, custom extensions to [HL7 FHIR [HL7FHIR3]](#HL7FHIR3), for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
+This implementation guide contains descriptions of both constraints on HL7 FHIR and, where necessary, custom extensions to HL7 FHIR, for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
 
 For implementers interested in a practitioner authored medicines list as a document, such as a pharmacist shared medicines list, the starting point is the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
 
