@@ -101,7 +101,7 @@ This implementation guide and related artefacts are technical in nature and the 
         <tr>
             <td>1.0.0</td>
             <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
-            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br/>This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists between healthcare providers, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br/>This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table> 
