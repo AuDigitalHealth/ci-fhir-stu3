@@ -1455,8 +1455,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <tr>
                     <td rowspan="2">028636</td>
-                    <td>List.entry.extension(change-description)</td>
-                    <td>Composition.section(medications).entry> List.entry.extension(change-description)</td>
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(medications).entry> List.entry.flag</td>
                     <td rowspan="2">
                         <p>This requirement specifies a that a ceased medicine shall have a medicine status of ceased.</p>
                         <p>The profiles do not include a constraint to enforce a direct relationship between these two status concepts.</p>
@@ -1511,20 +1511,25 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>Ceased date (optional)</td>
                     <td>028629</td>
-                    <td>MedicationStatement.effective[x]</td>
-                    <td>Composition.section(medications).entry> List.entry.item> MedicationStatement.effective[x]</td>
+                    <td>MedicationStatement.effectivePeriod.end</td>
+                    <td>Composition.section(medications).entry> List.entry.item> MedicationStatement.effectivePeriod.end</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Ceased medicines (mandatory)</td>
-                    <td>028636</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>
-                        <p>Not directly supported in FHIR.</p>
-                        <p>This requirement is a system behavioural requirement.</p>
+                    <td rowspan="2">Ceased medicine status (mandatory)</td>
+                    <td rowspan="2">028636</td>
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(medications).entry> List.entry.flag</td>
+                    <td rowspan="2">
+                        <p>This requirement specifies a that a ceased medicine shall have a medicine status of ceased.</p>
+                        <p>The profiles do not include a constraint to enforce a direct relationship between these two status concepts.</p>
+                        <p>This part of the requirement is best enforced in a conformance profile.</p>
                     </td>
+                </tr>
+                <tr>
+                    <td>MedicationStatement.status</td>
+                    <td>Composition.section(medications).entry> List.entry.item> MedicationStatement.status</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1533,8 +1538,9 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                        <p>Not directly supported in FHIR.</p>
-                        <p>This requirement is a system behavioural requirement.</p>
+                        <p>This requirement states ceased medicine items shall not have data that is not defined in the requirements document.</p>
+                        <p>The profile supports multiple usage scenarios - this value is not enforced.</p>
+                        <p>This part of the requirement is a producing system behavioural requirement.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1544,7 +1550,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                        <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.)</p>
+                        <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1554,7 +1560,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                        <p>The profile does not mandate a document identification mechanism. This is an implementation environment concern and outside of the scope of the FHIR profiles.)</p>
+                        <p>The profile does not mandate an instance identifier mechanism (e.g. Bundle.identifier). This is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1564,7 +1570,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
-                        <p>The profile does not mandate a date and time of document creation mechanism. This is an implementation environment concern and outside of the scope of the FHIR profiles.)</p>
+                        <p>This requirement is applicable only to a CDA implementation.</p>
                     </td>
                  </tr>
                 <!-- ======================================================================== -->
@@ -1577,11 +1583,13 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="4">Document sub-type (mandatory)</td>
+                    <td rowspan="5">Document sub-type (mandatory)</td>
                     <td rowspan="4">028671</td>
                     <td>Composition.title</td>
                     <td>Composition.title</td>
-                    <td rowspan="4"><p></p></td>
+                    <td rowspan="4">
+                        <p></p>
+                    </td>
                 </tr>
                 <tr>
                     <td>Encounter.type</td>
@@ -1594,6 +1602,16 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>Organization.type</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
+                </tr>
+                <tr>
+                    <td>028672</td>
+                    <td>Composition.title</td>
+                    <td>Composition.title</td>
+                    <td>
+                        <p>This requirement states a PSML document shall be sub-typed with the value "Pharmacist Shared Medicines List".</p>
+                        <p>The profile supports multiple usage scenarios - this value is not enforced.</p>
+                        <p>This requirement is best enforced in a conformance profile.</p>
+                    </td>
                 </tr>
      </tbody>
 </table>
