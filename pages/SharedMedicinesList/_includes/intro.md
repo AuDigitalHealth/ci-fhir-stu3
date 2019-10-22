@@ -160,7 +160,7 @@ This table lists known issues with this specification at the time of publishing.
 
 |[<a name="DH2019b">DH2019b</a>]| Australian Digital Health Agency, Not yet published, Shared Medicines List CDA Implementation Guide, Version 1.0.0.|
 
-|[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List scenarios and business requirements, Version 2.0.|
+|[<a name="DH2019m">DH2019m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Scenarios and business requirements, Version 2.0.|
 
 |[<a name="DH2019n">DH2019n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
