@@ -62,21 +62,21 @@ time of document authoring. The profile has this as optional.</p>
                      </td>
                  </tr>
                  <tr>
-                    <td>Composition.identifier</td>
-                    <td>Composition.identifier</td>
-                 </tr> 
+                    <td>Composition.extension(composition-author-role)</td>
+                     <td>Composition.extension(composition-author-role)</td>
+                 </tr>
                  <tr>
-                    <td>Composition.date</td>
-                     <td>Composition.date</td>
-                 </tr> 
+                    <td>Composition.identifier</td>
+                    <td>Composition.identifier</td>
+                 </tr>
                  <tr>
                     <td>Composition.subject</td>
                      <td>Composition.subject</td>
                  </tr>
                  <tr>
-                    <td>Composition.extension(composition-author-role)</td>
-                     <td>Composition.extension(composition-author-role)</td>
-                 </tr>  
+                    <td>Composition.date</td>
+                     <td>Composition.date</td>
+                 </tr>
                  <tr>
                     <td>PractitionerRole.organization</td>
                      <td>Composition.extension(composition-author-role)> PractitionerRole.organization</td>
@@ -258,10 +258,9 @@ time of document authoring. The profile has this as optional.</p>
                 </tr>
                 <tr>
                     <td rowspan="2">Practitioner.identifier</td>
-                    <td>Composition.author> Practitioner.identifier</td>
-                </tr>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>                </tr>
                 <tr>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>
+                    <td>Composition.author> Practitioner.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -353,7 +352,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                         <p>Not directly supported in FHIR.</p>
                         <p>This requirement states a PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
                         <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
+                        <p>See <a href="index.html#known-issues">Known issues</a> for further information on this issue and possible work arounds.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -556,7 +555,7 @@ active ingredient(s) or a brand name, or both.</p>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="2">Attribute for Special Instruction</td>
+                    <td rowspan="2">Attribute for Special Instructions</td>
                     <td rowspan="2">028345</td>
                     <td>MedicationStatement.note</td>
                     <td>Composition.section(medications).entry> List.entry.item> MedicationStatement.note</td>
@@ -680,7 +679,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Individual's address (optional)</td>
                     <td>028640</td>
                     <td>Patient.address</td>
-                    <td>Composition.extension(information-recipient)> Patient.address</td>
+                    <td>Composition.subject> Patient.address</td>
                     <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -877,13 +876,13 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td rowspan="2">Healthcare provider individual's workplace electronic communication details (optional)</td>
                     <td rowspan="2">024036</td>
-                    <td>Practitioner.telecom</td>
-                    <td>Composition.author> Practitioner.telecom</td>
+                    <td>PractitionerRole.telecom</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.telecom</td>
                     <td rowspan="2"><p></p></td>
                 </tr>
                 <tr>
-                    <td>PractitionerRole.telecom</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.telecom</td>
+                    <td>Practitioner.telecom</td>
+                    <td>Composition.author> Practitioner.telecom</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -907,10 +906,10 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <tr>
                     <td rowspan="2">Practitioner.identifier</td>
-                    <td>Composition.author> Practitioner.identifier</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>
                 </tr>
                 <tr>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>
+                    <td>Composition.author> Practitioner.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1425,11 +1424,11 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
-                <tr>
+                 <tr>
                     <td rowspan="6">Medicine status (optional)</td>
                     <td rowspan="2">028017</td>
-                    <td>List.entry.extension(change-description)</td>
-                    <td>Composition.section(medications).entry> List.entry.extension(change-description)</td>
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(medications).entry> List.entry.flag</td>
                     <td rowspan="2">
                         <p>This requirement states a PSML document may contain a status for each medicine item.</p>
                         <p>The profiles enforce a mandatory status for each medicine item.</p>
@@ -1517,15 +1516,19 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="2">Ceased medicine status (mandatory)</td>
-                    <td rowspan="2">028636</td>
-                    <td>List.entry.flag</td>
-                    <td>Composition.section(medications).entry> List.entry.flag</td>
-                    <td rowspan="2">
+                    <td rowspan="3">Ceased medicine status (mandatory)</td>
+                    <td rowspan="3">028636</td>
+                    <td>List.entry.extension(change-description)</td>
+                    <td>Composition.section(medications).entry> List.entry.extension(change-description)</td>
+                    <td rowspan="3">
                         <p>This requirement specifies a that a ceased medicine shall have a medicine status of ceased.</p>
                         <p>The profiles do not include a constraint to enforce a direct relationship between these two status concepts.</p>
                         <p>This part of the requirement is best enforced in a conformance profile.</p>
                     </td>
+                </tr>
+                <tr>
+                    <td>List.entry.flag</td>
+                    <td>Composition.section(medications).entry> List.entry.flag</td>
                 </tr>
                 <tr>
                     <td>MedicationStatement.status</td>
@@ -1585,23 +1588,23 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td rowspan="5">Document sub-type (mandatory)</td>
                     <td rowspan="4">028671</td>
-                    <td>Composition.title</td>
-                    <td>Composition.title</td>
+                    <td>PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
                     <td rowspan="4">
                         <p></p>
                     </td>
+                </tr>
+                <tr>
+                    <td>Organization.type</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
                 </tr>
                 <tr>
                     <td>Encounter.type</td>
                     <td>Composition.encounter> Encounter.type</td>
                 </tr>
                 <tr>
-                    <td>PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
-                </tr>
-                <tr>
-                    <td>Organization.type</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
+                    <td>Composition.title</td>
+                    <td>Composition.title</td>
                 </tr>
                 <tr>
                     <td>028672</td>
