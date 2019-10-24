@@ -66,6 +66,10 @@ time of document authoring. The profile has this as optional.</p>
                      <td>Composition.extension(composition-author-role)</td>
                  </tr>
                  <tr>
+                    <td>PractitionerRole.organization</td>
+                     <td>Composition.extension(composition-author-role)> PractitionerRole.organization</td>
+                 </tr> 
+                 <tr>
                     <td>Composition.identifier</td>
                     <td>Composition.identifier</td>
                  </tr>
@@ -74,17 +78,13 @@ time of document authoring. The profile has this as optional.</p>
                      <td>Composition.subject</td>
                  </tr>
                  <tr>
-                    <td>Composition.date</td>
-                     <td>Composition.date</td>
-                 </tr>
-                 <tr>
-                    <td>PractitionerRole.organization</td>
-                     <td>Composition.extension(composition-author-role)> PractitionerRole.organization</td>
-                 </tr> 
-                 <tr>
                     <td>Patient.generalPractitioner</td>
                      <td>Composition.subject> Patient.generalPractitioner</td>
-                 </tr>  
+                 </tr> 
+                 <tr>
+                    <td>Composition.date</td>
+                     <td>Composition.date</td>
+                 </tr> 
                  <tr>
                     <td>Composition.section(allergies)</td>
                      <td>Composition.section(allergies)</td>
@@ -1588,15 +1588,15 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td rowspan="5">Document sub-type (mandatory)</td>
                     <td rowspan="4">028671</td>
-                    <td>PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
+                    <td>Organization.type</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
                     <td rowspan="4">
                         <p></p>
                     </td>
                 </tr>
                 <tr>
-                    <td>Organization.type</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
+                    <td>PractitionerRole.code</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
                 </tr>
                 <tr>
                     <td>Encounter.type</td>
@@ -1651,17 +1651,20 @@ A mappings from requirements table demonstrates the logical decomposition of eac
                        <p>For example Patient.communication.language indicates 
                     the requirement maps to the language element, that is a child of the communication element, 
                     in the Patient FHIR resource.</p>
-                    <p>Where a requirement is addressed by multiple elements, the elements are presented in order of appearance in the profiled FHIR resource.</p>
                     </td>
                     <td>
                         <p>Either the full hierarchical path from the root FHIR resource (e.g. Composition) to the element 
                     the requirement is mapped to or 'N/A' where the requirement has been deemed not applicable to a FHIR profile.</p>
                         <p>A dot notation is used to demonstrate hierarchy within a FHIR resource.</p>
                         <p>An arrow '<span style="font-family:courier;">&#62;</span>' is used to denote the reference connecting one FHIR resource 
-                    to another from the linking element. For example Composition.subject> Patient or Composition.author> Patient.</p></td>
-                    <td><p>Additional notes are provided where a gap between a requirement, or parts of a requirement, and the 
+                    to another from the linking element. For example Composition.subject> Patient or Composition.author> Patient.</p>
+                    <p>Where a requirement is addressed by multiple elements, the elements are presented in order of appearance in the profiled FHIR resource.</p>
+                    </td>
+                    <td>
+                        <p>Additional notes are provided where a gap between a requirement, or parts of a requirement, and the 
                     profiles is identified. Where a requirement is fully addressed by the mapped elements then no entry in this 
-                    column is expected.</p></td>
+                    column is expected.</p>
+                    </td>
                 </tr>
              </tbody>
 </table>
