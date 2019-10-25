@@ -250,17 +250,23 @@ time of document authoring. The profile has this as optional.</p>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="3">Identifier for document author</td>
-                    <td rowspan="3">028317</td>
-                    <td>Composition.author.identifier</td>
-                    <td>Composition.author.identifier</td>
-                    <td rowspan="3"><p></p></td>
+                    <td rowspan="4">Identifier for document author</td>
+                    <td rowspan="4">028317</td>
+                    <td>Practitioner.identifier</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>
+                    <td rowspan="4"><p></p></td>
                 </tr>
                 <tr>
-                    <td rowspan="2">Practitioner.identifier</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>                </tr>
+                    <td>PractitionerRole.practitioner.identifier</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner.identifier</td>
+                </tr>
                 <tr>
+                    <td>Practitioner.identifier</td>
                     <td>Composition.author> Practitioner.identifier</td>
+                </tr>
+                <tr>
+                    <td>Composition.author.identifier</td>
+                    <td>Composition.author.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -715,15 +721,19 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Individual Healthcare Identifier (mandatory)</td>
-                    <td>022082</td>
+                    <td rowspan="2">Individual Healthcare Identifier (mandatory)</td>
+                    <td rowspan="2">022082</td>
                     <td>Patient.identifier</td>
                     <td>Composition.subject> Patient.identifier</td>
-                    <td>
+                    <td rowspan="2">
                         <p>This requirement states a PSML document shall contain the individual's IHI.</p>
                         <p>The profile mandates an identifier but does not force that identifier to be an IHI.</p>
                         <p>This part of the requirement is best enforced in a conformance profile.</p>
                     </td>
+                </tr>
+                <tr>
+                    <td>Composition.subject.identifier</td>
+                    <td>Composition.subject.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -898,26 +908,43 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="3">Healthcare Provider Identifier-Individual (optional)</td>
-                    <td rowspan="3">024601</td>
-                    <td>Composition.author.identifier</td>
-                    <td>Composition.author.identifier</td>
-                    <td rowspan="3"><p></p></td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Practitioner.identifier</td>
+                    <td rowspan="5">Healthcare Provider Identifier-Individual (optional)</td>
+                    <td rowspan="5">024601</td>
+                    <td>Practitioner.identifier</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner> Practitioner.identifier</td>
+                    <td rowspan="5"><p></p></td>
                 </tr>
                 <tr>
+                    <td>PractitionerRole.practitioner.identifier</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.practitioner.identifier</td>
+                </tr>
+                <tr>
+                    <td>Patient.generalPractitioner.identifier</td>
+                    <td>Composition.subject> Patient.generalPractitioner.identifier</td>
+                </tr>
+                <tr>
+                    <td>Practitioner.identifier</td>
                     <td>Composition.author> Practitioner.identifier</td>
+                </tr>
+                <tr>
+                    <td>Composition.author.identifier</td>
+                    <td>Composition.author.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Healthcare Provider Identifier-Organisation (optional)</td>
-                    <td>024602</td>
+                    <td rowspan="3">Healthcare Provider Identifier-Organisation (optional)</td>
+                    <td rowspan="3">024602</td>
                     <td>Organization.identifier</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.identifier</td>
-                    <td><p></p></td>
+                    <td rowspan="3"><p></p></td>
+                </tr>
+                <tr>
+                    <td>PractitionerRole.organization.identifier</td>
+                    <td>Composition.extension(composition-author-role)> PractitionerRole.organization.identifier</td>
+                </tr>
+                <tr>
+                    <td>Patient.generalPractitioner.identifier</td>
+                    <td>Composition.subject> Patient.generalPractitioner.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1000,19 +1027,27 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Healthcare Provider Identifier-Individual (optional)</td>
-                    <td>024601</td>
+                    <td rowspan="2">Healthcare Provider Identifier-Individual (optional)</td>
+                    <td rowspan="2">024601</td>
                     <td>Practitioner.identifier</td>
                     <td>Composition.subject> Patient.generalPractitioner> Practitioner.identifier</td>
-                    <td><p></p></td>
+                    <td rowspan="2"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Patient.generalPractitioner.identifier</td>
+                    <td>Composition.subject> Patient.generalPractitioner.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td>Healthcare Provider Identifier-Organisation (optional)</td>
-                    <td>024602</td>
+                    <td rowspan="2">Healthcare Provider Identifier-Organisation (optional)</td>
+                    <td rowspan="2">024602</td>
                     <td>Organization.identifier</td>
                     <td>Composition.subject> Patient.generalPractitioner> Organization.identifier</td>
-                    <td><p></p></td>
+                    <td rowspan="2"><p></p></td>
+                </tr>
+                <tr>
+                    <td>Patient.generalPractitioner.identifier</td>
+                    <td>Composition.subject> Patient.generalPractitioner.identifier</td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
