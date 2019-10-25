@@ -124,14 +124,6 @@ This table lists known issues with this specification at the time of publishing.
         <td>This FHIR IG is currently in progress. While it is expected that a baseline of this FHIR IG will be frozen (possibly as at Trial Use) for the purposes of approval and publication of the corresponding CDA IG, it is not expected that the baseline of this FHIR IG will be approved for use in FHIR implementations.</td>
     </tr>
     <tr>
-        <td>Terminology publication</td>
-        <td>The following terminology resources are not yet available in NCTS:<ul> 
-            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1">https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1</a></li>
-            <li><a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1">https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1</a></li>
-            </ul> 
-       </td>
-    </tr>
-    <tr>
         <td>Recording information that a medicine list contains medicine items packed in a dose administration aid</td>
         <td>National agreement on the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA) is not yet supported. A supporting data model would allow recording information about an individual receiving packed medicines so that consultations with healthcare providers and healthcare can be tailored to suit the individual. This has been raised in HL7 AU github for consideration in the HL7 AU Medications work group, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/><br/>
            In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br/><br/>
