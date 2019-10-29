@@ -12,7 +12,7 @@
   </tr>
   <tr>
         <td>Profile deprecation in R4</td>
-        <td>This profile will be deprecated from the set of profiles when this IG is transitioned into R4.</td>
+        <td>This profile will not be transitioned to R4.</td>
         <td>n/a</td>
   </tr>
  </tbody>
