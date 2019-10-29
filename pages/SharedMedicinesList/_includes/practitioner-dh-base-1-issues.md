@@ -12,7 +12,7 @@
   </tr>
   <tr>
         <td>qualification.code (Australian localisation)</td>
-        <td>Work is underway to provide support for Australian qualifications.</td>
+        <td>Work is underway to provide terminology for Australian qualifications. This work is expected to be available in an R4 variant of this profile.</td>
         <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314">au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
   </tr>
   <tr>
