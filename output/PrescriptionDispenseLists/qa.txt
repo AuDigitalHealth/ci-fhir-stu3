@@ -1,9 +1,9 @@
 ﻿Prescription and Dispense Lists : Validation Results
 =========================================
 
-err = 12, warn = 0, info = 0
-IG Publisher Version: v0.9.81-SNAPSHOT Out of date - current version is v0.9.82-SNAPSHOT
-Generated Thu Sep 26 13:20:18 AEST 2019. FHIR version 3.0.1 for au.electronichealth.prescriptiondispenselists# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 36, warn = 0, info = 0
+IG Publisher Version: v0.9.91-SNAPSHOT
+Generated Mon Nov 04 14:40:43 AEST 2019. FHIR version 3.0.2 for au.electronichealth.prescriptiondispenselists# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 107 / 1
  C:\work\git\ci-fhir-stu3\resources\device-dh-base-1 : 0 / 0
@@ -11,12 +11,12 @@ Generated Thu Sep 26 13:20:18 AEST 2019. FHIR version 3.0.1 for au.electronichea
  C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\implementationguide-prescriptiondispenselists-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\list-pdl-1 : 2 / 0
- C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 1 / 0
- C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 1 / 0
- C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 3 / 0
+ C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 3 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1 : 4 / 0
  C:\work\git\ci-fhir-stu3\resources\provenance-list-gen-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1 : 0 / 0
  C:\work\git\ci-fhir-stu3\resources\relatedperson-ident-1 : 0 / 0
@@ -138,13 +138,25 @@ ERROR: C:\work\git\ci-fhir-stu3\output\PrescriptionDispenseLists\terminology.htm
 ERROR: StructureDefinition/list-pdl-1: StructureDefinition.differential.element[9].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/prescription-dispense-list-type-1'
 ERROR: StructureDefinition/list-pdl-1: StructureDefinition.differential.element[17].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/non-clinical-empty-reason-1'
 == C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1.xml ==
+ERROR: StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 == C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1.xml ==
+ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[25].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'
 == C:\work\git\ci-fhir-stu3\resources\patient-ident-1.xml ==
+ERROR: StructureDefinition/patient-ident-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/patient-ident-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/patient-ident-1: StructureDefinition.differential.element[25].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'
 == C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1.xml ==
+ERROR: StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 == C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1.xml ==
+ERROR: StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 == C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1.xml ==
+ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
+ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'
 ERROR: StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'
 == C:\work\git\ci-fhir-stu3\resources\provenance-list-gen-1.xml ==
