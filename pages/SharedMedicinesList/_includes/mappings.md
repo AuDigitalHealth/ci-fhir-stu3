@@ -15,7 +15,7 @@ The mapping from requirements table below demonstrates the logical decomposition
 
 ## Mapping from PSML business requirements
 
-The table below provides mapping from the requirements in [Pharmacist Shared Medicines List Scenarios and business requirements v2.0 [DH2019m]](index.html#DH2019m) to the corresponding supported element in the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)).
+The table below provides mapping from the requirements in [Pharmacist Shared Medicines List Scenarios and business requirements v2.0 [DH2020m]](index.html#DH2020m) to the corresponding supported element in the [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)).
 
 See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
@@ -650,7 +650,7 @@ active ingredient(s) or a brand name, or both.</p>
 
             
 ## Mapping from PSML information requirements
-This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List Information Requirements v2.0 [DH2019n]](index.html#DH2019n).
+This informative section provides mapping from the data items (i.e. requirements) in [Pharmacist Shared Medicines List Information Requirements v2.0 [DH2020n]](index.html#DH2020n).
 
 The table below matches the data items to the corresponding supported element in the [Shared Medicines List Authored by Practitioner profile](StructureDefinition-composition-sml-prac-1.html) profile, or referenced profile (e.g. [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition. 
 
