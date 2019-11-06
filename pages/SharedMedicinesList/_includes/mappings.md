@@ -392,7 +392,7 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>028331</td>
                     <td>AllergyIntolerance.type</td>
                     <td>Composition.section(allergies).entry> AllergyIntolerance.type</td>
-                    <td><p>This requirement as stated is satisifed however it is noted that the concept of 'reaction type' is not supported - <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span> - SOMEONE GET ME A DEF OF REACTION TYPE AND WHY ITS NOT THIS</p></td>
+                    <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1214,7 +1214,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>028437</td>
                     <td>AllergyIntolerance.type</td>
                     <td>Composition.section(allergies).entry> AllergyIntolerance.type</td>
-                    <td><p>This requirement as stated is satisifed however it is noted that the concept of 'reaction type' is not supported - <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span> - SOMEONE GET ME A DEF OF REACTION TYPE AND WHY ITS NOT THIS</p></td>
+                    <td><p></p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
