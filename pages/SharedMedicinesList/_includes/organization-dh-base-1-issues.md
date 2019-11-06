@@ -7,7 +7,7 @@
   </tr>
   <tr>
         <td>type (terminology)</td>
-        <td>Work is underway to provide better support for describing organisation role types that are a kind of organisation or facility including organisational units (e.g. hospital, pharmacy, ward, specific types of hospital wards, insurance company, cleaning company, government dept, etc).</td>
+        <td>Work is underway to provide terminology describing organisation role types. This work is expected to result in support for values from <a href="https://www.abs.gov.au/ausstats/abs@.nsf/mf/1292.0">1292.0 - Australian and New Zealand Standard Industrial Classification (ANZSIC)</a> and SNOMED CT and be available in an R4 variant of this profile.</td>
         <td></td>
   </tr>
   <tr>
