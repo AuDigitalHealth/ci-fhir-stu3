@@ -168,5 +168,5 @@ This table lists known issues with this specification at the time of publishing.
 |[<a name="HL7FHIR3">HL7FHIR3</a>]| Health Level Seven, Inc., 24 October 2019, FHIR Release 3 (STU).|
 | |[http://hl7.org/fhir/STU3/](http://hl7.org/fhir/STU3/)|
 
-|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 24 October 2019, FHIR R4.|
+|[<a name="HL7FHIR4">HL7FHIR4</a>]|Health Level Seven, Inc., 30 October 2019, FHIR R4.|
 ||[http://hl7.org/fhir/R4/](http://hl7.org/fhir/R4/)|
