@@ -24,11 +24,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.html">Ceased medicines list (List with contained resources)</a></td>
-                <td>a04e9676-5c38-4c56-8d24-c600e192613e</td>
-                <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.xml.html">XML</a></td>
-                <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.json.html">JSON</a></td>
-                <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.ttl.html">Turtle</a></td>
+                <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.html">Practitioner with only name and identifier</a></td>
+                <td>4e2ed22a-95c8-4403-87fa-9a6a171ddc8b</td>
+                <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.xml.html">XML</a></td>
+                <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.json.html">JSON</a></td>
+                <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
   </table>

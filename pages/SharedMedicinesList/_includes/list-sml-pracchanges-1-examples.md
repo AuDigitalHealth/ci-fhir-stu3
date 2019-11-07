@@ -32,7 +32,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.html">Ceased medicines list (List with contained resources)</a></td>
+                <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.html">Ceased medicines list (List with contained practitioner role)</a></td>
                 <td>a04e9676-5c38-4c56-8d24-c600e192613e</td>
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.xml.html">XML</a></td>
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.json.html">JSON</a></td>
