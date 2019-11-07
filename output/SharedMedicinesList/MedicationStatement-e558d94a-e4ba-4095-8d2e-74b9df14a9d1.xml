@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="e558d94a-e4ba-4095-8d2e-74b9df14a9d1"/>
+  <meta>
+    <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: e558d94a-e4ba-4095-8d2e-74b9df14a9d1</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: unknown resource contained</p><p><b>subject</b>: <a href="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html">Generated Summary: id: c7688ecf-5a6c-4a2f-ae2c-88a347278656; Medical record number = 542181; Bert Gainey</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: Laxative for constipation, works by softening the stools and also assists by stimulating the gut to achieve bowel movements. <span style="background: LightGoldenRodYellow">(Details )</span></p><p><b>note</b>: Take with a glass of fluid. May take 2-3 days for maximum effect. Do not take with laxatives containing liquid paraffin. Abdominal discomfort, nausea and rash may.</p><p><b>dosage</b>: </p></div>
+  </text>
+  <contained>
+    <Medication>
+      <id value="44df5dcf-a870-4a49-980e-b295629c3e71"/>
+      <code>
+        <text value="DOCUSATE SENNA(TAB) 50 mg"/>
+      </code>
+    </Medication>
+  </contained>
+  <status value="completed"/>
+  <medicationReference>
+  <!--  reference to contained Medication resource  -->
+    <reference value="#44df5dcf-a870-4a49-980e-b295629c3e71"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656"/>
+  </subject>
+  <taken value="y"/>
+  <reasonCode>
+    <text value="Laxative for constipation, works by softening the stools and also assists by stimulating the gut to achieve bowel movements."/>
+  </reasonCode>
+  <note>
+    <text value="Take with a glass of fluid. May take 2-3 days for maximum effect. Do not take with laxatives containing liquid paraffin. Abdominal discomfort, nausea and rash may."/>
+  </note>
+  <dosage>
+    <text value="Take two tablets in the morning and in the evening"/>
+  </dosage>
+</MedicationStatement>

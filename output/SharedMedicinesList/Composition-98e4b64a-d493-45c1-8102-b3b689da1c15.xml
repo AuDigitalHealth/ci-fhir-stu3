@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--  Representation of the CDA example 'SML02_Example.xml' as Composition with contained resources  -->
 <Composition xmlns="http://hl7.org/fhir">
   <id value="98e4b64a-d493-45c1-8102-b3b689da1c15"/>
   <meta>
@@ -13,7 +12,6 @@
             <h2>Home Medicines Review Report for Mr. Lenny Matterson</h2>
             <p><b>Name:</b> Mr. Lenny MATTERSON</p>
             <p><b>Identifiers:</b> IHI: 8003608166895854 and Medicare Number: 5950890021 (expiry May 2019)</p>
-            <p><b>Contact:</b> (08) 5550 1234 (home phone); 0491 570 006 (mobile)</p>
             <p><b>Gender:</b> male</p>
             <p><b>Birthdate:</b> 6 Feb 1955 6:17AM</p>
             <p><b>Indigenous status:</b> Aboriginal but not Torres Strait Islander origin</p>
@@ -30,14 +28,32 @@
             <p><b>Attested by:</b> Mr. Ned DEACON (on 5 Feb 2019)</p>
             <p><b>Document custodian:</b> Big Pharmacy (HPI-O: 8003626566699734)</p>
 
-            <h3>General Assessment:</h3>
-            <p>Patient has his medications packed into blister packs via ABC pharmacy. He finds them easy to use and they promote good adherence to his regime. His Bluecare nurse, Nurse B, was present for the interview. Of the medication listed on the referral, he is not currently taking Aldara 5% cream and Chloramphenicol ointment. In addition to the medication listed on the referral, he is also taking coQ10 150mg tab - 1 nocte.He reports occasional dizziness if he changes position quickly, and does report falling outside in the garden; he wears a falls alarm buzzer. He reports that he generally only experiences chest pain when he becomes stressed (doesn’t like paperwork). His blood pressure at the time of the interview was 158 /76.</p>
             <h3>Current Medicines</h3>
             <table border="1">
+                <caption>Home Medicines Review</caption>
+                <thead>
+                    <tr>
+                        <th>Date of Interview</th>
+                        <th/>
+                        <th>General Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5 Feb 2019 10:00AM - 5 Feb 2019 11:15AM</td>
+                        <td>Home medicines review</td>
+                        <td>Patient has his medications packed into blister packs via ABC pharmacy. He finds them easy to use and they promote good adherence to his regime. His Bluecare nurse, Nurse B, was present for the interview. Of the medication listed on the referral, he is not currently taking Aldara 5% cream and Chloramphenicol ointment. In addition to the medication listed on the referral, he is also taking coQ10 150mg tab - 1 nocte.He reports occasional dizziness if he changes position quickly, and does report falling outside in the garden; he wears a falls alarm buzzer. He reports that he generally only experiences chest pain when he becomes stressed (doesn’t like paperwork). His blood pressure at the time of the interview was 158 /76.</td>
+                    </tr>                    
+                </tbody>
+            </table>
+            
+            <table border="1">
+                <caption>Current medicines</caption>
                 <thead>
                     <tr>
                         <th>Medicine</th>
                         <th>Directions</th>
+                        <th>Medicine purpose</th>
                         <th>Medicine status</th>
                         <th>Status Reason/Comment</th>
                     </tr>
@@ -46,25 +62,31 @@
                     <tr>
                         <td>Amiodarone 200mg tab</td>
                         <td>1 in the morning</td>
+                        <td/>
                         <td>Unchanged</td>
                         <td/>
                     </tr>
                     <tr>
                         <td>Bisoprolol 2.5mg tab</td>
                         <td>1/2 tablet in the morning</td>
+                        <td/>
                         <td>Unchanged</td>
                         <td/>
                     </tr>
                     <tr>
                         <td>CoQ10 150mg tab</td>
                         <td>1 at night</td>
+                        <td/>
                         <td>New</td>
                         <td>In pack – history of Atrial fibrillation</td>
                     </tr>
                 </tbody>
             </table>
+            <paragraph>Packed medicines: Yes</paragraph>
+            
             <h3>Ceased Medicines</h3>
             <table border="1">
+                <caption>Ceased medicines</caption>
                 <thead>
                     <tr>
                         <th>Ceased medicine</th>
@@ -126,16 +148,6 @@
         <given value="Lenny"/>
         <prefix value="Mr."/>
       </name>
-      <telecom>
-        <system value="phone"/>
-        <value value="0491 570 006"/>
-        <use value="mobile"/>
-      </telecom>
-      <telecom>
-        <system value="phone"/>
-        <value value="(08) 5550 1234"/>
-        <use value="home"/>
-      </telecom>
       <gender value="male"/>
       <birthDate value="1955-02-06">
         <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">

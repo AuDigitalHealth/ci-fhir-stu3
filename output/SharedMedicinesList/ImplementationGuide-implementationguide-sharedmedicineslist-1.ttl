@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "Shared Medicines List"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2019-11-04T14:46:30+10:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2019-11-08T09:37:10+10:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -425,6 +425,108 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2>;
          fhir:Reference.reference [ fhir:value "Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Patient with only identifier, name, address" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656>;
+         fhir:Reference.reference [ fhir:value "Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "PractitionerRole-2be6504a-160a-4cb0-ac4c-4b5aa503085d.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Practitioner role with only code and a reference to practitioner" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/PractitionerRole/2be6504a-160a-4cb0-ac4c-4b5aa503085d>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/2be6504a-160a-4cb0-ac4c-4b5aa503085d" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Practitioner with only identifier, name" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Practitioner/4e2ed22a-95c8-4403-87fa-9a6a171ddc8b>;
+         fhir:Reference.reference [ fhir:value "Practitioner/4e2ed22a-95c8-4403-87fa-9a6a171ddc8b" ]
+       ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-af3be636-c156-4172-8cbb-27856d5fc650.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement with no optional codes and a contained Medication - 1" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650" ]
+       ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-a8bd298d-40d0-4bd9-946b-6688f5f2f443.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement with no optional codes and a contained Medication - 2" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443" ]
+       ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-e558d94a-e4ba-4095-8d2e-74b9df14a9d1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "MedicationStatement with no optional codes and a contained Medication - 3" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1" ]
        ]
      ]
   ];

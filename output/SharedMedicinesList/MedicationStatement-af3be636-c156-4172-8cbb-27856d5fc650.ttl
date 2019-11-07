@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "af3be636-c156-4172-8cbb-27856d5fc650"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: af3be636-c156-4172-8cbb-27856d5fc650</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: unknown resource contained</p><p><b>subject</b>: <a href=\"Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html\">Generated Summary: id: c7688ecf-5a6c-4a2f-ae2c-88a347278656; Medical record number = 542181; Bert Gainey</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: To reduce elevated blood pressure; for the prevention of angina; to treat or prevent heart attack; for the treatment of heart failure; to prevent migranes <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>note</b>: If you feel light-headed, dizzy or faint, get up slowly when getting our of bed. Make sure you drink enough water during excercise and hot weather when             you are taking this medicine, especially if you sweat a lot. If you have excessive vomitting and or diarhoea while taking this medicine tell your             doctor. May cause headache or unusal taste. Do not take potassium supplements while you are taking this medicine unless your doctor tells you to. If you             develop signs of swelling of the lips or tongue, a dry cough or a rash see your doctor.</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "a0f3f01a-be9f-48f6-ae6f-ce5179768889" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.text [ fhir:value "RAMIPRIL(TAB) 2.5 mg, Tritace" ]
+     ]
+  ];
+  fhir:MedicationStatement.status [ fhir:value "completed"];
+  fhir:MedicationStatement.medicationReference [
+     fhir:Reference.reference [ fhir:value "#a0f3f01a-be9f-48f6-ae6f-ce5179768889" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656>;
+     fhir:Reference.reference [ fhir:value "Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "To reduce elevated blood pressure; for the prevention of angina; to treat or prevent heart attack; for the treatment of heart failure; to prevent migranes" ]
+  ];
+  fhir:MedicationStatement.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "If you feel light-headed, dizzy or faint, get up slowly when getting our of bed. Make sure you drink enough water during excercise and hot weather when             you are taking this medicine, especially if you sweat a lot. If you have excessive vomitting and or diarhoea while taking this medicine tell your             doctor. May cause headache or unusal taste. Do not take potassium supplements while you are taking this medicine unless your doctor tells you to. If you             develop signs of swelling of the lips or tongue, a dry cough or a rash see your doctor." ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Take one in the morning" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

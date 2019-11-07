@@ -14,7 +14,7 @@
   <name value="Shared Medicines List"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-11-04T14:46:30+10:00"/>
+  <date value="2019-11-08T09:37:10+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -325,6 +325,84 @@
       <description value="Conversion of the CDA example &#39;SML04_Example.xml&#39;, as a Composition with contained resources"/>
       <sourceReference>
         <reference value="Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html"/>
+      </extension>
+      <example value="true"/>
+      <description value="Patient with only identifier, name, address"/>
+      <sourceReference>
+        <reference value="Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="PractitionerRole-2be6504a-160a-4cb0-ac4c-4b5aa503085d.html"/>
+      </extension>
+      <example value="true"/>
+      <description value="Practitioner role with only code and a reference to practitioner"/>
+      <sourceReference>
+        <reference value="PractitionerRole/2be6504a-160a-4cb0-ac4c-4b5aa503085d"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.html"/>
+      </extension>
+      <example value="true"/>
+      <description value="Practitioner with only identifier, name"/>
+      <sourceReference>
+        <reference value="Practitioner/4e2ed22a-95c8-4403-87fa-9a6a171ddc8b"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-af3be636-c156-4172-8cbb-27856d5fc650.html"/>
+      </extension>
+      <example value="true"/>
+      <description value="MedicationStatement with no optional codes and a contained Medication - 1"/>
+      <sourceReference>
+        <reference value="MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-a8bd298d-40d0-4bd9-946b-6688f5f2f443.html"/>
+      </extension>
+      <example value="true"/>
+      <description value="MedicationStatement with no optional codes and a contained Medication - 2"/>
+      <sourceReference>
+        <reference value="MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationStatement-e558d94a-e4ba-4095-8d2e-74b9df14a9d1.html"/>
+      </extension>
+      <example value="true"/>
+      <description value="MedicationStatement with no optional codes and a contained Medication - 3"/>
+      <sourceReference>
+        <reference value="MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1"/>
       </sourceReference>
     </resource>
   </package>
