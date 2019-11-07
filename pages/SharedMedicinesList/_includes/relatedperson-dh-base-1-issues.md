@@ -12,7 +12,7 @@
   </tr>
   <tr>
         <td>RelatedPerson.name</td>
-        <td>The Snapshot table presents data type profile (HumanNameBase) definition "A human's name with the ability to identify parts and usage." rather than core element (RelatedPerson.name) definition "A name associated with the person.".</td>
+        <td>TBD</td>
         <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/core.20element.20definitions.20overwritten.20by.20IG.20Publisher/near/180005819">Core element definitions overwritten by IG Publisher</a> stream</td>
   </tr>
  </tbody>

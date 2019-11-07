@@ -16,8 +16,8 @@
         <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
   </tr>
       <tr>
-        <td>Organization.name</td>
-        <td>The Snapshot table presents data type profile (HumanNameBase) definition "A human's name with the ability to identify parts and usage." rather than core element (Organization.name) definition "A name associated with the organization.".</td>
+        <td>Organization.contact.name</td>
+        <td>TBD</td>
         <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/core.20element.20definitions.20overwritten.20by.20IG.20Publisher/near/180005819">Core element definitions overwritten by IG Publisher</a> stream</td>
   </tr>
  </tbody>
