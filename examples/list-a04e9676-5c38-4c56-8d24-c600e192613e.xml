@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Conversion of the CDA example 'SML04_Example.xml' as standalone List -->
-
 <List xmlns="http://hl7.org/fhir">
     <id value="a04e9676-5c38-4c56-8d24-c600e192613e"/>
     <meta>
@@ -12,11 +11,8 @@
     <text>
         <status value="additional"/>
         <div xmlns="http://www.w3.org/1999/xhtml" lang="en-AU">
-
             <h1 style="background-color:#0066cc;text-align:center;padding:5px;color:#F0FFFF;font-family:Verdana">Ceased medicines list</h1>
-
             <h2 style="color:#0066cc;font-family:Verdana">for Bert GAINEY, 2 Sep 2019</h2>
-
             <table style="border-collapse:collapse;border-spacing:0;width:100%;border:1px solid #A9A9A9;margin-bottom:25px;" cellpadding="20">
                 <col width="8%"/>
                 <col width="20%"/>
@@ -27,23 +23,33 @@
                 <tbody>
                     <tr>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">Name</td>
-                        <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>Bert Gainey</b></td>
+                        <td style="padding:8px;vertical-align:top;font-family:Verdana">
+                            <b>Bert Gainey</b>
+                        </td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">Record Number</td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>542181</b> (Croydon GP Centre)</td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">Address</td>
-                        <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>1 Caboolture Street, Caboolture, QLD, 4510</b></td>
+                        <td style="padding:8px;vertical-align:top;font-family:Verdana">
+                            <b>1 Caboolture Street, Caboolture, QLD, 4510</b>
+                        </td>
                     </tr>
                     <tr>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">Author</td>
-                        <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>North Black M.D. (General Practitioner)</b></td>
+                        <td style="padding:8px;vertical-align:top;font-family:Verdana">
+                            <b>North Black M.D. (General Practitioner)</b>
+                        </td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">ID</td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>north27</b> (Ascot Vale Family Medical Centre)</td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">Clinic</td>
-                        <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>Ascot Vale Family Medical Centre</b></td>
+                        <td style="padding:8px;vertical-align:top;font-family:Verdana">
+                            <b>Ascot Vale Family Medical Centre</b>
+                        </td>
                     </tr>
                     <tr>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana">Date</td>
-                        <td style="padding:8px;vertical-align:top;font-family:Verdana"><b>2 Sep 2019 10:00:15AM</b></td>
+                        <td style="padding:8px;vertical-align:top;font-family:Verdana">
+                            <b>2 Sep 2019 10:00:15AM</b>
+                        </td>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana"/>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana"/>
                         <td style="padding:8px;vertical-align:top;font-family:Verdana"/>
@@ -51,7 +57,6 @@
                     </tr>
                 </tbody>
             </table>
-
             <table style="border-collapse:collapse;border-spacing:1;width:100%;border:1px solid #A9A9A9;padding:8px;font-family:Verdana;margin-bottom:25px;">
                 <tbody>
                     <tr>
@@ -87,27 +92,11 @@
                     </tr>
                 </tbody>
             </table>
-
         </div>
     </text>
-
-    <contained>
-        <PractitionerRole>
-            <id value="2be6504a-160a-4cb0-ac4c-4b5aa503085d"/>
-            <practitioner>
-                <!-- reference to contained Practitioner resource -->
-                <reference value="Practitioner/4e2ed22a-95c8-4403-87fa-9a6a171ddc8b"/>
-            </practitioner>
-            <code>
-                <text value="General Practitioner"/>
-            </code>
-        </PractitionerRole>
-    </contained>
-
     <extension url="http://hl7.org.au/fhir/StructureDefinition/author-role">
         <valueReference>
-            <!-- reference to contained PractitionerRole resource -->
-            <reference value="#2be6504a-160a-4cb0-ac4c-4b5aa503085d"/>
+            <reference value="PractitionerRole/2be6504a-160a-4cb0-ac4c-4b5aa503085d"/>
         </valueReference>
     </extension>
     <status value="current"/>
