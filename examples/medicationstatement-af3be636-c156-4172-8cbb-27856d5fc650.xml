@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+    <id value="af3be636-c156-4172-8cbb-27856d5fc650"/>
+    <meta>
+        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
+    </meta>
+    <contained>
+        <Medication>
+            <id value="a0f3f01a-be9f-48f6-ae6f-ce5179768889"/>
+            <code>
+                <text value="RAMIPRIL(TAB) 2.5 mg, Tritace"/>
+            </code>
+        </Medication>
+    </contained>
+    <status value="completed"/>
+    <medicationReference>
+        <!-- reference to contained Medication resource -->
+        <reference value="#a0f3f01a-be9f-48f6-ae6f-ce5179768889"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656"/>
+    </subject>
+    <taken value="y"/>
+    <reasonCode>
+        <text value="To reduce elevated blood pressure; for the prevention of angina; to treat or prevent heart attack; for the treatment of heart failure; to prevent migranes"/>
+    </reasonCode>
+    <note>
+        <text value="If you feel light-headed, dizzy or faint, get up slowly when getting our of bed. Make sure you drink enough water during excercise and hot weather when
+            you are taking this medicine, especially if you sweat a lot. If you have excessive vomitting and or diarhoea while taking this medicine tell your
+            doctor. May cause headache or unusal taste. Do not take potassium supplements while you are taking this medicine unless your doctor tells you to. If you
+            develop signs of swelling of the lips or tongue, a dry cough or a rash see your doctor."/>
+    </note>
+    <dosage>
+        <text value="Take one in the morning"/>
+    </dosage>
+</MedicationStatement>
