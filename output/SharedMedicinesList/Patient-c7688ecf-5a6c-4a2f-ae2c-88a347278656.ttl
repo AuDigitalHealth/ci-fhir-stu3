@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "c7688ecf-5a6c-4a2f-ae2c-88a347278656"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: c7688ecf-5a6c-4a2f-ae2c-88a347278656</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical record number = 542181</p><p><b>name</b>: Bert Gainey</p><p><b>address</b>: 1 Caboolture Street Caboolture QLD 4510 AU </p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/v2/0203" ];
+         fhir:Coding.code [ fhir:value "MR" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://www.croydongpcentre.example.com/patients" ];
+     fhir:Identifier.value [ fhir:value "542181" ];
+     fhir:Identifier.assigner [
+       fhir:Reference.display [ fhir:value "Croydon GP Centre" ]
+     ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.text [ fhir:value "Bert Gainey" ]
+  ];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "1 Caboolture Street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Caboolture" ];
+     fhir:Address.state [ fhir:value "QLD" ];
+     fhir:Address.postalCode [ fhir:value "4510" ];
+     fhir:Address.country [ fhir:value "AU" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
