@@ -10,5 +10,5 @@ When sending a shared medicines list to the My Health Record system it is expect
 * an IHI will be sent
 * gender will be sent
 * birthDate will be sent
-* address will not be sent
 * telecom will not be sent
+* address will not be sent
