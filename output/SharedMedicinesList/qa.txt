@@ -1,13 +1,13 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 230, warn = 102, info = 24
+err = 232, warn = 102, info = 24
 IG Publisher Version: v0.9.91-SNAPSHOT Out of date - current version is v0.9.92-SNAPSHOT
-Generated Thu Nov 07 11:46:08 AEST 2019. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+Generated Thu Nov 07 13:52:51 AEST 2019. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 162 / 1
  C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41 : 14 / 30
- C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15 : 33 / 9
+ C:\work\git\ci-fhir-stu3\examples\composition-98e4b64a-d493-45c1-8102-b3b689da1c15 : 34 / 9
  C:\work\git\ci-fhir-stu3\examples\composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28 : 10 / 5
  C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2 : 14 / 11
  C:\work\git\ci-fhir-stu3\examples\list-a04e9676-5c38-4c56-8d24-c600e192613e : 7 / 8
@@ -244,6 +244,7 @@ ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[22].resource.re
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.section[0]: Could not match discriminator ([code]) for slice Composition.section:allergies in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1 - the discriminator [code] does not have fixed value, binding or existence assertions
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.section[1]: Could not match discriminator ([code]) for slice Composition.section:allergies in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1 - the discriminator [code] does not have fixed value, binding or existence assertions
 INFORMATION: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Composition.section[medications]'': Unable to check minimum required (1) due to lack of slicing validation
+ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.text.div: Illegal element name in the XHTML ('paragraph')
 WARNING: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[0].extension[0].value.ofType(Coding): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[1].practitioner: ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 ERROR: Composition/98e4b64a-d493-45c1-8102-b3b689da1c15: Composition.contained[4].type[0].coding[0]: unable to find code 1348931000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1348931000168107'
