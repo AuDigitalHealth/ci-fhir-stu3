@@ -16,11 +16,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.html">Ceased medicines list (Composition with contained resources)</a></td>
-                <td>fd1583a5-bbdd-4d55-96f0-0c189e7c48b2</td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.xml.html">XML</a></td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.json.html">JSON</a></td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.ttl.html">Turtle</a></td>
+                <td><a href="Organization-ec676574-724d-4321-911d-54703015809e.html">Organization example 1</a></td>
+                <td>ec676574-724d-4321-911d-54703015809e</td>
+                <td><a href="Organization-ec676574-724d-4321-911d-54703015809e.xml.html">XML</a></td>
+                <td><a href="Organization-ec676574-724d-4321-911d-54703015809e.json.html">JSON</a></td>
+                <td><a href="Organization-ec676574-724d-4321-911d-54703015809e.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
  </table>
