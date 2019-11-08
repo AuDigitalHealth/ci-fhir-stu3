@@ -112,12 +112,10 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/author-role": [
       "Bundle.entry.resource",
-      "Composition.contained",
       "List"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/change-description": [
       "Bundle.entry.resource.entry",
-      "Composition.contained.entry",
       "List.entry"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration": [
@@ -132,7 +130,7 @@
       "Patient.deceased[x]"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/encounter-description": [
-      "Composition.contained",
+      "Bundle.entry.resource",
       "Encounter"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/encounter-destination-organisation": [
@@ -151,7 +149,6 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/indigenous-status": [
       "Bundle.entry.resource",
-      "Composition.contained",
       "Patient"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/information-recipient": [
@@ -193,7 +190,7 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/patient-birthTime": [
-      "Composition.contained.birthDate",
+      "Bundle.entry.resource.birthDate",
       "Patient.birthDate"
     ],
     "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName": [
