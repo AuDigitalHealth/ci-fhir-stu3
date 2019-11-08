@@ -9,7 +9,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Composition-98e4b64a-d493-45c1-8102-b3b689da1c15.html">Home Medicines Review Report for Mr. Lenny Matterson (Composition with contained resources)</a></td>
+                <td><a href="Composition-98e4b64a-d493-45c1-8102-b3b689da1c15.html">Home Medicines Review Report for Mr. Lenny Matterson (contained)</a></td>
                 <td>98e4b64a-d493-45c1-8102-b3b689da1c15</td>
                 <td><a href="Composition-98e4b64a-d493-45c1-8102-b3b689da1c15.xml.html">XML</a></td>
                 <td><a href="Composition-98e4b64a-d493-45c1-8102-b3b689da1c15.json.html">JSON</a></td>
