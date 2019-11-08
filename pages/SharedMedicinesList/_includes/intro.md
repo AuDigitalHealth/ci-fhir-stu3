@@ -140,8 +140,8 @@ This table lists known issues with this specification at the time of publishing.
     </tr>
     <tr>
         <td>Roadmap STU3 to R4</td>
-        <td>As FHIR R4 brings in backward compatibility and many tweaks to the resources, we will baseline and freeze STU3 SML profiles and implementation guide before the process of transition to R4 begins. <br/><br/>
-            Defects in STU3 SML profiles have been fixed and known issues (if any) have been added to STU3 SML implementation guide. This has been followed by updating usage scenarios and implementation guidance on every profile of the SML implementation guide. The examples have been improved to be robust and versatile. This work on the STU3 SML artefacts and SML implementation guide is underway to transition from STU3 into R4. <br/><br/>
+        <td>FHIR R4 brings in backward compatibility and many tweaks to the resources, we will baseline and freeze STU3 SML profiles and implementation guide for the process of transition to R4. <br/><br/>
+            Defects in STU3 SML profiles have been fixed and known issues have been added to STU3 SML implementation guide. This has been followed by updating usage scenarios and implementation guidance on every profile of the SML implementation guide. The examples have been improved to be robust and versatile. This work on the STU3 SML artefacts and SML implementation guide is now ready to transition from STU3 into R4. <br/><br/>
             The transition to R4 will be a collaboratively approach to research and develop new FHIR-IGs with HL7 AU. Further details on transition to R4 have been documented on the <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/wiki/Roadmap-STU3-to-R4">FHIR roadmap</a>.</td>
     </tr>
  </tbody>
