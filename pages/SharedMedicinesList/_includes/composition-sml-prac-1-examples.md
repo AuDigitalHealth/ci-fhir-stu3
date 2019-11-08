@@ -17,11 +17,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.html">Pharmacist Shared Medicines List example 3 (Composition with contained resources)</a></td>
-                <td>ab4537a4-20c9-4f8a-9867-5c435b7eaa28</td>
-                <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.xml.html">XML</a></td>
-                <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.json.html">JSON</a></td>
-                <td><a href="Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.ttl.html">Turtle</a></td>
+                <td><a href="Bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.html">Pharmacist Shared Medicines List example 3 (bundle)</a></td>
+                <td>b50acc1e-3f4e-41d3-9c21-dda924adb210</td>
+                <td><a href="Bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.xml.html">XML</a></td>
+                <td><a href="Bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.json.html">JSON</a></td>
+                <td><a href="Bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
             <tr>
