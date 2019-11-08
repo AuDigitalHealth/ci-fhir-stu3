@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "Shared Medicines List"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2019-11-08T10:02:12+10:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2019-11-08T12:55:22+10:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -380,17 +380,17 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Composition" ]
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.html" ]
+         fhir:Extension.valueUri [ fhir:value "Bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
-       fhir:ImplementationGuide.package.resource.description [ fhir:value "Representation of the CDA example 'SML03_Example.xml' as a Composition with contained resources, and some logical identifiers" ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Representation of the CDA example 'SML03_Example.xml' as a Bundle" ];
        fhir:ImplementationGuide.package.resource.sourceReference [
-         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28>;
-         fhir:Reference.reference [ fhir:value "Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28" ]
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210>;
+         fhir:Reference.reference [ fhir:value "Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210" ]
        ]
      ], [
        fhir:index 21;
@@ -527,6 +527,23 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1>;
          fhir:Reference.reference [ fhir:value "MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1" ]
+       ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Organization-ec676574-724d-4321-911d-54703015809e.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.description [ fhir:value "Organization with only identifier, name" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Organization/ec676574-724d-4321-911d-54703015809e>;
+         fhir:Reference.reference [ fhir:value "Organization/ec676574-724d-4321-911d-54703015809e" ]
        ]
      ]
   ];
