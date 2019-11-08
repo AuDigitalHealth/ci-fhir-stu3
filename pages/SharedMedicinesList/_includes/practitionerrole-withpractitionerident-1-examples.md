@@ -16,14 +16,6 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.html">Ceased medicines list (Composition with contained resources)</a></td>
-                <td>fd1583a5-bbdd-4d55-96f0-0c189e7c48b2</td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.xml.html">XML</a></td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.json.html">JSON</a></td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.ttl.html">Turtle</a></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td><a href="PractitionerRole-2be6504a-160a-4cb0-ac4c-4b5aa503085d.html">PractitionerRole example 1 (referenced)</a></td>
                 <td>2be6504a-160a-4cb0-ac4c-4b5aa503085d</td>
                 <td><a href="PractitionerRole-2be6504a-160a-4cb0-ac4c-4b5aa503085d.xml.html">XML</a></td>

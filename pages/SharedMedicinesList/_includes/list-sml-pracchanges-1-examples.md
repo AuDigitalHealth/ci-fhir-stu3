@@ -24,14 +24,6 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.html">Ceased medicines list (Composition with contained resources)</a></td>
-                <td>fd1583a5-bbdd-4d55-96f0-0c189e7c48b2</td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.xml.html">XML</a></td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.json.html">JSON</a></td>
-                <td><a href="Composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2.ttl.html">Turtle</a></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.html">Ceased medicines list (referenced)</a></td>
                 <td>a04e9676-5c38-4c56-8d24-c600e192613e</td>
                 <td><a href="List-a04e9676-5c38-4c56-8d24-c600e192613e.xml.html">XML</a></td>
