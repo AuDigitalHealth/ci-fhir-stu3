@@ -24,7 +24,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.html">Practitioner with only name and identifier</a></td>
+                <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.html">Practitioner example 1</a></td>
                 <td>4e2ed22a-95c8-4403-87fa-9a6a171ddc8b</td>
                 <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.xml.html">XML</a></td>
                 <td><a href="Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.json.html">JSON</a></td>
