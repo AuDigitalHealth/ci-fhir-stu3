@@ -2,8 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="b50acc1e-3f4e-41d3-9c21-dda924adb210"/>
     <meta>
-        <!--TBD: see the encounter details -->
-        <lastUpdated value="2018-12-10T11:30:00+10:00"/>
+        <lastUpdated value="2019-08-12T10:30:00+10:00"/>
     </meta>
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
@@ -22,13 +21,12 @@
                     />
                 </meta>
                 <language value="en-AU"/>
-                <!-- TBD - when the other alignment ticket is done-->
                 <text>
                     <status value="additional"/>
                     <div xmlns="http://www.w3.org/1999/xhtml">
                         <h2>Shared Medicines List</h2>
                         <ul>
-                            <li>Date: 12/08/2018</li>
+                            <li>Date: 12/08/2019</li>
                             <li>Status: final</li>
                         </ul>
                         <h3>Patient details</h3>
@@ -49,7 +47,7 @@
                         <ul>
                             <li>Pharmacist</li>
                             <li>HPI-I: 8003619900041630</li>
-                            <li>Time: 2019-09-02T10:00:15+10:00</li>
+                            <li>Time: 02 Dec 2019 10:00 AM</li>
                         </ul>
                         <h3>General Practitioner</h3>
                         <ul>
@@ -57,19 +55,10 @@
                         </ul>
                         <h3>Allergies and Intolerances</h3>
                         <p>No known allergies</p>
+
                         <h3>Encounter Details</h3>
-                        <table border="1">
-                            <tr>
-                                <th>Description</th>
-                                <th>Start</th>
-                                <th>End</th>
-                            </tr>
-                            <tr>
-                                <td>Medicines review</td>
-                                <td>12 Aug 2018 09:00 AM</td>
-                                <td>12 Aug 2018 10:30 AM</td>
-                            </tr>
-                        </table>
+                        <p>Medicines review: 12 Aug 2019 09:00 AM to 12 Aug 2019 10:30 AM</p>
+
                         <h3>Current Medicines</h3>
                         <table border="1">
                             <caption>Current medicines</caption>
@@ -142,18 +131,7 @@
                     </coding>
                 </type>
                 <subject>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </subject>
                 <encounter>
                     <reference value="urn:uuid:f168de08-0068-4e8b-917d-c7b84dcafbf6"/>
@@ -227,7 +205,6 @@
                         <reference value="urn:uuid:9e146d18-06c8-4906-a8dd-09aa11941a72"/>
                     </entry>
                 </section>
-
                 <section>
                     <title value="Current Medicines"/>
                     <code>
@@ -292,8 +269,36 @@
                         <reference value="urn:uuid:bea8b6f7-5de8-4247-ac07-b319ec6d0c24"/>
                     </entry>
                 </section>
-
             </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
+        <resource>
+            <Patient>
+                <id value="a4b78cdc-7833-4352-aac0-cacdfce67591"/>
+                <identifier>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="NI"/>
+                            <display value="National unique individual identifier"/>
+                        </coding>
+                    </type>
+                    <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
+                    <value value="8003608000228445"/>
+                </identifier>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="0491 570 006"/>
+                    <use value="mobile"/>
+                </telecom>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="(08) 5550 1234"/>
+                    <use value="home"/>
+                </telecom>
+            </Patient>
         </resource>
     </entry>
     <entry>
@@ -311,18 +316,7 @@
                     <text value="Medicines review"/>
                 </type>
                 <subject>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </subject>
                 <period>
                     <start value="2019-08-12T09:00:00+10:00"/>
@@ -347,28 +341,7 @@
                     <text value="No known allergies"/>
                 </code>
                 <patient>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
-                    <telecom>
-                        <system value="phone"/>
-                        <value value="0491 570 006"/>
-                        <use value="mobile"/>
-                    </telecom>
-                    <telecom>
-                        <system value="phone"/>
-                        <value value="(08) 5550 1234"/>
-                        <use value="home"/>
-                    </telecom>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </patient>
             </AllergyIntolerance>
         </resource>
@@ -407,18 +380,7 @@
                     </coding>
                 </code>
                 <subject>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </subject>
                 <encounter>
                     <reference value="urn:uuid:f168de08-0068-4e8b-917d-c7b84dcafbf6"/>
@@ -494,18 +456,7 @@
                     <reference value="urn:uuid:01015470-52ce-4323-996b-f03f5f546f8f"/>
                 </medicationReference>
                 <subject>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </subject>
                 <taken value="y"/>
                 <reasonCode>
@@ -532,18 +483,7 @@
                     <reference value="urn:uuid:7cb67069-6a34-46c2-9ff5-76277fafc38e"/>
                 </medicationReference>
                 <subject>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </subject>
                 <taken value="y"/>
                 <reasonCode>
@@ -575,18 +515,7 @@
                     <reference value="urn:uuid:9b79ca2a-023a-4076-b18d-0b2b5d99800d"/>
                 </medicationReference>
                 <subject>
-                    <!-- logical reference to Patient -->
-                    <identifier>
-                        <type>
-                            <coding>
-                                <system value="http://hl7.org/fhir/v2/0203"/>
-                                <code value="NI"/>
-                                <display value="National unique individual identifier"/>
-                            </coding>
-                        </type>
-                        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-                        <value value="8003608000228445"/>
-                    </identifier>
+                    <reference value="urn:uuid:a4b78cdc-7833-4352-aac0-cacdfce67591"/>
                 </subject>
                 <taken value="y"/>
                 <reasonCode>
