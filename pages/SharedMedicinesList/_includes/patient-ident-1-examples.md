@@ -24,7 +24,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td><a href="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html">Patient with only identifier, name, address</a></td>
+                <td><a href="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html">Patient example 1</a></td>
                 <td>c7688ecf-5a6c-4a2f-ae2c-88a347278656</td>
                 <td><a href="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.xml.html">XML</a></td>
                 <td><a href="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.json.html">JSON</a></td>
