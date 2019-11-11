@@ -1,5 +1,5 @@
 # {{ site.data.fhir.igName }} FHIR Implementation Guide
-<h3 style="color:#ff0000;">Draft for internal review</h3>
+<h3 style="color:#ff0000;">Draft for restricted external review</h3>
 {:.no_toc}
 
 {% include publish-box.html %}
@@ -120,10 +120,6 @@ This table lists known issues with this specification at the time of publishing.
         <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
     </tr>
     <tr>
-        <td>Status of this FHIR IG</td>
-        <td>This FHIR IG is currently in progress. While it is expected that a baseline of this FHIR IG will be frozen (possibly as at Trial Use) for the purposes of approval and publication of the corresponding CDA IG, it is not expected that the baseline of this FHIR IG will be approved for use in FHIR implementations.</td>
-    </tr>
-    <tr>
         <td>Recording information that a medicine list contains medicine items packed in a dose administration aid</td>
         <td>National agreement on the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA) is not yet supported. A supporting data model would allow recording information about an individual receiving packed medicines so that consultations with healthcare providers and healthcare can be tailored to suit the individual. This has been raised in HL7 AU github for consideration in the HL7 AU Medications work group, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/><br/>
            In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br/><br/>
@@ -135,15 +131,12 @@ This table lists known issues with this specification at the time of publishing.
         <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
     </tr>
     <tr>
-        <td>Supported usage scenarios</td>
-        <td>The profiles described in this implementation guide only support practitioner authoring usage scenarios. Future releases of this implementation guide are expected to provide support for additional usage scenarios including other authoring entities.</td>
-    </tr>
-    <tr>
-        <td>Roadmap STU3 to R4</td>
-        <td>FHIR R4 brings in backward compatibility and many tweaks to the resources, we will baseline and freeze STU3 SML profiles and implementation guide for the process of transition to R4. <br/><br/>
-            Defects in STU3 SML profiles have been fixed and known issues have been added to STU3 SML implementation guide. This has been followed by updating usage scenarios and implementation guidance on every profile of the SML implementation guide. The examples have been improved to be robust and versatile. This work on the STU3 SML artefacts and SML implementation guide is now ready to transition from STU3 into R4. <br/><br/>
-            The transition to R4 will be a collaboratively approach to research and develop new FHIR-IGs with HL7 AU. Further details on transition to R4 have been documented on the <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/wiki/Roadmap-STU3-to-R4">FHIR roadmap</a>.</td>
-    </tr>
+        <td>SML FHIR implementation guide roadmap</td>
+        <td>The profiles that form part of this implementation guide are in transition to a FHIR Release 4 representation in collaboration with HL7 Australia.<br/><br/>
+		This move has normative implications that are expected to result in major version incrementation to accommodate backwards incompatible changes. Widespread changes to terminology and the removal or renaming of some elements are expected to make up the bulk of the backwards incompatible changes.<br/><br/>
+        The profiles described in this implementation guide only support practitioner authoring usage scenarios. Future releases of this implementation guide are expected to provide support for additional usage scenarios including other authoring entities.
+        </td>
+     </tr>
  </tbody>
 </table> 
 

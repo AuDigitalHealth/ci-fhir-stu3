@@ -1,12 +1,12 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 306, warn = 86, info = 22
+err = 126, warn = 92, info = 22
 IG Publisher Version: v0.9.91-SNAPSHOT Out of date - current version is v0.9.92-SNAPSHOT
-Generated Fri Nov 08 14:19:14 AEST 2019. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+Generated Fri Nov 08 15:32:16 AEST 2019. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 190 / 1
- C:\work\git\ci-fhir-stu3\examples\bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c : 98 / 7
+ C:\work\git\ci-fhir-stu3\examples\bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c : 8 / 10
  C:\work\git\ci-fhir-stu3\examples\bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210 : 3 / 6
  C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41 : 14 / 30
  C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2 : 1 / 3
@@ -231,111 +231,24 @@ ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\security.html: The ht
 ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\structuremaps.html: The html source does not contain the publish box
 ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\terminology.html: The html source does not contain the publish box
 == C:\work\git\ci-fhir-stu3\examples\Bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c.xml ==
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.meta.lastUpdated: The instant '2019-02-0905T10:49:22+10:00' is not valid (by regex)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.meta.lastUpdated: Not a valid instant (Invalid date/time format: "2019-02-0905T10:49:22+10:00": Expected character 'T' at index 10 but found 0)
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[0]: Could not match discriminator ([code]) for slice Composition.section:allergies in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1 - the discriminator [code] does not have fixed value, binding or existence assertions
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[1]: Could not match discriminator ([code]) for slice Composition.section:allergies in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1 - the discriminator [code] does not have fixed value, binding or existence assertions
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Bundle.entry[0].resource.section[medications]'': Unable to check minimum required (1) due to lack of slicing validation
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.text.div: Illegal element name in the XHTML ('paragraph')
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.extension[0].value.ofType(Reference): Unable to resolve resource '#91555386-d478-4e3d-bd3d-ac642ff603c4'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.extension[0].value.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: 91555386-d478-4e3d-bd3d-ac642ff603c4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.encounter: Unable to resolve resource '#c97d9869-3d3b-4612-958d-7af2c1ffd1da'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.encounter: ref-1: SHALL have a contained resource if a local reference is provided ( (url: c97d9869-3d3b-4612-958d-7af2c1ffd1da; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.author[0]: Unable to resolve resource '#f9695b57-7502-4f50-bf36-b68a755e9956'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.author[0]: ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.attester[0].party: Unable to resolve resource '#f9695b57-7502-4f50-bf36-b68a755e9956'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.attester[0].party: ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.custodian: Unable to resolve resource '#1a8a2450-f190-4511-a24c-a2825a5ae1ee'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.custodian: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1a8a2450-f190-4511-a24c-a2825a5ae1ee; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[0].entry[0]: Unable to resolve resource '#05ed5a63-70ab-4dfb-820c-4be0d79bb0d3'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[0].entry[0]: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 05ed5a63-70ab-4dfb-820c-4be0d79bb0d3; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[1].entry[0]: Unable to resolve resource '#c0c68add-8f8f-472e-98f3-ffcb0b6e016b'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[1].entry[0]: ref-1: SHALL have a contained resource if a local reference is provided ( (url: c0c68add-8f8f-472e-98f3-ffcb0b6e016b; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.extension[0].value.ofType(Coding): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[2].resource.practitioner: Unable to resolve resource '#f9695b57-7502-4f50-bf36-b68a755e9956'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[2].resource.practitioner: ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
+WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.communication[0].language: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2 not found by validator
+WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[5].resource.type[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1 not found by validator
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[5].resource.type[0].coding[0]: unable to find code 1348931000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1348931000168107'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[5].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[5].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.extension[0].value.ofType(Reference): Unable to resolve resource '#91555386-d478-4e3d-bd3d-ac642ff603c4'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.extension[0].value.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: 91555386-d478-4e3d-bd3d-ac642ff603c4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.encounter: Unable to resolve resource '#c97d9869-3d3b-4612-958d-7af2c1ffd1da'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.encounter: ref-1: SHALL have a contained resource if a local reference is provided ( (url: c97d9869-3d3b-4612-958d-7af2c1ffd1da; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.source: Unable to resolve resource '#f9695b57-7502-4f50-bf36-b68a755e9956'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.source: ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.entry[0].item: Unable to resolve resource '#b8353097-2f90-4397-95e0-b7c6f809b0eb'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.entry[0].item: ref-1: SHALL have a contained resource if a local reference is provided ( (url: b8353097-2f90-4397-95e0-b7c6f809b0eb; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.entry[1].item: Unable to resolve resource '#5cde18e4-2b6b-4081-9382-e37abdec5890'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.entry[1].item: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 5cde18e4-2b6b-4081-9382-e37abdec5890; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.entry[2].item: Unable to resolve resource '#466c4379-3133-4498-ba33-94610ef35845'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.entry[2].item: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 466c4379-3133-4498-ba33-94610ef35845; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
+WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.subject.resource.extension[0].value.ofType(Coding): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
+ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource.encounter.resource.type[0].coding[0]: unable to find code 1348931000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1348931000168107'
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6].resource: Resource has a language, but the XHTML does not have a language tag
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[7].resource.medication.ofType(Reference): Unable to resolve resource '#c75149aa-8bdd-401b-a234-3e533991cd92'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[7].resource.medication.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: c75149aa-8bdd-401b-a234-3e533991cd92; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[7].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[7].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[9].resource.medication.ofType(Reference): Unable to resolve resource '#8a484362-afb0-4c28-b40b-d1a2ae677de3'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[9].resource.medication.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: 8a484362-afb0-4c28-b40b-d1a2ae677de3; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[9].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[9].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[10].resource.code.coding[0]: unable to find code 23281011000036106 in http://snomed.info/sct for 'http://snomed.info/sct#23281011000036106'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[11].resource.medication.ofType(Reference): Unable to resolve resource '#cd5a6cac-f6e5-4aa8-b497-6b0e903442cd'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[11].resource.medication.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: cd5a6cac-f6e5-4aa8-b497-6b0e903442cd; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[11].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[11].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[12].resource.code.coding[0]: unable to find code 920941011000036100 in http://snomed.info/sct for 'http://snomed.info/sct#920941011000036100'
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource: Resource has a language, but the XHTML does not have a language tag
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.extension[0].value.ofType(Reference): Unable to resolve resource '#91555386-d478-4e3d-bd3d-ac642ff603c4'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.extension[0].value.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: 91555386-d478-4e3d-bd3d-ac642ff603c4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1 not found by validator
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.source: Unable to resolve resource '#f9695b57-7502-4f50-bf36-b68a755e9956'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.source: ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9695b57-7502-4f50-bf36-b68a755e9956; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.entry[0].flag: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.entry[0].item: Unable to resolve resource '#99d5fa08-35cd-47cc-9728-896476791b15'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.entry[0].item: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 99d5fa08-35cd-47cc-9728-896476791b15; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.entry[1].flag: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-event-1 not found by validator
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.entry[1].item: Unable to resolve resource '#c753dc46-f390-47c5-8760-241a3242279f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13].resource.entry[1].item: ref-1: SHALL have a contained resource if a local reference is provided ( (url: c753dc46-f390-47c5-8760-241a3242279f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[14].resource.medication.ofType(Reference): Unable to resolve resource '#84d6b33a-ffe3-42e1-8a97-2f32c611d1ed'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[14].resource.medication.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: 84d6b33a-ffe3-42e1-8a97-2f32c611d1ed; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[14].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[14].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[15].resource.code.coding[0]: unable to find code 119411000036106 in http://snomed.info/sct for 'http://snomed.info/sct#119411000036106'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[16].resource.medication.ofType(Reference): Unable to resolve resource '#f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[16].resource.medication.ofType(Reference): ref-1: SHALL have a contained resource if a local reference is provided ( (url: f33a47d5-bc8f-4013-ae1e-53b0cf5e26ed; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[16].resource.subject: Unable to resolve resource '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[16].resource.subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1fbd9663-b4cd-4a33-9657-650eca3a6b3f; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[17].resource.code.coding[0]: unable to find code 22717011000036101 in http://snomed.info/sct for 'http://snomed.info/sct#22717011000036101'
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.subject.reference: Can't find '#1fbd9663-b4cd-4a33-9657-650eca3a6b3f' in the bundle (Composition.subject)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.author[1].reference: Can't find '#f9695b57-7502-4f50-bf36-b68a755e9956' in the bundle (Composition.author)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.encounter.reference: Can't find '#c97d9869-3d3b-4612-958d-7af2c1ffd1da' in the bundle (Composition.encounter)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.custodian.reference: Can't find '#1a8a2450-f190-4511-a24c-a2825a5ae1ee' in the bundle (Composition.custodian)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.attester[1].party.reference: Can't find '#f9695b57-7502-4f50-bf36-b68a755e9956' in the bundle (Composition.attester.party)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.section[1].entry[1].reference: Can't find '#05ed5a63-70ab-4dfb-820c-4be0d79bb0d3' in the bundle (Section Entry)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.section[2].entry[1].reference: Can't find '#c0c68add-8f8f-472e-98f3-ffcb0b6e016b' in the bundle (Section Entry)
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[2]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[3]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[4]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[5]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[6]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[7]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[8]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[9]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[10]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[11]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[12]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[13]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[14]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[15]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[16]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[17]: Entry isn't reachable by traversing from first Bundle entry
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[18]: Entry isn't reachable by traversing from first Bundle entry
 == C:\work\git\ci-fhir-stu3\examples\bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.xml ==
 WARNING: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource: Resource has a language, but the XHTML does not have a language tag
 ERROR: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.section[0]: Could not match discriminator ([code]) for slice Composition.section:allergies in profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1 - the discriminator [code] does not have fixed value, binding or existence assertions

@@ -179,10 +179,20 @@
                                         <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
                                     </tr> 
                                     <tr>
+                                        <td><a href="StructureDefinition-immunization-summary-1.html">Immunization (Summary Statement of Vaccine)</a></td>
+                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/immunization.html">Immunization</a></td>
+                                    </tr>           
+                                    <tr>
                                         <td><a href="StructureDefinition-list-medseventchanges-1.html">List (List of Medicine Changes from an Event)</a></td>
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-medlist.html">AU Medicine List</a></td>
                                         <td><a href="http://hl7.org/fhir/stu3/list.html">List</a></td>
                                     </tr>
+                                    <tr>
+                                        <td><a href="StructureDefinition-medicationstatement-summary-1.html">MedicationStatement (Summary Statement of Known Medicine)</a></td>
+                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
+                                    </tr>                           
                                     <tr>
                                         <td><a href="StructureDefinition-observation-norelevantfinding-1.html">Observation (Assertion of No Relevant Finding)</a></td>
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-norelevantfinding.html">AU Assertion of No Relevant Finding</a></td>
@@ -223,29 +233,17 @@
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
                                         <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
                                     </tr>
+                                     <tr>
+                                        <td><a href="StructureDefinition-procedure-summary-1.html">Procedure (Summary Statement of Known Procedure)</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
+                                    </tr>                                        
                                     <tr>
                                         <td><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></td>
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-relatedperson.html">AU Base RelatedPerson</a></td>
                                         <td><a href="http://hl7.org/fhir/STU3/relatedperson.html">RelatedPerson </a></td>
                                     </tr> 
- 
-  
-  
-                                    <tr>
-                                        <td><a href="StructureDefinition-procedure-summary-1.html">Procedure (Summary Statement of Known Procedure)</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/procedure.html">Procedure</a></td>
-                                    </tr>     
-                                    <tr>
-                                        <td><a href="StructureDefinition-medicationstatement-summary-1.html">MedicationStatement (Summary Statement of Known Medicine)</a></td>
-                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-medicationstatement.html">AU Base Medication Statement</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/medicationstatement.html">MedicationStatement</a></td>
-                                    </tr>  
-                                    <tr>
-                                        <td><a href="StructureDefinition-immunization-summary-1.html">Immunization (Summary Statement of Vaccine)</a></td>
-                                        <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-immunization.html">AU Base Immunisation</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/immunization.html">Immunization</a></td>
-                                    </tr>  
+
                                 </table>
                             </div>
                         </div>  <!-- /inner-wrapper -->
