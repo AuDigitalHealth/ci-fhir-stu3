@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an advance care record, including Advance Care Planning (ACP) and Advance Care Directive Custodian Record (ACDCR).
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an advance care record, including Advance Care Planning (ACP) and Advance Care Directive Custodian Record (ACDCR). An advance care record is a copy, or pointer to where a copy may be obtained, of an individual's decisions about their future care should they become incapable of participating in medical treatment decisions. 
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU)](http://hl7.org/fhir/STU3/index.html) [[HL7FHIR3]](index.html#HL7FHIR3).
 

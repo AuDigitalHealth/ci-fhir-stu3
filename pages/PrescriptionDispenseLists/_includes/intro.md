@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent a Prescription and Dispense Lists (PDL).
+This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent prescription and / or dispense lists, including Prescription List (PL), Dispense List (PL), Prescription and Dispense List (PDL).
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
