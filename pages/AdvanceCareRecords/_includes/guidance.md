@@ -64,6 +64,7 @@ Readers of this implementation guide are encouraged to actively participate in t
     <th>Reference</th>
     <th>Description</th>
     <th>Issue No.</th>
+ </tr>    
   <tr>
     <td>Invariants may not constrain as intended</td>
     <td>
