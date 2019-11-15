@@ -66,6 +66,13 @@ Readers of this implementation guide are encouraged to actively participate in t
     <th>Issue No.</th>
   </tr>
   <tr>
+    <td>qualification.code (Australian localisation)</td>
+    <td>
+        <p>Work is underway to provide terminology for Australian qualifications. This work is expected to be available in an R4 variant of this profile.</p>
+    </td>
+    <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314"> au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
+  </tr>  
+  <tr>
     <td>Invariants may not constrain as intended</td>
     <td>
         <p>Currently the FHIR Validator (which is used by IG Publisher) does not fully support all constraints defined in the FHIR specification. For example invariants using conformsTo() have not been able to be confirmed and do not reject resources that are expected to fail.</p>
@@ -103,6 +110,20 @@ Readers of this implementation guide are encouraged to actively participate in t
         <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
     </td>
   </tr>
+  <tr>
+    <td>Source material errors</td>
+    <td>
+        <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
+    </td>
+    <td></td>
+  </tr>  
+  <tr>
+    <td>Non-resolving profile URLs</td>
+    <td>
+        <p>Canonical URLs with the prefix of <a href="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</a> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</p>
+    </td>
+    <td></td>
+  </tr>      
  </tbody>
 </table> 
 
