@@ -170,7 +170,6 @@
   <li>Profile title followed by the profile status hyperlinked to FHIR <a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">PublicationStatus</a>.</li>
   <li>Usage scenarios, if present, includes a short description of the example or expected usage scenarios for that profile that are supported by this implementation guide. Usage scenarios are only present if a profile is of the primary grouping resource for exchange purposes.</li>
   <li>Implementation guidance includes guidance specific to the usage scenarios supported by this implementation guide. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.</li>
-  <li>Examples includes links to example resources that conform to the profile or extension and that support implementation by demonstrating one or more usage scenarios supported by this implementation guide.</li>
   <li>Formal Views of Profile Content includes the human readable view of the normative definition of the profile or extension.</li>
   <li>Known Issues includes the list of unintended or unexpected behaviours associated with that profile we are aware of that have an impact that implementers should take note of.</li>
 </ul>
@@ -215,6 +214,13 @@
     <th>Issue No.</th>
   </tr>
   <tr>
+    <td>qualification.code (Australian localisation)</td>
+    <td>
+        <p>Work is underway to provide terminology for Australian qualifications. This work is expected to be available in an R4 variant of this profile.</p>
+    </td>
+    <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314"> au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
+  </tr>    
+  <tr>
     <td>Invariants may not constrain as intended</td>
     <td>
         <p>Currently the FHIR Validator (which is used by IG Publisher) does not fully support all constraints defined in the FHIR specification. For example invariants using conformsTo() have not been able to be confirmed and do not reject resources that are expected to fail.</p>
@@ -252,6 +258,20 @@
         <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
     </td>
   </tr>
+  <tr>
+    <td>Source material errors</td>
+    <td>
+        <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
+    </td>
+    <td></td>
+  </tr>  
+  <tr>
+    <td>Non-resolving profile URLs</td>
+    <td>
+        <p>Canonical URLs with the prefix of <a href="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</a> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</p>
+    </td>
+    <td></td>
+  </tr>     
  </tbody>
 </table>
 
@@ -379,11 +399,11 @@ in some cases binding an element to a value set or binding to a single fixed cod
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-xxx:2019</p>
+            <p>Document ID: DH-xxx:2019 Draft for internal use</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11917) generated on Mon, Nov 4, 2019 14:31+1000. |
+            <p>Event Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 15, 2019 11:34+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
