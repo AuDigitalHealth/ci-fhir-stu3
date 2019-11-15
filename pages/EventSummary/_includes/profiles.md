@@ -165,8 +165,8 @@
                                     </tr> 
                                     <tr>
                                         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-dosage.html">Dosage (AU Base Dosage)</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
-                                        <td><a href="http://hl7.org/fhir/STU3/datatypes.html#Dosage">Dosage</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/dosage.html#Dosage">Dosage</a></td>
+                                        <td><a href="http://hl7.org/fhir/STU3/dosage.html#Dosage">Dosage</a></td>
                                     </tr>
                                     <tr>
                                         <td><a href="StructureDefinition-encounter-es-1.html">Encounter (Summary of an Encounter for an Event)</a></td>
