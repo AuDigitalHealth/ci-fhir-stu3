@@ -73,6 +73,13 @@ Readers of this implementation guide are encouraged to actively participate in t
     <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314"> au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
   </tr>  
   <tr>
+    <td>Constraint presentation</td>
+    <td>
+        <p>The full set of constraints (i.e. invariants) defined in this profile are only presented in the Detailed Descriptions tab or the raw representation (e.g. XML) of the profile. The Differential Table only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The Snapshot Table only presents the constraints visible in the Differential Table and additionally presents those constraints set in slices in the base profile.</p>
+    </td>
+    <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
+  </tr>  
+  <tr>
     <td>Invariants may not constrain as intended</td>
     <td>
         <p>Currently the FHIR Validator (which is used by IG Publisher) does not fully support all constraints defined in the FHIR specification. For example invariants using conformsTo() have not been able to be confirmed and do not reject resources that are expected to fail.</p>
