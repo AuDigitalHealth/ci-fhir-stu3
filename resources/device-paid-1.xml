@@ -1,151 +1,139 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="device-paid-1"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-paid-1"/>
-  <version value="1.0.0"/>
-  <name value="DevicePAID"/>
-  <title value="Device with Mandatory PAI-D"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <publisher value="Australian Digital Health Agency"/>
+  <id value="device-paid-1" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-paid-1" />
+  <version value="1.0.0" />
+  <name value="DevicePAID" />
+  <title value="Device with Mandatory PAI-D" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description
-    value="The purpose of this profile is to define a representation of a device in an Australian context where an identifier as a My Health Record (PCEHR) Assigned Identity for Devices is mandatory. &#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
-  <copyright
-    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Device"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-device"/>
-  <derivation value="constraint"/>
+  <description value="The purpose of this profile is to define a representation of a device in an Australian context where an identifier as a My Health Record (PCEHR) Assigned Identity for Devices is mandatory. &#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Device" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-device" />
+  <derivation value="constraint" />
   <differential>
-    <element id="Device">
-      <path value="Device"/>      
-    </element>
     <element id="Device.identifier">
-      <path value="Device.identifier"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
+      <path value="Device.identifier" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.identifier:paid">
       <path value="Device.identifier" />
       <sliceName value="paid" />
       <short value="PAI-D" />
-      <definition value="My Health Record (PCEHR) Assigned Identity for Devices (PAI-D) numbers. An identifier for devices which may author documents on behalf of organisations." />
       <min value="1" />
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi">
-      <path value="Device.udi"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.deviceIdentifier">
-      <path value="Device.udi.deviceIdentifier"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.deviceIdentifier" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.name">
-      <path value="Device.udi.name"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.name" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.jurisdiction">
-      <path value="Device.udi.jurisdiction"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.jurisdiction" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.carrierHRF">
-      <path value="Device.udi.carrierHRF"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.carrierHRF" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.carrierAIDC">
-      <path value="Device.udi.carrierAIDC"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.carrierAIDC" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.issuer">
-      <path value="Device.udi.issuer"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.issuer" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.udi.entryType">
-      <path value="Device.udi.entryType"/>
-      <mustSupport value="true"/>
+      <path value="Device.udi.entryType" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.status">
-      <path value="Device.status"/>
-      <mustSupport value="true"/>
+      <path value="Device.status" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.type">
-      <path value="Device.type"/>
-      <mustSupport value="true"/>
+      <path value="Device.type" />
+      <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DeviceKind"/>
-        </extension>
-        <strength value="extensible"/>
-        <description value="Codes to identify medical devices."/>
+        <strength value="extensible" />
+        <description value="Codes to identify medical devices." />
       </binding>
     </element>
     <element id="Device.lotNumber">
-      <path value="Device.lotNumber"/>
-      <mustSupport value="true"/>
+      <path value="Device.lotNumber" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.manufacturer">
-      <path value="Device.manufacturer"/>
-      <mustSupport value="true"/>
+      <path value="Device.manufacturer" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.manufactureDate">
-      <path value="Device.manufactureDate"/>
-      <mustSupport value="true"/>
+      <path value="Device.manufactureDate" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.model">
-      <path value="Device.model"/>
-      <mustSupport value="true"/>
+      <path value="Device.model" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.version">
-      <path value="Device.version"/>
-      <mustSupport value="true"/>
+      <path value="Device.version" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.patient">
-      <path value="Device.patient"/>
+      <path value="Device.patient" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"/>
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="Device.owner">
-      <path value="Device.owner"/>
+      <path value="Device.owner" />
       <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1"
-        />
+        <code value="Reference" />
+        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1" />
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="true" />
     </element>
     <element id="Device.contact">
-      <path value="Device.contact"/>
-      <mustSupport value="true"/>
+      <path value="Device.contact" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.location">
-      <path value="Device.location"/>
-      <mustSupport value="true"/>
+      <path value="Device.location" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.url">
-      <path value="Device.url"/>
-      <mustSupport value="true"/>
+      <path value="Device.url" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.note">
-      <path value="Device.note"/>
-      <mustSupport value="true"/>
+      <path value="Device.note" />
+      <mustSupport value="true" />
     </element>
     <element id="Device.safety">
-      <path value="Device.safety"/>
-      <mustSupport value="true"/>
+      <path value="Device.safety" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
