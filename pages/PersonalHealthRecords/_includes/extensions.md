@@ -55,7 +55,7 @@ The following extensions form part of this implementation guide:
   <tr>
        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-recorder.html">Recorder</a></td>
        <td>recorder</td>
-       <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+       <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
        <td><a href="http://hl7.org/fhir/stu3/condition.html">Condition</a></td>
   </tr>
   <tr>
