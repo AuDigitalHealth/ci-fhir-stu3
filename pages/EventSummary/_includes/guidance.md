@@ -117,6 +117,41 @@ Readers of this implementation guide are encouraged to actively participate in t
         <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
     </td>
   </tr>
+  <tr>
+  <td><a href="https://api.healthterminologies.gov.au/integration/v2/fhir/ValueSet/australian-pbs-item-1">PBS Medicines Item Codes</a></td>
+   <td>
+        <p>The PBS Medicines Item Codes value set, originating from the HL7 AU Base Medication profile, is a placeholder resource. Forthcoming work is expected to result in an authoritative value set published in the <a href="https://www.healthterminologies.gov.au/">National Clinical Terminology Service (NCTS)</a> with the following canonical URL: <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pbs-item-1">https://healthterminologies.gov.au/fhir/ValueSet/australian-pbs-item-1</a>. Implementers are to make use of the value set served via the NCTS when available.</p>
+   </td>
+   <td><a href="https://confluence.hl7australia.com/pages/viewpage.action?pageId=14582568">Ballot comment FHIRIG-24</a></td>
+  </tr> 
+  <tr>
+   <td><a href="http://hl7.org.au/fhir/base/aubase1.1/ValueSet-gtin.html">GTIN for Medicines</a></td>
+   <td>
+       <p>No expansion is available for this value set using the associated code system published in the HL7 AU Base material. None of the concepts defined by the code system are included in the code system resource. Implementers are expected to have available an expansion that defines what codes are in the value sets to make use of this terminology.</p>
+    </td>
+    <td><a href="https://github.com/hl7au/au-fhir-base-stu3/issues/9">au-fhir-base-stu3/issues/9</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://hl7.org.au/fhir/base/aubase1.1/ValueSet-mims.html">MIMS Terminology</a></td>
+    <td>
+        <p>No expansion is available for this value set using the associated code system published in the HL7 AU Base material. None of the concepts defined by the code system are included in the code system resource. Implementers are expected to have available an expansion that defines what codes are in the value sets to make use of this terminology.</p>
+    </td>
+    <td><a href="https://github.com/hl7au/au-fhir-base-stu3/issues/9">au-fhir-base-stu3/issues/9</a></td>
+  </tr>  
+  <tr>    
+  <td>Source material errors</td>
+    <td>
+        <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
+    </td>
+    <td></td>
+  </tr>  
+  <tr>
+    <td>Non-resolving profile URLs</td>
+    <td>
+        <p>Canonical URLs with the prefix of <a href="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</a> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</p>
+    </td>
+    <td></td>
+  </tr>     
  </tbody>
 </table> 
 
