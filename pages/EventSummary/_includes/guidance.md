@@ -65,6 +65,13 @@ Readers of this implementation guide are encouraged to actively participate in t
     <th>Description</th>
     <th>Issue No.</th>
   </tr>
+    <tr>
+    <td>qualification.code (Australian localisation)</td>
+    <td>
+        <p>Work is underway to provide terminology for Australian qualifications. This work is expected to be available in an R4 variant of this profile.</p>
+    </td>
+    <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314"> au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
+  </tr> 
   <tr>
     <td>Constraint presentation</td>
     <td>
