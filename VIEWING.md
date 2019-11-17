@@ -10,7 +10,7 @@ Implementation guides are viewed in a browser but first you must get a copy onto
  6. Once the zip is downloaded you will need to extract all the files to open and navigate properly
  7. The implementation guide is then ready to be viewed by opening the file `index.html` and double-clicking on it to open it with your (default) browser
  8. The home page will then display
- 9. CDA implementation guides associated with each publication in this repository are not automatically included in the 'full-ig.zip' files but can be found in the 'output' folder of the desired publication. For example the CDA implementation guide for Shared Medicines List can  be found here "ci-fhir-stu3/output/SharedMedicinesList/DH_2936_2020_Shared_Medicines_List_CDA_IG_v1.0.0.pdf".
+ 9. CDA implementation guides associated with each publication in this repository are not automatically included in the `full-ig.zip` files but can be found in the `output` folder of the desired publication. For example the CDA implementation guide for Shared Medicines List can  be found here `ci-fhir-stu3/output/SharedMedicinesList/DH_2936_2020_Shared_Medicines_List_CDA_IG_v1.0.0.pdf`.
 
 The disadvantage with downloading a zip is that the content is only up-to-date at the moment of your download action. Any later updates to the repository are therefore not seen, unless a new subsequent download is done. A more advanced option to allow updates to be seen is to "clone" the repository.
 
