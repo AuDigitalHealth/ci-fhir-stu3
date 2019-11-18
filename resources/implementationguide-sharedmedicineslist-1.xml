@@ -18,7 +18,7 @@
         value="This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent a Shared Medicine List (SML).&#xa; &#xa;The primary aim of this implementation guide is to support implementing SML in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.&#xa; &#xa;This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.&#xa; &#xa;This implementation guide does not describe transport or persistence mechanism of the resources described by it."/>
     <copyright
         value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-    <fhirVersion value="3.0.1"/>
+    <fhirVersion value="3.0.2"/>
     <package>
         <name value="SML"/>
         <resource>
@@ -158,228 +158,31 @@
         </resource>
 
         <!--   Examples -->
+       
         <resource>
             <example value="true"/>
-            <name value="AllergyIntolerance example 1"/>
-            <description value="AllergyIntolerance example Amoxicillin"/>
-            <sourceReference>
-                <reference value="AllergyIntolerance/7f834da9-63f5-4a66-a847-a32c366701ff"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Patient example 1"/>
-            <description value="Patient example Frank Harding"/>
-            <sourceReference>
-                <reference value="Patient/43acc1fd-9f9d-4f2f-8649-c290ac7ff847"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 1"/>
-            <description value="Medication example Ferro-Grad C"/>
-            <sourceReference>
-                <reference value="Medication/27046ef9-d808-46d4-a028-0ef182b7a8b2"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 1"/>
-            <description value="MedicationStatement example Ferro-Grad C"/>
-            <sourceReference>
-                <reference value="MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 2"/>
-            <description value="Medication example Amoxicillin/Augmentin Duo Forte"/>
-            <sourceReference>
-                <reference value="Medication/c09df0db-3050-4b62-bb27-7c9b743d59bd"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 2"/>
-            <description value="MedicationStatement example Amoxicillin/Augmentin Duo Forte"/>
-            <sourceReference>
-                <reference value="MedicationStatement/f02c54ad-3562-4f7b-8956-de16769a2a88"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 3"/>
-            <description value="Medication example Metformin/Sandoz"/>
-            <sourceReference>
-                <reference value="Medication/d45954e8-80ae-4610-b235-239e9d352799"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 3"/>
-            <description value="MedicationStatement example Metformin/Sandoz"/>
-            <sourceReference>
-                <reference value="MedicationStatement/f27faa7d-0433-484a-94ab-5a3f966bd7b1"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 4"/>
-            <description value="Medication example Multi-vitamins"/>
-            <sourceReference>
-                <reference value="Medication/4418bed2-2ae9-4d0a-9acd-d70ab8284c50"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 4"/>
-            <description value="MedicationStatement example Multi-vitamins"/>
-            <sourceReference>
-                <reference value="MedicationStatement/006679bd-44a9-49df-82ba-a41db0cd6298"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 5"/>
-            <description value="Medication example Paracetamol 665mg caplet/ Panadol Osteo"/>
-            <sourceReference>
-                <reference value="Medication/9574e2d4-863b-11e9-a159-526af7764f64"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 5"/>
-            <description value="MedicationStatement example Paracetamol 665mg caplet/Panadol Osteo"/>
-            <sourceReference>
-                <reference value="MedicationStatement/d14a5c15-87c9-4cf8-9047-657189898273"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 6"/>
-            <description value="Medication example Warfarin/Coumadin"/>
-            <sourceReference>
-                <reference value="Medication/19ae06e9-0242-41eb-b386-5c147b01e88f"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 6"/>
-            <description value="MedicationStatement example Warfarin/Coumadin"/>
-            <sourceReference>
-                <reference value="MedicationStatement/ce9d0158-5f77-4c30-8aad-79500eb2c16f"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 7"/>
-            <description value="Medication example Paracetamol 500 mg tablet"/>
-            <sourceReference>
-                <reference value="Medication/37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 7"/>
-            <description value="MedicationStatement example Paracetamol 500 mg tablet"/>
-            <sourceReference>
-                <reference value="MedicationStatement/17affe2a-6496-437d-8d1a-22baae41a5ae"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Medication example 8"/>
-            <description value="Medication example Ibuprofen"/>
-            <sourceReference>
-                <reference value="Medication/2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="MedicationStatement example 8"/>
-            <description value="MedicationStatement example Ibuprofen"/>
-            <sourceReference>
-                <reference value="MedicationStatement/3f99bc18-7edf-4e2a-9eae-86629b56d06e"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="List example 1"/>
-            <description value="List example Community pharmacy medicines review"/>
-            <sourceReference>
-                <reference value="List/e3677c50-8940-4793-bc43-72a33e5b6460"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Encounter example 1"/>
-            <description value="Encounter/Community pharmacy medicines review"/>
-            <sourceReference>
-                <reference value="Encounter/038f9aaa-6c3d-4681-b9de-455de06a86d3"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="PractitionerRole example 1"/>
-            <description value="PractitionerRole with practitioner with mandatory identifier"/>
-            <sourceReference>
-                <reference value="PractitionerRole/eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Organization example 1"/>
-            <description value="Organization"/>
-            <sourceReference>
-                <reference value="Organization/24391534-dbe5-44f0-af74-07ca016e7446"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Organization example 2"/>
-            <description value="Patient's managing organization"/>
-            <sourceReference>
-                <reference value="Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <name value="Practitioner example 1"/>
-            <description value="Practitioner pharmacist"/>
-            <sourceReference>
-                <reference value="Practitioner/6312677b-2e4a-4841-a986-915905e01931"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <sourceReference>
-                <reference value="Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"/>
-            </sourceReference>
-        </resource>
-        <resource>
-            <example value="true"/>
-            <description value="Conversion of the CDA example 'SML01_Example.xml as a Bundle"/>
+            <description value="Representation of the CDA example 'SML01_Example.xml' as a Bundle"/>
             <sourceReference>
                 <reference value="Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41"/>
             </sourceReference>
         </resource>
         <resource>
             <example value="true"/>
-            <description value="Conversion of the CDA example 'SML02_Example.xml as a Composition with contained resources"/>
+            <description value="Representation of the CDA example 'SML02_Example.xml' as a Bundle"/>
             <sourceReference>
-                <reference value="Composition/98e4b64a-d493-45c1-8102-b3b689da1c15"/>
+                <reference value="Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c"/>
             </sourceReference>
         </resource>
         <resource>
             <example value="true"/>
-            <description value="Conversion of the CDA example 'SML03_Example.xml as a Composition with contained resources, and some logical identifiers"/>
+            <description value="Representation of the CDA example 'SML03_Example.xml' as a Bundle"/>
             <sourceReference>
-                <reference value="Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28"/>
+                <reference value="Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210"/>
             </sourceReference>
         </resource>
         <resource>
             <example value="true"/>
-            <description value="Conversion of the CDA example 'SML04_Example.xml', standalone List instance"/>
+            <description value="Representation of the CDA example 'SML04_Example.xml', standalone List instance"/>
             <sourceReference>
                 <reference value="List/a04e9676-5c38-4c56-8d24-c600e192613e"/>
             </sourceReference>
@@ -389,6 +192,55 @@
             <description value="Conversion of the CDA example 'SML04_Example.xml', as a Composition with contained resources"/>
             <sourceReference>
                 <reference value="Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="Patient with only identifier, name, address"/>
+            <sourceReference>
+                <reference value="Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="Practitioner role with only code and a reference to practitioner"/>
+            <sourceReference>
+                <reference value="PractitionerRole/2be6504a-160a-4cb0-ac4c-4b5aa503085d"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="Practitioner with only identifier, name"/>
+            <sourceReference>
+                <reference value="Practitioner/4e2ed22a-95c8-4403-87fa-9a6a171ddc8b"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="MedicationStatement with no optional codes and a contained Medication - 1"/>
+            <sourceReference>
+                <reference value="MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="MedicationStatement with no optional codes and a contained Medication - 2"/>
+            <sourceReference>
+                <reference value="MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="MedicationStatement with no optional codes and a contained Medication - 3"/>
+            <sourceReference>
+                <reference value="MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <description value="Organization with only identifier, name"/>
+            <sourceReference>
+                <reference value="Organization/ec676574-724d-4321-911d-54703015809e"/>
             </sourceReference>
         </resource>
     </package>

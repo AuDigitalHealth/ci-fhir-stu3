@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "a8bd298d-40d0-4bd9-946b-6688f5f2f443"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: a8bd298d-40d0-4bd9-946b-6688f5f2f443</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>status</b>: completed</p><p><b>medication</b>: unknown resource contained</p><p><b>subject</b>: <a href=\"Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html\">Generated Summary: id: c7688ecf-5a6c-4a2f-ae2c-88a347278656; Medical record number = 542181; Bert Gainey</a></p><p><b>taken</b>: y</p><p><b>reasonCode</b>: To lower cholestrol levels in the blood <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>note</b>: Seek medical advice promptly if your urine is dark (brown) or if you have any unexplained muscle pain, tenderness or weakness. Grapefruit juice should be             avoided as it may increase the amount of this medicine in your bloodstream and could increase the chances of side effects occuring.</p><p><b>dosage</b>: </p></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Medication;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "5c13e76a-22da-4e67-a69a-0d3be5cd5495" ];
+     fhir:Medication.code [
+       fhir:CodeableConcept.text [ fhir:value "ATORVASTATIN(TAB) 80 mg, Lipitor" ]
+     ]
+  ];
+  fhir:MedicationStatement.status [ fhir:value "completed"];
+  fhir:MedicationStatement.medicationReference [
+     fhir:Reference.reference [ fhir:value "#5c13e76a-22da-4e67-a69a-0d3be5cd5495" ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656>;
+     fhir:Reference.reference [ fhir:value "Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656" ]
+  ];
+  fhir:MedicationStatement.taken [ fhir:value "y"];
+  fhir:MedicationStatement.reasonCode [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "To lower cholestrol levels in the blood" ]
+  ];
+  fhir:MedicationStatement.note [
+     fhir:index 0;
+     fhir:Annotation.text [ fhir:value "Seek medical advice promptly if your urine is dark (brown) or if you have any unexplained muscle pain, tenderness or weakness. Grapefruit juice should be             avoided as it may increase the amount of this medicine in your bloodstream and could increase the chances of side effects occuring." ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Take 1 in the evening" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -99,7 +99,7 @@
 <div class="col-12">
 
 <p id="publish-box">
-    This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+    This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.2</a>. 
 </p>
 
 <!-- ============Tabs (only on Profile StructureDefinition Pages =============== -->
@@ -128,7 +128,7 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.name">name</a>" : "Shared Medicines List",
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.experimental">experimental</a>" : true,
-  "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.date">date</a>" : "2019-09-26T16:06:55+10:00",
+  "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.date">date</a>" : "2019-11-15T15:11:56+10:00",
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "Australian Digital Health Agency",
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.contact">contact</a>" : [
     {
@@ -142,7 +142,13 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
   ],
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.description">description</a>" : "This implementation guide is an HL7™ FHIR® specification to represent a Shared Medicine List (SML).\n \nThe primary aim of this implementation guide is to support implementing SML in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of SML information between healthcare providers.\n \nThis implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.\n \nThis implementation guide does not describe transport or persistence mechanism of the resources described by it.",
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.copyright">copyright</a>" : "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
-  "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a>" : "3.0.1",
+  "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a>" : "3.0.2",
+  "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.dependency">dependency</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.dependency.type">type</a>" : "reference",
+      "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.dependency.uri">uri</a>" : "http://hl7.org.au/fhir"
+    }
+  ],
   "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package">package</a>" : [
     {
       "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.id">id</a>" : "p1",
@@ -459,448 +465,17 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "AllergyIntolerance"
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Bundle"
             },
             {
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "AllergyIntolerance-7f834da9-63f5-4a66-a847-a32c366701ff.html"
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.html"
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "AllergyIntolerance example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "AllergyIntolerance example Amoxicillin",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Representation of the CDA example 'SML01_Example.xml' as a Bundle",
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "AllergyIntolerance/7f834da9-63f5-4a66-a847-a32c366701ff"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Patient"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Patient-43acc1fd-9f9d-4f2f-8649-c290ac7ff847.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Patient example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Patient example Frank Harding",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Patient/43acc1fd-9f9d-4f2f-8649-c290ac7ff847"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-27046ef9-d808-46d4-a028-0ef182b7a8b2.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Ferro-Grad C",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/27046ef9-d808-46d4-a028-0ef182b7a8b2"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-32def593-e104-4cee-b8f5-d1f923efd94b.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Ferro-Grad C",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-c09df0db-3050-4b62-bb27-7c9b743d59bd.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 2",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Amoxicillin/Augmentin Duo Forte",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/c09df0db-3050-4b62-bb27-7c9b743d59bd"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-f02c54ad-3562-4f7b-8956-de16769a2a88.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 2",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Amoxicillin/Augmentin Duo Forte",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/f02c54ad-3562-4f7b-8956-de16769a2a88"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-d45954e8-80ae-4610-b235-239e9d352799.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 3",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Metformin/Sandoz",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/d45954e8-80ae-4610-b235-239e9d352799"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-f27faa7d-0433-484a-94ab-5a3f966bd7b1.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 3",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Metformin/Sandoz",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/f27faa7d-0433-484a-94ab-5a3f966bd7b1"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-4418bed2-2ae9-4d0a-9acd-d70ab8284c50.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 4",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Multi-vitamins",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/4418bed2-2ae9-4d0a-9acd-d70ab8284c50"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-006679bd-44a9-49df-82ba-a41db0cd6298.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 4",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Multi-vitamins",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/006679bd-44a9-49df-82ba-a41db0cd6298"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-9574e2d4-863b-11e9-a159-526af7764f64.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 5",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Paracetamol 665mg caplet/ Panadol Osteo",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/9574e2d4-863b-11e9-a159-526af7764f64"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-d14a5c15-87c9-4cf8-9047-657189898273.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 5",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Paracetamol 665mg caplet/Panadol Osteo",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/d14a5c15-87c9-4cf8-9047-657189898273"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-19ae06e9-0242-41eb-b386-5c147b01e88f.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 6",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Warfarin/Coumadin",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/19ae06e9-0242-41eb-b386-5c147b01e88f"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-ce9d0158-5f77-4c30-8aad-79500eb2c16f.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 6",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Warfarin/Coumadin",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/ce9d0158-5f77-4c30-8aad-79500eb2c16f"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 7",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Paracetamol 500 mg tablet",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/37c3cb4d-37cd-4e4e-985f-d1b8fd44fbb7"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-17affe2a-6496-437d-8d1a-22baae41a5ae.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 7",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Paracetamol 500 mg tablet",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/17affe2a-6496-437d-8d1a-22baae41a5ae"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Medication"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Medication-2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Medication example 8",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Medication example Ibuprofen",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Medication/2a506a7c-aab0-4af3-9ea3-3f47ebe16e3d"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-3f99bc18-7edf-4e2a-9eae-86629b56d06e.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "MedicationStatement example 8",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement example Ibuprofen",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/3f99bc18-7edf-4e2a-9eae-86629b56d06e"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "List"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "List-e3677c50-8940-4793-bc43-72a33e5b6460.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "List example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "List example Community pharmacy medicines review",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "List/e3677c50-8940-4793-bc43-72a33e5b6460"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Encounter"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Encounter-038f9aaa-6c3d-4681-b9de-455de06a86d3.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Encounter example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Encounter/Community pharmacy medicines review",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Encounter/038f9aaa-6c3d-4681-b9de-455de06a86d3"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PractitionerRole"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "PractitionerRole-eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "PractitionerRole example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "PractitionerRole with practitioner with mandatory identifier",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/eebd7c94-e124-4c2b-95dc-a6aebbe7bb4d"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Organization"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Organization-24391534-dbe5-44f0-af74-07ca016e7446.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Organization example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Organization",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Organization/24391534-dbe5-44f0-af74-07ca016e7446"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Organization"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Organization-f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Organization example 2",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Patient's managing organization",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Organization/f216ad4c-a1e3-11e9-a2a3-2a2ae2dbcce4"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Practitioner"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Practitioner-6312677b-2e4a-4841-a986-915905e01931.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.name">name</a>" : "Practitioner example 1",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Practitioner pharmacist",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/6312677b-2e4a-4841-a986-915905e01931"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Practitioner"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Practitioner-20f15728-f3ac-4877-b55a-107f94dbd00c.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41"
           }
         },
         {
@@ -911,47 +486,30 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
             },
             {
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.html"
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c.html"
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Conversion of the CDA example 'SML01_Example.xml as a Bundle",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Representation of the CDA example 'SML02_Example.xml' as a Bundle",
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c"
           }
         },
         {
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Composition"
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Bundle"
             },
             {
               "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-98e4b64a-d493-45c1-8102-b3b689da1c15.html"
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210.html"
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Conversion of the CDA example 'SML02_Example.xml as a Composition with contained resources",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Representation of the CDA example 'SML03_Example.xml' as a Bundle",
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Composition/98e4b64a-d493-45c1-8102-b3b689da1c15"
-          }
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Composition"
-            },
-            {
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Composition-ab4537a4-20c9-4f8a-9867-5c435b7eaa28.html"
-            }
-          ],
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Conversion of the CDA example 'SML03_Example.xml as a Composition with contained resources, and some logical identifiers",
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Composition/ab4537a4-20c9-4f8a-9867-5c435b7eaa28"
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210"
           }
         },
         {
@@ -966,7 +524,7 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Conversion of the CDA example 'SML04_Example.xml', standalone List instance",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Representation of the CDA example 'SML04_Example.xml', standalone List instance",
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
             "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "List/a04e9676-5c38-4c56-8d24-c600e192613e"
           }
@@ -986,6 +544,125 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Conversion of the CDA example 'SML04_Example.xml', as a Composition with contained resources",
           "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
             "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Patient"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Patient with only identifier, name, address",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Patient/c7688ecf-5a6c-4a2f-ae2c-88a347278656"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PractitionerRole"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "PractitionerRole-2be6504a-160a-4cb0-ac4c-4b5aa503085d.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Practitioner role with only code and a reference to practitioner",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/2be6504a-160a-4cb0-ac4c-4b5aa503085d"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Practitioner"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Practitioner-4e2ed22a-95c8-4403-87fa-9a6a171ddc8b.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Practitioner with only identifier, name",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/4e2ed22a-95c8-4403-87fa-9a6a171ddc8b"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-af3be636-c156-4172-8cbb-27856d5fc650.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement with no optional codes and a contained Medication - 1",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/af3be636-c156-4172-8cbb-27856d5fc650"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-a8bd298d-40d0-4bd9-946b-6688f5f2f443.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement with no optional codes and a contained Medication - 2",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/a8bd298d-40d0-4bd9-946b-6688f5f2f443"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "MedicationStatement"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "MedicationStatement-e558d94a-e4ba-4095-8d2e-74b9df14a9d1.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "MedicationStatement with no optional codes and a contained Medication - 3",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "MedicationStatement/e558d94a-e4ba-4095-8d2e-74b9df14a9d1"
+          }
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Organization"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "<a href="http://hl7.org/fhir/STU3/extensibility.html#Extension#Extension.value[x]">valueUri</a>" : "Organization-ec676574-724d-4321-911d-54703015809e.html"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">example</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.description">description</a>" : "Organization with only identifier, name",
+          "<a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">sourceReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/references.html#Reference#Reference.reference">reference</a>" : "Organization/ec676574-724d-4321-911d-54703015809e"
           }
         }
       ]
@@ -1024,11 +701,11 @@ Raw <a href="ImplementationGuide-implementationguide-sharedmedicineslist-1.json"
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-2954:2019</p>
+            <p>Document ID: DH-2954:2019 Draft for restricted external review</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 26, 2019 16:06+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 15, 2019 15:11+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

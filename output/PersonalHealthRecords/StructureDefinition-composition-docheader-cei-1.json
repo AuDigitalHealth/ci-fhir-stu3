@@ -11,7 +11,7 @@
   "title": "Consumer Entered Information Document Header",
   "status": "draft",
   "experimental": true,
-  "date": "2019-09-26T13:14:39+10:00",
+  "date": "2019-11-15T14:59:45+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -25,7 +25,7 @@
   ],
   "description": "The purpose of this profile is to define common header requirements for consumer authored documents associated with a patient in an Australian healthcare context.\n\n#### Must Support\n\nIn the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:\n\n* The system SHALL be able to include the element when authoring a resource where data is available\n\n* The system SHALL be able to store and retrieve the element\n\n* The system SHALL be able to process resources containing the element",
   "copyright": "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/.",
-  "fhirVersion": "3.0.1",
+  "fhirVersion": "3.0.2",
   "mapping": [
     {
       "identity": "rim",
@@ -347,7 +347,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -388,7 +388,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -963,7 +963,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -1622,7 +1622,7 @@
             "human": "A section must at least one of text, entries, or sub-sections",
             "expression": "text.exists() or entry.exists() or section.exists()",
             "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           },
           {
             "key": "cmp-2",
@@ -1630,7 +1630,7 @@
             "human": "A section can only have an emptyReason if it is empty",
             "expression": "emptyReason.empty() or entry.empty()",
             "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           }
         ],
         "mapping": [
@@ -1735,7 +1735,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },

@@ -16,7 +16,7 @@
   </contact>
   <description value="The purpose of this profile is to provide a practitioner authored list of medicine items for a patient with change information.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
   <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="List" />
@@ -26,24 +26,24 @@
     <element id="List">
       <path value="List" />
       <short value="A list of medicine items for a patient" />
-      <definition value="A list of medicines authored by a practitioner at a point in time that describes the medicines an individual is taking."/>
+      <definition value="A list of medicines authored by a practitioner at a point in time that describes the medicines an individual is taking." />
       <constraint>
         <key value="inv-dh-lst-01" />
         <severity value="error" />
         <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() >1).exists()" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-02" />
         <severity value="error" />
         <human value="The source shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() >1).exists()" />
+        <expression value="source.reference.exists() or source.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-lst-03" />
         <severity value="error" />
         <human value="The author role shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.reference.exists() or extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.identifier.where(system.count() + value.count() >1).exists()" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.reference.exists() or extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
     </element>
     <element id="List.meta">
@@ -66,6 +66,9 @@
       <fixedCode value="en-AU" />
     </element>
     <element id="List.extension:sourceRole">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft" />
+      </extension>
       <path value="List.extension" />
       <sliceName value="sourceRole" />
       <short value="Practitioner role that authored the list" />
@@ -78,7 +81,7 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-     <element id="List.status">
+    <element id="List.status">
       <path value="List.status" />
       <fixedCode value="current" />
       <mustSupport value="true" />
@@ -96,11 +99,8 @@
       <min value="1" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ListPurpose" />
-        </extension>
         <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-type-1" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1" />
       </binding>
     </element>
     <element id="List.subject">
@@ -121,8 +121,8 @@
       <mustSupport value="true" />
     </element>
     <element id="List.encounter.reference">
-      <path value="List.encounter.reference"/>
-      <min value="1"/>
+      <path value="List.encounter.reference" />
+      <min value="1" />
     </element>
     <element id="List.date">
       <path value="List.date" />
@@ -150,6 +150,9 @@
       <mustSupport value="true" />
     </element>
     <element id="List.entry.extension:changeDescription">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="draft" />
+      </extension>
       <path value="List.entry.extension" />
       <sliceName value="changeDescription" />
       <short value="Description of the change to the medicine item" />
@@ -174,8 +177,8 @@
       <mustSupport value="true" />
     </element>
     <element id="List.entry.item.reference">
-      <path value="List.entry.item.reference"/>
-      <min value="1"/>
+      <path value="List.entry.item.reference" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

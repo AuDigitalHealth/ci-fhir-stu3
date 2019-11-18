@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="organization-dh-base-1" />
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1" />
@@ -6,18 +6,17 @@
   <name value="OrganizationBase" />
   <title value="Base Organization" />
   <status value="draft" />
-  <experimental value="true"/>
+  <experimental value="true" />
   <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description value="The purpose of this profile is to provide a base model for the concept of an organisation, defining fundamental concepts that form a conforming representation of an organisation. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
-  <copyright
-    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-  <fhirVersion value="3.0.1" />
+  <description value="The purpose of this profile is to provide a base model for the concept of an organisation, defining fundamental concepts that form a conforming representation of an organisation. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context.&#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
+  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.2" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
@@ -25,6 +24,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+      </extension>
       <path value="Organization" />
       <constraint>
         <key value="inv-dh-org-01" />
@@ -34,9 +36,9 @@
       </constraint>
     </element>
     <element id="Organization.identifier">
-      <path value="Organization.identifier" />      
+      <path value="Organization.identifier" />
       <mustSupport value="true" />
-    </element>    
+    </element>
     <element id="Organization.active">
       <path value="Organization.active" />
       <mustSupport value="true" />
@@ -54,7 +56,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom">
-      <path value="Organization.telecom" />     
+      <path value="Organization.telecom" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address">

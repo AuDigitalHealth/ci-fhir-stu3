@@ -106,7 +106,7 @@
         
         <div class="col-12">
           <p id="publish-box">
-    This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+    This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.2</a>. 
 </p>
 
           <ul class="nav nav-tabs">
@@ -121,7 +121,8 @@
           
           <!--<h4><span class="sectioncount">D.6.1.4<a name="D.6.1.4"> </a></span> StructureDefinition: CompositionSML - Mappings <a title="link to here" class="self-link" href="StructureDefinition-composition-sml-prac-1-definitions.html#D.6.1.4"><img src="target.png"/></a></h4>-->
           <h4><span class="sectioncount">D.6.1.4<a name="D.6.1.4"> </a></span> StructureDefinition-composition-sml-prac-1 - Mappings <a title="link to here" class="self-link" href="StructureDefinition-composition-sml-prac-1-definitions.html#D.6.1.4"><img src="target.png"/></a></h4>
-          <p>Mappings for the StructureDefinition-composition-sml-prac-1 Profile.</p>
+          
+          <p>Mappings for the profile.</p>
           
           <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>CompositionSML</b></td></tr>
@@ -135,6 +136,17 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Document.id / Document.setId</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;  final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseComposition&quot;, code) and isNormalAct()]);  amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseComposition&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];  withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>./codeSystem</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version</td><td>./codeSystemVersion</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>CV.displayName</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>CD.codingRationale</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;class</td><td>.outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>unique(highest(./outboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()], priorityNumber)/target[moodCode=&quot;EVN&quot; and classCode=(&quot;ENC&quot;, &quot;PCPR&quot;) and isNormalAct])</td> </tr>
@@ -188,6 +200,17 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title</td><td>./title</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>./codeSystem</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version</td><td>./codeSystemVersion</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>CV.displayName</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userSelected</td><td>CD.codingRationale</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>.text</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode</td><td>.outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderedBy</td><td>.outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1</td> </tr>
@@ -316,11 +339,11 @@
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-2954:2019</p>
+            <p>Document ID: DH-2954:2019 Draft for restricted external review</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 26, 2019 16:06+1000. |
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 15, 2019 15:11+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

@@ -28,7 +28,6 @@ The content of each page is structured as follows:
 * Profile title followed by the profile status hyperlinked to FHIR [PublicationStatus](http://hl7.org/fhir/stu3/valueset-publication-status.html).
 * Usage scenarios, if present, includes a short description of the example or expected usage scenarios for that profile that are supported by this implementation guide. Usage scenarios are only present if a profile is of the primary grouping resource for exchange purposes.
 * Implementation guidance includes guidance specific to the usage scenarios supported by this implementation guide. This content is informative; there may be valid reasons not to follow this guidance, but the full implications must be understood and carefully weighed before choosing a different course.
-* Examples includes links to example resources that conform to the profile or extension and that support implementation by demonstrating one or more usage scenarios supported by this implementation guide.
 * Formal Views of Profile Content includes the human readable view of the normative definition of the profile or extension.
 * Known Issues includes the list of unintended or unexpected behaviours associated with that profile we are aware of that have an impact that implementers should take note of.
 
@@ -67,6 +66,20 @@ Readers of this implementation guide are encouraged to actively participate in t
     <th>Issue No.</th>
   </tr>
   <tr>
+    <td>qualification.code (Australian localisation)</td>
+    <td>
+        <p>Work is underway to provide terminology for Australian qualifications. This work is expected to be available in an R4 variant of this profile.</p>
+    </td>
+    <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314"> au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
+  </tr>  
+  <tr>
+    <td>Constraint presentation</td>
+    <td>
+        <p>The full set of constraints (i.e. invariants) defined in this profile are only presented in the Detailed Descriptions tab or the raw representation (e.g. XML) of the profile. The Differential Table only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The Snapshot Table only presents the constraints visible in the Differential Table and additionally presents those constraints set in slices in the base profile.</p>
+    </td>
+    <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
+  </tr>  
+  <tr>
     <td>Invariants may not constrain as intended</td>
     <td>
         <p>Currently the FHIR Validator (which is used by IG Publisher) does not fully support all constraints defined in the FHIR specification. For example invariants using conformsTo() have not been able to be confirmed and do not reject resources that are expected to fail.</p>
@@ -104,6 +117,20 @@ Readers of this implementation guide are encouraged to actively participate in t
         <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
     </td>
   </tr>
+    <tr>
+    <td>Source material errors</td>
+    <td>
+        <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
+    </td>
+    <td></td>
+  </tr>  
+  <tr>
+    <td>Non-resolving profile URLs</td>
+    <td>
+        <p>Canonical URLs with the prefix of <a href="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</a> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</p>
+    </td>
+    <td></td>
+  </tr>    
  </tbody>
 </table> 
 
@@ -117,7 +144,7 @@ The following resources are available to raise questions or issues relating to F
 ## Conformance conventions
 
 ### StructureDefinition
-The content of this implementation guide is a set of FHIR [StructureDefinition](FHIR http://hl7.org/fhir/stu3/structuredefinition.html) resources for implementing the document model that is the subject of this implementation guide.
+The content of this implementation guide is a set of FHIR [StructureDefinition](http://hl7.org/fhir/stu3/structuredefinition.html) resources for implementing the document model that is the subject of this implementation guide.
 
 This implementation guide includes FHIR profiles that are a set of constraints and/or extensions to FHIR base resources or a data types in the format of a StructureDefinition resource. A StructureDefinition describes a structure - a set of data element definitions, and their associated rules of usage – and is hereafter referred to as a ‘profile’ or an ‘extension’.
 

@@ -123,7 +123,7 @@
 <h3 style="color:#ff0000;" class="no_toc">Draft for internal use</h3>
 
 <p id="publish-box">
-    This is release 1.0.0 of Personal Health Records FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.1</a>. 
+    This is release 1.0.0 of Personal Health Records FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.2</a>. 
 </p>
 
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
@@ -148,7 +148,7 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This implementation guide is an HL7™ FHIR® specification to represent a personal health record, including Personal Health Notes (PHN) and Personal Health Summary (PHS).</p>
+<p>This implementation guide is an HL7™ FHIR® specification to represent a personal health record, including Personal Health Notes (PHN) and Personal Health Summary (PHS). A personal health record is a health document authored by an individual or their authorised representative.</p>
 
 <p>This <a href="http://hl7.org/fhir/STU3/implementationguide.html#scope">implementation guide</a> is based on <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
@@ -173,23 +173,23 @@
 <p>This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the <a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]</a> or <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>. The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
 <h2 id="context-and-use">Context and use</h2>
-<p>A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, a specification package.</p>
+<p>A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, an end-product clinical specification package.</p>
 
-<p>An Agency clinical document specification package supports software developers to create and interpret instances of a clinical document. The core of each package is a specification of the information content of instances of the clinical document.</p>
+<p>An Agency clinical document end-product clinical specification package supports software developers to create and interpret instances of a clinical document. The core of each package is a specification of the information content of instances of the clinical document.</p>
 
 <p>Supplementary contents of the package include statements of scenarios for which the specification is appropriate, guidance on implementing the specification, and guidance on testing purported instances.</p>
 
 <p>The contents may include:</p>
 <ul>
-  <li>Information Requirements - statement of requirements</li>
+  <li>statement of requirements</li>
   <li>CDA implementation guide (CDA IG) – a statement of constraints and custom extensions on <a href="#HL7CDAR2">HL7 Clinical Document Architecture [HL7CDAR2]</a></li>
   <li>FHIR implementation guide (FHIR IG) - a statement of constraints and custom extensions on <a href="#HL7FHIR3">HL7 FHIR [HL7FHIR3]</a></li>
   <li>template package library – a set of Schematron schema to test conformance of CDA documents with the specification</li>
   <li>conformance profile – a statement of conformance requirements for exchanging documents within a particular scenario such as the My Health Record</li>
-  <li>a set of release notes</li>
+  <li>release notes</li>
 </ul>
 
-<p>Specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.</p>
+<p>End-product clinical specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the end-product clinical specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.</p>
 
 <h2 id="how-to-read-this-document">How to read this document</h2>
 <p>This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of personal health records. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
@@ -204,7 +204,7 @@
 <h2 id="intended-audience">Intended audience</h2>
 <p>This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.</p>
 
-<p>This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as FHIR and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.</p>
+<p>This implementation guide and related artefacts are technical in nature and the audience is expected to be familiar with the language of health data specifications and to have some familiarity with health information standards and specifications, such as <a href="#HL7FHIR3">HL7 FHIR [HL7FHIR3]</a> and Standards Australia IT-014 documents. Definitions and examples are provided to clarify relevant terminology usage and intent.</p>
 
 <h2 id="document-information">Document Information</h2>
 
@@ -307,7 +307,7 @@
   <tbody>
     <tr>
       <td>[<a name="HL7FHIR3">HL7FHIR3</a>]</td>
-      <td>Health Level Seven, Inc., 19 April 2017, FHIR, Release 3 (STU), accessed 10 March 2019.</td>
+      <td>Health Level Seven, Inc., 19 April 2017, FHIR Release 3 (STU).</td>
     </tr>
     <tr>
       <td> </td>
@@ -320,7 +320,7 @@
   <tbody>
     <tr>
       <td>[<a name="HL7FHIR4">HL7FHIR4</a>]</td>
-      <td>Health Level Seven, Inc., 19 April 2017, FHIR, Release 4 (First Normative content), accessed 10 March 2019.</td>
+      <td>Health Level Seven, Inc., 27 December 2018, FHIR R4.</td>
     </tr>
     <tr>
       <td> </td>
@@ -388,11 +388,11 @@
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-xxx:2019</p>
+            <p>Document ID: DH-xxx:2019 Draft for internal use</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 26, 2019 13:14+1000. |
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 15, 2019 14:59+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
