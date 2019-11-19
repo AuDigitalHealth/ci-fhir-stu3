@@ -137,7 +137,8 @@ Readers of this implementation guide are encouraged to actively participate in t
         <p>No expansion is available for this value set using the associated code system published in the HL7 AU Base material. None of the concepts defined by the code system are included in the code system resource. Implementers are expected to have available an expansion that defines what codes are in the value sets to make use of this terminology.</p>
     </td>
     <td><a href="https://github.com/hl7au/au-fhir-base-stu3/issues/9">au-fhir-base-stu3/issues/9</a></td>
-  </tr>     
+  </tr>  
+  <tr> 
     <td>Source material errors</td>
     <td>
         <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
