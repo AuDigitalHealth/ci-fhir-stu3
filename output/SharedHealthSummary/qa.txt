@@ -2,8 +2,8 @@
 =========================================
 
 err = 138, warn = 206, info = 12
-IG Publisher Version: v0.9.93-SNAPSHOT Out of date - current version is v0.9.96-SNAPSHOT
-Generated Fri Nov 15 15:08:23 AEST 2019. FHIR version 3.0.2 for au.electronichealth.sharedhealthsummary# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+IG Publisher Version: v0.9.91-SNAPSHOT Out of date - current version is v1.0.0-SNAPSHOT
+Generated Tue Nov 19 22:45:56 AEST 2019. FHIR version 3.0.2 for au.electronichealth.sharedhealthsummary# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 342 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-1509ea06-0856-43ed-8842-cc7e6f48c460 : 0 / 1
@@ -469,7 +469,7 @@ ERROR: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[1
 WARNING: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[11].code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-condition-1 not found by validator
 ERROR: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.contained[11].subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: e6e84607-a0da-4ead-9ed6-5e064fea9fc4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.type: The display "Patient Summary" is not a valid display for the code {http://loinc.org}60591-5 - should be one of ["Patient summary Document","Patient summary Doc"]
-WARNING: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].code.coding[0]: The display "Allergies and or adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
+WARNING: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].code.coding[0]: The display "Allergies andor adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
 WARNING: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[1].entry[0].contained.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator
 WARNING: Composition/a0da969a-7956-439b-b390-8de071a2df7c: Composition.section[3].emptyReason: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\composition-bd06e981-ba86-4020-ba59-cd89f80e8712.xml ==
@@ -496,7 +496,7 @@ WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained
 ERROR: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.contained[9].patient: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 841a56de-92d7-47fd-bb27-bad8efb371e4; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)
 WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.type: The display "Patient Summary" is not a valid display for the code {http://loinc.org}60591-5 - should be one of ["Patient summary Document","Patient summary Doc"]
-WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].code.coding[0]: The display "Allergies and or adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
+WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].code.coding[0]: The display "Allergies andor adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
 WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[0].contained.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator
 WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[0].contained.reaction[0].manifestation[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/clinical-finding-1 not found by validator
 WARNING: Composition/bd06e981-ba86-4020-ba59-cd89f80e8712: Composition.section[1].entry[1].contained.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator
@@ -526,18 +526,18 @@ WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained
 WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[12].vaccineCode.coding[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/amt-vaccine-1 not found by validator
 ERROR: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.contained[12].patient: ref-1: SHALL have a contained resource if a local reference is provided ( (url: d9698a55-723a-49de-931b-4e61d732b016; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.type: The display "Patient Summary" is not a valid display for the code {http://loinc.org}60591-5 - should be one of ["Patient summary Document","Patient summary Doc"]
-WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].code.coding[0]: The display "Allergies and or adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
+WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].code.coding[0]: The display "Allergies andor adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
 WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[1].entry[0].contained.code: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/indicator-hypersensitivity-intolerance-to-substance-1 not found by validator
 WARNING: Composition/c53c6c39-3e1a-4038-9ad5-25be8c54481f: Composition.section[2].emptyReason: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\composition-de5ef077b-cc0f-4c3d-a4cd-a35ceafff331.xml ==
 WARNING: Composition/de5ef077b-cc0f-4c3d-a4cd-a35ceafff331: Composition.section[3].emptyReason: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\composition-e-f1412590-54f5-11e9-b475-0800200c9a66.xml ==
 WARNING: Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.type: The display "Patient Summary" is not a valid display for the code {http://loinc.org}60591-5 - should be one of ["Patient summary Document","Patient summary Doc"]
-WARNING: Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]: The display "Allergies and or adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
+WARNING: Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]: The display "Allergies andor adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
 WARNING: Composition/e-f1412590-54f5-11e9-b475-0800200c9a66: Composition.section[2].emptyReason: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\composition-f-ba3eaa80-55c8-11e9-b475-0800200c9a66.xml ==
 WARNING: Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.type: The display "Patient Summary" is not a valid display for the code {http://loinc.org}60591-5 - should be one of ["Patient summary Document","Patient summary Doc"]
-WARNING: Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]: The display "Allergies and or adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
+WARNING: Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[1].code.coding[0]: The display "Allergies andor adverse reactions" is not a valid display for the code {http://loinc.org}48765-2 - should be one of ["Allergies and adverse reactions Document","Allergies &or adverse reactions Doc"]
 WARNING: Composition/f-ba3eaa80-55c8-11e9-b475-0800200c9a66: Composition.section[2].emptyReason: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator
 == C:\work\git\ci-fhir-stu3\examples\composition-ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999.xml ==
 WARNING: Composition/ff0gh111a-cc0f-4c3d-a4cd-a35ceafff999: Composition.section[1].emptyReason: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1 not found by validator

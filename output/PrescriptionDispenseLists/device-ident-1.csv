@@ -116,7 +116,7 @@ ICCBA DIs for other devices:
 "Device.status","","","",0,1,"Y","Y","Y","code {[]} {[]}
 ","active | inactive | entered-in-error | unknown","Status of the Device availability.","This element is labeled as a modifier because the status contains the codes inactive and entered-in-error that mark the device (record)as not currently valid.","","","","","","","","",,"required","The availability status of the device.","http://hl7.org/fhir/ValueSet/device-status","",,,,"Device.status",0,1,"","",".statusCode","status"
 "Device.type","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
-","What kind of device this is","Code or identifier to identify a kind of device.","","","","","","","","","",,"extensible","Codes to identify medical devices.","","",,,,"Device.type",0,1,"","",".code","what","Type description using GMDN or other code system"
+","What kind of device this is","Code or identifier to identify a kind of device.","","","","","","","","","",,"example","Codes to identify medical devices","http://hl7.org/fhir/ValueSet/device-kind","",,,,"Device.type",0,1,"","",".code","what","Type description using GMDN or other code system"
 "Device.lotNumber","","","",0,1,"Y","","","string {[]} {[]}
 ","Lot number of manufacture","Lot number assigned by the manufacturer.","","","","","","","","","",,,,,"",,,,"Device.lotNumber",0,1,"","",".lotNumberText","what","The lot or batch number within which a device was manufactured - which is a component of the production identifier (PI), a conditional, variable portion of a UDI."
 "Device.manufacturer","","","",0,1,"Y","","","string {[]} {[]}
