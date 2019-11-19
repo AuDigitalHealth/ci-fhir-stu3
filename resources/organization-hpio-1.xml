@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="organization-hpio-1" />
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-hpio-1" />
@@ -6,12 +6,12 @@
   <name value="OrganizationHPIO" />
   <title value="Organization with Mandatory HPI-O" />
   <status value="draft" />
-  <experimental value="true"/>
+  <experimental value="true" />
   <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
   <description value="The purpose of this profile is to define a representation of an organisation in an Australian context where an identifier as a Healthcare Provider Identifier - Organisation is mandatory.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support]  (http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
@@ -25,6 +25,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="trial-use" />
+      </extension>
       <path value="Organization" />
       <constraint>
         <key value="inv-dh-org-01" />

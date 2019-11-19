@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="device-dh-base-1" />
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1" />
@@ -6,12 +6,12 @@
   <name value="DeviceBase" />
   <title value="Base Device" />
   <status value="draft" />
-  <experimental value="true"/>
+  <experimental value="true" />
   <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
   <description value="The purpose of this profile is to provide a base model for the concept of a device, defining fundamental concepts that form a conforming representation of a device. It is used as a base model from which to further derive models for specific usage scenarios in an Australian context and where it is desirable to provide some constraint to support unique identification of the device.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element" />
@@ -25,7 +25,7 @@
   <derivation value="constraint" />
   <differential>
     <element id="Device">
-      <path value="Device" />      
+      <path value="Device" />
       <constraint>
         <key value="inv-dh-dev-01" />
         <severity value="error" />
@@ -36,7 +36,7 @@
     <element id="Device.identifier">
       <path value="Device.identifier" />
       <mustSupport value="true" />
-    </element>    
+    </element>
     <element id="Device.udi">
       <path value="Device.udi" />
       <mustSupport value="true" />
@@ -76,13 +76,6 @@
     <element id="Device.type">
       <path value="Device.type" />
       <mustSupport value="true" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DeviceKind" />
-        </extension>
-        <strength value="extensible" />
-        <description value="Codes to identify medical devices." />
-      </binding>
     </element>
     <element id="Device.lotNumber">
       <path value="Device.lotNumber" />
