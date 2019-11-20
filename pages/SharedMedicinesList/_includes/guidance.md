@@ -117,7 +117,7 @@ Readers of this implementation guide are encouraged to actively participate in t
         <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
     </td>
   </tr>
-    <tr>
+  <tr>
     <td>Source material errors</td>
     <td>
         <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
