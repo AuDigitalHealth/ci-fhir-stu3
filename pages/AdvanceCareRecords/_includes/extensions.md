@@ -49,7 +49,7 @@ The following extensions form part of this implementation guide:
    <tr>
        <td><a href="http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-information-recipient.html">Information Recipient</a></td>
        <td>information-recipient</td>
-       <td><a href="http://hl7.org/fhir/stu3/datatypes.html#Reference">Reference</a></td>
+       <td><a href="http://hl7.org/fhir/stu3/references.html#Reference">Reference</a></td>
        <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
   </tr> 
   <tr>
