@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent a personal health record, including Personal Health Notes (PHN) and Personal Health Summary (PHS). A personal health record is a health document authored by an individual or their authorised representative.
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent a personal health record, including Personal Health Notes (PHN) and Personal Health Summary (PHS). A personal health record is a health document authored by an individual or their authorised representative.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 

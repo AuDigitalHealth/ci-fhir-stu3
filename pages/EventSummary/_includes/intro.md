@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This implementation guide is an HL7&#8482; FHIR&#xae; specification to represent an Event Summary (ES). An event summary is a record, authored by a practitioner, of a significant healthcare event involving the individual that is useful to a wide range of practitioners in delivering care.
+This implementation guide is an HL7<sup>TM</sup> FHIR<sup>&reg;</sup> specification to represent an Event Summary (ES). An event summary is a record, authored by a practitioner, of a significant healthcare event involving the individual that is useful to a wide range of practitioners in delivering care.
 
 This [implementation guide](http://hl7.org/fhir/STU3/implementationguide.html#scope) is based on [FHIR, Release 3 (STU) [HL7FHIR3]](#HL7FHIR3).
 
