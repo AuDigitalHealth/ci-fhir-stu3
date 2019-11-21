@@ -47,7 +47,7 @@ The contents may include:
 * conformance profile – a statement of conformance requirements for exchanging documents within a particular scenario such as the My Health Record
 * release notes
 
-End-product clinical specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the end-product clinical specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
+Clinical specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.
 
 ## How to read this document
 This implementation guide contains descriptions of both constraints on HL7 FHIR and, where necessary, custom extensions to HL7 FHIR, for the purposes of fulfilling the requirements for Australian implementations of shared medicines lists. These descriptions are defined as a set of FHIR [profiles](http://hl7.org/fhir/stu3/profiling.html).  
