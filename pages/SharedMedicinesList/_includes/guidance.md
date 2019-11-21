@@ -126,7 +126,7 @@ A profile or extension is identified by its canonical URL (e.g. http://ns.electr
 The Must Support rules for this implementation guide are defined in [Conformance](conformance.html). A must support flag, when present in this implementation guide, is displayed as letter “S” with red background in the Flag column of the Differential Table and Snapshot Table of a profile or extension, as such <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>.
 
 ### Conformance verbs
-The conformance verbs used in this implementation guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/stu3/conformance-rules.html#conflang). Conformance verbs are present in this implementation guide in [Conformance requirements](conformance.html), and in invariants which are visible in the “Description & Constraints” column of the Differential Table and Snapshot Table of a profile or extension.
+The conformance verbs used in this implementation guide are defined in [FHIR Conformance Rules](http://hl7.org/fhir/STU3/conformance-rules.html#conflang). Conformance verbs are present in this implementation guide in [Conformance requirements](conformance.html), and in invariants which are visible in the “Description & Constraints” column of the Differential Table and Snapshot Table of a profile or extension.
 
 ### Terminology binding
 The terminology binding rules are defined in [Controlling the use of Coded Values](http://hl7.org/fhir/stu3/terminologies.html#binding). Terminology is specified in this implementation guide, 
@@ -136,7 +136,7 @@ A value set binding, if present in this specification, will be specified in the 
 
 
 ### Cardinality
-Cardinality rules in FHIR are defined in [FHIR Conformance Rules](http://hl7.org/fhir/stu3/conformance-rules.html#conflang). This section provides a description of those rules as present in this implementation guide and how they are to be interpreted.
+Cardinality rules in FHIR are defined in [FHIR Conformance Rules](http://hl7.org/fhir/STU3/conformance-rules.html#conflang). This section provides a description of those rules as present in this implementation guide and how they are to be interpreted.
 
 The cardinality range specifies the allowable occurrences within a document instance. Cardinality range is specified in the format “m..n” where m is the minimum allowed members of the set (lower bound) and n is the maximum allowed members of the set (upper bound). The allowed values for m and n are 0, any positive integer, and *.
 
@@ -194,7 +194,3 @@ Slicing rules are:
 * **Ordered**: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)
 * **Rules**: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)
 * **Discriminator**: an element or a list of elements used to discriminate the slices. When a discriminator is provided, the composite of the values of the elements designated in the discriminator is unique and distinct for each possible slice
-
-
-
-
