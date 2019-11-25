@@ -202,15 +202,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-practitioner.html">AUBasePractitioner</a>.</p>
 <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-This profile was published on Tue Nov 19 23:05:12 AEST 2019 as a draft by Australian Digital Health Agency.
-=======
-This profile was published on Wed Nov 20 14:04:39 AEST 2019 as a draft by Australian Digital Health Agency.
->>>>>>> dab77e19a8f0e04ca9fa94d96a5a325a1bca9ac7
-=======
-This profile was published on Fri Nov 22 11:30:15 AEST 2019 as a draft by Australian Digital Health Agency.
->>>>>>> f25baffb0a6935c40d0ea39eaeebd8b93c6fb45f
+This profile was published on Tue Nov 26 09:01:20 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -954,17 +946,17 @@ Work addresses are not typically entered in this property as they are usually ro
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td></tr>
 <tr><td>Practitioner.language</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td title="A human language."><a href="http://hl7.org/fhir/STU3/valueset-languages.html">Common Languages</a><br/><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/STU3/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/STU3/valueset-all-languages.html">All Languages</a></td></tr>
 <tr><td>Practitioner.identifier:hpii.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Practitioner.identifier:hpii.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local Identifier Type">Pattern: <a title="v2 Identifier Type" href="http://hl7.org/fhir/STU3/v2/0203/index.html#v2-0203-NPI">NPI</a></td></tr>
+<tr><td>Practitioner.identifier:hpii.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local Identifier Type">Pattern: <a title="v2 Identifier Type" href="http://hl7.org/fhir/STU3/v2/0203/index.html#NPI">NPI</a></td></tr>
 <tr><td>Practitioner.identifier:medicarePrescriberNumber.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Practitioner.identifier:medicarePrescriberNumber.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#au-hl7v2-0203-PRES">PRES</a></td></tr>
+<tr><td>Practitioner.identifier:medicarePrescriberNumber.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#PRES">PRES</a></td></tr>
 <tr><td>Practitioner.identifier:careAgencyEmployeeIdentifier.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
 <tr><td>Practitioner.identifier:careAgencyEmployeeIdentifier.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type"><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//ValueSet-au-hl7v2-0203.html">v2IdentifierTypeAUExtended</a></td></tr>
 <tr><td>Practitioner.identifier:ahpraRegistration.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Practitioner.identifier:ahpraRegistration.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#au-hl7v2-0203-AHPRA">AHPRA</a></td></tr>
+<tr><td>Practitioner.identifier:ahpraRegistration.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local identifier type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#AHPRA">AHPRA</a></td></tr>
 <tr><td>Practitioner.gender</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="The gender of a person used for administrative purposes."><a href="http://hl7.org/fhir/STU3/valueset-administrative-gender.html">AdministrativeGender</a></td></tr>
 <tr><td>Practitioner.qualification.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Specific qualification the practitioner has to provide a service"><a href="http://hl7.org/fhir/STU3/v2/0360/2.7/index.html">v2 table 0360, Version 2.7</a></td></tr>
 <tr><td>Practitioner.qualification:ahpraRegistration.identifier.use</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a href="http://hl7.org/fhir/STU3/valueset-identifier-use.html">IdentifierUse</a></td></tr>
-<tr><td>Practitioner.qualification:ahpraRegistration.identifier.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local Identifier Type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#au-hl7v2-0203-AHPRA">AHPRA</a></td></tr>
+<tr><td>Practitioner.qualification:ahpraRegistration.identifier.type</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a></td><td title="Local Identifier Type">Pattern: <a title="HL7 V2 Table 0203 - Identifier Type (AU Extended)" href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//CodeSystem-au-hl7v2-0203.html#AHPRA">AHPRA</a></td></tr>
 <tr><td>Practitioner.qualification:ahpraRegistration.code</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#example">example</a></td><td title="Specific qualification the practitioner has to provide a service"><a href="http://hl7.org/fhir/STU3/v2/0360/2.7/index.html">v2 table 0360, Version 2.7</a></td></tr>
 <tr><td>Practitioner.communication</td><td><a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a></td><td><a href="https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2">https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2</a></td></tr>
 </table>
@@ -1051,15 +1043,7 @@ Work addresses are not typically entered in this property as they are usually ro
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Nov 19, 2019 23:05+1000.
-=======
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Wed, Nov 20, 2019 14:04+1000.
->>>>>>> dab77e19a8f0e04ca9fa94d96a5a325a1bca9ac7
-=======
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 22, 2019 11:30+1000.
->>>>>>> f25baffb0a6935c40d0ea39eaeebd8b93c6fb45f
+            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Nov 26, 2019 09:01+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
