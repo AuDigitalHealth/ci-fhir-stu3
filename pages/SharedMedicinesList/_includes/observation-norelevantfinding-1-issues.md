@@ -7,8 +7,8 @@
   </tr>
   <tr>
         <td>code (incorrect use of fixedCodeableConcept)</td>
-        <td>The HL7 AU AU Assertion of No Relevant Finding profile, from which this profile is derived, fixes the value on Observation.code by using fixedCodeableConcept. The result of this is to prohibit CodeableConcept.text and CodeableConcept.coding.display (as well as other elements), which will inhibit the representation of realistic instances of data. An alternate method of fixing values has been devised (as is documented in an associated ticket shown to the right). This issue will be fixed in an R4 variant of this profile.</td>
-        <td>See GitHub <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">Incorrect use of fixedCodeableConcept in various profiles, issue #48</a>.</td>
+        <td>The HL7 AU Assertion of No Relevant Finding profile, from which this profile is derived, fixes the value on Observation.code by using fixedCodeableConcept. The result of this is to prohibit CodeableConcept.text and CodeableConcept.coding.display (as well as other elements), which will inhibit the representation of realistic instances of data. An alternate method of fixing values has been devised (as is documented in an associated ticket shown to the right). This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See GitHub <a href="https://github.com/hl7au/au-fhir-base/issues/326">StructureDefinition-au-norelevantfinding :: incorrect use of fixedCodeableConcept on Observation.code</a></td>
   </tr>
   <tr>
         <td>Constraint presentation</td>
