@@ -13,13 +13,13 @@ A FHIR resource may be supplied in one of the following formats: [XML](http://hl
 This implementation guide describes FHIR resources built following the rules described in [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3).
 
 The FHIR specification is evolving; the current FHIR specification is available at [http://hl7.org/fhir](http://hl7.org/fhir). A [Publication (Version) History](http://www.hl7.org/fhir/directory.cfml) of past and current working versions, including [FHIR Release 4 (First Normative content) [HL7FHIR4]](index.html#HL7FHIR4) is available.
- 
+
 The following references are recommended to gain a better understanding of FHIR:
 * [FHIR, Release 3 (STU) [HL7FHIR3]](index.html#HL7FHIR3)
 * [FHIR Overview](https://www.hl7.org/fhir/stu3/overview.html)
 * [HL7 International FHIR Wiki [HL7FHIR]](index.html#HL7FHIR)
- 
 
+ 
 ## Profile / extension representation and structure
 
 Each profile or extension (StructureDefinition) described by this implementation guide has a separate page that presents the normative definition of that profile or extension and informative content to support implementation.
@@ -64,21 +64,7 @@ Readers of this implementation guide are encouraged to actively participate in t
     <th>Reference</th>
     <th>Description</th>
     <th>Issue No.</th>
- </tr>    
-  <tr>
-    <td>qualification.code (Australian localisation)</td>
-    <td>
-        <p>Work is underway to provide terminology for Australian qualifications. This work is expected to be available in an R4 variant of this profile.</p>
-    </td>
-    <td>See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/314"> au-practitioner :: Add ValueSet for Qualification.code to suit Australian Localisation</a></td>
-  </tr>  
-  <tr>
-    <td>Constraint presentation</td>
-    <td>
-        <p>The full set of constraints (i.e. invariants) defined in this profile are only presented in the Detailed Descriptions tab or the raw representation (e.g. XML) of the profile. The Differential Table only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The Snapshot Table only presents the constraints visible in the Differential Table and additionally presents those constraints set in slices in the base profile.</p>
-    </td>
-    <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
-  </tr>  
+  </tr>
   <tr>
     <td>Invariants may not constrain as intended</td>
     <td>
@@ -117,21 +103,6 @@ Readers of this implementation guide are encouraged to actively participate in t
         <p>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179177-conformance">Constraining Extension Values in Profiles</a> stream</p>
     </td>
   </tr>
-  </tr>
-    <tr>
-    <td>Source material errors</td>
-    <td>
-        <p>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
-    </td>
-    <td></td>
-  </tr>  
-  <tr>
-    <td>Non-resolving profile URLs</td>
-    <td>
-        <p>Canonical URLs with the prefix of <a href="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</a> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</p>
-    </td>
-    <td></td>
-  </tr>   
  </tbody>
 </table> 
 
@@ -216,9 +187,9 @@ The table below demonstrates a representative set of examples of cardinality ran
 Slicing rules in FHIR are defined in [Profiling FHIR](http://hl7.org/fhir/stu3/profiling.html). This section provides a description of slicing as present in this implementation guide.
 
 Slicing is a mechanism to describe patterns of restrictions (i.e. conformance requirements). Slicing, usually on resource elements that can appear more than once in a profile, or on elements that do not repeat but have a choice of data types, where each slice has a different definition of the element. For example, the section element in a composition profile may be sliced into a list of slices in order to give each section slice a different set of restrictions.
- 
+
 A sliced element can be identified by the following icon <span style="padding-left: 3px; padding-right: 3px"><img src="icon_slice.png" alt="." style="background-color: white; background-color: inherit"/></span> in the Name column of the Differential and Snapshot views of the Differential Table and Snapshot Table of a profile or extension.
- 
+
 Slicing rules are:
 * **Ordered**: describes whether the slices must come in the order they are defined (Ordered), or whether they can come in any order (Unordered)
 * **Rules**: describes whether the profiles that are derived from this one are allowed to add additional slices (Open), or not allowed to add additional slices (Closed)

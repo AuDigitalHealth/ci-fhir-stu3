@@ -141,6 +141,7 @@
           <li><a href="#product-version-history" id="markdown-toc-product-version-history">Product Version History</a></li>
         </ul>
       </li>
+      <li><a href="#known-issues" id="markdown-toc-known-issues">Known issues</a></li>
       <li><a href="#references" id="markdown-toc-references">References</a></li>
     </ul>
   </li>
@@ -149,7 +150,7 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This implementation guide is an HL7™ FHIR® specification to represent prescription and / or dispense lists, including Prescription List (PL), Dispense List (PL), Prescription and Dispense List (PDL).</p>
+<p>This implementation guide is an HL7<sup>TM</sup> FHIR<sup>®</sup> specification to represent prescription and / or dispense lists, including Prescription List (PL), Dispense List (PL), Prescription and Dispense List (PDL).</p>
 
 <p>This <a href="http://hl7.org/fhir/STU3/implementationguide.html#scope">implementation guide</a> is based on <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
@@ -192,7 +193,7 @@ This implementation guide is not to be used as a guide to presentation (or rende
   <li>release notes</li>
 </ul>
 
-<p>End-product clinical specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the end-product clinical specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.</p>
+<p>Clinical specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.</p>
 
 <h2 id="how-to-read-this-document">How to read this document</h2>
 
@@ -245,6 +246,26 @@ This implementation guide is not to be used as a guide to presentation (or rende
             <td>TBD</td>
         </tr>
     </tbody>
+</table>
+
+<h2 id="known-issues">Known issues</h2>
+<p>This table lists known issues with this specification at the time of publishing. We are working on solutions to these issues and encourage comments to help us develop these solutions.</p>
+
+<table border="1" cellpadding="1" valign="middle">
+<tbody>
+  <tr bgcolor="#DCDCDC">
+    <th>Reference</th>
+    <th>Description</th>
+  </tr>
+    <tr>
+        <td>Source material errors</td>
+        <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
+    </tr>
+    <tr>
+        <td>Non-resolving profile URLs</td>
+        <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
+    </tr>
+ </tbody>
 </table>
 
 <h2 id="references">References</h2>
@@ -314,7 +335,7 @@ This implementation guide is not to be used as a guide to presentation (or rende
   <tbody>
     <tr>
       <td>[<a name="HL7FHIR3">HL7FHIR3</a>]</td>
-      <td>Health Level Seven, Inc., 19 April 2017, FHIR Release 3 (STU).</td>
+      <td>Health Level Seven, Inc., 24 October 2019, FHIR Release 3 (STU).</td>
     </tr>
     <tr>
       <td> </td>
@@ -373,7 +394,7 @@ This implementation guide is not to be used as a guide to presentation (or rende
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 15, 2019 15:02+1000.
+            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Nov 26, 2019 09:01+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

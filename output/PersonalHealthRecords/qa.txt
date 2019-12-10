@@ -2,8 +2,8 @@
 =========================================
 
 err = 88, warn = 138, info = 28
-IG Publisher Version: v0.9.93-SNAPSHOT Out of date - current version is v0.9.96-SNAPSHOT
-Generated Fri Nov 15 15:01:29 AEST 2019. FHIR version 3.0.2 for au.electronichealth.personalhealthrecords# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+IG Publisher Version: v0.9.91-SNAPSHOT Out of date - current version is v1.0.14-SNAPSHOT
+Generated Fri Dec 06 11:58:04 AEST 2019. FHIR version 3.0.2 for au.electronichealth.personalhealthrecords# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 314 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-27b06bef-2030-4bfc-8c48-3306b616a10b : 0 / 1
@@ -488,7 +488,7 @@ WARNING: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.contained
 ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.contained[3].patient: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 7d10b711-cded-4339-a2fd-ef69e7ba7847; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.contained[4].subject: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 7d10b711-cded-4339-a2fd-ef69e7ba7847; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.contained[4].value.ofType(CodeableConcept): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found by validator
-ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.contained[4].value.ofType(CodeableConcept).coding[0]: unable to find code 1234391000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1234391000168107'
+ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.contained[4].value.ofType(CodeableConcept).coding[0]: unable to find code 1234391000168107 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20190731) for 'http://snomed.info/sct#1234391000168107'
 INFORMATION: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.type: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16685)
 == C:\work\git\ci-fhir-stu3\examples\composition-df1704af-2bf5-4145-9d8c-c889dbc6e017.xml ==
 INFORMATION: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.type: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16685)
@@ -517,7 +517,7 @@ WARNING: MedicationStatement/3aa60974-f765-4665-82a4-20bc1afd569b: MedicationSta
 == C:\work\git\ci-fhir-stu3\examples\medicationstatement-fed62c8e-9035-4ff9-99ac-fb9de96808c8.xml ==
 == C:\work\git\ci-fhir-stu3\examples\observation-4e6c2639-370b-43cd-85db-91bf85da2b22.xml ==
 WARNING: Observation/4e6c2639-370b-43cd-85db-91bf85da2b22: Observation.value.ofType(CodeableConcept): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/assertion-of-absence-1 not found by validator
-ERROR: Observation/4e6c2639-370b-43cd-85db-91bf85da2b22: Observation.value.ofType(CodeableConcept).coding[0]: unable to find code 1234391000168107 in http://snomed.info/sct for 'http://snomed.info/sct#1234391000168107'
+ERROR: Observation/4e6c2639-370b-43cd-85db-91bf85da2b22: Observation.value.ofType(CodeableConcept).coding[0]: unable to find code 1234391000168107 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20190731) for 'http://snomed.info/sct#1234391000168107'
 == C:\work\git\ci-fhir-stu3\examples\organization-5581254e-8f40-4991-af62-d544563f0a98.xml ==
 WARNING: Organization/5581254e-8f40-4991-af62-d544563f0a98: Organization.identifier[0].type: No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)
 == C:\work\git\ci-fhir-stu3\examples\organization-ba0bcc13-248e-4d64-a4b8-a8aa2bd9cb7c.xml ==

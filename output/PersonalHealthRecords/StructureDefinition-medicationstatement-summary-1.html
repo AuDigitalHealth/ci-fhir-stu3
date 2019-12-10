@@ -197,7 +197,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-medicationstatement.html">AUBaseMedicationStatement</a>.</p>
 <p>
-This profile was published on Fri Nov 15 14:59:45 AEST 2019 as a draft by Australian Digital Health Agency.
+This profile was published on Fri Dec 06 11:56:24 AEST 2019 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -696,7 +696,41 @@ The primary difference between a medication statement and a medication administr
 <!-- known issues -->
 <a name="search"> </a>
 <h4><span class="sectioncount">SD.12.2 - </span> Known Issues <a title="link to here" class="self-link" href="StructureDefinition-medicationstatement-summary-1.html#issues"><img src="target.png"/></a></h4>
-<p>None.</p>
+<table class="list" width="100%">
+<tbody>
+  <tr>
+     <th>Reference</th>
+     <th>Description</th>
+     <th>Issue No.</th>
+  </tr>
+  <tr>
+     <td>Constraint presentation</td>
+     <td>The full set of constraints (i.e. invariants) defined in this profile are only presented in the Detailed Descriptions tab or the raw representation (e.g. XML) of the profile. The Differential Table only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The Snapshot Table only presents the constraints visible in the Differential Table and additionally presents those constraints set in slices in the base profile.</td>
+     <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
+  </tr>
+  <tr>
+     <td><a href="http://hl7.org.au/fhir/base/aubase1.1/ValueSet-pbs-item.html">PBS Medicines Item Codes</a></td>
+     <td>
+        <p>The PBS Medicines Item Codes value set, originating from the HL7 AU Base Medication profile, is a placeholder resource. Forthcoming work is expected to result in an authoritative value set published in the <a href="https://www.healthterminologies.gov.au/">National Clinical Terminology Service (NCTS)</a> with the following canonical URL: <a href="https://healthterminologies.gov.au/fhir/ValueSet/australian-pbs-item-1">https://healthterminologies.gov.au/fhir/ValueSet/australian-pbs-item-1</a>. Implementers are to make use of the value set served via the NCTS when available.</p>
+     </td>
+     <td><a href="https://confluence.hl7australia.com/pages/viewpage.action?pageId=14582568">Ballot comment FHIRIG-24</a></td>
+  </tr> 
+  <tr>
+     <td><a href="http://hl7.org.au/fhir/base/aubase1.1/ValueSet-gtin.html">GTIN for Medicines</a></td>
+     <td>
+       <p>No expansion is available for this value set using the associated code system published in the HL7 AU Base material. None of the concepts defined by the code system are included in the code system resource. Implementers are expected to have available an expansion that defines what codes are in the value sets to make use of this terminology.</p>
+     </td>
+     <td><a href="https://github.com/hl7au/au-fhir-base-stu3/issues/9">au-fhir-base-stu3/issues/9</a></td>
+  </tr>
+  <tr>
+     <td><a href="http://hl7.org.au/fhir/base/aubase1.1/ValueSet-mims.html">MIMS Terminology</a></td>
+     <td>
+        <p>No expansion is available for this value set using the associated code system published in the HL7 AU Base material. None of the concepts defined by the code system are included in the code system resource. Implementers are expected to have available an expansion that defines what codes are in the value sets to make use of this terminology.</p>
+     </td>
+     <td><a href="https://github.com/hl7au/au-fhir-base-stu3/issues/9">au-fhir-base-stu3/issues/9</a></td>
+  </tr>  
+</tbody>
+</table>
 
 
 
@@ -805,7 +839,7 @@ The primary difference between a medication statement and a medication administr
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Nov 15, 2019 14:59+1000.
+            <p>Personal Health Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, Dec 6, 2019 11:56+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
