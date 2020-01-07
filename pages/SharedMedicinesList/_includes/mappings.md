@@ -268,9 +268,9 @@ time of document authoring. The profile has this as optional.</p>
                     <td>Composition.extension(information-recipient)> Patient.address</td>
                     <td rowspan="7">
                         <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any address for the consumer within the document.</p>
-                        <p>Patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send address when sending to the My Health Record.</p>
-                        <p>This requirement is best enforced in a conformance profile.</p>
-                     </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>Other patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission.</p>
+                  </td>
                 </tr>
                 <tr>
                     <td>Composition.subject> Patient.address</td>
@@ -298,9 +298,9 @@ time of document authoring. The profile has this as optional.</p>
                     <td>Composition.extension(information-recipient)> Patient.telecom</td>
                     <td rowspan="7">
                         <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any types of electronic communication contact detail for the consumer within the document.</p>
-                        <p>Patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send telecom when sending to the My Health Record.</p>
-                        <p>This requirement is best enforced in a conformance profile.</p>
-                     </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>Oher patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission.</p>
+                 </td>
                 </tr>
                 <tr>
                     <td>Composition.subject> Patient.telecom</td>
@@ -719,8 +719,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.identifier</td>
                     <td rowspan="2">
                         <p>This requirement states a PSML document shall contain the individual's IHI.</p>
-                        <p>The profile mandates an identifier but does not force that identifier to be an IHI.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                                              
                     </td>
                 </tr>
                 <tr>
@@ -759,9 +759,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.name.text</td>
                     <td rowspan="2">
                         <p>This requirement states a PSML document shall contain the individual's family name.</p>
-                        <p>The profile allows for a family name - it does not mandate the inclusion of a name or that a name if provided includes family name.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
-                    </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                       </td>
                 </tr>
                 <tr>
                     <td>Patient.name.family</td>
@@ -787,8 +786,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.gender</td>
                     <td>
                         <p>This requirement states a PSML document shall contain the individual's gender.</p>
-                        <p>The profile supports gender as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                       <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                       
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -811,9 +810,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.birthDate</td>
                     <td>
                         <p>This requirement states a PSML document shall contain the individual's date of birth.</p>
-                        <p>The profile supports date of birth as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
-                    </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                                            </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -834,8 +832,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.extension(indigenous-status)</td>
                     <td>
                         <p>This requirement states a PSML document shall contain the individual's indigenous status.</p>
-                        <p>The profile supports indigenous status as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
