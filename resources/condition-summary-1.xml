@@ -47,7 +47,7 @@
         <key value="inv-dh-cond-02" />
         <severity value="error" />
         <human value="A practitioner shall conform to Base Practitioner, a patient shall conform to Base Patient, and a related person shall conform to Base RelatedPerson" />
-        <expression value="all($this.reference.exists() implies ($this.reference.resolve().where($this is Practitioner).conformsTo('http://hl7.org/fhir/StructureDefinition/Practitioner') or $this.reference.resolve().where($this is Patient).conformsTo('http://hl7.org/fhir/StructureDefinition/Patient') or $this.reference.resolve().where($this is RelatedPerson).conformsTo('http://hl7.org/fhir/StructureDefinition/RelatedPerson')))" />
+        <expression value="all($this.valueReference.reference.exists() implies ($this.valueReference.reference.resolve().where($this is Practitioner).conformsTo('http://hl7.org/fhir/StructureDefinition/Practitioner') or $this.valueReference.reference.resolve().where($this is Patient).conformsTo('http://hl7.org/fhir/StructureDefinition/Patient') or $this.valueReference.reference.resolve().where($this is RelatedPerson).conformsTo('http://hl7.org/fhir/StructureDefinition/RelatedPerson')))" />
       </constraint>
       <mustSupport value="true" />
     </element>

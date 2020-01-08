@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TEST EXAMPLE FOR BASE RelatedPerson PROFILE -->
+
+<!-- SUBJECT: Invariant inv-dh-relper-01: The related person shall at least have a name, an identifier or a relationship with the patient -->
+
+<!-- RESULT EXPECTATION: pass -->
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+    <id value="relatedPerson-dh-base-1.inv-dh-relper-01.pass-1"/>
+    <meta>
+        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
+    </meta>
+    <active value="true"/>
+    <patient>
+        <reference value="Patient/patient-dh-base-1.inv-dh-pat-01.pass-1"/>
+    </patient>
+    <name>
+        <family value="Smith"/>
+        <given value="Mary"/>
+    </name>
+</RelatedPerson>

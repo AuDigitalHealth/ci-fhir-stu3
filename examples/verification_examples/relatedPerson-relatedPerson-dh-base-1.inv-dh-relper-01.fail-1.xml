@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TEST EXAMPLE FOR BASE RelatedPerson PROFILE -->
+
+<!-- SUBJECT: Invariant inv-dh-relper-01: The related person shall at least have a name, an identifier or a relationship with the patient -->
+
+<!-- RESULT EXPECTATION: fail -->
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+    <id value="relatedPerson-dh-base-1.inv-dh-relper-01.fail-1"/>
+    <meta>
+        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1"/>
+    </meta>
+    <active value="true"/>
+     <gender value="female"/>
+    <address>
+        <line value="255 Gadsby Street"/>
+        <city value="Blacktown"/>
+        <state value="NSW"/>
+        <postalCode value="2148"/>
+        <country value="AU"/>
+    </address>
+</RelatedPerson>
