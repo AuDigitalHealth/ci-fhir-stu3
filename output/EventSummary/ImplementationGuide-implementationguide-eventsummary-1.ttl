@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "Event Summary"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2019-12-06T11:44:55+10:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-01-09T15:53:40+10:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -30,6 +30,20 @@
   fhir:ImplementationGuide.description [ fhir:value "This implementation guide is an HL7™ FHIR® specification to represent an Event Summary (ES).\n \nThe primary aim of this implementation guide is to support implementing ES in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of ES information between healthcare providers.\n \nThis implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.\n \nThis implementation guide does not describe transport or persistence mechanism of the resources described by it."];
   fhir:ImplementationGuide.copyright [ fhir:value "Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."];
   fhir:ImplementationGuide.fhirVersion [ fhir:value "3.0.2"];
+  fhir:ImplementationGuide.dependency [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId" ];
+       fhir:Extension.valueId [ fhir:value "hl7.fhir.au.base" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version" ];
+       fhir:Extension.valueString [ fhir:value "current-stu3" ]
+     ];
+     fhir:ImplementationGuide.dependency.type [ fhir:value "reference" ];
+     fhir:ImplementationGuide.dependency.uri [ fhir:value "http://hl7.org.au/fhir" ]
+  ];
   fhir:ImplementationGuide.package [
      fhir:index 0;
      fhir:Element.id [ fhir:value "p1" ];
