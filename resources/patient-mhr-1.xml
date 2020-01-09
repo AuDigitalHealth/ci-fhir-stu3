@@ -40,6 +40,12 @@
         <human value="If present, a managing organisation shall at least have a reference, an identifier or a display" />
         <expression value="managingOrganization.exists() implies (managingOrganization.reference.exists() or managingOrganization.identifier.exists() or managingOrganization.display.exists())" />
       </constraint>
+      <constraint>
+        <key value="inv-dh-pat-02" />
+        <severity value="error" />
+        <human value="The patient shall at least have one family name" />
+        <expression value="TBD" />
+      </constraint>
     </element>
     <element id="Patient.extension:birthPlace">
       <path value="Patient.extension" />
@@ -78,9 +84,8 @@
     <element id="Patient.identifier:ihiNumber">
       <path value="Patient.identifier" />
       <sliceName value="ihiNumber" />
-      <short value="National identifier for the patient" />
-      <definition value="National identifier for the patient" />
       <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.active">
@@ -94,18 +99,11 @@
         <code value="HumanName" />
         <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/humanname-dh-base-1" />
       </type>
-      <constraint>
-        <key value="inv-dh-pat-03" />
-        <severity value="error" />
-        <human value="Family name shall be included" />
-        <expression value="TBD" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
       <max value="0" />
-      <mustSupport value="true" />
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
@@ -148,10 +146,14 @@
       <short value="Indicates date-time the individual died" />
       <mustSupport value="true" />
     </element>
+    <element id="Patient.deceased[x]:deceasedDateTime.extension:accuracyIndicator">
+      <path value="Patient.deceased[x].extension" />
+      <sliceName value="accuracyIndicator" />
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.address">
       <path value="Patient.address" />
       <max value="0" />
-      <mustSupport value="true" />
     </element>
     <element id="Patient.maritalStatus">
       <path value="Patient.maritalStatus" />
