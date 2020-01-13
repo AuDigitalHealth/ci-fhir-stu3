@@ -135,7 +135,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>Event.context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>Event.occurrence[x]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>Event.note</td> </tr>
 </table>
@@ -144,7 +144,7 @@
  <tr><td>Observation</td><td>&lt; 363787002 |Observable entity|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>&lt; 445584004 |Report by finality status|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>&lt; 363787002 |Observable entity| OR &lt; 386053000 |Evaluation procedure|</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>&lt; 441742003 |Evaluation finding|</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>&lt; 441742003 |Evaluation finding|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>&lt; 441742003 |Evaluation finding|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>&lt; 260245000 |Findings values|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>&lt; 123037004 |Body structure|</td> </tr>
@@ -183,7 +183,7 @@ OR
  <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>OBX-14, and/or OBX-19 after v2.4  (depends on who observation made)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>OBR.22 (or MSH.7), or perhaps OBX-19 (depends on who observation made)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>OBX.15 / (Practitioner)  OBX-16,  PRT-5:PRT-4='RO' /  (Device)  OBX-18 , PRT-10:PRT-4='EQUIP' / (Organization)  OBX-23,  PRT-8:PRT-4='PO'</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>OBX.2, OBX.5, OBX.6</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>OBX.2, OBX.5, OBX.6</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>OBX.2, OBX.5, OBX.6</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>OBX-8</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)</td> </tr>
@@ -223,7 +223,7 @@ OR
  <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>effectiveTime</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>participation[typeCode=AUT].time</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>participation[typeCode=PRF]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>interpretationCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>subjectOf.observationEvent[code=&quot;annotation&quot;].value</td> </tr>
@@ -276,7 +276,7 @@ OR
  <tr><td colspan="3"><b>ObservationNoRelevantFinding</b></td></tr>
  <tr><td>Observation</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>116680003 |Is a|</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>363714003 |Interprets|</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>363714003 |Interprets|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>363714003 |Interprets|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>363713009 |Has interpretation|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>718497002 |Inherent location|</td> </tr>
@@ -312,7 +312,7 @@ OR
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Dec 17, 2019 16:07+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Mon, Jan 13, 2020 10:57+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
