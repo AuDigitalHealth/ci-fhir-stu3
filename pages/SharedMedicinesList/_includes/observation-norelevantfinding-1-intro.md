@@ -1,4 +1,4 @@
-#### Assertion of No Relevant Finding *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Assertion of No Relevant Finding *[[Active](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 

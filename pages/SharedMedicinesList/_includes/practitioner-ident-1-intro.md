@@ -1,4 +1,4 @@
-#### Practitioner with Mandatory Identifier *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Practitioner with Mandatory Identifier *[[Active](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
 For the overarching usage scenarios in this implementation guide it is recommended that:
