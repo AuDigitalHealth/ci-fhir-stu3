@@ -46,6 +46,13 @@
         </resource>
         <resource>
             <example value="false"/>
+            <name value="patient-mhr-1"/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-mhr-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="false"/>
             <name value="relatedperson-dh-base-1"/>
             <description
                 value="The Agency RelatedPerson profile, as derived from the STU3 RelatedPerson resource"/>
@@ -158,7 +165,24 @@
         </resource>
 
         <!--   Examples -->
-       
+        <resource>
+            <example value="true"/>
+            <sourceReference>
+                <reference value="Patient/patient-dh-base-1.inv-dh-pat-01.pass-1"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <sourceReference>
+                <reference value="Patient/patient-dh-base-1.inv-dh-pat-01.pass-2"/>
+            </sourceReference>
+        </resource>
+        <resource>
+            <example value="true"/>
+            <sourceReference>
+                <reference value="Patient/patient-dh-base-1.inv-dh-pat-01.fail-1"/>
+            </sourceReference>
+        </resource>
         <resource>
             <example value="true"/>
             <description value="Representation of the CDA example 'SML01_Example.xml' as a Bundle"/>

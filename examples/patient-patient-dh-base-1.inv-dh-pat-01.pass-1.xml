@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TEST EXAMPLE FOR My Health Record Patient PROFILE -->
+
+<!-- SUBJECT: Invariant inv-dh-pat-03: The patient shall at least have one family name -->
+
+<!-- RESULT EXPECTATION: pass -->
+
+<!-- SCENARIO: The patient has a name -->
+
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="patient-dh-base-1.inv-dh-pat-01.pass-1"/>
+    <meta>
+        <profile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1"/>
+    </meta>
+    <name>
+        <text value="Iliana Iglesias"/>
+        <family value="Iglesias"/>
+        <given value="Iliana"/>
+    </name>
+    <name>
+        <text value="liana Lesias"/>
+        <family value="Lesias"/>
+        <given value="liana"/>
+    </name>
+    <gender value="male"/>
+</Patient>
