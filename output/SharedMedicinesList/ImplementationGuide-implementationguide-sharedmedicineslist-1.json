@@ -10,7 +10,7 @@
   "name": "Shared Medicines List",
   "status": "draft",
   "experimental": true,
-  "date": "2020-01-14T11:18:43+10:00",
+  "date": "2020-01-15T09:13:47+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -96,6 +96,23 @@
           "name": "patient-ident-1",
           "sourceReference": {
             "reference": "StructureDefinition/patient-ident-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-patient-mhr-1.html"
+            }
+          ],
+          "example": false,
+          "name": "patient-mhr-1",
+          "sourceReference": {
+            "reference": "StructureDefinition/patient-mhr-1"
           }
         },
         {
@@ -555,6 +572,125 @@
           "description": "Organization with only identifier, name",
           "sourceReference": {
             "reference": "Organization/ec676574-724d-4321-911d-54703015809e"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Composition"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Composition-3329786d-efb8-4b15-8966-809fc0a46cb5.html"
+            }
+          ],
+          "example": true,
+          "description": "Composition SML with nothing but excuses",
+          "sourceReference": {
+            "reference": "Composition/3329786d-efb8-4b15-8966-809fc0a46cb5"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Patient"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.html"
+            }
+          ],
+          "example": true,
+          "description": "Patient Brady Frazier",
+          "sourceReference": {
+            "reference": "Patient/5bd1f29e-06b4-49c6-991e-c68219bbe13a"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Practitioner"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Practitioner-98aa92c6-6fd4-4ac2-a70c-3413f472c88c.html"
+            }
+          ],
+          "example": true,
+          "description": "Practitioner with HPII",
+          "sourceReference": {
+            "reference": "Practitioner/98aa92c6-6fd4-4ac2-a70c-3413f472c88c"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Practitioner"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Practitioner-24bb6d57-392e-4ab1-baab-d184304a7448.html"
+            }
+          ],
+          "example": true,
+          "description": "Practitioner with HPII",
+          "sourceReference": {
+            "reference": "Practitioner/24bb6d57-392e-4ab1-baab-d184304a7448"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "PractitionerRole"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "PractitionerRole-c8ac196f-e1b5-4a29-842b-c3078fda2e24.html"
+            }
+          ],
+          "example": true,
+          "description": "PractitionerRole Dietitian",
+          "sourceReference": {
+            "reference": "PractitionerRole/c8ac196f-e1b5-4a29-842b-c3078fda2e24"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Organization"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Organization-530c7305-9611-46f6-bedf-f77073292b87.html"
+            }
+          ],
+          "example": true,
+          "description": "Organization with HPIO",
+          "sourceReference": {
+            "reference": "Organization/530c7305-9611-46f6-bedf-f77073292b87"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "Observation"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Observation-c2e83af7-d9a2-44a1-9f8b-ad32f4be3a39.html"
+            }
+          ],
+          "example": true,
+          "description": "Observation of no relevant finding",
+          "sourceReference": {
+            "reference": "Observation/c2e83af7-d9a2-44a1-9f8b-ad32f4be3a39"
           }
         }
       ]

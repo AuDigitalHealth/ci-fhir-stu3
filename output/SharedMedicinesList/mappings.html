@@ -399,9 +399,9 @@ time of document authoring. The profile has this as optional.</p>
                     <td>Composition.extension(information-recipient)&gt; Patient.address</td>
                     <td rowspan="7">
                         <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any address for the consumer within the document.</p>
-                        <p>Patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send address when sending to the My Health Record.</p>
-                        <p>This requirement is best enforced in a conformance profile.</p>
-                     </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>Other patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission.</p>
+                  </td>
                 </tr>
                 <tr>
                     <td>Composition.subject&gt; Patient.address</td>
@@ -429,9 +429,9 @@ time of document authoring. The profile has this as optional.</p>
                     <td>Composition.extension(information-recipient)&gt; Patient.telecom</td>
                     <td rowspan="7">
                         <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any types of electronic communication contact detail for the consumer within the document.</p>
-                        <p>Patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission. Implementation guidance is included on the profile page to direct implementers to not send telecom when sending to the My Health Record.</p>
-                        <p>This requirement is best enforced in a conformance profile.</p>
-                     </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>Oher patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission.</p>
+                 </td>
                 </tr>
                 <tr>
                     <td>Composition.subject&gt; Patient.telecom</td>
@@ -849,8 +849,8 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Composition.subject&gt; Patient.identifier</td>
                     <td rowspan="2">
                         <p>This requirement states a PSML document shall contain the individual's IHI.</p>
-                        <p>The profile mandates an identifier but does not force that identifier to be an IHI.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                                              
                     </td>
                 </tr>
                 <tr>
@@ -889,9 +889,8 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Composition.subject&gt; Patient.name.text</td>
                     <td rowspan="2">
                         <p>This requirement states a PSML document shall contain the individual's family name.</p>
-                        <p>The profile allows for a family name - it does not mandate the inclusion of a name or that a name if provided includes family name.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
-                    </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                       </td>
                 </tr>
                 <tr>
                     <td>Patient.name.family</td>
@@ -917,8 +916,8 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Composition.subject&gt; Patient.gender</td>
                     <td>
                         <p>This requirement states a PSML document shall contain the individual's gender.</p>
-                        <p>The profile supports gender as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                       <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                       
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -941,9 +940,8 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Composition.subject&gt; Patient.birthDate</td>
                     <td>
                         <p>This requirement states a PSML document shall contain the individual's date of birth.</p>
-                        <p>The profile supports date of birth as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
-                    </td>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                                            </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -964,8 +962,7 @@ active ingredient(s) or a brand name, or both.</p>
                     <td>Composition.subject&gt; Patient.extension(indigenous-status)</td>
                     <td>
                         <p>This requirement states a PSML document shall contain the individual's indigenous status.</p>
-                        <p>The profile supports indigenous status as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1847,7 +1844,7 @@ active ingredient(s) or a brand name, or both.</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Jan 14, 2020 11:18+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Wed, Jan 15, 2020 09:13+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

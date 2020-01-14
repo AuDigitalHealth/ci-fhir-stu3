@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/5bd1f29e-06b4-49c6-991e-c68219bbe13a> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "5bd1f29e-06b4-49c6-991e-c68219bbe13a"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 5bd1f29e-06b4-49c6-991e-c68219bbe13a</p><p><b>meta</b>: </p><p><b>identifier</b>: NI = 8003608000228437</p><p><b>name</b>: Brady FRAZIER </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1978-01-01</p><p><b>address</b>: 83 Gottfried Cnr COLLINGWOOD VIC 3066 AUS </p></div>"
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/ihi-status" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1" ];
+         fhir:Coding.code [ fhir:value "active" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1" ];
+         fhir:Coding.code [ fhir:value "verified" ];
+         fhir:Coding.display [ fhir:value "verified" ]
+       ]
+     ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "NI" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://ns.electronichealth.net.au/id/hi/ihi/1.0" ];
+     fhir:Identifier.value [ fhir:value "8003608000228437" ]
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "FRAZIER" ];
+     fhir:HumanName.given [
+       fhir:value "Brady";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [
+     fhir:value "1978-01-01"^^xsd:date;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1" ];
+         fhir:Coding.code [ fhir:value "AAA" ];
+         fhir:Coding.display [ fhir:value "Day, month and year are accurate" ]
+       ]
+     ]
+  ];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "83 Gottfried Cnr";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "COLLINGWOOD" ];
+     fhir:Address.state [ fhir:value "VIC" ];
+     fhir:Address.postalCode [ fhir:value "3066" ];
+     fhir:Address.country [ fhir:value "AUS" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/5bd1f29e-06b4-49c6-991e-c68219bbe13a.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

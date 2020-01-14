@@ -1,0 +1,77 @@
+{
+  "resourceType": "Patient",
+  "id": "5bd1f29e-06b4-49c6-991e-c68219bbe13a",
+  "meta": {
+    "profile": [
+      "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 5bd1f29e-06b4-49c6-991e-c68219bbe13a</p><p><b>meta</b>: </p><p><b>identifier</b>: NI = 8003608000228437</p><p><b>name</b>: Brady FRAZIER </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1978-01-01</p><p><b>address</b>: 83 Gottfried Cnr COLLINGWOOD VIC 3066 AUS </p></div>"
+  },
+  "identifier": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+          "valueCoding": {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1",
+            "code": "active"
+          }
+        },
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+          "valueCoding": {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+            "code": "verified",
+            "display": "verified"
+          }
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "NI"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608000228437"
+    }
+  ],
+  "name": [
+    {
+      "family": "FRAZIER",
+      "given": [
+        "Brady"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1978-01-01",
+  "_birthDate": {
+    "extension": [
+      {
+        "url": "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+        "valueCoding": {
+          "system": "https://healthterminologies.gov.au/fhir/CodeSystem/date-accuracy-indicator-1",
+          "code": "AAA",
+          "display": "Day, month and year are accurate"
+        }
+      }
+    ]
+  },
+  "address": [
+    {
+      "line": [
+        "83 Gottfried Cnr"
+      ],
+      "city": "COLLINGWOOD",
+      "state": "VIC",
+      "postalCode": "3066",
+      "country": "AUS"
+    }
+  ]
+}
