@@ -1,15 +1,15 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 296, warn = 92, info = 68
-IG Publisher Version: v1.0.38-SNAPSHOT
-Generated Mon Jan 13 10:59:44 AEST 2020. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 290, warn = 92, info = 68
+IG Publisher Version: v1.0.38-SNAPSHOT Out of date - current version is v1.0.39-SNAPSHOT
+Generated Tue Jan 14 11:21:21 AEST 2020. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 190 / 1
- C:\work\git\ci-fhir-stu3\examples\bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c : 10 / 18
+ C:\work\git\ci-fhir-stu3\examples\bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c : 9 / 18
  C:\work\git\ci-fhir-stu3\examples\bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210 : 4 / 10
- C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41 : 16 / 37
- C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2 : 3 / 4
+ C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41 : 15 / 37
+ C:\work\git\ci-fhir-stu3\examples\composition-fd1583a5-bbdd-4d55-96f0-0c189e7c48b2 : 2 / 4
  C:\work\git\ci-fhir-stu3\examples\list-a04e9676-5c38-4c56-8d24-c600e192613e : 0 / 5
  C:\work\git\ci-fhir-stu3\examples\medicationstatement-a8bd298d-40d0-4bd9-946b-6688f5f2f443 : 0 / 1
  C:\work\git\ci-fhir-stu3\examples\medicationstatement-af3be636-c156-4172-8cbb-27856d5fc650 : 0 / 1
@@ -234,7 +234,6 @@ ERROR: C:\work\git\ci-fhir-stu3\output\SharedMedicinesList\terminology.html: The
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[1]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Bundle.entry[0].resource.section[medications]': minimum required = 1, but only found 0
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.extension[0]: inv-dh-cmp-06: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')]
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.type.text: The element text is present in the instance but not allowed in the applicable fixed value specified in profile
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[0].code.coding[0]: Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' is unknown so the code cannot be validated
@@ -263,7 +262,7 @@ ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[17].resource.co
 WARNING: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource: Resource has a language, but the XHTML does not have a language tag
 INFORMATION: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.section[1]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 ERROR: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Bundle.entry[0].resource.section[medications]': minimum required = 1, but only found 0
-ERROR: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.extension[0]: inv-dh-cmp-06: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')]
+ERROR: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.extension[0]: inv-dh-cmp-06: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')]
 ERROR: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
 WARNING: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.type: The display "Medication summary" is not a valid display for the code {http://loinc.org}56445-0 - should be one of ["Medication summary Document","Medication summary Doc"]
 INFORMATION: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[0].resource.section[1].code.coding[0]: Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' is unknown so the code cannot be validated
@@ -277,7 +276,6 @@ INFORMATION: Bundle/b50acc1e-3f4e-41d3-9c21-dda924adb210: Bundle.entry[9].resour
 == C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.xml ==
 INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[0].resource.section[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[0].resource: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Bundle.entry[0].resource.section[medications]': minimum required = 1, but only found 0
-ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[0].resource.extension[0]: inv-dh-cmp-06: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')]
 ERROR: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[0].resource.type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
 WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[0].resource.type: The display "Medication summary" is not a valid display for the code {http://loinc.org}56445-0 - should be one of ["Medication summary Document","Medication summary Doc"]
 INFORMATION: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[1].resource.extension[0].value.ofType(Coding): Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' is unknown so the code cannot be validated
@@ -332,7 +330,6 @@ WARNING: Bundle/e32a01d0-2610-4c99-ba46-9732aa975d41: Bundle.entry[22].resource.
 WARNING: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition: Resource has a language, but the XHTML does not have a language tag
 INFORMATION: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.section[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 ERROR: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Composition.section[medications]': minimum required = 1, but only found 0
-ERROR: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.extension[0]: inv-dh-cmp-06: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')]
 ERROR: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
 WARNING: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.type: The display "Medication summary" is not a valid display for the code {http://loinc.org}56445-0 - should be one of ["Medication summary Document","Medication summary Doc"]
 INFORMATION: Composition/fd1583a5-bbdd-4d55-96f0-0c189e7c48b2: Composition.section[0].code.coding[0]: Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' is unknown so the code cannot be validated
