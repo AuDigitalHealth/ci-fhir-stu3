@@ -77,7 +77,7 @@
         <key value="inv-dh-lst-05" />
         <severity value="error" />
         <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
+        <expression value="valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
       </constraint>
       <mustSupport value="true" />
     </element>
