@@ -11,7 +11,7 @@
   "title": "Shared Medicines List Authored by Practitioner",
   "status": "draft",
   "experimental": true,
-  "date": "2020-01-13T10:57:21+10:00",
+  "date": "2020-01-14T11:18:43+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -587,7 +587,7 @@
             "key": "inv-dh-cmp-06",
             "severity": "error",
             "human": "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier",
-            "expression": "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
+            "expression": "valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
           }
         ],
         "mustSupport": true
@@ -4243,7 +4243,7 @@
             "key": "inv-dh-cmp-06",
             "severity": "error",
             "human": "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier",
-            "expression": "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
+            "expression": "valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')"
           }
         ],
         "mustSupport": true

@@ -19,7 +19,7 @@
   fhir:StructureDefinition.title [ fhir:value "Shared Medicines List Authored by Practitioner"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-13T10:57:21+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-01-14T11:18:43+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -587,7 +587,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-06" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -4133,7 +4133,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-cmp-06" ];
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
          fhir:ElementDefinition.constraint.human [ fhir:value "A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
+         fhir:ElementDefinition.constraint.expression [ fhir:value "valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
