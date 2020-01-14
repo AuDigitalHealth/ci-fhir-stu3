@@ -23,4 +23,12 @@
                 <td><a href="PractitionerRole-2be6504a-160a-4cb0-ac4c-4b5aa503085d.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+            <tr>
+                <td><a href="PractitionerRole-c8ac196f-e1b5-4a29-842b-c3078fda2e24.html">PractitionerRole example 2 (referenced)</a></td>
+                <td>c8ac196f-e1b5-4a29-842b-c3078fda2e24</td>
+                <td><a href="PractitionerRole-c8ac196f-e1b5-4a29-842b-c3078fda2e24.xml.html">XML</a></td>
+                <td><a href="PractitionerRole-c8ac196f-e1b5-4a29-842b-c3078fda2e24.json.html">JSON</a></td>
+                <td><a href="PractitionerRole-c8ac196f-e1b5-4a29-842b-c3078fda2e24.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
   </table>

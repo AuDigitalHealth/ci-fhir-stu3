@@ -23,4 +23,12 @@
                 <td><a href="Organization-ec676574-724d-4321-911d-54703015809e.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+            <tr>
+                <td><a href="Organization-530c7305-9611-46f6-bedf-f77073292b87.html">Organization example 2</a></td>
+                <td>530c7305-9611-46f6-bedf-f77073292b87</td>
+                <td><a href="Organization-530c7305-9611-46f6-bedf-f77073292b87.xml.html">XML</a></td>
+                <td><a href="Organization-530c7305-9611-46f6-bedf-f77073292b87.json.html">JSON</a></td>
+                <td><a href="Organization-530c7305-9611-46f6-bedf-f77073292b87.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
   </table>

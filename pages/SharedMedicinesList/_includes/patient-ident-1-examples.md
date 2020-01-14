@@ -23,4 +23,12 @@
                 <td><a href="Patient-c7688ecf-5a6c-4a2f-ae2c-88a347278656.ttl.html">Turtle</a></td>
                 <td></td>
             </tr>
+             <tr>
+                <td><a href="Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.html">Patient example 2</a></td>
+                <td>5bd1f29e-06b4-49c6-991e-c68219bbe13a</td>
+                <td><a href="Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.xml.html">XML</a></td>
+                <td><a href="Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.json.html">JSON</a></td>
+                <td><a href="Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.ttl.html">Turtle</a></td>
+                <td></td>
+            </tr>
   </table>

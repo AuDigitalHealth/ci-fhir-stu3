@@ -137,6 +137,15 @@ This table lists known issues with this specification at the time of publishing.
         The profiles described in this implementation guide only support practitioner authoring usage scenarios. Future releases of this implementation guide are expected to provide support for additional usage scenarios including other authoring entities.
         </td>
      </tr>
+     <tr>
+        <td>Patient family name in MHR Patient profile</td>
+        <td>The profile includes a constraint to include family name but the FHIRPath expression has not been defined yet. This needs to be done and all PSML in MHR context patient examples need to be checked and if required updated to include family name.</td>
+    </tr>
+     <tr>
+        <td>MHR Patient examples</td>
+        <td>Need to check existing examples for any other possible requirements not included.</td>
+    </tr>  
+     
  </tbody>
 </table> 
 
