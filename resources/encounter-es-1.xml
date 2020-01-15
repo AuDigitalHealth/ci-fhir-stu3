@@ -5,8 +5,8 @@
   <version value="1.0.0"/>
   <name value="EncounterEventSummary"/>
   <title value="Summary of an Encounter for an Event"/>
-  <status value="draft" />
-  <experimental value="true" />
+  <status value="active" />
+  <experimental value="false" />
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -58,9 +58,8 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="preferred"/>
-        <valueSetUri
-          value="https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-2"/>
-      </binding>
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1" />
+        </binding>
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject"/>
