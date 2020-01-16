@@ -85,4 +85,4 @@ The datetime in effective[x] is to be interpreted in regards to the combination 
     </tr>               
 </table>
 
-This profile is referenced by [List of Medicine Items with Change Information Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1). 
+This profile is referenced by [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html). 

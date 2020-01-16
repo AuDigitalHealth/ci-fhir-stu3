@@ -13,4 +13,4 @@ When sending a shared medicines list to the My Health Record system it is expect
 
 This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html),
 [PractitionerRole with Practitioner with Mandatory Identifier](StructureDefinition-practitionerrole-withpractitionerident-1.html),  
-and [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html), 
+and [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html). 
