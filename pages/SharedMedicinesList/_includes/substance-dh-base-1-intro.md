@@ -7,5 +7,5 @@ For the overarching usage scenarios in this implementation guide it is recommend
 * status is not sent
 * instance is not sent
 
-This profile is referenced by [Base Substance](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/substance-dh-base-1), 
-and [Base Medication](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1). 
+This profile is referenced by [Base Substance](StructureDefinition-substance-dh-base-1.html), 
+and [Base Medication](StructureDefinition-medication-dh-base-1.html). 

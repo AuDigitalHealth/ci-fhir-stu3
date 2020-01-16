@@ -10,5 +10,5 @@ When sending a shared medicines list to the My Health Record system it is expect
 
 * an HPI-O will be sent
 
-This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1).
+This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html).
  

@@ -11,5 +11,5 @@ When the shared medicines list is a PSML document it is expected that:
 * the organisation the author is representing (PractitionerRole.organization), e.g. pharmacy, will be sent as a reference to an Organization resource
 * availability information (availableTime, notAvailable, and availabilityExceptions) will not be sent
 
-This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1),
-and [List of Medicine Items with Change Information Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1).
+This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html),
+and [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html).

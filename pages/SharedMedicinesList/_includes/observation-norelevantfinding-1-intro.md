@@ -7,4 +7,4 @@ For the overarching usage scenarios in this implementation guide it is expected 
 * status will be 'final'
 * Observation.valueCodeableConcept will be 1234391000168107 \|No known current medications\|
 
-This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1).
+This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html).

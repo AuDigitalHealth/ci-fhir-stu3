@@ -6,10 +6,10 @@ For the overarching usage scenarios in this implementation guide it is recommend
 
 * an Australian address conforms to [AU Base Address](https://hl7.org.au/fhir/base/aubase1.1/StructureDefinition-au-address.html)
 
-This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1),
-[Base Patient](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1), [My Health Record Patient](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1), [Patient with Mandatory Identifier](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1),
-[Base Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1), [Practitioner with Mandatory Identifier](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1),
-[Base PractitionerRole](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1), [PractitionerRole with Practitioner with Mandatory Identifier](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1),
-[Base Organization](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1), [Organization with Mandatory Identifier](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1),
-[Assertion of No Relevant Finding](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1), 
-and [Base Medication](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medication-dh-base-1). 
+This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html),
+[Base Patient](StructureDefinition-patient-dh-base-1.html), [My Health Record Patient](StructureDefinition-patient-mhr-1.html), [Patient with Mandatory Identifier](StructureDefinition-patient-ident-1.html),
+[Base Practitioner](StructureDefinition-practitioner-dh-base-1.html), [Practitioner with Mandatory Identifier](StructureDefinition-practitioner-ident-1.html),
+[Base PractitionerRole](StructureDefinition-practitionerrole-dh-base-1.html), [PractitionerRole with Practitioner with Mandatory Identifier](StructureDefinition-practitionerrole-withpractitionerident-1.html),
+[Base Organization](StructureDefinition-organization-dh-base-1.html), [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html),
+[Assertion of No Relevant Finding](StructureDefinition-observation-norelevantfinding-1.html), 
+and [Base Medication](StructureDefinition-medication-dh-base-1.html). 

@@ -10,4 +10,4 @@ For the overarching usage scenarios in this implementation guide it is expected 
 * refutation is not expected to be handled except as above - an appropriate negation code in AllergyIntolerance.code and clinicalStatus of 'confirmed'
 * where a sending system only has a substance available (e.g. 111088007 \|Latex\|) and not a statement of allergy or intolerance (e.g. 300916003 \|Allergy to latex\|), the substance will be sent in AllergyIntolerance.code and optionally in reaction.substance
 
-This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1).
+This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html).

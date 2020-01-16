@@ -11,6 +11,6 @@ For the overarching usage scenarios in this implementation guide it is recommend
 When sending a shared medicines list to the My Health Record system it is expected that:
 * an HPI-I will be sent
 
-This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1),
-[PractitionerRole with Practitioner with Mandatory Identifier](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1),  
-and [List of Medicine Items with Change Information Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/list-sml-pracchanges-1), 
+This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html),
+[PractitionerRole with Practitioner with Mandatory Identifier](StructureDefinition-practitionerrole-withpractitionerident-1.html),  
+and [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html), 
