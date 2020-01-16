@@ -256,7 +256,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.extension(information-recipient)> Patient.address</td>
                     <td rowspan="7">
                         <p>This requirement prohibits inclusion of any address for the consumer when uploaded to the My Health Record.</p>
-                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                        <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                   </td>
                 </tr>
                 <tr>
@@ -285,7 +285,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.extension(information-recipient)> Patient.telecom</td>
                     <td rowspan="7">
                         <p>This requirement prohibits inclusion of any electronic communication detail for the consumer when uploaded to the My Health Record.</p>
-                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                        <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                  </td>
                 </tr>
                 <tr>
@@ -702,7 +702,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.identifier</td>
                     <td rowspan="2">
                         <p>This requirement mandates inclusion of the individual's IHI.</p>
-                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                        <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                     </td>
                 </tr>
                 <tr>
@@ -741,7 +741,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.name.text</td>
                     <td rowspan="2">
                         <p>This requirement mandates inclusion of the individual's family name.</p>
-                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                        <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                        </td>
                 </tr>
                 <tr>
@@ -768,7 +768,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.gender</td>
                     <td>
                         <p>This requirement mandates inclusion of the individual's gender.</p>
-                       <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                       <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                        
                     </td>
                 </tr>
@@ -792,7 +792,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.birthDate</td>
                     <td>
                         <p>This requirement mandates inclusion of the individual's date of birth.</p>
-                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                        <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                                             </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -814,7 +814,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.subject> Patient.extension(indigenous-status)</td>
                     <td>
                         <p>This requirement mandates inclusion of the individual's indigenous status.</p>
-                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
+                        <p>This requirement may be enforced by mandating conformance to the <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a> profile.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
