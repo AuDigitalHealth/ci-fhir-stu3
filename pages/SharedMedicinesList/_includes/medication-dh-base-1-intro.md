@@ -20,3 +20,5 @@ Additionally, when the shared medicines list is a PSML document it is expected t
 
 * Medication.code will also be sent with additional codes that are members of the PBS Item code system ([http://pbs.gov.au/code/item](http://pbs.gov.au/code/item))
 * Each medication will be sent with the active ingredient(s) or brand name, or both
+
+This profile is referenced by [Medicine Item Statement](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1).

@@ -100,3 +100,5 @@ Additionally, when the shared medicines list is a PSML document it is expected t
 * encounter will be sent
 * when sending flag, the codes from [Medicine Item Change from Practitioner Medicine Review](https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1) are [preferred](http://hl7.org/fhir/STU3/terminologies.html#preferred).
 * list items will not include recommended medicine items, existing medicine items with changes recommended, existing medicine item with stop recommended, or new prescribed medicine items (flag is not to be ‘prescribed’)
+
+This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1).

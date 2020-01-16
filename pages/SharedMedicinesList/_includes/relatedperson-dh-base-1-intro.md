@@ -5,3 +5,5 @@
 For the overarching usage scenarios in this implementation guide it is recommended that:
 
 * an Australian address conforms to [AU Base Address](http://hl7.org.au/fhir/base/aubase1.1/StructureDefinition-au-address.html)
+
+This profile is referenced by [Shared Medicines List Authored by Practitioner](http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1),
