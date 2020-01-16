@@ -219,6 +219,7 @@
         <td>Will be represented with the flag of ‘cessation-recommended’, ‘suspension-recommended’ or ‘cancellation-recommended’ and a change description that describes the reason for stopping the medicine item</td>
     </tr>
     </table>
+<p>When sending a shared medicines list to the My Health Record system it is expected that all instances of patient will conform to <a href="StructureDefinition-patient-mhr-1.html">My Health Record Patient</a>.</p>
 
 <p>When a shared medicines list is sent as part of a document, rather than as a standalone resource, the guidance in the following table applies.</p>
 
@@ -258,7 +259,7 @@
 <ul>
   <li>if the list has a List.code of ‘10160–0’ History of Medication use Narrative, it will be sent with at least one new or existing medicine item</li>
   <li>encounter will be sent</li>
-  <li>when sending flag, the codes from <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1.html">Medicine Item Change from Practitioner Medicine Review</a> are <a href="http://hl7.org/fhir/STU3/terminologies.html#preferred">preferred</a>.</li>
+  <li>when sending flag, the codes from <a href="https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-from-practitioner-medicines-review-1">Medicine Item Change from Practitioner Medicine Review</a> are expected</li>
   <li>list items will not include recommended medicine items, existing medicine items with changes recommended, existing medicine item with stop recommended, or new prescribed medicine items (flag is not to be ‘prescribed’)</li>
 </ul>
 
@@ -300,7 +301,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="http://hl7.org.au/fhir/base/aubase1.1/StructureDefinition-au-medlist.html">AUMedicineList</a>.</p>
 <p>
-This profile was published on Thu Jan 16 15:36:48 AEST 2020 as a draft by Australian Digital Health Agency.
+This profile was published on Thu Jan 16 17:19:17 AEST 2020 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -833,7 +834,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Thu, Jan 16, 2020 15:36+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Thu, Jan 16, 2020 17:19+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

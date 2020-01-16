@@ -11,7 +11,7 @@ For the overarching usage scenarios in this implementation guide it is expected 
 * type will support categorisation of the event from which the medicines list was generated, for example a code indicating a home medicines review
 * period is equal to, or prior to, Composition date and List date
 
-For the expected usage scenario of a PSML document, when sending type, the codes from [Medicines Review Type](https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-1.html) are [preferred](http://hl7.org/fhir/STU3/terminologies.html#preferred).
+When the shared medicines list is a PSML document, it is expected that type will have a code from [Medicines Review Type](https://healthterminologies.gov.au/fhir/ValueSet/medicines-review-type-2).
 
 This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html), 
 [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html), 

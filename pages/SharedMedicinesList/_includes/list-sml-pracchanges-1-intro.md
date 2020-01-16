@@ -60,6 +60,7 @@ For the overarching usage scenarios in this implementation guide it is expected 
         <td>Will be represented with the flag of ‘cessation-recommended’, ‘suspension-recommended’ or ‘cancellation-recommended’ and a change description that describes the reason for stopping the medicine item</td>
     </tr>
     </table>
+When sending a shared medicines list to the My Health Record system it is expected that all instances of patient will conform to [My Health Record Patient](StructureDefinition-patient-mhr-1.html).
 
 When a shared medicines list is sent as part of a document, rather than as a standalone resource, the guidance in the following table applies.
 
@@ -98,7 +99,7 @@ Additionally, when the shared medicines list is a PSML document it is expected t
 
 * if the list has a List.code of '10160–0' History of Medication use Narrative, it will be sent with at least one new or existing medicine item
 * encounter will be sent
-* when sending flag, the codes from [Medicine Item Change from Practitioner Medicine Review](https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-prac-meds-review-1.html) are [preferred](http://hl7.org/fhir/STU3/terminologies.html#preferred).
+* when sending flag, the codes from [Medicine Item Change from Practitioner Medicine Review](https://healthterminologies.gov.au/fhir/ValueSet/medicine-item-change-from-practitioner-medicines-review-1) are expected
 * list items will not include recommended medicine items, existing medicine items with changes recommended, existing medicine item with stop recommended, or new prescribed medicine items (flag is not to be ‘prescribed’)
 
 This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html).

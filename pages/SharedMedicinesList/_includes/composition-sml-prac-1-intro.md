@@ -20,13 +20,14 @@ For the overarching usage scenarios in this implementation guide it is expected 
 * where a sending system can state that a patient does not have an allergy or category of allergies an AllergyIntolerance will be sent
 * where a sending system can state that a patient is not currently taking medication an Observation will be sent
 * an empty section will be sent with an empty reason
+ 
+When sending a shared medicines list to the My Health Record system it is expected that all instances of patient will conform to [My Health Record Patient](StructureDefinition-patient-mhr-1.html).
 
 When the shared medicines list is a PSML document it is expected that:
 
 * status will be ‘final’
 * composition author role will be a reference to a PractitionerRole resource that describes the author’s professional role, e.g. 159011008 \|Community pharmacist\|
 * author will be a reference to a Practitioner resource that describes the author, e.g. the pharmacist
-* subject will be a reference to an MHR Patient resource
 * encounter will be sent
 * an allergies section will only be sent if at least one AllergyIntolerance can be sent
 * a non-empty medications section will be sent and it will contain a List
