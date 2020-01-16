@@ -5,15 +5,20 @@
     <th>Description</th>
     <th>Issue No.</th>
   </tr>
-  <tr>
-        <td>type (incorrect use of fixedCodeableConcept)</td>
-        <td>This profile fixes the value on Composition.type using fixedCodeableConcept. The result of this is to prohibit CodeableConcept.text and CodeableConcept.coding.display (as well as other elements), which will inhibit the representation of realistic instances of data. This issue will be fixed in an R4 variant of this profile.</td>
-        <td>None</td>
+   <tr>
+        <td>extension:informationRecipient (invariants)</td>
+        <td>When validating using this profile, any instance of extension:informationRecipient with a reference to a resource will trigger a failure. Invariants inv-dh-cmp-07 to inv-dh-cmp-11 have a defect in the FHIRPath expression. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/50">ci-fhir-stu3/issues/50</a></td>
   </tr>
   <tr>
-        <td>section(allergies).code (incorrect use of fixedCodeableConcept)</td>
-        <td>This profile fixes the value on Composition.section(allergies).code using fixedCodeableConcept. The result of this is to prohibit CodeableConcept.text and CodeableConcept.coding.display (as well as other elements), which will inhibit the representation of realistic instances of data. This issue will be fixed in an R4 variant of this profile.</td>
-        <td>None</td>
+        <td>type (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.type using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section(allergies).code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section(allergies).code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
  </tr>
   <tr>
         <td>Constraint presentation</td>

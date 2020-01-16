@@ -19,7 +19,7 @@ The table below provides mapping from the requirements in [Pharmacist Shared Med
 
 See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
- <table class="list" width="100%">
+<table class="list" width="100%">
 	<col style="width:20%"/>
 	<col style="width:7%"/>
 	<col style="width:20%"/>
@@ -55,10 +55,9 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition</td>
                     <td rowspan="9">
                         <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
-                        <p>This requirement states a PSML document will contain the organisation the pharmacist is representing at the
-time of document authoring. The profile has this as optional.</p>
+                        <p>This requirement states a PSML document will contain the organisation the pharmacist is representing at the time of document authoring. The profile has this as optional.</p>
                         <p>The profile supports inclusion of a primary care provider as a practitioner or as an organisation - direct support is not provided in FHIR for a primary care provider practitioner with included organisational information. The profile for a primary care provider organisation allows a name or identifier - it does not mandate name.</p>
-                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
+                        <p>These parts of the requirement are best enforced in a further profile.</p>
                      </td>
                  </tr>
                  <tr>
@@ -143,89 +142,78 @@ time of document authoring. The profile has this as optional.</p>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="2">Medicines information presentation</td>
-                    <td rowspan="2">028359</td>
-                     <td>Composition.section(allergies)</td>
-                     <td>Composition.section(allergies)</td>
-                    <td rowspan="2"><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is not applicable for the profile.</p></td>
-                </tr>
-                <tr>
-                     <td>Composition.section(medications)</td>
-                     <td>Composition.section(medications)</td>
+                    <td>Medicines information presentation</td>
+                    <td>028359</td>
+                     <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Allergies and Adverse Reactions section</td>
                     <td>028355</td>
-                     <td>Composition.section(allergies).text</td>
-                     <td>Composition.section(allergies).text</td>
-                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
+                     <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td>Allergies and Adverse Reactions header</td>
                     <td>028360</td>
-                     <td>Composition.section(allergies).text</td>
-                     <td>Composition.section(allergies).text</td>
-                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
+                    <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                 </tr>
                 <!-- ======================================================================== -->                         
                 <tr>
                     <td>No known allergies or adverse reactions</td>
                     <td>028411</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>
-                        <p>This requirement includes a rendering requirement in the absence of recorded allergy information. This part of the requirement is not applicable for the profile.</p>
-                        <p>Alternatively the profile caters for recording that a patient does not have an allergy or category of allergies in AllergyIntolerance.code.</p>
-                    </td>
+                    <td>AllergyIntolerance</td>
+                    <td>Composition.section(allergies).entry> AllergyIntolerance</td>
+                    <td></td>
                 </tr>
                 <!-- ======================================================================== -->
                  <tr>
                     <td>Current Medicines section</td>
                     <td>028361</td>
-                    <td>Composition.section(medications).text</td>
-                    <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
+                    <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                 </tr> 
                 <!-- ======================================================================== -->
                  <tr>
                     <td>Current Medicines header</td>
                     <td>028362</td>
-                    <td>Composition.section(medications).text</td>
-                    <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
+                    <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                 </tr>     
                 <!-- ======================================================================== -->                        
                 <tr>
                     <td>Ceased Medicines section</td>
                     <td>028363</td>
-                    <td>Composition.section(medications)</td>
-                    <td>Composition.section(medications)</td>
-                    <td><p>This requirement includes a rendering requirement on sequence of information. This part of the requirement is not applicable for the profile.</p></td>
+                    <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                 </tr>
                 <!-- ======================================================================== -->
                  <tr>
                     <td>Ceased Medicines header</td>
                     <td>028364</td>
-                    <td>Composition.section(medications).text</td>
-                    <td>Composition.section(medications).text</td>
-                    <td><p>This requirement includes a rendering requirement. This part of the requirement is not applicable for the profile.</p></td>
+                    <td>N/A</td>
+                     <td>N/A</td>
+                    <td><p>This requirement is a rendering requirement.</p></td>
                </tr>
                 <!-- ======================================================================== -->
                <tr>
-                    <td rowspan="2">Suppressing Ceased Medicines section</td>
-                    <td rowspan="2">028358</td>
-                    <td>Composition.section(medications).entry</td>
-                    <td>Composition.section(medications).entry</td>
-                    <td rowspan="2">
-                        <p>This requirement states a ceased medicines section with no recorded ceased medicines will not be rendered.</p>
-                        <p>The profile allows the inclusion of a ceased medicines list section as a list of one or more medicine items or an empty section (i.e. emptyReason) - it does not mandate section entry.</p>
+                    <td>Suppressing Ceased Medicines section</td>
+                    <td>028358</td>
+                    <td>N/A</td>
+                     <td>N/A</td>
+                    <td>
+                        <p>This requirement is a rendering requirement.</p>
+                        <p>The profile allows a ceased medicines list to contain an empty reason.</p>
                     </td>
-                </tr>
-                <tr>
-                    <td>List.entry.item</td>
-                    <td>Composition.section(medications).entry> List.entry.item</td>
                 </tr>
                 <!-- ======================================================================== -->
                <tr>
@@ -235,7 +223,7 @@ time of document authoring. The profile has this as optional.</p>
                     <td>N/A</td>
                     <td>
                         <p>This requirement is a system behavioural requirement.</p>
-                        <p>This requirement is satisifed by typical producing and consuming system behaviour. Only a display or text associated with a code is expected to be included in the narrative and rendered.</p>
+                        <p>This requirement is satisfied by typical producing and consuming system behaviour. Only a display or text associated with a code is expected to be included in the narrative and rendered.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -267,9 +255,8 @@ time of document authoring. The profile has this as optional.</p>
                     <td rowspan="7">Patient.address</td>
                     <td>Composition.extension(information-recipient)> Patient.address</td>
                     <td rowspan="7">
-                        <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any address for the consumer within the document.</p>
-                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
-                        <p>Other patient profiles in this implementation guide allow the optional inclusion of address to support point-to-point transmission.</p>
+                        <p>This requirement prohibits inclusion of any address for the consumer when uploaded to the My Health Record.</p>
+                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                   </td>
                 </tr>
                 <tr>
@@ -297,9 +284,8 @@ time of document authoring. The profile has this as optional.</p>
                     <td rowspan="7">Patient.telecom</td>
                     <td>Composition.extension(information-recipient)> Patient.telecom</td>
                     <td rowspan="7">
-                        <p>This requirement states a PSML document, when uploaded to the My Health Record, will not contain any types of electronic communication contact detail for the consumer within the document.</p>
-                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
-                        <p>Oher patient profiles in this implementation guide allow the optional inclusion of telecom to support point-to-point transmission.</p>
+                        <p>This requirement prohibits inclusion of any electronic communication detail for the consumer when uploaded to the My Health Record.</p>
+                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                  </td>
                 </tr>
                 <tr>
@@ -327,9 +313,8 @@ time of document authoring. The profile has this as optional.</p>
                     <td>Organization.type</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
                     <td rowspan="3">
-                        <p>This requirement states a PSML document will include the healthcare setting in which the
-PSML document was authored. The profiles allow for an authoring role or organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review) - they do not mandate any of these elements.</p>
-                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of the healthcare setting. This requirement is best enforced in a further profile.</p>
+                        <p>The profiles support healthcare setting as a set of optional elements, i.e. practitioner role / organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review).</p>
                     </td>
                 </tr>
                 <tr>
@@ -457,11 +442,9 @@ PSML document was authored. The profiles allow for an authoring role or organisa
                     <td>Medication.extension(medication-brand-name)</td>
                     <td>Composition.section(medications).entry> List.entry.item> MedicationStatement.medicationReference> Medication.extension(medication-brand-name)</td>
                     <td rowspan="3">
-                        <p>This requirement states each medicine item will have either the
-active ingredient(s) or a brand name, or both.</p>
-                        <p>The profile allows a brand name and active ingredient(s) - it does not mandate the presence of either.</p>
-                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
-                        </td>
+                        <p>This requirement states each medicine item will have either the active ingredient(s) or a brand name, or both. This requirement is best enforced in a further profile.</p>
+                        <p>The profile supports brand name and active ingredient(s) as optional.</p>
+                    </td>
                 </tr>
                 <tr>
                     <td>Medication.code</td>
@@ -656,7 +639,7 @@ The table below matches the data items to the corresponding supported element in
 
 See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
- <table class="list" width="100%">
+<table class="list" width="100%">
 	<col style="width:20%"/>
 	<col style="width:7%"/>
 	<col style="width:20%"/>
@@ -718,9 +701,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Patient.identifier</td>
                     <td>Composition.subject> Patient.identifier</td>
                     <td rowspan="2">
-                        <p>This requirement states a PSML document shall contain the individual's IHI.</p>
-                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
-                                              
+                        <p>This requirement mandates inclusion of the individual's IHI.</p>
+                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                     </td>
                 </tr>
                 <tr>
@@ -758,8 +740,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Patient.name.text</td>
                     <td>Composition.subject> Patient.name.text</td>
                     <td rowspan="2">
-                        <p>This requirement states a PSML document shall contain the individual's family name.</p>
-                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>This requirement mandates inclusion of the individual's family name.</p>
+                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                        </td>
                 </tr>
                 <tr>
@@ -785,8 +767,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Patient.gender</td>
                     <td>Composition.subject> Patient.gender</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the individual's gender.</p>
-                       <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>This requirement mandates inclusion of the individual's gender.</p>
+                       <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                        
                     </td>
                 </tr>
@@ -809,8 +791,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td >Patient.birthDate</td>
                     <td>Composition.subject> Patient.birthDate</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the individual's date of birth.</p>
-                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>This requirement mandates inclusion of the individual's date of birth.</p>
+                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                                             </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -831,8 +813,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Patient.extension(indigenous-status)</td>
                     <td>Composition.subject> Patient.extension(indigenous-status)</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the individual's indigenous status.</p>
-                        <p>This requirement is enfoced in the My Health Record Patient profile.</p>
+                        <p>This requirement mandates inclusion of the individual's indigenous status.</p>
+                        <p>This requirement may be enforced by mandating conformance to the [My Health Record Patient](StructureDefinition-patient-mhr-1.html) profile.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -854,9 +836,10 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Organization.name</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.name</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the name of the organisation the author is representing.</p>
-                        <p>The profile supports the organisation the author is representing as an optional element. The profile for organisation allows a name or identifier - it does not mandate name.</p>
-                        <p>This requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of the name of the organisation
+                            the author is representing. This requirement is best enforced in a
+                            further profile.</p>
+                        <p>The profile supports organisation as optional.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -866,9 +849,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Practitioner.address</td>
                     <td>Composition.author> Practitioner.address</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the author's workplace address.</p>
-                        <p>The profile supports address as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of the author's workplace address. This requirement is best enforced in a further profile.</p>
+                        <p>The profile supports address as optional.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -890,9 +872,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>PractitionerRole.code</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the author's professional role though it may be supplied as an absent value.</p>
-                        <p>The profile supports role as an optional element.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion an element for the author's professional role (it may carry an absent value). This requirement is best enforced in a further profile.</p>
+                        <p>The profile supports role as optional.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -950,9 +931,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Practitioner.name.text</td>
                     <td>Composition.author> Practitioner.name.text</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the author's family name.</p>
-                        <p>The profile allows for a family name - it does not mandate the inclusion of a name or that a name if provided includes family name.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of the author's family name. This requirement is best enforced in a further profile.</p>
+                        <p>The profile supports name as optional.</p>
                     </td>
                 </tr>
                 <tr>
@@ -978,9 +958,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td rowspan="6">Patient.generalPractitioner</td>
                     <td>Composition.subject> Patient.generalPractitioner</td>
                     <td rowspan="6">
-                        <p>This requirement states a PSML document will have at most one primary care provider.</p>
-                        <p>The profile allows for multiple primary care providers.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of at most one primary care provider. This requirement is best enforced in a further profile.</p>
+                        <p>The profile supports multiple primary care providers.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1077,9 +1056,9 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Organization.name</td>
                     <td>Composition.subject> Patient.generalPractitioner> Organization.name</td>
                     <td>
-                        <p>This requirement states a PSML document shall contain the primary care provider's organisation name.</p>
+                        <p>This requirement mandates inclusion of the primary care provider's organisation name.</p>
                         <p>The profile supports inclusion of a primary care provider as a practitioner or as an organisation - direct support is not provided in FHIR for a primary care provider practitioner with included organisational information. The profile for a primary care provider organisation allows a name or identifier - it does not mandate name.</p>
-                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
+                        <p>These parts of the requirement are best enforced in a further profile.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1103,12 +1082,10 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td rowspan="2">Healthcare provider professional role (mandatory)</td>
                     <td rowspan="2">024040</td>
                     <td>N/A</td>
-                    <td>N/A</td>
+                    <td>Composition.subject> Patient.generalPractitioner</td>
                     <td rowspan="2">
-                        <p>This requirement states a PSML document shall contain the primary care provider's professional role though it may be supplied as an absent value.</p>
-                        <p>The profile supports inclusion of a primary care provider as a practitioner or as an organisation - direct support is not provided in FHIR for a practitioner role.</p>
-                        <p>The profile support organisation type as an optional element.</p>
-                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of the primary care provider's professional role though it may be supplied as an absent value. This requirement is best enforced in a further profile.</p>
+                        <p>The profile implicitly casts the professional role as general practitioner; a different role may be supplied in the organisation type.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1117,23 +1094,14 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
-                    <td rowspan="3">Healthcare setting (mandatory)</td>
-                    <td rowspan="3">028435</td>
-                    <td>Organization.type</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.organization> Organization.type</td>
-                    <td rowspan="3">
-                        <p>This requirement states a PSML document will include the healthcare setting in which the document was authored.</p>
-                        <p>The profiles allow for an authoring role or organisation type (e.g. "Community Pharmacy" or "Hospital Pharmacy") and an encounter type (e.g. "Home Medicines Review) - they do not mandate any of these elements.</p>
-                        <p>These parts of the requirement are best enforced in a conformance profile.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>PractitionerRole.code</td>
-                    <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
-                </tr>
-                <tr>
+                    <td>Healthcare setting (mandatory)</td>
+                    <td>028435</td>
                     <td>Encounter.type</td>
                     <td>Composition.encounter> Encounter.type</td>
+                    <td>
+                        <p>This requirement mandates inclusion of the healthcare setting in which the document was authored. This requirement is best enforced in a further profile.</p>
+                        <p>The profiles support encounter type as optional.</p>
+                    </td>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1142,9 +1110,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Encounter.type</td>
                     <td>Composition.encounter> Encounter.type</td>
                     <td>
-                        <p>This requirement specifies a set of allowed values for healthcare setting.</p>
-                        <p>The profile allows these and other values in value set for encounter types in general - it does not constrain the element to only those values relevant to a PSML.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement specifies a set of mandatory values. This requirement is best enforced in a further profile.</p>
+                        <p>The profile allows these and other terminologies. Implementation guidance is included to direct implementers to the preferred terminology.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1236,9 +1203,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.section(medications)</td>
                     <td>Composition.section(medications)</td>
                     <td rowspan="2">
-                        <p>This requirement states a PSML document shall contain one or more medicine items.</p>
-                        <p>The profile mandates the inclusion of a medications list section but it allows for that section to be empty, or be a statement that the patient has no known current medications, or be a list of one ore more medicine items.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates inclusion of one or more medicine items. This requirement is best enforced in a further profile.</p>
+                        <p>In addition to a section with one or more medicine items the profile supports a section with a statement the patient has no known current medications, or a section containing an empty reason.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1258,7 +1224,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>
                        <p>This requirement specifies a set of allowed terminologies.</p>
                        <p>The profile allows these and other terminologies.</p>
-                       <p>This part of the requirement is best enforced in a conformance profile.</p>
+                       <p>This part of the requirement is best enforced in a further profile.</p>
                     </td>
                </tr>
                 <!-- ======================================================================== -->
@@ -1438,8 +1404,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>List.entry.flag</td>
                     <td>Composition.section(medications).entry> List.entry.flag</td>
                     <td rowspan="2">
-                        <p>This requirement states a PSML document may contain a status for each medicine item.</p>
-                        <p>The profiles enforce a mandatory status for each medicine item.</p>
+                        <p>This requirement allows for an optional status for each medicine item.</p>
+                        <p>The profile enforces a mandatory status for each medicine item.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1451,9 +1417,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>List.entry.extension(change-description)</td>
                     <td>Composition.section(medications).entry> List.entry.extension(change-description)</td>
                     <td rowspan="2">
-                        <p>This requirement specifies a set of allowed values for medicine status.</p>
-                        <p>The profile supports an equivalent set of values and as well as additional medicine item change status values - it does not constrain the element to only those values relevant to a PSML.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement specifies a set of allowed values for medicine status. This part of the requirement is best enforced in a further profile.</p>
+                        <p>The profile supports an equivalent set of values and as well as additional values. Implementation guidance is included to direct implementers to the preferred terminology.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1465,9 +1430,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>List.entry.flag</td>
                     <td>Composition.section(medications).entry> List.entry.flag</td>
                     <td rowspan="2">
-                        <p>This requirement specifies a that a ceased medicine shall have a medicine status of ceased.</p>
-                        <p>The profiles do not include a constraint to enforce a direct relationship between these two status concepts.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates a status of ceased for a ceased medicine. This requirement is best enforced in a conformance profile.</p>
+                        <p>The profiles do not enforce a direct relationship between status concepts.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1501,12 +1465,11 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>028634</td>
                     <td>
-                        <p>This requirement specifies a set of allowed terminologies.</p>
-                        <p>The profile allows these and other terminologies.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement specifies a set of mandatory terminologies. This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>The CDA template allows these and other terminologies. Implementation guidance is included to direct implementers to the preferred terminology.</p>
                     </td>
                 </tr>
-                <!-- ======================================================================== UP TO HERE-->
+                <!-- ======================================================================== -->
                 <tr>
                     <td>Reason for ceasing medicine (optional)</td>
                     <td>028447</td>
@@ -1529,9 +1492,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>List.entry.extension(change-description)</td>
                     <td>Composition.section(medications).entry> List.entry.extension(change-description)</td>
                     <td rowspan="3">
-                        <p>This requirement specifies a that a ceased medicine shall have a medicine status of ceased.</p>
-                        <p>The profiles do not include a constraint to enforce a direct relationship between these two status concepts.</p>
-                        <p>This part of the requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates a status of ceased for a ceased medicine. This part of the requirement is best enforced in a further profile.</p>
+                        <p>The profiles do not enforce a direct relationship between status concepts.</p>
                     </td>
                 </tr>
                 <tr>
@@ -1550,7 +1512,6 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>
                         <p>This requirement states ceased medicine items shall not have data that is not defined in the requirements document.</p>
-                        <p>The profile supports multiple usage scenarios - this value is not enforced.</p>
                         <p>This part of the requirement is a producing system behavioural requirement.</p>
                     </td>
                 </tr>
@@ -1561,6 +1522,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
+                    <p>This requirement mandates a document version number for a PSML document. This requirement is best enforced in a further profile.</p>
                         <p>The profile does not mandate a versioning mechanism (e.g. meta.versionId). Versioning is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
                     </td>
                 </tr>
@@ -1571,6 +1533,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>N/A</td>
                     <td>N/A</td>
                     <td>
+                    <p>This requirement mandates a document instance identifier for a PSML document. This requirement is best enforced in a further profile.</p>
                         <p>The profile does not mandate an instance identifier mechanism (e.g. Bundle.identifier). This is an implementation environment concern and outside of the scope of the FHIR profiles.</p>
                     </td>
                 </tr>
@@ -1619,9 +1582,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>Composition.title</td>
                     <td>Composition.title</td>
                     <td>
-                        <p>This requirement states a PSML document shall be sub-typed with the value "Pharmacist Shared Medicines List".</p>
-                        <p>The profile supports multiple usage scenarios - this value is not enforced.</p>
-                        <p>This requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement states a PSML document shall be sub-typed with the value "Pharmacist Shared Medicines List". This requirement is best enforced in a further profile.</p>
+                        <p>The profile supports multiple usage scenarios and does not mandate this fixed value.</p>
                     </td>
                 </tr>
      </tbody>
