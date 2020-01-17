@@ -1,7 +1,3 @@
-
-
-TO DO
-
 <table class="list" width="100%">
             <tr>
                 <td><a href="Bundle-e32a01d0-2610-4c99-ba46-9732aa975d41.html">Pharmacist Shared Medicines List example 1 (Bundle)</a></td>
