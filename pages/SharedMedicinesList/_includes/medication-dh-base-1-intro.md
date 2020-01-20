@@ -5,7 +5,7 @@
 For the overarching usage scenarios in this implementation guide it is recommended that:
 
 * status is not sent
-* Medication.code is a member of the [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1.html) value set
+* Medication.code is a member of the [Australian Medication](https://healthterminologies.gov.au/fhir/ValueSet/australian-medication-1) value set
 * where Medication.code is a branded medicine item, Medication.code.text is the branded name
 * ingredient.item[x] is sent as itemCodeableConcept
 
