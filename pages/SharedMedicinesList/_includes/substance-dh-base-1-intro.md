@@ -7,5 +7,4 @@ For the overarching usage scenarios in this implementation guide it is recommend
 * status is not sent
 * instance is not sent
 
-This profile is referenced by [Base Substance](StructureDefinition-substance-dh-base-1.html), 
-and [Base Medication](StructureDefinition-medication-dh-base-1.html). 
+This profile is referenced by [Base Medication](StructureDefinition-medication-dh-base-1.html), and itself. 

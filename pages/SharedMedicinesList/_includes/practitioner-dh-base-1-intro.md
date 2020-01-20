@@ -9,7 +9,7 @@ For the overarching usage scenarios in this implementation guide it is recommend
   * the value is the actual employee identifier in the organisation's system, e.g. 'frankburns27' or '123456'
   
 This profile is referenced by [Base Patient](StructureDefinition-patient-dh-base-1.html), [My Health Record Patient](StructureDefinition-patient-mhr-1.html), [Patient with Mandatory Identifier](StructureDefinition-patient-ident-1.html),
-[Base PractitionerRole](StructureDefinition-practitionerrole-dh-base-1.html), 
+[Base PractitionerRole](StructureDefinition-practitionerrole-dh-base-1.html), [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html), 
 [Summary Statement of Allergy or Intolerance](StructureDefinition-allergyintolerance-summary-1.html),
 [Assertion of No Relevant Finding](StructureDefinition-observation-norelevantfinding-1.html),
 and [Medicine Item Statement](StructureDefinition-medicationstatement-detailed-1.html).

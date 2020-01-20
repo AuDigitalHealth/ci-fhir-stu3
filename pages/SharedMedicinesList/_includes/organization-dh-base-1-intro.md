@@ -10,6 +10,6 @@ This profile is referenced by [Shared Medicines List Authored by Practitioner](S
 [Base Patient](StructureDefinition-patient-dh-base-1.html), [My Health Record Patient](StructureDefinition-patient-mhr-1.html), [Patient with Mandatory Identifier](StructureDefinition-patient-ident-1.html),
 [Base Practitioner](StructureDefinition-practitioner-dh-base-1.html), [Practitioner with Mandatory Identifier](StructureDefinition-practitioner-ident-1.html),
 [Base PractitionerRole](StructureDefinition-practitionerrole-dh-base-1.html), [PractitionerRole with Practitioner with Mandatory Identifier](StructureDefinition-practitionerrole-withpractitionerident-1.html),
-[Base Organization](StructureDefinition-organization-dh-base-1.html), [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html),
+itself, [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html),
 [Assertion of No Relevant Finding](StructureDefinition-observation-norelevantfinding-1.html), 
 and [Base Medication](StructureDefinition-medication-dh-base-1.html). 
