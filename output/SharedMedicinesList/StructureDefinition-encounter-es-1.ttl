@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary of an Encounter for an Event"];
   fhir:StructureDefinition.status [ fhir:value "active"];
   fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-16T17:43:50+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-01-20T11:30:48+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -945,7 +945,10 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
-         fhir:ElementDefinition.binding.valueSetUri [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1" ]
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1>;
+           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1" ]
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;

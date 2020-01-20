@@ -11,7 +11,7 @@
   "title": "Base PractitionerRole",
   "status": "active",
   "experimental": false,
-  "date": "2020-01-16T17:43:50+10:00",
+  "date": "2020-01-20T11:30:48+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -2396,7 +2396,9 @@
         "binding": {
           "strength": "required",
           "description": "The role a person plays representing an organization",
-          "valueSetUri": "https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1"
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1"
+          }
         },
         "mapping": [
           {
@@ -2682,7 +2684,9 @@
         "binding": {
           "strength": "required",
           "description": "The role a person plays representing an organization",
-          "valueSetUri": "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1"
+          "valueSetReference": {
+            "reference": "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1"
+          }
         },
         "mapping": [
           {

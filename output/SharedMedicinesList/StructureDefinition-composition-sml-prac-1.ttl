@@ -19,7 +19,7 @@
   fhir:StructureDefinition.title [ fhir:value "Shared Medicines List Authored by Practitioner"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-16T17:43:50+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-01-20T11:30:48+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -3679,7 +3679,10 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.valueSetUri [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1" ]
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1>;
+           fhir:Reference.reference [ fhir:value "https://healthterminologies.gov.au/fhir/ValueSet/history-of-medication-use-list-type-1" ]
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
