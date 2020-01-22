@@ -11,7 +11,7 @@
   "title": "Organization with Mandatory Identifier",
   "status": "active",
   "experimental": false,
-  "date": "2020-01-20T11:30:48+10:00",
+  "date": "2020-01-22T10:13:11+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -106,7 +106,7 @@
             "human": "The organization SHALL at least have a name or an id, and possibly more than one",
             "expression": "(identifier.count() + name.count()) > 0",
             "xpath": "count(f:identifier | f:name) > 0",
-            "source": "Organization"
+            "source": "http://hl7.org/fhir/StructureDefinition/Organization"
           },
           {
             "key": "inv-dh-org-01",
@@ -815,7 +815,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,
@@ -1321,7 +1321,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,
@@ -1822,7 +1822,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,
@@ -2312,7 +2312,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,
@@ -2826,7 +2826,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,
@@ -3338,7 +3338,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,
@@ -3836,7 +3836,7 @@
         "example": [
           {
             "label": "General",
-            "valueUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"
+            "valueUri": "http://www.acme.com/identifiers/patient"
           }
         ],
         "isSummary": true,

@@ -31,7 +31,7 @@
   <title value="List of Medicine Items with Change Information Authored by Practitioner"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2020-01-20T11:30:48+10:00"/>
+  <date value="2020-01-22T10:13:11+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -110,7 +110,7 @@
         <human value="The deleted flag can only be used if the mode of the list is &quot;changes&quot;"/>
         <expression value="mode = &#39;changes&#39; or entry.deleted.empty()"/>
         <xpath value="(f:mode/@value = &#39;changes&#39;) or not(exists(f:entry/f:deleted))"/>
-        <source value="List"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/List"/>
       </constraint>
       <constraint>
         <key value="lst-1"/>
@@ -118,7 +118,7 @@
         <human value="A list can only have an emptyReason if it is empty"/>
         <expression value="emptyReason.empty() or entry.empty()"/>
         <xpath value="not(exists(f:emptyReason) and exists(f:entry))"/>
-        <source value="List"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/List"/>
       </constraint>
       <constraint>
         <key value="inv-dh-lst-01"/>
@@ -502,7 +502,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <constraint>
         <key value="inv-dh-lst-05"/>
@@ -543,7 +543,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="List.modifierExtension">
@@ -1111,7 +1111,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mustSupport value="true"/>
     </element>

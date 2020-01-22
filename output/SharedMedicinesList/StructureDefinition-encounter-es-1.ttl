@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary of an Encounter for an Event"];
   fhir:StructureDefinition.status [ fhir:value "active"];
   fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-20T11:30:48+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-01-22T10:13:11+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -357,7 +357,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -398,7 +398,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ]
      ], [
        fhir:index 10;
@@ -1849,7 +1849,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ]
      ], [
        fhir:index 54;
@@ -1889,7 +1889,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ]
      ], [
        fhir:index 55;

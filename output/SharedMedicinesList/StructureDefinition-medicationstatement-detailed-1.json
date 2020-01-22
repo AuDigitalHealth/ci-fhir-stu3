@@ -11,7 +11,7 @@
   "title": "Medicine Item Statement",
   "status": "active",
   "experimental": false,
-  "date": "2020-01-20T11:30:48+10:00",
+  "date": "2020-01-22T10:13:11+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -107,7 +107,7 @@
             "human": "Reason not taken is only permitted if Taken is No",
             "expression": "reasonNotTaken.exists().not() or (taken = 'n')",
             "xpath": "not(exists(f:reasonNotTaken)) or f:taken/@value='n'",
-            "source": "MedicationStatement"
+            "source": "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
           },
           {
             "key": "inv-dh-mst-02",
@@ -371,7 +371,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -412,7 +412,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -453,7 +453,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
