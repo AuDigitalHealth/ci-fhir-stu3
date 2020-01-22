@@ -54,9 +54,9 @@
   <version value="1.0.0"/>
   <name value="CompositionSML"/>
   <title value="Shared Medicines List Authored by Practitioner"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <date value="2020-01-20T11:30:48+10:00"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-01-22T10:35:53+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -530,7 +530,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-06"/>
@@ -571,7 +571,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-07"/>
@@ -1222,7 +1222,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="Composition.attester.modifierExtension">
@@ -1471,7 +1471,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="Composition.attester:legalAttester.modifierExtension">
@@ -2008,7 +2008,7 @@
         <human value="A section must at least one of text, entries, or sub-sections"/>
         <expression value="text.exists() or entry.exists() or section.exists()"/>
         <xpath value="exists(f:text) or exists(f:entry) or exists(f:section)"/>
-        <source value="Composition.section"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Composition"/>
       </constraint>
       <constraint>
         <key value="cmp-2"/>
@@ -2016,7 +2016,7 @@
         <human value="A section can only have an emptyReason if it is empty"/>
         <expression value="emptyReason.empty() or entry.empty()"/>
         <xpath value="not(exists(f:emptyReason) and exists(f:entry))"/>
-        <source value="Composition.section"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Composition"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -2100,7 +2100,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="Composition.section.modifierExtension">
@@ -2409,7 +2409,7 @@
         <human value="A section must at least one of text, entries, or sub-sections"/>
         <expression value="text.exists() or entry.exists() or section.exists()"/>
         <xpath value="exists(f:text) or exists(f:entry) or exists(f:section)"/>
-        <source value="Composition.section"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Composition"/>
       </constraint>
       <constraint>
         <key value="cmp-2"/>
@@ -2417,7 +2417,7 @@
         <human value="A section can only have an emptyReason if it is empty"/>
         <expression value="emptyReason.empty() or entry.empty()"/>
         <xpath value="not(exists(f:emptyReason) and exists(f:entry))"/>
-        <source value="Composition.section"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Composition"/>
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-14"/>
@@ -2508,7 +2508,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="Composition.section:allergies.modifierExtension">
@@ -2942,7 +2942,7 @@
         <human value="A section must at least one of text, entries, or sub-sections"/>
         <expression value="text.exists() or entry.exists() or section.exists()"/>
         <xpath value="exists(f:text) or exists(f:entry) or exists(f:section)"/>
-        <source value="Composition.section"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Composition"/>
       </constraint>
       <constraint>
         <key value="cmp-2"/>
@@ -2950,7 +2950,7 @@
         <human value="A section can only have an emptyReason if it is empty"/>
         <expression value="emptyReason.empty() or entry.empty()"/>
         <xpath value="not(exists(f:emptyReason) and exists(f:entry))"/>
-        <source value="Composition.section"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Composition"/>
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-15"/>
@@ -3059,7 +3059,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="Composition.section:medications.modifierExtension">

@@ -16,9 +16,9 @@
   fhir:StructureDefinition.version [ fhir:value "1.0.0"];
   fhir:StructureDefinition.name [ fhir:value "ListMedicineItemsChanges"];
   fhir:StructureDefinition.title [ fhir:value "List of Medicine Items with Change Information Authored by Practitioner"];
-  fhir:StructureDefinition.status [ fhir:value "draft"];
-  fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-20T11:30:48+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.status [ fhir:value "active"];
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.date [ fhir:value "2020-01-22T10:35:53+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -110,7 +110,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "The deleted flag can only be used if the mode of the list is \"changes\"" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "mode = 'changes' or entry.deleted.empty()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "(f:mode/@value = 'changes') or not(exists(f:entry/f:deleted))" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "List" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/List" ]
        ], [
          fhir:index 5;
          fhir:ElementDefinition.constraint.key [ fhir:value "lst-1" ];
@@ -118,7 +118,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "A list can only have an emptyReason if it is empty" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "emptyReason.empty() or entry.empty()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:emptyReason) and exists(f:entry))" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "List" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/List" ]
        ], [
          fhir:index 6;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-lst-01" ];
@@ -584,7 +584,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ], [
          fhir:index 2;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-lst-05" ];
@@ -631,7 +631,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ]
      ], [
        fhir:index 17;
@@ -1305,7 +1305,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [

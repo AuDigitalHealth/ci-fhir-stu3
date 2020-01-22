@@ -49,7 +49,7 @@
   <title value="Patient with Mandatory Identifier"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2020-01-20T11:30:48+10:00"/>
+  <date value="2020-01-22T10:35:53+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -490,7 +490,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -525,7 +525,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -1075,7 +1075,7 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -1485,7 +1485,7 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/medicare-number"/>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -2027,7 +2027,7 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/dva"/>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -2437,7 +2437,7 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -2847,7 +2847,7 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -3257,7 +3257,7 @@
       <fixedUri value="http://ns.electronichealth.net.au/id/centrelink-customer-reference-number"/>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -3666,7 +3666,7 @@
       </type>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -4070,7 +4070,7 @@
       </type>
       <example>
         <label value="General"/>
-        <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri"/>
+        <valueUri value="http://www.acme.com/identifiers/patient"/>
       </example>
       <isSummary value="true"/>
       <mapping>
@@ -4560,7 +4560,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -4899,7 +4899,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -4917,7 +4917,7 @@
       </base>
       <type>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-regex">
-          <valueString value="-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"/>
+          <valueString value="-?([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"/>
         </extension>
         <code>
           <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-json-type">

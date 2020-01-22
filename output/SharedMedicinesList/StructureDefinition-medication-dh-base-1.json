@@ -11,7 +11,7 @@
   "title": "Base Medication",
   "status": "active",
   "experimental": false,
-  "date": "2020-01-20T11:30:48+10:00",
+  "date": "2020-01-22T10:35:53+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -356,7 +356,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "mustSupport": true
@@ -398,7 +398,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "mustSupport": true

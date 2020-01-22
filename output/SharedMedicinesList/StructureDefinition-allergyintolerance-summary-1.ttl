@@ -18,7 +18,7 @@
   fhir:StructureDefinition.title [ fhir:value "Summary Statement of Allergy or Intolerance"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2020-01-20T11:30:48+10:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2020-01-22T10:35:53+10:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -116,7 +116,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error." ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "verificationStatus='entered-in-error' or clinicalStatus.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "f:verificationStatus/@value='entered-in-error' or exists(f:clinicalStatus)" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "AllergyIntolerance" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" ]
        ], [
          fhir:index 5;
          fhir:ElementDefinition.constraint.key [ fhir:value "ait-2" ];
@@ -124,7 +124,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "AllergyIntolerance.clinicalStatus SHALL NOT be present if verification Status is entered-in-error" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "verificationStatus!='entered-in-error' or clinicalStatus.empty()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "f:verificationStatus/@value!='entered-in-error' or not(exists(f:clinicalStatus))" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "AllergyIntolerance" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" ]
        ], [
          fhir:index 6;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-ait-0" ];
@@ -399,7 +399,7 @@
          fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
          fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
          fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ];
-         fhir:ElementDefinition.constraint.source [ fhir:value "Extension" ]
+         fhir:ElementDefinition.constraint.source [ fhir:value "http://hl7.org/fhir/StructureDefinition/Extension" ]
        ], [
          fhir:index 2;
          fhir:ElementDefinition.constraint.key [ fhir:value "inv-dh-ait-04" ];

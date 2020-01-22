@@ -28,7 +28,7 @@
   <title value="Summary Statement of Allergy or Intolerance"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2020-01-20T11:30:48+10:00"/>
+  <date value="2020-01-22T10:35:53+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -113,7 +113,7 @@
         <human value="AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error."/>
         <expression value="verificationStatus=&#39;entered-in-error&#39; or clinicalStatus.exists()"/>
         <xpath value="f:verificationStatus/@value=&#39;entered-in-error&#39; or exists(f:clinicalStatus)"/>
-        <source value="AllergyIntolerance"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
       </constraint>
       <constraint>
         <key value="ait-2"/>
@@ -121,7 +121,7 @@
         <human value="AllergyIntolerance.clinicalStatus SHALL NOT be present if verification Status is entered-in-error"/>
         <expression value="verificationStatus!=&#39;entered-in-error&#39; or clinicalStatus.empty()"/>
         <xpath value="f:verificationStatus/@value!=&#39;entered-in-error&#39; or not(exists(f:clinicalStatus))"/>
-        <source value="AllergyIntolerance"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
       </constraint>
       <constraint>
         <key value="inv-ait-0"/>
@@ -347,7 +347,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <constraint>
         <key value="inv-dh-ait-04"/>

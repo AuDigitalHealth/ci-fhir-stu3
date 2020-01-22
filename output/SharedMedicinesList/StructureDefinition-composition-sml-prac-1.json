@@ -9,9 +9,9 @@
   "version": "1.0.0",
   "name": "CompositionSML",
   "title": "Shared Medicines List Authored by Practitioner",
-  "status": "draft",
-  "experimental": true,
-  "date": "2020-01-20T11:30:48+10:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-01-22T10:35:53+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -581,7 +581,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           },
           {
             "key": "inv-dh-cmp-06",
@@ -629,7 +629,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           },
           {
             "key": "inv-dh-cmp-07",
@@ -1415,7 +1415,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -1715,7 +1715,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -2379,7 +2379,7 @@
             "human": "A section must at least one of text, entries, or sub-sections",
             "expression": "text.exists() or entry.exists() or section.exists()",
             "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           },
           {
             "key": "cmp-2",
@@ -2387,7 +2387,7 @@
             "human": "A section can only have an emptyReason if it is empty",
             "expression": "emptyReason.empty() or entry.empty()",
             "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           }
         ],
         "mapping": [
@@ -2492,7 +2492,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -2876,7 +2876,7 @@
             "human": "A section must at least one of text, entries, or sub-sections",
             "expression": "text.exists() or entry.exists() or section.exists()",
             "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           },
           {
             "key": "cmp-2",
@@ -2884,7 +2884,7 @@
             "human": "A section can only have an emptyReason if it is empty",
             "expression": "emptyReason.empty() or entry.empty()",
             "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           },
           {
             "key": "inv-dh-cmp-14",
@@ -2996,7 +2996,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -3540,7 +3540,7 @@
             "human": "A section must at least one of text, entries, or sub-sections",
             "expression": "text.exists() or entry.exists() or section.exists()",
             "xpath": "exists(f:text) or exists(f:entry) or exists(f:section)",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           },
           {
             "key": "cmp-2",
@@ -3548,7 +3548,7 @@
             "human": "A section can only have an emptyReason if it is empty",
             "expression": "emptyReason.empty() or entry.empty()",
             "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
-            "source": "Composition.section"
+            "source": "http://hl7.org/fhir/StructureDefinition/Composition"
           },
           {
             "key": "inv-dh-cmp-15",
@@ -3678,7 +3678,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },

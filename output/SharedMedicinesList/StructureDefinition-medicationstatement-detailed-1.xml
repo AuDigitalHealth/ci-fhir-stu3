@@ -28,7 +28,7 @@
   <title value="Medicine Item Statement"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2020-01-20T11:30:48+10:00"/>
+  <date value="2020-01-22T10:35:53+10:00"/>
   <publisher value="Australian Digital Health Agency"/>
   <contact>
     <telecom>
@@ -115,7 +115,7 @@
         <human value="Reason not taken is only permitted if Taken is No"/>
         <expression value="reasonNotTaken.exists().not() or (taken = &#39;n&#39;)"/>
         <xpath value="not(exists(f:reasonNotTaken)) or f:taken/@value=&#39;n&#39;"/>
-        <source value="MedicationStatement"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
       </constraint>
       <constraint>
         <key value="inv-dh-mst-02"/>
@@ -332,7 +332,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="MedicationStatement.extension:brandName">
@@ -366,7 +366,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="MedicationStatement.extension:genericName">
@@ -400,7 +400,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-        <source value="Extension"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
     </element>
     <element id="MedicationStatement.modifierExtension">
