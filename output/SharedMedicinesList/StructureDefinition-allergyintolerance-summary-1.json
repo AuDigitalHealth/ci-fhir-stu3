@@ -11,7 +11,7 @@
   "title": "Summary Statement of Allergy or Intolerance",
   "status": "draft",
   "experimental": true,
-  "date": "2020-01-20T11:30:48+10:00",
+  "date": "2020-01-22T10:13:11+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -107,7 +107,7 @@
             "human": "AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.",
             "expression": "verificationStatus='entered-in-error' or clinicalStatus.exists()",
             "xpath": "f:verificationStatus/@value='entered-in-error' or exists(f:clinicalStatus)",
-            "source": "AllergyIntolerance"
+            "source": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
           },
           {
             "key": "ait-2",
@@ -115,7 +115,7 @@
             "human": "AllergyIntolerance.clinicalStatus SHALL NOT be present if verification Status is entered-in-error",
             "expression": "verificationStatus!='entered-in-error' or clinicalStatus.empty()",
             "xpath": "f:verificationStatus/@value!='entered-in-error' or not(exists(f:clinicalStatus))",
-            "source": "AllergyIntolerance"
+            "source": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
           },
           {
             "key": "inv-ait-0",
@@ -388,7 +388,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           },
           {
             "key": "inv-dh-ait-04",

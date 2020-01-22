@@ -11,7 +11,7 @@
   "title": "List of Medicine Items with Change Information Authored by Practitioner",
   "status": "draft",
   "experimental": true,
-  "date": "2020-01-20T11:30:48+10:00",
+  "date": "2020-01-22T10:13:11+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -101,7 +101,7 @@
             "human": "The deleted flag can only be used if the mode of the list is \"changes\"",
             "expression": "mode = 'changes' or entry.deleted.empty()",
             "xpath": "(f:mode/@value = 'changes') or not(exists(f:entry/f:deleted))",
-            "source": "List"
+            "source": "http://hl7.org/fhir/StructureDefinition/List"
           },
           {
             "key": "lst-1",
@@ -109,7 +109,7 @@
             "human": "A list can only have an emptyReason if it is empty",
             "expression": "emptyReason.empty() or entry.empty()",
             "xpath": "not(exists(f:emptyReason) and exists(f:entry))",
-            "source": "List"
+            "source": "http://hl7.org/fhir/StructureDefinition/List"
           },
           {
             "key": "inv-dh-lst-01",
@@ -580,7 +580,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           },
           {
             "key": "inv-dh-lst-05",
@@ -628,7 +628,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ]
       },
@@ -1335,7 +1335,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "mustSupport": true
