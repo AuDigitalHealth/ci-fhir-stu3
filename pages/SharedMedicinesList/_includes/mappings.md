@@ -872,7 +872,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>PractitionerRole.code</td>
                     <td>Composition.extension(composition-author-role)> PractitionerRole.code</td>
                     <td>
-                        <p>This requirement mandates inclusion an element for the author's professional role (it may carry an absent value). This requirement is best enforced in a further profile.</p>
+                        <p>This requirement mandates inclusion of an element for the author's professional role (it may carry an absent value). This requirement is best enforced in a further profile.</p>
                         <p>The profile supports role as optional.</p>
                     </td>
                 </tr>
@@ -1222,9 +1222,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>028634</td>
                     <td>
-                       <p>This requirement specifies a set of allowed terminologies.</p>
-                       <p>The profile allows these and other terminologies.</p>
-                       <p>This part of the requirement is best enforced in a further profile.</p>
+                       <p>This requirement specifies a set of mandatory terminologies. This part of the requirement is best enforced in a further profile.</p>
+                       <p>The profile allows these and other terminologies. Implementation guidance is included to direct implementers to the preferred terminology.</p>
                     </td>
                </tr>
                 <!-- ======================================================================== -->
@@ -1465,8 +1464,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>028634</td>
                     <td>
-                        <p>This requirement specifies a set of mandatory terminologies. This part of the requirement is best enforced in a conformance profile.</p>
-                        <p>The CDA template allows these and other terminologies. Implementation guidance is included to direct implementers to the preferred terminology.</p>
+                        <p>This requirement specifies a set of mandatory terminologies. This part of the requirement is best enforced in a further profile.</p>
+                        <p>The profile allows these and other terminologies. Implementation guidance is included to direct implementers to the preferred terminology.</p>
                     </td>
                 </tr>
                 <!-- ======================================================================== -->
