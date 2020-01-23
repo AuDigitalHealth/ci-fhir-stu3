@@ -7,8 +7,8 @@
   </tr>
    <tr>
         <td>extension:informationRecipient (invariants)</td>
-        <td>When validating using this profile, any instance of extension:informationRecipient with a reference to a resource will trigger a failure. Invariants inv-dh-cmp-07 to inv-dh-cmp-11 have a defect in the FHIRPath expression. This issue will be fixed in an R4 variant of this profile.</td>
-        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/50">ci-fhir-stu3/issues/50</a></td>
+        <td>Invariants inv-dh-cmp-07 to inv-dh-cmp-12 have defects in their FHIRPath expressions. When validating using this profile, an instance containing extension:informationRecipient with a reference to a resource may not behave as expected, for example conforming instances may fail. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/50">ci-fhir-stu3/issues/50</a>, and <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/59">ci-fhir-stu3/issues/59</a></td>
   </tr>
   <tr>
         <td>type (use of fixedCodeableConcept)</td>
