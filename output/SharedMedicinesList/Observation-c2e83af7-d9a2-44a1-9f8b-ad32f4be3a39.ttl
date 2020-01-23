@@ -17,7 +17,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: c2e83af7-d9a2-44a1-9f8b-ad32f4be3a39</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>code</b>: Assertion <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v3/ActCode code 'ASSERTION' = 'Assertion)</span></p><p><b>subject</b>: <a href=\"Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.html\">Generated Summary: id: 5bd1f29e-06b4-49c6-991e-c68219bbe13a; NI = 8003608000228437; Brady FRAZIER ; gender: male; birthDate: 1978-01-01</a></p><p><b>effective</b>: 2018-10-08</p><p><b>value</b>: No known current medications <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '1234391000168107' = 'No known current medication use', given as 'No known current medications'})</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: c2e83af7-d9a2-44a1-9f8b-ad32f4be3a39</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>code</b>: Assertion <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/v3/ActCode code 'ASSERTION' = 'Assertion)</span></p><p><b>subject</b>: <a href=\"Patient-5bd1f29e-06b4-49c6-991e-c68219bbe13a.html\">Generated Summary: id: 5bd1f29e-06b4-49c6-991e-c68219bbe13a; NI = 8003608000228437; Brady FRAZIER ; gender: male; birthDate: 1978-01-01</a></p><p><b>value</b>: Patient is not taking any medicines <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '1234391000168107' = 'No known current medication use', given as 'No known current medications'})</span></p></div>"
   ];
   fhir:Observation.status [ fhir:value "final"];
   fhir:Observation.code [
@@ -31,7 +31,6 @@
      fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/Patient/5bd1f29e-06b4-49c6-991e-c68219bbe13a>;
      fhir:Reference.reference [ fhir:value "Patient/5bd1f29e-06b4-49c6-991e-c68219bbe13a" ]
   ];
-  fhir:Observation.effectiveDateTime [ fhir:value "2018-10-08"^^xsd:date];
   fhir:Observation.valueCodeableConcept [
      fhir:CodeableConcept.coding [
        fhir:index 0;
@@ -39,7 +38,8 @@
        fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
        fhir:Coding.code [ fhir:value "1234391000168107" ];
        fhir:Coding.display [ fhir:value "No known current medications" ]
-     ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Patient is not taking any medicines" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
