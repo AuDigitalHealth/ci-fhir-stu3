@@ -42,8 +42,8 @@
       <constraint>
         <key value="inv-dh-lst-03" />
         <severity value="error" />
-        <human value="The author role shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.reference.exists() or extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
+        <human value="The author role shall at least have a reference to a practitioner role that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1') or extension('http://hl7.org.au/fhir/StructureDefinition/author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
     </element>
     <element id="List.meta">
@@ -73,12 +73,6 @@
       <sliceName value="sourceRole" />
       <short value="Practitioner role that authored the list" />
       <min value="1" />
-      <constraint>
-        <key value="inv-dh-lst-05" />
-        <severity value="error" />
-        <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1')" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="List.status">
