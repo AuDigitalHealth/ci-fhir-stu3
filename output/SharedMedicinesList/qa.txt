@@ -1,12 +1,12 @@
 ﻿Shared Medicines List : Validation Results
 =========================================
 
-err = 140, warn = 82, info = 78
-IG Publisher Version: v1.0.45-SNAPSHOT Out of date - current version is v1.0.47-SNAPSHOT
-Generated Fri Jan 24 16:42:49 AEST 2020. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 158, warn = 82, info = 78
+IG Publisher Version: v1.0.49-SNAPSHOT
+Generated Tue Jan 28 14:03:47 AEST 2020. FHIR version 3.0.2 for au.electronichealth.sharedmedicineslist# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 225 / 1
- C:\work\git\ci-fhir-stu3\examples\bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c : 2 / 16
+ C:\work\git\ci-fhir-stu3\examples\bundle-a37e43d2-393b-4953-8cdc-6e3b86c4ad9c : 1 / 16
  C:\work\git\ci-fhir-stu3\examples\bundle-b50acc1e-3f4e-41d3-9c21-dda924adb210 : 1 / 7
  C:\work\git\ci-fhir-stu3\examples\bundle-e32a01d0-2610-4c99-ba46-9732aa975d41 : 1 / 20
  C:\work\git\ci-fhir-stu3\examples\composition-3329786d-efb8-4b15-8966-809fc0a46cb5 : 1 / 2
@@ -39,8 +39,8 @@ Generated Fri Jan 24 16:42:49 AEST 2020. FHIR version 3.0.2 for au.electronichea
  C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 4 / 0
  C:\work\git\ci-fhir-stu3\resources\patient-ident-1 : 4 / 0
  C:\work\git\ci-fhir-stu3\resources\patient-mhr-1 : 4 / 1
- C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1 : 3 / 1
- C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 3 / 0
+ C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1 : 8 / 1
+ C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1 : 8 / 0
  C:\work\git\ci-fhir-stu3\resources\practitionerrole-dh-base-1 : 5 / 1
  C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1 : 5 / 0
  C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1 : 1 / 1
@@ -279,7 +279,6 @@ INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resour
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[0]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.section[1]: This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1
 ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource: Profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1, Element 'Bundle.entry[0].resource.section[medications]': minimum required = 1, but only found 0
-ERROR: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.type.text: The element text is present in the instance but not allowed in the applicable fixed value specified in profile
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[0].resource.subject: Found multiple matching profiles for urn:uuid:1fbd9663-b4cd-4a33-9657-650eca3a6b3f among choices: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1, http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1
 INFORMATION: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.extension[0].value.ofType(Coding): Code System URI 'https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1' is unknown so the code cannot be validated
 WARNING: Bundle/a37e43d2-393b-4953-8cdc-6e3b86c4ad9c: Bundle.entry[1].resource.extension[0].value.ofType(Coding): ValueSet https://healthterminologies.gov.au/fhir/ValueSet/australian-indigenous-status-1 not found by validator
@@ -434,11 +433,21 @@ ERROR: StructureDefinition/patient-mhr-1: StructureDefinition.differential.eleme
 ERROR: StructureDefinition/patient-mhr-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 INFORMATION: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1: The Implementation Guide contains no explicitly linked examples for this profile
 == C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1.xml ==
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.identifier: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.period: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.issuer: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1: The profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 has 4 elements in the differential (id: Practitioner.qualification.identifier, id: Practitioner.qualification.code, id: Practitioner.qualification.period, id: Practitioner.qualification.issuer) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
 ERROR: StructureDefinition/practitioner-dh-base-1: StructureDefinition.snapshot.element[106].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2'
 ERROR: StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
 ERROR: StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
 WARNING: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1: The Implementation Guide contains no examples for this profile
 == C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1.xml ==
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.identifier: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.code: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.period: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.issuer: No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)
+ERROR: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1: The profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 has 4 elements in the differential (id: Practitioner.qualification.identifier, id: Practitioner.qualification.code, id: Practitioner.qualification.period, id: Practitioner.qualification.issuer) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)
 ERROR: StructureDefinition/practitioner-ident-1: StructureDefinition.snapshot.element[106].binding.valueSet.ofType(Reference): Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2'
 ERROR: StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
 ERROR: StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve
