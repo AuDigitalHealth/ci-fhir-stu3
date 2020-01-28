@@ -30,7 +30,7 @@
       <constraint>
         <key value="inv-dh-cmp-01" />
         <severity value="error" />
-        <human value="The author role shall at least have a reference to a practitioner role that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value" />
+        <human value="The author role shall at least have a reference that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value" />
         <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1') or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
       <constraint>
