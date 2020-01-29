@@ -1,5 +1,5 @@
 # {{ site.data.fhir.igName }} FHIR Implementation Guide
-<h3 style="color:#ff0000;">Draft for restricted external review</h3>
+<h3>Approved for external trial use</h3>
 {:.no_toc}
 
 {% include publish-box.html %}
@@ -56,11 +56,6 @@ For implementers interested in a practitioner authored medicines list as a docum
 
 For implementers interested in representing a practitioner authored medicines list as a list, and not a document, the starting point is the [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html) profile, which references the additional profiles necessary to assert [conformance](conformance.html).
 
-## Editorial note
-This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.
-
-This implementation guide may not be considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.
-
 ## Intended audience
 This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.
 
@@ -100,8 +95,8 @@ This implementation guide and related artefacts are technical in nature and the 
         </tr>
         <tr>
             <td>1.0.0</td>
-            <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
-            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br/>This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td><span style="padding-left: 3px; padding-right: 3px">29 Jan 2020</span></td>
+            <td>Initial public release at approved for external trial use. Implemented in FHIR Release 3 (STU).<br/>This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table> 
