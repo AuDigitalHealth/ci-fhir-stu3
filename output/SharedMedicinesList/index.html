@@ -121,7 +121,7 @@
 <!-- ============CONTENT CONTENT=============== -->
 
 <h1 id="shared-medicines-list-fhir-implementation-guide">Shared Medicines List FHIR Implementation Guide</h1>
-<h3 class="no_toc">Approved for external trial use</h3>
+<h3 style="color:#ff0000;" class="no_toc">Draft for restricted external review</h3>
 
 <p id="publish-box">
     This is release 1.0.0 of Shared Medicines List FHIR Implementation Guide. It is based on  <a href="http://hl7.org/fhir/STU3/">FHIR version 3.0.2</a>. 
@@ -134,6 +134,7 @@
       <li><a href="#document-purpose-and-scope" id="markdown-toc-document-purpose-and-scope">Document purpose and scope</a></li>
       <li><a href="#context-and-use" id="markdown-toc-context-and-use">Context and use</a></li>
       <li><a href="#how-to-read-this-document" id="markdown-toc-how-to-read-this-document">How to read this document</a></li>
+      <li><a href="#editorial-note" id="markdown-toc-editorial-note">Editorial note</a></li>
       <li><a href="#intended-audience" id="markdown-toc-intended-audience">Intended audience</a></li>
       <li><a href="#document-information" id="markdown-toc-document-information">Document Information</a>        <ul>
           <li><a href="#key-information" id="markdown-toc-key-information">Key Information</a></li>
@@ -199,6 +200,11 @@
 
 <p>For implementers interested in representing a practitioner authored medicines list as a list, and not a document, the starting point is the <a href="StructureDefinition-list-sml-pracchanges-1.html">List of Medicine Items with Change Information Authored by Practitioner</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a>.</p>
 
+<h2 id="editorial-note">Editorial note</h2>
+<p>This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.</p>
+
+<p>This implementation guide may not be considered to be complete enough or sufficiently reviewed to be safe for implementation and use in production systems. It may have known issues and still be in development.</p>
+
 <h2 id="intended-audience">Intended audience</h2>
 <p>This implementation guide is aimed at software development teams, architects, designers, clinicians and informatics researchers who are responsible for the delivery of clinical applications, infrastructure components and messaging interfaces, and also for those who wish to evaluate the clinical suitability of the Agency-endorsed specifications.</p>
 
@@ -238,8 +244,8 @@
         </tr>
         <tr>
             <td>1.0.0</td>
-            <td><span style="padding-left: 3px; padding-right: 3px">29 Jan 2020</span></td>
-            <td>Initial public release at approved for external trial use. Implemented in FHIR Release 3 (STU).<br />This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red">TBD</span></td>
+            <td>Initial public release at (insert TBD spec status). Implemented in FHIR Release 3 (STU).<br />This version of the Shared Medicines List FHIR implementation guide supports the exchange of practitioner authored medicines lists, in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
     </tbody>
 </table>
@@ -418,11 +424,11 @@
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-2954:2020 Approved for external trial use</p>
+            <p>Document ID: DH-2954:2019 Draft for restricted external review</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Wed, Jan 29, 2020 10:45+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Wed, Jan 29, 2020 09:52+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
