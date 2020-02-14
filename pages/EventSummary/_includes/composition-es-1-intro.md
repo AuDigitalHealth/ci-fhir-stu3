@@ -81,7 +81,7 @@ For the expected usage scenarios in this implementation guide:
   </tr>
  
 </table>  
-When sending a shared medicines list to the My Health Record system it is expected that all instances of patient will conform to [My Health Record Patient](StructureDefinition-patient-mhr-1.html).
+When sending an event summary to the My Health Record system it is expected that all instances of patient will conform to [My Health Record Patient](StructureDefinition-patient-mhr-1.html).
   
 #### Known Issues
 
