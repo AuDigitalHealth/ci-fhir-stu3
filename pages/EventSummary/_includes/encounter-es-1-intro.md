@@ -11,3 +11,5 @@ Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-s
 For the expected usage scenarios in this implementation guide:
 
 * It is expected that the status will be 'finished'. 
+
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)

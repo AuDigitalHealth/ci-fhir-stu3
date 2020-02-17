@@ -20,3 +20,4 @@ For the expected usage scenarios in this implementation guide:
 
     * For new and changed medicine items, change description is expected to be provided.
 
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)

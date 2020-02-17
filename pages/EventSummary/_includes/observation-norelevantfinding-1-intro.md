@@ -5,3 +5,4 @@ For the expected usage scenarios in this implementation guide:
 
 * It is expected that status will be ‘final’.
  
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)

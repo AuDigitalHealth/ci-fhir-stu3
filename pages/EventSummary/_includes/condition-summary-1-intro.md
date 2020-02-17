@@ -12,5 +12,5 @@ For the expected usage scenarios in this implementation guide:
 
 * A 'refuted' condition should be represented with an appropriate negation code and a clinicalStatus of ‘inactive’. 
 
-
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
 
