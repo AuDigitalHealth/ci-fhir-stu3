@@ -15,5 +15,40 @@
         <td>The design of this profile is incomplete. This profile is missing an invariant to mandate the inclusion of Encounter.extension:encounterDescription.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/34">ci-fhir-stu3/issues/34</a></td>
   </tr>
+  <tr>
+        <td>type (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.type using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section:eventOverview.code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section:eventOverview.code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section:allergies.code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section:allergies.code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section:medications.code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section:medications.code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section:medicalHistory.code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section:medicalHistory.code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section:immunisations.code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section:immunisations.code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
+  <tr>
+        <td>section:diagnosticInvestigations.code (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.section:diagnosticInvestigations.code using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+  </tr>
  </tbody>
 </table>
