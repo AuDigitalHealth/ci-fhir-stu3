@@ -2,8 +2,8 @@
 
 #### Implementation guidance
 
-For the expected usage scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
-* It is expected that status will be ‘completed’.
+* status will be ‘completed’
 
 This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
