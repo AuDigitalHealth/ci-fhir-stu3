@@ -112,6 +112,10 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="Composition.encounter.reference">
+      <path value="Composition.encounter.reference"/>
+      <min value="1"/>
+    </element>
     <element id="Composition.date">
       <path value="Composition.date"/>
       <mustSupport value="true"/>
@@ -257,7 +261,11 @@
       </type>
       <mustSupport value="true"/>
     </element>
-
+    <element id="Composition.section:eventOverview.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1" />
+    </element>
+    
     <!-- Allergies Section -->
     <element id="Composition.section:allergies">
       <extension
@@ -315,6 +323,10 @@
         />
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:allergies.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1" />
     </element>
     <element id="Composition.section:allergies.emptyReason">
       <path value="Composition.section.emptyReason"/>
@@ -403,6 +415,10 @@
         />
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:medications.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1" />
     </element>
     <element id="Composition.section:medications.emptyReason">
       <path value="Composition.section.emptyReason"/>
@@ -502,6 +518,10 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="Composition.section:medicalHistory.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1" />
+    </element>
     <element id="Composition.section:medicalHistory.emptyReason">
       <path value="Composition.section.emptyReason"/>
       <mustSupport value="true"/>
@@ -593,6 +613,10 @@
         />
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:immunisations.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1" />
     </element>
     <element id="Composition.section:immunisations.emptyReason">
       <path value="Composition.section.emptyReason"/>
