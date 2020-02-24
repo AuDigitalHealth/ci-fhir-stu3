@@ -9,4 +9,4 @@ When sending an event summary to the My Health Record system it is expected that
 
 * an HPI-O will be sent
 
-This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).

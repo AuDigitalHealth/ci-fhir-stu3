@@ -1,7 +1,7 @@
 #### Summary Statement of Allergy or Intolerance *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
 #### Implementation guidance
-For the expected usage scenarios in this implementation guide it is expected that:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
 * verificationStatus will be 'unconfirmed' (including where a sending system does not clearly have this element) or 'confirmed' depending on the level of certainty
 * clinicalStatus will be 'active'
@@ -9,4 +9,4 @@ For the expected usage scenarios in this implementation guide it is expected tha
 * refutation is not expected to be handled except as above - an appropriate negation code in AllergyIntolerance.code and clinicalStatus of 'confirmed'
 * where a sending system only has a substance available (e.g. 111088007 \|Latex\|) and not a statement of allergy or intolerance (e.g. 300916003 \|Allergy to latex\|), the substance will be sent in AllergyIntolerance.code and optionally in reaction.substance
 
-This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).

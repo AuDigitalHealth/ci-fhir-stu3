@@ -6,4 +6,4 @@ For the overarching usage scenarios in this implementation guide it is expected 
 
 * status will be ‘completed’
 
-This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).

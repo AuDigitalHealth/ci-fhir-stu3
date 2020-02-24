@@ -53,7 +53,7 @@ For the overarching usage scenarios in this implementation guide it is expected 
     </table>
 When sending a medicines list to the My Health Record system it is expected that all instances of patient will conform to [My Health Record Patient](StructureDefinition-patient-mhr-1.html).
 
-When a medicines list is sent as part of a document, rather than as a standalone resource, the guidance in the following table applies.
+The guidance in the following table applies.
 
 <table class="list" width="100%">
   <tr>
@@ -86,4 +86,4 @@ When a medicines list is sent as part of a document, rather than as a standalone
     </tr>  
   </table> 
 
-This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).

@@ -16,4 +16,4 @@ For the overarching usage scenarios in this implementation guide it is expected 
   * reason
 * period is equal to, or prior to, Composition date and List date
 
-This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).

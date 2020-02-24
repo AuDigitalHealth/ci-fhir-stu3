@@ -2,6 +2,6 @@
 
 #### Implementation guidance
 
-No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.
+No additional guidance is suggested to support implementation of this profile for the overarching usage scenarios this implementation guide is intended to support.
 
-This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html)
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).
