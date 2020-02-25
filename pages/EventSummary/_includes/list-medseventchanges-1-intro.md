@@ -8,10 +8,7 @@ Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-s
 
 #### Implementation guidance
 
-For the overarching usage scenarios in this implementation guide it is expected that:
-
-* all medicine items relevant to an event should be included in the list
-* all medicine items will have an associated flag according to the guidance in the following table
+For the overarching usage scenarios in this implementation guide it is expected that all medicine items relevant to an event should be included in the list. All medicine items will have an associated flag according to the guidance in the following table.
 
 <table class="list" width="100%">
   <tr>

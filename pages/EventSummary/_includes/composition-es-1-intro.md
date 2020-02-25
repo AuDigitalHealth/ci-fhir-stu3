@@ -13,7 +13,10 @@ The following are the overarching usage scenarios this profile is intended to su
 
 
 ####  Implementation guidance
-For the overarching usage scenarios in this implementation guide it is expected that all medicine items relevant to an event should be included in the list. All medicine items will have an associated flag according to the guidance in the following table.
+For the overarching usage scenarios in this implementation guide:
+
+* For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).
+
 
 <table class="list" width="100%">
   <tr>
