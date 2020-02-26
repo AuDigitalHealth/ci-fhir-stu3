@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "Event Summary"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2020-01-09T15:53:40+10:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-02-26T15:20:40+10:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Australian Digital Health Agency"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -126,6 +126,23 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-patient-mhr-1.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "patient-mhr-1" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patient-mhr-1" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "StructureDefinition-practitionerrole-withpractitionerident-1.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
@@ -134,7 +151,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitionerrole-withpractitionerident-1" ]
        ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -151,7 +168,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitioner-ident-1" ]
        ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -168,7 +185,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/organization-ident-1" ]
        ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -185,7 +202,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/allergyintolerance-summary-1" ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -202,7 +219,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/list-medseventchanges-1" ]
        ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -219,7 +236,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/observation-norelevantfinding-1" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -236,7 +253,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/condition-summary-1" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -253,7 +270,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/procedure-summary-1" ]
        ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -270,7 +287,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/immunization-summary-1" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -287,7 +304,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/medicationstatement-summary-1" ]
        ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -305,7 +322,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/relatedperson-dh-base-1" ]
        ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -323,7 +340,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/organization-dh-base-1" ]
        ]
      ], [
-       fhir:index 16;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -339,7 +356,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/practitioner-dh-base-1" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -355,7 +372,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/humanname-dh-base-1" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -371,7 +388,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/3bb44f10-4350-498c-a629-4bf43df620e9" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -387,7 +404,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/a1a25cd7-6553-4a47-9c5c-399050a80f9d" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -403,7 +420,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/7fdbd082-b9c4-46bf-ac8d-8f71de24ac4a" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -419,7 +436,7 @@
          fhir:Reference.reference [ fhir:value "Composition/565b1e7e-01c1-4379-a3d6-6e21cdea43e9" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -435,7 +452,7 @@
          fhir:Reference.reference [ fhir:value "Composition/2384da13-ff91-4e05-930f-2d7a034ea713" ]
        ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -451,7 +468,7 @@
          fhir:Reference.reference [ fhir:value "Composition/672a9ba7-0773-4a7f-ad80-e6ef50950a8d" ]
        ]
      ], [
-       fhir:index 24;
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -467,7 +484,7 @@
          fhir:Reference.reference [ fhir:value "Patient/e6e84607-a0da-4ead-9ed6-5e064fea9fc4" ]
        ]
      ], [
-       fhir:index 25;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -483,7 +500,7 @@
          fhir:Reference.reference [ fhir:value "Patient/792b4811-2ce7-4531-8893-af827175bcfe" ]
        ]
      ], [
-       fhir:index 26;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -499,7 +516,7 @@
          fhir:Reference.reference [ fhir:value "Patient/3a72f2d2-c9ed-40a4-beac-01c14dcf244a" ]
        ]
      ], [
-       fhir:index 27;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -515,7 +532,7 @@
          fhir:Reference.reference [ fhir:value "Patient/d422d1da-6280-4335-8795-b101a61134e4" ]
        ]
      ], [
-       fhir:index 28;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -531,7 +548,7 @@
          fhir:Reference.reference [ fhir:value "Organization/021fff67-c5ec-438f-9520-ce9bafee1306" ]
        ]
      ], [
-       fhir:index 29;
+       fhir:index 30;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -547,7 +564,7 @@
          fhir:Reference.reference [ fhir:value "Organization/d93e5527-afd9-4c54-ab09-ada4fdd8ff13" ]
        ]
      ], [
-       fhir:index 30;
+       fhir:index 31;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -563,7 +580,7 @@
          fhir:Reference.reference [ fhir:value "Organization/0903c2ea-252f-4b03-85f4-2ddcf046fbc3" ]
        ]
      ], [
-       fhir:index 31;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -579,7 +596,7 @@
          fhir:Reference.reference [ fhir:value "MedicationStatement/32def593-e104-4cee-b8f5-d1f923efd94b" ]
        ]
      ], [
-       fhir:index 32;
+       fhir:index 33;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -595,7 +612,7 @@
          fhir:Reference.reference [ fhir:value "MedicationStatement/9db8a050-0c25-4192-834d-bca1da8ff250" ]
        ]
      ], [
-       fhir:index 33;
+       fhir:index 34;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -611,7 +628,7 @@
          fhir:Reference.reference [ fhir:value "MedicationStatement/fc257fb0-8325-4f85-b29f-4c100346f527" ]
        ]
      ], [
-       fhir:index 34;
+       fhir:index 35;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -627,7 +644,7 @@
          fhir:Reference.reference [ fhir:value "MedicationStatement/df0af202-6da0-4e67-9c22-ebc21ee34309" ]
        ]
      ], [
-       fhir:index 35;
+       fhir:index 36;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -643,7 +660,7 @@
          fhir:Reference.reference [ fhir:value "MedicationStatement/c20c510b-fd91-45eb-bacc-171a9a0261e5" ]
        ]
      ], [
-       fhir:index 36;
+       fhir:index 37;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -659,7 +676,7 @@
          fhir:Reference.reference [ fhir:value "MedicationStatement/bed6ee24-3789-4cdd-83f0-a3a3a8ccba7a" ]
        ]
      ], [
-       fhir:index 37;
+       fhir:index 38;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -675,7 +692,7 @@
          fhir:Reference.reference [ fhir:value "List/fa11a4f8-9ecc-4a65-9643-74c3c84880f4" ]
        ]
      ], [
-       fhir:index 38;
+       fhir:index 39;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -691,7 +708,7 @@
          fhir:Reference.reference [ fhir:value "List/6eeee721-3485-4e1f-81b8-450a2143f441" ]
        ]
      ], [
-       fhir:index 39;
+       fhir:index 40;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -707,7 +724,7 @@
          fhir:Reference.reference [ fhir:value "List/e6e32a80-a307-4833-b997-1e6e7b3abbb3" ]
        ]
      ], [
-       fhir:index 40;
+       fhir:index 41;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -723,7 +740,7 @@
          fhir:Reference.reference [ fhir:value "Encounter/98900f15-67f8-48a1-9345-6d5968f2c23e" ]
        ]
      ], [
-       fhir:index 41;
+       fhir:index 42;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -739,7 +756,7 @@
          fhir:Reference.reference [ fhir:value "Encounter/6c39fd65-2a5f-42d0-b3db-20b6416e2b9a" ]
        ]
      ], [
-       fhir:index 42;
+       fhir:index 43;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -755,7 +772,7 @@
          fhir:Reference.reference [ fhir:value "Encounter/cead9124-f6d8-47ac-b785-8e0fcab3dc13" ]
        ]
      ], [
-       fhir:index 43;
+       fhir:index 44;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -771,7 +788,7 @@
          fhir:Reference.reference [ fhir:value "AllergyIntolerance/a5e03840-1be4-43e0-acd2-c9e288adc4f9" ]
        ]
      ], [
-       fhir:index 44;
+       fhir:index 45;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -787,7 +804,7 @@
          fhir:Reference.reference [ fhir:value "AllergyIntolerance/b21f4cad-024a-4101-a6dd-80d50e29e295" ]
        ]
      ], [
-       fhir:index 45;
+       fhir:index 46;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -803,7 +820,7 @@
          fhir:Reference.reference [ fhir:value "AllergyIntolerance/c7dfc1e4-e2e0-4542-b93a-be297efb0f95" ]
        ]
      ], [
-       fhir:index 46;
+       fhir:index 47;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -819,7 +836,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/40a94071-8373-4d53-a788-63b79c75a3c1" ]
        ]
      ], [
-       fhir:index 47;
+       fhir:index 48;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -835,7 +852,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/6c9f40e7-6f00-4d75-9f39-d57bd620d855" ]
        ]
      ], [
-       fhir:index 48;
+       fhir:index 49;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -851,7 +868,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/20f15728-f3ac-4877-b55a-107f94dbd00c" ]
        ]
      ], [
-       fhir:index 49;
+       fhir:index 50;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -867,7 +884,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/7bfbb28b-e57b-4961-b5f9-4bfc5391b44a" ]
        ]
      ], [
-       fhir:index 50;
+       fhir:index 51;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -883,7 +900,7 @@
          fhir:Reference.reference [ fhir:value "PractitionerRole/e99357bd-b6ad-4ae7-9d99-27cb929e48af" ]
        ]
      ], [
-       fhir:index 51;
+       fhir:index 52;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -899,7 +916,7 @@
          fhir:Reference.reference [ fhir:value "PractitionerRole/45cad6ac-e9a3-418a-8480-4e64132849f2" ]
        ]
      ], [
-       fhir:index 52;
+       fhir:index 53;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -915,7 +932,7 @@
          fhir:Reference.reference [ fhir:value "Condition/ed5e2c34-2d28-4d21-a6aa-be7baad865b8" ]
        ]
      ], [
-       fhir:index 53;
+       fhir:index 54;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -931,7 +948,7 @@
          fhir:Reference.reference [ fhir:value "Condition/e11fd841-5200-4657-9260-3a041a98ae31" ]
        ]
      ], [
-       fhir:index 54;
+       fhir:index 55;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -947,7 +964,7 @@
          fhir:Reference.reference [ fhir:value "Immunization/d2b71673-d1a5-4e1d-9b25-bba47aa26036" ]
        ]
      ], [
-       fhir:index 55;
+       fhir:index 56;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
