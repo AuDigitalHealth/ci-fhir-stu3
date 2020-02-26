@@ -2,10 +2,10 @@
 
 #### Implementation guidance
 
-For the expected usage scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
-* It is expected that status will be ‘completed’.
+* status will be ‘completed’
+* primarySource will be ‘true’
+* where an authoring system does not have the dose status available as a distinct element, Dose Status Not Available will be sent {"system":"http://hl7.org/fhir/v3/NullFlavor","code":"NAVU","display":"Not available"}
 
-* It is expected that primarySource will be ‘true’.
-
-* Where an authoring system does not have the dose status available as a distinct element it is expected that Dose Status Not Available will be sent {"system":"http://hl7.org/fhir/v3/NullFlavor","code":"NAVU","display":"Not available"}.
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).
