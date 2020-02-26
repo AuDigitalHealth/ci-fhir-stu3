@@ -8,6 +8,12 @@ Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-s
 
 #### Implementation guidance
 
-For the expected usage scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
-* It is expected that the status will be 'finished'. 
+* status will be 'finished' 
+* the following elements are not likely to be sent but are encouraged:
+  * class
+  * reason
+* period is equal to, or prior to, Composition date and List date
+
+This profile is referenced by [Event Summary](StructureDefinition-composition-es-1.html).
