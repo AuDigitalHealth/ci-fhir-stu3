@@ -67,7 +67,6 @@
     <sch:title>f:List/f:entry</sch:title>
     <sch:rule context="f:List/f:entry">
       <sch:assert test="count(f:extension[@url = 'http://hl7.org.au/fhir/StructureDefinition/change-description']) &lt;= 1">extension with URL = 'http://hl7.org.au/fhir/StructureDefinition/change-description': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:flag) &gt;= 1">flag: minimum cardinality of 'flag' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
