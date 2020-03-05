@@ -76,5 +76,5 @@ For the expected usage scenarios in this implementation guide:
   </tr>
 </table>  
   
-   
+When sending a Shared Health Summary to the My Health Record system it is expected that all instances of patient will conform to My Health Record Patient.   
    
