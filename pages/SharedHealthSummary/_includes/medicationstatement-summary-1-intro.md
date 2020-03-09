@@ -8,4 +8,4 @@ For the expected usage scenarios in this implementation guide:
 
 * It is expected that taken will be ‘y’.
 
-
+This profile is referenced by [Shared Health Summary](StructureDefinition-composition-shs-1.html).

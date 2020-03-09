@@ -12,3 +12,4 @@ For the expected usage scenarios in this implementation guide:
 
 *  A ‘refuted’ allergy or intolerance should be represented with an appropriate negation code (e.g. 716184000 \|No known latex allergy\|) and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.
 
+This profile is referenced by [Shared Health Summary](StructureDefinition-composition-shs-1.html).

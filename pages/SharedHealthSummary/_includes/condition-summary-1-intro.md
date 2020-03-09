@@ -11,6 +11,6 @@ For the expected usage scenarios in this implementation guide:
 
 * A 'refuted' condition should be represented with an appropriate negation code and a clinicalStatus of 'inactive'.
 
-
+This profile is referenced by [Shared Health Summary](StructureDefinition-composition-shs-1.html).
 
 
