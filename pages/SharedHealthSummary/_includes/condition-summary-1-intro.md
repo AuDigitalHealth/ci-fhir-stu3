@@ -7,9 +7,9 @@ For the expected usage scenarios in this implementation guide it is expected tha
 
 * clinicalStatus will be ‘active’.
 
-* a ‘refuted’ condition should be represented with an appropriate negation code and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.
+* A ‘refuted’ condition should be represented with an appropriate negation code and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.
 
-* a 'refuted' condition should be represented with an appropriate negation code and a clinicalStatus of 'inactive'.
+* A 'refuted' condition should be represented with an appropriate negation code and a clinicalStatus of 'inactive'.
 
 This profile is referenced by [Shared Health Summary](StructureDefinition-composition-shs-1.html).
 

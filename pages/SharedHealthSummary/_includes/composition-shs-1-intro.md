@@ -26,12 +26,12 @@ For the overarching usage scenarios in this implementation guide it is expected 
  
  <tr>
    <td rowspan="1">Allergies</td>
-    <td>where a sending system can state that a patient does not have an allergy or category of allergies an AllergyIntolerance will be sent</td>
+    <td>Where a sending system can state that a patient does not have an allergy or category of allergies an AllergyIntolerance will be sent</td>
   </tr>
   
    <tr>
    <td rowspan="1">Medications</td>
-    <td>where a sending system can state that a patient is not currently taking medication an Observation will be sent</td>
+    <td>Where a sending system can state that a patient is not currently taking medication an Observation will be sent</td>
   </tr>
  
  <tr>
