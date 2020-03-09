@@ -35,7 +35,9 @@
         <severity value="error"/>
         <human
           value="The author role shall at least have a reference that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value"/>
-        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1') or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
+        <expression
+          value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1') or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()"
+        />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-10"/>
@@ -62,15 +64,6 @@
           value="The custodian shall at least have a reference or an identifier with at least a system and a value"/>
         <expression
           value="custodian.reference.exists() or custodian.identifier.where(system.count() + value.count() &gt; 1).exists()"
-        />
-      </constraint>
-      <constraint>
-        <key value="inv-dh-cmp-14"/>
-        <severity value="error"/>
-        <human
-          value="If present, an information recipient shall at least have a reference, an identifier or a display"/>
-        <expression
-          value="informationRecipient.exists() implies informationRecipient.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())"
         />
       </constraint>
     </element>
@@ -171,9 +164,9 @@
       </slicing>
       <min value="1"/>
     </element>
-    <element id="Composition.attester:legal">
+    <element id="Composition.attester:legalAttester">
       <path value="Composition.attester"/>
-      <sliceName value="legal"/>
+      <sliceName value="legalAttester"/>
       <short value="Legal Attester"/>
       <min value="1"/>
       <max value="1"/>
@@ -338,7 +331,9 @@
         <severity value="error"/>
         <human
           value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications"/>
-        <expression value="entry.resolve().where($this is Observation).exists() implies (entry.resolve().where($this is Observation).count() &lt; 2 and entry.resolve().where($this is value and value.coding.code = '1200661000168107').exists())" />
+        <expression
+          value="entry.resolve().where($this is Observation).exists() implies (entry.resolve().where($this is Observation).count() &lt; 2 and entry.resolve().where($this is value and value.coding.code = '1200661000168107').exists())"
+        />
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -421,14 +416,18 @@
         <severity value="error"/>
         <human
           value="This section shall not contain both summary statement of medical history entries (condition or procedure) and assertion of no relevant finding entries"/>
-        <expression value="(entry.resolve().where($this is Condition).exists() or entry.resolve().where($this is Procedure).exists()) xor entry.resolve().where($this is Observation).exists()"/>
+        <expression
+          value="(entry.resolve().where($this is Condition).exists() or entry.resolve().where($this is Procedure).exists()) xor entry.resolve().where($this is Observation).exists()"
+        />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-06"/>
         <severity value="error"/>
         <human
           value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no relevant medical history"/>
-        <expression value="entry.resolve().where($this is Observation).exists() implies (entry.resolve().where($this is Observation).count() &lt; 2 and entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())" />
+        <expression
+          value="entry.resolve().where($this is Observation).exists() implies (entry.resolve().where($this is Observation).count() &lt; 2 and entry.resolve().where($this is value and value.coding.code = '1224831000168103').exists())"
+        />
       </constraint>
       <mustSupport value="true"/>
     </element>
@@ -596,4 +595,3 @@
     </element>
   </differential>
 </StructureDefinition>
-
