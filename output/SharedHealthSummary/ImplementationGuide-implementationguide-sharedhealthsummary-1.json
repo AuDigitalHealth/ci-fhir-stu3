@@ -10,7 +10,7 @@
   "name": "Shared Health Summary",
   "status": "draft",
   "experimental": true,
-  "date": "2020-01-09T16:09:08+10:00",
+  "date": "2020-03-10T08:28:46+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -34,7 +34,7 @@
         },
         {
           "url": "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version",
-          "valueString": "current-stu3"
+          "valueString": "1.2.0"
         }
       ],
       "type": "reference",
@@ -79,6 +79,23 @@
           "description": "The Agency Patient profile, as derived from the HL7 AU patient profile.",
           "sourceReference": {
             "reference": "StructureDefinition/patient-dh-base-1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+              "valueString": "StructureDefinition:resource"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-patient-mhr-1.html"
+            }
+          ],
+          "example": false,
+          "name": "patient-mhr-1",
+          "sourceReference": {
+            "reference": "StructureDefinition/patient-mhr-1"
           }
         },
         {
