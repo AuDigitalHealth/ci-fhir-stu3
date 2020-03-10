@@ -2,7 +2,7 @@
 
 #### Implementation guidance
 
-For the expected usage scenarios in this implementation guide it is expected that:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
 * status will be ‘active’.
 
