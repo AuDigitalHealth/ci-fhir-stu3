@@ -155,31 +155,23 @@
 
 <h4 id="usage-scenarios">Usage scenarios</h4>
 
-<p>The following are the usage scenarios expected:</p>
+<p>The following are the overarching usage scenarios this profile is intended to support:</p>
 
 <ul>
-  <li>
-    <p>A clinical information system (CIS) sends or receives a Shared Health Summary with the My Health Record system</p>
-  </li>
-  <li>
-    <p>A contracted service provider (CSP) sends or receives a Shared Health Summary with the My Health Record system</p>
-  </li>
-  <li>
-    <p>A registered repository receives a Shared Health Summary from the My Health Record system</p>
-  </li>
+  <li>A clinical information system (CIS) sends or receives an Shared Health Summary with the My Health Record system</li>
+  <li>A contracted service provider (CSP) sends or receives an Shared Health Summary with the My Health Record system</li>
+  <li>A CIS sends or receives an Shared Health Summary with another CIS or CSP</li>
+  <li>A CSP sends or receives an Shared Health Summary with a CIS or another CSP</li>
+  <li>A registered portal or registered repository receives an Shared Health Summary</li>
 </ul>
 
 <h4 id="implementation-guidance">Implementation guidance</h4>
 
-<p>For the expected usage scenarios in this implementation guide:</p>
-
+<p>For the overarching usage scenarios in this implementation guide it is expected that:</p>
 <ul>
-  <li>
-    <p>It is required that the composition include only the specified four top-level sections; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.</p>
-  </li>
-  <li>
-    <p>For each section included in the composition it is important to differentiate between affirmatively stating a patient has no relevant findings (e.g. no history of immunisation) versus a finding that a patient does not have a specific condition (e.g. no latex allergy) versus not including findings in the record (e.g. not applicable or unknown).</p>
-  </li>
+  <li>composition author role will be a reference to a PractitionerRole resource that describes the author’s professional role, e.g. General Practitioner</li>
+  <li>author will be a reference to a Practitioner resource that describes the author</li>
+  <li>an empty section will be sent with an empty reason</li>
 </ul>
 
 <table class="list" width="100%">
@@ -189,53 +181,32 @@
    </tr>
  
  <tr>
-   <td rowspan="2">Allergies</td>
-    <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
-  </tr>
- <tr>
-    <td>Where a sending system can state that a patient does not have an allergy or category of allergies it is expected that an AllergyIntolerance is sent with the appropriate negation code (e.g. 716186003 |No known allergy|) is sent as the code</td>
+   <td rowspan="1">Allergies</td>
+    <td>Where a sending system can state that a patient does not have an allergy or category of allergies an AllergyIntolerance will be sent</td>
   </tr>
   
    <tr>
-   <td rowspan="3">Medications</td>
-    <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
+   <td rowspan="1">Medications</td>
+    <td>Where a sending system can state that a patient is not currently taking medication an Observation will be sent</td>
   </tr>
+ 
  <tr>
-    <td>Where a sending system can state that a patient is known not to have current medications it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234391000168107 |No known current medications|)</td>
-  </tr>
-  <tr>
-    <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
-  </tr>
-  
- <tr>
-   <td rowspan="6">Medical History</td>
+   <td rowspan="4">Medical History</td>
     <td>Where a sending system cannot classify a coded entry as a procedure or a condition it is expected that the code is sent as a code in Condition</td>
   </tr>
  <tr>
     <td>Where a sending system cannot make classification as it has free text entry only, it is expected that the entry is sent as a free text in Condition</td>
   </tr>
-  <tr>
-    <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
-  </tr>
     <tr>
     <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1224831000168103 |No relevant medical history|)</td>
-  </tr>
-  <tr>
-   <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
   </tr>
   <tr>
     <td>Where a sending system can state that a patient does not have a specific condition it is expected that the appropriate negation code (e.g. 162028008 |No indigestion|) is sent as the code in Condition</td>
   </tr>
   
   <tr>
-   <td rowspan="3">Immunisations</td>
-    <td>Where a sending system does not have any clinical data to provide in that section it is expected that section.emptyReason is used</td>
-  </tr>
-  <tr>
+   <td>Immunisations</td>
     <td>Where a sending system can state that a patient has no relevant history of findings it is expected an assertion of no relevant finding (Observation) is sent with the appropriate code (i.e. 1234401000168109 |No history of vaccination|)</td>
-  </tr>
-    <tr>
-    <td>Where a sending system wants to include an observation other than an assertion of no relevant finding, the observation will be outside the section and will be referred to from one of the entries in the section</td>
   </tr>
 </table>
 
@@ -278,7 +249,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3//StructureDefinition-au-composition.html">AUBaseComposition</a>.</p>
 <p>
-This profile was published on Tue Mar 10 15:14:58 AEST 2020 as a draft by Australian Digital Health Agency.
+This profile was published on Wed Mar 11 14:15:35 AEST 2020 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -1444,7 +1415,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Mar 10, 2020 15:14+1000.
+            <p>Shared Health Summary FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Wed, Mar 11, 2020 14:15+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
