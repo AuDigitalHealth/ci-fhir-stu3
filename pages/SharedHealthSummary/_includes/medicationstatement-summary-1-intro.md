@@ -2,10 +2,10 @@
 
 #### Implementation guidance
 
-For the expected usage scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
-* It is expected that status will be ‘active’.
+* status will be ‘active’.
 
-* It is expected that taken will be ‘y’.
+* taken will be ‘y’.
 
-
+This profile is referenced by [Shared Health Summary](StructureDefinition-composition-shs-1.html).
