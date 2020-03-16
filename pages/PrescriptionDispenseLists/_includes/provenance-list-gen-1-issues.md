@@ -9,6 +9,57 @@
         <td>Constraint presentation</td>
         <td>The full set of constraints (i.e. invariants) defined in this profile are only presented in the Detailed Descriptions tab or the raw representation (e.g. XML) of the profile. The Differential Table only presents constraints introduced in this profile in addition to the constraints present in the base profile and base resource. The Snapshot Table only presents the constraints visible in the Differential Table and additionally presents those constraints set in slices in the base profile.</td>
         <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
+      </tr>
+      <tr>        
+        <td>inv-dh-prov-03 description</td>
+        <td>The description of inv-dh-prov-03 is grammatically incorrect and needs improvement to refer only to reference.</td>
+        <td></td>
+
+      <tr>
+        <td>activity (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.activity using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+      </tr>
+      <tr>
+        <td>agent:preparingEntity.role (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.agent:preparingEntity.role using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+      </tr>
+      <tr>
+        <td>agent:assemblingDevice.role (use of fixedCodeableConcept)</td>
+        <td>This profile fixes the value on Composition.agent:assemblingDevice.role using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
+      </tr>
+      <tr>
+        <td>agent (slicing)</td>
+        <td>The profile contains a slice 'agent:All Slices' that is not an intended design for this profile. The result of this is TBD. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/72">ci-fhir-stu3/issues/72</a></td>
+      </tr>
+      <tr>
+        <td>entity.agent (reference)</td>
+        <td>The profile in entity.agent references another element "Provenance.agent", but appears as "(Slice Definition)" in the differential. It appears the reference cannot be found. An XML example incorporating a Provenance.entity.agent passed validation. The cause of the issue is TBD.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>element renaming (who[x]) </td>
+        <td>The element 'who[x]' gets renamed if there is only a single choice of data types. However, in some elements the renaming differs and what should be rendered as 'whoReference:whoReference', is rendered as 'who[x]:whoReference'. The issue has been raised with the Profile Editor software provider (Forge/Firely) who have acknowledged this as a bug and are attending to a fix.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>combining author-related-person invariants</td>
+        <td>For author-related-person there are 2 invariants, "inv-dh-lst-10: A related person shall conform to RelatedPerson with Mandatory Identifier" and "inv-dh-lst-05: If present, an authoring related person shall at least have a reference or an identifier with at least a system and a value", that could be combined into one invariant at the Composition level. This will be done in a future review. </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>combining author-role invariants</td>
+        <td>For author-role there are 2 invariants, "inv-dh-lst-09: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" and "inv-dh-lst-04: If present, an authoring role shall at least have a reference or an identifier with at least a system and a value", that could be combined into one invariant at the Composition level. This will be done in a future review. </td>
+        <td></td>
+      </tr>   
+      <tr>
+        <td>Composition.encounter</td>
+        <td>The design of this profile is incomplete. This profile is missing an invariant to mandate the inclusion of Encounter.extension:encounterDescription.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/34">ci-fhir-stu3/issues/34</a></td>
+      </tr>   
   </tr>
  </tbody>
 </table>
