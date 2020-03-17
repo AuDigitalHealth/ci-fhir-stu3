@@ -4,7 +4,7 @@
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-pdl-1" />
   <version value="1.0.0" />
   <name value="CompositionPDL" />
-  <title value="Prescription and or Dispense List" />
+  <title value="Prescription and / or Dispense List" />
   <status value="draft" />
   <experimental value="true" />
   <publisher value="Australian Digital Health Agency" />
@@ -25,7 +25,7 @@
   <differential>
     <element id="Composition">
       <path value="Composition" />
-      <short value="Prescription and or Dispense Record List" />
+      <short value="Prescription and / or Dispense Record List" />
       <definition value="A list of prescriptions, and or, dispense records for a patient." />
       <constraint>
         <key value="inv-dh-cmp-01" />
@@ -209,8 +209,8 @@
       <constraint>
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
-        <human value="The section shall at least have one entry of type list or an empty reason, but not both" />
-        <expression value="entry.exists() xor emptyReason.exists()" />
+        <human value="The section shall at least have one and only one entry of type list or an empty reason, but not both" />
+        <expression value="entry.resolve().where($this is List).exists() xor emptyReason.exists()" />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-09" />
