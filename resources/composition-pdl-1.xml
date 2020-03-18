@@ -74,6 +74,8 @@
     </element>
     <element id="Composition.language">
       <path value="Composition.language" />
+      <min value="1"/>
+      <max value="1"/>
       <fixedCode value="en-AU" />
     </element>
     <element id="Composition.extension:compositionAuthorRole">
@@ -203,7 +205,7 @@
           <type value="value" />
           <path value="code" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
       <constraint>
@@ -290,7 +292,7 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="prescriptionList" />
-      <short value="Prescription  List" />
+      <short value="Prescription List" />
       <definition value="A list of prescriptions for a patient." />
       <max value="1" />
       <mustSupport value="true" />

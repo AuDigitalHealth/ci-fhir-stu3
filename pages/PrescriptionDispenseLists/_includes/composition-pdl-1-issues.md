@@ -11,8 +11,18 @@
         <td>See Zulip <a href="https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Derived.20profile.20snapshot.20missing.20upstream.20invariants">Derived profile snapshot missing upstream invariants</a> stream</td>
   </tr>
    <tr>
-        <td>Profile design</td>
-        <td>The design of this profile is incomplete. The profile is missing on invariants to turn the implementation guidance into the rules in the profile, for example to constrain the document type to match the sections. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>Composition (Dispense list rules)</td>
+        <td>The design of this profile is incomplete. The profiles is missing rules to enforce the implementation guidance for a dispense list e.g. when the Composition.type is 100.32014 “Dispense List” only the Composition.section:dispenseList is allowed.</td>
+        <td>n/a</td>  
+  </tr>
+  <tr>
+        <td>Composition (Prescription list rules)</td>
+        <td>The design of this profile is incomplete. The profiles is missing rules to enforce the implementation guidance for a prescription list e.g. when the Composition.type is 57828-6 “Prescription list” only the Composition.section:prescriptionList is allowed.</td>
+        <td>n/a</td>  
+  </tr>
+  <tr>
+        <td>Composition (Prescription and dispense list rules)</td>
+        <td>The design of this profile is incomplete. The profiles is missing rules to enforce the implementation guidance for a prescription and dispense list e.g. when the Composition.type is 100.32015 “Prescription and Dispense List” either only the Composition.section:prescriptionDispenseList, or one Composition.section:dispenseList and one Composition.section:prescriptionList is allowed.</td>
         <td>n/a</td>  
   </tr>
   <tr>
