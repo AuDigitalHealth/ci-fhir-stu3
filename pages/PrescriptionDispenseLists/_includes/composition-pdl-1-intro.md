@@ -44,7 +44,7 @@ When the list is a dispense record list it is expected that:
 * a list entry will be sent
 * if the list is generated from a filter or search query a provenance entry is expected
  
-When the list is a prescription and dispense list
+When the list is a prescription and dispense list it is expected that:
 * code will be 100.32015 "Prescription and Dispense List"
 * section content will be supplied as either:
   * one section of type Prescription and Dispense List
