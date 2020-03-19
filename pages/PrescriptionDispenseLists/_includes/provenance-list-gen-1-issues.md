@@ -35,11 +35,6 @@
         <td>The profile contains a slice "agent:All Slices" that is not an intended design for this profile. This slice will be removed in an R4 variant of this profile.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/72">ci-fhir-stu3/issues/72</a></td>
       </tr>
-      <tr>
-        <td>entity.agent (reference)</td>
-        <td>Provenance.entity.agent is a reference to Provenance.agent  but this reference is unknown in the the Differential  Table and the Snaphsot Table due to Provenance.agent element being sliced. It is undetermined whether this is a profile rendering issues only and if it would affect validation against this profile.</td>
-        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/28">ci-fhir-stu3/issues/28</a></td>
-      </tr>
  </tbody>
 </table>
 

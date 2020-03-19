@@ -34,7 +34,11 @@
                                <li><a href="StructureDefinition-provenance-list-gen-1.html">Provenance (Provenance for the Generation of a List)</a></li>
                             </ul>
                         </td>
-                        <td class="frm-null"/>
+                       <td class="frm-set">
+                                <ul>
+                                    <li><a href="StructureDefinition-composition-pdl-1.html">Composition (Prescription and or Dispense List)</a></li>
+                                </ul>
+                            </td>
                         <td class="frm-null"/>
                     </tr>
                     <tr class="frm-break">
@@ -65,6 +69,7 @@
                                 <li><a href="StructureDefinition-device-dh-base-1.html">Device (Base Device)</a></li>
                                 <li><a href="StructureDefinition-device-ident-1.html">Device (Device with Mandatory Identifier)</a></li>
                                  <li><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></li>
+                                 <li><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></li>
                            </ul>
                         </td>
                         <td class="frm-null"/>
@@ -134,29 +139,40 @@
             <th>Implementation guide profile base</th>
             <th>FHIR base resource</th>
           </tr>
+   
+    <tr>
+      <td><a href="StructureDefinition-composition-pdl-1.html">Composition (Prescription and or Dispense List)</a></td>
+      <td><a href="http://hl7.org.au/fhir/base/aubase1.1/StructureDefinition-au-composition.html">AU Base Composition</a></td>
+     <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
+    </tr> 
     <tr>
         <td><a href="StructureDefinition-device-dh-base-1.html">Device (Base Device)</a></td>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-device.html">AU Base Device</a></td>
         <td><a href="http://hl7.org/fhir/STU3/device.html">Device </a></td>
     </tr>
-             <tr>
-                <td><a href="StructureDefinition-device-ident-1.html">Device (Device with Mandatory Identifier)</a></td>
+    <tr>
+            <td><a href="StructureDefinition-device-ident-1.html">Device (Device with Mandatory Identifier)</a></td>
                 <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-device.html">AU Device</a></td>
                 <td><a href="http://hl7.org/fhir/STU3/device.html">Device </a></td>
-            </tr>                                           
-      <tr>
+    </tr>                                           
+    <tr>
             <td><a href="StructureDefinition-humanname-dh-base-1.html">HumanName (Base HumanName)</a></td>
             <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
             <td><a href="http://hl7.org/fhir/STU3/datatypes.html#HumanName">HumanName</a></td>
-        </tr> 
-            <tr>
+    </tr> 
+    <tr>
                 <td><a href="StructureDefinition-list-pdl-1.html">List (List of Prescription and or Dispense Records)</a></td>
                 <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-medlist.html">AU Medicine List</a></td>
                 <td><a href="http://hl7.org/fhir/stu3/list.html">List</a></td>
-            </tr>
-       <tr>
+    </tr>
+    <tr>
         <td><a href="StructureDefinition-organization-dh-base-1.html">Organization (Base Organization)</a></td>
         <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
+        <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
+    </tr> 
+    <tr> 
+        <td><a href="StructureDefinition-organization-ident-1.html">Organization (Organization with Mandatory Identifier)</a></td>
+        <td><a href="http://hl7.org.au/fhir/base/aubase1.1/StructureDefinition-au-organisation.html">AU Base Organization</a></td>
         <td><a href="http://hl7.org/fhir/STU3/organization.html">Organization</a></td>
     </tr> 
      <tr>
