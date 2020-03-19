@@ -1,6 +1,6 @@
-### Provenance for the Generation of a List *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
+#### Provenance for the Generation of a List *[[Draft](http://hl7.org/fhir/stu3/valueset-publication-status.html)]*
 
-##### Usage scenarios
+#### Usage scenarios
 * A clinical information system (CIS) sends or receives a list with provenance with the My Health Record system
 * A contracted service provider (CSP) sends or receives a list with provenance with the My Health Record system
 * A CIS sends or receives a list with provenance with another CIS or CSP
@@ -13,7 +13,7 @@ An expected usage scenario, further scoping the above overarching scenarios is:
 Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
 
-##### Implementation guidance
+#### Implementation guidance
 
 For the supported scenarios in this implementation guide:
 
