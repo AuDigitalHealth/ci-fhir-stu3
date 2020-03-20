@@ -10,17 +10,17 @@
 An expected usage scenario, further scoping the above overarching scenarios is:
 
 * Prescription and dispense view (PDV) exchanged with the My Health Record as a list with provenance
-Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
+Further scoping of applicable usage scenarios (e.g. point-to-point or point-to-share) is done at the referencing Composition profile.
 
 #### Implementation guidance
 
-For the supported scenarios in this implementation guide:
+For the overarching usage scenarios in this implementation guide it is expected that:
 
-* Where the list is a filtered view of an existing list, the source list may be referenced as an entity with the role of 'source' and what pointing to that list resource
-* Where the list is created with a set of existing resources, e.g. AllergyIntolerance, the resources that initially populated the list may be referenced as entities with the role of 'source' and what pointing to that resource
-* Where the generated list is a filtered view of an existing list, or a source system, or generated from a time-based search query it is expected that filtering dates are captured in the provenance period with the earliest filtering date provided in the period start and the latest filtering date provided in the period end
+* When creating a list as a filtered view of an existing list (e.g. filtering to only current medicines), the source list can be identified using the entity element with an entity.role of 'source' and entity.whatReference pointing to that source list resource
+* If a list has been generated from a time-based query or time-based filter it is expected that filtering dates are captured in the provenance period with the earliest filtering date provided in the period start and the latest filtering date provided in the period end
+* When creating the list  the list is created with a set of existing resources, e.g. AllergyIntolerance, the resources that initially populated the list may be referenced as entities with the role of 'source' and what pointing to that resource
 
-#### When the list is a PDV
-* It is expected that the only agent provided is the assembling device
-* It is expected that there is only one instance of target, which is the Prescription and dispense view list resource
+When the list is a prescription and dispense view it is expected that:
+* only one instance of agent (the assembling device e.g. My Health Record system) is provided
+* only one instance of target (the Prescription and dispense view list resource) is provided
