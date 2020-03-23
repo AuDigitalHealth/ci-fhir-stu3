@@ -12,12 +12,12 @@
   </tr>
      <tr>
         <td>inv-dh-lst-09</td>
-        <td>This invariant should be merged into inv-dh-lst-04, so that it becomes the author role shall at least have a reference that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>This invariant should be merged into inv-dh-lst-04, so that it becomes 'The author role shall at least have a reference that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value'. This issue will be fixed in an R4 variant of this profile.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/73">ci-fhir-stu3/issues/73</a></td>
   </tr>
       <tr>
         <td>inv-dh-lst-10</td>
-        <td>This invariant should be merged into inv-dh-lst-05, so that it becomes the authoring related person shall at least have a reference that conforms to RelatedPerson with Mandatory Identifier or an identifier with at least a system and a value. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>This invariant should be merged into inv-dh-lst-05, so that it becomes 'The authoring related person shall at least have a reference that conforms to RelatedPerson with Mandatory Identifier or an identifier with at least a system and a value'. This issue will be fixed in an R4 variant of this profile.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/73">ci-fhir-stu3/issues/73</a></td>
   </tr>  
  </tbody>
