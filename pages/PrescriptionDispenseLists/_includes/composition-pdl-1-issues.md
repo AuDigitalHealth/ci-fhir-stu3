@@ -42,7 +42,7 @@
   </tr>
   <tr>
         <td>Unconfirmed FHIRPath expressions (inv-dh-cmp-04, inv-dh-cmp-05,inv-dh-cmp-09)</td>
-        <td>This is the early design of the Composition profile. FHIRPath expressions for invariants inv-dh-cmp-04, inv-dh-cmp-05 and inv-dh-cmp-09 have not been validated and may not function as intented. This issue will be fixed in an R4 variant of this profile. </td>
+        <td>FHIRPath expressions for invariants inv-dh-cmp-04, inv-dh-cmp-05 and inv-dh-cmp-09 have not been validated and may not function as intented. This issue will be fixed in an R4 variant of this profile. </td>
         <td>n/a</td>
   </tr>
   <tr>
