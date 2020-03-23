@@ -4,12 +4,6 @@
   "fhirVersion": "3.0.2",
   "extensions": [],
   "profiles": {
-    "Composition": [
-      {
-        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-pdl-1",
-        "title": "Prescription and / or Dispense List"
-      }
-    ],
     "Device": [
       {
         "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/device-dh-base-1",
@@ -30,10 +24,6 @@
       {
         "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-dh-base-1",
         "title": "Base Organization"
-      },
-      {
-        "url": "http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/organization-ident-1",
-        "title": "Organization with Mandatory Identifier"
       }
     ],
     "Patient": [
@@ -80,9 +70,6 @@
     ]
   },
   "usage": {
-    "http://hl7.org.au/fhir/StructureDefinition/attester-related-party": [
-      "Composition.attester"
-    ],
     "http://hl7.org.au/fhir/StructureDefinition/author-related-person": [
       "List"
     ],
@@ -94,9 +81,6 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration": [
       "Patient"
-    ],
-    "http://hl7.org.au/fhir/StructureDefinition/composition-author-role": [
-      "Composition"
     ],
     "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator": [
       "Patient.birthDate",
@@ -112,18 +96,6 @@
     ],
     "http://hl7.org.au/fhir/StructureDefinition/indigenous-status": [
       "Patient"
-    ],
-    "http://hl7.org.au/fhir/StructureDefinition/information-recipient": [
-      "Composition"
-    ],
-    "http://hl7.org.au/fhir/StructureDefinition/section-author": [
-      "Composition.section"
-    ],
-    "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId": [
-      "ImplementationGuide.dependency"
-    ],
-    "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version": [
-      "ImplementationGuide.dependency"
     ],
     "http://hl7.org/fhir/StructureDefinition/birthPlace": [
       "Patient"

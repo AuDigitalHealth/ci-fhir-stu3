@@ -150,34 +150,36 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This implementation guide is an HL7<sup>TM</sup> FHIR<sup>®</sup> specification to represent prescription and / or dispense lists, including Prescription List (PL), Dispense List (DL) and Prescription and Dispense List (PDL).</p>
+<p>This implementation guide is an HL7<sup>TM</sup> FHIR<sup>®</sup> specification to represent prescription and / or dispense lists, including Prescription List (PL), Dispense List (PL), Prescription and Dispense List (PDL).</p>
 
-<p>This <a href="http://hl7.org/fhir/STU3/implementationguide.html#scope">implementation guide</a> is based on <a href="#HL7FHIR3">FHIR Release 3 (STU) [HL7FHIR3]</a>.</p>
+<p>This <a href="http://hl7.org/fhir/STU3/implementationguide.html#scope">implementation guide</a> is based on <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
 <h2 id="document-purpose-and-scope">Document purpose and scope</h2>
 
-<p>The primary aim of this implementation guide is to support implementing prescription and / or dispense lists in <a href="#HL7FHIR3">FHIR Release 3 (STU) [HL7FHIR3]</a>. The resulting FHIR can be used for the electronic exchange of prescription and / or dispense lists information between healthcare providers.</p>
+<p>The primary aim of this implementation guide is to support implementing PDL in FHIR, Release 3 (STU). The resulting FHIR can be used for the electronic exchange of PDL information between healthcare providers.
+ 
+This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>
 
-<p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred from this document.</p>
+<p>This implementation guide is not to be used as a guide to presentation (or rendering) of the data. It contains no information as to how the data described by it should be displayed and no such guidance should be inferred.</p>
 
 <p>This implementation guide does not describe transport or persistence mechanism of the resources described by it.</p>
 
 <p>Reference has been made to International and Australian Standards, and to Standards from Health Level Seven. The following standards are referred to in the text in such a way that some or all of its content constitutes requirements for the purposes of this specification:</p>
 <ul>
-  <li><a href="#HL7FHIR3">FHIR Release 3 (STU) [HL7FHIR3]</a></li>
-  <li><a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]</a></li>
+  <li><a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a></li>
+  <li><a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]</a></li>
 </ul>
 
-<p>Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards (<a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]</a>) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
+<p>Wherever possible, material in this specification is based on existing standards. All efforts have been made to minimise divergence from the HL7 Australia profiles of HL7 International standards (<a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]</a>) to provide for system interoperability and compatibility with other profiles. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</p>
 
-<p>This implementation guide is the basis for the corresponding <a href="#DH2020a">Prescription and Dispense Lists CDA-IG [DH2020a]</a>. The profiles referenced by this FHIR implementation guide are the ‘models’ that are mapped into CDA.</p>
+<p>This implementation guide is the basis for the corresponding <a href="#DH2019x">Prescription and Dispense Lists CDA-IG [DH2019x]</a>. The profiles referenced by this FHIR implementation guide are the ‘models’ that are mapped into CDA.</p>
 
-<p>This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the <a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 1.1) [HL7AUF3B2]</a> or <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>. The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
+<p>This implementation guide makes reference to the set of profiles and extensions (StructureDefinitions) that form part of this implementation guide. Some profiles and extensions are described by this implementation guide, and some are described by other published sources such as the <a href="#HL7AUF3B2">Australian Base Implementation Guide (AU Base 2) [HL7AUF3B2]</a> or <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>. The profiles described in this implementation guide do not include profile-specific mappings to another format as part of their description. Any profile-specific mappings to another format is the subject of an implementation guide for that particular format, e.g. a corresponding CDA implementation guide. The base FHIR® STU3 mapping content for each of the resources referenced in this implementation guide can be found on the applicable resource documentation in the <a href="#HL7FHIR3">FHIR, Release 3 (STU) [HL7FHIR3]</a>.</p>
 
 <h2 id="context-and-use">Context and use</h2>
 <p>A FHIR implementation guide is part of a package of documents and files that support the development of software to exchange a type of clinical document, an end-product clinical specification package.</p>
 
-<p>An Agency end-product clinical specification package supports software developers to create and interpret instances of a clinical document. The core of each package is a specification of the information content of instances of the clinical document.</p>
+<p>An Agency clinical document end-product clinical specification package supports software developers to create and interpret instances of a clinical document. The core of each package is a specification of the information content of instances of the clinical document.</p>
 
 <p>Supplementary contents of the package include statements of scenarios for which the specification is appropriate, guidance on implementing the specification, and guidance on testing purported instances.</p>
 
@@ -194,13 +196,10 @@
 <p>Clinical specification packages contain only files relevant to the particular clinical document. Specifications that are common to many clinical documents and should be considered part of the specification package, as directed by the relevant release note and conformance profile, may be contained elsewhere.</p>
 
 <h2 id="how-to-read-this-document">How to read this document</h2>
-<p>This implementation guide contains descriptions of both constraints on HL7 FHIR and, where necessary, custom extensions to HL7 FHIR, for the purposes of fulfilling the requirements for Australian implementations of PDL. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
 
-<p>For implementers interested in representing prescription and / or dispense records as a list, and not a document, the starting point is the <a href="StructureDefinition-list-pdl-1.html">List of Prescription and or Dispense Records</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a>.</p>
+<p>This implementation guide contains descriptions of both constraints on FHIR and, where necessary, custom extensions to FHIR, for the purposes of fulfilling the requirements for Australian implementations of lists of prescriptions and dispenses for a patient. These descriptions are defined as a set of FHIR <a href="http://hl7.org/fhir/stu3/profiling.html">profiles</a>.</p>
 
-<p>For implementers interested in representing prescription and / or dispense records as a list with provenance information, the starting point is the <a href="StructureDefinition-provenance-list-gen-1.html">Provenance for the Generation of a List</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a>.</p>
-
-<p>For implementers interested in a list of prescription and / or dispense records as a document, the starting point is the <a href="StructureDefinition-composition-pdl-1.html">Prescription and or Dispense List</a> profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a>.</p>
+<p>The starting point is the List of Prescription and or Dispense Records profile, which references the additional profiles necessary to assert <a href="conformance.html">conformance</a> for this implementation guide.</p>
 
 <h2 id="editorial-note">Editorial note</h2>
 <p>This implementation guide is an early working specification that is available for comment and review. It may be used to solicit feedback and to provide insight as to the expected content in a forthcoming stable and approved version of the specification.</p>
@@ -235,9 +234,6 @@
 
 <h3 id="product-version-history">Product Version History</h3>
 <table class="list" width="100%" cellspacing="6">
-	<col style="width:15%" />
-	<col style="width:15%" />
-	<col style="width:70%" />
     <tbody>
         <tr>
             <th>Product version</th>
@@ -269,17 +265,6 @@
         <td>Non-resolving profile URLs</td>
         <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
     </tr>
-    <tr>
-        <td>PDL FHIR implementation guide roadmap</td>
-        <td>The profiles that form part of this implementation guide, and this implementation guide itself, are incomplete. This implementation guide may transition to FHIR Release 4, in collaboration with HL7 Australia.
-		<br /><br />
-        Our GitHub FHIR Release 4 repository can be found here: <a href="https://github.com/AuDigitalHealth/ci-fhir-r4">ci-fhir-r4</a>.
-        </td>
-     </tr>
-    <tr>
-        <td>Examples</td>
-        <td>There are no examples available in this FHIR implementation guide. Some example resources conforming to profiles, such as <a href="StructureDefinition-practitioner-ident-1.html">Patient with Mandatory Identifier</a>, can be found in a GitHub release, e.g. <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/releases/tag/SML-1.1.0-2020FEB">Shared Medicines List implementation guide (v1.1.0)</a>, or the <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/tree/master/examples">examples folder</a> of the GitHub ci-fhir-stu3 repository.</td>
-    </tr>
  </tbody>
 </table>
 
@@ -301,8 +286,8 @@
 <table>
   <tbody>
     <tr>
-      <td>[<a name="DH2020a">DH2020a</a>]</td>
-      <td>Australian Digital Health Agency, Not yet published, Prescription and Dispense Lists CDA Implementation Guide, Version 1.0.0</td>
+      <td>[<a name="DH2019x">DH2019x</a>]</td>
+      <td>Australian Digital Health Agency, Not yet published, Prescription and Dispense Lists CDA-IG, Version 1.0.</td>
     </tr>
   </tbody>
 </table>
@@ -311,7 +296,7 @@
   <tbody>
     <tr>
       <td>[<a name="HL7AUF3B2">HL7AUF3B2</a>]</td>
-      <td>HL7 Australia, Australian Base Implementation Guide (AU Base 1.1), (Continuous Integration), accessed 16 March 2020</td>
+      <td>HL7 Australia, Continuous Integration Build STU3, Australian Base Implementation Guide (AU Base 2), v1.0.0 (Standard for Trial Use), accessed 23 July 2019</td>
     </tr>
     <tr>
       <td> </td>
@@ -337,7 +322,7 @@
   <tbody>
     <tr>
       <td>[<a name="HL7FHIR">HL7FHIR</a>]</td>
-      <td>Health Level Seven, Inc., FHIR - HL7Wiki, accessed 2 October 2019.</td>
+      <td>Health Level Seven, Inc., FHIR - HL7Wiki, accessed 10 March 2019</td>
     </tr>
     <tr>
       <td> </td>
@@ -354,7 +339,7 @@
     </tr>
     <tr>
       <td> </td>
-      <td><a href="http://hl7.org/fhir/STU3/">http://hl7.org/fhir/STU3/</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/index.html">http://hl7.org/fhir/STU3/index.html</a></td>
     </tr>
   </tbody>
 </table>
@@ -363,7 +348,7 @@
   <tbody>
     <tr>
       <td>[<a name="HL7FHIR4">HL7FHIR4</a>]</td>
-      <td>Health Level Seven, Inc., 30 October 2019, FHIR R4.</td>
+      <td>Health Level Seven, Inc., 27 December 2018, FHIR R4.</td>
     </tr>
     <tr>
       <td> </td>
@@ -405,11 +390,11 @@
 <div id="segment-footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
         <div class="inner-wrapper">
-            <p>Document ID: DH-xxxx:2020 Draft for internal use</p>
+            <p>Document ID: DH-xxx:2019 Draft for internal use</p>
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Thu, Mar 19, 2020 13:14+1000.
+            <p>Prescription and Dispense Lists FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Nov 26, 2019 09:01+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
