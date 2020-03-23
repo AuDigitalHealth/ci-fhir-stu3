@@ -22,12 +22,12 @@
       </tr>
       <tr>
         <td>agent:preparingEntity.role (use of fixedCodeableConcept)</td>
-        <td>This profile fixes the value on agent:preparingEntity.role using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>This profile fixes the value on Provenance.agent:preparingEntity.role using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
       </tr>
       <tr>
         <td>agent:assemblingDevice.role (use of fixedCodeableConcept)</td>
-        <td>This profile fixes the value on agent:assemblingDevice.role using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
+        <td>This profile fixes the value on Provenance.agent:assemblingDevice.role using fixedCodeableConcept. Fixing the value in this way prohibits parts of CodeableConcept that are intended to be optional including CodeableConcept.text and CodeableConcept.coding.display. This issue will be fixed in an R4 variant of this profile.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/48">ci-fhir-stu3/issues/48</a></td>
       </tr>
       <tr>
