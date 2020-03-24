@@ -86,9 +86,7 @@ The datetime in effective[x] is to be interpreted in regards to the combination 
 </table>
 
 Additionally, when the shared medicines list is a PSML document it is expected that:
-
 * dosage will not be sent for ceased medicine items
-
 * dosage will be sent for withheld medicine items
 
 This profile is referenced by [List of Medicine Items with Change Information Authored by Practitioner](StructureDefinition-list-sml-pracchanges-1.html). 
