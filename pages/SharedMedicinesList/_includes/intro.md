@@ -103,6 +103,11 @@ This implementation guide and related artefacts are technical in nature and the 
             <td><span style="padding-left: 3px; padding-right: 3px">17 Feb 2020</span></td>
             <td>Release at approved for external trial use. Implemented in FHIR Release 3 (STU). <br/>This version includes a minor update to <a href="StructureDefinition-list-sml-pracchanges-1.html">List of Medicine Items with Change Information Authored by Practitioner</a>, see <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/74">ci-fhir-stu3/issues/74</a>.<br/>This implementation guide supports the exchange of practitioner authored medicines lists in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
         </tr>
+        <tr>
+            <td>1.2.0</td>
+            <td><span style="padding-left: 3px; padding-right: 3px">TBD</span></td>
+            <td>TBD</td>
+        </tr>
     </tbody>
 </table> 
 
