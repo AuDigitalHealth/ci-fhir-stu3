@@ -2,7 +2,6 @@
 
 #### Usage scenarios
 The following are the overarching usage scenarios this profile is intended to support:
-
 * A clinical information system (CIS) sends or receives
   * a prescription list as a document with the My Health Record system
   * a dispense record list as a document with the My Health Record system
@@ -25,13 +24,11 @@ The following are the overarching usage scenarios this profile is intended to su
     * a prescription and dispense record list as a document 
 
 An expected usage scenario, further scoping the above overarching scenarios is:
-* Prescription and dispense view (PDV) exchanged with the My Health Record
+* Prescription and dispense view (PDV) exchanged with the My Health Record system
 
 This profile does not support sending medicines change information (e.g. indicating cancellation or newly prescribed items) or event-specific information; in this case it is recommended that information is supplied as a shared medicines list.  
 
-
 #### Implementation guidance
-
 When the list is a prescription list it is expected that:
 * code will be 57828-6 "Prescription list"
 * one section of type Prescription List with the code 57828-6 "Prescription list" is expected
@@ -52,7 +49,6 @@ When the list is a prescription and dispense list it is expected that:
 * an empty section will be sent with an empty reason
 * a non-empty section will be sent with a list entry
 * if the list is generated from a filter or search query a provenance entry will be sent
-
 
 Additionally when a prescription and dispense list is a PDV it is expected that:
 * author will be the My Health Record system as a Device

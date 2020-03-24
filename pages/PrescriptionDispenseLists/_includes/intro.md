@@ -137,6 +137,10 @@ This table lists known issues with this specification at the time of publishing.
         <td>Examples</td>
         <td>There are no examples available in this FHIR implementation guide. Some example resources conforming to profiles, such as <a href="StructureDefinition-practitioner-ident-1.html">Patient with Mandatory Identifier</a>, can be found in a GitHub release, e.g. <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/releases/tag/SML-1.1.0-2020FEB">Shared Medicines List implementation guide (v1.1.0)</a>, or the <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/tree/master/examples">examples folder</a> of the GitHub ci-fhir-stu3 repository.</td>
     </tr>
+    <tr>
+        <td>Profile pages missing references</td>
+        <td>Many profile pages are missing the list of which other profiles include it as a reference.</td>
+    </tr>
  </tbody>
 </table> 
 
