@@ -1429,7 +1429,7 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                     <td>List.entry.flag</td>
                     <td>Composition.section(medications).entry> List.entry.flag</td>
                     <td rowspan="2">
-                        <p>This requirement mandates a status of ceased for a ceased medicine. This requirement is best enforced in a conformance profile.</p>
+                        <p>This requirement mandates a status of ceased for a ceased medicine. This requirement is best enforced in a further profile.</p>
                         <p>The profiles do not enforce a direct relationship between status concepts.</p>
                     </td>
                 </tr>
