@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="medicationstatement-detailed-1"/>
   <url value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-detailed-1"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="MedicationStatementDetailed"/>
   <title value="Medicine Item Statement"/>
   <status value="active" />
@@ -44,6 +44,12 @@
         <expression
           value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt;1).exists()"
         />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-mst-04"/>
+        <severity value="error"/>
+        <human value="If status is active or intended, then dosage shall be provided"/>
+        <expression value="(status='active' or status='intended') implies dosage.exists()"/>
       </constraint>
     </element>
     <element id="MedicationStatement.identifier">
@@ -145,7 +151,6 @@
     </element>
     <element id="MedicationStatement.dosage">
       <path value="MedicationStatement.dosage"/>
-      <min value="1"/>
       <constraint>
         <key value="inv-dh-mst-01"/>
         <severity value="error"/>
