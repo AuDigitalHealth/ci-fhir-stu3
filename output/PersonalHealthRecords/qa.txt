@@ -1,9 +1,9 @@
 ﻿Personal Health Records : Validation Results
 =========================================
 
-err = 166, warn = 146, info = 122
-IG Publisher Version: v1.0.72-SNAPSHOT Out of date - current version is v1.0.75-SNAPSHOT
-Generated Tue Mar 31 07:03:44 AEST 2020. FHIR version 3.0.2 for au.electronichealth.personalhealthrecords# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+err = 158, warn = 146, info = 122
+IG Publisher Version: v1.0.71-SNAPSHOT Out of date - current version is v1.0.75-SNAPSHOT
+Generated Tue Mar 31 08:31:22 AEST 2020. FHIR version 3.0.2 for au.electronichealth.personalhealthrecords# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 314 / 1
  C:\work\git\ci-fhir-stu3\examples\allergyintolerance-27b06bef-2030-4bfc-8c48-3306b616a10b : 0 / 1
@@ -24,8 +24,8 @@ Generated Tue Mar 31 07:03:44 AEST 2020. FHIR version 3.0.2 for au.electronichea
  C:\work\git\ci-fhir-stu3\examples\composition-c81d18da-3b3a-457d-a682-b31619cb8c00 : 0 / 5
  C:\work\git\ci-fhir-stu3\examples\composition-cb2708f5-b42d-47bc-97cf-5fc66e875f51 : 3 / 6
  C:\work\git\ci-fhir-stu3\examples\composition-d42fb301-f2ad-4468-9f21-a98316c0ef52 : 2 / 3
- C:\work\git\ci-fhir-stu3\examples\composition-dc32838b-faf3-4102-9c78-27186ac32e20 : 8 / 10
- C:\work\git\ci-fhir-stu3\examples\composition-df1704af-2bf5-4145-9d8c-c889dbc6e017 : 3 / 4
+ C:\work\git\ci-fhir-stu3\examples\composition-dc32838b-faf3-4102-9c78-27186ac32e20 : 6 / 10
+ C:\work\git\ci-fhir-stu3\examples\composition-df1704af-2bf5-4145-9d8c-c889dbc6e017 : 1 / 4
  C:\work\git\ci-fhir-stu3\examples\composition-fb584f29-e4cc-4f55-ba2e-7bdf03c7a5ee : 3 / 9
  C:\work\git\ci-fhir-stu3\examples\medicationstatement-062ac6c2-bc48-4ee9-907a-e7203e9d1812 : 0 / 0
  C:\work\git\ci-fhir-stu3\examples\medicationstatement-177a2cf1-71c2-470f-a625-52fb64ff116b : 0 / 0
@@ -526,19 +526,15 @@ INFORMATION: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.type.
 INFORMATION: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.author[0]: Details for #6870bc44-97a1-4523-8d98-fc1ee640ea70 matching against Profilehttp://hl7.org/fhir/StructureDefinition/RelatedPerson
 INFORMATION: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.section[0].code.coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
 WARNING: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition: Resource has a language, but the XHTML does not have an xml:lang tag (needs both lang and xml:lang - see https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)
-ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
-ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.section[0].code.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
+ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.section[0]: inv-dh-cmp-04: This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications [entry.resolve().where($this is Observation).exists() implies ((entry.resolve().where($this is Observation).count() < 2) and entry.resolve().where(($this is value) and (value.coding.code = '1234391000168107')).exists())]
 ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.section[0].entry[0]: Unable to find matching profile for #4e6c2639-370b-43cd-85db-91bf85da2b22 among choices: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1, http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1
 INFORMATION: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.section[0].entry[0]: Details for #4e6c2639-370b-43cd-85db-91bf85da2b22 matching against Profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1
-ERROR: Composition/dc32838b-faf3-4102-9c78-27186ac32e20: Composition.section[1].code.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
 == C:\work\git\ci-fhir-stu3\examples\composition-df1704af-2bf5-4145-9d8c-c889dbc6e017.xml ==
 INFORMATION: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.type: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16685)
 INFORMATION: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.type.coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
 INFORMATION: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.section[0].code.coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
 WARNING: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition: Resource has a language, but the XHTML does not have an xml:lang tag (needs both lang and xml:lang - see https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)
-ERROR: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
-ERROR: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.section[0].code.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
-ERROR: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.section[1].code.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile
+ERROR: Composition/df1704af-2bf5-4145-9d8c-c889dbc6e017: Composition.section[0]: inv-dh-cmp-04: This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications [entry.resolve().where($this is Observation).exists() implies ((entry.resolve().where($this is Observation).count() < 2) and entry.resolve().where(($this is value) and (value.coding.code = '1234391000168107')).exists())]
 == C:\work\git\ci-fhir-stu3\examples\composition-fb584f29-e4cc-4f55-ba2e-7bdf03c7a5ee.xml ==
 ERROR: Composition/fb584f29-e4cc-4f55-ba2e-7bdf03c7a5ee: Composition.contained[1].patient: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 82ea927e-9e84-4b65-ba04-baade2b93137; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
 WARNING: Composition/fb584f29-e4cc-4f55-ba2e-7bdf03c7a5ee: Composition.contained[1].relationship: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1 not found by validator
@@ -609,14 +605,14 @@ INFORMATION: StructureDefinition/composition-phn-1: StructureDefinition.snapshot
 INFORMATION: StructureDefinition/composition-phn-1: StructureDefinition.differential.element[3].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
 INFORMATION: StructureDefinition/composition-phn-1: StructureDefinition.differential.element[7].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
 == C:\work\git\ci-fhir-stu3\resources\composition-phs-1.xml ==
-INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[20].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-ERROR: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[74].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
-INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[82].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-ERROR: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[87].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
-INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[3].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-ERROR: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[12].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
-INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[15].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-ERROR: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[19].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
+INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[20].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+ERROR: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[79].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
+INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[87].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+ERROR: StructureDefinition/composition-phs-1: StructureDefinition.snapshot.element[97].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
+INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[3].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+ERROR: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[13].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
+INFORMATION: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[16].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+ERROR: StructureDefinition/composition-phs-1: StructureDefinition.differential.element[21].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
 == C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\implementationguide-personalhealthrecords-1.xml ==
 ERROR: ImplementationGuide/implementationguide-personalhealthrecords-1: ImplementationGuide.dependency[0]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[ImplementationGuide.dependency, BackboneElement])
