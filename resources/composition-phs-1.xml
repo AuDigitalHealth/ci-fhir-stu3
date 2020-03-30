@@ -17,12 +17,13 @@
   <description
     value="The purpose of this profile is to define a representation of a Personal Health Summary document for a patient in an Australian healthcare context.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
   <copyright
-    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+    value="Copyright © 2020 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/. This resource contains content from LOINC™ (http://loinc.org). The LOINC Table, LOINC Table Core, LOINC Panels and Forms File, LOINC Answer File, LOINC Part File, LOINC Group File, LOINC Document Ontology File, LOINC Hierarchies, LOINC Linguistic Variants File, LOINC/RSNA Radiology Playbook, and LOINC/IEEE Medical Device Code Mapping Table are copyright © 1995-2017, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license."/>
   <fhirVersion value="3.0.2"/>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Composition"/>
-  <baseDefinition value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-docheader-cei-1"/>
+  <baseDefinition
+    value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-docheader-cei-1"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Composition">
@@ -38,8 +39,11 @@
       <constraint>
         <key value="inv-dh-cmp-01"/>
         <severity value="error"/>
-        <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1'" />
-        <expression value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1').exists()" />
+        <human
+          value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1'"/>
+        <expression
+          value="profile.where($this='http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-phs-1').exists()"
+        />
       </constraint>
     </element>
     <element id="Composition.meta.profile">
@@ -50,12 +54,12 @@
     </element>
     <element id="Composition.type">
       <path value="Composition.type"/>
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
           <code value="100.16685"/>
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.title">
@@ -64,7 +68,8 @@
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+      <extension
+        url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
@@ -80,11 +85,12 @@
         <key value="inv-dh-cmp-02"/>
         <severity value="error"/>
         <human value="The section shall at least have one entry or an empty reason, but not both"/>
-        <expression value="Composition.section.where($this.entry.empty() and $this.emptyReason.empty()).empty()"/>
+        <expression value="entry.exists() xor emptyReason.exists()"/>
       </constraint>
     </element>
     <element id="Composition.section:allergies">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+      <extension
+        url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
@@ -105,12 +111,12 @@
     <element id="Composition.section:allergies.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
           <code value="48765-2"/>
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:allergies.text">
@@ -127,9 +133,15 @@
       <short value="Allergies and/or intolerances"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/allergyintolerance-summary-1"
+        />
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:allergies.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:allergies.emptyReason">
       <path value="Composition.section.emptyReason"/>
@@ -140,40 +152,40 @@
         </extension>
         <strength value="required"/>
         <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"/>
+          <reference
+            value="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
+          />
         </valueSetReference>
       </binding>
     </element>
     <element id="Composition.section:medications">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+      <extension
+        url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section"/>
       </extension>
       <path value="Composition.section"/>
       <sliceName value="medications"/>
       <short value="Medications"/>
-      <definition value="Medicines the patient is currently taking including self-prescribed, clinician prescribed and nonprescription medicines."/>
+      <definition
+        value="Medicines the patient is currently taking including self-prescribed, clinician prescribed and nonprescription medicines."/>
       <min value="1"/>
       <max value="1"/>
       <constraint>
         <key value="inv-dh-cmp-03"/>
         <severity value="error"/>
-        <human value="This section shall not contain both summary statement of known medicine entries and assertion of no relevant finding entries"/>
-        <!--<expression value="entry.exists() implies (entry.where($this.resolve() is MedicationStatement).exists() xor entry.where($this.resolve() is Observation).exists())" />-->
+        <human
+          value="This section shall not contain both summary statement of known medicine entries and assertion of no relevant finding entries"/>
         <expression
-          value="Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.32009').exists() implies
-          ((Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.32009').entry.resolve().where($this is MedicationStatement).exists()) xor
-          (Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code = '101.32009').entry.resolve().where($this is Observation).exists()))"
+          value="entry.resolve().where($this is MedicationStatement).exists() xor entry.resolve().where($this is Observation ).exists()"
         />
       </constraint>
       <constraint>
         <key value="inv-dh-cmp-04"/>
         <severity value="error"/>
-        <human value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications"/>
-        <!--        <expression value="(entry.where($this.resolve() is Observation).count() &lt; 2) and (entry.where($this.resolve() is Observation).exists() implies entry.resolve().code.coding.where(system='http://hl7.org/fhir/v3/ActCode' and code='ASSERTION').exists())" />-->
+        <human
+          value="This section shall contain at most one assertion of no relevant finding entry and it shall assert no known current medications"/>
         <expression
-          value="(Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code='101.32009').entry.resolve().where($this is Observation).count() &lt; 2) and 
-          (Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code='101.32009').entry.resolve().where($this is Observation).exists() implies 
-          Composition.section.where($this.code.coding.system='https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1' and $this.code.coding.code='101.32009').entry.resolve().value.coding.where($this.system='http://snomed.info/sct' and $this.code='1234391000168107').exists())"
+          value="entry.resolve().where($this is Observation).exists() implies (entry.resolve().where($this is Observation).count() &lt; 2 and entry.resolve().where($this is value and value.coding.code = '1200661000168107').exists())"
         />
       </constraint>
       <mustSupport value="true"/>
@@ -187,12 +199,12 @@
     <element id="Composition.section:medications.code">
       <path value="Composition.section.code"/>
       <min value="1"/>
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
           <code value="101.32009"/>
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section:medications.text">
@@ -209,13 +221,21 @@
       <short value="Medication"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/medicationstatement-summary-1"
+        />
       </type>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/observation-norelevantfinding-1"
+        />
       </type>
       <mustSupport value="true"/>
+    </element>
+    <element id="Composition.section:medications.entry.reference">
+      <path value="Composition.section.entry.reference"/>
+      <min value="1"/>
     </element>
     <element id="Composition.section:medications.emptyReason">
       <path value="Composition.section.emptyReason"/>
@@ -226,7 +246,9 @@
         </extension>
         <strength value="required"/>
         <valueSetReference>
-          <reference value="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"/>
+          <reference
+            value="https://healthterminologies.gov.au/fhir/ValueSet/health-summary-non-clinical-empty-reason-1"
+          />
         </valueSetReference>
       </binding>
     </element>
