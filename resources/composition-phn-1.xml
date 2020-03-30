@@ -17,7 +17,7 @@
   <description
     value="The purpose of this profile is to define a representation of a Personal Health Notes document for a patient in an Australian healthcare context.&#xa;&#xa;#### Must Support&#xa;&#xa;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xa;&#xa;* The system SHALL be able to include the element when authoring a resource where data is available&#xa;&#xa;* The system SHALL be able to store and retrieve the element&#xa;&#xa;* The system SHALL be able to process resources containing the element"/>
   <copyright
-    value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
+    value="Copyright © 2020 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
   <fhirVersion value="3.0.2"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -83,12 +83,12 @@
       <path value="Composition.section.code"/>
       <short value="Notes"/>
       <min value="1"/>
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1"/>
           <code value="102.15513"/>
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true"/>
     </element>
     <element id="Composition.section.text">
