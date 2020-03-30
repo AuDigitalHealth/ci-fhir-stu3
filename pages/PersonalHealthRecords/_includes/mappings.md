@@ -11,21 +11,24 @@ This informative section provides a mapping from the requirements of each end-pr
 
 The mapping from requirements table below demonstrates the logical decomposition of each requirement to the lowest possible element in an applicable profile. 
 
-## Mapping from PHR information requirements
+## Mapping from Personal Health Notes information requirements
 
-This informative section provides mapping from the data items (i.e. requirements) in [Consumer Entered Notes Information Requirements [NEHT2011ao]](index.html#NEHT2011ao) and  [Consumer Entered Health Summary Information Requirements [NEHT2011ar]](index.html#NEHT2011ar) to elements in a profiled FHIR resource.
-
-The table below matches the data items to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+The table below provides mapping from the requirements in [Consumer Entered Notes Information Requirements [NEHT2011ao]](index.html#NEHT2011ao) to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile, or referenced profile (e.g. [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition.
 
 See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
 
 <table class="list" width="100%">
+	<col style="width:20%"/>
+	<col style="width:7%"/>
+	<col style="width:20%"/>
+	<col style="width:25%"/>
+	<col style="width:28%"/>
                <thead>
                     <tr>						
 						<th>Requirement Section</th>
 						<th>Data item</th>
-						<th>Element</th>
+						<th>Element name</th>
 						<th>Hierarchy</th>
 						<th>Additional notes</th>
 					</tr>
@@ -46,10 +49,12 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>Patient</td>
 						<td>Composition(Personal Health Notes).subject(Patient as Patient with Mandatory IHI).Patient</td>
 						<td></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient</td>
 						<td>Composition(Personal Health Notes).author(Patient as Patient with Mandatory IHI).Patient</td>
+						<td></td>
 						<td></td>
 					</tr>
 					<tr>
@@ -57,10 +62,12 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>Patient.name</td>
 						<td>Composition(Personal Health Notes).subject(Patient as Patient with Mandatory IHI).Patient.name</td>
 						<td></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.name</td>
 						<td>Composition(Personal Health Notes).author(Patient as Patient with Mandatory IHI).Patient.name</td>
+						<td></td>
 						<td></td>
 					</tr>
 					<tr>
@@ -68,10 +75,12 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>Patient.identifier</td>
 						<td>Composition(Personal Health Notes).subject(Patient as Patient with Mandatory IHI).Patient.identifier</td>
 						<td></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.identifier</td>
 						<td>Composition(Personal Health Notes).author(Patient as Patient with Mandatory IHI).Patient.identifier</td>
+						<td></td>
 						<td></td>
 					</tr>
 					<tr>
@@ -80,11 +89,13 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>RelatedPerson</td>
 						<td>Composition(Personal Health Notes).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson</td>
 						<td></td>
+						<td></td>
 					</tr>
 					  <tr>				
 						<td>Author's Name (Authorised Representative)</td>
 						<td>RelatedPerson.name</td>
 						<td>Composition(Personal Health Notes).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.name</td>
+						<td></td>
 						<td></td>
 					</tr> 					
 					<tr>
@@ -93,11 +104,13 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>Composition.section</td>
 						<td>Composition(Personal Health Notes).section</td>
 						<td></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Date Information Entered</td>
 						<td>Composition.date</td>
 						<td>Composition(Personal Health Notes).date</td>
+						<td></td>
 						<td></td>
 					</tr>
 					<tr>
@@ -105,16 +118,19 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>Composition.section.title</td>
 						<td>Composition(Personal Health Notes).section.title</td>
 						<td></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Composition.section.text</td>
 						<td>Composition(Personal Health Notes).section.text</td>
+						<td></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td>Issue Description</td>
 						<td>Composition.section.text</td>
 						<td>Composition(Personal Health Notes).section.text</td>
+						<td></td>
 						<td></td>
 					</tr> 					
 					<tr>
@@ -123,11 +139,13 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 						<td>n/a</td>
 						<td>n/a</td>
 						<td></td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>DateTime Completed</td>	
 						<td>n/a</td>
 						<td>n/a</td>
+						<td></td>
 						<td></td>
 					</tr>
 			   </tbody>
@@ -137,20 +155,29 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
      
     
 	
-### Personal Health Summary
-The table below matches the data items to the corresponding supported element in the [Personal Health Summary](StructureDefinition-composition-phs-1.html) profile or referenced profile (e.g. Organization with Mandatory Identifier). The hierarchy column demonstrates the path to that supported element from the root Composition. 
+## Mapping from Personal Health Summary information requirements
+
+The table below provides mapping from the requirements in [Consumer Entered Health Summary Information Requirements [NEHT2011ar]](index.html#NEHT2011ar) to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile, or referenced profile (e.g. [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition.
+See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
 <table class="list" width="100%">
+	<col style="width:20%"/>
+	<col style="width:7%"/>
+	<col style="width:20%"/>
+	<col style="width:25%"/>
+	<col style="width:28%"/>
                <thead>
                     <tr>						
 						<th>Requirement Section</th>
 						<th>Data item</th>
-						<th>Element</th>
+						<th>Element name</th>
 						<th>Hierarchy</th>
+						<th>Additional notes</th>
 					</tr>
                </thead>
                <tfoot>
 					<tr>
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -163,164 +190,198 @@ The table below matches the data items to the corresponding supported element in
 						<td rowspan="2">Component</td>
 						<td>Patient</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient</td>
 						<td>Composition(Personal Health Summary).author(Patient as Patient with Mandatory IHI).Patient</td>
+						<td></td>
 					</tr>										
 					<tr>
 						<td rowspan="2">Person Name</td>
 						<td>Patient.name</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.name</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.name</td>
 						<td>Composition(Personal Health Summary).author(Patient as Patient with Mandatory IHI).Patient.name</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td rowspan="2">Person Identifier</td>
 						<td>Patient.identifier</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.identifier</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.identifier</td>
 						<td>Composition(Personal Health Summary).author(Patient as Patient with Mandatory IHI).Patient.identifier</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Date of Birth</td>
 						<td>Patient.birthDate</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.birthDate</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Sex</td>
 						<td>Patient.gender</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.gender</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td rowspan="2">Address</td>
 						<td>Patient.address</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.address</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.address</td>
 						<td>Composition(Personal Health Summary).author(Patient as Patient with Mandatory IHI).Patient.address</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td rowspan="2">Communication Details</td>
 						<td>Patient.telecom</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.telecom</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.telecom</td>
 						<td>Composition(Personal Health Summary).author(Patient as Patient with Mandatory IHI).Patient.telecom</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td rowspan="2">Indigenous Status</td>
 						<td>Patient.indigenous-status</td>
 						<td>Composition(Personal Health Summary).subject(Patient as Patient with Mandatory IHI).Patient.indigenous-status</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Patient.indigenous-status</td>
 						<td>Composition(Personal Health Summary).author(Patient as Patient with Mandatory IHI).Patient.indigenous-status</td>
+						<td></td>
 					</tr>					
 					<tr>
 						<td rowspan="5">Authorised Representative</td>					
 						<td>Component</td>
 						<td>RelatedPerson</td>
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson</td>
+						<td></td>
 					</tr>
 					<tr>				
 						<td>Author's Name (Authorised Representative)</td>
 						<td>RelatedPerson.name</td>
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.name</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Person Identifier</td>
 						<td>RelatedPerson.identifier</td>
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.identifier</td>
+						<td></td>
 					</tr>  
 					<tr>
 						<td>Address</td>
 						<td>RelatedPerson.address</td>
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.address</td>
+						<td></td>
 					</tr> 
 					<tr>
 						<td>Communication Details</td>
 						<td>RelatedPerson.telecom</td>
 						<td>Composition(Personal Health Summary).author(RelatedPerson as Related Person with Mandatory IHI).RelatedPerson.telecom</td>
+						<td></td>
 					</tr>             
 					<tr>
 						<td rowspan="6">Allergies and Adverse Reactions</td>
 						<td rowspan="3">Component</td>
 						<td>Composition.section</td>
 						<td>Composition(Personal Health Summary).section(Allergies)</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Composition.section.entry</td>
 						<td>Composition(Personal Health Summary).section(Allergies).entry</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Composition.section.emptyReason</td>
 						<td>Composition(Personal Health Summary).section(Allergies).emptyReason</td>
+						<td></td>
 					</tr>           
 					<tr>
 						<td rowspan="2">Agent Description</td>
 						<td>AllergyIntolerance.code</td>
 						<td>Composition(Personal Health Summary).section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.code</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>AllergyIntolerance.reaction.substance</td>
 						<td>Composition(Personal Health Summary).section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.substance</td>
+						<td></td>
 					</tr>           
 					<tr>
 						<td>Reaction Description</td>
 						<td>AllergyIntolerance.reaction.manifestation</td>
 						<td>Composition(Personal Health Summary).section(Allergies).entry(AllergyIntolerance as Summary Statement of Allergy or Intolerance).AllergyIntolerance.reaction.manifestation</td>
+						<td></td>
 					</tr>              
 				   <tr>
 						<td rowspan="7">Medicines</td>
 						<td rowspan="3">Component</td>
 						<td>Composition.section</td>
 						<td>Composition(Personal Health Summary).section(Medications)</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Composition.section.entry</td>
 						<td>Composition(Personal Health Summary).section(Medications).entry</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>Composition.section.emptyReason</td>
 						<td>Composition(Personal Health Summary).section(Medications).emptyReason</td>
+						<td></td>
 					</tr>                
 					<tr>
 						<td>Item Description</td>
 						<td>MedicationStatement.medication[x]</td>
 						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.medication[x]</td>
+						<td></td>
 					</tr>                          
 					<tr>
 						<td>Dose Information</td>
 						<td>MedicationStatement.dosage</td>
 						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.dosage</td>
+						<td></td>
 					</tr>                              
 					<tr>
 						<td>Reason for Medicine</td>
 						<td>MedicationStatement.reasonCode</td>
 						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.reasonCode</td>
+						<td></td>
 					</tr>                              
 					<tr>
 						<td>Additional Comments</td>
 						<td>MedicationStatement.note</td>
 						<td>Composition(Personal Health Summary).section(Medications).entry(MedicationStatement as Summary Statement of Known Medicine).MedicationStatement.note</td>
+						<td></td>
 					</tr> 					
 					<tr>
 						<td rowspan="2">Document Control</td>					
 						<td>Component</td>
 						<td>n/a</td>
 						<td>n/a</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>DateTime Input</td>	
 						<td>n/a</td>
 						<td>n/a</td>
+						<td></td>
 					</tr>
             </tbody>
         </table>
