@@ -13,7 +13,7 @@ The mapping from requirements table below demonstrates the logical decomposition
 
 ## Mapping from Personal Health Notes information requirements
 
-The table below provides mapping from the requirements in [Consumer Entered Notes Information Requirements [NEHT2011ao]](index.html#NEHT2011ao) to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile, or referenced profile (e.g. [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition.
+The table below provides mapping from the requirements in [Consumer Entered Notes Information Requirements [NEHT2011ao]](index.html#NEHT2011ao) to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile, or referenced profile (e.g. [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html)). 
 
 See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
@@ -157,7 +157,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
 	
 ## Mapping from Personal Health Summary information requirements
 
-The table below provides mapping from the requirements in [Consumer Entered Health Summary Information Requirements [NEHT2011ar]](index.html#NEHT2011ar) to the corresponding supported element in the [Personal Health Notes](StructureDefinition-composition-phn-1.html) profile, or referenced profile (e.g. [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html)). The hierarchy column demonstrates the path to that supported element from the root Composition.
+The table below provides mapping from the requirements in [Consumer Entered Health Summary Information Requirements [NEHT2011ar]](index.html#NEHT2011ar) to the corresponding supported element in the [Personal Health Summary](StructureDefinition-composition-phs-1.html) profile, or referenced profile (e.g. [Organization with Mandatory Identifier](StructureDefinition-organization-ident-1.html)). 
+
 See the [legend](mappings.html#legend-for-mapping-from-requirements) for information on the columns used to present the mapping content.
 
 <table class="list" width="100%">
