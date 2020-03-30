@@ -8,4 +8,4 @@ The following are the usage scenarios expected:
 #### Implementation guidance
 For the expected usage scenarios in this implementation guide:
 
-* It is required that the composition include only the specified top-level section; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.
+* No additional guidance is suggested to support implementation of this profile for the overarching usage scenarios of this implementation guide.
