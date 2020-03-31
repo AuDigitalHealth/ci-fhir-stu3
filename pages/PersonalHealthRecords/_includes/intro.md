@@ -132,7 +132,7 @@ This table lists known issues with this specification at the time of publishing.
     <tr>
         <td>Profile for My Health Record Patient not present</td>
         <td>This implementation guide was intended to include the profile of My Health Record Patient, however this was not achieved at the point of work being ceased. This will be considered as part of the roadmap to R4.<br/><br/>
-        See GitHub issue <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.
+        See GitHub issue <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/80">https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/80</a>.
         </td>
      </tr>
  </tbody>
