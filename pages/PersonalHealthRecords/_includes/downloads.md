@@ -24,7 +24,6 @@ All examples included in this implementation guide are available for download in
 
 CDA implementation guides that use the profiles referenced by this FHIR implementation guide as ‘models’ that are mapped into CDA are available for download:
 
-- [DH_xxxx_PersonalHealthNotes_CDA_IG_v2.0.pdf](DH_xxxx_PersonalHealthNotes_CDA_IG_v2.0.pdf)
-- [DH_xxxx_PersonalHealthSummary_CDA_IG_v2.0.pdf](DH_xxxx_PersonalHealthSummary_CDA_IG_v2.0.pdf)
+- [DH_xxxx_PersonalHealthRecords_CDA_IG_v1.0.0.pdf](DH_xxxx_PersonalHealthRecords_CDA_IG_v1.0.0.pdf)
 
 Approved releases of CDA implementation guides for use in implementation are published on the Agency’s [developer centre](https://developer.digitalhealth.gov.au/).
