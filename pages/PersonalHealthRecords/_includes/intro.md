@@ -123,13 +123,18 @@ This table lists known issues with this specification at the time of publishing.
         <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
     </tr>
     <tr>
+
+        <td>Profile pages missing references</td>
+        <td>Many profile pages are missing the list of which other profiles include it as a reference.</td>
+    </tr>
+    <tr>   
         <td>PHR FHIR implementation guide roadmap</td>
         <td>The profiles that form part of this implementation guide, and this implementation guide itself, are in transition to a FHIR Release 4 representation in collaboration with HL7 Australia.<br/><br/>
 		This move has normative implications that are expected to result in major version incrementation to accommodate backwards incompatible changes. Widespread changes to terminology and the removal or renaming of some elements are expected to make up the bulk of the backwards incompatible changes.<br/><br/>
         Our FHIR Release 4 repository can be found here: <a href="https://github.com/AuDigitalHealth/ci-fhir-r4">ci-fhir-r4</a>.
         </td>
      </tr>
-    <tr>
+     <tr>
         <td>Profile for My Health Record Patient not present</td>
         <td>This implementation guide was intended to include the profile of My Health Record Patient, however this was not achieved at the point of work being ceased. This will be considered as part of the roadmap to R4.<br/><br/>
         See GitHub issue <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/80">https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/80</a>.

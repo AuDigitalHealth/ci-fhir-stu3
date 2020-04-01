@@ -7,3 +7,5 @@ For the expected usage scenarios in this implementation guide:
 * It is expected that clinicalStatus will be ‘active’.
 * Where an authoring system only has substance or agent available and not a statement of allergy or intolerance that substance should be recorded in the code and optionally in reaction substance.
 * A ‘refuted’ allergy or intolerance should be represented with an appropriate negation code (e.g. 716184000 \|No known latex allergy\|) and a verificationStatus of ‘unconfirmed’ or ‘confirmed’ depending on the level of certainty.
+
+This profile is referenced by TBD
