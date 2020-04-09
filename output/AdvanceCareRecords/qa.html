@@ -1,14 +1,30 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 191, errors = 47, warn = 14, info = 20 -->
+<!-- broken links = 198, errors = 96, warn = 20, info = 61 -->
 <head>
   <title>Advance Care Records : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Advance Care Records</h1>
- <p>Generated Tue Nov 26 08:55:19 AEST 2019, FHIR version 3.0.2 for au.electronichealth.advancecarerecords# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
-<p style="background-color: #ffcccc">IG Publisher Version: v0.9.91-SNAPSHOT, which is out of date. The current version is v1.0.2-SNAPSHOT <a hhef="https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar">Download Latest</a></p>
+ <p>Generated Thu Apr 09 15:07:31 AEST 2020, FHIR version 3.0.2 for au.electronichealth.advancecarerecords# (canonical = <a href="http://ns.electronichealth.net.au/ci/fhir/3.0">http://ns.electronichealth.net.au/ci/fhir/3.0</a> (<a href="http://ns.electronichealth.net.au/ci/fhir/3.0/history.html">history</a>))</p>
+<p>IG Publisher Version: v1.0.79-SNAPSHOT</p>
 <p>No Suppressed Errors</p>
  <p>HL7 Publication check:</p> <ul><li>n/a - not an HL7.org or FHIR.org implementation guide</li></ul>
 
@@ -17,34 +33,34 @@
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>190</b></td><td><b>1</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>197</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2"><b>C:\work\git\ci-fhir-stu3\examples\composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2</b></a></td><td><b>2</b></td><td><b>3</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2"><b>C:\work\git\ci-fhir-stu3\examples\composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2</b></a></td><td><b>6</b></td><td><b>8</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-28bbf331-07d0-44a4-9d0b-927e83f483ec"><b>C:\work\git\ci-fhir-stu3\examples\composition-28bbf331-07d0-44a4-9d0b-927e83f483ec</b></a></td><td><b>8</b></td><td><b>7</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-28bbf331-07d0-44a4-9d0b-927e83f483ec"><b>C:\work\git\ci-fhir-stu3\examples\composition-28bbf331-07d0-44a4-9d0b-927e83f483ec</b></a></td><td><b>13</b></td><td><b>13</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-3354a586-67ce-4038-bc62-9d226cac0d83"><b>C:\work\git\ci-fhir-stu3\examples\composition-3354a586-67ce-4038-bc62-9d226cac0d83</b></a></td><td><b>9</b></td><td><b>8</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-3354a586-67ce-4038-bc62-9d226cac0d83"><b>C:\work\git\ci-fhir-stu3\examples\composition-3354a586-67ce-4038-bc62-9d226cac0d83</b></a></td><td><b>14</b></td><td><b>15</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-802b0d9e-579a-4112-a032-72bcf7c3b9e6"><b>C:\work\git\ci-fhir-stu3\examples\composition-802b0d9e-579a-4112-a032-72bcf7c3b9e6</b></a></td><td><b>1</b></td><td><b>2</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-802b0d9e-579a-4112-a032-72bcf7c3b9e6"><b>C:\work\git\ci-fhir-stu3\examples\composition-802b0d9e-579a-4112-a032-72bcf7c3b9e6</b></a></td><td><b>4</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-b482beb3-5b73-4dd1-abfc-74fdd77bb297"><b>C:\work\git\ci-fhir-stu3\examples\composition-b482beb3-5b73-4dd1-abfc-74fdd77bb297</b></a></td><td><b>1</b></td><td><b>1</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-e24d5c0b-77ae-4f57-b03d-b558c1e1eee3"><b>C:\work\git\ci-fhir-stu3\examples\composition-e24d5c0b-77ae-4f57-b03d-b558c1e1eee3</b></a></td><td><b>0</b></td><td><b>1</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-b482beb3-5b73-4dd1-abfc-74fdd77bb297"><b>C:\work\git\ci-fhir-stu3\examples\composition-b482beb3-5b73-4dd1-abfc-74fdd77bb297</b></a></td><td><b>4</b></td><td><b>4</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_documentreference-aff0d4ad-15c3-4521-aaff-24371491b531"><b>C:\work\git\ci-fhir-stu3\examples\documentreference-aff0d4ad-15c3-4521-aaff-24371491b531</b></a></td><td><b>1</b></td><td><b>2</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_documentreference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c"><b>C:\work\git\ci-fhir-stu3\examples\documentreference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c</b></a></td><td><b>0</b></td><td><b>1</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_composition-e24d5c0b-77ae-4f57-b03d-b558c1e1eee3"><b>C:\work\git\ci-fhir-stu3\examples\composition-e24d5c0b-77ae-4f57-b03d-b558c1e1eee3</b></a></td><td><b>2</b></td><td><b>4</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_documentreference-fc7889ef-477b-45d2-9b76-968ecff5940b"><b>C:\work\git\ci-fhir-stu3\examples\documentreference-fc7889ef-477b-45d2-9b76-968ecff5940b</b></a></td><td><b>2</b></td><td><b>2</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_documentreference-aff0d4ad-15c3-4521-aaff-24371491b531"><b>C:\work\git\ci-fhir-stu3\examples\documentreference-aff0d4ad-15c3-4521-aaff-24371491b531</b></a></td><td><b>2</b></td><td><b>3</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_documentreference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c"><b>C:\work\git\ci-fhir-stu3\examples\documentreference-e8b72e23-65c3-4cef-b91a-aba0bd307f5c</b></a></td><td><b>1</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_documentreference-fc7889ef-477b-45d2-9b76-968ecff5940b"><b>C:\work\git\ci-fhir-stu3\examples\documentreference-fc7889ef-477b-45d2-9b76-968ecff5940b</b></a></td><td><b>3</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_organization-0b27b9e9-50fb-4975-9e60-d053e461828"><b>C:\work\git\ci-fhir-stu3\examples\organization-0b27b9e9-50fb-4975-9e60-d053e461828</b></a></td><td><b>0</b></td><td><b>1</b></td>
@@ -65,31 +81,31 @@
      <td><a href="#C__work_git_ci-fhir-stu3_examples_patient-f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8"><b>C:\work\git\ci-fhir-stu3\examples\patient-f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e"><b>C:\work\git\ci-fhir-stu3\examples\practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e</b></a></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e"><b>C:\work\git\ci-fhir-stu3\examples\practitioner-4af51762-11cd-4bd6-8212-d6b1dc85696e</b></a></td><td><b>1</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_examples_practitioner-e75140ff-3476-4efb-b508-20aa6c6fbc77"><b>C:\work\git\ci-fhir-stu3\examples\practitioner-e75140ff-3476-4efb-b508-20aa6c6fbc77</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8"><b>C:\work\git\ci-fhir-stu3\examples\practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8</b></a></td><td><b>0</b></td><td><b>2</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8"><b>C:\work\git\ci-fhir-stu3\examples\practitionerrole-459a5ae6-ee37-4151-9dfd-e8094c4a23b8</b></a></td><td><b>0</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitionerrole-cb9d944f-1b75-4603-b63a-167460882287"><b>C:\work\git\ci-fhir-stu3\examples\practitionerrole-cb9d944f-1b75-4603-b63a-167460882287</b></a></td><td><b>0</b></td><td><b>2</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_examples_practitionerrole-cb9d944f-1b75-4603-b63a-167460882287"><b>C:\work\git\ci-fhir-stu3\examples\practitionerrole-cb9d944f-1b75-4603-b63a-167460882287</b></a></td><td><b>0</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_composition-acdcr-1"><b>C:\work\git\ci-fhir-stu3\resources\composition-acdcr-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_composition-acdcr-1"><b>C:\work\git\ci-fhir-stu3\resources\composition-acdcr-1</b></a></td><td><b>0</b></td><td><b>5</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_composition-acp-1"><b>C:\work\git\ci-fhir-stu3\resources\composition-acp-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_composition-acp-1"><b>C:\work\git\ci-fhir-stu3\resources\composition-acp-1</b></a></td><td><b>0</b></td><td><b>4</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_documentreference-acp-1"><b>C:\work\git\ci-fhir-stu3\resources\documentreference-acp-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_documentreference-acp-1"><b>C:\work\git\ci-fhir-stu3\resources\documentreference-acp-1</b></a></td><td><b>0</b></td><td><b>2</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#C__work_git_ci-fhir-stu3_resources_humanname-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_implementationguide-advancecarerecords-1"><b>C:\work\git\ci-fhir-stu3\resources\implementationguide-advancecarerecords-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_implementationguide-advancecarerecords-1"><b>C:\work\git\ci-fhir-stu3\resources\implementationguide-advancecarerecords-1</b></a></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#C__work_git_ci-fhir-stu3_resources_organization-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1</b></a></td><td><b>2</b></td><td><b>0</b></td>
@@ -98,28 +114,31 @@
      <td><a href="#C__work_git_ci-fhir-stu3_resources_organization-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\organization-ident-1</b></a></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_patient-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1</b></a></td><td><b>3</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_patient-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1</b></a></td><td><b>4</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_patient-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\patient-ident-1</b></a></td><td><b>3</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_patient-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\patient-ident-1</b></a></td><td><b>4</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitioner-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1</b></a></td><td><b>2</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_patient-mhr-1"><b>C:\work\git\ci-fhir-stu3\resources\patient-mhr-1</b></a></td><td><b>4</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitioner-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1</b></a></td><td><b>2</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitioner-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\practitioner-dh-base-1</b></a></td><td><b>8</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitionerrole-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\practitionerrole-dh-base-1</b></a></td><td><b>4</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitioner-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\practitioner-ident-1</b></a></td><td><b>8</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitionerrole-withpractitionerident-1"><b>C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1</b></a></td><td><b>4</b></td><td><b>0</b></td>
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitionerrole-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\practitionerrole-dh-base-1</b></a></td><td><b>5</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_relatedperson-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_practitionerrole-withpractitionerident-1"><b>C:\work\git\ci-fhir-stu3\resources\practitionerrole-withpractitionerident-1</b></a></td><td><b>5</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#C__work_git_ci-fhir-stu3_resources_relatedperson-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\relatedperson-ident-1</b></a></td><td><b>0</b></td><td><b>0</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_relatedperson-dh-base-1"><b>C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1</b></a></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#C__work_git_ci-fhir-stu3_resources_relatedperson-ident-1"><b>C:\work\git\ci-fhir-stu3\resources\relatedperson-ident-1</b></a></td><td><b>1</b></td><td><b>1</b></td>
    </tr>
 </table>
 <hr/>
@@ -538,6 +557,27 @@
      <td><b>StructureDefinition-patient-ident-1.xml.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1-definitions.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1-examples.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1-mappings.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1.json.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1.ttl.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition-patient-mhr-1.xml.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition-practitioner-dh-base-1-definitions.html</b></td><td><b>error</b></td><td><b>The html source does not contain the publish box</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
@@ -708,19 +748,46 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].subject</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 7817adef-177a-464c-b56e-27ffc0af4606; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].author[0]</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 7817adef-177a-464c-b56e-27ffc0af4606; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[2].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].ofType(DocumentReference).type (l73/c13)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].ofType(DocumentReference).type.coding[0] (l74/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].ofType(DocumentReference).subject (l80/c16)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 7817adef-177a-464c-b56e-27ffc0af4606; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].ofType(DocumentReference).author[0] (l85/c15)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 7817adef-177a-464c-b56e-27ffc0af4606; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[1].ofType(DocumentReference).type.coding.display (l77/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.contained[2].ofType(Organization).identifier[0].type (l106/c15)</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.type (l115/c9)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.type.coding[0] (l116/c13)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.section[0].code.coding[0] (l136/c15)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition (l11/c60)</b></td><td><b>warning</b></td><td><b>Resource has a language, but the XHTML does not have an xml:lang tag (needs both lang and xml:lang - see https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.type.coding.display (l119/c47)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.section[0].code.coding.display (l139/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.section[0].entry[0] (l150/c12)</b></td><td><b>error</b></td><td><b>Unable to find matching profile for #e8b72e23-65c3-4cef-b91a-aba0bd307f5c among choices: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/1840e786-bbd7-4abe-af3e-aa6e7f74c3f2: Composition.section[0].entry[0] (l150/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #e8b72e23-65c3-4cef-b91a-aba0bd307f5c matching against Profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl211" class="flip" onclick="flip('l211')">Show Reasoning</span><div id="l211" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[1].ofType(DocumentReference).type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile</li></ul></div></td>
    </tr>
 </table>
 <hr/>
@@ -730,50 +797,83 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].ofType(PractitionerRole).practitioner (l159/c21)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: e75140ff-3476-4efb-b508-20aa6c6fbc77; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].ofType(PractitionerRole).organization (l162/c21)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 0b27b9e9-50fb-4975-9e60-d053e4618288; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].identifier[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].ofType(PractitionerRole).code[0].coding[0] (l166/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0&quot; is unknown so the code cannot be validated</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].practitioner</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: e75140ff-3476-4efb-b508-20aa6c6fbc77; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].organization</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 0b27b9e9-50fb-4975-9e60-d053e4618288; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].ofType(PractitionerRole).identifier[0] (l147/c19)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b> <span id="sl215" class="flip" onclick="flip('l215')">Show Reasoning</span><div id="l215" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1<ul><li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'UPIN')).exists() and ('http://ns.electronichealth.net.au/id/medicare-provider-number' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'NPIO')).exists() and ('http://hl7.org.au/id/npio' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org/fhir/v2/0203') and (code = 'EI')).exists()</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].code[0].coding[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[2].ofType(PractitionerRole).code[0].coding[0] (l166/c17)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[3].ofType(Composition).identifier[0].type (l186/c15)</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4]</b></td><td><b>error</b></td><td><b>inv-dh-docref-02: If the author is a practitioner, the role shall be provided [(DocumentReference.author.resolve() is Practitioner) implies DocumentReference.extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()]</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).extension[0] (l203/c71)</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).extension[0].value.ofType(Reference) (l204/c25)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: cb9d944f-1b75-4603-b63a-167460882287; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].extension[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].extension[0].value.ofType(Reference)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: cb9d944f-1b75-4603-b63a-167460882287; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).type (l217/c13)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).type.coding[0] (l218/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].subject</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 137f2770-8a52-48c8-98c0-790a29645a1a; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).subject (l224/c16)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 137f2770-8a52-48c8-98c0-790a29645a1a; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].author[0]</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: e75140ff-3476-4efb-b508-20aa6c6fbc77; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).author[0] (l229/c15)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: e75140ff-3476-4efb-b508-20aa6c6fbc77; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference) (l195/c14)</b></td><td><b>error</b></td><td><b>inv-dh-docref-02: If the author is a practitioner, the role shall be provided [(DocumentReference.author.resolve() is Practitioner) implies DocumentReference.extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()]</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).extension[0] (l203/c71)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl225" class="flip" onclick="flip('l225')">Show Reasoning</span><div id="l225" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1<ul><li>Composition.contained[4].ofType(DocumentReference).extension[0]: discriminator = true and ('http://hl7.org.au/fhir/StructureDefinition/author-role' in url)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.contained[4].ofType(DocumentReference).type.coding.display (l221/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.extension[0].value.ofType(Reference) (l243/c21)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #cb9d944f-1b75-4603-b63a-167460882287 matching against Profilehttp://hl7.org/fhir/StructureDefinition/PractitionerRole</b> <span id="sl227" class="flip" onclick="flip('l227')">Show Reasoning</span><div id="l227" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[2].ofType(PractitionerRole).practitioner: ref-1: SHALL have a contained resource if a local reference is provided ( (url: e75140ff-3476-4efb-b508-20aa6c6fbc77; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li>, <li>Composition.contained[2].ofType(PractitionerRole).organization: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 0b27b9e9-50fb-4975-9e60-d053e4618288; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1<ul><li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'UPIN')).exists() and ('http://ns.electronichealth.net.au/id/medicare-provider-number' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'NPIO')).exists() and ('http://hl7.org.au/id/npio' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org/fhir/v2/0203') and (code = 'EI')).exists()</li></ul></li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.type (l248/c9)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.type.coding[0] (l249/c13)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.section[0].code.coding[0] (l276/c15)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition (l11/c60)</b></td><td><b>warning</b></td><td><b>Resource has a language, but the XHTML does not have an xml:lang tag (needs both lang and xml:lang - see https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.attester[0]</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.extension[0] (l242/c78)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-04: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.type.coding.display (l252/c47)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.attester[0] (l263/c13)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.section[0].code.coding.display (l279/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.section[0].entry[0] (l290/c12)</b></td><td><b>error</b></td><td><b>Unable to find matching profile for #fc7889ef-477b-45d2-9b76-968ecff5940b among choices: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/28bbf331-07d0-44a4-9d0b-927e83f483ec: Composition.section[0].entry[0] (l290/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #fc7889ef-477b-45d2-9b76-968ecff5940b matching against Profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl237" class="flip" onclick="flip('l237')">Show Reasoning</span><div id="l237" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[4].ofType(DocumentReference): inv-dh-docref-02: If the author is a practitioner, the role shall be provided [(DocumentReference.author.resolve() is Practitioner) implies DocumentReference.extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()]</li>, <li>Composition.contained[4].ofType(DocumentReference).extension[0]: This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1<ul><li>Composition.contained[4].ofType(DocumentReference).extension[0]: discriminator = true and ('http://hl7.org.au/fhir/StructureDefinition/author-role' in url)</li></ul></li>, <li>Composition.contained[4].ofType(DocumentReference).extension[0]: The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</li>, <li>Composition.contained[4].ofType(DocumentReference).type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile</li></ul></div></td>
    </tr>
 </table>
 <hr/>
@@ -783,56 +883,92 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition</b></td><td><b>warning</b></td><td><b>Resource has a language, but the XHTML does not have a language tag</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[0].ofType(Patient).generalPractitioner[0] (l40/c28)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[0].generalPractitioner[0]</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[0].managingOrganization</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[0].ofType(Patient).managingOrganization (l43/c29)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].identifier[1]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[1].ofType(Composition).qualification[0].code.coding[0] (l92/c19)</b></td><td><b>information</b></td><td><b>Code System URI &quot;http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0&quot; is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].practitioner</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].ofType(PractitionerRole).practitioner (l137/c21)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].organization</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].code[0].coding[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[3].identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].ofType(PractitionerRole).organization (l140/c21)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].extension[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].extension[0].value.ofType(Reference)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 459a5ae6-ee37-4151-9dfd-e8094c4a23b8; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].ofType(PractitionerRole).code[0].coding[0] (l144/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0&quot; is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].subject</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].author[0]</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+     <td><b><a href="">Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].ofType(PractitionerRole).identifier[1] (l125/c19)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b> <span id="sl244" class="flip" onclick="flip('l244')">Show Reasoning</span><div id="l244" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1<ul><li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'UPIN')).exists() and ('http://ns.electronichealth.net.au/id/medicare-provider-number' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'NPIO')).exists() and ('http://hl7.org.au/id/npio' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org/fhir/v2/0203') and (code = 'EI')).exists()</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.extension[0].value.ofType(Reference).contained.organization.contained.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[2].ofType(PractitionerRole).code[0].coding[0] (l144/c17)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+   <tr style="background-color: #ffebcc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[3].ofType(Composition).identifier[0].type (l170/c15)</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.attester[0]</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).extension[0] (l210/c80)</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).extension[0].value.ofType(Reference) (l211/c25)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: 459a5ae6-ee37-4151-9dfd-e8094c4a23b8; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).type (l224/c13)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).type.coding[0] (l225/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).subject (l231/c16)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8 matching against Profilehttp://hl7.org/fhir/StructureDefinition/Patient</b> <span id="sl251" class="flip" onclick="flip('l251')">Show Reasoning</span><div id="l251" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[0].ofType(Patient).generalPractitioner[0]: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li>, <li>Composition.contained[0].ofType(Patient).managingOrganization: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).subject (l231/c16)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).author[0] (l236/c15)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8 matching against Profilehttp://hl7.org/fhir/StructureDefinition/Patient</b> <span id="sl253" class="flip" onclick="flip('l253')">Show Reasoning</span><div id="l253" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[0].ofType(Patient).generalPractitioner[0]: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li>, <li>Composition.contained[0].ofType(Patient).managingOrganization: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).author[0] (l236/c15)</b></td><td><b>error</b></td><td><b>ref-1: SHALL have a contained resource if a local reference is provided ( (url: f9459ed3-d7ba-406f-83a1-71ed8a8ee3f8; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).extension[0] (l210/c80)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl255" class="flip" onclick="flip('l255')">Show Reasoning</span><div id="l255" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1<ul><li>Composition.contained[4].ofType(DocumentReference).extension[0]: discriminator = true and ('http://hl7.org.au/fhir/StructureDefinition/author-role' in url)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.contained[4].ofType(DocumentReference).type.coding.display (l228/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.extension[0].value.ofType(Reference) (l250/c21)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #459a5ae6-ee37-4151-9dfd-e8094c4a23b8 matching against Profilehttp://hl7.org/fhir/StructureDefinition/PractitionerRole</b> <span id="sl257" class="flip" onclick="flip('l257')">Show Reasoning</span><div id="l257" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[2].ofType(PractitionerRole).practitioner: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 4af51762-11cd-4bd6-8212-d6b1dc85696e; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li>, <li>Composition.contained[2].ofType(PractitionerRole).organization: ref-1: SHALL have a contained resource if a local reference is provided ( (url: 1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1<ul><li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'UPIN')).exists() and ('http://ns.electronichealth.net.au/id/medicare-provider-number' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'NPIO')).exists() and ('http://hl7.org.au/id/npio' in system)</li>, <li>Composition.contained[2].ofType(PractitionerRole).identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org/fhir/v2/0203') and (code = 'EI')).exists()</li></ul></li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.type (l255/c9)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.type.coding[0] (l256/c13)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.section[0].code.coding[0] (l283/c15)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.extension[0] (l249/c87)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-04: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.type.coding.display (l259/c47)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.attester[0] (l270/c13)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.section[0].code.coding.display (l286/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.section[0].entry[0] (l297/c12)</b></td><td><b>error</b></td><td><b>Unable to find matching profile for #aff0d4ad-15c3-4521-aaff-24371491b531 among choices: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Composition/3354a586-67ce-4038-bc62-9d226cac0d83: Composition.section[0].entry[0] (l297/c12)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #aff0d4ad-15c3-4521-aaff-24371491b531 matching against Profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl266" class="flip" onclick="flip('l266')">Show Reasoning</span><div id="l266" style="display: none"><p>&nbsp;</p><ul><li>Composition.contained[4].ofType(DocumentReference).extension[0]: This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1<ul><li>Composition.contained[4].ofType(DocumentReference).extension[0]: discriminator = true and ('http://hl7.org.au/fhir/StructureDefinition/author-role' in url)</li></ul></li>, <li>Composition.contained[4].ofType(DocumentReference).extension[0]: The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</li>, <li>Composition.contained[4].ofType(DocumentReference).type.coding.display: The element display is present in the instance but not allowed in the applicable fixed value specified in profile</li></ul></div></td>
    </tr>
 </table>
 <hr/>
@@ -842,14 +978,26 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition</b></td><td><b>warning</b></td><td><b>Resource has a language, but the XHTML does not have a language tag</b></td>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.type (l15/c9)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.type.coding[0] (l16/c13)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.section[0].code.coding[0] (l43/c15)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.attester[0]</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.extension[0] (l9/c87)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-04: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.type.coding.display (l19/c47)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.attester[0] (l30/c13)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/802b0d9e-579a-4112-a032-72bcf7c3b9e6: Composition.section[0].code.coding.display (l46/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -860,10 +1008,28 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.type (l78/c9)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.type.coding[0] (l79/c13)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.section[0].code.coding[0] (l106/c15)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition (l11/c60)</b></td><td><b>warning</b></td><td><b>Resource has a language, but the XHTML does not have an xml:lang tag (needs both lang and xml:lang - see https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.attester[0]</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.extension[0] (l72/c78)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-04: A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier [Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.type.coding.display (l82/c47)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.attester[0] (l93/c13)</b></td><td><b>error</b></td><td><b>inv-dh-cmp-02: A legal attester shall have a party or a related party [Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/b482beb3-5b73-4dd1-abfc-74fdd77bb297: Composition.section[0].code.coding.display (l109/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -874,7 +1040,22 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition.type (l26/c9)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16975)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition.type.coding[0] (l27/c13)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition.section[0].code.coding[0] (l47/c15)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition (l11/c60)</b></td><td><b>warning</b></td><td><b>Resource has a language, but the XHTML does not have an xml:lang tag (needs both lang and xml:lang - see https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition.type.coding.display (l30/c47)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Composition/e24d5c0b-77ae-4f57-b03d-b558c1e1eee3: Composition.section[0].code.coding.display (l50/c60)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -884,14 +1065,20 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.extension[0] (l8/c78)</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
+   </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.extension[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
+     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.type (l22/c11)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.type.coding[0] (l23/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.extension[0] (l8/c78)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl291" class="flip" onclick="flip('l291')">Show Reasoning</span><div id="l291" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1<ul><li>DocumentReference.extension[0]: discriminator = true and ('http://hl7.org.au/fhir/StructureDefinition/author-role' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+     <td><b>DocumentReference/aff0d4ad-15c3-4521-aaff-24371491b531: DocumentReference.type.coding.display (l26/c62)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -902,7 +1089,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+     <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.type (l16/c11)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.type.coding[0] (l17/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference/e8b72e23-65c3-4cef-b91a-aba0bd307f5c: DocumentReference.type.coding.display (l20/c62)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -913,16 +1106,22 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference</b></td><td><b>error</b></td><td><b>inv-dh-docref-02: If the author is a practitioner, the role shall be provided [(DocumentReference.author.resolve() is Practitioner) implies DocumentReference.extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()]</b></td>
+     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.extension[0] (l8/c71)</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.extension[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b></td>
+     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.type (l22/c11)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.type.coding[0] (l23/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org.au/fhir/StructureDefinition/author-role﻿ is unknown, and not allowed here</b></td>
+     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference (l1/c48)</b></td><td><b>error</b></td><td><b>inv-dh-docref-02: If the author is a practitioner, the role shall be provided [(DocumentReference.author.resolve() is Practitioner) implies DocumentReference.extension('http://hl7.org.au/fhir/StructureDefinition/author-role').exists()]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.type</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1#100.16998)</b></td>
+     <td><b><a href="">DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.extension[0] (l8/c71)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1</b> <span id="sl300" class="flip" onclick="flip('l300')">Show Reasoning</span><div id="l300" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/documentreference-acp-1<ul><li>DocumentReference.extension[0]: discriminator = true and ('http://hl7.org.au/fhir/StructureDefinition/author-role' in url)</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference/fc7889ef-477b-45d2-9b76-968ecff5940b: DocumentReference.type.coding.display (l26/c62)</b></td><td><b>error</b></td><td><b>The element display is present in the instance but not allowed in the applicable fixed value specified in profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -933,7 +1132,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/0b27b9e9-50fb-4975-9e60-d053e461828: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Organization/0b27b9e9-50fb-4975-9e60-d053e461828: Organization.identifier[0].type (l13/c15)</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -944,7 +1143,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Organization/1d224e6d-9d2b-48ad-9f75-2bbde3c5dd63: Organization.identifier[0].type (l14/c15)</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -955,7 +1154,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Organization/3192b0cd-3a67-4cb5-b7d8-198057ba8b67: Organization.identifier[0].type</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
+     <td><b>Organization/3192b0cd-3a67-4cb5-b7d8-198057ba8b67: Organization.identifier[0].type (l11/c15)</b></td><td><b>warning</b></td><td><b>No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/identifier-type (http://hl7.org/fhir/ValueSet/identifier-type)</b></td>
    </tr>
 </table>
 <hr/>
@@ -989,8 +1188,11 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e: Practitioner.qualification[0].code.coding[0] (l46/c21)</b></td><td><b>information</b></td><td><b>Code System URI &quot;http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e: Practitioner.qualification[0].identifier[0].type.text</b></td><td><b>error</b></td><td><b>Value is 'AHPRA registration number' but must be 'AHPRA Registration Number'</b></td>
+     <td><b>Practitioner/4af51762-11cd-4bd6-8212-d6b1dc85696e: Practitioner.qualification[0].identifier[0].type.text (l40/c58)</b></td><td><b>error</b></td><td><b>Value is &quot;AHPRA registration number&quot; but must be &quot;AHPRA Registration Number&quot;</b></td>
    </tr>
 </table>
 <hr/>
@@ -1009,10 +1211,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8: PractitionerRole.identifier[1]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b></td>
+     <td><b>PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8: PractitionerRole.code[0].coding[0] (l41/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8: PractitionerRole.identifier[1] (l22/c17)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b> <span id="sl308" class="flip" onclick="flip('l308')">Show Reasoning</span><div id="l308" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1<ul><li>PractitionerRole.identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'UPIN')).exists() and ('http://ns.electronichealth.net.au/id/medicare-provider-number' in system)</li>, <li>PractitionerRole.identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'NPIO')).exists() and ('http://hl7.org.au/id/npio' in system)</li>, <li>PractitionerRole.identifier[1]: discriminator = true and type.coding.where((system = 'http://hl7.org/fhir/v2/0203') and (code = 'EI')).exists()</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8: PractitionerRole.code[0].coding[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
+     <td><b>PractitionerRole/459a5ae6-ee37-4151-9dfd-e8094c4a23b8: PractitionerRole.code[0].coding[0] (l41/c17)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1023,10 +1228,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.identifier[0]</b></td><td><b>information</b></td><td><b>This element does not match any known slice for the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b></td>
+     <td><b>PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.code[0].coding[0] (l29/c17)</b></td><td><b>information</b></td><td><b>Code System URI &quot;http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.identifier[0] (l10/c17)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1</b> <span id="sl311" class="flip" onclick="flip('l311')">Show Reasoning</span><div id="l311" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1<ul><li>PractitionerRole.identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'UPIN')).exists() and ('http://ns.electronichealth.net.au/id/medicare-provider-number' in system)</li>, <li>PractitionerRole.identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org.au/fhir/v2/0203') and (code = 'NPIO')).exists() and ('http://hl7.org.au/id/npio' in system)</li>, <li>PractitionerRole.identifier[0]: discriminator = true and type.coding.where((system = 'http://hl7.org/fhir/v2/0203') and (code = 'EI')).exists()</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.code[0].coding[0]</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
+     <td><b>PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.code[0].coding[0] (l29/c17)</b></td><td><b>warning</b></td><td><b>ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator</b></td>
    </tr>
 </table>
 <hr/>
@@ -1034,7 +1242,22 @@
 <h2><a href="StructureDefinition-composition-acdcr-1.html">C:\work\git\ci-fhir-stu3\resources\composition-acdcr-1.xml</a></h2>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acdcr-1: StructureDefinition.snapshot.element[20].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acdcr-1: StructureDefinition.snapshot.element[56].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acdcr-1: StructureDefinition.differential.element[7].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acdcr-1: StructureDefinition.differential.element[21].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -1042,7 +1265,19 @@
 <h2><a href="StructureDefinition-composition-acp-1.html">C:\work\git\ci-fhir-stu3\resources\composition-acp-1.xml</a></h2>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acp-1: StructureDefinition.snapshot.element[20].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acp-1: StructureDefinition.snapshot.element[56].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acp-1: StructureDefinition.differential.element[7].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/composition-acp-1: StructureDefinition.differential.element[21].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
    </tr>
 </table>
 <hr/>
@@ -1050,7 +1285,13 @@
 <h2><a href="StructureDefinition-documentreference-acp-1.html">C:\work\git\ci-fhir-stu3\resources\documentreference-acp-1.xml</a></h2>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/documentreference-acp-1: StructureDefinition.snapshot.element[21].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition/documentreference-acp-1: StructureDefinition.differential.element[8].fixed.ofType(CodeableConcept).coding[0]</b></td><td><b>information</b></td><td><b>Code System URI &quot;https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1&quot; is unknown so the code cannot be validated</b></td>
    </tr>
 </table>
 <hr/>
@@ -1066,7 +1307,13 @@
 <h2><a href="ImplementationGuide-implementationguide-advancecarerecords-1.html">C:\work\git\ci-fhir-stu3\resources\implementationguide-advancecarerecords-1.xml</a></h2>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[ImplementationGuide.dependency, BackboneElement])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[ImplementationGuide.dependency, BackboneElement])</b></td>
    </tr>
 </table>
 <hr/>
@@ -1080,7 +1327,7 @@
      <td><b>StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -1094,7 +1341,7 @@
      <td><b>StructureDefinition/organization-ident-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/organization-ident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/organization-ident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -1105,13 +1352,19 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-dh-base-1: StructureDefinition.snapshot.element[166].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-dh-base-1: StructureDefinition.snapshot.element[184].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/patient-dh-base-1: StructureDefinition.differential.element[25].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'</b></td>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-dh-base-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -1122,13 +1375,39 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-ident-1: StructureDefinition.snapshot.element[166].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-ident-1: StructureDefinition.snapshot.element[184].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/patient-ident-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/patient-ident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/patient-ident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="C__work_git_ci-fhir-stu3_resources_patient-mhr-1"> </a>
+<h2><a href="StructureDefinition-patient-mhr-1.html">C:\work\git\ci-fhir-stu3\resources\patient-mhr-1.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/patient-ident-1: StructureDefinition.differential.element[25].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1'</b></td>
+     <td><b>StructureDefinition/patient-mhr-1: StructureDefinition.snapshot.element[166].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-mhr-1: StructureDefinition.snapshot.element[184].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-mhr-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/patient-mhr-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -1139,10 +1418,28 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.identifier</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.code</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.period</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1#Practitioner.qualification.issuer</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1</b></td><td><b>error</b></td><td><b>The profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-dh-base-1 has 4 elements in the differential (id: Practitioner.qualification.identifier, id: Practitioner.qualification.code, id: Practitioner.qualification.period, id: Practitioner.qualification.issuer) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitioner-dh-base-1: StructureDefinition.snapshot.element[106].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/practitioner-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -1153,10 +1450,28 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.identifier</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.code</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.period</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1#Practitioner.qualification.issuer</b></td><td><b>error</b></td><td><b>No match found in the generated snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1</b></td><td><b>error</b></td><td><b>The profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1 has 4 elements in the differential (id: Practitioner.qualification.identifier, id: Practitioner.qualification.code, id: Practitioner.qualification.period, id: Practitioner.qualification.issuer) that don't have a matching element in the snapshot: check that the path and definitions are legal in the differential (including order)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitioner-ident-1: StructureDefinition.snapshot.element[106].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/practitioner-ident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -1167,16 +1482,22 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.snapshot.element[62].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.snapshot.element[70].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.snapshot.element[79].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
+     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-dh-base-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'</b></td>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-dh-base-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -1187,16 +1508,19 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.snapshot.element[62].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.snapshot.element[70].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.snapshot.element[79].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[0].extension[0]</b></td><td><b>error</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status' does not resolve</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1'</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[10].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource 'https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1'</b></td>
+     <td><b>StructureDefinition/practitionerrole-withpractitionerident-1: StructureDefinition.differential.element[0].extension[0].url</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status&quot; does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -1204,7 +1528,13 @@
 <h2><a href="StructureDefinition-relatedperson-dh-base-1.html">C:\work\git\ci-fhir-stu3\resources\relatedperson-dh-base-1.xml</a></h2>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/relatedperson-dh-base-1: StructureDefinition.snapshot.element[127].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-dh-base-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
 <hr/>
@@ -1212,8 +1542,16 @@
 <h2><a href="StructureDefinition-relatedperson-ident-1.html">C:\work\git\ci-fhir-stu3\resources\relatedperson-ident-1.xml</a></h2>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition/relatedperson-ident-1: StructureDefinition.snapshot.element[127].binding.valueSet.ofType(Reference)</b></td><td><b>error</b></td><td><b>Unable to resolve resource &quot;https://healthterminologies.gov.au/fhir/ValueSet/related-person-relationship-type-1&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
    </tr>
 </table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Error Messages</b></p>
 </body>
 </html>
