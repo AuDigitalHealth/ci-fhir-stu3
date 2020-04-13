@@ -129,8 +129,7 @@ This table lists known issues with this specification at the time of publishing.
     </tr>
     <tr>   
         <td>PHR FHIR implementation guide roadmap</td>
-        <td>The profiles that form part of this implementation guide, and this implementation guide itself, are in transition to a FHIR Release 4 representation in collaboration with HL7 Australia.<br/><br/>
-		This move has normative implications that are expected to result in major version incrementation to accommodate backwards incompatible changes. Widespread changes to terminology and the removal or renaming of some elements are expected to make up the bulk of the backwards incompatible changes.<br/><br/>
+        <td>The profiles that form part of this implementation guide, and this implementation guide itself, may transition to a FHIR Release 4 representation in collaboration with HL7 Australia.<br/><br/>
         Our FHIR Release 4 repository can be found here: <a href="https://github.com/AuDigitalHealth/ci-fhir-r4">ci-fhir-r4</a>.
         </td>
      </tr>
