@@ -154,9 +154,18 @@
 <h4 id="relatedperson-with-mandatory-identifier--draft">RelatedPerson with Mandatory Identifier  <em>[<a href="http://hl7.org/fhir/stu3/valueset-publication-status.html">Draft</a>]</em></h4>
 
 <h4 id="implementation-guidance">Implementation guidance</h4>
+<p>For the overarching usage scenarios in this implementation guide it is recommended that:</p>
+<ul>
+  <li>an Australian address conforms to <a href="http://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-address.html">AU Base Address</a></li>
+</ul>
 
-<p>No additional guidance is suggested to support implementation of this profile for the expected usage scenarios of this implementation guide.</p>
+<p>When sending an advance care record to the My Health Record system it is expected that:</p>
+<ul>
+  <li>an IHI-I will be sent</li>
+  <li>family name will be sent</li>
+</ul>
 
+<p>This profile is referenced by <a href="StructureDefinition-composition-acdcr-1.html">Advance Care Directive Custodian Record</a>, <a href="StructureDefinition-composition-acp-1.html">Advance Care Planning</a> and <a href="StructureDefinition-documentreference-acp-1.html">Advance Care Planning Document Reference</a>.</p>
 
 
 <!-- example here -->
@@ -194,7 +203,7 @@ The official URL for this profile is:
 <p>
 This profile builds on <a href="http://hl7.org.au/fhir/aubase1.1/StructureDefinition-au-relatedperson.html">AUBaseRelatedPerson</a>.</p>
 <p>
-This profile was published on Thu Apr 16 05:50:36 AEST 2020 as a draft by Australian Digital Health Agency.
+This profile was published on Thu Apr 16 08:18:44 AEST 2020 as a draft by Australian Digital Health Agency.
 </p>
 
 
@@ -1220,7 +1229,7 @@ Summary
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Thu, Apr 16, 2020 05:50+1000.
+            <p>Advance Care Records FHIR Implementation Guide Version: 1.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Thu, Apr 16, 2020 08:18+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
