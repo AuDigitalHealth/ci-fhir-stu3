@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="The purpose of this profile is to define a representation of a document (Advance Care Directive Custodian Record) that includes one or more custodian details for a patient's advance care directive in an Australian healthcare context. The author of the Advance Care Directive Custodian Record (the Composition) may not be the author of the referenced advance care directive. &#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
-  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <copyright value="Copyright © 2020 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -82,12 +82,6 @@
       <sliceName value="compositionAuthorRole" />
       <short value="Practitioner role that authored the composition"/>      
       <max value="1" />
-      <constraint>
-        <key value="inv-dh-cmp-07" />
-        <severity value="error" />
-        <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.identifier">
@@ -163,20 +157,14 @@
       <constraint>
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
-        <human value="The attesting  party shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="party.reference.exists() or party.identifier.where(system.count() + value.count() &gt; 1).exists()" />
+        <human value="A legal attester shall have a party or a related party that conforms to RelatedPerson with Mandatory Identifier" />
+        <expression value="party.reference.exists() xor extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1').exists()" />
       </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester.extension:attesterRelatedParty">
       <path value="Composition.attester.extension" />
       <sliceName value="attesterRelatedParty" />
-      <constraint>
-        <key value="inv-dh-cmp-09" />
-        <severity value="error" />
-        <human value="A related party shall conform to RelatedPerson with Mandatory Identifier" />
-        <expression value="Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester.mode">
@@ -224,12 +212,6 @@
       <short value="Advance Care Directive Custodians" />
       <min value="1" />
       <max value="1" />
-      <constraint>
-        <key value="inv-dh-cmp-10"/>
-        <severity value="error"/>
-        <human value="The section shall at least have one entry or an empty reason, but not both"/>
-        <expression value="entry.exists() xor emptyReason.exists()"/>
-      </constraint>
       <constraint>
         <key value="inv-dh-cmp-11" />
         <severity value="error" />
