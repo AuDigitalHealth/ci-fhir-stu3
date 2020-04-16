@@ -59,7 +59,6 @@
                                 <li><a href="StructureDefinition-practitioner-dh-base-1.html">Practitioner (Base Practitioner)</a></li>  
                                 <li><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></li>                                
                                 <li><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></li>
-                                <li><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></li>
                                 <li><a href="StructureDefinition-relatedperson-dh-base-1.html">RelatedPerson (Base RelatedPerson)</a></li>
                                 <li><a href="StructureDefinition-relatedperson-ident-1.html">RelatedPerson (RelatedPerson with Mandatory Identifier)</a></li>
                             </ul>
@@ -184,11 +183,6 @@
       <td><a href="StructureDefinition-practitioner-ident-1.html">Practitioner (Practitioner with Mandatory Identifier)</a></td>
       <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-practitioner.html">AU Base Practitioner</a></td>
       <td><a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner </a></td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-practitionerrole-dh-base-1.html">PractitionerRole (Base Practitioner Role)</a></td>
-      <td><a href="https://build.fhir.org/ig/hl7au/au-fhir-base-stu3/StructureDefinition-au-practitionerrole.html">AU Base Practitioner Role</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole </a></td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-practitionerrole-withpractitionerident-1.html">PractitionerRole (Practitioner Role with Practitioner with Mandatory Identifier)</a></td>
