@@ -13,6 +13,6 @@ The following are the overarching usage scenarios this profile is intended to su
 #### Implementation guidance
 For the overarching usage scenarios in this implementation guide it is expected that:
 
-* It is required that the composition include only the specified top-level section; additional sections to handle local content not covered by the primary design can be included as a child section if necessary.
+* TBD
 
 When sending an Advance Care Directive Custodian Record to the My Health Record system it is expected that all instances of patient will conform to [My Health Record Patient](StructureDefinition-patient-mhr-1.html).  

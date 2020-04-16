@@ -40,12 +40,6 @@
         <expression value="author.reference.exists() or author.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
       <constraint>
-        <key value="inv-dh-cmp-03" />
-        <severity value="error" />
-        <human value="The custodian shall at least have a reference or an identifier with at least a system and a value" />
-        <expression value="custodian.reference.exists() or custodian.identifier.where(system.count() + value.count() &gt; 1).exists()" />
-      </constraint>
-      <constraint>
         <key value="inv-dh-cmp-04" />
         <severity value="error" />
         <human value="If and only if the author is a practitioner, the role shall be provided" />
@@ -57,6 +51,12 @@
         <human value="If present, an authoring role shall at least have a reference that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value" />
         <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').exists() implies extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1') or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
       </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-03" />
+        <severity value="error" />
+        <human value="The custodian shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="custodian.reference.exists() or custodian.identifier.where(system.count() + value.count() &gt; 1).exists()" />
+      </constraint>
     </element>
     <element id="Composition.meta">
       <path value="Composition.meta" />
@@ -64,8 +64,8 @@
       <constraint>
         <key value="inv-dh-cmp-06" />
         <severity value="error" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1'" />
-        <expression value="Composition.meta.profile.where($this='http://hl7.org.au/fhir/3.0/StructureDefinition/composition-acdcr-1').exists()" />
+        <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1'" />
+        <expression value="profile.where($this='http://hl7.org.au/fhir/3.0/StructureDefinition/composition-acdcr-1').exists()" />
       </constraint>
     </element>
     <element id="Composition.meta.profile">
@@ -158,7 +158,13 @@
         <key value="inv-dh-cmp-08" />
         <severity value="error" />
         <human value="A legal attester shall have a party or a related party that conforms to RelatedPerson with Mandatory Identifier" />
-        <expression value="party.reference.exists() xor extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1').exists()" />
+        <expression value="party.exists() xor extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1').exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-07" />
+        <severity value="error" />
+        <human value="If present, a party shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="party.exists() implies (party.reference.exists() or party.identifier.where(system.count() + value.count() > 1).exists())" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -216,7 +222,7 @@
         <key value="inv-dh-cmp-11" />
         <severity value="error" />
         <human value="An entry shall at least have a reference, an identifier or a display" />
-        <expression value="section.entry.exists() implies section.entry.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+        <expression value="entry.exists() implies section.entry.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
       </constraint>
       <mustSupport value="true" />
     </element>
