@@ -1,9 +1,9 @@
 ﻿Advance Care Records : Validation Results
 =========================================
 
-err = 172, warn = 48, info = 118
+err = 176, warn = 48, info = 118
 IG Publisher Version: v1.0.80-SNAPSHOT
-Generated Thu Apr 16 08:20:49 AEST 2020. FHIR version 3.0.2 for au.electronichealth.advancecarerecords# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
+Generated Thu Apr 16 16:11:31 AEST 2020. FHIR version 3.0.2 for au.electronichealth.advancecarerecords# (canonical = http://ns.electronichealth.net.au/ci/fhir/3.0)
 
  Build Errors : 190 / 1
  C:\work\git\ci-fhir-stu3\examples\composition-1840e786-bbd7-4abe-af3e-aa6e7f74c3f2 : 4 / 8
@@ -29,7 +29,7 @@ Generated Thu Apr 16 08:20:49 AEST 2020. FHIR version 3.0.2 for au.electronichea
  C:\work\git\ci-fhir-stu3\resources\composition-acp-1 : 0 / 4
  C:\work\git\ci-fhir-stu3\resources\documentreference-acp-1 : 2 / 0
  C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1 : 0 / 0
- C:\work\git\ci-fhir-stu3\resources\implementationguide-advancecarerecords-1 : 2 / 0
+ C:\work\git\ci-fhir-stu3\resources\implementationguide-advancecarerecords-1 : 4 / 0
  C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1 : 2 / 0
  C:\work\git\ci-fhir-stu3\resources\organization-ident-1 : 2 / 0
  C:\work\git\ci-fhir-stu3\resources\patient-dh-base-1 : 4 / 1
@@ -366,10 +366,10 @@ INFORMATION: PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: Practitioner
 INFORMATION: PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.identifier[0]: This element does not match any known slice defined in the profile http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1
 WARNING: PractitionerRole/cb9d944f-1b75-4603-b63a-167460882287: PractitionerRole.code[0].coding[0]: ValueSet https://healthterminologies.gov.au/fhir/ValueSet/anzsco-1 not found by validator
 == C:\work\git\ci-fhir-stu3\resources\composition-acdcr-1.xml ==
-INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.snapshot.element[20].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.snapshot.element[56].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.differential.element[7].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
-INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.differential.element[21].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.snapshot.element[20].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.snapshot.element[56].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.differential.element[7].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/composition-acdcr-1: StructureDefinition.differential.element[21].pattern.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
 WARNING: http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1: The Implementation Guide contains no examples for this profile
 == C:\work\git\ci-fhir-stu3\resources\composition-acp-1.xml ==
 INFORMATION: StructureDefinition/composition-acp-1: StructureDefinition.snapshot.element[20].fixed.ofType(CodeableConcept).coding[0]: Code System URI "https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" is unknown so the code cannot be validated
@@ -381,8 +381,10 @@ ERROR: StructureDefinition/documentreference-acp-1: StructureDefinition.snapshot
 ERROR: StructureDefinition/documentreference-acp-1: StructureDefinition.differential.element[8].binding.valueSet.ofType(Reference): Unable to resolve resource "https://healthterminologies.gov.au/fhir/ValueSet/advance-care-planning-document-type-1"
 == C:\work\git\ci-fhir-stu3\resources\humanname-dh-base-1.xml ==
 == C:\work\git\ci-fhir-stu3\resources\implementationguide-advancecarerecords-1.xml ==
-ERROR: ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[ImplementationGuide.dependency, BackboneElement])
-ERROR: ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0]: The extension http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version is not allowed to be used at this point (allowed = e:ImplementationGuide.dependsOn; this element is [[ImplementationGuide.dependency, BackboneElement])
+ERROR: ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0].extension[0][url='http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId']: Extension url "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId" is not valid (invalid Version "4.0")
+ERROR: ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0].extension[0].url: URL value "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.packageId" does not resolve
+ERROR: ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0].extension[1][url='http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version']: Extension url "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version" is not valid (invalid Version "4.0")
+ERROR: ImplementationGuide/implementationguide-advancecarerecords-1: ImplementationGuide.dependency[0].extension[1].url: URL value "http://hl7.org/fhir/4.0/StructureDefinition/extension-ImplementationGuide.dependsOn.version" does not resolve
 == C:\work\git\ci-fhir-stu3\resources\organization-dh-base-1.xml ==
 ERROR: StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status is unknown, and not allowed here
 ERROR: StructureDefinition/organization-dh-base-1: StructureDefinition.differential.element[0].extension[0].url: URL value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" does not resolve
