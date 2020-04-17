@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="The purpose of this profile is to define a representation of a document (Advance Care Directive Custodian Record) that includes one or more custodian details for a patient's advance care directive in an Australian healthcare context. The author of the Advance Care Directive Custodian Record (the Composition) may not be the author of the referenced advance care directive. &#xA;&#xA;#### Must Support&#xA;&#xA;In the context of this profile [Must Support](http://hl7.org/fhir/STU3/conformance-rules.html#mustSupport) SHALL be interpreted as follows:&#xA;&#xA;* The system SHALL be able to include the element when authoring a resource where data is available&#xA;&#xA;* The system SHALL be able to store and retrieve the element&#xA;&#xA;* The system SHALL be able to process resources containing the element" />
-  <copyright value="Copyright © 2019 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <copyright value="Copyright © 2020 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -28,20 +28,44 @@
       <short value="Advance Care Directive Custodian Record" />
       <definition value="A record of the custodians of an individual's advance care directive." />
       <constraint>
+        <key value="inv-dh-cmp-01" />
+        <severity value="error" />
+        <human value="The subject shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="subject.reference.exists() or subject.identifier.where(system.count() + value.count() &gt; 1).exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-02" />
+        <severity value="error" />
+        <human value="The author shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="author.reference.exists() or author.identifier.where(system.count() + value.count() &gt; 1).exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-04" />
+        <severity value="error" />
+        <human value="If and only if the author is a practitioner, the role shall be provided" />
+        <expression value="author.resolve().where($this is Practitioner ).exists() implies extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-05" />
+        <severity value="error" />
+        <human value="If present, an authoring role shall at least have a reference that conforms to PractitionerRole with Practitioner with Mandatory Identifier or an identifier with at least a system and a value" />
+        <expression value="extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').exists() implies extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitionerrole-withpractitionerident-1') or extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').valueReference.identifier.where(system.count() + value.count() &gt;1).exists()" />
+      </constraint>
+      <constraint>
         <key value="inv-dh-cmp-03" />
         <severity value="error" />
-        <human value="If the author is a practitioner, the role shall be provided" />
-        <expression value="(Composition.author.resolve() is Practitioner) implies Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').exists()" />
+        <human value="The custodian shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="custodian.reference.exists() or custodian.identifier.where(system.count() + value.count() &gt; 1).exists()" />
       </constraint>
     </element>
     <element id="Composition.meta">
       <path value="Composition.meta" />
       <min value="1" />
       <constraint>
-        <key value="inv-dh-cmp-01" />
+        <key value="inv-dh-cmp-06" />
         <severity value="error" />
-        <human value="One meta.profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1'" />
-        <expression value="Composition.meta.profile.where($this='http://hl7.org.au/fhir/3.0/StructureDefinition/composition-acdcr-1').exists()" />
+        <human value="One profile shall be 'http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-acdcr-1'" />
+        <expression value="profile.where($this='http://hl7.org.au/fhir/3.0/StructureDefinition/composition-acdcr-1').exists()" />
       </constraint>
     </element>
     <element id="Composition.meta.profile">
@@ -58,12 +82,6 @@
       <sliceName value="compositionAuthorRole" />
       <short value="Practitioner role that authored the composition"/>      
       <max value="1" />
-      <constraint>
-        <key value="inv-dh-cmp-04" />
-        <severity value="error" />
-        <human value="A practitioner role shall conform to PractitionerRole with Practitioner with Mandatory Identifier" />
-        <expression value="Composition.extension('http://hl7.org.au/fhir/StructureDefinition/composition-author-role').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1')" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.identifier">
@@ -76,12 +94,12 @@
     </element>
     <element id="Composition.type">
       <path value="Composition.type" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" />
           <code value="100.16696" />
         </coding>
-      </fixedCodeableConcept>
+        </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Composition.subject">
@@ -89,6 +107,11 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-ident-1" />
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1"/>
       </type>
       <mustSupport value="true" />
     </element>
@@ -112,6 +135,11 @@
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1" />
       </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1"/>
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.title">
@@ -124,25 +152,25 @@
     </element>
     <element id="Composition.attester">
       <path value="Composition.attester" />
-      <short value="Legal attester" />
+      <short value="Legal Attester" />
       <max value="1" />
       <constraint>
-        <key value="inv-dh-cmp-02" />
+        <key value="inv-dh-cmp-08" />
         <severity value="error" />
-        <human value="A legal attester shall have a party or a related party" />
-        <expression value="Composition.attester.party.exists() or Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').exists()" />
+        <human value="A legal attester shall have a party or a related party that conforms to RelatedPerson with Mandatory Identifier" />
+        <expression value="party.exists() xor extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').valueReference.reference.resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1').exists()" />
+      </constraint>
+      <constraint>
+        <key value="inv-dh-cmp-07" />
+        <severity value="error" />
+        <human value="If present, a party shall at least have a reference or an identifier with at least a system and a value" />
+        <expression value="party.exists() implies (party.reference.exists() or party.identifier.where(system.count() + value.count() > 1).exists())" />
       </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester.extension:attesterRelatedParty">
       <path value="Composition.attester.extension" />
       <sliceName value="attesterRelatedParty" />
-      <constraint>
-        <key value="inv-dh-cmp-05" />
-        <severity value="error" />
-        <human value="A related party shall conform to RelatedPerson with Mandatory Identifier" />
-        <expression value="Composition.attester.extension('http://hl7.org.au/fhir/StructureDefinition/attester-related-party').resolve().conformsTo('http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/relatedperson-ident-1')" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester.mode">
@@ -166,6 +194,11 @@
         <code value="Reference" />
         <targetProfile value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/practitioner-ident-1" />
       </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile
+          value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/patient-mhr-1"/>
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Composition.custodian">
@@ -185,6 +218,12 @@
       <short value="Advance Care Directive Custodians" />
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="inv-dh-cmp-11" />
+        <severity value="error" />
+        <human value="An entry shall at least have a reference, an identifier or a display" />
+        <expression value="entry.exists() implies section.entry.all($this.reference.exists() or $this.identifier.exists() or $this.display.exists())" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section.title">
@@ -196,12 +235,12 @@
     <element id="Composition.section.code">
       <path value="Composition.section.code" />
       <min value="1" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="https://healthterminologies.gov.au/fhir/CodeSystem/nctis-data-components-1" />
           <code value="101.16694" />
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section.text">
@@ -211,7 +250,7 @@
     </element>
     <element id="Composition.section.entry">
       <path value="Composition.section.entry" />
-      <short value="Persons acting as custodians (holders) of a patient's advance care directive" />
+      <short value="Entities acting as custodians (holders) of a patient's advance care directive" />
       <min value="1" />
       <type>
         <code value="Reference" />
