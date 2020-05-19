@@ -125,13 +125,6 @@ This table lists known issues with this specification at the time of publishing.
         <td>Material in this specification is based on existing standards and all efforts have been made to minimise divergence. Issues of an editorial nature in the source material (such as spelling or punctuation errors) are intentionally reproduced.</td>
     </tr>
     <tr>
-        <td>Recording information that a medicine list contains medicine items packed in a dose administration aid</td>
-        <td>National agreement on the inclusion of a statement or an indicator that a medicines list document includes medicine items packed in a dose administration aid (DAA) is not yet supported. A supporting data model would allow recording information about an individual receiving packed medicines so that consultations with healthcare providers and healthcare can be tailored to suit the individual. This has been raised in HL7 AU github for consideration in the HL7 AU Medications work group, see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.<br/><br/>
-           In the interim, HL7 AU recommends supporting this requirement as a note in the medicines list (List.note). One possible way a sending system may indicate that one or more medicine items are packed, or not packed, by a pharmacy in a dose administration aid is with the text ‘Packed medicines: Yes’, ‘Packed medicines: No’, or ‘Packed medicines: Unknown’.<br/><br/>
-           More information about dose administration aids: <a href="https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary">https://www.nps.org.au/australian-prescriber/articles/appropriate-use-of-dose-administration-aids#summary</a>.
-        </td>
-    </tr>
-    <tr>
         <td>Non-resolving profile URLs</td>
         <td>Canonical URLs with the prefix of <span style="font-family:courier;">http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/</span> do not resolve. All profiles have an associated <a href="http://hl7.org/fhir/STU3/structuredefinition-definitions.html#StructureDefinition.url">canonical URL</a> that is used to uniquely identify that structure definition (i.e. profile) and is expected to be an address at which that structure definition is (or will be) published. Work is underway to ensure that these URLs resolve or redirect to a meaningful end point in the future.</td>
     </tr>

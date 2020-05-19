@@ -17,7 +17,8 @@
                 <meta>
                     <versionId value="20190205"/>
                     <profile
-                        value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1" />
+                        value="http://ns.electronichealth.net.au/ci/fhir/3.0/StructureDefinition/composition-sml-prac-1"
+                    />
                 </meta>
                 <language value="en-AU"/>
                 <text>
@@ -132,14 +133,14 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <p>Packed medicines: Yes</p>
+                        <p>Packed medicines: Some medicines on this list have been packed in a Dose
+                            Administration Aid</p>
 
                         <h3>Ceased Medicines</h3>
                         <table border="1">
                             <thead>
                                 <tr>
-                                    <th style="text-align:center;" colspan="2">Ceased
-                                        medicines</th>
+                                    <th style="text-align:center;" colspan="2">Ceased medicines</th>
                                 </tr>
                                 <tr>
                                     <th>Ceased medicine</th>
@@ -157,6 +158,8 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <p>Packed medicines: No medicines on this list have been packed in a Dose
+                            Administration Aid</p>
                     </div>
                 </text>
                 <extension url="http://hl7.org.au/fhir/StructureDefinition/composition-author-role">
@@ -272,7 +275,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>Packed medicines: Yes</p>
+                            <p>Packed medicines: Some medicines on this list have been packed in a
+                                Dose Administration Aid</p>
                         </div>
                     </text>
                     <entry>
@@ -313,6 +317,8 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <p>Packed medicines: No medicines on this list have been packed in a
+                                Dose Administration Aid</p>
                         </div>
                     </text>
                     <entry>
@@ -531,6 +537,16 @@
                         <reference value="urn:uuid:91555386-d478-4e3d-bd3d-ac642ff603c4"/>
                     </valueReference>
                 </extension>
+                <extension
+                    url="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-daamedicinespresent">
+                    <valueCoding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="TBD"/>
+                        <display
+                            value="Some medicines on this list have been packed in a Dose Administration Aid"
+                        />
+                    </valueCoding>
+                </extension>
                 <status value="current"/>
                 <mode value="snapshot"/>
                 <code>
@@ -551,9 +567,6 @@
                 <source>
                     <reference value="urn:uuid:f9695b57-7502-4f50-bf36-b68a755e9956"/>
                 </source>
-                <note>
-                    <text value="Packed medicines: Yes"/>
-                </note>
                 <entry>
                     <flag>
                         <coding>
@@ -711,6 +724,16 @@
                     <valueReference>
                         <reference value="urn:uuid:91555386-d478-4e3d-bd3d-ac642ff603c4"/>
                     </valueReference>
+                </extension>
+                <extension
+                    url="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-daamedicinespresent">
+                    <valueCoding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="TBD"/>
+                        <display
+                            value="No medicines on this list have been packed in a Dose Administration Aid"
+                        />
+                    </valueCoding>
                 </extension>
                 <status value="current"/>
                 <mode value="snapshot"/>

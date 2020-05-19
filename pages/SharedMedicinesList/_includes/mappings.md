@@ -329,14 +329,9 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>
-                        <p>Not directly supported in FHIR.</p>
-                        <p>This requirement states a PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
-                        <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html#known-issues">Known issues</a> for further information on this issue and possible work arounds.</p>
-                    </td>
+                    <td>List.extension-daamedicinespresent</td>
+                    <td>Composition.section(medications).entry> List.extension-daamedicinespresent</td>
+                    <td/>
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1130,15 +1125,10 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>
-                        <p>Not directly supported in FHIR.</p>
-                        <p>This requirement states a PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
-                        <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
-                    </td>
-                </tr>
+                    <td>List.extension-daamedicinespresent</td>
+                    <td>Composition.section(medications).entry> List.extension-daamedicinespresent</td>
+                    <td/>                     
+               </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="4">Allergy and Adverse Reaction (optional)</td>
