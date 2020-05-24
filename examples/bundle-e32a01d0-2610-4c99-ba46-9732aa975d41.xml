@@ -833,12 +833,15 @@
                     </valueReference>
                 </extension>
                 <extension
-                    url="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-daamedicinespresent">
-                    <valueCoding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="1469421000168108"/>
-                        <display value="No medicines packed in dose administration aid"/>
-                    </valueCoding>
+                    url="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/packed-in-daa">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="1469421000168108"/>
+                            <display value="No medicines packed in dose administration aid"/>
+                        </coding>
+                        <text value="No medicines packed in dose administration aid"/>
+                    </valueCodeableConcept>
                 </extension>
                 <status value="current"/>
                 <mode value="snapshot"/>

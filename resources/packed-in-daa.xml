@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="extension-daamedicinespresent" />
-  <url value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-daamedicinespresent" />
+  <id value="packed-in-daa" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/packed-in-daa" />
   <version value="1.0.0" />
   <name value="DoseAdministrationAidMedicinesPresent" />
   <title value="Dose Administration Aid Medicines Present" />
@@ -13,6 +13,7 @@
       <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
+  <description value="The purpose of this profile is to indicate whether one or more items in a medicines list are packed in a Dose Administration Aid (DAA)." />
   <copyright value="Copyright © 2020 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
   <fhirVersion value="3.0.2" />
   <mapping>
@@ -30,21 +31,21 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Inclusion of medicines in a Dose Administration Aid (DAA)" />
-      <definition value="Indicates whether one or more items in a medicines list are included in a Dose Administration Aid (DAA)." />
+      <short value="Inclusion of medicines packed in a Dose Administration Aid (DAA)" />
+      <definition value="Indicates whether one or more items in a medicines list are packed in a Dose Administration Aid (DAA)." />
       <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/extension-daamedicinespresent" />
+      <fixedUri value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/packed-in-daa" />
     </element>
-    <element id="Extension.value[x]:valueCoding">
-      <path value="Extension.valueCoding" />
-      <sliceName value="valueCoding" />
-      <short value="Inclusion of medicines in a DAA" />
+    <element id="Extension.value[x]:valueCodeableConcept">
+      <path value="Extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <short value="Medicines packed in a DAA" />
       <min value="1" />
       <type>
-        <code value="Coding" />
+        <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
