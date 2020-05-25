@@ -137,7 +137,7 @@ This table lists known issues with this specification at the time of publishing.
      </tr>
      <tr>
         <td>Terminology publication</td>
-        <td>The following terminology resources are not yet available in NCTS; these are expected to be published in NCTS in June terminology release:<ul><li><a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-of-medicine-presence-in-daa-1">Indicator Of Medicine Presence In A Dose Administration Aid</a></li></ul></td>
+        <td>The following terminology resources are not yet available in NCTS:<ul><li><a href="https://healthterminologies.gov.au/fhir/ValueSet/indicator-of-medicines-packed-in-daa-1">Indicator Of Medicines Packed In A Dose Administration Aid</a></li></ul></td>
     </tr>
  </tbody>
 </table> 

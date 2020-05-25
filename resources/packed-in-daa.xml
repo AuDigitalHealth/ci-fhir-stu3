@@ -31,7 +31,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Inclusion of medicines packed in a Dose Administration Aid (DAA)" />
+      <short value="Inclusion of medicines packed in a Dose Administration Aid (DAA) indicator" />
       <definition value="Indicates whether one or more items in a medicines list are packed in a Dose Administration Aid (DAA)." />
       <max value="1" />
     </element>
@@ -42,14 +42,14 @@
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <short value="Medicines packed in a DAA" />
+      <short value="Inclusion of medicines packed in a DAA" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
-        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-of-medicine-presence-in-daa-1" />
+        <valueSetUri value="https://healthterminologies.gov.au/fhir/ValueSet/indicator-of-medicines-packed-in-daa-1" />
       </binding>
     </element>
   </differential>
