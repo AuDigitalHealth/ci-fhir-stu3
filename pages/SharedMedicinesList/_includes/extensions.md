@@ -64,7 +64,7 @@ The following extensions form part of this implementation guide:
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#date">date</a>, <a href="http://hl7.org/fhir/stu3/datatypes.html#dateTime">dateTime</a> </td>
     </tr>
       <tr>
-        <td><a href="StructureDefinition-packed-in-daa-1.html">Dose Administration Aid Medicines Present</a></td>
+        <td><a href="StructureDefinition-packed-in-daa-1.html">Dose Administration Aid Medicines Indicator</a></td>
         <td>packed-in-daa-1</td>
         <td><a href="http://hl7.org/fhir/stu3/datatypes.html#CodeableConcept">CodeableConcept</a></td>
         <td><a href="http://hl7.org/fhir/stu3/list.html">List</a></td>  
