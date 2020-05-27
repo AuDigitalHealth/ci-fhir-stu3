@@ -329,8 +329,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
-                    <td>List.extension-daamedicinespresent</td>
-                    <td>Composition.section(medications).entry> List.extension-daamedicinespresent</td>
+                    <td>List.extension(packed-in-daa-1)</td>
+                    <td>Composition.section(medications).entry> List.extension(packed-in-daa-1)</td>
                     <td/>
                 </tr>
                 <!-- ======================================================================== -->
@@ -1125,8 +1125,8 @@ See the [legend](mappings.html#legend-for-mapping-from-requirements) for informa
                 <tr>
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
-                    <td>List.extension-daamedicinespresent</td>
-                    <td>Composition.section(medications).entry> List.extension-daamedicinespresent</td>
+                    <td>List.extension(packed-in-daa-1)</td>
+                    <td>Composition.section(medications).entry> List.extension(packed-in-daa-1)</td>
                     <td/>                     
                </tr>
                 <!-- ======================================================================== -->
