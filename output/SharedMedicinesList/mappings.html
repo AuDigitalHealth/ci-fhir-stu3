@@ -460,14 +460,9 @@
                 <tr>
                     <td>Attribute for Dose Administration Aid medicines present</td>
                     <td>028413</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>
-                        <p>Not directly supported in FHIR.</p>
-                        <p>This requirement states a PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
-                        <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html#known-issues">Known issues</a> for further information on this issue and possible work arounds.</p>
-                    </td>
+                    <td>List.extension(packed-in-daa-1)</td>
+                    <td>Composition.section(medications).entry&gt; List.extension(packed-in-daa-1)</td>
+                    <td />
                 </tr>
                 <!-- ======================================================================== -->
                 <tr>
@@ -1260,15 +1255,10 @@
                 <tr>
                     <td>Dose Administration Aid medicines present (mandatory)</td>
                     <td>028441</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>
-                        <p>Not directly supported in FHIR.</p>
-                        <p>This requirement states a PSML document may include a statement or an indicator that a medicines list includes medicine items packed in a dose administration aid (DAA).</p>
-                        <p>A request has been submitted to HL7 AU to consider this requirement on the national level,see <a href="https://github.com/hl7au/au-fhir-base/issues/320">https://github.com/hl7au/au-fhir-base/issues/320</a>.</p>
-                        <p>See <a href="index.html">Known issues</a> for further information on this issue and possible work arounds.</p>
-                    </td>
-                </tr>
+                    <td>List.extension(packed-in-daa-1)</td>
+                    <td>Composition.section(medications).entry&gt; List.extension(packed-in-daa-1)</td>
+                    <td />                     
+               </tr>
                 <!-- ======================================================================== -->
                 <tr>
                     <td rowspan="4">Allergy and Adverse Reaction (optional)</td>
@@ -1805,7 +1795,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.2.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Mar 31, 2020 14:11+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.2.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Fri, May 29, 2020 11:07+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>

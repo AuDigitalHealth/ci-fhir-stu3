@@ -2,7 +2,16 @@
   "package": "au.electronichealth.sharedmedicineslist",
   "version": "1.2.0",
   "fhirVersion": "3.0.2",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/packed-in-daa-1",
+      "title": "Dose Administration Aid Medicines Indicator",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    }
+  ],
   "profiles": {
     "AllergyIntolerance": [
       {
@@ -231,6 +240,10 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.package.resource"
+    ],
+    "http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/packed-in-daa-1": [
+      "Bundle.entry.resource",
+      "List"
     ]
   }
 }

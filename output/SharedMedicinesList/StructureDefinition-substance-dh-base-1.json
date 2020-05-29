@@ -11,7 +11,7 @@
   "title": "Base Substance",
   "status": "active",
   "experimental": false,
-  "date": "2020-03-31T14:11:27+10:00",
+  "date": "2020-05-29T11:07:10+10:00",
   "publisher": "Australian Digital Health Agency",
   "contact": [
     {
@@ -69,7 +69,7 @@
             "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
             "expression": "contained.contained.empty()",
             "xpath": "not(parent::f:contained and f:contained)",
-            "source": "DomainResource"
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
           },
           {
             "key": "dom-1",
@@ -77,7 +77,7 @@
             "human": "If the resource is contained in another resource, it SHALL NOT contain any narrative",
             "expression": "contained.text.empty()",
             "xpath": "not(parent::f:contained and f:text)",
-            "source": "DomainResource"
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
           },
           {
             "key": "dom-4",
@@ -85,7 +85,7 @@
             "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
             "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
             "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
-            "source": "DomainResource"
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
           },
           {
             "key": "dom-3",
@@ -93,7 +93,7 @@
             "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource",
             "expression": "contained.where(('#'+id in %resource.descendants().reference).not()).empty()",
             "xpath": "not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))",
-            "source": "DomainResource"
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
           }
         ],
         "mapping": [
@@ -556,7 +556,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() | (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "mustSupport": true,
@@ -759,7 +759,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() | (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "inv-dh-sub-01",
