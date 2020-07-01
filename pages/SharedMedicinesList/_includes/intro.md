@@ -1,4 +1,4 @@
-# TB{{ site.data.fhir.igName }} FHIR Implementation Guide
+# {{ site.data.fhir.igName }} FHIR Implementation Guide
 <h3>Approved for external trial use</h3>
 {:.no_toc}
 
