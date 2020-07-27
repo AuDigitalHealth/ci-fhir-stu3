@@ -143,14 +143,11 @@ This table lists known issues with this specification at the time of publishing.
 |[<a name="DH2019a">DH2020o</a>]| Australian Digital Health Agency,31 March 2020, Common - Clinical Document, Version 1.5.4.|
 ||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020)|
 
-|[<a name="DH2020b">DH2020b</a>]| Australian Digital Health Agency, Not yet published, Shared Medicines List CDA Implementation Guide, Version 1.0.0.|
-| |[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2868-2020/dh-3031-2020](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2868-2020/dh-3031-2020)|
+|[<a name="DH2020b">DH2020b</a>]| Australian Digital Health Agency, Shared Medicines List CDA Implementation Guide, Version 1.0.0.|
 
-|[<a name="DH2020m">DH2020m</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Scenarios and business requirements, Version 2.0.|
-| |[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2868-2020/dh-2867-2020](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2868-2020/dh-2867-2020)|
+|[<a name="DH2020m">DH2020m</a>]| Australian Digital Health Agency, Pharmacist Shared Medicines List Scenarios and business requirements, Version 2.0.|
 
-|[<a name="DH2020n">DH2020n</a>]| Australian Digital Health Agency, Not yet published, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
-| |[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2868-2020/dh-3286-2020](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-2868-2020/dh-3286-2020)|
+|[<a name="DH2020n">DH2020n</a>]| Australian Digital Health Agency, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
 
 |[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, Australian Base Implementation Guide (AU Base 1.1.1), build version 1.1.1 21 January 2020.|
 | |[http://hl7.org.au/fhir/base/aubase1.1/index.html](http://hl7.org.au/fhir/base/aubase1.1/index.html)|
