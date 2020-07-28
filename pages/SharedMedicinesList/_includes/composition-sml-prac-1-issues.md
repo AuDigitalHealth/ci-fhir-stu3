@@ -5,10 +5,10 @@
     <th>Description</th>
     <th>Issue No.</th>
   </tr>
-   <tr>
-        <td>extension:informationRecipient (invariants)</td>
-        <td>Invariants inv-dh-cmp-07 to inv-dh-cmp-12 have defects in their FHIRPath expressions. When validating using this profile, an instance containing extension:informationRecipient with a reference to a resource may not behave as expected, for example conforming instances may fail. This issue will be fixed in an R4 variant of this profile.</td>
-        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/50">ci-fhir-stu3/issues/50</a>, and <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/59">ci-fhir-stu3/issues/59</a></td>
+  <tr>
+        <td>status (terminology binding)</td>
+        <td>It is unclear if the code 'entered-in-error' is meaningful in the exchange usage scenarios this Composition profile. A more constrained value set may be created in the future. This work is expected to be available in an R4 variant of this profile.</td>
+        <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/issues/57">ci-fhir-r4/issues/57</a></td>
   </tr>
   <tr>
         <td>type (use of fixedCodeableConcept)</td>
