@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <td>Support for CALD (Cultural and Linguistic Diversity) data set</td>
-    <td>This profile does not provide support for all of the minimum CALD data set. Support for need for interpreter and year of arrival in Australia is available in R4 variants of patient profiles, for example see <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/blob/master/resources/patient-ident-1.xml">Patient with Mandatory Identifier</a> and <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/blob/master/resources/patient-mhr-1.xml">My Health Record Patient</a>.</td>
+    <td>This profile supports the exchange of some of the Cultural and Linguistic Diversity (CALD) data set, including a country of birth and preferred language. Support for need for interpreter and year of arrival in Australia is available in R4 variants of patient profiles, for example see <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/blob/master/resources/patient-ident-1.xml">Patient with Mandatory Identifier</a> and <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/blob/master/resources/patient-mhr-1.xml">My Health Record Patient</a>.</td>
     <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/issues/13">ci-fhir-r4/issues/13</a></td>
   </tr>
   <tr>
