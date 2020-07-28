@@ -5,6 +5,7 @@
 For the overarching usage scenarios in this implementation guide it is recommended that:
 
 * an Australian address conforms to [AU Base Address](https://hl7.org.au/fhir/base/aubase1.1/StructureDefinition-au-address.html)
+* if more than one identifier is sent, only one of each type is sent
 
 This profile is referenced by [Shared Medicines List Authored by Practitioner](StructureDefinition-composition-sml-prac-1.html),
 [Base Patient](StructureDefinition-patient-dh-base-1.html), [My Health Record Patient](StructureDefinition-patient-mhr-1.html), [Patient with Mandatory Identifier](StructureDefinition-patient-ident-1.html),
