@@ -106,7 +106,7 @@ This implementation guide and related artefacts are technical in nature and the 
         <tr>
             <td>1.2.0</td>
             <td><span style="padding-left: 3px; padding-right: 3px">31 Jul 2020</span></td>
-            <td>Release at approved for external trial use. Implemented in FHIR Release 3 (STU). <br/>This version includes a minor update to <a href="StructureDefinition-medicationstatement-detailed-1.html">Medicine Item Statement</a>, see <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/76">ci-fhir-stu3/issues/76</a>, and <a href="StructureDefinition-list-sml-pracchanges-1.html">List of Medicine Items with Change Information Authored by Practitioner</a>, see <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/83">ci-fhir-stu3/issues/83</a>.<br/>This implementation guide supports the exchange of practitioner authored medicines lists in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td>Release at approved for external trial use. Implemented in FHIR Release 3 (STU).<br/>This version includes a</td>
         </tr>
     </tbody>
 </table> 
@@ -140,14 +140,14 @@ This table lists known issues with this specification at the time of publishing.
 
 ## References
 
-|[<a name="DH2019a">DH2020o</a>]| Australian Digital Health Agency,31 March 2020, Common - Clinical Document, Version 1.5.4.|
-||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020)|
-
 |[<a name="DH2020b">DH2020b</a>]| Australian Digital Health Agency, Shared Medicines List CDA Implementation Guide, Version 1.0.0.|
 
 |[<a name="DH2020m">DH2020m</a>]| Australian Digital Health Agency, Pharmacist Shared Medicines List Scenarios and business requirements, Version 2.0.|
 
 |[<a name="DH2020n">DH2020n</a>]| Australian Digital Health Agency, Pharmacist Shared Medicines List Information Requirements, Version 2.0.|
+
+|[<a name="DH2020o">DH2020o</a>]| Australian Digital Health Agency,31 March 2020, Common - Clinical Document, Version 1.5.4.|
+||[https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020](https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020)|
 
 |[<a name="HL7AUF3B2">HL7AUF3B2</a>]| HL7 Australia, Australian Base Implementation Guide (AU Base 1.1.1), build version 1.1.1 21 January 2020.|
 | |[http://hl7.org.au/fhir/base/aubase1.1/index.html](http://hl7.org.au/fhir/base/aubase1.1/index.html)|
