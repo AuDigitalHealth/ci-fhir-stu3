@@ -105,7 +105,7 @@ This implementation guide and related artefacts are technical in nature and the 
         </tr>
         <tr>
             <td>1.2.0</td>
-            <td><span style="padding-left: 3px; padding-right: 3px">31 Jul 2020</span></td>
+            <td><span style="padding-left: 3px; padding-right: 3px">29 Jul 2020</span></td>
             <td>Release at approved for external trial use. Implemented in FHIR Release 3 (STU).<br/>This version includes changes to relax MedicationStatement.dosage cardinality to support recording information about ceased medicines items in PSML, addition of Dose Administration Aid Medicines Indicator in the List profile to support recording information that that a PSML includes items packed in a dose administration aid, and improvements to the Composition invariants.</td>
         </tr>
     </tbody>
