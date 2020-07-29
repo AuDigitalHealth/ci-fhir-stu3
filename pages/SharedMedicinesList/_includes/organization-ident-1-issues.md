@@ -12,7 +12,7 @@
   </tr>
   <tr>
         <td>type (terminology support)</td>
-        <td>There is a gap in support for fine grained occupation types. A SNOMED CT-AU value set, <a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a>, has been published to support the representation of finer grained healthcare organisation types. It is under consideration for use in the R4 variant of AU Base Organization.</td>
+        <td>There is a gap in support for fine grained organisation types. A SNOMED CT-AU value set, <a href="https://healthterminologies.gov.au/fhir/ValueSet/healthcare-organisation-role-type-1">Healthcare Organisation Role Type</a>, has been published to support the representation of finer grained healthcare organisation types. It is under consideration for use in the R4 variant of AU Base Organization.</td>
         <td>See <a href="https://github.com/hl7au/au-fhir-base/issues/333">au-fhir-base/issues/333</a></td>
   </tr>
   <tr>

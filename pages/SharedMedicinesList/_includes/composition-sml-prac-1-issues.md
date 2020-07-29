@@ -7,7 +7,7 @@
   </tr>
   <tr>
         <td>status (terminology binding)</td>
-        <td>It is unclear if the code 'entered-in-error' is meaningful in the exchange usage scenarios this Composition profile. A more constrained value set may be created in the future. This work is expected to be available in an R4 variant of this profile.</td>
+        <td>It is unclear if the code 'entered-in-error' is meaningful in the exchange usage scenarios for this Composition profile. A more constrained value set may be created in the future. This work is expected to be available in an R4 variant of this profile.</td>
         <td>See <a href="https://github.com/AuDigitalHealth/ci-fhir-r4/issues/57">ci-fhir-r4/issues/57</a></td>
   </tr>
   <tr>
