@@ -248,8 +248,8 @@
         </tr>
         <tr>
             <td>1.2.0</td>
-            <td><span style="padding-left: 3px; padding-right: 3px">TBD</span></td>
-            <td>Release at approved for external trial use. Implemented in FHIR Release 3 (STU). <br />This version includes a minor update to <a href="StructureDefinition-medicationstatement-detailed-1.html">Medicine Item Statement</a>, see <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/76">ci-fhir-stu3/issues/76</a>, and <a href="StructureDefinition-list-sml-pracchanges-1.html">List of Medicine Items with Change Information Authored by Practitioner</a>, see <a href="https://github.com/AuDigitalHealth/ci-fhir-stu3/issues/83">ci-fhir-stu3/issues/83</a>.<br />This implementation guide supports the exchange of practitioner authored medicines lists in an Australian healthcare context. Support is provided for the more constrained Pharmacist Shared Medicines List (PSML).</td>
+            <td><span style="padding-left: 3px; padding-right: 3px">29 Jul 2020</span></td>
+            <td>Release at approved for external trial use. Implemented in FHIR Release 3 (STU).<br />This version includes changes to relax MedicationStatement.dosage cardinality to support recording information about ceased medicines items in PSML, addition of Dose Administration Aid Medicines Indicator in the List profile to support recording information that that a PSML includes items packed in a dose administration aid, and improvements to the Composition invariants.</td>
         </tr>
     </tbody>
 </table>
@@ -286,19 +286,6 @@
 <table>
   <tbody>
     <tr>
-      <td>[<a name="DH2019a">DH2020o</a>]</td>
-      <td>Australian Digital Health Agency,31 March 2020, Common - Clinical Document, Version 1.5.4.</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td><a href="https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020">https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
       <td>[<a name="DH2020b">DH2020b</a>]</td>
       <td>Australian Digital Health Agency, Shared Medicines List CDA Implementation Guide, Version 1.0.0.</td>
     </tr>
@@ -319,6 +306,19 @@
     <tr>
       <td>[<a name="DH2020n">DH2020n</a>]</td>
       <td>Australian Digital Health Agency, Pharmacist Shared Medicines List Information Requirements, Version 2.0.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[<a name="DH2020o">DH2020o</a>]</td>
+      <td>Australian Digital Health Agency,31 March 2020, Common - Clinical Document, Version 1.5.4.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><a href="https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020">https://developer.digitalhealth.gov.au/specifications/clinical-documents/ep-3149-2020</a></td>
     </tr>
   </tbody>
 </table>
@@ -425,7 +425,7 @@
             <p>Publisher: <a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">Australian Digital Health Agency</a> ABN 84 425 496 912, Level 25, 175 Liverpool Street, Sydney, NSW 2000</p>
             <p>Telephone 1300 901 001 or email <a style="color: #81BEF7" href="mailto:help@digitalhealth.gov.au">help@digitalhealth.gov.au</a></p>
             <p><a style="color: #81BEF7" href="https://www.digitalhealth.gov.au">https://www.digitalhealth.gov.au</a></p>
-            <p>Shared Medicines List FHIR Implementation Guide Version: 1.2.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Tue, Jul 28, 2020 13:38+1000.
+            <p>Shared Medicines List FHIR Implementation Guide Version: 1.2.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR Version: 3.0.2</a> (IG Publisher v3.0.2-11200) generated on Wed, Jul 29, 2020 15:40+1000.
                 <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
                 </span>
